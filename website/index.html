@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:," />
+  <title>PrismUI - 面向企业应用的 UI Schema 驱动系统</title>
+  <meta name="description" content="PrismUI 用 UI Schema、组件和可视化编辑能力构建可持续演进的企业应用。" />
+  <link rel="stylesheet" href="/sdk/sdk.css" />
+  <link rel="stylesheet" href="/sdk/helper.css" />
+  <link rel="stylesheet" href="/sdk/iconfont.css" />
+  <style>
+    :root {
+      --brand: #2468f2;
+      --brand-strong: #144bcc;
+      --brand-pale: #edf4ff;
+      --night: #0d172b;
+      --night-2: #121f37;
+      --night-3: #1a2945;
+      --ink: #111827;
+      --muted: #69758b;
+      --line: #d9e2ef;
+      --line-dark: rgba(255, 255, 255, .14);
+      --surface: #ffffff;
+      --canvas: #f3f6fb;
+      --ok: #18754b;
+      --warn: #945b08;
+      --nav-height: 64px;
+    }
+
+    * { box-sizing: border-box; letter-spacing: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      color: var(--ink);
+      background: var(--night);
+      font-family: "Avenir Next", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    body, button { font-size: 14px; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+    button:focus-visible, a:focus-visible { outline: 2px solid #8ab4ff; outline-offset: 3px; }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      height: var(--nav-height);
+      padding: 0 clamp(20px, 4vw, 64px);
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      color: #eef4ff;
+      background: rgba(13, 23, 43, .96);
+      border-bottom: 1px solid var(--line-dark);
+      transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 760; }
+    .mark { position: relative; width: 24px; height: 24px; transform: rotate(45deg); }
+    .mark::before, .mark::after { content: ""; position: absolute; border: 3px solid #6fa0ff; border-radius: 2px; }
+    .mark::before { inset: 1px; }
+    .mark::after { inset: 7px -5px -5px 7px; opacity: .55; }
+    .links { display: flex; align-items: center; gap: 28px; color: #aebbd3; font-size: 13px; }
+    .links a:hover { color: #fff; }
+    .actions { margin-left: auto; display: flex; gap: 10px; }
+    body:not(.at-intro) .nav { color: var(--ink); background: rgba(255, 255, 255, .97); border-bottom-color: var(--line); }
+    body:not(.at-intro) .nav .links { color: #5f6b7e; }
+    body:not(.at-intro) .nav .links a:hover { color: var(--brand-strong); }
+    body:not(.at-intro) .nav .btn.dark { color: #263247; background: #fff; border-color: #c8d3e5; }
+
+    .btn {
+      min-height: 38px;
+      padding: 0 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #c8d3e5;
+      border-radius: 6px;
+      background: #fff;
+      color: #172033;
+      font-size: 13px;
+      font-weight: 680;
+      transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+    }
+    .btn.primary { color: #fff; background: var(--brand); border-color: var(--brand); }
+    .btn.dark { color: #eef4ff; background: #18243c; border-color: #3a4b69; }
+    .btn:hover { border-color: #6fa0ff; }
+    .btn.primary:hover { background: var(--brand-strong); border-color: var(--brand-strong); }
+
+    .page { overflow: clip; background: var(--canvas); }
+    .chapter {
+      position: relative;
+      min-height: 100svh;
+      padding-top: var(--nav-height);
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
+      isolation: isolate;
+    }
+    @media (min-width: 901px) {
+      html { scroll-snap-type: y proximity; }
+    }
+
+    .intro { color: #fff; background: var(--night); }
+    .intro-inner {
+      min-height: calc(100svh - var(--nav-height));
+      max-width: 1520px;
+      margin: 0 auto;
+      padding: clamp(54px, 8vh, 96px) clamp(24px, 5vw, 72px) 46px;
+      display: grid;
+      grid-template-columns: minmax(340px, .88fr) minmax(460px, 1.12fr);
+      gap: clamp(44px, 7vw, 112px);
+      align-items: center;
+    }
+    .intro-copy { align-self: center; }
+    h1 {
+      margin: 0;
+      font-size: clamp(72px, 9vw, 142px);
+      line-height: .88;
+      font-weight: 780;
+      text-wrap: balance;
+    }
+    .intro-statement {
+      max-width: 620px;
+      margin: 34px 0 0;
+      color: #f5f8ff;
+      font-size: clamp(25px, 3vw, 43px);
+      line-height: 1.2;
+      font-weight: 680;
+      text-wrap: balance;
+    }
+    .intro-lead { max-width: 620px; margin: 22px 0 30px; color: #aebbd3; font-size: 16px; line-height: 1.8; }
+    .intro-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .intro-meta { margin-top: 48px; padding-top: 18px; display: flex; gap: 36px; border-top: 1px solid var(--line-dark); color: #8f9db7; font-size: 12px; }
+    .intro-meta b { display: block; margin-top: 5px; color: #f3f7ff; font-size: 15px; font-weight: 680; }
+
+    .blueprint {
+      position: relative;
+      width: min(100%, 720px);
+      aspect-ratio: 1.12;
+      justify-self: end;
+      border: 1px solid #304262;
+      color: #c8d8f3;
+      overflow: hidden;
+    }
+    .blueprint::before, .blueprint::after { content: ""; position: absolute; background: #304262; }
+    .blueprint::before { top: 0; bottom: 0; left: 34%; width: 1px; }
+    .blueprint::after { left: 0; right: 0; top: 62%; height: 1px; }
+    .axis { position: absolute; background: rgba(111, 160, 255, .28); }
+    .axis.v1 { top: 0; bottom: 0; left: 67%; width: 1px; }
+    .axis.h1 { left: 0; right: 0; top: 31%; height: 1px; }
+    .bp-index { position: absolute; color: #657693; font: 11px/1.2 "SFMono-Regular", Consolas, monospace; }
+    .bp-index.i1 { top: 14px; left: 16px; }
+    .bp-index.i2 { top: 14px; left: calc(34% + 16px); }
+    .bp-index.i3 { top: 14px; left: calc(67% + 16px); }
+    .bp-layer { position: absolute; display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; border: 1px solid #3d5276; background: #111e35; }
+    .bp-layer b { font-size: clamp(16px, 2vw, 27px); font-weight: 690; }
+    .bp-layer span { margin-top: 7px; color: #7f91ae; font: 11px/1.5 "SFMono-Regular", Consolas, monospace; }
+    .bp-layer.schema { left: 7%; top: 18%; width: 36%; height: 34%; border-color: #4f7fd8; }
+    .bp-layer.renderer { right: 8%; top: 39%; width: 40%; height: 30%; }
+    .bp-layer.workflow { left: 19%; bottom: 7%; width: 47%; height: 24%; border-color: #2468f2; background: #173b7c; }
+    .bp-connector { position: absolute; border-color: #6f9bea; border-style: solid; opacity: .75; }
+    .bp-connector.one { left: 42%; top: 35%; width: 24%; height: 14%; border-width: 1px 1px 0 0; }
+    .bp-connector.two { left: 43%; top: 51%; width: 22%; height: 25%; border-width: 0 1px 1px 0; }
+    .bp-note { position: absolute; right: 16px; bottom: 14px; color: #657693; font: 10px/1.4 "SFMono-Regular", Consolas, monospace; text-align: right; }
+
+    .chapter-head { max-width: 1380px; width: 100%; margin: 0 auto; padding: 54px clamp(20px, 4.5vw, 64px) 28px; display: flex; align-items: end; justify-content: space-between; gap: 32px; }
+    .chapter-head h2, .capability-copy h2, .editor-copy h2, .adopt-copy h2 { margin: 0; font-size: clamp(34px, 4.3vw, 66px); line-height: 1.05; font-weight: 740; text-wrap: balance; }
+    .chapter-head p { max-width: 460px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
+
+    .playground { display: flex; flex-direction: column; color: var(--ink); background: #f6f8fc; }
+    .studio-wrap { width: 100%; max-width: 1380px; flex: 1; margin: 0 auto; padding: 0 clamp(20px, 4.5vw, 64px) 56px; display: flex; }
+    .studio {
+      width: 100%;
+      height: clamp(520px, calc(100svh - var(--nav-height) - 150px), 660px);
+      min-height: 460px;
+      flex: 1;
+      display: grid;
+      grid-template-columns: 210px minmax(300px, .9fr) minmax(390px, 1.1fr);
+      overflow: hidden;
+      border: 1px solid #cfd9e8;
+      border-radius: 8px;
+      background: #f7f9fc;
+      box-shadow: 0 2px 8px rgba(30, 48, 78, .08);
+    }
+    .docs { min-height: 0; overflow: auto; padding: 16px 11px; color: #aebbd3; background: #111a2d; border-right: 1px solid #263553; }
+    .docs b { display: block; padding: 3px 8px 15px; color: #fff; font-size: 12px; }
+    .search { height: 34px; padding: 0 9px; margin-bottom: 14px; display: flex; align-items: center; border: 1px solid #2f3f61; border-radius: 5px; color: #8fa0bd; background: #16233c; font-size: 11px; }
+    .doc-section { margin: 15px 8px 7px; color: #71809c; font-size: 10px; font-weight: 700; }
+    .doc-link { width: 100%; height: 33px; padding: 0 8px; display: flex; align-items: center; border: 0; border-radius: 4px; background: transparent; color: #b6c2d7; text-align: left; font-size: 11px; }
+    .doc-link.on { color: #fff; background: #203a72; box-shadow: inset 2px 0 #6fa0ff; }
+    .code { min-width: 0; min-height: 0; display: flex; flex-direction: column; overflow: hidden; color: #c8d4e8; background: #172033; border-right: 1px solid #d9e1ee; }
+    .code-head, .preview-head { height: 46px; display: flex; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, .1); }
+    .code-head { position: sticky; top: 0; z-index: 2; padding: 0 14px; gap: 9px; background: #172033; }
+    .tab { height: 28px; padding: 0 8px; border: 0; border-radius: 5px; background: transparent; color: #8e9bb4; font-size: 11px; }
+    .tab.on { color: #fff; background: #22314f; }
+    .code pre, .install pre { margin: 0; padding: 21px 22px; font: 11px/1.7 "SFMono-Regular", Consolas, monospace; white-space: pre-wrap; }
+    .code pre { flex: 1; min-height: 0; overflow: auto; }
+    .code .key, .install .key { color: #7dadff; }
+    .code .str, .install .str { color: #9cc8ff; }
+    .code .num { color: #a9c4ff; }
+    .code .bool { color: #d1b4ff; }
+    .code .pun, .install .pun { color: #8390a9; }
+    .preview { min-width: 0; min-height: 0; display: flex; flex-direction: column; overflow: hidden; background: #eef3fa; }
+    .preview-head { position: sticky; top: 0; z-index: 2; padding: 0 15px; border-color: #dce4ef; background: #fff; color: #6d7788; font-size: 11px; }
+    .device { margin-left: auto; display: flex; gap: 5px; }
+    .device button { height: 26px; padding: 0 8px; border: 1px solid #d2dbe8; border-radius: 5px; background: #fff; color: #667085; font-size: 11px; }
+    .device button.on { color: #144bcc; background: #edf3ff; border-color: #bfd5ff; }
+    .schema-preview-shell { flex: 1; min-height: 0; margin: 16px; background: #fff; border: 1px solid #dbe4ef; border-radius: 7px; overflow: auto; transition: max-width 180ms ease, margin 180ms ease; }
+    .schema-preview-shell.is-mobile { max-width: 390px; margin-inline: auto; }
+    .schema-mount { min-height: 468px; color: var(--ink); background: #fff; }
+    .schema-mount .amis-Page { min-height: 468px; }
+    .schema-mount .amis-Page-body { padding: 16px; }
+    .schema-runtime-status { min-height: 468px; display: grid; place-items: center; color: #667085; font-size: 12px; }
+    .schema-overlay-root {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: visible;
+      pointer-events: none;
+    }
+    .schema-overlay-root > * { pointer-events: auto; }
+
+    .capabilities { color: #fff; background: var(--brand); }
+    .capability-layout { min-height: calc(100svh - var(--nav-height)); max-width: 1440px; margin: 0 auto; padding: 54px clamp(20px, 5vw, 72px); display: grid; grid-template-columns: minmax(280px, 390px) minmax(0, 1fr); gap: clamp(38px, 7vw, 100px); align-items: center; }
+    .capability-copy p { max-width: 360px; margin: 22px 0 32px; color: #dbe8ff; font-size: 15px; line-height: 1.8; }
+    .capability-tabs { display: flex; flex-direction: column; border-top: 1px solid rgba(255, 255, 255, .35); }
+    .capability-tab { min-height: 50px; padding: 0; display: flex; align-items: center; justify-content: space-between; border: 0; border-bottom: 1px solid rgba(255, 255, 255, .26); color: #d8e6ff; background: transparent; text-align: left; }
+    .capability-tab::after { content: "+"; font-size: 18px; }
+    .capability-tab.on { color: #fff; font-weight: 700; }
+    .capability-tab.on::after { content: "−"; }
+    .component-surface { overflow: visible; color: var(--ink); background: #fff; border: 1px solid rgba(255, 255, 255, .7); border-radius: 8px; box-shadow: 0 2px 8px rgba(20, 50, 110, .18); }
+    .surface-bar { height: 48px; padding: 0 17px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dfe6f0; color: #667085; font-size: 12px; }
+    .capability-runtime { min-height: 520px; padding: 12px; overflow: auto; background: #f7f9fc; border-radius: 0 0 8px 8px; }
+    .capability-runtime .amis-Page { min-height: 496px; }
+    .capability-runtime .amis-Page-body { padding: 18px; }
+    .component-list { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(255, 255, 255, .35); border-left: 1px solid rgba(255, 255, 255, .35); }
+    .component-list span { flex: 1 1 120px; padding: 14px 12px; border-right: 1px solid rgba(255, 255, 255, .35); border-bottom: 1px solid rgba(255, 255, 255, .35); color: #eef5ff; font: 11px/1.3 "SFMono-Regular", Consolas, monospace; }
+
+    .editor { color: var(--ink); background: #eef2f7; }
+    .editor-layout { min-height: calc(100svh - var(--nav-height)); max-width: 1480px; margin: 0 auto; padding: 58px clamp(20px, 5vw, 72px); display: grid; grid-template-columns: minmax(280px, 420px) minmax(0, 1fr); gap: clamp(38px, 7vw, 96px); align-items: center; }
+    .editor-copy p { margin: 23px 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+    .editor-points { border-top: 1px solid #cbd5e2; }
+    .editor-point { padding: 16px 0; display: grid; grid-template-columns: 38px 1fr; border-bottom: 1px solid #cbd5e2; }
+    .editor-point span { color: var(--brand); font: 11px/1.5 "SFMono-Regular", Consolas, monospace; }
+    .editor-point b { font-size: 14px; font-weight: 680; }
+    .editor-visual { overflow: hidden; border: 1px solid #cbd5e2; border-radius: 8px; background: #fff; box-shadow: 0 2px 8px rgba(27, 47, 78, .08); }
+    .editor-chrome { height: 44px; padding: 0 14px; display: flex; align-items: center; gap: 14px; border-bottom: 1px solid #dce3ed; color: #667085; font-size: 11px; }
+    .editor-chrome b { margin-right: auto; color: var(--ink); }
+    .editor-shot { width: 100%; height: auto; display: block; object-fit: contain; object-position: center; background: #fff; }
+    .editor-caption { padding: 13px 15px; border-top: 1px solid #dce3ed; color: #69758b; font-size: 11px; }
+
+    .adopt { color: #fff; background: var(--night); }
+    .adopt-layout { min-height: calc(100svh - var(--nav-height)); max-width: 1440px; margin: 0 auto; padding: 58px clamp(20px, 5vw, 72px); display: grid; grid-template-columns: minmax(280px, 420px) minmax(0, 1fr); gap: clamp(44px, 8vw, 120px); align-items: center; }
+    .adopt-copy p { margin: 22px 0 30px; color: #aebbd3; font-size: 15px; line-height: 1.8; }
+    .compat { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line-dark); border-left: 1px solid var(--line-dark); }
+    .compat div { min-height: 88px; padding: 15px; border-right: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+    .compat span { display: block; color: #7f8eaa; font-size: 11px; }
+    .compat b { display: block; margin-top: 8px; font-size: 14px; font-weight: 680; }
+    .install { overflow: hidden; border: 1px solid #344764; background: #111e35; }
+    .install-head { height: 45px; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #344764; color: #8494af; font-size: 11px; }
+    .install-tabs { display: flex; border-bottom: 1px solid #344764; }
+    .install-tab { flex: 1; height: 44px; padding: 0 15px; border: 0; border-right: 1px solid #344764; color: #8d9bb5; background: transparent; text-align: left; font-size: 12px; font-weight: 680; }
+    .install-tab:last-child { border-right: 0; }
+    .install-tab.on { color: #fff; background: #14233c; box-shadow: inset 0 -2px var(--brand); }
+    .install-panel[hidden] { display: none; }
+    .install-summary { display: grid; grid-template-columns: repeat(2, 1fr); border-bottom: 1px solid #344764; }
+    .install-summary div { min-height: 92px; padding: 15px; border-right: 1px solid #344764; }
+    .install-summary div:last-child { border-right: 0; }
+    .install-summary b { display: block; color: #f2f6ff; font-size: 13px; font-weight: 680; }
+    .install-summary span { display: block; margin-top: 7px; color: #8d9bb5; font-size: 12px; line-height: 1.65; }
+    .install pre { min-height: 330px; color: #c8d4e8; font-size: 13px; line-height: 1.85; }
+    .install .comment { color: #71809c; }
+    .install .command { color: #f2f6ff; }
+    .final-actions { margin-top: 26px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .site-footer { padding: 54px clamp(20px, 5vw, 72px) 24px; color: var(--ink); background: #fff; border-top: 1px solid var(--line); scroll-snap-align: end; }
+    .footer-main { max-width: 1296px; margin: 0 auto; padding-bottom: 46px; display: grid; grid-template-columns: minmax(280px, 2fr) repeat(3, minmax(120px, 1fr)); gap: 36px; }
+    .footer-brand { width: fit-content; color: var(--ink); }
+    .footer-summary { max-width: 360px; margin: 20px 0 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+    .footer-group h3 { margin: 3px 0 17px; color: #344054; font-size: 12px; font-weight: 720; }
+    .footer-group a { width: fit-content; margin: 0 0 12px; display: block; color: var(--muted); font-size: 13px; }
+    .footer-group a:hover { color: var(--brand-strong); }
+    .footer-bottom { max-width: 1296px; margin: 0 auto; padding-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); color: #7a8699; font-size: 11px; }
+    .footer-legal { max-width: 860px; line-height: 1.7; }
+    .footer-legal a { color: #5f6f89; text-decoration: underline; text-underline-offset: 3px; }
+    .footer-bottom a:hover { color: var(--brand-strong); }
+
+    .chapter-nav { position: fixed; z-index: 45; right: 18px; top: 50%; display: flex; flex-direction: column; gap: 13px; transform: translateY(-50%); }
+    .chapter-nav a { position: relative; width: 16px; height: 16px; display: grid; place-items: center; }
+    .chapter-nav a::before { content: ""; width: 5px; height: 5px; border: 1px solid #90a1bc; border-radius: 50%; background: #0d172b; transition: width 160ms ease, height 160ms ease, background-color 160ms ease; }
+    .chapter-nav a.active::before { width: 9px; height: 9px; background: var(--brand); border-color: #fff; }
+    .chapter-nav span { position: absolute; right: 24px; width: max-content; padding: 4px 7px; display: none; border-radius: 4px; color: #fff; background: #0d172b; font-size: 10px; }
+    .chapter-nav a:hover span, .chapter-nav a:focus-visible span { display: block; }
+
+    @media (max-width: 1180px) {
+      .intro-inner { grid-template-columns: 1fr 1fr; }
+      .studio { grid-template-columns: 180px minmax(280px, .85fr) minmax(350px, 1.15fr); }
+    }
+
+    @media (max-width: 900px) {
+      .links { display: none; }
+      .intro-inner, .capability-layout, .editor-layout, .adopt-layout { grid-template-columns: 1fr; }
+      .intro-inner { gap: 32px; padding-top: 38px; padding-bottom: 28px; }
+      .blueprint { width: 100%; max-width: none; height: 330px; aspect-ratio: auto; justify-self: start; }
+      .chapter-head { align-items: start; flex-direction: column; }
+      .playground, .studio-wrap { display: block; }
+      .studio { height: auto; min-height: 0; grid-template-columns: 180px 1fr; }
+      .docs { max-height: 520px; }
+      .code { height: 520px; }
+      .preview { grid-column: 1 / -1; height: 560px; min-height: 0; }
+      .capability-copy p { max-width: 620px; }
+      .capability-tabs { display: grid; grid-template-columns: repeat(4, 1fr); }
+      .capability-tab { padding: 0 10px; border-right: 1px solid rgba(255, 255, 255, .26); }
+      .capability-tab::after { display: none; }
+      .editor-visual { order: -1; }
+      .footer-main { grid-template-columns: 1.5fr repeat(3, 1fr); gap: 24px; }
+      .chapter-nav { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      :root { --nav-height: 58px; }
+      .nav { padding: 0 16px; gap: 12px; }
+      .nav .actions .dark { display: none; }
+      .brand { font-size: 17px; }
+      .intro-inner { min-height: calc(100svh - var(--nav-height)); padding: 34px 18px 24px; gap: 24px; }
+      h1 { font-size: clamp(64px, 20vw, 82px); }
+      .intro-statement { margin-top: 18px; font-size: 27px; }
+      .intro-lead { margin: 16px 0 22px; font-size: 15px; line-height: 1.65; }
+      .intro-meta { margin-top: 26px; padding-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .intro-meta b { font-size: 13px; }
+      .blueprint { height: 270px; aspect-ratio: auto; }
+      .bp-layer.schema { left: 6%; top: 14%; width: 53%; }
+      .bp-layer.renderer { right: 6%; top: 43%; width: 54%; }
+      .bp-layer.workflow { left: 10%; width: 62%; }
+      .bp-layer { padding: 12px; }
+      .bp-note { display: none; }
+      .chapter { min-height: auto; }
+      .chapter-head { padding: 42px 18px 22px; }
+      .chapter-head h2, .capability-copy h2, .editor-copy h2, .adopt-copy h2 { font-size: 38px; }
+      .studio-wrap { padding: 0 16px 42px; }
+      .studio { display: block; }
+      .docs { display: none; }
+      .code { height: 430px; min-height: 0; border-right: 0; }
+      .preview { height: 520px; min-height: 0; }
+      .capability-layout, .editor-layout, .adopt-layout { min-height: auto; padding: 46px 18px; }
+      .capability-tabs { grid-template-columns: 1fr 1fr; }
+      .capability-runtime { min-height: 560px; padding: 8px; }
+      .component-list span { flex-basis: 50%; }
+      .editor-shot { min-height: 0; }
+      .compat { grid-template-columns: 1fr; }
+      .install-summary { grid-template-columns: 1fr; }
+      .install-summary div { min-height: 0; border-right: 0; border-bottom: 1px solid #344764; }
+      .install-summary div:last-child { border-bottom: 0; }
+      .install pre { min-height: 0; padding: 18px; font-size: 11px; overflow-x: auto; }
+      .site-footer { padding: 40px 18px 22px; }
+      .footer-main { padding-bottom: 30px; grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+      .footer-intro { grid-column: 1 / -1; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
+    }
+
+    @media (max-height: 800px) and (min-width: 901px) {
+      .chapter-head { padding-top: 30px; padding-bottom: 18px; }
+      .studio-wrap { padding-bottom: 24px; }
+      .studio { min-height: 430px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; scroll-snap-type: none; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body class="at-intro">
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="#intro"><span class="mark" aria-hidden="true"></span><span>PrismUI</span></a>
+    <div class="links"><a href="#docs">交互文档</a><a href="#components">组件体系</a><a href="#editor">可视化编辑</a><a href="#adopt">工程接入</a></div>
+    <div class="actions"><a class="btn dark" href="https://github.com/Gengxin-Tech/prismui" target="_blank" rel="noreferrer">GitHub</a><a class="btn primary" href="/docs/zh-CN/docs/index">打开交互文档</a></div>
+  </nav>
+
+  <nav class="chapter-nav" aria-label="页面章节">
+    <a href="#intro" class="active"><span>品牌</span></a>
+    <a href="#docs"><span>交互文档</span></a>
+    <a href="#components"><span>组件体系</span></a>
+    <a href="#editor"><span>可视化编辑</span></a>
+    <a href="#adopt"><span>工程接入</span></a>
+  </nav>
+
+  <main class="page">
+    <section class="chapter intro" id="intro" data-theme="dark">
+      <div class="intro-inner">
+        <div class="intro-copy">
+          <h1>PrismUI</h1>
+          <p class="intro-statement">面向企业应用的 UI Schema 驱动系统</p>
+          <p class="intro-lead">从基础组件、业务交互到可视化编辑器，用一套可持续演进的界面基础设施，缩短复杂后台系统的交付距离。</p>
+          <div class="intro-actions"><a class="btn primary" href="/docs/zh-CN/docs/index">进入交互文档</a><a class="btn dark" href="#components">查看组件能力</a></div>
+          <div class="intro-meta"><div>组件覆盖<b>120+</b></div><div>核心模型<b>UI Schema</b></div><div>当前基线<b>React 19</b></div></div>
+        </div>
+
+        <div class="blueprint" aria-label="PrismUI 从 UI Schema 到业务流程的系统蓝图">
+          <span class="bp-index i1">01 / INPUT</span><span class="bp-index i2">02 / RENDER</span><span class="bp-index i3">03 / WORKFLOW</span>
+          <span class="axis v1"></span><span class="axis h1"></span>
+          <div class="bp-layer schema"><b>UI Schema</b><span>PAGE / FORM / CRUD / ACTION</span></div>
+          <div class="bp-layer renderer"><b>Renderer</b><span>DATA / EVENT / OVERLAY / THEME</span></div>
+          <div class="bp-layer workflow"><b>Enterprise workflow</b><span>BUILD ONCE, EVOLVE CONTINUOUSLY</span></div>
+          <span class="bp-connector one"></span><span class="bp-connector two"></span>
+          <span class="bp-note">PRISMUI SYSTEM MAP<br />REV. 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter playground" id="docs" data-theme="light">
+      <div class="chapter-head">
+        <h2>文档、UI Schema、预览<br />在同一个工作区</h2>
+        <p>先找到组件和 API，再直接改动 UI Schema，右侧业务界面同步响应。首页的第二屏就是 PrismUI 最务实的能力证明。</p>
+      </div>
+      <div class="studio-wrap">
+        <div class="studio" aria-label="PrismUI 交互文档 Playground">
+          <aside class="docs">
+            <b>PrismUI Docs</b>
+            <div class="search">搜索组件、UI Schema、API</div>
+            <div class="doc-section">入门</div>
+            <a class="doc-link" href="/docs/zh-CN/docs/start/getting-started">快速开始</a>
+            <button class="doc-link on" data-schema-demo="customer">UI Schema 基础</button>
+            <div class="doc-section">业务组件</div>
+            <button class="doc-link" data-schema-demo="form">Form 表单</button>
+            <button class="doc-link" data-schema-demo="table">Table 表格</button>
+            <button class="doc-link" data-schema-demo="feedback">弹窗与反馈</button>
+            <button class="doc-link" data-schema-demo="action">行为按钮</button>
+          </aside>
+
+          <section class="code" aria-label="UI Schema 代码">
+            <div class="code-head"><button class="tab on" data-code="schema">ui-schema.json</button><button class="tab" data-code="data">data.json</button></div>
+            <pre id="codeBlock" aria-live="polite">正在载入真实 UI Schema...</pre>
+          </section>
+
+          <section class="preview" aria-label="业务界面实时预览">
+            <div class="preview-head"><span id="previewTitle">客户管理 / 真实渲染</span><div class="device"><button class="on" data-device="desktop">桌面</button><button data-device="mobile">移动</button></div></div>
+            <div class="schema-preview-shell" id="previewShell"><div class="schema-mount" id="schemaPreview"><div class="schema-runtime-status">正在启动 UI Schema renderer...</div></div></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter capabilities" id="components" data-theme="dark">
+      <div class="capability-layout">
+        <div class="capability-copy">
+          <h2>从一个字段<br />到完整业务流程</h2>
+          <p>PrismUI 的价值不止是组件数量。数据录入、展示、弹窗与反馈、页面行为共享同一套 UI Schema、数据域与事件模型。</p>
+          <div class="capability-tabs" role="tablist" aria-label="组件能力分类">
+            <button class="capability-tab on" data-capability="form" role="tab">数据录入</button>
+            <button class="capability-tab" data-capability="table" role="tab">数据展示</button>
+            <button class="capability-tab" data-capability="feedback" role="tab">弹窗与反馈</button>
+            <button class="capability-tab" data-capability="action" role="tab">页面行为</button>
+          </div>
+          <div class="component-list"><span>Form</span><span>CRUD</span><span>Table</span><span>Drawer</span><span>Dialog</span><span>Action</span></div>
+        </div>
+
+        <div class="component-surface" aria-live="polite">
+          <div class="surface-bar"><span>供应商准入</span><span id="surfaceMode">Form / 数据录入</span></div>
+          <div class="capability-runtime" id="capabilityPreview"><div class="schema-runtime-status">正在载入组件能力...</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter editor" id="editor" data-theme="light">
+      <div class="editor-layout">
+        <div class="editor-copy">
+          <h2>同一套能力<br />也能可视化搭建</h2>
+          <p>研发可以直接写 UI Schema，业务团队也可以在编辑器里配置组件、数据和交互。两种工作方式最终落到同一份可维护的页面描述。</p>
+          <div class="editor-points"><div class="editor-point"><span>01</span><b>组件面板与页面画布共享渲染器</b></div><div class="editor-point"><span>02</span><b>属性配置直接映射 UI Schema</b></div><div class="editor-point"><span>03</span><b>预览结果可以继续回到代码协作</b></div></div>
+        </div>
+        <figure class="editor-visual">
+          <div class="editor-chrome"><b>PrismUI Editor</b><span>常规</span><span>外观</span></div>
+          <img class="editor-shot" src="assets/prismui-editor-overview.png" alt="可视化编辑器组件面板、页面画布和属性配置面板总览" />
+          <figcaption class="editor-caption">PrismUI 当前编辑器的组件面板、页面画布与属性配置总览。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="chapter adopt" id="adopt" data-theme="dark">
+      <div class="adopt-layout">
+        <div class="adopt-copy">
+          <h2>接进现有应用<br />保持持续演进</h2>
+          <p>PrismUI 保留 React 组件化扩展能力，同时用 UI Schema 承载页面结构、数据和动作。可以从一张业务页开始，不要求重写现有系统。</p>
+          <div class="compat"><div><span>运行时</span><b>React 19</b></div><div><span>状态模型</span><b>MobX / MST</b></div><div><span>主题</span><b>Design Tokens</b></div><div><span>扩展</span><b>Custom Renderer</b></div></div>
+          <div class="final-actions"><a class="btn primary" href="/docs/zh-CN/docs/start/getting-started">阅读快速开始</a><a class="btn dark" href="https://github.com/Gengxin-Tech/prismui" target="_blank" rel="noreferrer">查看源码</a></div>
+        </div>
+        <div class="install" aria-label="PrismUI 工程接入方式">
+          <div class="install-head"><span>工程接入</span><span>UI Schema runtime</span></div>
+          <div class="install-tabs" role="tablist" aria-label="接入方式">
+            <button class="install-tab on" id="install-tab-sdk" type="button" role="tab" aria-selected="true" aria-controls="install-panel-sdk" data-install="sdk">JS SDK</button>
+            <button class="install-tab" id="install-tab-react" type="button" role="tab" aria-selected="false" aria-controls="install-panel-react" data-install="react">React 工程</button>
+          </div>
+          <div class="install-panel is-active" id="install-panel-sdk" role="tabpanel" aria-labelledby="install-tab-sdk" data-install-panel="sdk">
+            <div class="install-summary"><div><b>适合渐进接入</b><span>在现有页面直接引入静态资源，用 UI Schema 挂载一个业务页面。</span></div><div><b>关键接口</b><span>加载 sdk.js 后，通过 embed 把 UI Schema、初始数据和 env 注入运行时。</span></div></div>
+            <pre>&lt;<span class="key">link</span> rel=<span class="str">"stylesheet"</span> href=<span class="str">"/sdk/sdk.css"</span> /&gt;
+&lt;<span class="key">link</span> rel=<span class="str">"stylesheet"</span> href=<span class="str">"/sdk/helper.css"</span> /&gt;
+&lt;<span class="key">link</span> rel=<span class="str">"stylesheet"</span> href=<span class="str">"/sdk/iconfont.css"</span> /&gt;
+&lt;<span class="key">div</span> id=<span class="str">"root"</span>&gt;&lt;/<span class="key">div</span>&gt;
+&lt;<span class="key">script</span> src=<span class="str">"/sdk/sdk.js"</span>&gt;&lt;/<span class="key">script</span>&gt;
+
+&lt;<span class="key">script</span>&gt;
+  <span class="key">const</span> prism = amisRequire(<span class="str">'amis/embed'</span>);
+  <span class="key">const</span> uiSchema = {
+    type: <span class="str">'page'</span>,
+    title: <span class="str">'客户管理'</span>,
+    body: {
+      type: <span class="str">'crud'</span>,
+      api: <span class="str">'/api/customers'</span>,
+      columns: [
+        {name: <span class="str">'company'</span>, label: <span class="str">'客户'</span>},
+        {name: <span class="str">'owner'</span>, label: <span class="str">'负责人'</span>},
+        {name: <span class="str">'status'</span>, label: <span class="str">'阶段'</span>}
+      ]
+    }
+  };
+
+  <span class="command">prism.embed('#root', uiSchema, {data}, env);</span>
+&lt;/<span class="key">script</span>&gt;</pre>
+          </div>
+          <div class="install-panel" id="install-panel-react" role="tabpanel" aria-labelledby="install-tab-react" data-install-panel="react" hidden>
+            <div class="install-summary"><div><b>适合深度集成</b><span>在 React 工程内引入渲染器、主题样式和全局反馈组件。</span></div><div><b>关键接口</b><span>用 render 渲染 UI Schema，并在 env 中接管请求、跳转、通知和弹窗容器。</span></div></div>
+            <pre><span class="comment">// main.tsx</span>
+<span class="key">import</span> <span class="str">'amis/lib/themes/cxd.css'</span>;
+<span class="key">import</span> <span class="str">'amis/lib/helper.css'</span>;
+<span class="key">import</span> <span class="str">'amis/sdk/iconfont.css'</span>;
+<span class="key">import</span> {render <span class="key">as</span> renderUI} <span class="key">from</span> <span class="str">'amis'</span>;
+<span class="key">import</span> {ToastComponent, AlertComponent} <span class="key">from</span> <span class="str">'amis-ui'</span>;
+
+<span class="key">const</span> env = {
+  fetcher,
+  jumpTo,
+  notify,
+  getModalContainer: () =&gt; document.body,
+  theme: <span class="str">'cxd'</span>
+};
+
+<span class="key">function</span> App() {
+  <span class="key">return</span> &lt;&gt;
+    &lt;ToastComponent theme=<span class="str">"cxd"</span> position=<span class="str">"top-right"</span> /&gt;
+    &lt;AlertComponent theme=<span class="str">"cxd"</span> /&gt;
+    <span class="command">{renderUI(uiSchema, {data}, env)}</span>
+  &lt;/&gt;;
+}</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-intro">
+        <a class="brand footer-brand" href="#intro"><span class="mark" aria-hidden="true"></span><span>PrismUI</span></a>
+        <p class="footer-summary">面向企业应用的 UI Schema 驱动系统，让复杂后台界面从设计、开发到长期演进保持在同一套模型里。</p>
+      </div>
+      <div class="footer-group">
+        <h3>产品</h3>
+        <a href="/docs/zh-CN/docs/index">交互文档</a>
+        <a href="/docs/zh-CN/components/page">组件体系</a>
+        <a href="#editor">可视化编辑</a>
+      </div>
+      <div class="footer-group">
+        <h3>开发</h3>
+        <a href="/docs/zh-CN/docs/start/getting-started">快速开始</a>
+        <a href="#adopt">工程接入</a>
+        <a href="https://github.com/Gengxin-Tech/prismui" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+      <div class="footer-group">
+        <h3>项目</h3>
+        <a href="https://github.com/Gengxin-Tech/prismui/releases" target="_blank" rel="noreferrer">Releases</a>
+        <a href="https://github.com/Gengxin-Tech/prismui/issues" target="_blank" rel="noreferrer">Issues</a>
+        <a href="https://github.com/Gengxin-Tech/prismui/pulls" target="_blank" rel="noreferrer">Pull Requests</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-legal">© 2026 Gengxin-Tech（PrismUI 新增修改）。PrismUI 是基于 <a href="https://github.com/baidu/amis" target="_blank" rel="noreferrer">baidu/amis</a> 的独立维护 fork；原项目版权及许可声明按 Apache-2.0 等适用开源许可证保留。</span>
+      <a href="/">prismui.io</a>
+    </div>
+  </footer>
+
+  <div class="amis-scope schema-overlay-root" id="schemaOverlayRoot"></div>
+
+  <script src="/sdk/sdk.js"></script>
+  <script src="homepage.js"></script>
+</body>
+</html>
