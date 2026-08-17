@@ -202,8 +202,8 @@ sdk/thirds/monaco-editor/min/vs/basic-languages/redis/
 sdk/thirds/monaco-editor/min/vs/basic-languages/redis/redis.js
 sdk/rest.js
 sdk/exceljs.js
-sdk/cxd.css
-sdk/cxd-ie11.css
+sdk/prismui.css
+sdk/prismui-ie11.css
 sdk/rich-text.js
 sdk/iconfont.eot
 sdk/tinymce.js

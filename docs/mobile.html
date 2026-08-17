@@ -9,21 +9,21 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />          
-    <link rel="stylesheet" href="/docs/pkg/npm_f980498.css" />
-    <link rel="stylesheet" title="ang" href="/docs/n/amis/lib/themes/ang_74c6556.css" />
+    <link rel="stylesheet" href="/docs/pkg/npm_62bdc03.css" />
+    <link rel="stylesheet" title="ang" href="/docs/n/amis/lib/themes/ang_40430c3.css" />
     <link
       rel="stylesheet"
-      title="cxd"
-      disabled href="/docs/n/amis/lib/themes/cxd_7725f77.css" />
+      title="prismui"
+      disabled href="/docs/n/amis/lib/themes/prismui_410a1d8.css" />
     <link
       rel="stylesheet"
       title="dark"
-      disabled href="/docs/n/amis/lib/themes/dark_b3dd2b8.css" />
+      disabled href="/docs/n/amis/lib/themes/dark_62d7327.css" />
     <link
       rel="stylesheet"
       title="antd"
-      disabled href="/docs/n/amis/lib/themes/antd_7548f1c.css" />
-    <link rel="stylesheet" href="/docs/n/amis/lib/helper_9c3b288.css" />
+      disabled href="/docs/n/amis/lib/themes/antd_fdd7cbb.css" />
+    <link rel="stylesheet" href="/docs/n/amis/lib/helper_31ed455.css" />
     <style>
       .app-wrapper {
         position: relative;
@@ -35,15 +35,15 @@
 
   <body>
     <div id="root" class="app-wrapper"></div>  
-<script type="text/javascript" src="/docs/pkg/app_6298233.js"></script>
+<script type="text/javascript" src="/docs/pkg/app_0e417cf.js"></script>
 <script type="text/javascript" src="/docs/pkg/color-picker_ed409c5.js"></script>
-<script src="/docs/pkg/npm_f357654.js"></script>
-<script type="text/javascript" src="/docs/pkg/examples/mobile.html_map_8f86db0.js"></script>
+<script src="/docs/pkg/npm_cb4f76f.js"></script>
+<script type="text/javascript" src="/docs/pkg/examples/mobile.html_map_11374b3.js"></script>
 <script type="text/javascript">
       const themes = [
         {
           label: '云舍',
-          value: 'cxd'
+          value: 'prismui'
         },
         {
           label: 'Ang',
@@ -62,9 +62,9 @@
       document.querySelectorAll('link[title]').forEach(item => {
         item.disabled = true;
       });
-      let theme = localStorage.getItem('amis-theme') || 'cxd';
+      let theme = localStorage.getItem('prismui-theme') || 'prismui';
       if (theme == 'default') {
-        theme = 'cxd';
+        theme = 'prismui';
       }
 
       const linkDom = document.querySelector(`link[title=${theme}]`);

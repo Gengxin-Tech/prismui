@@ -45,10 +45,10 @@
 .bg-dark {
   color: rgb(62.61663286%, 62.7450980392%, 62.8735632184%);
 }
-.bg-dark a, .bg-dark .amis-Button--link {
+.bg-dark a, .bg-dark .prismui-Button--link {
   color: rgb(72.6511156187%, 72.7450980392%, 72.8390804598%);
 }
-.bg-dark a:hover, .bg-dark .amis-Button--link:hover {
+.bg-dark a:hover, .bg-dark .prismui-Button--link:hover {
   color: #fff;
 }
 .bg-dark .open > a, .bg-dark .open > a:hover, .bg-dark .open > a:focus {
@@ -82,10 +82,10 @@
 .bg-black {
   color: #666666;
 }
-.bg-black a, .bg-black .amis-Button--link {
+.bg-black a, .bg-black .prismui-Button--link {
   color: rgb(50%, 50%, 50%);
 }
-.bg-black a:hover, .bg-black .amis-Button--link:hover {
+.bg-black a:hover, .bg-black .prismui-Button--link:hover {
   color: #fff;
 }
 .bg-black .open > a, .bg-black .open > a:hover, .bg-black .open > a:focus {
@@ -119,10 +119,10 @@
 .bg-primary {
   color: rgb(81%, 89.6823529412%, 99%);
 }
-.bg-primary a, .bg-primary .amis-Button--link {
+.bg-primary a, .bg-primary .prismui-Button--link {
   color: white;
 }
-.bg-primary a:hover, .bg-primary .amis-Button--link:hover {
+.bg-primary a:hover, .bg-primary .prismui-Button--link:hover {
   color: #fff;
 }
 .bg-primary .open > a, .bg-primary .open > a:hover, .bg-primary .open > a:focus {
@@ -156,10 +156,10 @@
 .bg-success {
   color: rgb(70.6197783461%, 90.5566922421%, 75.1723019917%);
 }
-.bg-success a, .bg-success .amis-Button--link {
+.bg-success a, .bg-success .prismui-Button--link {
   color: rgb(85.7550440466%, 95.4214265416%, 87.9623282384%);
 }
-.bg-success a:hover, .bg-success .amis-Button--link:hover {
+.bg-success a:hover, .bg-success .prismui-Button--link:hover {
   color: #fff;
 }
 .bg-success .open > a, .bg-success .open > a:hover, .bg-success .open > a:focus {
@@ -193,10 +193,10 @@
 .bg-info {
   color: rgb(81%, 89.6823529412%, 99%);
 }
-.bg-info a, .bg-info .amis-Button--link {
+.bg-info a, .bg-info .prismui-Button--link {
   color: white;
 }
-.bg-info a:hover, .bg-info .amis-Button--link:hover {
+.bg-info a:hover, .bg-info .prismui-Button--link:hover {
   color: #fff;
 }
 .bg-info .open > a, .bg-info .open > a:hover, .bg-info .open > a:focus {
@@ -230,10 +230,10 @@
 .bg-warning {
   color: rgb(99.8550520687%, 99.5611772155%, 98.1841636176%);
 }
-.bg-warning a, .bg-warning .amis-Button--link {
+.bg-warning a, .bg-warning .prismui-Button--link {
   color: hsl(49.4472361809, 85.2153110048%, 109.0196078431%);
 }
-.bg-warning a:hover, .bg-warning .amis-Button--link:hover {
+.bg-warning a:hover, .bg-warning .prismui-Button--link:hover {
   color: #fff;
 }
 .bg-warning .open > a, .bg-warning .open > a:hover, .bg-warning .open > a:focus {
@@ -267,10 +267,10 @@
 .bg-danger {
   color: rgb(97.441796972%, 89.6170265575%, 90.36670516%);
 }
-.bg-danger a, .bg-danger .amis-Button--link {
+.bg-danger a, .bg-danger .prismui-Button--link {
   color: hsl(354.251497006, 60.4641350211%, 103.5294117647%);
 }
-.bg-danger a:hover, .bg-danger .amis-Button--link:hover {
+.bg-danger a:hover, .bg-danger .prismui-Button--link:hover {
   color: #fff;
 }
 .bg-danger .open > a, .bg-danger .open > a:hover, .bg-danger .open > a:focus {
