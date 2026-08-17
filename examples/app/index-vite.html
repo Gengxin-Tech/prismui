@@ -33,12 +33,12 @@
       }
     </style>
     <script type="module">
-      let theme = localStorage.getItem('amis-theme') || 'cxd';
+      let theme = localStorage.getItem('prismui-theme') || 'prismui';
       if (theme === 'default') {
-        theme = 'cxd';
+        theme = 'prismui';
       }
 
-      ['ang', 'cxd', 'dark', 'antd'].forEach(key => {
+      ['ang', 'prismui', 'dark', 'antd'].forEach(key => {
         const link = document.createElement('link');
         link.setAttribute('rel', 'stylesheet');
         link.setAttribute('title', key);

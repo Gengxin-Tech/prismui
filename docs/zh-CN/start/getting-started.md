@@ -87,7 +87,7 @@ SDK 版本适合对前端或 React 不了解的开发者，它不依赖 npm 及 
 
 ### 切换主题
 
-jssdk 版本默认使用 `sdk.css`。如果要使用其它主题，需要先加载对应主题 CSS，再在 js 渲染第四个参数里传入 `theme`。`theme` 决定 `[data-amis-theme]` 的主题作用域，组件 DOM 主类名仍是稳定的 `.amis-*`。
+jssdk 版本默认使用 `sdk.css`。如果要使用其它主题，需要先加载对应主题 CSS，再在 js 渲染第四个参数里传入 `theme`。`theme` 决定 `[data-prismui-theme]` 的主题作用域，组件 DOM 主类名仍是稳定的 `.prismui-*`。
 
 ```js
 amis.embed(
@@ -105,7 +105,7 @@ amis.embed(
 );
 ```
 
-> `cxd.css`、`antd.css`、`dark.css` 是主题包文件名，不代表新样式应该写成 `.cxd-*`、`.antd-*` 或 `.dark-*` 选择器。业务覆写请优先使用 `--amis-*` token、`.amis-*` 稳定组件类名和 `[data-amis-theme]` 作用域。
+> `prismui.css`、`antd.css`、`dark.css` 是主题包文件名，不代表新样式应该写成 `.prismui-*`、`.antd-*` 或 `.dark-*` 选择器。业务覆写请优先使用 `--prismui-*` token、`.prismui-*` 稳定组件类名和 `[data-prismui-theme]` 作用域。
 
 ### 初始值
 
@@ -192,7 +192,7 @@ let amisScoped = amis.embed(
     // confirm: content => {},
     //
     // 主题，默认是 default。使用其它主题时需要同时引用对应主题 CSS。
-    // 组件 DOM 主类名保持 .amis-*，主题身份通过 data-amis-theme 表达。
+    // 组件 DOM 主类名保持 .prismui-*，主题身份通过 data-prismui-theme 表达。
     // theme: 'antd'
     //
     // 用来实现用户行为跟踪，详细请查看左侧高级中的说明
@@ -344,11 +344,11 @@ amisScoped.unmount();
 
 ## vue
 
-可以基于 SDK 版本封装成 component 供 vue 使用，具体请参考示例：https://github.com/aisuda/vue2-amis-demo
+可以基于 SDK 版本封装成 component 供 vue 使用，具体请参考示例：https://github.com/aisuda/vue2-prismui-demo
 
 ## react
 
-初始项目请参考 <https://github.com/aisuda/amis-react-starter>。
+初始项目请参考 <https://github.com/aisuda/prismui-react-starter>。
 
 如果在已有项目中，React 版本需要是 `>=18.0.0`，mobx 需要 `^4.5.0`。
 
@@ -428,14 +428,14 @@ module.exports = {
 
 ### 主题样式
 
-目前主要支持两个主题：`cxd（云舍）` 和 `antd（仿 Antd）`
+目前主要支持两个主题：`prismui（云舍）` 和 `antd（仿 Antd）`
 
 1. 引入样式文件：
 
 html 中引入：
 
 ```html
-<link href="./node_modules/amis/lib/themes/cxd.css" />
+<link href="./node_modules/amis/lib/themes/prismui.css" />
 <link href="./node_modules/amis/lib/helper.css" />
 <link href="./node_modules/amis/sdk/iconfont.css" />
 <!-- 或 <link href="./node_modules/amis/lib/themes/antd.css" /> -->
@@ -444,14 +444,14 @@ html 中引入：
 js 中引入：
 
 ```js
-import 'amis/lib/themes/cxd.css';
+import 'amis/lib/themes/prismui.css';
 import 'amis/lib/helper.css';
 import 'amis/sdk/iconfont.css';
 // 或 import 'amis/lib/themes/antd.css';
 ```
 
 > 上面只是示例，请根据自己的项目结构调整引用路径。
-> 如果要支持 IE11，只能引入对应的静态 CSS 降级文件，例如 `amis/sdk/cxd-ie11.css`；IE11 不支持基于 CSS 变量的动态 token 主题切换。
+> 如果要支持 IE11，只能引入对应的静态 CSS 降级文件，例如 `amis/sdk/prismui-ie11.css`；IE11 不支持基于 CSS 变量的动态 token 主题切换。
 
 2. 渲染器使用配置主题
 
@@ -467,7 +467,7 @@ renderAmis(
   },
   {
     // env...
-    theme: 'cxd' // 选择已加载的主题包；DOM 主类名仍是 .amis-*
+    theme: 'prismui' // 选择已加载的主题包；DOM 主类名仍是 .prismui-*
   }
 );
 ```
@@ -497,7 +497,7 @@ import {ToastComponent, AlertComponent, alert, confirm, toast} from 'amis-ui';
 class MyComponent extends React.Component<any, any> {
   render() {
     let amisScoped;
-    let theme = 'cxd';
+    let theme = 'prismui';
     let locale = 'zh-CN';
 
     // 请勿使用 React.StrictMode，目前还不支持
@@ -731,7 +731,7 @@ render 有三个参数，后面会详细说明这三个参数内的属性
 
 #### theme: string
 
-目前支持是三种主题：`default`、`cxd` 和 `dark`
+目前支持是三种主题：`default`、`prismui` 和 `dark`
 
 #### isCurrentUrl
 

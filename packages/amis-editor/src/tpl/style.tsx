@@ -1023,7 +1023,7 @@ setSchemaTpl('theme:form-description', () => {
       }),
       {
         label: '上间距',
-        type: 'amis-theme-select',
+        type: 'prismui-theme-select',
         name: 'themeCss.descriptionClassName.margin-top:default',
         options: '${sizesOptions}',
         editorValueToken: '--Form-description-gap'
@@ -1037,7 +1037,7 @@ setSchemaTpl('theme:select', (option: any = {}) => {
   return {
     mode: 'horizontal',
     labelAlign: 'left',
-    type: 'amis-theme-select',
+    type: 'prismui-theme-select',
     label: '大小',
     name: `themeCss.className.select:default`,
     options: '${sizesOptions}',
@@ -1049,7 +1049,7 @@ setSchemaTpl('theme:select', (option: any = {}) => {
 setSchemaTpl('theme:font', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'amis-theme-font-editor',
+    type: 'prismui-theme-font-editor',
     label: '文字',
     name: `themeCss.className.font:default`,
     needColorCustom: true,
@@ -1061,7 +1061,7 @@ setSchemaTpl('theme:font', (option: any = {}) => {
 setSchemaTpl('theme:colorPicker', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'amis-theme-color-picker',
+    type: 'prismui-theme-color-picker',
     label: '颜色',
     name: `themeCss.className.color:default`,
     needCustom: true,
@@ -1073,7 +1073,7 @@ setSchemaTpl('theme:colorPicker', (option: any = {}) => {
 setSchemaTpl('theme:border', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'amis-theme-border',
+    type: 'prismui-theme-border',
     label: '边框',
     name: `themeCss.className.border:default`,
     needColorCustom: true,
@@ -1085,7 +1085,7 @@ setSchemaTpl('theme:border', (option: any = {}) => {
 setSchemaTpl('theme:paddingAndMargin', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'amis-theme-padding-and-margin',
+    type: 'prismui-theme-padding-and-margin',
     label: '边距',
     name: `themeCss.className.padding-and-margin:default`,
     ...option
@@ -1096,7 +1096,7 @@ setSchemaTpl('theme:paddingAndMargin', (option: any = {}) => {
 setSchemaTpl('theme:radius', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'amis-theme-radius',
+    type: 'prismui-theme-radius',
     label: '圆角',
     name: `themeCss.className.radius:default`,
     ...option
@@ -1106,7 +1106,7 @@ setSchemaTpl('theme:radius', (option: any = {}) => {
 // 阴影选择器
 setSchemaTpl('theme:shadow', (option: any = {}) => {
   return {
-    type: 'amis-theme-shadow-editor',
+    type: 'prismui-theme-shadow-editor',
     label: false,
     name: `themeCss.className.boxShadow:default`,
     hasSenior: true,
@@ -1118,7 +1118,7 @@ setSchemaTpl('theme:shadow', (option: any = {}) => {
 setSchemaTpl('theme:size', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'amis-theme-size-editor',
+    type: 'prismui-theme-size-editor',
     label: false,
     name: `themeCss.className.size:default`,
     options: '${sizesOptions}',
@@ -1410,17 +1410,17 @@ setSchemaTpl('animation', () => {
     id = formateId(id);
     const className = `${animations[type].type}-${id}-${type}`;
     if (type === 'hover') {
-      el?.classList.add(`amis-${animations[type].type}-show`);
+      el?.classList.add(`prismui-${animations[type].type}-show`);
       el?.classList.add(`${animations[type].type}-${id}-hover-show`);
     }
     el?.classList.add(className);
     createAnimationStyle(id, animations);
 
     if (isMobile) {
-      let style = doc.getElementById('amis-styles');
+      let style = doc.getElementById('prismui-styles');
       if (!style) {
         style = doc.createElement('style');
-        style.id = 'amis-styles';
+        style.id = 'prismui-styles';
         doc.head.appendChild(style);
       }
       style.innerHTML = styleManager.styleText;
@@ -1432,7 +1432,7 @@ setSchemaTpl('animation', () => {
     timeoutId = setTimeout(() => {
       el?.classList.remove(className);
       if (type === 'hover') {
-        el?.classList.remove(`amis-${animations[type].type}-show`);
+        el?.classList.remove(`prismui-${animations[type].type}-show`);
         el?.classList.remove(`${animations[type].type}-${id}-hover-show`);
       }
 

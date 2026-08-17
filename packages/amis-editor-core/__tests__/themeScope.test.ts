@@ -14,20 +14,20 @@ describe('editor themeScope helpers', () => {
     expect(resolveEditorThemeName('dark')).toBe('dark');
     expect(resolveEditorThemeName({scope: {value: 'antd'}})).toBe('antd');
     expect(resolveEditorThemeName({name: 'custom'})).toBe('custom');
-    expect(resolveEditorThemeName(undefined, 'cxd')).toBe('cxd');
+    expect(resolveEditorThemeName(undefined, 'prismui')).toBe('prismui');
   });
 
   it('creates preview scope props and applies them to DOM nodes', () => {
     expect(getEditorThemeScopeProps('dark')).toEqual({
-      'data-amis-theme': 'dark'
+      'data-prismui-theme': 'dark'
     });
 
     const node = document.createElement('div');
     applyEditorThemeScope(node, 'antd');
 
-    expect(node).toHaveAttribute('data-amis-theme', 'antd');
+    expect(node).toHaveAttribute('data-prismui-theme', 'antd');
     expect(getEditorThemeScopeHtmlAttrs('a"b')).toBe(
-      'data-amis-theme="a&quot;b"'
+      'data-prismui-theme="a&quot;b"'
     );
   });
 
@@ -36,7 +36,7 @@ describe('editor themeScope helpers', () => {
       componentClassPrefix: 'brand-' as any
     });
 
-    expect(resolveEditorComponentClassPrefix('cxd')).toBe('amis-');
+    expect(resolveEditorComponentClassPrefix('prismui')).toBe('prismui-');
     expect(resolveEditorComponentClassPrefix('branded-editor-prefix')).toBe(
       'brand-'
     );

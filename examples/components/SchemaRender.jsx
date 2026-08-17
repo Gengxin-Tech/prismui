@@ -1,4 +1,5 @@
 import React from 'react';
+import {DOCS_BASE_PATH, isDocsDeployment} from './publicPath';
 import {render, toast, makeTranslator, LazyComponent, Drawer} from 'amis';
 import axios from 'axios';
 import Portal from 'react-overlays/Portal';
@@ -21,7 +22,7 @@ function loadEditor() {
   );
 }
 
-const viewMode = localStorage.getItem('amis-viewMode') || 'pc';
+const viewMode = localStorage.getItem('prismui-viewMode') || 'pc';
 
 setGlobalOptions({
   pdfjsWorkerSrc: supportsMjs() ? pdfUrlLoad() : ''
@@ -281,8 +282,8 @@ export default function (schema, schemaProps, showCode, envOverrides) {
         let host = `${window.location.protocol}//${window.location.host}`;
 
         // 如果在 gh-pages 里面
-        if (/^\/amis/.test(window.location.pathname)) {
-          host += '/amis';
+        if (isDocsDeployment(window.location.pathname)) {
+          host += DOCS_BASE_PATH;
         }
 
         const schemaUrl = `${host}/schema.json`;

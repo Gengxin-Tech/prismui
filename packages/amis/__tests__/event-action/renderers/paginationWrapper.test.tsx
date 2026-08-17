@@ -35,7 +35,7 @@ test('paginationWrapper: service + crud', async () => {
             id: 'u:ff652047d747',
             api: {
               method: 'get',
-              url: 'https://yapi.baidu-int.com/mock/42601/amis-chart/chart/sales/data2'
+              url: 'https://yapi.baidu-int.com/mock/42601/prismui-chart/chart/sales/data2'
             },
             body: [
               {

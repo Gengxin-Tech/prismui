@@ -19,7 +19,9 @@ function parseArgs(argv) {
     manifest: path.join(__dirname, 'page-manifest.json'),
     outDir: '',
     viewport: '1440x900',
-    theme: 'cxd',
+    theme: '',
+    baselineTheme: 'cxd',
+    candidateTheme: 'prismui',
     tab: '',
     path: '',
     limit: 0,
@@ -46,7 +48,9 @@ function parseArgs(argv) {
     else if (key === 'manifest') args.manifest = path.resolve(next), i++;
     else if (key === 'out') args.outDir = path.resolve(next), i++;
     else if (key === 'viewport') args.viewport = next, i++;
-    else if (key === 'theme') args.theme = next, i++;
+    else if (key === 'theme') args.theme = next, args.baselineTheme = next, args.candidateTheme = next, i++;
+    else if (key === 'baseline-theme') args.baselineTheme = next, i++;
+    else if (key === 'candidate-theme') args.candidateTheme = next, i++;
     else if (key === 'tab') args.tab = next, i++;
     else if (key === 'path') args.path = next, i++;
     else if (key === 'limit') args.limit = Number(next), i++;
@@ -173,8 +177,10 @@ async function waitForNoSpinner(page, timeout = 15000) {
         const selectors = [
           '.visibility-sensor > .amis-Spinner',
           '.visibility-sensor > .cxd-Spinner',
+          '.visibility-sensor > .prismui-Spinner',
           '.amis-LazyComponent > .amis-Spinner',
-          '.cxd-LazyComponent > .cxd-Spinner'
+          '.cxd-LazyComponent > .cxd-Spinner',
+          '.prismui-LazyComponent > .prismui-Spinner'
         ];
         return selectors.every(selector =>
           Array.from(document.querySelectorAll(selector)).every(node => {
@@ -211,7 +217,29 @@ async function waitForStableLayout(page, rounds = 3, interval = 250) {
   while (Date.now() - started < 8000) {
     const current = await page.evaluate(() => {
       const el = document.scrollingElement || document.documentElement;
-      return [el.scrollHeight, el.clientWidth, el.clientHeight, window.innerWidth, window.innerHeight].join('x');
+      const content =
+        document.querySelector('.Doc-content') ||
+        document.querySelector('.markdown-body') ||
+        document.querySelector('.markdown') ||
+        document.querySelector('[role="main"]') ||
+        document.querySelector('main') ||
+        document.querySelector('#root') ||
+        document.body;
+      const rect = content ? content.getBoundingClientRect() : null;
+      const text = content
+        ? content.innerText || content.textContent || ''
+        : document.body.innerText || '';
+      const textLength = text.replace(/\s+/g, ' ').trim().length;
+      const contentHeight = rect ? Math.round(rect.height) : 0;
+      return [
+        el.scrollHeight,
+        el.clientWidth,
+        el.clientHeight,
+        window.innerWidth,
+        window.innerHeight,
+        textLength,
+        contentHeight
+      ].join('x');
     });
     stable = current === previous ? stable + 1 : 1;
     previous = current;
@@ -220,23 +248,78 @@ async function waitForStableLayout(page, rounds = 3, interval = 250) {
   }
 }
 
+async function waitForStableMainContent(page, timeout = 15000) {
+  let stable = 0;
+  let previous = '';
+  const started = Date.now();
+  while (Date.now() - started < timeout) {
+    const state = await page.evaluate(() => {
+      const el = document.scrollingElement || document.documentElement;
+      const content =
+        document.querySelector('.Doc-content') ||
+        document.querySelector('.markdown-body') ||
+        document.querySelector('.markdown') ||
+        document.querySelector('[role="main"]') ||
+        document.querySelector('main') ||
+        document.querySelector('#root') ||
+        document.body;
+      const text = content
+        ? content.innerText || content.textContent || ''
+        : document.body.innerText || '';
+      const normalizedText = text.replace(/\s+/g, ' ').trim();
+      const rect = content ? content.getBoundingClientRect() : null;
+      return {
+        signature: [
+          el.scrollHeight,
+          el.clientWidth,
+          el.clientHeight,
+          normalizedText.length,
+          rect ? Math.round(rect.height) : 0,
+          document.title
+        ].join('x'),
+        textLength: normalizedText.length,
+        scrollHeight: el.scrollHeight,
+        viewportHeight: window.innerHeight
+      };
+    });
+
+    stable = state.signature === previous ? stable + 1 : 1;
+    previous = state.signature;
+    if (
+      stable >= 4 &&
+      state.textLength > 20 &&
+      state.scrollHeight >= state.viewportHeight
+    ) {
+      return;
+    }
+    await delay(500);
+  }
+}
+
 async function stabilize(page, mode) {
   await page.evaluate(() => document.fonts && document.fonts.ready).catch(() => undefined);
   await waitForNoSpinner(page);
   await waitForVisibleImages(page, 4000);
-  await waitForStableLayout(page, mode === 'scroll' ? 2 : 3, 250);
+  if (mode !== 'scroll') {
+    await waitForStableMainContent(page);
+  }
+  await waitForStableLayout(
+    page,
+    mode === 'scroll' ? 2 : 5,
+    mode === 'scroll' ? 250 : 500
+  );
   await twoRaf(page).catch(() => undefined);
   await delay(mode === 'scroll' ? 700 : 500);
   const loadingSettled = await waitForNoSpinner(page);
   if (!loadingSettled) {
     throw new Error('Visible loading placeholder did not settle before capture.');
   }
-  await waitForStableLayout(page, 2, 250);
+  await waitForStableLayout(page, mode === 'scroll' ? 2 : 3, 250);
   await twoRaf(page).catch(() => undefined);
 }
 
-async function installDeterminism(context, theme) {
-  await context.addInitScript(({theme}) => {
+async function installDeterminism(context, args) {
+  await context.addInitScript(({baselineOrigin, candidateOrigin, baselineTheme, candidateTheme}) => {
     const fixedNow = Date.parse('2026-08-09T00:00:00.000Z');
     const RealDate = Date;
     class FixedDate extends RealDate {
@@ -256,13 +339,24 @@ async function installDeterminism(context, theme) {
       randomSeed = (randomSeed * 1664525 + 1013904223) >>> 0;
       return randomSeed / 0x100000000;
     };
+    const theme =
+      window.location.origin === baselineOrigin
+        ? baselineTheme
+        : window.location.origin === candidateOrigin
+          ? candidateTheme
+          : candidateTheme;
     try {
       localStorage.clear();
       localStorage.setItem('amis-theme', theme);
       localStorage.setItem('amis-viewMode', 'pc');
       localStorage.setItem('amis-locale', 'zh-CN');
     } catch (e) {}
-  }, {theme});
+  }, {
+    baselineOrigin: new URL(args.baseline).origin,
+    candidateOrigin: new URL(args.candidate).origin,
+    baselineTheme: args.baselineTheme,
+    candidateTheme: args.candidateTheme
+  });
 }
 
 async function disableAnimations(page) {
@@ -290,12 +384,14 @@ async function installVisualMasks(page) {
     .addStyleTag({
       content: `
         .amis-Log-body,
-        .cxd-Log-body {
+        .cxd-Log-body,
+        .prismui-Log-body {
           color: transparent !important;
         }
 
         .amis-Log-body *,
-        .cxd-Log-body * {
+        .cxd-Log-body *,
+        .prismui-Log-body * {
           color: transparent !important;
           text-shadow: none !important;
         }
@@ -502,8 +598,10 @@ async function visibleRuntimeErrors(page) {
     const candidateSelectors = [
       '.amis-Alert--danger',
       '.cxd-Alert--danger',
+      '.prismui-Alert--danger',
       '.amis-Alert--error',
       '.cxd-Alert--error',
+      '.prismui-Alert--error',
       '.renderer-error-boundary',
       '[role="alert"]'
     ];
@@ -608,7 +706,7 @@ async function metrics(page) {
       viewportWidth: window.innerWidth,
       title: document.title,
       notFound:
-        !!document.querySelector('.amis-404, .cxd-404') ||
+        !!document.querySelector('.amis-404, .cxd-404, .prismui-404') ||
         /not\s*found|404/i.test(document.body.innerText.slice(0, 500))
     };
   });
@@ -743,7 +841,7 @@ async function runPageAttempt(deps, browser, args, pageMeta) {
     reducedMotion: 'reduce',
     locale: 'zh-CN'
   });
-  await installDeterminism(context, args.theme);
+  await installDeterminism(context, args);
 
   let baseline;
   let candidate;
@@ -939,7 +1037,9 @@ function writeReport(args, manifest, results) {
     baseline: args.baseline,
     candidate: args.candidate,
     viewport: args.viewport,
-    theme: args.theme,
+    theme: args.theme || `${args.baselineTheme} -> ${args.candidateTheme}`,
+    baselineTheme: args.baselineTheme,
+    candidateTheme: args.candidateTheme,
     totalPagesInManifest: manifest.total,
     pagesRun: results.length,
     counts: results.reduce(
@@ -976,7 +1076,7 @@ function writeReport(args, manifest, results) {
     `Baseline：${args.baseline}`,
     `Candidate：${args.candidate}`,
     `Viewport：${args.viewport}`,
-    `Theme：${args.theme}`,
+    `Theme：${args.theme || `${args.baselineTheme} -> ${args.candidateTheme}`}`,
     '',
     '## Summary',
     '',

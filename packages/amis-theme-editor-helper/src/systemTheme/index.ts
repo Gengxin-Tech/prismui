@@ -1,3 +1,3 @@
-import cxdData from './cxd';
+import prismuiData from './prismui';
 import antdData from './antd';
-export {cxdData, antdData};
+export {prismuiData, antdData};

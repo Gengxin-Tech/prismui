@@ -37,13 +37,11 @@ function createRootStore() {
 
 afterEach(() => {
   cleanup();
-  theme('cxd', {
-    componentClassPrefix: 'amis-',
-    legacyDomClassAlias: false
+  theme('prismui', {
+    componentClassPrefix: 'prismui-'
   });
   theme('dark', {
-    componentClassPrefix: 'amis-',
-    legacyDomClassAlias: false
+    componentClassPrefix: 'prismui-'
   });
 });
 
@@ -54,22 +52,21 @@ test('RootRenderer scopes its host root without adding a layout wrapper', async 
       schema={{type: 'page'} as any}
       rootStore={rootStore as any}
       statusStore={{} as any}
-      env={{theme: getTheme('cxd')} as any}
-      theme="cxd"
-      render={path => (!path ? <div className="amis-Page">content</div> : null)}
+      env={{theme: getTheme('prismui')} as any}
+      theme="prismui"
+      render={path => (!path ? <div className="prismui-Page">content</div> : null)}
     />
   );
 
   await waitFor(() => {
-    expect(container.firstElementChild).toHaveClass('amis-Page');
+    expect(container.firstElementChild).toHaveClass('prismui-Page');
   });
 
   expect(container.children).toHaveLength(1);
-  expect(container.firstElementChild).toHaveAttribute('data-amis-theme', 'cxd');
+  expect(container.firstElementChild).toHaveAttribute('data-prismui-theme', 'prismui');
 
   theme('dark', {
-    componentClassPrefix: 'amis-',
-    legacyDomClassAlias: false
+    componentClassPrefix: 'prismui-'
   });
   rerender(
     <RootRenderer
@@ -78,13 +75,13 @@ test('RootRenderer scopes its host root without adding a layout wrapper', async 
       statusStore={{} as any}
       env={{theme: getTheme('dark')} as any}
       theme="dark"
-      render={path => (!path ? <div className="amis-Page">content</div> : null)}
+      render={path => (!path ? <div className="prismui-Page">content</div> : null)}
     />
   );
 
   await waitFor(() => {
     expect(container.firstElementChild).toHaveAttribute(
-      'data-amis-theme',
+      'data-prismui-theme',
       'dark'
     );
   });

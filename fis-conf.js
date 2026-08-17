@@ -427,7 +427,7 @@ fis.media('dev').match('/node_modules/**.js', {
   packTo: '/pkg/npm.js'
 });
 
-fis.match('{monaco-editor,amis,amis-core}/**', {
+fis.match('{monaco-editor,mermaid,amis,amis-core}/**', {
   packTo: null
 });
 
@@ -509,7 +509,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
   sdkEnv.match('*.{js,jsx,ts,tsx}', {
     optimizer: fis.plugin('terser'),
     moduleId: function (m, path) {
-      return fis.util.md5(package.version + 'amis-sdk' + path);
+      return fis.util.md5(package.version + 'prismui-sdk' + path);
     }
   });
 
@@ -836,6 +836,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '/examples/mod.js',
         'node_modules/**.js',
         '!monaco-editor/**',
+        '!mermaid/**',
         '!codemirror/**',
         '!mpegts.js/**',
         '!hls.js/**',
@@ -953,6 +954,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
       'pkg/rest.js': [
         '**.{js,jsx,ts,tsx}',
         '!monaco-editor/**',
+        '!mermaid/**',
         '!mpegts.js/**',
         '!hls.js/**',
         '!froala-editor/**',

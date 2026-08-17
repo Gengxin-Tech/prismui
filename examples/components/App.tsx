@@ -24,6 +24,7 @@ import Example from './Example';
 import CSSDocs from './CssDocs';
 import Components from './Components';
 import EditorDocs from './EditorDocs';
+import {DOCS_BASE_PATH} from './publicPath';
 import {
   BrowserRouter as Router,
   Route,
@@ -34,11 +35,7 @@ import {
 } from 'react-router-dom';
 declare const _hmt: any;
 
-let ContextPath = '';
-
-if (process.env.NODE_ENV === 'production') {
-  ContextPath = '/amis';
-}
+const ContextPath = DOCS_BASE_PATH;
 
 export function getContextPath() {
   return ContextPath;
@@ -47,7 +44,7 @@ export function getContextPath() {
 const themes = [
   {
     label: '云舍',
-    value: 'cxd'
+    value: 'prismui'
   },
   {
     label: '仿 AntD',
@@ -64,7 +61,7 @@ const themes = [
 ];
 
 function getComponentClassPrefix(theme: string) {
-  return getTheme(theme)?.componentClassPrefix || 'amis-';
+  return getTheme(theme)?.componentClassPrefix || 'prismui-';
 }
 
 const locales = [
@@ -95,12 +92,7 @@ const docVersions = [
   {
     label: '主干版本',
     value: '',
-    url: '/amis/zh-CN/docs/index'
-  },
-  {
-    label: '1.1.x 文档',
-    value: '1.1.7',
-    url: 'https://aisuda.github.io/amis-1.1.7/zh-CN/docs/index'
+    url: '/docs/zh-CN/docs/index'
   }
 ];
 
@@ -149,16 +141,16 @@ export class App extends React.PureComponent<{
   location: Location;
 }> {
   state = {
-    viewMode: localStorage.getItem('amis-viewMode') || 'pc',
+    viewMode: localStorage.getItem('prismui-viewMode') || 'pc',
     offScreen: false,
     folded: false,
     headerVisible: true,
     themes: themes,
     theme:
-      themes.find(item => item?.value === localStorage.getItem('amis-theme')) ||
+      themes.find(item => item?.value === localStorage.getItem('prismui-theme')) ||
       themes[0],
-    locale: localStorage.getItem('amis-locale')
-      ? localStorage.getItem('amis-locale')?.replace('zh-cn', 'zh-CN')
+    locale: localStorage.getItem('prismui-locale')
+      ? localStorage.getItem('prismui-locale')?.replace('zh-cn', 'zh-CN')
       : '',
     navigations: [],
     filter: '' // 导航过滤，方便找组件
@@ -175,7 +167,7 @@ export class App extends React.PureComponent<{
     const body = document.body;
     previousTheme && body.classList.remove(previousTheme);
     body.classList.add(theme);
-    body.setAttribute('data-amis-theme', theme);
+    body.setAttribute('data-prismui-theme', theme);
   }
 
   componentDidUpdate(preProps: any, preState: any) {
@@ -256,7 +248,7 @@ export class App extends React.PureComponent<{
               className={`${componentClassPrefix}Layout-brand text-ellipsis`}
             >
               <i className="fa fa-paw" />
-              <span className="hidden-folded m-l-sm">AMIS 示例</span>
+              <span className="hidden-folded m-l-sm">PrismUI 示例</span>
             </div>
           )}
         </div>
@@ -332,7 +324,7 @@ export class App extends React.PureComponent<{
               options={locales}
               onChange={locale => {
                 this.setState({locale: (locale as any).value});
-                localStorage.setItem('amis-locale', (locale as any).value);
+                localStorage.setItem('prismui-locale', (locale as any).value);
                 window.location.reload();
               }}
             />
@@ -347,7 +339,7 @@ export class App extends React.PureComponent<{
               options={this.state.themes}
               onChange={theme => {
                 this.setState({theme});
-                localStorage.setItem('amis-theme', `${(theme as any).value}`);
+                localStorage.setItem('prismui-theme', `${(theme as any).value}`);
               }}
             />
           </div>
@@ -361,7 +353,7 @@ export class App extends React.PureComponent<{
               options={viewModes}
               onChange={viewMode => {
                 this.setState({viewMode: (viewMode as any).value});
-                localStorage.setItem('amis-viewMode', (viewMode as any).value);
+                localStorage.setItem('prismui-viewMode', (viewMode as any).value);
                 window.location.reload();
               }}
             />
@@ -398,7 +390,7 @@ export class App extends React.PureComponent<{
             </div>
             <a
               className="gh-icon"
-              href="https://github.com/baidu/amis"
+              href="https://github.com/Gengxin-Tech/prismui"
               target="_blank"
             >
               <i className="fa fa-github" />
@@ -420,7 +412,7 @@ export class App extends React.PureComponent<{
       <div className="Doc-navigation">
         <SearchBox
           className="m-b m-r-md"
-          placeholder="输入组件名称"
+          placeholder="输入关键字"
           value={this.state.filter}
           onSearch={this.setNavigationFilter}
           onChange={this.setNavigationFilter}

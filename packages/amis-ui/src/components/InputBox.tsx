@@ -127,7 +127,7 @@ export class InputBox extends React.Component<InputBoxProps, InputBoxState> {
           [`InputBox--border${ucFirst(borderMode)}`]: borderMode
         })}
         onClick={onClick}
-        data-amis-name={dataName}
+        data-prismui-name={dataName}
       >
         {result}
 

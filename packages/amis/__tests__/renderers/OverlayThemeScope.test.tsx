@@ -15,8 +15,8 @@ const makeEnv = (env?: Partial<RenderOptions>) =>
   makeEnvRaw({updateLocation: () => {}, ...env});
 
 const scopedPopoverSelector = (themeName: string, popoverClass: string) =>
-  `[data-amis-theme="${themeName}"].${popoverClass}, ` +
-  `[data-amis-theme="${themeName}"] .${popoverClass}`;
+  `[data-prismui-theme="${themeName}"].${popoverClass}, ` +
+  `[data-prismui-theme="${themeName}"] .${popoverClass}`;
 
 const dropdownSchema = (label: string) => ({
   type: 'page',
@@ -36,25 +36,24 @@ const dropdownSchema = (label: string) => ({
 test('Renderer:overlay body portal uses triggering root theme scope with shared env', async () => {
   theme('dark', {
     classPrefix: 'dark-',
-    componentClassPrefix: 'amis-',
-    legacyDomClassAlias: false
+    componentClassPrefix: 'prismui-'
   });
 
   const sharedEnv = makeEnv({session: 'overlay-theme-shared'});
-  const cxdRoot = render(
-    amisRender(dropdownSchema('Open cxd menu'), {theme: 'cxd'}, sharedEnv)
+  const prismuiRoot = render(
+    amisRender(dropdownSchema('Open prismui menu'), {theme: 'prismui'}, sharedEnv)
   );
 
   render(
     amisRender(dropdownSchema('Open dark menu'), {theme: 'dark'}, sharedEnv)
   );
 
-  fireEvent.click(cxdRoot.getByText('Open cxd menu'));
+  fireEvent.click(prismuiRoot.getByText('Open prismui menu'));
 
   await waitFor(() => {
     expect(
       document.body.querySelector(
-        scopedPopoverSelector('cxd', componentClass('DropDown-popover'))
+        scopedPopoverSelector('prismui', componentClass('DropDown-popover'))
       )
     ).toBeInTheDocument();
   });

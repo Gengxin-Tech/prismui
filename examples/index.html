@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <title>amis - 低代码前端框架</title>
+    <title>PrismUI - UI Schema 驱动系统</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link type="image/x-icon" rel="shortcut icon" href="./static/favicon.png" />
     <meta
@@ -41,9 +41,9 @@
         location.hostname = 'aisuda.bce.baidu.com';
       }
 
-      let theme = localStorage.getItem('amis-theme') || 'cxd';
+      let theme = localStorage.getItem('prismui-theme') || 'prismui';
       if (theme === 'default') {
-        theme = 'cxd';
+        theme = 'prismui';
       }
 
       // 非 IE 模式
@@ -54,9 +54,9 @@
           }  href="${__uri('amis/lib/themes/ang.css')}" />`
         );
         document.write(
-          `<link rel="stylesheet" title="cxd" ${
-            theme !== 'cxd' ? 'disabled' : ''
-          } href="${__uri('amis/lib/themes/cxd.css')}" />`
+          `<link rel="stylesheet" title="prismui" ${
+            theme !== 'prismui' ? 'disabled' : ''
+          } href="${__uri('amis/lib/themes/prismui.css')}" />`
         );
         document.write(
           `<link rel="stylesheet" title="dark" ${
@@ -75,9 +75,9 @@
           }  href="${__uri('amis/lib/themes/ang-ie11.css')}" />`
         );
         document.write(
-          `<link rel="stylesheet" title="cxd" ${
-            theme !== 'cxd' ? 'disabled' : ''
-          } href="${__uri('amis/lib/themes/cxd-ie11.css')}" />`
+          `<link rel="stylesheet" title="prismui" ${
+            theme !== 'prismui' ? 'disabled' : ''
+          } href="${__uri('amis/lib/themes/prismui-ie11.css')}" />`
         );
         document.write(
           `<link rel="stylesheet" title="dark" ${

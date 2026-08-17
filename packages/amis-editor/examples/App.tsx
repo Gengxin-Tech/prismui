@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 export default class App extends React.PureComponent {
   render() {
     // 备注: 如果需要改用antd主题，还需要将index.html换成index-antd.html
-    const curTheme = 'cxd'; // 默认使用cxd主题
+    const curTheme = 'prismui'; // 默认使用prismui主题
     return (
       <div className="Editor-Demo">
         <div id="headerBar" className="Editor-header">

@@ -154,7 +154,7 @@ export default class EditorPlayground extends React.Component {
             value={schema}
             onChange={this.handleChange}
             className="is-fixed"
-            theme={theme || 'cxd'}
+            theme={theme || 'prismui'}
             showCustomRenderersPanel={true}
             $schemaUrl={schemaUrl}
           />

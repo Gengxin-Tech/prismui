@@ -1,12 +1,12 @@
 var prefixSdkCss = require('./prefix-sdk-css').prefixSdkCss;
 
-var defaultSdkThemes = ['ang', 'cxd', 'dark', 'antd'];
+var defaultSdkThemes = ['ang', 'prismui', 'dark', 'antd'];
 
 function buildSdkThemeCss(cssContents, options) {
   options = options || {};
 
   var themes = options.themes || defaultSdkThemes;
-  var prefix = options.prefix || '.amis-scope';
+  var prefix = options.prefix || '.prismui-scope';
 
   return themes.map(function (theme) {
     var excludedThemeFiles = themes
@@ -28,7 +28,7 @@ function buildSdkThemeCss(cssContents, options) {
 
     return {
       theme: theme,
-      filename: theme === 'cxd' ? 'sdk.css' : theme + '.css',
+      filename: theme === 'prismui' ? 'sdk.css' : theme + '.css',
       content: prefixSdkCss(contents, prefix, theme)
     };
   });

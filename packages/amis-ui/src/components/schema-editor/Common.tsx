@@ -374,7 +374,7 @@ export class SchemaEditorItemCommon<
         className={cx('SchemaEditorItem', {
           'SchemaEditorItem--mini': mini
         })}
-        data-amis-name={this.props.dataName}
+        data-prismui-name={this.props.dataName}
       >
         {this.renderCommon()}
       </div>

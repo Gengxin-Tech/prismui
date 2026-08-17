@@ -1344,7 +1344,7 @@ export class Select extends React.Component<SelectProps, SelectState> {
                 },
                 className
               )}
-              data-amis-name={this.props.dataName}
+              data-prismui-name={this.props.dataName}
               style={controlStyle}
             >
               <div

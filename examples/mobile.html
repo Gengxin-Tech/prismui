@@ -18,9 +18,9 @@
     <link rel="stylesheet" title="ang" href="amis/lib/themes/ang.css" />
     <link
       rel="stylesheet"
-      title="cxd"
+      title="prismui"
       disabled
-      href="amis/lib/themes/cxd.css"
+      href="amis/lib/themes/prismui.css"
     />
     <link
       rel="stylesheet"
@@ -51,7 +51,7 @@
       const themes = [
         {
           label: '云舍',
-          value: 'cxd'
+          value: 'prismui'
         },
         {
           label: 'Ang',
@@ -70,9 +70,9 @@
       document.querySelectorAll('link[title]').forEach(item => {
         item.disabled = true;
       });
-      let theme = localStorage.getItem('amis-theme') || 'cxd';
+      let theme = localStorage.getItem('prismui-theme') || 'prismui';
       if (theme == 'default') {
-        theme = 'cxd';
+        theme = 'prismui';
       }
 
       const linkDom = document.querySelector(`link[title=${theme}]`);

@@ -243,7 +243,7 @@ function SizeEditor(props: SizeEditorProps) {
 export default observer(SizeEditor);
 
 @FormItem({
-  type: 'amis-theme-size-editor',
+  type: 'prismui-theme-size-editor',
   strictMode: false,
   renderLabel: false
 })

@@ -489,3 +489,142 @@
     }
   }
 }
+
+body.dark,
+body[data-prismui-theme='dark'] {
+  .ae-RendererList-tabs {
+    > .ae-RendererList-tabs-content,
+    .ae-RendererList-tabs-panel {
+      background: transparent;
+    }
+  }
+
+  .ae-RendererList-groupWrap {
+    background: var(--ae-editor-surface);
+
+    .collapse-header {
+      color: var(--ae-editor-text);
+
+      .expander-icon > svg {
+        color: var(--ae-editor-text-muted);
+      }
+    }
+  }
+
+  .ae-RendererList-group.collapse-content {
+    .ae-RendererList-item {
+      border-color: var(--ae-editor-border);
+      background: var(--ae-editor-surface-muted);
+
+      .icon-box {
+        > i,
+        svg {
+          color: var(--ae-editor-text-muted);
+        }
+      }
+
+      .ae-RendererInfo {
+        color: var(--ae-editor-text);
+      }
+
+      .ae-RendererIcon {
+        color: var(--ae-editor-text-muted);
+      }
+
+      &:hover {
+        border-color: var(--colors-brand-4);
+        background: var(--ae-editor-hover);
+      }
+    }
+  }
+
+  .ae-RendererList-item {
+    border-color: var(--ae-editor-border);
+    background: var(--ae-editor-surface-muted);
+
+    .icon-box {
+      > i,
+      svg {
+        color: var(--ae-editor-text-muted);
+      }
+    }
+
+    .ae-RendererInfo {
+      color: var(--ae-editor-text);
+    }
+
+    .ae-RendererIcon {
+      color: var(--ae-editor-text-muted);
+    }
+
+    &:hover {
+      border-color: var(--colors-brand-4);
+      background: var(--ae-editor-hover);
+    }
+  }
+
+  .ae-RendererThumb {
+    background: var(--ae-editor-surface);
+    color: var(--ae-editor-text);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .ae-InsertPanel-drawer {
+    .ae-InsertPanel-footer {
+      > .action-btn.is-disabled {
+        color: var(--ae-editor-text-muted);
+        background-color: var(--ae-editor-border);
+        border-color: var(--ae-editor-border);
+      }
+    }
+  }
+
+  .ae-InsertRendererPanel-drawer {
+    .ae-drawer-renderers {
+      .ae-drawer-title {
+        color: var(--ae-editor-text);
+      }
+    }
+  }
+
+  .ae-RenderersPicker-list {
+    > ul > li > a {
+      color: var(--ae-editor-text-muted);
+    }
+
+    > ul > li.is-active > a,
+    > ul > li > a:hover {
+      color: var(--colors-brand-4);
+      background: rgba(36, 104, 242, 0.12);
+    }
+  }
+
+  .ae-RenderersPicker-content {
+    > ul > li {
+      border-color: var(--ae-editor-border);
+      color: var(--ae-editor-text);
+      background: rgba(255, 255, 255, 0.02);
+
+      &:hover,
+      &.is-active {
+        background: var(--ae-editor-hover);
+      }
+
+      &.is-active {
+        border-color: var(--colors-brand-4);
+      }
+    }
+  }
+
+  .ae-RenderersPicker-info,
+  .ae-RegionFilter,
+  .ae-InsertPanel-title {
+    color: var(--ae-editor-text);
+  }
+
+  .ae-RegionFilter > div:hover,
+  .ae-RegionFilter > div.is-active {
+    color: var(--colors-brand-4);
+    background: rgba(36, 104, 242, 0.12);
+  }
+}

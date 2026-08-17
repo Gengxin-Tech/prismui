@@ -312,7 +312,7 @@ export default class AMisCodeEditor extends React.Component<AMisCodeEditorProps>
     return (
       // @ts-ignore
       <Editor
-        className={cx('amis-code-editor', className)}
+        className={cx('prismui-code-editor', className)}
         value={this.state.contents}
         onChange={this.handleChange}
         onBlur={this.handleBlur}

@@ -176,7 +176,7 @@ export const MainStore = types
       id: 'root',
       label: 'Root'
     }),
-    theme: 'cxd', // 主题，默认cxd主题
+    theme: 'prismui', // 主题，默认prismui主题
     toolbarMode: 'default', // 工具栏模式，默认default，mini模式没有更多、前后插入组件、上下文数据、重复一份、合成一行、右键功能
     noDialog: false, // 不需要弹框功能
     hoverId: '',

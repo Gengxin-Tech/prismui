@@ -167,7 +167,7 @@ for (const color of colors) {
         label: '云舍默认值',
         type: 'static-color',
         value: color.cxdValue,
-        visibleOn: 'data.config.theme.baseTheme === "cxd"',
+        visibleOn: 'data.config.theme.baseTheme === "prismui"',
         inputClassName: 'text-xs'
       },
       {

@@ -13,7 +13,7 @@ $Table-strip-bg: transparent;
 }
 
 :root,
-.AMISCSSWrapper {
+.PRISMUICSSWrapper {
   --white: var(--colors-neutral-text-11);
   --primary: var(--colors-brand-5);
   --primary-onHover: var(--colors-brand-6);
@@ -893,7 +893,7 @@ $Table-strip-bg: transparent;
     --fontSizeBase: var(--fontSizeLg);
   }
   :root,
-  .AMISCSSWrapper {
+  .PRISMUICSSWrapper {
     --Page-body-padding: var(--gap-md);
   }
 }

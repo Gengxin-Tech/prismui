@@ -56,6 +56,15 @@ export default [
         )
       },
       {
+        label: '渲染器架构',
+        path: '/zh-CN/docs/concepts/renderer-architecture',
+        component: React.lazy(() =>
+          import('../../docs/zh-CN/concepts/renderer-architecture.md').then(
+            wrapDoc
+          )
+        )
+      },
+      {
         label: '数据域与数据链',
         path: '/zh-CN/docs/concepts/datascope-and-datachain',
         component: React.lazy(() =>

@@ -669,7 +669,7 @@ export default class Preview extends Component<PreviewProps> {
 
     const themeName = resolveEditorThemeName(
       theme || amisEnv?.theme || this.env.theme,
-      manager.config.theme || 'cxd'
+      manager.config.theme || 'prismui'
     );
     const env = {
       ...this.env,
@@ -687,7 +687,7 @@ export default class Preview extends Component<PreviewProps> {
         {...getEditorThemeScopeProps(themeName)}
         className={cx(
           'ae-Preview',
-          'AMISCSSWrapper',
+          'PRISMUICSSWrapper',
           className,
           isMobile ? 'is-mobile-body' : 'is-pc-body'
         )}

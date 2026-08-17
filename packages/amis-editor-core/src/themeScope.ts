@@ -10,7 +10,7 @@ import {
 
 export function resolveEditorThemeName(
   theme?: any,
-  fallbackTheme: string = 'cxd'
+  fallbackTheme: string = 'prismui'
 ) {
   if (typeof theme === 'string' && theme) {
     return theme;
@@ -29,19 +29,19 @@ export function resolveEditorThemeName(
 
 export function resolveEditorComponentClassPrefix(
   theme?: any,
-  fallbackTheme: string = 'cxd'
+  fallbackTheme: string = 'prismui'
 ) {
   if (typeof theme?.componentClassPrefix === 'string') {
     return theme.componentClassPrefix;
   }
 
   const themeName = resolveEditorThemeName(theme, fallbackTheme);
-  return getTheme(themeName).componentClassPrefix || 'amis-';
+  return getTheme(themeName).componentClassPrefix || 'prismui-';
 }
 
 export function getEditorThemeClassnames(
   theme?: any,
-  fallbackTheme: string = 'cxd'
+  fallbackTheme: string = 'prismui'
 ) {
   return makeStableClassnames(
     resolveEditorComponentClassPrefix(theme, fallbackTheme) as any
@@ -51,7 +51,7 @@ export function getEditorThemeClassnames(
 export function getEditorThemeClassName(
   theme: any,
   className: string,
-  fallbackTheme: string = 'cxd'
+  fallbackTheme: string = 'prismui'
 ) {
   return getStableClassName(
     getEditorThemeClassnames(theme, fallbackTheme),
@@ -62,7 +62,7 @@ export function getEditorThemeClassName(
 export function getEditorThemeClassSelector(
   theme: any,
   className: string,
-  fallbackTheme: string = 'cxd'
+  fallbackTheme: string = 'prismui'
 ) {
   return getStableClassSelector(
     getEditorThemeClassnames(theme, fallbackTheme),
@@ -75,11 +75,11 @@ export function getEditorThemeScope(
   fallbackTheme?: string
 ): ThemeScope {
   const value = resolveEditorThemeName(theme, fallbackTheme);
-  const selector = `[data-amis-theme="${value.replace(/"/g, '\\"')}"]`;
+  const selector = `[data-prismui-theme="${value.replace(/"/g, '\\"')}"]`;
 
   return {
     theme: value,
-    attribute: 'data-amis-theme',
+    attribute: 'data-prismui-theme',
     value,
     selector,
     tokenScopeSelector: selector
@@ -91,7 +91,7 @@ export function getEditorThemeScopeProps(
   fallbackTheme?: string
 ): ThemeScopeProps {
   return {
-    'data-amis-theme': getEditorThemeScope(theme, fallbackTheme).value
+    'data-prismui-theme': getEditorThemeScope(theme, fallbackTheme).value
   };
 }
 
@@ -117,5 +117,7 @@ export function getEditorThemeScopeHtmlAttrs(
 ) {
   const props = getEditorThemeScopeProps(theme, fallbackTheme);
 
-  return `data-amis-theme="${escapeHtmlAttribute(props['data-amis-theme'])}"`;
+  return `data-prismui-theme="${escapeHtmlAttribute(
+    props['data-prismui-theme']
+  )}"`;
 }

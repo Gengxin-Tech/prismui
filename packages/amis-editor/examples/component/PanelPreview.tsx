@@ -33,7 +33,7 @@ export default function (props: PanelPreviewProps) {
 
   return (
     <div className="PanelPreview" ref={dom}>
-      <div className="AMISCSSWrapper editor-right-panel">
+      <div className="PRISMUICSSWrapper editor-right-panel">
         {render(
           schema,
           {
@@ -42,7 +42,7 @@ export default function (props: PanelPreviewProps) {
             // popOverContainer
           },
           {
-            // theme: 'cxd' // 右侧属性配置面板固定使用cxd主题展示
+            // theme: 'prismui' // 右侧属性配置面板固定使用prismui主题展示
           }
         )}
       </div>

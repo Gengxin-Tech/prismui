@@ -150,7 +150,7 @@ const AddColumnModal: React.FC<AddColumnModalProps> = props => {
         show={visible}
         onHide={onClose}
         closeOnEsc={false}
-        contentClassName="ae-Scaffold-Modal :AMISCSSWrapper"
+        contentClassName="ae-Scaffold-Modal :PRISMUICSSWrapper"
       >
         <Modal.Header showCloseButton onClose={onClose}>
           <Modal.Title className="ae-Scaffold-Modal-title">添加列</Modal.Title>

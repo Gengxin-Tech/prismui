@@ -206,7 +206,7 @@ export class ScaffoldModal extends React.Component<SubEditorProps> {
   render() {
     const {store, theme, manager} = this.props;
     const scaffoldFormContext = store.scaffoldForm;
-    const cx = getTheme(theme || 'cxd').classnames;
+    const cx = getTheme(theme || 'prismui').classnames;
     const isStepBody = !!scaffoldFormContext?.stepsBody;
     const canSkip = !!scaffoldFormContext?.canSkip;
     const isLastStep =
@@ -221,7 +221,7 @@ export class ScaffoldModal extends React.Component<SubEditorProps> {
         contentClassName={scaffoldFormContext?.className}
         show={!!scaffoldFormContext}
         onHide={this.handleCancelClick}
-        className="ae-scaffoldForm-Modal :AMISCSSWrapper"
+        className="ae-scaffoldForm-Modal :PRISMUICSSWrapper"
         closeOnEsc={!store.scaffoldFormBuzy}
       >
         <div className={cx('Modal-header')}>
@@ -239,7 +239,10 @@ export class ScaffoldModal extends React.Component<SubEditorProps> {
         <div
           ref={this.modalBodyRef}
           className={cx('Modal-body')}
-          {...getEditorThemeScopeProps(theme, manager.config.theme || 'cxd')}
+          {...getEditorThemeScopeProps(
+            theme,
+            manager.config.theme || 'prismui'
+          )}
         >
           {scaffoldFormContext ? (
             render(

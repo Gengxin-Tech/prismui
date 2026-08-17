@@ -116,7 +116,7 @@ export class Checkbox extends React.Component<CheckboxProps, any> {
         )}
         data-role="checkbox"
         {...testIdBuilder?.getTestId()}
-        data-amis-name={this.props.dataName}
+        data-prismui-name={this.props.dataName}
         ref={this.labelRef}
       >
         <input

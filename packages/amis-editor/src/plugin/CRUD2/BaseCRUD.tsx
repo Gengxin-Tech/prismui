@@ -179,7 +179,7 @@ export class BaseCRUDPlugin extends BasePlugin {
         }
       },
       className:
-        'ae-Scaffold-Modal ae-Scaffold-Modal--CRUD ae-Scaffold-Modal-content :AMISCSSWrapper', //  ae-formItemControl
+        'ae-Scaffold-Modal ae-Scaffold-Modal--CRUD ae-Scaffold-Modal-content :PRISMUICSSWrapper', //  ae-formItemControl
       stepsBody: true,
       canSkip: true,
       canRebuild: true,

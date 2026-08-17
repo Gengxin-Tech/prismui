@@ -318,6 +318,70 @@ $tooltip-bottom: '[data-tooltip][data-position=' bottom ']:hover:after';
   }
 }
 
+body.dark,
+body[data-prismui-theme='dark'] {
+  .editor-right-panel {
+    background: var(--ae-editor-surface);
+    box-shadow: -2px 0 24px rgba(0, 0, 0, 0.35);
+
+    .editor-panel-btn .panel-btn {
+      fill: var(--ae-editor-text-muted);
+      color: var(--ae-editor-text-muted);
+    }
+
+    .editorPanel-tabs {
+      > [class$='Tabs-linksWrapper'] {
+        background: var(--ae-editor-surface);
+      }
+
+      .editorPanel-tabs-header {
+        > li {
+          > a {
+            .editor-tab-icon {
+              > svg,
+              > svg.pluginIcon,
+              i.fa {
+                color: var(--ae-editor-text);
+              }
+            }
+          }
+
+          &.is-active,
+          &:hover {
+            background: var(--ae-editor-hover);
+
+            > a {
+              background: transparent;
+            }
+
+            i.fa,
+            .editor-tab-icon > svg {
+              color: var(--colors-brand-4) !important;
+            }
+          }
+
+          &.is-active {
+            border-right-color: var(--colors-brand-4);
+          }
+        }
+      }
+
+      > .editorPanel-tabs-content {
+        background: var(--ae-editor-surface-strong);
+      }
+    }
+
+    .ae-Settings-content {
+      color: var(--ae-editor-text);
+
+      &.with-actions .ae-Settings-actions,
+      &.with-actions > input {
+        background: var(--ae-editor-surface);
+      }
+    }
+  }
+}
+
 .right-panel-pop {
   @include panel-sm-content();
 }
@@ -502,6 +566,69 @@ $tooltip-bottom: '[data-tooltip][data-position=' bottom ']:hover:after';
     div.ae-switch-more-flex {
       display: flex;
       line-height: 25px;
+    }
+  }
+}
+
+body.dark,
+body[data-prismui-theme='dark'] {
+  .right-panel-pop,
+  .config-wrapper-contanier {
+    color: var(--ae-editor-text);
+    background-color: var(--ae-editor-surface-muted);
+
+    &::after {
+      background-color: var(--ae-editor-surface-muted);
+    }
+  }
+
+  .editor-right-panel {
+    .right-panel-arrow::before {
+      background: var(--ae-editor-surface);
+      border-right: 1px solid var(--ae-editor-border);
+      box-shadow: none;
+    }
+
+    .right-panel-arrow::after {
+      background-color: var(--ae-editor-text-muted);
+    }
+  }
+
+  .ae-Settings-content {
+    background: var(--ae-editor-surface-strong);
+    color: var(--ae-editor-text);
+
+    .editor-prop-config-tabs {
+      ul[role='tablist'],
+      &-links {
+        background: var(--ae-editor-surface);
+        border-bottom-color: var(--ae-editor-border);
+
+        > li {
+          > a {
+            color: var(--ae-editor-text-muted);
+            border-bottom-color: transparent !important;
+          }
+
+          &.is-active > a {
+            color: var(--colors-brand-4) !important;
+            border-bottom-color: var(--colors-brand-4) !important;
+          }
+
+          &:not(:last-child):after {
+            background-color: var(--ae-editor-border);
+          }
+        }
+      }
+
+      &-cont {
+        background: var(--ae-editor-surface-strong);
+        scrollbar-color: var(--ae-editor-border) transparent;
+      }
+
+      .old-action-tooltip-warpper {
+        background: var(--ae-editor-surface-strong);
+      }
     }
   }
 }

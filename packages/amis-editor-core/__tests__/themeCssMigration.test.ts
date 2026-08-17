@@ -7,14 +7,14 @@ import {
 import {theme} from 'amis-core';
 
 describe('theme CSS schema migration', () => {
-  it('moves legacy style into themeCss and warns when dropping cxd selector keys', () => {
+  it('moves legacy style into themeCss and warns when dropping old amis prefix selector keys', () => {
     const migrated = JSONPipeIn({
       'type': 'page',
       'style': {
         background: '#fff',
         color: '#333'
       },
-      '.cxd-Page-title': {
+      '.amis-Page-title': {
         color: 'red'
       }
     });
@@ -27,9 +27,9 @@ describe('theme CSS schema migration', () => {
         color: '#333'
       }
     });
-    expect(migrated['.cxd-Page-title']).toBeUndefined();
+    expect(migrated['.amis-Page-title']).toBeUndefined();
     expect(migrated[THEME_CSS_MIGRATION_WARNINGS_KEY]).toContain(
-      'removed legacy selector .cxd-Page-title; stable candidate .amis-Page-title'
+      'removed legacy selector .amis-Page-title; stable candidate .prismui-Page-title'
     );
   });
 
@@ -40,7 +40,7 @@ describe('theme CSS schema migration', () => {
 
     expect(
       migrateLegacyThemeSelector(
-        '.cxd-Page-title .cxd-Button',
+        '.amis-Page-title .amis-Button',
         'branded-migration-prefix'
       )
     ).toBe('.brand-Page-title .brand-Button');
@@ -51,11 +51,11 @@ describe('theme CSS schema migration', () => {
     style.id = 'themeCss';
     style.appendChild(
       document.createTextNode(`
-        [data-amis-theme="custom"] {
-          --amis-color-brand: #2468f2;
+        [data-prismui-theme="custom"] {
+          --prismui-color-brand: #2468f2;
         }
 
-        [data-amis-theme="custom"] .amis-Button--accent {
+        [data-prismui-theme="custom"] .prismui-Button--accent {
           color: var(--button-accent-default-font-color);
           background: red;
         }
@@ -63,8 +63,8 @@ describe('theme CSS schema migration', () => {
     );
     document.head.appendChild(style);
 
-    expect(getCssVarById('themeCss', '[data-amis-theme')).toEqual({
-      '--amis-color-brand': '#2468f2'
+    expect(getCssVarById('themeCss', '[data-prismui-theme')).toEqual({
+      '--prismui-color-brand': '#2468f2'
     });
 
     document.head.removeChild(style);

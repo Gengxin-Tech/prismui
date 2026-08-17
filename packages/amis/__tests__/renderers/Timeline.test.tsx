@@ -185,7 +185,7 @@ test('Renderer:timeline with reverse', async () => {
     })
   );
 
-  expect(container.querySelector('.cxd-TimelineItem-time')).toHaveTextContent(
+  expect(container.querySelector('.prismui-TimelineItem-time')).toHaveTextContent(
     '2019-02-07'
   );
 
@@ -214,7 +214,7 @@ test('Renderer:timeline with reverse', async () => {
     })
   );
 
-  expect(container.querySelector('.cxd-TimelineItem-time')).toHaveTextContent(
+  expect(container.querySelector('.prismui-TimelineItem-time')).toHaveTextContent(
     '2019-02-10'
   );
 });
@@ -304,7 +304,7 @@ test('Renderer:timeline detailClassName timeClassName', async () => {
   );
 
   const timelineTitles = () =>
-    container.querySelectorAll('.cxd-TimelineItem-title')!;
+    container.querySelectorAll('.prismui-TimelineItem-title')!;
   expect(timelineTitles()[1]).toHaveClass('auto-item-title-class');
 });
 
@@ -364,7 +364,7 @@ test('Renderer:timeline card style is enabled', async () => {
     )
   );
 
-  const cardsElements = container.querySelectorAll('.cxd-Card');
+  const cardsElements = container.querySelectorAll('.prismui-Card');
   expect(cardsElements.length).toBe(3);
 });
 

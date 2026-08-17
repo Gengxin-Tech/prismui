@@ -34,7 +34,7 @@ npm install amis amis-ui
 React 工程中可以继续使用现有入口：
 
 ```tsx
-import 'amis/lib/themes/cxd.css';
+import 'amis/lib/themes/prismui.css';
 import 'amis/lib/helper.css';
 import 'amis/sdk/iconfont.css';
 import {render as renderUI} from 'amis';
@@ -59,13 +59,13 @@ const env = {
   notify,
   jumpTo,
   getModalContainer: () => document.body,
-  theme: 'cxd'
+  theme: 'prismui'
 };
 
 export function App() {
   return <>
-    <ToastComponent theme="cxd" position="top-right" />
-    <AlertComponent theme="cxd" />
+    <ToastComponent theme="prismui" position="top-right" />
+    <AlertComponent theme="prismui" />
     {renderUI(schema, {data: {}}, env)}
   </>;
 }

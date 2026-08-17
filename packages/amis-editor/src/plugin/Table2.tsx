@@ -1392,7 +1392,7 @@ export class Table2Plugin extends BasePlugin {
                   ]
                 },
                 {
-                  type: 'amis-theme-select',
+                  type: 'prismui-theme-select',
                   name: 'scroll.y',
                   visibleOn: 'this.scroll && this.scroll.y !== null',
                   label: '高度值'
@@ -1420,7 +1420,7 @@ export class Table2Plugin extends BasePlugin {
                   ]
                 },
                 {
-                  type: 'amis-theme-select',
+                  type: 'prismui-theme-select',
                   name: 'scroll.x',
                   visibleOn: 'this.scroll && this.scroll.x !== null',
                   label: '宽度值'
@@ -1497,7 +1497,7 @@ export class Table2Plugin extends BasePlugin {
               state: ['default', 'hover'],
               extra: [
                 {
-                  type: 'amis-theme-select',
+                  type: 'prismui-theme-select',
                   label: '行高',
                   name: 'themeCss.tableBodyClassname.height',
                   editorValueToken: '--table-body-line-height',

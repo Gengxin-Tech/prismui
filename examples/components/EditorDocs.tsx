@@ -30,6 +30,14 @@ export const editorDocs = [
         )
       },
       {
+        label: '编辑器架构',
+        icon: 'fa fa-sitemap',
+        path: '/zh-CN/editor/editor-architecture',
+        component: React.lazy(() =>
+          import('../../docs/zh-CN/extend/editor-architecture.md').then(wrapDoc)
+        )
+      },
+      {
         label: '定制指南',
         icon: 'fa fa-sliders',
         path: '/zh-CN/editor/editor-customization',

@@ -41,7 +41,7 @@ export default class IFramePreview extends React.Component<IFramePreviewProps> {
     super(props);
     const themeAttrs = getEditorThemeScopeHtmlAttrs(
       props.env?.theme,
-      props.manager.config.theme || 'cxd'
+      props.manager.config.theme || 'prismui'
     );
 
     const styles = [].slice
@@ -63,7 +63,7 @@ export default class IFramePreview extends React.Component<IFramePreviewProps> {
 
     this.initialContent = `<!DOCTYPE html><html><head>${styles.join(
       ''
-    )}</head><body ${themeAttrs}><div class="ae-IFramePreview AMISCSSWrapper" ${themeAttrs}></div></body></html>`;
+    )}</head><body ${themeAttrs}><div class="ae-IFramePreview PRISMUICSSWrapper" ${themeAttrs}></div></body></html>`;
   }
 
   componentDidMount() {
@@ -123,7 +123,7 @@ export default class IFramePreview extends React.Component<IFramePreviewProps> {
   getThemeName() {
     return resolveEditorThemeName(
       this.props.env?.theme,
-      this.props.manager.config.theme || 'cxd'
+      this.props.manager.config.theme || 'prismui'
     );
   }
 
@@ -373,7 +373,7 @@ const InnerSvgSpirit = memo(() => {
   if (spiriteIcons) {
     return (
       <div
-        id="amis-icon-manage-mount-node"
+        id="prismui-icon-manage-mount-node"
         style={{display: 'none'}}
         dangerouslySetInnerHTML={{__html: spiriteIcons}}
       ></div>

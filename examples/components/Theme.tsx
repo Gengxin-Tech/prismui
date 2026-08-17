@@ -53,7 +53,7 @@ export default {
   title:
     '这是一个基于 amis 搭建较为复杂界面的例子，部分功能使用代码开发，请参考源码',
   submitText: '',
-  persistData: 'amis-theme-editor',
+  persistData: 'prismui-theme-editor',
   actions: [],
   onEvent: {
     inited: {

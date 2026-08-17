@@ -12,7 +12,8 @@ loadLanguages([
   'tsx',
   'css',
   'markup',
-  'json'
+  'json',
+  'mermaid'
 ]);
 var yaml = (yaml = require('js-yaml'));
 var rYml = /^\s*---([\s\S]*?)---\s/;
@@ -30,7 +31,7 @@ marked.setOptions({
 // Synchronous highlighting with prism.js
 marked.setOptions({
   highlight: function (code, lang) {
-    if (lang) {
+    if (lang && prism.languages[lang]) {
       return prism.highlight(code, prism.languages[lang], lang);
     } else {
       return code;
@@ -81,6 +82,43 @@ renderer.link = function (href, title, text) {
   return out;
 };
 
+function decodeHtmlEntities(text) {
+  return text.replace(
+    /&(#(?:x[0-9a-fA-F]+|\d+)|[a-zA-Z][\w]+);/g,
+    function (entity, body) {
+      if (body.charAt(0) === '#') {
+        var isHex = body.charAt(1).toLowerCase() === 'x';
+        var codePoint = parseInt(body.slice(isHex ? 2 : 1), isHex ? 16 : 10);
+
+        return Number.isFinite(codePoint)
+          ? String.fromCodePoint(codePoint)
+          : entity;
+      }
+
+      switch (body) {
+        case 'amp':
+          return '&';
+        case 'apos':
+          return "'";
+        case 'gt':
+          return '>';
+        case 'lt':
+          return '<';
+        case 'nbsp':
+          return ' ';
+        case 'quot':
+          return '"';
+        default:
+          return entity;
+      }
+    }
+  );
+}
+
+function getTocLabel(text) {
+  return decodeHtmlEntities(text.replace(/<[^>]*>/g, ''));
+}
+
 module.exports = function (content, file) {
   var m = rYml.exec(content);
   var info = {};
@@ -101,10 +139,11 @@ module.exports = function (content, file) {
     var escapedText = encodeURIComponent(
       text.toLowerCase().replace(/[^\u4e00-\u9fa5_a-zA-Z0-9]+/g, '-')
     );
+    var label = getTocLabel(text);
 
     if (level < 5) {
       var menu = {
-        label: text,
+        label: label,
         fragment: escapedText,
         fullPath: '#' + escapedText,
         level: level
@@ -179,18 +218,18 @@ module.exports = function (content, file) {
 
           placeholder[
             index
-          ] = `<!--amis-preview-start--><div class="amis-doc"><div class="preview">${code}</div><pre><code class="lang-html">${prism.highlight(
+          ] = `<!--prismui-preview-start--><div class="prismui-doc"><div class="preview">${code}</div><pre><code class="lang-html">${prism.highlight(
             code
               .replace(/"data:(\w+\/\w+);.*?"/g, '"data:$1; ..."')
               .replace(/<svg([^>]*)>[\s\S]*?<\/svg>/g, '<svg$1>...</svg>')
               .replace(/class="([^"]*?)\.\.\.([^"]*?)"/g, 'class="$1..."'),
             prism.languages[lang],
             lang
-          )}</code></pre></div><!--amis-preview-end-->`;
+          )}</code></pre></div><!--prismui-preview-end-->`;
         } else {
           placeholder[
             index
-          ] = `<!--amis-preview-start--><div class="amis-preview" style="min-height: ${setting.height}px"><script type="text/schema" ${attr}>${code}</script></div><!--amis-preview-end-->`;
+          ] = `<!--prismui-preview-start--><div class="prismui-preview" style="min-height: ${setting.height}px"><script type="text/schema" ${attr}>${code}</script></div><!--prismui-preview-end-->`;
         }
 
         return `[[${index++}]]`;

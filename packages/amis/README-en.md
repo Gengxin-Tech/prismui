@@ -4,7 +4,7 @@ A Low-Code frontend UI Framework. You can quickly develop various management pag
 
 Currently used in Baidu's internal infrastructure, created more than 40000 pages.
 
-To build your own backend system with amis, you can refer to this: https://github.com/fex-team/amis-admin
+To build your own backend system with amis, you can refer to this: https://github.com/fex-team/prismui-admin
 
 ## Quick start
 

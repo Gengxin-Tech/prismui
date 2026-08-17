@@ -419,7 +419,7 @@ export function remarkTpl(config: {
       },
       body: {
         type: 'grid',
-        className: 'pt-4 right-panel-pop :AMISCSSWrapper',
+        className: 'pt-4 right-panel-pop :PRISMUICSSWrapper',
         gap: 'lg',
         columns: [
           {

@@ -34,7 +34,7 @@ export class NavPlugin extends BasePlugin {
   scaffold = {
     type: 'nav',
     stacked: true,
-    popupClassName: 'app-popover :AMISCSSWrapper',
+    popupClassName: 'app-popover :PRISMUICSSWrapper',
     links: [
       {
         label: '页面1',

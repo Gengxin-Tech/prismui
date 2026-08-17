@@ -12,7 +12,7 @@ const expectedCssAssets = [
   '@fortawesome/fontawesome-free/css/all.css',
   '@fortawesome/fontawesome-free/css/v4-shims.css',
   'amis-ui/scss/themes/ang.scss',
-  'amis-ui/scss/themes/cxd.scss',
+  'amis-ui/scss/themes/prismui.scss',
   'amis-ui/scss/themes/dark.scss',
   'amis-ui/scss/themes/antd.scss',
   'amis-ui/scss/helper.scss'

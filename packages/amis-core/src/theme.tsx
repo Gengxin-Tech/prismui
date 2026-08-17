@@ -14,19 +14,18 @@ export type ClassValue =
 
 export type ClassNamesFn = (...classes: ClassValue[]) => string;
 
-export type ComponentClassPrefix = 'amis-';
-export type LegacyDomClassAlias = false | 'cxd';
+export type ComponentClassPrefix = 'prismui-';
 
 export interface ThemeScope {
   theme: string;
-  attribute: 'data-amis-theme';
+  attribute: 'data-prismui-theme';
   value: string;
   selector: string;
   tokenScopeSelector: string;
 }
 
 export interface ThemeScopeProps {
-  'data-amis-theme': string;
+  'data-prismui-theme': string;
 }
 
 export interface OverlayContainerResolution {
@@ -41,7 +40,6 @@ export interface ThemeConfig {
    */
   classPrefix?: string;
   componentClassPrefix?: ComponentClassPrefix;
-  legacyDomClassAlias?: LegacyDomClassAlias;
   renderers?: {
     [propName: string]: any;
   };
@@ -54,13 +52,11 @@ export interface ThemeConfig {
 
 const themes: Record<string, ThemeConfig> = {
   default: {
-    componentClassPrefix: 'amis-',
-    legacyDomClassAlias: false
+    componentClassPrefix: 'prismui-'
   },
-  cxd: {
-    classPrefix: 'cxd-',
-    componentClassPrefix: 'amis-',
-    legacyDomClassAlias: false
+  prismui: {
+    classPrefix: 'prismui-',
+    componentClassPrefix: 'prismui-'
   }
 };
 
@@ -131,7 +127,7 @@ function makePrefixedClassnames(prefixes: Array<string>): ClassNamesFn {
 }
 
 export function makeStableClassnames(
-  prefix: ComponentClassPrefix = 'amis-'
+  prefix: ComponentClassPrefix = 'prismui-'
 ): ClassNamesFn {
   if (stableFns[prefix]) {
     return stableFns[prefix];
@@ -160,25 +156,15 @@ export function getStableClassSelector(
 }
 
 function makeThemeClassnames(
-  componentClassPrefix: ComponentClassPrefix,
-  legacyDomClassAlias: LegacyDomClassAlias = false
+  componentClassPrefix: ComponentClassPrefix
 ): ClassNamesFn {
-  const aliasPrefix = legacyDomClassAlias === 'cxd' ? 'cxd-' : '';
-  const cacheKey = `${componentClassPrefix}|${aliasPrefix}`;
+  const cacheKey = componentClassPrefix;
 
   if (themeFns[cacheKey]) {
     return themeFns[cacheKey];
   }
 
-  return (themeFns[cacheKey] = makePrefixedClassnames(
-    aliasPrefix ? [componentClassPrefix, aliasPrefix] : [componentClassPrefix]
-  ));
-}
-
-function normalizeLegacyDomClassAlias(
-  legacyDomClassAlias: ThemeConfig['legacyDomClassAlias']
-): LegacyDomClassAlias {
-  return legacyDomClassAlias === 'cxd' ? 'cxd' : false;
+  return (themeFns[cacheKey] = makePrefixedClassnames([componentClassPrefix]));
 }
 
 export interface ThemeInstance extends ThemeConfig {
@@ -205,34 +191,34 @@ export function classnames(...classes: ClassValue[]) {
 }
 
 export function getClassPrefix() {
-  return getTheme(defaultTheme).componentClassPrefix || 'amis-';
+  return getTheme(defaultTheme).componentClassPrefix || 'prismui-';
 }
 
 export function normalizeThemeName(theme?: string): string {
   let themeName =
-    typeof theme === 'string' && theme ? theme : defaultTheme || 'cxd';
+    typeof theme === 'string' && theme ? theme : defaultTheme || 'prismui';
 
   if (themeName === 'default') {
     themeName =
-      defaultTheme && defaultTheme !== 'default' ? defaultTheme : 'cxd';
+      defaultTheme && defaultTheme !== 'default' ? defaultTheme : 'prismui';
   }
 
   if (!hasTheme(themeName)) {
     themeName =
       defaultTheme && defaultTheme !== 'default' && hasTheme(defaultTheme)
         ? defaultTheme
-        : 'cxd';
+        : 'prismui';
   }
 
   return themeName;
 }
 
 function createThemeScope(value: string): ThemeScope {
-  const selector = `[data-amis-theme="${value.replace(/"/g, '\\"')}"]`;
+  const selector = `[data-prismui-theme="${value.replace(/"/g, '\\"')}"]`;
 
   return {
     theme: value,
-    attribute: 'data-amis-theme',
+    attribute: 'data-prismui-theme',
     value,
     selector,
     tokenScopeSelector: selector
@@ -245,15 +231,15 @@ export function getThemeScope(themeName?: string): ThemeScope {
 
 export function getThemeScopeProps(themeName?: string): ThemeScopeProps {
   return {
-    'data-amis-theme': getThemeScope(themeName).value
+    'data-prismui-theme': getThemeScope(themeName).value
   };
 }
 
 export function getNearestThemeScope(
   node: HTMLElement | null | undefined
 ): ThemeScope | null {
-  const scopeNode = node?.closest?.('[data-amis-theme]');
-  const themeValue = scopeNode?.getAttribute('data-amis-theme');
+  const scopeNode = node?.closest?.('[data-prismui-theme]');
+  const themeValue = scopeNode?.getAttribute('data-prismui-theme');
 
   return themeValue ? createThemeScope(themeValue) : null;
 }
@@ -293,11 +279,8 @@ export function getTheme(theme: string): ThemeInstance {
   theme = normalizeThemeName(theme);
 
   const config = themes[theme];
-  const componentClassPrefix = config.componentClassPrefix || 'amis-';
-  const legacyDomClassAlias = normalizeLegacyDomClassAlias(
-    config.legacyDomClassAlias
-  );
-  const classnamesKey = `${componentClassPrefix}|${legacyDomClassAlias || ''}`;
+  const componentClassPrefix = config.componentClassPrefix || 'prismui-';
+  const classnamesKey = componentClassPrefix;
 
   if (!config.getRendererConfig) {
     config.getRendererConfig = (name?: string) => {
@@ -318,10 +301,7 @@ export function getTheme(theme: string): ThemeInstance {
   }
 
   if (!config.classnames || config.__classnamesKey !== classnamesKey) {
-    config.classnames = makeThemeClassnames(
-      componentClassPrefix,
-      legacyDomClassAlias
-    );
+    config.classnames = makeThemeClassnames(componentClassPrefix);
     config.__classnamesKey = classnamesKey;
   }
 
@@ -346,7 +326,7 @@ export interface ThemeProps {
 
 export interface ThemeOuterProps extends Partial<ThemeProps> {}
 
-export let defaultTheme: string = 'cxd';
+export let defaultTheme: string = 'prismui';
 export const ThemeContext = React.createContext('');
 
 export function themeable<
@@ -396,7 +376,7 @@ export function themeable<
           classnames: ClassNamesFn;
           theme: string;
         } = {
-          classPrefix: config.componentClassPrefix || 'amis-',
+          classPrefix: config.componentClassPrefix || 'prismui-',
           classnames: config.classnames,
           theme
         };

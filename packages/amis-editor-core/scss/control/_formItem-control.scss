@@ -152,19 +152,19 @@
 }
 
 /* 设置面板 combo 多行模式样式调整 */
-.#{$amis-component-prefix}Combo--ver:not(
-    .#{$amis-component-prefix}Combo--noBorder
+.#{$prismui-component-prefix}Combo--ver:not(
+    .#{$prismui-component-prefix}Combo--noBorder
   )
   > .ae-Combo-items {
   margin: px2rem(8px) 0;
   padding: 0;
 }
 
-.#{$amis-component-prefix}Combo--ver:not(
-    .#{$amis-component-prefix}Combo--noBorder
+.#{$prismui-component-prefix}Combo--ver:not(
+    .#{$prismui-component-prefix}Combo--noBorder
   )
   > .ae-Combo-items
-  > .#{$amis-component-prefix}Combo-item {
+  > .#{$prismui-component-prefix}Combo-item {
   margin: 0;
   border: none;
 
@@ -188,4 +188,67 @@
 
 .form-item-gap {
   margin-bottom: var(--Form-item-gap);
+}
+
+body.dark,
+body[data-prismui-theme='dark'] {
+  .ae-Outline-panel,
+  .ae-Settings-content {
+    .ae-formItemControl {
+      & > div:last-child {
+        .ae-formItemControl-header {
+          border-bottom-color: var(--ae-editor-border);
+        }
+      }
+
+      div.ae-formItemControl-header.ae-Collapse-header {
+        color: var(--ae-editor-text);
+        background: var(--ae-editor-surface);
+        border-top-color: var(--ae-editor-border);
+
+        i,
+        svg {
+          color: var(--ae-editor-text-muted);
+        }
+      }
+
+      &-body {
+        color: var(--ae-editor-text);
+        background: var(--ae-editor-surface-strong);
+      }
+    }
+  }
+
+  .ae-formItemControl .ae-sub-content,
+  .ae-ExtendMore,
+  .ae-StatusControl-content > div,
+  .ae-Combo-items {
+    color: var(--ae-editor-text);
+    background-color: var(--ae-editor-surface-muted);
+    border: 1px solid var(--ae-editor-border);
+
+    &::after {
+      background-color: var(--ae-editor-surface-muted);
+      border-left: 1px solid var(--ae-editor-border);
+      border-top: 1px solid var(--ae-editor-border);
+    }
+  }
+
+  .ae-Code {
+    color: var(--colors-brand-4);
+    background: rgba(36, 134, 255, 0.12);
+  }
+
+  .ae-Combo-items + div {
+    > button,
+    > button:hover {
+      color: var(--colors-brand-4) !important;
+      background: transparent !important;
+      border-color: var(--colors-brand-4) !important;
+    }
+
+    > button:hover {
+      background: rgba(36, 134, 255, 0.12) !important;
+    }
+  }
 }

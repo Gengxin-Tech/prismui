@@ -6,7 +6,7 @@ const {rewriteSdkCssUrls} = require('./rewrite-sdk-css-urls');
 
 const themeCss = buildSdkThemeCss([
   {name: 'ang.scss', content: '.AngOnly { color: red; }'},
-  {name: 'cxd.scss', content: '.CxdOnly { color: blue; }'},
+  {name: 'prismui.scss', content: '.PrismuiOnly { color: blue; }'},
   {name: 'dark.scss', content: '.DarkOnly { color: black; }'},
   {name: 'antd.scss', content: '.AntdOnly { color: green; }'},
   {
@@ -28,55 +28,55 @@ const byTheme = Object.fromEntries(themeCss.map(item => [item.theme, item]));
 
 assertEqual(themeCss.length, 4, 'should emit one CSS file per SDK theme');
 assertEqual(byTheme.ang.filename, 'ang.css', 'ang theme filename');
-assertEqual(byTheme.cxd.filename, 'sdk.css', 'cxd theme filename');
+assertEqual(byTheme.prismui.filename, 'sdk.css', 'prismui theme filename');
 assertEqual(byTheme.dark.filename, 'dark.css', 'dark theme filename');
 assertEqual(byTheme.antd.filename, 'antd.css', 'antd theme filename');
 
-assertContains(byTheme.cxd.content, '.amis-scope .CxdOnly', 'cxd theme CSS');
-assertNotContains(byTheme.cxd.content, 'AngOnly', 'cxd should exclude ang CSS');
-assertNotContains(byTheme.cxd.content, 'DarkOnly', 'cxd should exclude dark CSS');
-assertNotContains(byTheme.cxd.content, 'AntdOnly', 'cxd should exclude antd CSS');
+assertContains(byTheme.prismui.content, '.prismui-scope .PrismuiOnly', 'prismui theme CSS');
+assertNotContains(byTheme.prismui.content, 'AngOnly', 'prismui should exclude ang CSS');
+assertNotContains(byTheme.prismui.content, 'DarkOnly', 'prismui should exclude dark CSS');
+assertNotContains(byTheme.prismui.content, 'AntdOnly', 'prismui should exclude antd CSS');
 
-assertContains(byTheme.ang.content, '.amis-scope .AngOnly', 'ang theme CSS');
-assertNotContains(byTheme.ang.content, 'CxdOnly', 'ang should exclude cxd CSS');
+assertContains(byTheme.ang.content, '.prismui-scope .AngOnly', 'ang theme CSS');
+assertNotContains(byTheme.ang.content, 'PrismuiOnly', 'ang should exclude prismui CSS');
 
 assertContains(
-  byTheme.cxd.content,
-  '.amis-scope .Button, .amis-scope .Alert:hover',
+  byTheme.prismui.content,
+  '.prismui-scope .Button, .prismui-scope .Alert:hover',
   'regular selectors should receive SDK scope'
 );
 assertContains(
-  byTheme.cxd.content,
-  '.amis-scope { margin: 0; }',
+  byTheme.prismui.content,
+  '.prismui-scope { margin: 0; }',
   'body selectors should be rewritten to the SDK scope root'
 );
 assertContains(
-  byTheme.cxd.content,
-  '.amis-scope.app { height: 100%; }',
+  byTheme.prismui.content,
+  '.prismui-scope.app { height: 100%; }',
   'html selectors should preserve suffixes on the SDK scope root'
 );
 assertContains(
-  byTheme.cxd.content,
+  byTheme.prismui.content,
   ':root { --sdk-color: red; }',
   ':root should stay global'
 );
 assertContains(
-  byTheme.cxd.content,
+  byTheme.prismui.content,
   '@keyframes fade { from { opacity: 0; } to { opacity: 1; } }',
   'keyframe steps should not be scoped'
 );
 assertContains(
-  byTheme.cxd.content,
+  byTheme.prismui.content,
   '.fr-box { color: black; }',
   'Froala selectors should not be scoped'
 );
 assertContains(
-  byTheme.cxd.content,
+  byTheme.prismui.content,
   '.tox-menu { color: black; }',
   'TinyMCE selectors should not be scoped'
 );
 assertContains(
-  byTheme.cxd.content,
+  byTheme.prismui.content,
   '.monaco-editor { color: black; }',
   'Monaco selectors should not be scoped'
 );

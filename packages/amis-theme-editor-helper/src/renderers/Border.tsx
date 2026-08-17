@@ -351,7 +351,7 @@ function BoxBorder(props: BorderProps & FormControlProps) {
 }
 
 @FormItem({
-  type: 'amis-theme-border',
+  type: 'prismui-theme-border',
   strictMode: false,
   renderLabel: false
 })

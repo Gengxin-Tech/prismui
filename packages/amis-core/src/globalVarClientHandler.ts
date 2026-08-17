@@ -43,21 +43,21 @@ function saveClientData(
 }
 
 function bulkClientGetter({variables}: GlobalVarContext) {
-  return loadClientData('amis-client-vars', variables);
+  return loadClientData('prismui-client-vars', variables);
 }
 
 function bulkClientSetter(values: any, context: GlobalVarContext) {
-  return saveClientData('amis-client-vars', values, context.variables);
+  return saveClientData('prismui-client-vars', values, context.variables);
 }
 
 function pageBulkClientGetter(context: GlobalVarContext) {
   const variables = context.variables;
-  const key = `amis-client-vars-${context.pageId || location.pathname}`;
+  const key = `prismui-client-vars-${context.pageId || location.pathname}`;
   return loadClientData(key, variables);
 }
 
 function pageBulkClientSetter(values: any, context: GlobalVarContext) {
-  const key = `amis-client-vars-${context.pageId || location.pathname}`;
+  const key = `prismui-client-vars-${context.pageId || location.pathname}`;
   return saveClientData(key, values, context.variables);
 }
 

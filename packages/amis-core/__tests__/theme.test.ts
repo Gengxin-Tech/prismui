@@ -13,136 +13,120 @@ import {
 } from '../src/theme';
 
 afterEach(() => {
-  theme('cxd', {
-    componentClassPrefix: 'amis-',
-    legacyDomClassAlias: false
+  theme('prismui', {
+    componentClassPrefix: 'prismui-'
   });
 });
 
 test('theme runtime uses stable component classnames by default', () => {
-  const cx = getTheme('cxd').classnames;
+  const cx = getTheme('prismui').classnames;
 
   expect(cx('Button', 'Button--primary', 'is-disabled')).toBe(
-    'amis-Button amis-Button--primary is-disabled'
+    'prismui-Button prismui-Button--primary is-disabled'
   );
-  expect(cx('Button')).not.toContain('cxd-Button');
 });
 
 test('theme runtime exposes stable component classPrefix to components', () => {
-  theme('cxd', {
-    classPrefix: 'cxd-',
-    componentClassPrefix: 'amis-',
-    legacyDomClassAlias: false
+  theme('prismui', {
+    classPrefix: 'prismui-',
+    componentClassPrefix: 'prismui-'
   });
 
-  expect(getClassPrefix()).toBe('amis-');
-  expect(getTheme('cxd').componentClassPrefix).toBe('amis-');
+  expect(getClassPrefix()).toBe('prismui-');
+  expect(getTheme('prismui').componentClassPrefix).toBe('prismui-');
 });
 
 test('theme runtime exposes a data attribute scope', () => {
-  expect(getThemeScope('cxd')).toMatchObject({
-    theme: 'cxd',
-    attribute: 'data-amis-theme',
-    value: 'cxd',
-    selector: '[data-amis-theme="cxd"]',
-    tokenScopeSelector: '[data-amis-theme="cxd"]'
+  expect(getThemeScope('prismui')).toMatchObject({
+    theme: 'prismui',
+    attribute: 'data-prismui-theme',
+    value: 'prismui',
+    selector: '[data-prismui-theme="prismui"]',
+    tokenScopeSelector: '[data-prismui-theme="prismui"]'
   });
 
-  expect(getThemeScopeProps('cxd')).toEqual({
-    'data-amis-theme': 'cxd'
+  expect(getThemeScopeProps('prismui')).toEqual({
+    'data-prismui-theme': 'prismui'
   });
-  expect(getTheme('default').scope.value).toBe('cxd');
+  expect(getTheme('default').scope.value).toBe('prismui');
 });
 
 test('makeStableClassnames prefixes only component tokens', () => {
   const cx = makeStableClassnames();
 
   expect(cx('Button', ':Button--quiet', 'is-active', 'custom-class')).toBe(
-    'amis-Button Button--quiet is-active custom-class'
+    'prismui-Button Button--quiet is-active custom-class'
   );
 });
 
 test('stable class selector helpers prefer the primary component class', () => {
-  theme('cxd', {
-    legacyDomClassAlias: 'cxd'
-  });
-  const cx = getTheme('cxd').classnames;
+  const cx = getTheme('prismui').classnames;
 
-  expect(getStableClassName(cx, 'Modal-content')).toBe('amis-Modal-content');
+  expect(getStableClassName(cx, 'Modal-content')).toBe('prismui-Modal-content');
   expect(getStableClassSelector(cx, 'Modal-content')).toBe(
-    '.amis-Modal-content'
+    '.prismui-Modal-content'
   );
 });
 
-test('explicit legacy DOM alias updates cached theme classnames', () => {
-  expect(getTheme('cxd').classnames('Button')).toBe('amis-Button');
+test('theme classnames do not emit a legacy alias', () => {
+  expect(getTheme('prismui').classnames('Button')).toBe('prismui-Button');
 
-  theme('cxd', {
-    legacyDomClassAlias: 'cxd'
+  theme('prismui', {
+    classPrefix: 'prismui-'
   });
 
-  expect(getTheme('cxd').classnames('Button', 'Button--primary')).toBe(
-    'amis-Button cxd-Button amis-Button--primary cxd-Button--primary'
-  );
-});
-
-test('legacy DOM alias does not auto-generate non-cxd theme prefixes', () => {
-  theme('cxd', {
-    legacyDomClassAlias: 'antd' as any
-  });
-
-  expect(getTheme('cxd').classnames('Button', 'Button--primary')).toBe(
-    'amis-Button amis-Button--primary'
+  expect(getTheme('prismui').classnames('Button', 'Button--primary')).toBe(
+    'prismui-Button prismui-Button--primary'
   );
 });
 
 test('overlay theme helpers resolve nearest DOM scope', () => {
   const root = document.createElement('div');
   const child = document.createElement('div');
-  root.setAttribute('data-amis-theme', 'dark');
+  root.setAttribute('data-prismui-theme', 'dark');
   root.appendChild(child);
 
   expect(getNearestThemeScope(child)).toMatchObject({
     theme: 'dark',
     value: 'dark',
-    selector: '[data-amis-theme="dark"]'
+    selector: '[data-prismui-theme="dark"]'
   });
   expect(getNearestThemeScope(document.createElement('div'))).toBeNull();
 });
 
 test('overlay theme helpers apply scope idempotently', () => {
   const node = document.createElement('div');
-  const cxdScope = getThemeScope('cxd');
+  const prismuiScope = getThemeScope('prismui');
   const darkScope = getThemeScope('dark');
 
-  expect(applyThemeScope(node, cxdScope)).toBe(cxdScope);
-  expect(node).toHaveAttribute('data-amis-theme', 'cxd');
+  expect(applyThemeScope(node, prismuiScope)).toBe(prismuiScope);
+  expect(node).toHaveAttribute('data-prismui-theme', 'prismui');
   expect(applyThemeScope(node, darkScope)).toMatchObject({
-    value: 'cxd'
+    value: 'prismui'
   });
-  expect(node).toHaveAttribute('data-amis-theme', 'cxd');
+  expect(node).toHaveAttribute('data-prismui-theme', 'prismui');
 });
 
 test('overlay container resolver preserves custom container scope', () => {
   const fallback = document.createElement('div');
   const custom = document.createElement('div');
-  custom.setAttribute('data-amis-theme', 'dark');
+  custom.setAttribute('data-prismui-theme', 'dark');
   const customResolution = resolveOverlayContainer(
     custom,
     fallback,
-    getThemeScope('cxd')
+    getThemeScope('prismui')
   );
 
   expect(customResolution.container).toBe(custom);
   expect(customResolution.scope).toMatchObject({
     theme: 'dark',
     value: 'dark',
-    selector: '[data-amis-theme="dark"]'
+    selector: '[data-prismui-theme="dark"]'
   });
-  expect(resolveOverlayContainer(null, fallback, getThemeScope('cxd'))).toEqual(
+  expect(resolveOverlayContainer(null, fallback, getThemeScope('prismui'))).toEqual(
     {
       container: fallback,
-      scope: getThemeScope('cxd')
+      scope: getThemeScope('prismui')
     }
   );
 });

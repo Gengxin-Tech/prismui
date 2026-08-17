@@ -32,9 +32,9 @@
       }
     </style>
     <script type="text/x-jsx">
-      let theme = localStorage.getItem('amis-theme') || 'cxd';
+      let theme = localStorage.getItem('prismui-theme') || 'prismui';
       if (theme === 'default') {
-        theme = 'cxd';
+        theme = 'prismui';
       }
 
       // 非 IE 模式
@@ -45,9 +45,9 @@
           }  href="${__uri('amis/lib/themes/ang.css')}" />`
         );
         document.write(
-          `<link rel="stylesheet" title="cxd" ${
-            theme !== 'cxd' ? 'disabled' : ''
-          } href="${__uri('amis/lib/themes/cxd.css')}" />`
+          `<link rel="stylesheet" title="prismui" ${
+            theme !== 'prismui' ? 'disabled' : ''
+          } href="${__uri('amis/lib/themes/prismui.css')}" />`
         );
         document.write(
           `<link rel="stylesheet" title="dark" ${
@@ -66,9 +66,9 @@
           }  href="${__uri('amis/lib/themes/ang-ie11.css')}" />`
         );
         document.write(
-          `<link rel="stylesheet" title="cxd" ${
-            theme !== 'cxd' ? 'disabled' : ''
-          } href="${__uri('amis/lib/themes/cxd-ie11.css')}" />`
+          `<link rel="stylesheet" title="prismui" ${
+            theme !== 'prismui' ? 'disabled' : ''
+          } href="${__uri('amis/lib/themes/prismui-ie11.css')}" />`
         );
         document.write(
           `<link rel="stylesheet" title="dark" ${

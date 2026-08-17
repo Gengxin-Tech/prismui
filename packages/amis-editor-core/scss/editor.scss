@@ -275,16 +275,16 @@
       //   > *:first-child {
       //     flex: 1;
       //   }
-      //   .amis-dialog-widget {
+      //   .prismui-dialog-widget {
       //     // 编辑态防止内容超出底部空白
       //     position: static;
       //     z-index: 0;
       //   }
 
-      //   > .#{$amis-component-prefix}Page {
+      //   > .#{$prismui-component-prefix}Page {
       //     // 这里主要是为了确保能撑开画布区
       //     display: flex;
-      //     > .#{$amis-component-prefix}Page-content {
+      //     > .#{$prismui-component-prefix}Page-content {
       //       height: auto;
       //     }
       //   }
@@ -2070,5 +2070,187 @@ div[class*='Form-group']:empty {
       width: 395px;
       height: 687px;
     }
+  }
+}
+
+body.dark,
+body[data-prismui-theme='dark'] {
+  --ae-editor-surface: var(--colors-neutral-fill-10);
+  --ae-editor-surface-strong: var(--colors-neutral-fill-11);
+  --ae-editor-surface-muted: rgba(255, 255, 255, 0.03);
+  --ae-editor-border: var(--colors-neutral-line-9);
+  --ae-editor-border-strong: var(--colors-neutral-line-8);
+  --ae-editor-text: var(--colors-neutral-text-2);
+  --ae-editor-text-muted: var(--colors-neutral-text-6);
+  --ae-editor-text-subtle: var(--colors-neutral-text-7);
+  --ae-editor-hover: rgba(255, 255, 255, 0.04);
+  --ae-editor-active: rgba(36, 104, 242, 0.16);
+  --ae-editor-selection-bg: rgba(36, 134, 255, 0.1);
+  --ae-editor-selection-shadow: inset 0 0 0 1px rgba(36, 134, 255, 0.18);
+  --ae-editor-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+
+  --borderColor: var(--ae-editor-border);
+  --Form-item-color: var(--ae-editor-text-muted);
+  --Form-input-bg: var(--ae-editor-surface);
+  --Form-input-color: var(--ae-editor-text);
+  --Form-input-borderColor: var(--ae-editor-border);
+  --Form-input-placeholderColor: var(--ae-editor-text-subtle);
+  --Form-input-onHover-bg: var(--ae-editor-surface);
+  --Form-input-onHover-borderColor: var(--colors-brand-4);
+  --Form-input-onFocused-bg: var(--ae-editor-surface);
+  --Form-input-onFocused-borderColor: var(--colors-brand-4);
+  --InputGroup-addOn-borderColor: var(--ae-editor-border);
+  --InputGroup-button-borderColor: var(--ae-editor-border);
+  --InputGroup-select-borderColor: var(--ae-editor-border);
+
+  .ae-Main,
+  .ae-Preview,
+  .ae-Preview-body {
+    background-color: var(--ae-editor-surface-strong);
+  }
+
+  .ae-Preview-body::-webkit-scrollbar {
+    background-color: var(--ae-editor-surface-strong);
+  }
+
+  .ae-Preview-body::-webkit-scrollbar-thumb {
+    border-color: var(--ae-editor-surface-strong);
+    background-color: var(--ae-editor-border);
+
+    &:hover {
+      background-color: var(--ae-editor-border-strong);
+    }
+  }
+
+  .ae-Preview .ae-Preview-body .ae-Preview-inner,
+  .ae-Preview-inner {
+    --Page-main-bg: var(--ae-editor-surface);
+    --Page-aside-bg: var(--ae-editor-surface);
+    --Page-header-bg: var(--ae-editor-surface);
+    --Page-title-color: var(--ae-editor-text);
+    --Panel-bg-color: var(--ae-editor-surface-muted);
+    --Panel-top-border-color: var(--ae-editor-border);
+    --Panel-right-border-color: var(--ae-editor-border);
+    --Panel-bottom-border-color: var(--ae-editor-border);
+    --Panel-left-border-color: var(--ae-editor-border);
+    --Panel-heading-bg-color: var(--ae-editor-surface);
+    --Panel-heading-color: var(--ae-editor-text);
+    --Panel-heading-top-border-color: var(--ae-editor-border);
+    --Panel-heading-right-border-color: var(--ae-editor-border);
+    --Panel-heading-bottom-border-color: var(--ae-editor-border);
+    --Panel-heading-left-border-color: var(--ae-editor-border);
+    --Panel-footerBg: var(--ae-editor-surface);
+    --Panel-footerBorderColor: var(--ae-editor-border);
+
+    background: var(--ae-editor-surface);
+    box-shadow: var(--ae-editor-shadow);
+
+    > .ae-PageWrapper > *:not(iframe):first-child {
+      color: var(--ae-editor-text);
+      background: var(--ae-editor-surface);
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  .ae-RendererPanel,
+  .ae-Outline-panel,
+  .ae-InsertPanel,
+  .ae-GlobalVarPanel,
+  .ae-CodePanel {
+    .panel-header {
+      color: var(--ae-editor-text);
+    }
+
+    .editor-InputSearch {
+      color: var(--ae-editor-text);
+      background: var(--ae-editor-surface) !important;
+      border-color: var(--ae-editor-border) !important;
+
+      &:hover,
+      &.is-focused {
+        border-color: var(--colors-brand-4) !important;
+      }
+
+      input {
+        color: var(--ae-editor-text);
+
+        &::placeholder {
+          color: var(--ae-editor-text-subtle);
+        }
+      }
+
+      svg.icon-search,
+      svg.icon-editor-search,
+      svg.delete-btn-icon {
+        color: var(--ae-editor-text-muted);
+        fill: var(--ae-editor-text-muted);
+
+        &:hover {
+          color: var(--colors-brand-4);
+          fill: var(--colors-brand-4);
+        }
+      }
+    }
+
+    hr.margin-top {
+      border-top-color: var(--ae-editor-border) !important;
+    }
+  }
+
+  .ae-Editor-common-config div[class*='Wrapper']:empty,
+  .ae-Editor-common-config div[class*='Container']:empty,
+  .ae-Editor-form-config div[class*='Wrapper']:empty,
+  .ae-Editor-form-config div[class*='Container']:empty {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: var(--ae-editor-border);
+  }
+
+  .subEditor-dialog {
+    border-color: var(--ae-editor-border);
+    background: var(--ae-editor-surface);
+  }
+
+  .ae-Editor-toolbarPopover {
+    background: var(--colors-brand-4);
+  }
+
+  .ae-Editor-toolbar::before,
+  .ae-Editor-toolbar button {
+    color: var(--colors-neutral-text-2);
+  }
+
+  .ae-WResizer,
+  .ae-HResizer,
+  .ae-Resizer,
+  .ae-border-WResizer,
+  .ae-border-HResizer {
+    background-color: var(--ae-editor-surface);
+    border-color: var(--colors-brand-4);
+  }
+
+  .ae-Editor-hlbox {
+    border-color: rgba(36, 104, 242, 0.35);
+
+    &.selected {
+      background: var(--ae-editor-selection-bg);
+      border-color: var(--colors-brand-4);
+      box-shadow: var(--ae-editor-selection-shadow);
+
+      .ae-Editor-toolbar {
+        background: var(--colors-brand-4);
+      }
+    }
+  }
+
+  .ae-Header {
+    background: var(--ae-editor-surface-strong);
+
+    &-Right-Container {
+      background-color: var(--ae-editor-surface-strong);
+    }
+  }
+
+  .editor-left-panel-fixed-placeholder {
+    background: var(--ae-editor-surface);
   }
 }
