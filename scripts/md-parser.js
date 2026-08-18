@@ -247,7 +247,7 @@ module.exports = function (content, file) {
   info.html =
     '<div class="markdown-body">' +
     content.replace(
-      /<\!\-\-amis\-preview\-(start|end)\-\-\>/g,
+      /<\!\-\-(?:amis|prismui)\-preview\-(start|end)\-\-\>/g,
       function (_, type) {
         return type === 'start' ? '</div>' : '<div class="markdown-body">';
       }

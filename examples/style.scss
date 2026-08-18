@@ -637,7 +637,7 @@ body {
       > ul,
       > ol,
       > dl,
-      > table,
+      > table:not(.prismui-Table-table):not(.amis-Table-table),
       > pre {
         margin-bottom: 30px;
       }
@@ -832,7 +832,7 @@ body {
         border-left-color: var(--Doc-border-color);
       }
 
-      table {
+      table:not(.prismui-Table-table):not(.amis-Table-table) {
         th,
         td {
           border-color: var(--Doc-border-color);
@@ -1392,6 +1392,16 @@ body[data-prismui-theme='dark'] {
       width: 100%;
     }
   }
+}
+
+.doc-play-ground,
+.Playgroud-preview,
+.schema-wrapper,
+.prismui-doc > .preview {
+  color: var(--body-color);
+  font-family: var(--fontFamilyBase);
+  font-size: var(--body-size);
+  line-height: var(--body-lineHeight);
 }
 
 @media screen and (max-width: 767px) {

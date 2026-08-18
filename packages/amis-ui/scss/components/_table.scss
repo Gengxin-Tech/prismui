@@ -246,9 +246,12 @@
     }
   }
 
+  & &-table,
   &-table {
+    display: table;
     width: 100%;
     min-width: 100%;
+    max-width: none;
     margin-bottom: 0;
     font-size: var(--Table-fontSize);
     color: var(--Table-color);
@@ -263,7 +266,7 @@
     & th,
     & td {
       text-align: left;
-      border-color: transparent;
+      border: 0;
       border-bottom: var(--Table-borderWidth) solid var(--Table-borderColor);
 
       &.is-sticky {
@@ -482,6 +485,8 @@
 
     > tbody > tr {
       position: relative;
+      border-top: 0;
+      background: var(--Table-bg);
 
       & + tr {
         border-top: var(--Table-borderWidth) solid var(--Table-borderColor);

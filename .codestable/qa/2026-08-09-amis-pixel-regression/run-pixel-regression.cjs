@@ -257,9 +257,10 @@ async function waitForStableLayout(page, rounds = 3, interval = 250) {
   }
 }
 
-async function waitForStableMainContent(page, timeout = 15000) {
+async function waitForStableMainContent(page, timeout = 30000) {
   let stable = 0;
   let previous = '';
+  let lastState = null;
   const started = Date.now();
   while (Date.now() - started < timeout) {
     const state = await page.evaluate(() => {
@@ -278,6 +279,16 @@ async function waitForStableMainContent(page, timeout = 15000) {
       const normalizedText = text.replace(/\s+/g, ' ').trim();
       const rect = content ? content.getBoundingClientRect() : null;
       return {
+        url: window.location.href,
+        title: document.title,
+        selector:
+          content && content.id
+            ? `#${content.id}`
+            : content && content.className
+              ? `.${String(content.className).split(/\s+/).filter(Boolean).join('.')}`
+              : content
+                ? content.tagName.toLowerCase()
+                : 'none',
         signature: [
           el.scrollHeight,
           el.clientWidth,
@@ -292,6 +303,7 @@ async function waitForStableMainContent(page, timeout = 15000) {
       };
     });
 
+    lastState = state;
     stable = state.signature === previous ? stable + 1 : 1;
     previous = state.signature;
     if (
@@ -303,6 +315,12 @@ async function waitForStableMainContent(page, timeout = 15000) {
     }
     await delay(500);
   }
+
+  throw new Error(
+    `Main content did not become populated before capture: ${JSON.stringify(
+      lastState
+    )}`
+  );
 }
 
 async function stabilize(page, mode) {
@@ -936,6 +954,98 @@ async function screenshotAt(page, y, minimumScrollHeight, outPath) {
   return actualY;
 }
 
+async function pageCaptureState(page) {
+  return page.evaluate(() => {
+    const el = document.scrollingElement || document.documentElement;
+    const content =
+      document.querySelector('.Doc-content') ||
+      document.querySelector('.markdown-body') ||
+      document.querySelector('.markdown') ||
+      document.querySelector('[role="main"]') ||
+      document.querySelector('main') ||
+      document.querySelector('#root') ||
+      document.body;
+    const rect = content ? content.getBoundingClientRect() : null;
+    const text = content
+      ? content.innerText || content.textContent || ''
+      : document.body.innerText || '';
+    return {
+      url: window.location.href,
+      title: document.title,
+      readyState: document.readyState,
+      bodyClass: document.body.className,
+      bodyTheme: document.body.getAttribute('data-prismui-theme'),
+      textLength: text.replace(/\s+/g, ' ').trim().length,
+      scrollY: window.scrollY,
+      scrollHeight: el.scrollHeight,
+      viewportHeight: window.innerHeight,
+      contentRect: rect
+        ? {
+            x: Math.round(rect.x),
+            y: Math.round(rect.y),
+            width: Math.round(rect.width),
+            height: Math.round(rect.height)
+          }
+        : null,
+      rootHtmlSample: (document.querySelector('#root')?.innerHTML || '').slice(0, 500)
+    };
+  }).catch(error => ({error: String(error)}));
+}
+
+function screenshotStats(PNG, imagePath) {
+  const image = PNG.sync.read(fs.readFileSync(imagePath));
+  const colors = new Map();
+  const totalPixels = image.width * image.height;
+
+  for (let index = 0; index < image.data.length; index += 4) {
+    const color = `${image.data[index]},${image.data[index + 1]},${
+      image.data[index + 2]
+    },${image.data[index + 3]}`;
+    colors.set(color, (colors.get(color) || 0) + 1);
+  }
+
+  const [dominantColor = '', dominantPixels = 0] = Array.from(colors.entries()).sort(
+    (left, right) => right[1] - left[1]
+  )[0] || ['', 0];
+
+  return {
+    width: image.width,
+    height: image.height,
+    colorCount: colors.size,
+    dominantColor,
+    dominantRatio: totalPixels ? dominantPixels / totalPixels : 1
+  };
+}
+
+function isScreenshotEffectivelyBlank(stats) {
+  return stats.colorCount <= 4 && stats.dominantRatio >= 0.995;
+}
+
+async function screenshotAtVerified(PNG, page, y, minimumScrollHeight, outPath, label) {
+  let actualY = 0;
+  let lastStats = null;
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    actualY = await screenshotAt(page, y, minimumScrollHeight, outPath);
+    lastStats = screenshotStats(PNG, outPath);
+    if (!isScreenshotEffectivelyBlank(lastStats)) {
+      return actualY;
+    }
+
+    await waitForStableMainContent(page, 10000).catch(() => undefined);
+    await stabilize(page, 'load').catch(() => undefined);
+    await delay(500);
+  }
+
+  const state = await pageCaptureState(page);
+  throw new Error(
+    `Blank screenshot captured after retries for ${label}: ${JSON.stringify({
+      stats: lastStats,
+      state
+    })}`
+  );
+}
+
 async function comparePng(pixelmatch, PNG, baselinePath, candidatePath, diffPath, threshold) {
   const imgA = PNG.sync.read(fs.readFileSync(baselinePath));
   const imgB = PNG.sync.read(fs.readFileSync(candidatePath));
@@ -1084,17 +1194,21 @@ async function runPageAttempt(deps, browser, args, pageMeta) {
       const baselinePath = path.join(baselineDir, fileName);
       const candidatePath = path.join(candidateDir, fileName);
       const diffPath = path.join(diffDir, fileName);
-      const actualBaselineY = await screenshotAt(
+      const actualBaselineY = await screenshotAtVerified(
+        deps.PNG,
         baseline.page,
         y,
         baseMetrics.scrollHeight,
-        baselinePath
+        baselinePath,
+        `${pageMeta.path} baseline chunk ${index + 1}`
       );
-      const actualCandidateY = await screenshotAt(
+      const actualCandidateY = await screenshotAtVerified(
+        deps.PNG,
         candidate.page,
         y,
         candMetrics.scrollHeight,
-        candidatePath
+        candidatePath,
+        `${pageMeta.path} candidate chunk ${index + 1}`
       );
       let diff = await comparePng(
         deps.pixelmatch,
@@ -1110,17 +1224,21 @@ async function runPageAttempt(deps, browser, args, pageMeta) {
         const retryBaselinePath = path.join(baselineDir, fileName.replace('.png', '.retry.png'));
         const retryCandidatePath = path.join(candidateDir, fileName.replace('.png', '.retry.png'));
         const retryDiffPath = path.join(diffDir, fileName.replace('.png', '.retry.png'));
-        await screenshotAt(
+        await screenshotAtVerified(
+          deps.PNG,
           baseline.page,
           y,
           baseMetrics.scrollHeight,
-          retryBaselinePath
+          retryBaselinePath,
+          `${pageMeta.path} baseline retry chunk ${index + 1}`
         );
-        await screenshotAt(
+        await screenshotAtVerified(
+          deps.PNG,
           candidate.page,
           y,
           candMetrics.scrollHeight,
-          retryCandidatePath
+          retryCandidatePath,
+          `${pageMeta.path} candidate retry chunk ${index + 1}`
         );
         const retryDiff = await comparePng(
           deps.pixelmatch,
