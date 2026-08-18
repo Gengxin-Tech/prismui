@@ -109,8 +109,8 @@ title: 快速开始
 
 具体用法请查看左边的文档列表。
 
-## 旧前缀兼容边界
+## 主题文件与选择器边界
 
-`prismui.css`、`antd.css`、`dark.css` 等文件名用于选择主题包，不代表应该继续通过 `.prismui-*`、`.antd-*`、`.dark-*` 组件选择器来写新样式。迁移旧定制页面时，可以按发布说明评估显式 DOM-only `.prismui-*` alias；它默认关闭，只是迁移辅助，不是新的公共主题 API。
+`prismui.css`、`antd.css`、`dark.css` 等文件名用于选择主题包，不代表主题文件名会派生出不同的组件 DOM 前缀。新样式应统一写在 `[data-prismui-theme]`、`.prismui-*` 稳定组件类名和 `--prismui-*` 变量之上，不再提供旧主题前缀的 DOM 或样式兼容路径。
 
 IE11 只能使用静态 CSS 降级文件，不支持基于 CSS 变量的动态主题切换。

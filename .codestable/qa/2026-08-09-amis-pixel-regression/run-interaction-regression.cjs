@@ -83,7 +83,7 @@ const CASES = [
     title: 'Dialog open/close',
     steps: [
       {state: 'dialog-open', action: 'click', selectors: dialogButtonSelectors()},
-      {state: 'drag-header', action: 'drag', selectors: ['.amis-Modal-header', '.cxd-Modal-header', '[role="dialog"] .modal-header'], optional: true},
+      {state: 'drag-header', action: 'drag', selectors: ['.prismui-Modal-header', '[role="dialog"] .modal-header'], optional: true},
       {state: 'after-close', action: 'escape'}
     ]
   },
@@ -112,7 +112,7 @@ const CASES = [
     title: 'NestedSelect levels',
     steps: [
       {state: 'level1-open', action: 'click', selectors: nestedSelectSelectors()},
-      {state: 'level2-open', action: 'hover', selectors: ['.amis-NestedSelect-option', '.cxd-NestedSelect-option', '.amis-NestedSelect-optionArrowRight', '.cxd-NestedSelect-optionArrowRight'], optional: true}
+      {state: 'level2-open', action: 'hover', selectors: ['.prismui-NestedSelect-option', '.prismui-NestedSelect-optionArrowRight'], optional: true}
     ]
   },
   {
@@ -139,7 +139,7 @@ const CASES = [
     title: 'Picker popover/modal',
     steps: [
       {state: 'picker-open', action: 'click', selectors: pickerSelectors()},
-      {state: 'item-selected', action: 'click', selectors: ['.amis-Table tbody tr', '.cxd-Table tbody tr', '.amis-ListItem', '.cxd-ListItem'], optional: true}
+      {state: 'item-selected', action: 'click', selectors: ['.prismui-Table tbody tr', '.prismui-ListItem'], optional: true}
     ]
   },
   {
@@ -147,15 +147,15 @@ const CASES = [
     route: '/zh-CN/components/form/input-tag',
     title: 'InputTag suggestions',
     steps: [
-      {state: 'suggestions-open', action: 'click', selectors: ['.amis-TagControl input', '.cxd-TagControl input', '.amis-ResultBox', '.cxd-ResultBox']},
-      {state: 'overflow-open', action: 'hover', selectors: ['.amis-Tags-more', '.cxd-Tags-more', '.amis-Tag', '.cxd-Tag'], optional: true}
+      {state: 'suggestions-open', action: 'click', selectors: ['.prismui-TagControl input', '.prismui-ResultBox']},
+      {state: 'overflow-open', action: 'hover', selectors: ['.prismui-Tags-more', '.prismui-Tag'], optional: true}
     ]
   },
   {
     id: 'INT-017',
     route: '/zh-CN/components/form/input-color',
     title: 'InputColor panel',
-    steps: [{state: 'color-panel-open', action: 'click', selectors: ['.amis-ColorPicker', '.cxd-ColorPicker', '.amis-ColorControl', '.cxd-ColorControl', '.amis-ColorField', '.cxd-ColorField']}]
+    steps: [{state: 'color-panel-open', action: 'click', selectors: ['.prismui-ColorPicker', '.prismui-ColorControl', '.prismui-ColorField']}]
   },
   {
     id: 'INT-018',
@@ -163,7 +163,7 @@ const CASES = [
     title: 'InputDate calendar',
     steps: [
       {state: 'calendar-open', action: 'click', selectors: dateSelectors()},
-      {state: 'month-panel', action: 'click', selectors: ['.rdtSwitch', '.amis-DatePicker-toggler', '.cxd-DatePicker-toggler'], optional: true}
+      {state: 'month-panel', action: 'click', selectors: ['.rdtSwitch', '.prismui-DatePicker-toggler'], optional: true}
     ]
   },
   {
@@ -172,7 +172,7 @@ const CASES = [
     title: 'InputDateRange calendar',
     steps: [
       {state: 'range-open', action: 'click', selectors: dateSelectors()},
-      {state: 'selecting-end', action: 'hover', selectors: ['.rdtDay:not(.rdtDisabled)', '.amis-Calendar-date', '.cxd-Calendar-date'], optional: true}
+      {state: 'selecting-end', action: 'hover', selectors: ['.rdtDay:not(.rdtDisabled)', '.prismui-Calendar-date'], optional: true}
     ]
   },
   {
@@ -199,8 +199,8 @@ const CASES = [
     route: '/zh-CN/components/tabs',
     title: 'Tabs tooltip/overflow',
     steps: [
-      {state: 'hover-tip', action: 'hover', selectors: ['.amis-Tabs-link', '.cxd-Tabs-link', '.amis-Tabs-tab', '.cxd-Tabs-tab']},
-      {state: 'overflow-open', action: 'click', selectors: ['.amis-Tabs-togglor', '.cxd-Tabs-togglor'], optional: true}
+      {state: 'hover-tip', action: 'hover', selectors: ['.prismui-Tabs-link', '.prismui-Tabs-tab']},
+      {state: 'overflow-open', action: 'click', selectors: ['.prismui-Tabs-togglor'], optional: true}
     ]
   },
   {
@@ -208,8 +208,8 @@ const CASES = [
     route: '/zh-CN/components/carousel',
     title: 'Carousel controls',
     steps: [
-      {state: 'hover-controls', action: 'hover', selectors: ['.amis-Carousel', '.cxd-Carousel', '.slick-slider']},
-      {state: 'next-slide', action: 'click', selectors: ['.slick-next', '.amis-Carousel-next', '.cxd-Carousel-next', '.amis-Carousel-arrow--right', '.cxd-Carousel-arrow--right'], optional: true}
+      {state: 'hover-controls', action: 'hover', selectors: ['.prismui-Carousel', '.slick-slider']},
+      {state: 'next-slide', action: 'click', selectors: ['.slick-next', '.prismui-Carousel-next', '.prismui-Carousel-arrow--right'], optional: true}
     ]
   },
   {
@@ -217,8 +217,8 @@ const CASES = [
     route: '/zh-CN/components/images',
     title: 'Images hover/gallery',
     steps: [
-      {state: 'hover-actions', action: 'hover', selectors: ['.amis-Images-item', '.cxd-Images-item', '.amis-Image-thumb', '.cxd-Image-thumb', 'img']},
-      {state: 'gallery-open', action: 'click', selectors: ['.amis-Images-item img', '.cxd-Images-item img', '.amis-Image-thumb img', '.cxd-Image-thumb img', 'img'], optional: true}
+      {state: 'hover-actions', action: 'hover', selectors: ['.prismui-Images-item', '.prismui-Image-thumb', 'img']},
+      {state: 'gallery-open', action: 'click', selectors: ['.prismui-Images-item img', '.prismui-Image-thumb img', 'img'], optional: true}
     ]
   },
   {
@@ -249,7 +249,7 @@ const CASES = [
     title: 'JSON expand/collapse',
     steps: [
       {state: 'expanded', action: 'click', selectors: jsonViewSelectors()},
-      {state: 'edit-affordance', action: 'hover', selectors: ['[class*="w-rjv"]', '.react-json-view', '.amis-JsonField', '.cxd-JsonField'], optional: true}
+      {state: 'edit-affordance', action: 'hover', selectors: ['[class*="w-rjv"]', '.react-json-view', '.prismui-JsonField'], optional: true}
     ]
   },
   {
@@ -267,8 +267,8 @@ const CASES = [
     route: '/zh-CN/components/form/input-number',
     title: 'InputNumber focus/change',
     steps: [
-      {state: 'focused', action: 'focus', selectors: ['.amis-NumberInput input', '.cxd-NumberInput input', 'input[type="number"]', 'input[type="text"]']},
-      {state: 'changed', action: 'fill', selectors: ['.amis-NumberInput input', '.cxd-NumberInput input', 'input[type="number"]', 'input[type="text"]'], value: '42'},
+      {state: 'focused', action: 'focus', selectors: ['.prismui-NumberInput input', 'input[type="number"]', 'input[type="text"]']},
+      {state: 'changed', action: 'fill', selectors: ['.prismui-NumberInput input', 'input[type="number"]', 'input[type="text"]'], value: '42'},
       {state: 'blurred', action: 'blur'}
     ]
   },
@@ -367,115 +367,115 @@ const CASES = [
 ];
 
 function dropdownSelectors() {
-  return ['.amis-DropDown-button', '.cxd-DropDown-button', '.amis-DropDown .amis-Button', '.cxd-DropDown .cxd-Button', '.amis-Button:has-text("下拉")', '.cxd-Button:has-text("下拉")', 'button:has-text("下拉")'];
+  return ['.prismui-DropDown-button', '.prismui-DropDown .prismui-Button', '.prismui-Button:has-text("下拉")', 'button:has-text("下拉")'];
 }
 
 function menuItemSelectors() {
-  return ['[role="menuitem"]', '.amis-DropDown-menu > li', '.cxd-DropDown-menu > li', '.amis-Menu-item', '.cxd-Menu-item', '.rc-menu-item'];
+  return ['[role="menuitem"]', '.prismui-DropDown-menu > li', '.prismui-Menu-item', '.rc-menu-item'];
 }
 
 function navSubmenuSelectors() {
-  return ['.amis-Menu-submenu-title', '.cxd-Menu-submenu-title', '.rc-menu-submenu-title', '.amis-Nav-item:has(ul)', '.cxd-Nav-item:has(ul)', '.amis-Nav a', '.cxd-Nav a'];
+  return ['.prismui-Menu-submenu-title', '.rc-menu-submenu-title', '.prismui-Nav-item:has(ul)', '.prismui-Nav a'];
 }
 
 function breadcrumbSelectors() {
-  return ['.amis-Breadcrumb li button', '.cxd-Breadcrumb li button', '.amis-Breadcrumb li a', '.cxd-Breadcrumb li a', '.amis-Breadcrumb', '.cxd-Breadcrumb'];
+  return ['.prismui-Breadcrumb li button', '.prismui-Breadcrumb li a', '.prismui-Breadcrumb'];
 }
 
 function tooltipSelectors() {
-  return ['[data-tooltip]', '[title]', '.amis-TooltipWrapper', '.cxd-TooltipWrapper', '.amis-Button:has-text("提示")', '.cxd-Button:has-text("提示")', 'button'];
+  return ['[data-tooltip]', '[title]', '.prismui-TooltipWrapper', '.prismui-Button:has-text("提示")', 'button'];
 }
 
 function popoverSelectors() {
-  return ['[data-popover]', '.amis-PopOverAble', '.cxd-PopOverAble', '.amis-Button:has-text("弹出")', '.cxd-Button:has-text("弹出")', 'button'];
+  return ['[data-popover]', '.prismui-PopOverAble', '.prismui-Button:has-text("弹出")', 'button'];
 }
 
 function remarkSelectors() {
-  return ['.amis-Remark', '.cxd-Remark', '.fa-question-circle', '.icon-question', '[class*="Remark"]'];
+  return ['.prismui-Remark', '.fa-question-circle', '.icon-question', '[class*="Remark"]'];
 }
 
 function dialogButtonSelectors() {
-  return ['.amis-Button:has-text("打开")', '.cxd-Button:has-text("打开")', '.amis-Button:has-text("弹框")', '.cxd-Button:has-text("弹框")', 'button:has-text("打开")', 'button:has-text("Dialog")', 'button'];
+  return ['.prismui-Button:has-text("打开")', '.prismui-Button:has-text("弹框")', 'button:has-text("打开")', 'button:has-text("Dialog")', 'button'];
 }
 
 function drawerButtonSelectors() {
-  return ['.amis-Button:has-text("打开")', '.cxd-Button:has-text("打开")', '.amis-Button:has-text("抽屉")', '.cxd-Button:has-text("抽屉")', 'button:has-text("打开")', 'button:has-text("Drawer")', 'button'];
+  return ['.prismui-Button:has-text("打开")', '.prismui-Button:has-text("抽屉")', 'button:has-text("打开")', 'button:has-text("Drawer")', 'button'];
 }
 
 function selectSelectors() {
-  return ['.amis-Select', '.cxd-Select', '.amis-ResultBox', '.cxd-ResultBox', '.amis-TransferDropDown', '.cxd-TransferDropDown', '[role="combobox"]'];
+  return ['.prismui-Select', '.prismui-ResultBox', '.prismui-TransferDropDown', '[role="combobox"]'];
 }
 
 function nestedSelectSelectors() {
-  return ['.amis-NestedSelect', '.cxd-NestedSelect', '.amis-ResultBox', '.cxd-ResultBox'];
+  return ['.prismui-NestedSelect', '.prismui-ResultBox'];
 }
 
 function treeSelectSelectors() {
-  return ['.amis-TreeSelect', '.cxd-TreeSelect', '.amis-ResultBox', '.cxd-ResultBox'];
+  return ['.prismui-TreeSelect', '.prismui-ResultBox'];
 }
 
 function treeExpandSelectors() {
-  return ['.amis-Tree-itemArrow', '.cxd-Tree-itemArrow', '.amis-Tree-itemLabel', '.cxd-Tree-itemLabel'];
+  return ['.prismui-Tree-itemArrow', '.prismui-Tree-itemLabel'];
 }
 
 function optionSelectors() {
-  return ['[role="option"]', '.amis-Select-option', '.cxd-Select-option', '.amis-Transfer-option', '.cxd-Transfer-option', '.amis-NestedSelect-option', '.cxd-NestedSelect-option'];
+  return ['[role="option"]', '.prismui-Select-option', '.prismui-Transfer-option', '.prismui-NestedSelect-option'];
 }
 
 function pickerSelectors() {
-  return ['.amis-PickerControl .amis-ResultBox', '.cxd-PickerControl .cxd-ResultBox', '.amis-Picker', '.cxd-Picker', '.amis-ResultBox', '.cxd-ResultBox'];
+  return ['.prismui-PickerControl .prismui-ResultBox', '.prismui-Picker', '.prismui-ResultBox'];
 }
 
 function tableFilterSelectors() {
-  return ['.amis-TableCell-filterBtn', '.cxd-TableCell-filterBtn', '.amis-TableCell--filterable .table-filter-icon', '.cxd-TableCell--filterable .table-filter-icon', '[class*="TableCell-filterBtn"]'];
+  return ['.prismui-TableCell-filterBtn', '.prismui-TableCell--filterable .table-filter-icon', '[class*="TableCell-filterBtn"]'];
 }
 
 function columnTogglerSelectors() {
-  return ['.amis-ColumnToggler button', '.cxd-ColumnToggler button', '.amis-ColumnToggler .amis-Button', '.cxd-ColumnToggler .cxd-Button', '[class*="ColumnToggler"] button'];
+  return ['.prismui-ColumnToggler button', '.prismui-ColumnToggler .prismui-Button', '[class*="ColumnToggler"] button'];
 }
 
 function quickEditSelectors() {
-  return ['.amis-Field-quickEditBtn', '.cxd-Field-quickEditBtn', '.amis-Field--quickEditable .amis-Button', '.cxd-Field--quickEditable .cxd-Button'];
+  return ['.prismui-Field-quickEditBtn', '.prismui-Field--quickEditable .prismui-Button'];
 }
 
 function collapseHeaderSelectors() {
-  return ['.amis-Collapse:not(.is-active):not(.is-disabled) .amis-Collapse-header', '.cxd-Collapse:not(.is-active):not(.is-disabled) .cxd-Collapse-header', '[class*="Collapse"]:not(.is-active):not(.is-disabled) [class*="Collapse-header"]'];
+  return ['.prismui-Collapse:not(.is-active):not(.is-disabled) .prismui-Collapse-header', '[class*="Collapse"]:not(.is-active):not(.is-disabled) [class*="Collapse-header"]'];
 }
 
 function collapseActiveHeaderSelectors() {
-  return ['.amis-Collapse.is-active .amis-Collapse-header', '.cxd-Collapse.is-active .cxd-Collapse-header', '[class*="Collapse"].is-active [class*="Collapse-header"]'];
+  return ['.prismui-Collapse.is-active .prismui-Collapse-header', '[class*="Collapse"].is-active [class*="Collapse-header"]'];
 }
 
 function collapseExpandedSelectors() {
-  return ['.amis-Collapse.is-active .amis-Collapse-contentWrapper', '.cxd-Collapse.is-active .cxd-Collapse-contentWrapper', '[class*="Collapse"].is-active [class*="Collapse-contentWrapper"]'];
+  return ['.prismui-Collapse.is-active .prismui-Collapse-contentWrapper', '[class*="Collapse"].is-active [class*="Collapse-contentWrapper"]'];
 }
 
 function collapseCollapsedSelectors() {
-  return ['.amis-Collapse:not(.is-active) .amis-Collapse-header', '.cxd-Collapse:not(.is-active) .cxd-Collapse-header', '[class*="Collapse"]:not(.is-active) [class*="Collapse-header"]'];
+  return ['.prismui-Collapse:not(.is-active) .prismui-Collapse-header', '[class*="Collapse"]:not(.is-active) [class*="Collapse-header"]'];
 }
 
 function toastButtonSelectors() {
-  return ['.amis-Button:has-text("提示")', '.cxd-Button:has-text("提示")', 'button:has-text("提示")'];
+  return ['.prismui-Button:has-text("提示")', 'button:has-text("提示")'];
 }
 
 function toastVisibleSelectors() {
-  return ['.amis-Toast.in', '.cxd-Toast.in', '.amis-Toast-wrap', '.cxd-Toast-wrap', '[class*="Toast"]:has-text("轻提示")'];
+  return ['.prismui-Toast.in', '.prismui-Toast-wrap', '[class*="Toast"]:has-text("轻提示")'];
 }
 
 function spinnerOverlaySelectors() {
-  return ['.amis-Spinner-overlay', '.cxd-Spinner-overlay', '.amis-Spinner-wrap .amis-Spinner', '.cxd-Spinner-wrap .cxd-Spinner', '[class*="Spinner-overlay"]'];
+  return ['.prismui-Spinner-overlay', '.prismui-Spinner-wrap .prismui-Spinner', '[class*="Spinner-overlay"]'];
 }
 
 function formulaActionSelectors() {
-  return ['.amis-FormulaPicker-action', '.cxd-FormulaPicker-action', '[class*="FormulaPicker-action"]'];
+  return ['.prismui-FormulaPicker-action', '[class*="FormulaPicker-action"]'];
 }
 
 function formulaEditorSelectors() {
-  return ['.amis-FormulaEditor', '.cxd-FormulaEditor', '[class*="FormulaEditor"]'];
+  return ['.prismui-FormulaEditor', '[class*="FormulaEditor"]'];
 }
 
 function popupVisibleSelectors() {
-  return ['.amis-PopUp.in', '.cxd-PopUp.in', '.amis-Select-popup', '.cxd-Select-popup', '[class*="PopUp"][class*="in"]'];
+  return ['.prismui-PopUp.in', '.prismui-Select-popup', '[class*="PopUp"][class*="in"]'];
 }
 
 function richTextMenuVisibleSelectors() {
@@ -483,15 +483,15 @@ function richTextMenuVisibleSelectors() {
 }
 
 function contextMenuVisibleSelectors() {
-  return ['.amis-ContextMenu-menu.in', '.cxd-ContextMenu-menu.in', '[class*="ContextMenu-menu"][class*="in"]'];
+  return ['.prismui-ContextMenu-menu.in', '[class*="ContextMenu-menu"][class*="in"]'];
 }
 
 function contextMenuNestedItemSelectors() {
-  return ['.amis-ContextMenu-item.has-child > a', '.cxd-ContextMenu-item.has-child > a', '[class*="ContextMenu-item"][class*="has-child"] > a'];
+  return ['.prismui-ContextMenu-item.has-child > a', '[class*="ContextMenu-item"][class*="has-child"] > a'];
 }
 
 function contextMenuSubmenuSelectors() {
-  return ['.amis-ContextMenu-subList', '.cxd-ContextMenu-subList', '[class*="ContextMenu-subList"]'];
+  return ['.prismui-ContextMenu-subList', '[class*="ContextMenu-subList"]'];
 }
 
 function froalaLinkButtonSelectors() {
@@ -511,7 +511,7 @@ function froalaTablePopupSelectors() {
 }
 
 function jsonViewSelectors() {
-  return ['[class*="w-rjv"] svg', '[class*="w-rjv"] [role="button"]', '[class*="w-rjv"]', '.react-json-view .icon-container', '.react-json-view .collapsed-icon', '.react-json-view .expanded-icon', '.react-json-view .object-key-val', '.amis-JsonField svg', '.cxd-JsonField svg', '.amis-JsonField', '.cxd-JsonField'];
+  return ['[class*="w-rjv"] svg', '[class*="w-rjv"] [role="button"]', '[class*="w-rjv"]', '.react-json-view .icon-container', '.react-json-view .collapsed-icon', '.react-json-view .expanded-icon', '.react-json-view .object-key-val', '.prismui-JsonField svg', '.prismui-JsonField'];
 }
 
 function richTextMenuSelectors() {
@@ -523,15 +523,15 @@ function richTextDialogMenuItemSelectors() {
 }
 
 function dateSelectors() {
-  return ['.amis-DatePicker input', '.cxd-DatePicker input', '.amis-DateRangePicker input', '.cxd-DateRangePicker input', '.amis-DatePicker', '.cxd-DatePicker', '.amis-DateRangePicker', '.cxd-DateRangePicker'];
+  return ['.prismui-DatePicker input', '.prismui-DateRangePicker input', '.prismui-DatePicker', '.prismui-DateRangePicker'];
 }
 
 function chartSelectors() {
-  return ['.amis-Chart canvas', '.cxd-Chart canvas', '.amis-Chart', '.cxd-Chart', 'canvas'];
+  return ['.prismui-Chart canvas', '.prismui-Chart', 'canvas'];
 }
 
 function videoSelectors() {
-  return ['.amis-Video video', '.cxd-Video video', '.amis-Video', '.cxd-Video', '[class*="Video"] video', '[class*="Video"]'];
+  return ['.prismui-Video video', '.prismui-Video', '[class*="Video"] video', '[class*="Video"]'];
 }
 
 function parseArgs(argv) {
@@ -540,7 +540,7 @@ function parseArgs(argv) {
     candidate: 'http://127.0.0.1:8888',
     outDir: '',
     viewport: '1440x900',
-    theme: 'cxd',
+    theme: 'prismui',
     caseId: '',
     limit: 0,
     threshold: 0.1,
@@ -612,7 +612,7 @@ async function installDeterminism(context, theme, viewMode = 'pc') {
     };
     try {
       localStorage.clear();
-      localStorage.setItem('amis-theme', theme);
+      localStorage.setItem('prismui-theme', theme);
       localStorage.setItem('amis-viewMode', viewMode);
       localStorage.setItem('amis-locale', 'zh-CN');
     } catch (e) {}
@@ -643,7 +643,7 @@ async function preparePage(page) {
       }
       iframe[src^="http://"], iframe[src^="https://"] { opacity: 0 !important; }
       video { background: #111 !important; }
-      .amis-Form--debug, .cxd-Form--debug { display: none !important; }
+      .prismui-Form--debug { display: none !important; }
     `
   }).catch(() => undefined);
 }
@@ -653,7 +653,7 @@ async function settle(page, extra = 500) {
   await page.evaluate(() => document.fonts && document.fonts.ready).catch(() => undefined);
   await page.waitForFunction(() => document.readyState === 'complete', {timeout: 10000}).catch(() => undefined);
   await page.waitForFunction(() => {
-    const selectors = ['.visibility-sensor > .amis-Spinner', '.visibility-sensor > .cxd-Spinner', '.amis-LazyComponent > .amis-Spinner', '.cxd-LazyComponent > .cxd-Spinner'];
+    const selectors = ['.visibility-sensor > .prismui-Spinner', '.prismui-LazyComponent > .prismui-Spinner'];
     return selectors.every(selector => Array.from(document.querySelectorAll(selector)).every(node => {
       const style = getComputedStyle(node);
       const rect = node.getBoundingClientRect();
@@ -827,7 +827,7 @@ async function performStep(page, step) {
 
 async function assertVideoInterface(page) {
   const result = await page.evaluate(async () => {
-    const video = document.querySelector('.amis-Video video,.cxd-Video video,video');
+    const video = document.querySelector('.prismui-Video video,video');
     if (!video) return {exists: false};
 
     const src = video.currentSrc || video.getAttribute('src') || '';

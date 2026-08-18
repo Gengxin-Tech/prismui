@@ -66,14 +66,14 @@ const scans = [
   {
     id: 'theme-prefix-selector',
     description:
-      'Old .amis-* / .cxd-* selectors or theme-specific .antd-* / .dark-* selector usage in source styles and editor helpers.',
+      'Old .amis-* selectors or theme-specific .antd-* / .dark-* selector usage in source styles and editor helpers.',
     paths: [
       'packages/amis-ui/scss',
       'packages/amis-theme-editor-helper/src',
       'packages/amis-editor-core/scss'
     ],
     extensions: ['.scss', '.ts', '.tsx'],
-    regex: '\\.(?:amis|cxd|antd|dark)-[A-Za-z0-9_-]+',
+    regex: '\\.(?:amis|antd|dark)-[A-Za-z0-9_-]+',
     defaultCategory: 'migration-target'
   },
   {
@@ -222,7 +222,7 @@ function hasCxClassName(line) {
 }
 
 function hasHardcodedLegacySelector(line) {
-  return /['"`][^'"`]*\.(?:amis|cxd|antd|dark)-[A-Za-z0-9_-]+/.test(line);
+  return /['"`][^'"`]*\.(?:amis|antd|dark)-[A-Za-z0-9_-]+/.test(line);
 }
 
 function hasClassListContainsCx(line) {

@@ -20,10 +20,11 @@ function parseArgs(argv) {
     outDir: '',
     viewport: '1440x900',
     theme: '',
-    baselineTheme: 'cxd',
+    baselineTheme: 'prismui',
     candidateTheme: 'prismui',
     tab: '',
     path: '',
+    paths: [],
     limit: 0,
     workers: 1,
     maxChunks: 0,
@@ -52,7 +53,7 @@ function parseArgs(argv) {
     else if (key === 'baseline-theme') args.baselineTheme = next, i++;
     else if (key === 'candidate-theme') args.candidateTheme = next, i++;
     else if (key === 'tab') args.tab = next, i++;
-    else if (key === 'path') args.path = next, i++;
+    else if (key === 'path') args.path = next, args.paths.push(next), i++;
     else if (key === 'limit') args.limit = Number(next), i++;
     else if (key === 'workers') args.workers = Number(next), i++;
     else if (key === 'max-chunks') args.maxChunks = Number(next), i++;
@@ -91,7 +92,7 @@ Options:
   --limit N          Run only the first N filtered pages.
   --workers N        Run N pages in parallel. Each page still scrolls sequentially.
   --tab NAME         Filter by docs/components/style/examples.
-  --path PATH        Run one route path from page-manifest.json.
+  --path PATH        Run one route path from page-manifest.json. Can be repeated.
   --max-chunks N     Cap scroll chunks per page, useful for smoke runs.
   --no-retry         Do not recapture chunks that exceed warn threshold.
   --out DIR          Output directory, default .gstack/visual-regression/<timestamp>.
@@ -149,6 +150,18 @@ async function twoRaf(page) {
   );
 }
 
+async function waitForFonts(page, timeoutMs = 4000) {
+  await Promise.race([
+    page
+      .evaluate(() => {
+        if (!document.fonts || !document.fonts.ready) return true;
+        return document.fonts.ready.then(() => true);
+      })
+      .catch(() => true),
+    delay(timeoutMs)
+  ]);
+}
+
 async function waitForVisibleImages(page, timeoutMs) {
   const started = Date.now();
   while (Date.now() - started < timeoutMs) {
@@ -175,11 +188,7 @@ async function waitForNoSpinner(page, timeout = 15000) {
     await page.waitForFunction(
       () => {
         const selectors = [
-          '.visibility-sensor > .amis-Spinner',
-          '.visibility-sensor > .cxd-Spinner',
           '.visibility-sensor > .prismui-Spinner',
-          '.amis-LazyComponent > .amis-Spinner',
-          '.cxd-LazyComponent > .cxd-Spinner',
           '.prismui-LazyComponent > .prismui-Spinner'
         ];
         return selectors.every(selector =>
@@ -297,7 +306,7 @@ async function waitForStableMainContent(page, timeout = 15000) {
 }
 
 async function stabilize(page, mode) {
-  await page.evaluate(() => document.fonts && document.fonts.ready).catch(() => undefined);
+  await waitForFonts(page);
   await waitForNoSpinner(page);
   await waitForVisibleImages(page, 4000);
   if (mode !== 'scroll') {
@@ -315,6 +324,64 @@ async function stabilize(page, mode) {
     throw new Error('Visible loading placeholder did not settle before capture.');
   }
   await waitForStableLayout(page, mode === 'scroll' ? 2 : 3, 250);
+  await twoRaf(page).catch(() => undefined);
+}
+
+function sampleScrollPositions(positions, maxPositions) {
+  if (!maxPositions || positions.length <= maxPositions) return positions;
+  if (maxPositions <= 1) return [positions[0]];
+
+  const indexes = new Set();
+  for (let index = 0; index < maxPositions; index++) {
+    indexes.add(Math.round((index * (positions.length - 1)) / (maxPositions - 1)));
+  }
+
+  return Array.from(indexes)
+    .sort((a, b) => a - b)
+    .map(index => positions[index]);
+}
+
+async function warmLazyComponents(page, maxPositions = 36) {
+  const hasLazyComponents = await page.evaluate(
+    () => !!document.querySelector('.visibility-sensor')
+  ).catch(() => false);
+  if (!hasLazyComponents) return;
+
+  for (let pass = 0; pass < 2; pass++) {
+    const state = await page.evaluate(() => {
+      const el = document.scrollingElement || document.documentElement;
+      return {
+        scrollHeight: el.scrollHeight,
+        viewportHeight: window.innerHeight
+      };
+    }).catch(() => null);
+    if (!state) return;
+
+    const ys = sampleScrollPositions(
+      yPositions(state.scrollHeight, state.viewportHeight, 240, 0),
+      maxPositions
+    );
+
+    for (const y of ys) {
+      await page.evaluate(y => window.scrollTo(0, y), y).catch(() => undefined);
+      await twoRaf(page).catch(() => undefined);
+      await delay(80);
+    }
+
+    await waitForFonts(page).catch(() => undefined);
+    await waitForVisibleImages(page, 1000).catch(() => undefined);
+    await waitForStableLayout(page, 2, 250).catch(() => undefined);
+
+    const pending = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('.visibility-sensor')).filter(
+        node => /(?:加载中，请稍后|Loading\.\.\.)/.test(node.textContent || '')
+      ).length;
+    }).catch(() => 0);
+    if (!pending) break;
+  }
+
+  await page.evaluate(() => window.scrollTo(0, 0)).catch(() => undefined);
+  await waitForStableLayout(page, 2, 250).catch(() => undefined);
   await twoRaf(page).catch(() => undefined);
 }
 
@@ -347,7 +414,10 @@ async function installDeterminism(context, args) {
           : candidateTheme;
     try {
       localStorage.clear();
-      localStorage.setItem('amis-theme', theme);
+      localStorage.setItem('prismui-theme', theme);
+      if (window.location.origin === baselineOrigin) {
+        localStorage.setItem('amis-theme', theme);
+      }
       localStorage.setItem('amis-viewMode', 'pc');
       localStorage.setItem('amis-locale', 'zh-CN');
     } catch (e) {}
@@ -356,6 +426,111 @@ async function installDeterminism(context, args) {
     candidateOrigin: new URL(args.candidate).origin,
     baselineTheme: args.baselineTheme,
     candidateTheme: args.candidateTheme
+  });
+}
+
+function stableHash(input) {
+  return crypto.createHash('sha256').update(String(input)).digest().readUInt32BE(0);
+}
+
+function stableInt(input, min = 1, max = 100) {
+  return min + (stableHash(input) % (max - min + 1));
+}
+
+function normalizeVisualMockPayload(value, requestUrl, trail = []) {
+  if (Array.isArray(value)) {
+    return value.map((item, index) =>
+      normalizeVisualMockPayload(item, requestUrl, trail.concat(index))
+    );
+  }
+
+  if (!value || typeof value !== 'object') {
+    return normalizeVisualMockScalar(value, requestUrl, trail);
+  }
+
+  return Object.fromEntries(
+    Object.entries(value).map(([key, item]) => [
+      key,
+      normalizeVisualMockPayload(item, requestUrl, trail.concat(key))
+    ])
+  );
+}
+
+function normalizeVisualMockScalar(value, requestUrl, trail) {
+  const key = String(trail[trail.length - 1] || '');
+  const marker = `${requestUrl}#${trail.join('.')}`;
+
+  if (typeof value === 'string') {
+    if (key === 'engine') {
+      return value.replace(/\s+-\s+[a-z0-9]{3,}$/i, '');
+    }
+
+    return value.replace(/\/random\/\d+/g, '/random/1');
+  }
+
+  if (typeof value === 'number') {
+    if (/^(?:date|createdAt|time|timestamp)$/i.test(key)) {
+      return value > 100000000000 ? 1786233600000 : 1786233600;
+    }
+
+    if (/\/(?:chart|dashboard)\//.test(requestUrl)) {
+      return stableInt(marker, 1, Math.max(100, Math.ceil(Math.abs(value)) || 100));
+    }
+
+    if (key === 'progress') return stableInt(marker, 10, 90);
+    if (key === 'type') return stableInt(marker, 1, 5);
+    if (key === 'random') return 6;
+  }
+
+  if (typeof value === 'boolean' && /(?:form\/async|options\/nav|table[26])/.test(requestUrl)) {
+    return stableHash(marker) % 2 === 0;
+  }
+
+  return value;
+}
+
+function shouldNormalizeVisualMock(url) {
+  return /\/api\/(?:mock2\/)?(?:sample(?:[/?]|$)|service\/data(?:[/?]|$)|crud\/(?:list|table2|table3|table6)(?:[/?]|$)|chart\/|dashboard\/|number\/random(?:[/?]|$)|task(?:[/?]|$)|form\/(?:initData|async)(?:[/?]|$)|detail\/basic(?:[/?]|$)|upload\/random(?:[/?]|$)|options\/(?:nav|autoComplete3)(?:[/?]|$))/.test(
+    url
+  );
+}
+
+async function installDeterministicMockResponses(context) {
+  await context.route(/\/api\//, async route => {
+    const requestUrl = route.request().url();
+    if (!shouldNormalizeVisualMock(requestUrl)) {
+      await route.continue();
+      return;
+    }
+
+    let response;
+    try {
+      response = await route.fetch();
+    } catch (error) {
+      await route.continue();
+      return;
+    }
+
+    const headers = {...response.headers()};
+    const contentType = headers['content-type'] || headers['Content-Type'] || '';
+    if (!/json/i.test(contentType)) {
+      await route.fulfill({response});
+      return;
+    }
+
+    try {
+      const body = await response.text();
+      const normalized = normalizeVisualMockPayload(JSON.parse(body), requestUrl);
+      delete headers['content-length'];
+      delete headers['Content-Length'];
+      await route.fulfill({
+        response,
+        headers,
+        body: JSON.stringify(normalized)
+      });
+    } catch (error) {
+      await route.fulfill({response});
+    }
   });
 }
 
@@ -383,21 +558,17 @@ async function installVisualMasks(page) {
   await page
     .addStyleTag({
       content: `
-        .amis-Log-body,
-        .cxd-Log-body,
         .prismui-Log-body {
           color: transparent !important;
         }
 
-        .amis-Log-body *,
-        .cxd-Log-body *,
         .prismui-Log-body * {
           color: transparent !important;
           text-shadow: none !important;
         }
 
         .markdown img[src*=".gif"],
-        .amis-doc img[src*=".gif"] {
+        .prismui-doc img[src*=".gif"] {
           visibility: hidden !important;
         }
 
@@ -596,11 +767,7 @@ async function visibleRuntimeErrors(page) {
   return page.evaluate(() => {
     const errorPattern = /\b(?:TypeError|ReferenceError|SyntaxError|RangeError|EvalError|URIError):/;
     const candidateSelectors = [
-      '.amis-Alert--danger',
-      '.cxd-Alert--danger',
       '.prismui-Alert--danger',
-      '.amis-Alert--error',
-      '.cxd-Alert--error',
       '.prismui-Alert--error',
       '.renderer-error-boundary',
       '[role="alert"]'
@@ -706,7 +873,7 @@ async function metrics(page) {
       viewportWidth: window.innerWidth,
       title: document.title,
       notFound:
-        !!document.querySelector('.amis-404, .cxd-404, .prismui-404') ||
+        !!document.querySelector('.prismui-404') ||
         /not\s*found|404/i.test(document.body.innerText.slice(0, 500))
     };
   });
@@ -842,6 +1009,7 @@ async function runPageAttempt(deps, browser, args, pageMeta) {
     locale: 'zh-CN'
   });
   await installDeterminism(context, args);
+  await installDeterministicMockResponses(context);
 
   let baseline;
   let candidate;
@@ -862,6 +1030,12 @@ async function runPageAttempt(deps, browser, args, pageMeta) {
       consoleEvents,
       args.timeout
     );
+
+    const lazyWarmPositions = args.maxChunks
+      ? Math.max(6, Math.min(24, args.maxChunks * 6))
+      : 36;
+    await warmLazyComponents(baseline.page, lazyWarmPositions);
+    await warmLazyComponents(candidate.page, lazyWarmPositions);
 
     const baseMetrics = await metrics(baseline.page);
     const candMetrics = await metrics(candidate.page);
@@ -1128,9 +1302,13 @@ async function main() {
     path: normalizeRoutePath(page.path)
   }));
   if (args.tab) pages = pages.filter(page => page.tab === args.tab);
-  if (args.path) {
-    const requestedPath = normalizeRoutePath(args.path);
-    pages = pages.filter(page => page.path === requestedPath);
+  const requestedPaths = args.paths.length
+    ? new Set(args.paths.map(normalizeRoutePath))
+    : args.path
+      ? new Set([normalizeRoutePath(args.path)])
+      : null;
+  if (requestedPaths) {
+    pages = pages.filter(page => requestedPaths.has(page.path));
   }
   if (args.limit) pages = pages.slice(0, args.limit);
   if (!pages.length) throw new Error('No pages matched the filters.');

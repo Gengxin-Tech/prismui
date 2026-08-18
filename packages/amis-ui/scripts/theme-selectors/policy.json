@@ -49,7 +49,7 @@
   "scans": [
     {
       "id": "theme-prefix-selector",
-      "description": "Old .amis-* / .cxd-* selectors or theme-specific .antd-* / .dark-* selector usage in source styles and editor helpers.",
+      "description": "Old .amis-* selectors or theme-specific .antd-* / .dark-* selector usage in source styles and editor helpers.",
       "paths": [
         "packages/amis-ui/scss",
         "packages/amis-theme-editor-helper/src",
@@ -60,7 +60,7 @@
         ".ts",
         ".tsx"
       ],
-      "regex": "\\.(?:amis|cxd|antd|dark)-[A-Za-z0-9_-]+",
+      "regex": "\\.(?:amis|antd|dark)-[A-Za-z0-9_-]+",
       "default_category": "migration-target"
     },
     {
