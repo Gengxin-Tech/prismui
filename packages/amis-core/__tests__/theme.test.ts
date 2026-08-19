@@ -15,7 +15,8 @@ import {
 afterEach(() => {
   theme('cxd', {
     classPrefix: 'prismui-',
-    componentClassPrefix: 'prismui-'
+    componentClassPrefix: 'prismui-',
+    legacyDomClassAlias: false
   });
 });
 
@@ -25,12 +26,14 @@ test('theme runtime uses stable component classnames by default', () => {
   expect(cx('Button', 'Button--primary', 'is-disabled')).toBe(
     'prismui-Button prismui-Button--primary is-disabled'
   );
+  expect(cx('Button')).not.toContain('cxd-Button');
 });
 
 test('theme runtime exposes stable component classPrefix to components', () => {
   theme('cxd', {
     classPrefix: 'prismui-',
-    componentClassPrefix: 'prismui-'
+    componentClassPrefix: 'prismui-',
+    legacyDomClassAlias: false
   });
 
   expect(getClassPrefix()).toBe('prismui-');
@@ -69,11 +72,21 @@ test('stable class selector helpers prefer the primary component class', () => {
   );
 });
 
-test('theme classnames do not emit a legacy alias', () => {
+test('explicit legacy DOM alias updates cached theme classnames', () => {
   expect(getTheme('cxd').classnames('Button')).toBe('prismui-Button');
 
   theme('cxd', {
-    classPrefix: 'prismui-'
+    legacyDomClassAlias: 'cxd'
+  });
+
+  expect(getTheme('cxd').classnames('Button', 'Button--primary')).toBe(
+    'prismui-Button cxd-Button prismui-Button--primary cxd-Button--primary'
+  );
+});
+
+test('legacy DOM alias does not auto-generate non-cxd theme prefixes', () => {
+  theme('cxd', {
+    legacyDomClassAlias: 'antd' as any
   });
 
   expect(getTheme('cxd').classnames('Button', 'Button--primary')).toBe(

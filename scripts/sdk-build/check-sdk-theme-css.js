@@ -19,7 +19,8 @@ const themeCss = buildSdkThemeCss([
       '.fr-box { color: black; }',
       '.tox-menu { color: black; }',
       '.monaco-editor { color: black; }',
-      '.Button, .Alert:hover { color: red; }'
+      '.Button, .Alert:hover { color: red; }',
+      '.SharedComponent { display: block; }'
     ].join('\n')
   }
 ]);
@@ -31,6 +32,14 @@ assertEqual(byTheme.ang.filename, 'ang.css', 'ang theme filename');
 assertEqual(byTheme.cxd.filename, 'sdk.css', 'cxd theme filename');
 assertEqual(byTheme.dark.filename, 'dark.css', 'dark theme filename');
 assertEqual(byTheme.antd.filename, 'antd.css', 'antd theme filename');
+
+for (const theme of ['ang', 'cxd', 'dark', 'antd']) {
+  assertContains(
+    byTheme[theme].content,
+    '.prismui-scope .SharedComponent',
+    `${theme} should include shared component CSS`
+  );
+}
 
 assertContains(byTheme.cxd.content, '.prismui-scope .CxdOnly', 'cxd theme CSS');
 assertNotContains(byTheme.cxd.content, 'AngOnly', 'cxd should exclude ang CSS');

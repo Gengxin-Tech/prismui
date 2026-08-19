@@ -9,10 +9,10 @@ body {
   background-color: #fff !important;
 
   &[data-prismui-theme='dark'] {
-    --Doc-border-color: #e0e7ec;
-    --Doc-muted-surface: #191c22;
-    --Doc-text-color: rgb(100 116 139 / 1);
-    --Doc-muted-text-color: rgb(100 116 139 / 1);
+    --Doc-border-color: #303844;
+    --Doc-muted-surface: #151b23;
+    --Doc-text-color: #c9d1d9;
+    --Doc-muted-text-color: #8b949e;
     --Doc-inline-code-bg: rgba(255, 255, 255, 0.06);
 
     background-color: var(--colors-neutral-fill-11) !important;
@@ -616,7 +616,7 @@ body {
       > ul,
       > ol,
       > dl,
-      > table:not(.prismui-Table-table):not(.amis-Table-table),
+      > table:not(.prismui-Table-table),
       > pre {
         margin-bottom: 30px;
       }
@@ -772,17 +772,17 @@ body {
 }
 
 [data-prismui-theme='dark'] .Doc {
-  --Doc-border-color: #e0e7ec;
-  --Doc-muted-surface: #191c22;
-  --Doc-surface: #191c22;
-  --Doc-text-color: rgb(100 116 139 / 1);
-  --Doc-muted-text-color: rgb(100 116 139 / 1);
+  --Doc-border-color: #303844;
+  --Doc-muted-surface: #151b23;
+  --Doc-surface: #0d1117;
+  --Doc-text-color: #c9d1d9;
+  --Doc-muted-text-color: #8b949e;
   --Doc-inline-code-bg: rgba(255, 255, 255, 0.06);
 
   .Doc-headingList-item a {
-    color: #fff;
+    color: var(--Doc-text-color);
     &:hover {
-      color: #999;
+      color: #f0f6fc;
     }
   }
 
@@ -808,6 +808,22 @@ body {
       blockquote {
         color: var(--Doc-muted-text-color);
         border-left-color: var(--Doc-border-color);
+      }
+
+      table:not(.prismui-Table-table) {
+        th,
+        td {
+          border-color: #3d444d;
+        }
+
+        tr {
+          background-color: var(--Doc-surface);
+          border-top-color: rgba(61, 68, 77, 0.7);
+        }
+
+        tr:nth-child(2n) {
+          background-color: var(--Doc-muted-surface);
+        }
       }
 
       :not(pre) > code,
@@ -907,7 +923,8 @@ body {
 
   .prismui-doc > .preview,
   .prismui-doc > pre,
-  .doc-play-ground {
+  .doc-play-ground,
+  .Playgroud {
     border-color: var(--Doc-border-color);
   }
 
@@ -924,8 +941,8 @@ body {
     .Doc-navLinks--prev,
     .Doc-navLinks--next {
       color: #eee;
-      border-color: #e8ebee;
-      box-shadow: #e8ebee 0px 3px 8px 0px;
+      border-color: var(--Doc-border-color);
+      box-shadow: none;
     }
 
     .Doc-navLinks-title {
@@ -952,6 +969,14 @@ body {
 
   .prismui-AsideNav-label {
     color: #ccc;
+  }
+
+  .Playgroud {
+    border-color: var(--Doc-border-color);
+
+    &-code {
+      border-left-color: var(--Doc-border-color);
+    }
   }
 }
 

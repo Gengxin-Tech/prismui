@@ -400,7 +400,7 @@ export default class TreeControl extends React.Component<TreeProps, TreeState> {
 
     // 如果是搜索模式，有可能已经选择的值被过滤掉了，如果值发生了变化
     // 不应该让原来选中的值丢失
-    // https://github.com/Gengxin-Tech/prismui/issues/9946
+    // https://github.com/baidu/amis/issues/9946
     if (multiple && (searchable || allowSearch) && originSelectedItems.length) {
       originSelectedItems.forEach(origin => {
         const exists = findTree(

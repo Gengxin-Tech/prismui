@@ -52,7 +52,7 @@ exports[`1. Renderer:Picker base 1`] = `
     </div>
   </div>
   <div
-    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
     data-prismui-theme="cxd"
     role="dialog"
   >

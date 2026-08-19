@@ -29,7 +29,7 @@ exports[`EventAction:drawer 1`] = `
     </div>
   </div>
   <div
-    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
     data-prismui-theme="cxd"
     role="dialog"
   >
@@ -317,7 +317,7 @@ exports[`EventAction:drawer args 1`] = `
     </div>
   </div>
   <div
-    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
     data-prismui-theme="cxd"
     role="dialog"
   >

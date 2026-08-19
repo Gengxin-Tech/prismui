@@ -14,7 +14,7 @@ import '../../src';
 
 afterEach(cleanup);
 
-// 关联 issue https://github.com/Gengxin-Tech/prismui/issues/9564
+// 关联 issue https://github.com/baidu/amis/issues/9564
 test('Renderers:App locale', async () => {
   const fetcher = jest.fn().mockImplementation((api, options) => {
     if (api.url.startsWith('/pageList')) {

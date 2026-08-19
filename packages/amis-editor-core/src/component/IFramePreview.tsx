@@ -63,7 +63,7 @@ export default class IFramePreview extends React.Component<IFramePreviewProps> {
 
     this.initialContent = `<!DOCTYPE html><html><head>${styles.join(
       ''
-    )}</head><body ${themeAttrs}><div class="ae-IFramePreview PRISMUICSSWrapper" ${themeAttrs}></div></body></html>`;
+    )}</head><body ${themeAttrs}><div class="ae-IFramePreview AMISCSSWrapper" ${themeAttrs}></div></body></html>`;
   }
 
   componentDidMount() {

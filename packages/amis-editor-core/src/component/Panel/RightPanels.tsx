@@ -118,7 +118,7 @@ export class RightPanels extends React.Component<
         {...getEditorThemeScopeProps(theme, manager.config.theme || 'cxd')}
         className={cx(
           'editor-right-panel width-draggable',
-          'PRISMUICSSWrapper',
+          'AMISCSSWrapper',
           panels.length > 1 ? 'mul-tabs-panel' : '',
           isOpenStatus ? '' : 'hidden-status',
           isFixedStatus ? 'fixed-status' : ''

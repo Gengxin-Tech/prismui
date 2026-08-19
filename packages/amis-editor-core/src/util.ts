@@ -25,6 +25,7 @@ import {filter} from 'lodash';
 import type {SchemaType} from 'amis/lib/Schema';
 import type {DialogSchema} from 'amis/lib/renderers/Dialog';
 import type {DrawerSchema} from 'amis/lib/renderers/Drawer';
+import {resolveEditorComponentClassPrefix} from './themeScope';
 
 const {
   guid,
@@ -59,6 +60,16 @@ export let themeConfig: any = {};
 export let themeOptionsData: any = {};
 export let cssVars: any = {};
 export const THEME_CSS_MIGRATION_WARNINGS_KEY = '__themeCssMigrationWarnings';
+
+export function migrateLegacyThemeSelector(selector: string, theme?: any) {
+  const componentClassPrefix = resolveEditorComponentClassPrefix(theme);
+
+  return selector.replace(/\.(?:amis|cxd)-/g, () => `.${componentClassPrefix}`);
+}
+
+function isLegacyThemeSelector(selector: string) {
+  return /\.(?:amis|cxd)-/.test(selector);
+}
 
 function appendThemeCssMigrationWarning(data: any, warning: string) {
   const warnings = data[THEME_CSS_MIGRATION_WARNINGS_KEY] || [];
@@ -1261,7 +1272,7 @@ export function getAllCssVar() {
   const cssVars = getCssVarById('baseStyle', [
     ':root',
     '[data-prismui-theme',
-    '.PRISMUICSSWrapper'
+    '.AMISCSSWrapper'
   ]);
   const themeCssVars = getCssVarById('themeCss', [
     '[data-prismui-theme',
@@ -1358,10 +1369,19 @@ export function clearDirtyCssKey(data: any) {
   const temp = {...data};
   Object.keys(temp).forEach(key => {
     if (key.startsWith('.') || key.startsWith('#')) {
-      appendThemeCssMigrationWarning(
-        temp,
-        `removed selector key ${key}; move styles into themeCss before saving`
-      );
+      if (isLegacyThemeSelector(key)) {
+        appendThemeCssMigrationWarning(
+          temp,
+          `removed legacy selector ${key}; stable candidate ${migrateLegacyThemeSelector(
+            key
+          )}`
+        );
+      } else {
+        appendThemeCssMigrationWarning(
+          temp,
+          `removed selector key ${key}; move styles into themeCss before saving`
+        );
+      }
       delete temp[key];
     }
     if (key === 'editorState') {

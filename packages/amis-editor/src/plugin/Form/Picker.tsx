@@ -62,7 +62,7 @@ export class PickerControlPlugin extends BasePlugin {
     overflowConfig: {
       maxTagCount: -1
     },
-    modalClassName: 'app-popover :PRISMUICSSWrapper'
+    modalClassName: 'app-popover :AMISCSSWrapper'
   };
   previewSchema: any = {
     type: 'form',

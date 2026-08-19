@@ -33,7 +33,7 @@ export default function (props: PanelPreviewProps) {
 
   return (
     <div className="PanelPreview" ref={dom}>
-      <div className="PRISMUICSSWrapper editor-right-panel">
+      <div className="AMISCSSWrapper editor-right-panel">
         {render(
           schema,
           {

@@ -468,8 +468,7 @@ export class FormPlugin extends BasePlugin {
         }
       },
       canRebuild: true,
-      className:
-        'ae-Scaffold-Modal ae-Scaffold-Modal-content :PRISMUICSSWrapper',
+      className: 'ae-Scaffold-Modal ae-Scaffold-Modal-content :AMISCSSWrapper',
       body: [
         {
           type: 'radios',

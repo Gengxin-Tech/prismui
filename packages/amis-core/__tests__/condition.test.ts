@@ -22,7 +22,7 @@ const data = {
   bool: true,
   detail: {
     version: '2.8.0',
-    github: 'https://github.com/Gengxin-Tech/prismui'
+    github: 'https://github.com/baidu/amis'
   },
   range: 1678723200,
   date: '2023-03-19',

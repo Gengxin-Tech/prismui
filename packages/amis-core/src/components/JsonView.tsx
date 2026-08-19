@@ -193,19 +193,6 @@ function createLegacyComponents(iconStyle: JsonViewProps['iconStyle']) {
   };
 }
 
-function isEmptyCollection(value: any) {
-  if (Array.isArray(value)) {
-    return value.length === 0;
-  }
-
-  return (
-    value &&
-    typeof value === 'object' &&
-    !(value instanceof Date) &&
-    Object.keys(value).length === 0
-  );
-}
-
 function cloneRoot(value: any) {
   if (Array.isArray(value)) {
     return value.slice();
@@ -342,40 +329,6 @@ function normalizeCollapsed(collapsed: JsonViewProps['collapsed']) {
   return typeof collapsed === 'boolean' ? !collapsed : collapsed;
 }
 
-function resolveCollapsed(
-  _src: any,
-  collapsed: JsonViewProps['collapsed'],
-  _editable: boolean
-) {
-  return normalizeCollapsed(collapsed);
-}
-
-function resolveClassName(
-  className: string | undefined,
-  emptyRoot: boolean,
-  rootCount: number
-) {
-  const classNames = [
-    className,
-    emptyRoot ? 'w-rjv-empty-root' : '',
-    `w-rjv-root-count-${rootCount}`
-  ].filter(Boolean);
-
-  return classNames.length ? classNames.join(' ') : undefined;
-}
-
-function getRootCount(value: any) {
-  if (Array.isArray(value)) {
-    return value.length;
-  }
-
-  if (value && typeof value === 'object' && !(value instanceof Date)) {
-    return Object.keys(value).length;
-  }
-
-  return 1;
-}
-
 function createJsonViewComponent(modules: JsonViewModules) {
   const {BaseJsonView, JsonViewEditor, ...themes} = modules;
 
@@ -424,12 +377,10 @@ function createJsonViewComponent(modules: JsonViewModules) {
       () => createLegacyComponents(iconStyle),
       [iconStyle]
     );
-    const emptyRoot = !editable && isEmptyCollection(data);
-    const rootCount = getRootCount(data);
     const commonProps = {
       value: data,
       keyName: typeof name === 'string' ? name : undefined,
-      collapsed: resolveCollapsed(data, collapsed, editable),
+      collapsed: normalizeCollapsed(collapsed),
       enableClipboard: editable ? true : enableClipboard,
       displayDataTypes,
       displayObjectSize,
@@ -438,7 +389,7 @@ function createJsonViewComponent(modules: JsonViewModules) {
       objectSortKeys: sortKeys,
       quotes,
       components,
-      className: resolveClassName(className, emptyRoot, rootCount),
+      className,
       style: {
         ...resolveTheme(theme, themes),
         ...style

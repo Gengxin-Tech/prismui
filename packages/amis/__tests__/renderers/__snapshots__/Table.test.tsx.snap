@@ -311,6 +311,7 @@ exports[`Renderer:table 1`] = `
               </td>
               <td
                 class=""
+                data-prismui-theme="cxd"
               >
                 <span
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__PlainField"
@@ -658,6 +659,7 @@ exports[`Renderer:table align 1`] = `
               </td>
               <td
                 class=""
+                data-prismui-theme="cxd"
                 style="text-align: right;"
               >
                 <span
@@ -1546,6 +1548,7 @@ exports[`Renderer:table classNameExpr 1`] = `
               </td>
               <td
                 class=""
+                data-prismui-theme="cxd"
               >
                 <span
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__PlainField"
@@ -1883,6 +1886,7 @@ exports[`Renderer:table column head style className 1`] = `
               </th>
               <td
                 class="is-sticky is-sticky-right is-sticky-first-right"
+                data-prismui-theme="cxd"
                 style="right: 0px;"
               >
                 <span
@@ -6325,6 +6329,7 @@ exports[`Renderer:table isHead fixed 1`] = `
               </th>
               <td
                 class="is-sticky is-sticky-right is-sticky-first-right"
+                data-prismui-theme="cxd"
                 style="right: 0px;"
               >
                 <span
@@ -7414,6 +7419,7 @@ exports[`Renderer:table list 1`] = `
               </td>
               <td
                 class=""
+                data-prismui-theme="cxd"
               >
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__List"

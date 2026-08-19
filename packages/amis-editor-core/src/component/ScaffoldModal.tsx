@@ -221,7 +221,7 @@ export class ScaffoldModal extends React.Component<SubEditorProps> {
         contentClassName={scaffoldFormContext?.className}
         show={!!scaffoldFormContext}
         onHide={this.handleCancelClick}
-        className="ae-scaffoldForm-Modal :PRISMUICSSWrapper"
+        className="ae-scaffoldForm-Modal :AMISCSSWrapper"
         closeOnEsc={!store.scaffoldFormBuzy}
       >
         <div className={cx('Modal-header')}>

@@ -2,7 +2,7 @@
 
 [中文](./README.md) | [Docs](https://prismui.io/docs/zh-CN/docs/index) | [Getting Started](https://prismui.io/docs/zh-CN/docs/start/getting-started)
 
-PrismUI is an independently maintained fork of [baidu/amis](https://github.com/Gengxin-Tech/prismui), focused on UI Schema driven front-end development for enterprise applications. The project continues to evolve the UI Schema runtime, React renderer, component system, JS SDK, and visual editor.
+PrismUI is an independently maintained fork of [baidu/amis](https://github.com/baidu/amis), focused on UI Schema driven front-end development for enterprise applications. The project continues to evolve the UI Schema runtime, React renderer, component system, JS SDK, and visual editor.
 
 PrismUI is not an official baidu/amis release channel. Original copyright and license notices are retained, and PrismUI changes are maintained independently by PrismUI contributors.
 
@@ -149,7 +149,7 @@ Do not disclose exploitable security details in public issues. See [SECURITY.md]
 
 ## Origin And License
 
-PrismUI is derived from [baidu/amis](https://github.com/Gengxin-Tech/prismui). Original copyright, license, and attribution notices are retained under their applicable licenses.
+PrismUI is derived from [baidu/amis](https://github.com/baidu/amis). Original copyright, license, and attribution notices are retained under their applicable licenses.
 
 Most of the repository is Apache-2.0. Some self-maintained packages declare MIT or ISC:
 

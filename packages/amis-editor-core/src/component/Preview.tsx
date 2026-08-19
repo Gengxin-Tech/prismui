@@ -687,7 +687,7 @@ export default class Preview extends Component<PreviewProps> {
         {...getEditorThemeScopeProps(themeName)}
         className={cx(
           'ae-Preview',
-          'PRISMUICSSWrapper',
+          'AMISCSSWrapper',
           className,
           isMobile ? 'is-mobile-body' : 'is-pc-body'
         )}

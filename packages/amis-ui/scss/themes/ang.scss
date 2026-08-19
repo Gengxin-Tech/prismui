@@ -4,13 +4,15 @@ $prismui-palette-brand-400: #584a94;
 $prismui-palette-brand-500: #7266ba;
 $prismui-palette-brand-600: #897fc7;
 $prismui-palette-neutral-text-inverse: #fff;
-$prismui-theme-vars-only: true;
+@import '../tokens/index';
 @import '../properties';
 @import '../components';
 @import '../functions';
 $remFactor: 16px;
 @import './ang-variables';
-@import '../tokens/theme-overrides';
+$ns: 'prismui-';
+@import './common';
+@import '../tokens/legacy-palette-aliases';
 
 [data-prismui-theme='ang'] {
   @include prismui-property-vars;

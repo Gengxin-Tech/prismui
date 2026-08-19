@@ -84,7 +84,7 @@ const CASES = [
     title: 'Dialog open/close',
     steps: [
       {state: 'dialog-open', action: 'click', selectors: dialogButtonSelectors()},
-      {state: 'drag-header', action: 'drag', selectors: ['[class*="Modal-header"]', '[role="dialog"] .modal-header'], optional: true},
+      {state: 'drag-header', action: 'drag', selectors: ['.prismui-Modal-header', '[role="dialog"] .modal-header'], optional: true},
       {state: 'after-close', action: 'escape'}
     ]
   },
@@ -113,7 +113,7 @@ const CASES = [
     title: 'NestedSelect levels',
     steps: [
       {state: 'level1-open', action: 'click', selectors: nestedSelectSelectors()},
-      {state: 'level2-open', action: 'hover', selectors: ['[class*="NestedSelect-option"]', '[class*="NestedSelect-optionArrowRight"]'], optional: true}
+      {state: 'level2-open', action: 'hover', selectors: ['.prismui-NestedSelect-option', '.prismui-NestedSelect-optionArrowRight'], optional: true}
     ]
   },
   {
@@ -140,7 +140,7 @@ const CASES = [
     title: 'Picker popover/modal',
     steps: [
       {state: 'picker-open', action: 'click', selectors: pickerSelectors()},
-      {state: 'item-selected', action: 'click', selectors: ['[class*="Table"] tbody tr', '[class*="ListItem"]'], optional: true}
+      {state: 'item-selected', action: 'click', selectors: ['.prismui-Table tbody tr', '.prismui-ListItem'], optional: true}
     ]
   },
   {
@@ -148,8 +148,8 @@ const CASES = [
     route: '/zh-CN/components/form/input-tag',
     title: 'InputTag suggestions',
     steps: [
-      {state: 'suggestions-open', action: 'click', selectors: ['[class*="TagControl"] input', '[class*="ResultBox"]']},
-      {state: 'overflow-open', action: 'hover', selectors: ['[class*="Tags-more"]', '[class*="Tag"]'], optional: true}
+      {state: 'suggestions-open', action: 'click', selectors: ['.prismui-TagControl input', '.prismui-ResultBox']},
+      {state: 'overflow-open', action: 'hover', selectors: ['.prismui-Tags-more', '.prismui-Tag'], optional: true}
     ]
   },
   {
@@ -160,9 +160,9 @@ const CASES = [
       state: 'color-panel-open',
       action: 'click',
       selectors: [
-        '[class*="ColorControl"]',
-        '[class*="ColorPicker"]',
-        '[class*="ColorField"]',
+        '.prismui-ColorControl',
+        '.prismui-ColorPicker',
+        '.prismui-ColorField',
         'input[placeholder="请选择颜色"]'
       ]
     }]
@@ -173,7 +173,7 @@ const CASES = [
     title: 'InputDate calendar',
     steps: [
       {state: 'calendar-open', action: 'click', selectors: dateSelectors()},
-      {state: 'month-panel', action: 'click', selectors: ['.rdtSwitch', '[class*="DatePicker-toggler"]'], optional: true}
+      {state: 'month-panel', action: 'click', selectors: ['.rdtSwitch', '.prismui-DatePicker-toggler'], optional: true}
     ]
   },
   {
@@ -182,7 +182,7 @@ const CASES = [
     title: 'InputDateRange calendar',
     steps: [
       {state: 'range-open', action: 'click', selectors: dateSelectors()},
-      {state: 'selecting-end', action: 'hover', selectors: ['.rdtDay:not(.rdtDisabled)', '[class*="Calendar-date"]'], optional: true}
+      {state: 'selecting-end', action: 'hover', selectors: ['.rdtDay:not(.rdtDisabled)', '.prismui-Calendar-date'], optional: true}
     ]
   },
   {
@@ -216,8 +216,8 @@ const CASES = [
     route: '/zh-CN/components/tabs',
     title: 'Tabs tooltip/overflow',
     steps: [
-      {state: 'hover-tip', action: 'hover', selectors: ['[class*="Tabs-link"]', '[class*="Tabs-tab"]']},
-      {state: 'overflow-open', action: 'click', selectors: ['[class*="Tabs-togglor"]'], optional: true}
+      {state: 'hover-tip', action: 'hover', selectors: ['.prismui-Tabs-link', '.prismui-Tabs-tab']},
+      {state: 'overflow-open', action: 'click', selectors: ['.prismui-Tabs-togglor'], optional: true}
     ]
   },
   {
@@ -225,8 +225,8 @@ const CASES = [
     route: '/zh-CN/components/carousel',
     title: 'Carousel controls',
     steps: [
-      {state: 'hover-controls', action: 'hover', selectors: ['[class*="Carousel"]', '.slick-slider']},
-      {state: 'next-slide', action: 'click', selectors: ['.slick-next', '[class*="Carousel-next"]', '[class*="Carousel-arrow--right"]'], optional: true}
+      {state: 'hover-controls', action: 'hover', selectors: ['.prismui-Carousel', '.slick-slider']},
+      {state: 'next-slide', action: 'click', selectors: ['.slick-next', '.prismui-Carousel-next', '.prismui-Carousel-arrow--right'], optional: true}
     ]
   },
   {
@@ -234,8 +234,8 @@ const CASES = [
     route: '/zh-CN/components/images',
     title: 'Images hover/gallery',
     steps: [
-      {state: 'hover-actions', action: 'hover', selectors: ['[class*="Images-item"]', '[class*="Image-thumb"]', 'img']},
-      {state: 'gallery-open', action: 'click', selectors: ['[class*="Images-item"] img', '[class*="Image-thumb"] img', 'img'], optional: true}
+      {state: 'hover-actions', action: 'hover', selectors: ['.prismui-Images-item', '.prismui-Image-thumb', 'img']},
+      {state: 'gallery-open', action: 'click', selectors: ['.prismui-Images-item img', '.prismui-Image-thumb img', 'img'], optional: true}
     ]
   },
   {
@@ -266,7 +266,7 @@ const CASES = [
     title: 'JSON expand/collapse',
     steps: [
       {state: 'expanded', action: 'click', selectors: jsonViewSelectors()},
-      {state: 'edit-affordance', action: 'hover', selectors: ['[class*="w-rjv"]', '.react-json-view', '[class*="JsonField"]'], optional: true}
+      {state: 'edit-affordance', action: 'hover', selectors: ['[class*="w-rjv"]', '.react-json-view', '.prismui-JsonField'], optional: true}
     ]
   },
   {
@@ -284,8 +284,8 @@ const CASES = [
     route: '/zh-CN/components/form/input-number',
     title: 'InputNumber focus/change',
     steps: [
-      {state: 'focused', action: 'focus', selectors: ['[class*="NumberInput"] input', 'input[type="number"]', 'input[type="text"]']},
-      {state: 'changed', action: 'fill', selectors: ['[class*="NumberInput"] input', 'input[type="number"]', 'input[type="text"]'], value: '42'},
+      {state: 'focused', action: 'focus', selectors: ['.prismui-NumberInput input', 'input[type="number"]', 'input[type="text"]']},
+      {state: 'changed', action: 'fill', selectors: ['.prismui-NumberInput input', 'input[type="number"]', 'input[type="text"]'], value: '42'},
       {state: 'blurred', action: 'blur'}
     ]
   },
@@ -393,37 +393,37 @@ const MOCK_SAMPLE_ROWS = [
 ];
 
 function dropdownSelectors() {
-  return ['[class*="DropDown-button"]', '[class*="DropDown"] [class*="Button"]', 'button:has-text("下拉")'];
+  return ['.prismui-DropDown-button', '.prismui-DropDown .prismui-Button', 'button:has-text("下拉")'];
 }
 
 function menuItemSelectors() {
-  return ['[role="menuitem"]', '[class*="DropDown-menu"] > li', '[class*="Menu-item"]', '.rc-menu-item'];
+  return ['[role="menuitem"]', '.prismui-DropDown-menu > li', '.prismui-Menu-item', '.rc-menu-item'];
 }
 
 function navSubmenuSelectors() {
-  return ['[class*="Menu-submenu-title"]', '.rc-menu-submenu-title', '[class*="Nav-item"]:has(ul)', '[class*="Nav"] a'];
+  return ['.prismui-Menu-submenu-title', '.rc-menu-submenu-title', '.prismui-Nav-item:has(ul)', '.prismui-Nav a'];
 }
 
 function breadcrumbSelectors() {
-  return ['[class*="Breadcrumb"] li button', '[class*="Breadcrumb"] li a', '[class*="Breadcrumb"]'];
+  return ['.prismui-Breadcrumb li button', '.prismui-Breadcrumb li a', '.prismui-Breadcrumb'];
 }
 
 function tooltipSelectors() {
-  return ['[data-tooltip]', '[title]', '[class*="TooltipWrapper"]', 'button:has-text("提示")', 'button'];
+  return ['[data-tooltip]', '[title]', '.prismui-TooltipWrapper', 'button:has-text("提示")', 'button'];
 }
 
 function popoverSelectors() {
   return [
-    '[class*="Field-popOverBtn"]',
-    '[class*="Field--popOverAble"] [class*="Field-popOverWrap"]',
-    '[class*="Field--popOverAble"]',
+    '.prismui-Field-popOverBtn',
+    '.prismui-Field--popOverAble .prismui-Field-popOverWrap',
+    '.prismui-Field--popOverAble',
     '[data-popover]',
     'button:has-text("弹出")'
   ];
 }
 
 function remarkSelectors() {
-  return ['[class*="Remark"]', '.fa-question-circle', '.icon-question'];
+  return ['.prismui-Remark', '.fa-question-circle', '.icon-question'];
 }
 
 function dialogButtonSelectors() {
@@ -435,55 +435,55 @@ function drawerButtonSelectors() {
 }
 
 function selectSelectors() {
-  return ['[class*="Select"]', '[class*="ResultBox"]', '[class*="TransferDropDown"]', '[role="combobox"]'];
+  return ['.prismui-Select', '.prismui-ResultBox', '.prismui-TransferDropDown', '[role="combobox"]'];
 }
 
 function nestedSelectSelectors() {
-  return ['[class*="NestedSelect"]', '[class*="ResultBox"]'];
+  return ['.prismui-NestedSelect', '.prismui-ResultBox'];
 }
 
 function treeSelectSelectors() {
-  return ['[class*="TreeSelect"]', '[class*="ResultBox"]'];
+  return ['.prismui-TreeSelect', '.prismui-ResultBox'];
 }
 
 function treeExpandSelectors() {
-  return ['[class*="Tree-itemArrow"]', '[class*="Tree-itemLabel"]'];
+  return ['.prismui-Tree-itemArrow', '.prismui-Tree-itemLabel'];
 }
 
 function optionSelectors() {
-  return ['[role="option"]', '[class*="Select-option"]', '[class*="Transfer-option"]', '[class*="NestedSelect-option"]'];
+  return ['[role="option"]', '.prismui-Select-option', '.prismui-Transfer-option', '.prismui-NestedSelect-option'];
 }
 
 function pickerSelectors() {
-  return ['[class*="PickerControl"] [class*="ResultBox"]', '[class*="Picker"]', '[class*="ResultBox"]'];
+  return ['.prismui-PickerControl .prismui-ResultBox', '.prismui-Picker', '.prismui-ResultBox'];
 }
 
 function tableFilterSelectors() {
-  return ['[class*="TableCell-filterBtn"]', '[class*="TableCell--filterable"] .table-filter-icon'];
+  return ['.prismui-TableCell-filterBtn', '.prismui-TableCell--filterable .table-filter-icon'];
 }
 
 function columnTogglerSelectors() {
-  return ['[class*="ColumnToggler"] button', '[class*="ColumnToggler"] [class*="Button"]'];
+  return ['.prismui-ColumnToggler button', '.prismui-ColumnToggler .prismui-Button'];
 }
 
 function quickEditSelectors() {
-  return ['[class*="Field-quickEditBtn"]', '[class*="Field--quickEditable"] [class*="Button"]'];
+  return ['.prismui-Field-quickEditBtn', '.prismui-Field--quickEditable .prismui-Button'];
 }
 
 function collapseHeaderSelectors() {
-  return ['[class*="Collapse"]:not(.is-active):not(.is-disabled) [class*="Collapse-header"]'];
+  return ['.prismui-Collapse:not(.is-active):not(.is-disabled) .prismui-Collapse-header'];
 }
 
 function collapseActiveHeaderSelectors() {
-  return ['[class*="Collapse"].is-active [class*="Collapse-header"]'];
+  return ['.prismui-Collapse.is-active .prismui-Collapse-header'];
 }
 
 function collapseExpandedSelectors() {
-  return ['[class*="Collapse"].is-active [class*="Collapse-contentWrapper"]'];
+  return ['.prismui-Collapse.is-active .prismui-Collapse-contentWrapper'];
 }
 
 function collapseCollapsedSelectors() {
-  return ['[class*="Collapse"]:not(.is-active) [class*="Collapse-header"]'];
+  return ['.prismui-Collapse:not(.is-active) .prismui-Collapse-header'];
 }
 
 function toastButtonSelectors() {
@@ -491,23 +491,23 @@ function toastButtonSelectors() {
 }
 
 function toastVisibleSelectors() {
-  return ['[class*="Toast"].in', '[class*="Toast-wrap"]', '[class*="Toast"]:has-text("轻提示")'];
+  return ['.prismui-Toast.in', '.prismui-Toast-wrap', '.prismui-Toast:has-text("轻提示")'];
 }
 
 function spinnerOverlaySelectors() {
-  return ['[class*="Spinner-overlay"]', '[class*="Spinner-wrap"] [class*="Spinner"]'];
+  return ['.prismui-Spinner-overlay', '.prismui-Spinner-wrap .prismui-Spinner'];
 }
 
 function formulaActionSelectors() {
-  return ['[class*="FormulaPicker-action"]'];
+  return ['.prismui-FormulaPicker-action'];
 }
 
 function formulaEditorSelectors() {
-  return ['[class*="FormulaEditor"]'];
+  return ['.prismui-FormulaEditor'];
 }
 
 function popupVisibleSelectors() {
-  return ['[class*="PopUp"].in', '[class*="Select-popup"]'];
+  return ['.prismui-PopUp.in', '.prismui-Select-popup'];
 }
 
 function richTextMenuVisibleSelectors() {
@@ -515,15 +515,15 @@ function richTextMenuVisibleSelectors() {
 }
 
 function contextMenuVisibleSelectors() {
-  return ['[class*="ContextMenu-menu"].in'];
+  return ['.prismui-ContextMenu-menu.in'];
 }
 
 function contextMenuNestedItemSelectors() {
-  return ['text=Nested Actions', '[class*="ContextMenu-item"][class*="has-child"] > a'];
+  return ['text=Nested Actions', '.prismui-ContextMenu-item.has-child > a'];
 }
 
 function contextMenuSubmenuSelectors() {
-  return ['[class*="ContextMenu-subList"]'];
+  return ['.prismui-ContextMenu-subList'];
 }
 
 function froalaLinkButtonSelectors() {
@@ -543,7 +543,7 @@ function froalaTablePopupSelectors() {
 }
 
 function jsonViewSelectors() {
-  return ['[class*="w-rjv"] svg', '[class*="w-rjv"] [role="button"]', '[class*="w-rjv"]', '.react-json-view .icon-container', '.react-json-view .collapsed-icon', '.react-json-view .expanded-icon', '.react-json-view .object-key-val', '[class*="JsonField"] svg', '[class*="JsonField"]'];
+  return ['[class*="w-rjv"] svg', '[class*="w-rjv"] [role="button"]', '[class*="w-rjv"]', '.react-json-view .icon-container', '.react-json-view .collapsed-icon', '.react-json-view .expanded-icon', '.react-json-view .object-key-val', '.prismui-JsonField svg', '.prismui-JsonField'];
 }
 
 function richTextMenuSelectors() {
@@ -556,9 +556,9 @@ function richTextDialogMenuItemSelectors() {
 
 function dateSelectors() {
   return [
-    '[class*="DateRangeControl"]',
-    '[class*="DateRangePicker"]',
-    '[class*="DatePicker"]',
+    '.prismui-DateRangeControl',
+    '.prismui-DateRangePicker',
+    '.prismui-DatePicker',
     'input[placeholder="开始时间"]',
     'input[placeholder="结束时间"]',
     'input[placeholder="请选择日期"]'
@@ -566,11 +566,11 @@ function dateSelectors() {
 }
 
 function chartSelectors() {
-  return ['[class*="Chart"] canvas', '[class*="Chart"]', 'canvas'];
+  return ['.prismui-Chart canvas', '.prismui-Chart', 'canvas'];
 }
 
 function videoSelectors() {
-  return ['[class*="Video"] video', '[class*="Video"]', 'video'];
+  return ['.prismui-Video video', '.prismui-Video', 'video'];
 }
 
 function parseArgs(argv) {
@@ -579,7 +579,7 @@ function parseArgs(argv) {
     candidate: 'http://127.0.0.1:8888',
     outDir: '',
     viewport: '1440x900',
-    theme: 'prismui',
+    theme: 'cxd',
     caseId: '',
     limit: 0,
     threshold: 0.1,
@@ -622,6 +622,21 @@ function parseArgs(argv) {
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, {recursive: true});
+}
+
+function expandSelectorAliases(selectors) {
+  const expanded = [];
+
+  for (const selector of selectors || []) {
+    expanded.push(selector);
+
+    if (selector.includes('.prismui-')) {
+      expanded.push(selector.split('.prismui-').join('.amis-'));
+      expanded.push(selector.split('.prismui-').join('.cxd-'));
+    }
+  }
+
+  return [...new Set(expanded)];
 }
 
 function delay(ms) {
@@ -749,7 +764,7 @@ async function preparePage(page) {
       html[data-amis-visual-regression="true"] [class*="Layout-aside"],
       html[data-amis-visual-regression="true"] [class*="Layout-brand"],
       html[data-amis-visual-regression="true"] [class*="AsideNav"],
-      html[data-amis-visual-regression="true"] [class*="Doc-nav"] {
+      html[data-amis-visual-regression="true"] .Doc-nav {
         display: none !important;
       }
       html[data-amis-visual-regression="true"] .Doc {
@@ -774,7 +789,10 @@ async function settle(page, extra = 500) {
   await page.evaluate(() => document.fonts && document.fonts.ready).catch(() => undefined);
   await page.waitForFunction(() => document.readyState === 'complete', {timeout: 10000}).catch(() => undefined);
   await page.waitForFunction(() => {
-    const selectors = ['.visibility-sensor > [class*="Spinner"]', '[class*="LazyComponent"] > [class*="Spinner"]'];
+    const selectors = [
+      '.visibility-sensor > [class*="Spinner"]',
+      '[class*="LazyComponent"] > [class*="Spinner"]'
+    ];
     return selectors.every(selector => Array.from(document.querySelectorAll(selector)).every(node => {
       const style = getComputedStyle(node);
       const rect = node.getBoundingClientRect();
@@ -798,7 +816,7 @@ async function findLocator(page, selectors) {
   for (let scan = 0; scan < 120; scan++) {
     await page.evaluate(nextY => window.scrollTo(0, nextY), y).catch(() => undefined);
     await settle(page, 250);
-    for (const selector of selectors || []) {
+    for (const selector of expandSelectorAliases(selectors)) {
       const locators = [
         page.locator('.Doc-content').locator(selector),
         page.locator(selector)
@@ -828,7 +846,7 @@ async function waitForVisibleSelector(page, selectors, timeout = 5000) {
   const deadline = Date.now() + timeout;
   let lastError = '';
   while (Date.now() < deadline) {
-    for (const selector of selectors || []) {
+    for (const selector of expandSelectorAliases(selectors)) {
       try {
         const locator = page.locator(selector);
         const visibleLocator = await firstVisibleInViewport(page, locator);
@@ -960,7 +978,7 @@ async function performStep(page, step) {
 
 async function assertVideoInterface(page) {
   const result = await page.evaluate(async () => {
-    const video = document.querySelector('[class*="Video"] video,video');
+    const video = document.querySelector('.prismui-Video video,video');
     if (!video) return {exists: false};
 
     const src = video.currentSrc || video.getAttribute('src') || '';

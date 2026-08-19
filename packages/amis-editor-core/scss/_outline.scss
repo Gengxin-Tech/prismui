@@ -263,67 +263,6 @@
     }
   }
 }
-
-[data-prismui-theme='dark'] {
-  .ae-Outline {
-    background: var(--ae-editor-surface);
-
-    &-sublist > .ae-Outline-node {
-      &::before,
-      &::after {
-        background: var(--ae-editor-border);
-      }
-    }
-
-    &-node {
-      > a {
-        color: var(--ae-editor-text);
-      }
-
-      > a:hover,
-      &.is-hover > a {
-        color: var(--colors-brand-4);
-      }
-
-      &.is-active {
-        background: var(--ae-editor-active);
-
-        > a {
-          color: var(--colors-brand-4);
-        }
-      }
-
-      span.has-keywords {
-        color: var(--colors-brand-4);
-      }
-    }
-
-    &-expander > svg {
-      color: var(--ae-editor-text-muted);
-    }
-
-    &-tip {
-      color: var(--colors-success-5);
-    }
-
-    &-dropNode {
-      background: var(--ae-editor-surface);
-
-      &:after {
-        border-color: var(--ae-editor-border);
-      }
-
-      &.is-active {
-        background: var(--ae-editor-active);
-
-        &:after {
-          border-color: var(--colors-brand-4);
-        }
-      }
-    }
-  }
-}
-
 .ae-DialogList {
   &-wrap {
     padding: 0 10px;

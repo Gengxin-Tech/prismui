@@ -885,21 +885,16 @@ $Table-strip-bg: transparent;
   --IconSelect-type-width: #{px2rem(88px)};
   --IconSelect-type-li-height: #{px2rem(32px)};
   --IconSelect-type-li-padding: var(--gap-md);
+
+  @media (max-width: 767px) {
+    --fontSizeBase: var(--fontSizeLg);
+    --Page-body-padding: var(--gap-md);
+  }
 }
 
 @if not $prismui-theme-vars-only {
   :root,
-  .PRISMUICSSWrapper {
+  .AMISCSSWrapper {
     @include prismui-property-vars;
-  }
-}
-
-@media (max-width: 767px) {
-  :root {
-    --fontSizeBase: var(--fontSizeLg);
-  }
-  :root,
-  .PRISMUICSSWrapper {
-    --Page-body-padding: var(--gap-md);
   }
 }

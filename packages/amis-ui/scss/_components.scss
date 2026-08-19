@@ -4373,7 +4373,7 @@ $prismui-theme-vars-only: false !default;
 
 @if not $prismui-theme-vars-only {
   :root,
-  .PRISMUICSSWrapper {
+  .AMISCSSWrapper {
     @include prismui-component-vars;
   }
 }

@@ -32,6 +32,13 @@ const categories = {
     owner: 'editor-theme-helper-migration',
     exit_condition: 'Replace during editor/theme-editor helper migration.'
   },
+  'dom-alias-generated': {
+    description:
+      'Runtime-only legacy DOM alias output when explicitly enabled; library SCSS/CSS must not generate it.',
+    owner: 'legacy-prefix-teardown',
+    exit_condition:
+      'Reassess no later than the one-year compatibility review window and remove when migration docs are sufficient.'
+  },
   'docs-historical': {
     description:
       'Comments or documentation that mention historical selectors without creating CSS output.',
@@ -66,14 +73,16 @@ const scans = [
   {
     id: 'theme-prefix-selector',
     description:
-      'Old .amis-* selectors or theme-specific .antd-* / .dark-* selector usage in source styles and editor helpers.',
+      'Old .amis-* / .cxd-* selectors or theme-specific .antd-* / .dark-* selector usage in source styles and editor helpers.',
     paths: [
       'packages/amis-ui/scss',
       'packages/amis-theme-editor-helper/src',
-      'packages/amis-editor-core/scss'
+      'packages/amis-editor-core/scss',
+      'packages/amis-editor/examples',
+      'examples'
     ],
     extensions: ['.scss', '.ts', '.tsx'],
-    regex: '\\.(?:amis|antd|dark)-[A-Za-z0-9_-]+',
+    regex: '\\.(?:amis|cxd|antd|dark)-[A-Za-z0-9_-]+',
     defaultCategory: 'migration-target'
   },
   {
@@ -222,7 +231,7 @@ function hasCxClassName(line) {
 }
 
 function hasHardcodedLegacySelector(line) {
-  return /['"`][^'"`]*\.(?:amis|antd|dark)-[A-Za-z0-9_-]+/.test(line);
+  return /['"`][^'"`]*\.(?:amis|cxd|antd|dark)-[A-Za-z0-9_-]+/.test(line);
 }
 
 function hasClassListContainsCx(line) {

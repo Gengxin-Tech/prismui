@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-17",
+  "updated": "2026-08-19",
   "purpose": "Tracks old-prefix selector and unsafe classPrefix selector baseline as active debt. Existing entries may be removed; new unclassified matches fail npm run check:theme-selectors --workspace amis-ui. Plain --update may only keep or shrink the baseline; growth requires --allow-baseline-growth and review.",
   "categories": {
     "public-forbidden": {
@@ -17,6 +17,11 @@
       "description": "Existing editor/theme-editor legacy selectors that are internal migration inputs, not public CSS API.",
       "owner": "editor-theme-helper-migration",
       "exit_condition": "Replace during editor/theme-editor helper migration."
+    },
+    "dom-alias-generated": {
+      "description": "Runtime-only legacy DOM alias output when explicitly enabled; library SCSS/CSS must not generate it.",
+      "owner": "legacy-prefix-teardown",
+      "exit_condition": "Reassess no later than the one-year compatibility review window and remove when migration docs are sufficient."
     },
     "docs-historical": {
       "description": "Comments or documentation that mention historical selectors without creating CSS output.",
@@ -49,18 +54,20 @@
   "scans": [
     {
       "id": "theme-prefix-selector",
-      "description": "Old .amis-* selectors or theme-specific .antd-* / .dark-* selector usage in source styles and editor helpers.",
+      "description": "Old .amis-* / .cxd-* selectors or theme-specific .antd-* / .dark-* selector usage in source styles and editor helpers.",
       "paths": [
         "packages/amis-ui/scss",
         "packages/amis-theme-editor-helper/src",
-        "packages/amis-editor-core/scss"
+        "packages/amis-editor-core/scss",
+        "packages/amis-editor/examples",
+        "examples"
       ],
       "extensions": [
         ".scss",
         ".ts",
         ".tsx"
       ],
-      "regex": "\\.(?:amis|antd|dark)-[A-Za-z0-9_-]+",
+      "regex": "\\.(?:amis|cxd|antd|dark)-[A-Za-z0-9_-]+",
       "default_category": "migration-target"
     },
     {
@@ -116,7 +123,7 @@
       "text": "<Portal container={scopedContainer}>",
       "count": 1,
       "lines": [
-        483
+        556
       ]
     },
     {
@@ -127,7 +134,7 @@
       "text": "return <Portal container={scopedContainer}>{renderChild()}</Portal>;",
       "count": 1,
       "lines": [
-        492
+        565
       ]
     },
     {

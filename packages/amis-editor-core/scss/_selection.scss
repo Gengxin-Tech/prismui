@@ -30,20 +30,3 @@
     display: none;
   }
 }
-
-[data-prismui-theme='dark'] {
-  .ae-Editor-selectionCursor {
-    background: rgba(36, 104, 242, 0.2);
-    border-color: var(--colors-brand-4);
-  }
-
-  .ae-Editor-list {
-    .ae-Editor-listItem,
-    .ae-Editor-eachItem {
-      &::after {
-        background: rgba(255, 255, 255, 0.03)
-          url(#{$Editor-static-path}/indication.png) repeat;
-      }
-    }
-  }
-}

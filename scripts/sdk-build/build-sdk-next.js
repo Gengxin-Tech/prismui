@@ -188,26 +188,19 @@ function copyRollupEntryCssAssets() {
 async function writeRollupEntryCssAssets() {
   const cssFiles = new Set(copyRollupEntryCssAssets());
   const themeCssItems = buildSdkThemeCssFromSource({repoRoot});
-  const baseThemeCss =
-    themeCssItems.find(themeCss => themeCss.filename === 'sdk.css')?.content ||
-    '';
 
   for (const themeCss of themeCssItems) {
     writeRollupEntryTextFile(themeCss.filename, themeCss.content);
     cssFiles.add(themeCss.filename);
-    const ie11Content =
-      themeCss.filename === 'sdk.css'
-        ? themeCss.content
-        : `${baseThemeCss}\n${themeCss.content}`;
-    await writeRollupEntryIe11Css(themeCss.filename, ie11Content);
+    await writeRollupEntryIe11Css(themeCss.filename, themeCss.content);
 
     if (themeCss.filename === 'sdk.css') {
       writeRollupEntryTextFile('cxd.css', themeCss.content);
       cssFiles.add('cxd.css');
-      await writeRollupEntryIe11Css('cxd.css', ie11Content);
+      await writeRollupEntryIe11Css('cxd.css', themeCss.content);
       writeRollupEntryTextFile('prismui.css', themeCss.content);
       cssFiles.add('prismui.css');
-      await writeRollupEntryIe11Css('prismui.css', ie11Content);
+      await writeRollupEntryIe11Css('prismui.css', themeCss.content);
     }
   }
 

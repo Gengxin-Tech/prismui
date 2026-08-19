@@ -20,7 +20,7 @@ export class ImagesPlugin extends BasePlugin {
   pluginIcon = 'images-plugin';
   scaffold = {
     type: 'images',
-    imageGallaryClassName: 'app-popover :PRISMUICSSWrapper',
+    imageGallaryClassName: 'app-popover :AMISCSSWrapper',
     displayMode: 'thumb' // 默认缩略图模式
   };
   previewSchema = {

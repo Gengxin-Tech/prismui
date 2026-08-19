@@ -15,6 +15,7 @@ export type ClassValue =
 export type ClassNamesFn = (...classes: ClassValue[]) => string;
 
 export type ComponentClassPrefix = 'prismui-';
+export type LegacyDomClassAlias = false | 'cxd';
 
 export interface ThemeScope {
   theme: string;
@@ -40,6 +41,7 @@ export interface ThemeConfig {
    */
   classPrefix?: string;
   componentClassPrefix?: ComponentClassPrefix;
+  legacyDomClassAlias?: LegacyDomClassAlias;
   renderers?: {
     [propName: string]: any;
   };
@@ -52,11 +54,13 @@ export interface ThemeConfig {
 
 const themes: Record<string, ThemeConfig> = {
   default: {
-    componentClassPrefix: 'prismui-'
+    componentClassPrefix: 'prismui-',
+    legacyDomClassAlias: false
   },
   cxd: {
     classPrefix: 'prismui-',
-    componentClassPrefix: 'prismui-'
+    componentClassPrefix: 'prismui-',
+    legacyDomClassAlias: false
   }
 };
 
@@ -156,15 +160,25 @@ export function getStableClassSelector(
 }
 
 function makeThemeClassnames(
-  componentClassPrefix: ComponentClassPrefix
+  componentClassPrefix: ComponentClassPrefix,
+  legacyDomClassAlias: LegacyDomClassAlias = false
 ): ClassNamesFn {
-  const cacheKey = componentClassPrefix;
+  const aliasPrefix = legacyDomClassAlias === 'cxd' ? 'cxd-' : '';
+  const cacheKey = `${componentClassPrefix}|${aliasPrefix}`;
 
   if (themeFns[cacheKey]) {
     return themeFns[cacheKey];
   }
 
-  return (themeFns[cacheKey] = makePrefixedClassnames([componentClassPrefix]));
+  return (themeFns[cacheKey] = makePrefixedClassnames(
+    aliasPrefix ? [componentClassPrefix, aliasPrefix] : [componentClassPrefix]
+  ));
+}
+
+function normalizeLegacyDomClassAlias(
+  legacyDomClassAlias: ThemeConfig['legacyDomClassAlias']
+): LegacyDomClassAlias {
+  return legacyDomClassAlias === 'cxd' ? 'cxd' : false;
 }
 
 export interface ThemeInstance extends ThemeConfig {
@@ -280,7 +294,10 @@ export function getTheme(theme: string): ThemeInstance {
 
   const config = themes[theme];
   const componentClassPrefix = config.componentClassPrefix || 'prismui-';
-  const classnamesKey = componentClassPrefix;
+  const legacyDomClassAlias = normalizeLegacyDomClassAlias(
+    config.legacyDomClassAlias
+  );
+  const classnamesKey = `${componentClassPrefix}|${legacyDomClassAlias || ''}`;
 
   if (!config.getRendererConfig) {
     config.getRendererConfig = (name?: string) => {
@@ -301,7 +318,10 @@ export function getTheme(theme: string): ThemeInstance {
   }
 
   if (!config.classnames || config.__classnamesKey !== classnamesKey) {
-    config.classnames = makeThemeClassnames(componentClassPrefix);
+    config.classnames = makeThemeClassnames(
+      componentClassPrefix,
+      legacyDomClassAlias
+    );
     config.__classnamesKey = classnamesKey;
   }
 
