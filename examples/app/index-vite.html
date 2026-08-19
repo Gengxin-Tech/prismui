@@ -43,6 +43,9 @@
         const link = document.createElement('link');
         link.setAttribute('rel', 'stylesheet');
         link.setAttribute('title', key);
+        if (theme !== key) {
+          link.setAttribute('disabled', 'disabled');
+        }
         link.setAttribute(
           'href',
           new URL(

@@ -57,6 +57,7 @@ export default [
       },
       {
         label: '渲染器架构',
+        hidden: true,
         path: '/zh-CN/docs/concepts/renderer-architecture',
         component: React.lazy(() =>
           import('../../docs/zh-CN/concepts/renderer-architecture.md').then(

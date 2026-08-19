@@ -7,6 +7,14 @@
     border: 1px solid #e6e6e8;
   }
 
+  .ApiControl-header {
+    .#{$prismui-component-prefix}Form-label {
+      display: inline;
+      margin-bottom: 0;
+      line-height: inherit;
+    }
+  }
+
   &-header {
     @include flexBox();
     height: #{px2rem(24px)};

@@ -20,6 +20,10 @@ $tooltip-bottom: '[data-tooltip][data-position=' bottom ']:hover:after';
 
   @include panel-sm-content();
 
+  &.PRISMUICSSWrapper {
+    @include panel-sm-content();
+  }
+
   // 宽度可拖拽时不增加过渡，避免卡顿
   &.width-draggable {
     transition: none;
@@ -383,6 +387,10 @@ $tooltip-bottom: '[data-tooltip][data-position=' bottom ']:hover:after';
 
 .right-panel-pop {
   @include panel-sm-content();
+
+  &.PRISMUICSSWrapper {
+    @include panel-sm-content();
+  }
 }
 
 // 包裹样式

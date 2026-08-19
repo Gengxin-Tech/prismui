@@ -212,27 +212,10 @@ body {
         padding: 0;
 
         .logo {
+          background: url('./static/logo.png') left/contain no-repeat;
           height: 40px;
-          width: 148px;
+          width: 130px;
           margin-top: 12px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          color: #111827;
-          font-size: 20px;
-          font-weight: 700;
-
-          &::before {
-            content: '';
-            width: 18px;
-            height: 18px;
-            border: 3px solid #2468f2;
-            transform: rotate(45deg);
-          }
-
-          &::after {
-            content: 'PrismUI';
-          }
         }
       }
 

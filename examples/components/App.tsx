@@ -163,15 +163,31 @@ export class App extends React.PureComponent<{
     this.syncDocumentTheme(this.state.theme.value);
   }
 
-  syncDocumentTheme(theme: string) {
-    document.body.setAttribute('data-prismui-theme', theme);
+  syncDocumentTheme(theme: string, previousTheme?: string) {
+    document.documentElement.setAttribute('data-prismui-theme', theme);
+    const body = document.body;
+    previousTheme && body.classList.remove(previousTheme);
+    themes.forEach(item => {
+      if (item.value !== theme) {
+        body.classList.remove(item.value);
+      }
+    });
+    body.classList.add(theme);
+    body.setAttribute('data-prismui-theme', theme);
+
+    [].slice
+      .call(document.querySelectorAll('link[title]'))
+      .forEach((item: HTMLLinkElement) => {
+        const linkTheme = item.getAttribute('title');
+        item.disabled = linkTheme !== theme;
+      });
   }
 
   componentDidUpdate(preProps: any, preState: any) {
     const props = this.props;
 
     if (preState.theme.value !== this.state.theme.value) {
-      this.syncDocumentTheme(this.state.theme.value);
+      this.syncDocumentTheme(this.state.theme.value, preState.theme.value);
     }
 
     if (props.location.pathname !== preProps.location.pathname) {
@@ -239,7 +255,7 @@ export class App extends React.PureComponent<{
               className={`${componentClassPrefix}Layout-brand text-ellipsis`}
             >
               <i className="fa fa-paw" />
-              <span className="hidden-folded m-l-sm">PrismUI 示例</span>
+              <span className="hidden-folded m-l-sm">AMIS 示例</span>
             </div>
           )}
         </div>
@@ -403,7 +419,7 @@ export class App extends React.PureComponent<{
       <div className="Doc-navigation">
         <SearchBox
           className="m-b m-r-md"
-          placeholder="输入关键字"
+          placeholder="输入组件名称"
           value={this.state.filter}
           onSearch={this.setNavigationFilter}
           onChange={this.setNavigationFilter}
@@ -430,6 +446,9 @@ export class App extends React.PureComponent<{
           children: item.children
             ? item.children
                 .filter((item: any) => {
+                  if (item.hidden) {
+                    return false;
+                  }
                   if (item.label) {
                     return filterReg.exec(item.label);
                   }

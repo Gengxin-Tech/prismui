@@ -1,41 +1,4 @@
 .#{$ns}JsonField {
-  // Keep @uiw/react-json-view on the same geometry as the legacy viewer.
-  .w-json-view-container {
-    box-sizing: border-box;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    padding-left: 3px;
-  }
-
-  .w-rjv-inner > div:first-child {
-    display: inline-block !important;
-  }
-
-  .w-rjv-content > .w-rjv-line {
-    padding-top: 4.5px;
-    padding-bottom: 4.5px;
-  }
-
-  .w-rjv-root-count-2 {
-    padding-bottom: 3px;
-  }
-
-  .#{$ns}Table & {
-    .w-rjv-root-count-2 {
-      padding-bottom: 0;
-    }
-
-    .w-json-view-container {
-      min-width: 195px;
-    }
-
-    .w-json-view-container,
-    .w-rjv-content,
-    .w-rjv-line {
-      line-height: 18.75px !important;
-    }
-  }
-
   &-nodeValue {
     white-space: normal;
     word-break: break-all;

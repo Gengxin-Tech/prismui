@@ -121,43 +121,28 @@ function LegacyJsonArrow({
   style,
   ...props
 }: LegacyJsonArrowProps) {
-  const color = expand
-    ? 'var(--w-rjv-expanded-icon-color, var(--w-rjv-arrow-color, currentColor))'
-    : 'var(--w-rjv-collapsed-icon-color, var(--w-rjv-arrow-color, currentColor))';
+  const shapeProps = {
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.8
+  };
 
   return (
     <svg
       {...props}
       data-expand={expand}
       data-icon-style={iconStyle}
-      style={{
-        cursor: 'pointer',
-        fill: color,
-        height: 14,
-        marginRight: 3,
-        verticalAlign: 'middle',
-        width: 14,
-        ...style
-      }}
-      viewBox={iconStyle === 'circle' ? '0 0 24 24' : '0 0 1792 1792'}
+      style={{cursor: 'pointer', height: '1em', width: '1em', ...style}}
+      viewBox="0 0 24 24"
+      fill="none"
     >
       {iconStyle === 'circle' ? (
-        <path
-          d={
-            expand
-              ? 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7'
-              : 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z'
-          }
-        />
+        <circle cx="12" cy="12" r="8" {...shapeProps} />
       ) : (
-        <path
-          d={
-            expand
-              ? 'M1344 800v64q0 14-9 23t-23 9h-832q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h832q14 0 23 9t9 23zm128 448v-832q0-66-47-113t-113-47h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113zm128-832v832q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h832q119 0 203.5 84.5t84.5 203.5z'
-              : 'M1344 800v64q0 14-9 23t-23 9h-352v352q0 14-9 23t-23 9h-64q-14 0-23-9t-9-23v-352h-352q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h352v-352q0-14 9-23t23-9h64q14 0 23 9t9 23v352h352q14 0 23 9t9 23zm128 448v-832q0-66-47-113t-113-47h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113zm128-832v832q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h832q119 0 203.5 84.5t84.5 203.5z'
-          }
-        />
+        <rect x="5" y="5" width="14" height="14" rx="1.5" {...shapeProps} />
       )}
+      <path d="M8 12h8" {...shapeProps} />
+      {!expand ? <path d="M12 8v8" {...shapeProps} /> : null}
     </svg>
   );
 }
@@ -358,13 +343,11 @@ function normalizeCollapsed(collapsed: JsonViewProps['collapsed']) {
 }
 
 function resolveCollapsed(
-  src: any,
+  _src: any,
   collapsed: JsonViewProps['collapsed'],
-  editable: boolean
+  _editable: boolean
 ) {
-  return !editable && isEmptyCollection(src)
-    ? false
-    : normalizeCollapsed(collapsed);
+  return normalizeCollapsed(collapsed);
 }
 
 function resolveClassName(
