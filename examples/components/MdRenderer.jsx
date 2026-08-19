@@ -12,15 +12,34 @@ import Play from './Play';
 
 let mermaidLoader = null;
 
+const mermaidScriptUrls = [
+  __uri('../../node_modules/mermaid/dist/mermaid.min.js'),
+  __uri('/docs/vendor/mermaid/mermaid.min.js')
+];
+
+function loadMermaidScript(urls) {
+  const [url, ...rest] = urls;
+
+  if (!url) {
+    return Promise.reject(new Error('Mermaid failed to load.'));
+  }
+
+  return loadScript(url).catch(error => {
+    if (!rest.length) {
+      throw error;
+    }
+
+    return loadMermaidScript(rest);
+  });
+}
+
 function loadMermaid() {
   if (window.mermaid) {
     return Promise.resolve(window.mermaid);
   }
 
   if (!mermaidLoader) {
-    mermaidLoader = loadScript(
-      __uri('../../node_modules/mermaid/dist/mermaid.min.js')
-    ).then(() => {
+    mermaidLoader = loadMermaidScript(mermaidScriptUrls).then(() => {
       if (!window.mermaid) {
         throw new Error('Mermaid failed to load.');
       }
