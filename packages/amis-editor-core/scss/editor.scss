@@ -2073,8 +2073,8 @@ div[class*='Form-group']:empty {
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] .ae-Editor,
+.ae-Editor[data-prismui-theme='dark'] {
   --ae-editor-surface: var(--colors-neutral-fill-10);
   --ae-editor-surface-strong: var(--colors-neutral-fill-11);
   --ae-editor-surface-muted: rgba(255, 255, 255, 0.03);

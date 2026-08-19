@@ -72,7 +72,7 @@ amis 的 `publish-sdk` media 中大量使用该能力：
 
 - `sdk.js` 包含 `examples/mod.js`、`examples/embed.tsx`、`examples/embed.tsx:deps`、`examples/loadMonacoEditor.ts`，同时排除 ECharts、Tinymce、Froala、CodeMirror、PDF、Office、Excel 等大模块。
 - 将重模块拆成 `rich-text.js`、`tinymce.js`、`codemirror.js`、`exceljs.js`、`xlsx.js`、`markdown.js`、`color-picker.js`、`pdf-viewer.js`、`charts.js`、`office-viewer.js`、`json-view.js`、`rest.js` 等。
-- 对 `*.{js,jsx,ts,tsx}` 生成基于 `package.version + 'prismui-sdk' + path` 的 `moduleId`。
+- 对 `*.{js,jsx,ts,tsx}` 生成基于 `package.version + 'amis-sdk' + path` 的 `moduleId`。
 
 这部分是迁移难点之一：现代 bundler 能手工拆 chunk，但 FIS3 的 `:deps`/排除规则是以“构建期依赖图 + 文件 glob DSL”的方式表达，不能机械替换成一组 `manualChunks` 后就宣称等价。
 
@@ -92,7 +92,7 @@ amis 的 `publish-sdk` media 中大量使用该能力：
 `scripts/embed-packager.js` 会读取 `examples/sdk-placeholder.html`，把其中 script/link/style 对应的资源合并为 SDK 产物：
 
 - 合并 JS 为 `sdk.js`。
-- 按 `ang`、`prismui`、`dark`、`antd` 主题输出 `sdk.css`/`ang.css`/`dark.css`/`antd.css`。
+- 按 `ang`、`cxd`、`dark`、`antd` 主题输出 `sdk.css`/`ang.css`/`dark.css`/`antd.css`，并保留 `prismui.css` 作为 cxd 的兼容别名。
 - 对 CSS selector 加 `.prismui-scope` 前缀，同时排除 `fr-`、`fa`、`tox`、`monaco`、`vs`、`colorpicker` 等第三方全局 selector。
 - 对 resource map 中相对 URL 改写为 `amis['sdk@<version>BasePath'] + ...`。
 
@@ -233,7 +233,7 @@ runtime smoke 曾暴露过两个边界：正式 FIS SDK 在同一 jsdom 环境�
 
 2026-08-14 对比 Rollup 默认产物与 FIS3 fallback 产物，结论是“发布契约一致，但不是字节级一致”：
 
-- 构建命令均退出 0：Rollup 使用 `node scripts/sdk-build/build-sdk-next.js --mode rollup-sdk --out-dir /tmp/prismui-sdk-compare/rollup`，FIS3 使用 `AMIS_SDK_BUILDER=fis3 npm run build --workspace packages/amis` 后复制 `packages/amis/sdk`。
+- 构建命令均退出 0：Rollup 使用 `node scripts/sdk-build/build-sdk-next.js --mode rollup-sdk --out-dir /tmp/amis-sdk-compare/rollup`，FIS3 使用 `AMIS_SDK_BUILDER=fis3 npm run build --workspace packages/amis` 后复制 `packages/amis/sdk`。
 - 文件集合一致：两边均为 106 个文件，公共文件 106 个，Rollup-only/FIS3-only 均为 0；其中 72 个文件 hash 相同，34 个文件内容不同。
 - SDK contract 均通过：Rollup 为 `5975 resources, 16 packages`，FIS3 为 `1439 resources, 16 packages`；16 个 package chunk URL 集合一致，均指向 `sdk.js`、`rest.js`、`charts.js`、`tinymce.js`、`xlsx.js` 等计划 chunk。
 - 静态资源大体一致：`helper.css`、`locale/de-DE.js`、`iconfont.*`、`thirds/pdfjs-dist/build/pdf.worker.min.mjs` 等关键静态文件 hash 相同；`pdf.js`、HLS、mpegts、Monaco loader/runtime 文件因包装或生成方式不同而 hash 不同。
@@ -244,7 +244,7 @@ runtime smoke 曾暴露过两个边界：正式 FIS SDK 在同一 jsdom 环境�
 
 压缩策略采用顺序 SWC `compress + mangle`，并保持现有 `sdk.js`、`rest.js`、`color-picker.js` 等 chunk 拓扑不变。曾尝试新增内嵌 `sdk-shared` chunk 把 React/MobX/MST/lodash 等公共模块从 `color-picker.js` 抽回入口，体积上能继续降低 `color-picker.js`，但会在 `check-sdk-rollup-entry` 的 jsdom runtime smoke 中触发 CommonJS 初始化顺序错误，因此本轮不纳入正式方案。剩余体积差异应优先看拆包语义和懒加载边界，而不是继续堆压缩强度。
 
-2026-08-14 继续追问的是 SDK 发布目录的 raw 打包原始尺寸，而不是 gzip/Brotli 传输压缩率。按当前 `packages/amis/sdk` 与 FIS3 fallback `/tmp/prismui-sdk-compare/fis3-1786693063` 对比：当前 Rollup SDK 为 `60.504 MiB raw`，FIS3 为 `58.023 MiB raw`，净多 `2.481 MiB raw`。分层看，根目录 JS chunk 从 `13.336 MiB` 增到 `16.245 MiB`，多 `2.909 MiB`；`thirds` JS 反而少 `0.480 MiB`，CSS 只多 `0.052 MiB`，fonts/icons/worker/other 基本持平。因此 raw 尺寸问题几乎全部集中在根目录 JS chunk。
+2026-08-14 继续追问的是 SDK 发布目录的 raw 打包原始尺寸，而不是 gzip/Brotli 传输压缩率。按当前 `packages/amis/sdk` 与 FIS3 fallback `/tmp/amis-sdk-compare/fis3-1786693063` 对比：当前 Rollup SDK 为 `60.504 MiB raw`，FIS3 为 `58.023 MiB raw`，净多 `2.481 MiB raw`。分层看，根目录 JS chunk 从 `13.336 MiB` 增到 `16.245 MiB`，多 `2.909 MiB`；`thirds` JS 反而少 `0.480 MiB`，CSS 只多 `0.052 MiB`，fonts/icons/worker/other 基本持平。因此 raw 尺寸问题几乎全部集中在根目录 JS chunk。
 
 同名文件 raw 增量最大的是：
 

@@ -40,7 +40,7 @@ exports[`Renderer:group 1`] = `
           >
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-              data-prismui-name="test1"
+              data-amis-name="test1"
               data-role="form-item"
             >
               <label
@@ -84,7 +84,7 @@ exports[`Renderer:group 1`] = `
           >
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-              data-prismui-name="test2"
+              data-amis-name="test2"
               data-role="form-item"
             >
               <label
@@ -129,7 +129,7 @@ exports[`Renderer:group 1`] = `
         >
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--inline"
-            data-prismui-name="test1"
+            data-amis-name="test1"
             data-role="form-item"
           >
             <label
@@ -169,7 +169,7 @@ exports[`Renderer:group 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--inline"
-            data-prismui-name="test2"
+            data-amis-name="test2"
             data-role="form-item"
           >
             <label
@@ -213,7 +213,7 @@ exports[`Renderer:group 1`] = `
         >
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="test1"
+            data-amis-name="test1"
             data-role="form-item"
           >
             <label
@@ -249,7 +249,7 @@ exports[`Renderer:group 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="test2"
+            data-amis-name="test2"
             data-role="form-item"
           >
             <label

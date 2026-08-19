@@ -4,8 +4,9 @@ export const classPrefix: string = 'prismui-';
 export const classnames: ClassNamesFn = makeClassnames(classPrefix);
 
 // yunshe.design 百度云舍
-theme('prismui', {
+theme('cxd', {
   classPrefix: 'prismui-',
+  componentClassPrefix: 'prismui-',
 
   components: {
     toast: {

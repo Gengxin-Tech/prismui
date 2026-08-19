@@ -4,7 +4,7 @@ exports[`Renderer: chained select 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -48,7 +48,7 @@ exports[`Renderer: chained select 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <label
@@ -125,7 +125,7 @@ exports[`Renderer:select associated 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -169,7 +169,7 @@ exports[`Renderer:select associated 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="b"
+                  data-amis-name="b"
                   data-role="form-item"
                 >
                   <label
@@ -276,7 +276,7 @@ exports[`Renderer:select associated mode with virtual 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="select"
+          data-amis-name="select"
           data-role="form-item"
         >
           <label
@@ -349,7 +349,7 @@ exports[`Renderer:select chained 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -393,7 +393,7 @@ exports[`Renderer:select chained 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <label
@@ -500,7 +500,7 @@ exports[`Renderer:select chained mode with virtual 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="select"
+          data-amis-name="select"
           data-role="form-item"
         >
           <label
@@ -573,7 +573,7 @@ exports[`Renderer:select group 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -617,7 +617,7 @@ exports[`Renderer:select group 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <label
@@ -724,7 +724,7 @@ exports[`Renderer:select group mode with virtual 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="select"
+          data-amis-name="select"
           data-role="form-item"
         >
           <label
@@ -797,7 +797,7 @@ exports[`Renderer:select menutpl 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -841,7 +841,7 @@ exports[`Renderer:select menutpl 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="select"
+                  data-amis-name="select"
                   data-role="form-item"
                 >
                   <label
@@ -917,7 +917,7 @@ exports[`Renderer:select table 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -961,7 +961,7 @@ exports[`Renderer:select table 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <label
@@ -1068,7 +1068,7 @@ exports[`Renderer:select table mode with virtual 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="select"
+          data-amis-name="select"
           data-role="form-item"
         >
           <label
@@ -1171,7 +1171,7 @@ exports[`Renderer:select table with labelField & valueField 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -1281,7 +1281,7 @@ exports[`Renderer:select tree 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1325,7 +1325,7 @@ exports[`Renderer:select tree 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <label
@@ -1432,7 +1432,7 @@ exports[`Renderer:select virtual 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="select"
+          data-amis-name="select"
           data-role="form-item"
         >
           <label
@@ -1478,10 +1478,10 @@ exports[`Renderer:select virtual 1`] = `
               </span>
               <div
                 class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver __PRISMUI_COMPONENT_CLASS_PREFIX__Select-popover"
-                data-prismui-theme="prismui"
+                data-prismui-theme="cxd"
                 role="popover"
                 style="display: block; width: 0px; left: 0px; top: 0px; visibility: hidden;"
-                theme="prismui"
+                theme="cxd"
               >
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver-overlay"

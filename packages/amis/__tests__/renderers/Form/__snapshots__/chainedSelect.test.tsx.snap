@@ -125,7 +125,7 @@ exports[`Renderer:chained-select 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="select3"
+          data-amis-name="select3"
           data-role="form-item"
         >
           <label

@@ -153,8 +153,7 @@
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .ae-Breadcrumb {
     background: var(--ae-editor-surface);
     border-bottom-color: var(--ae-editor-border);

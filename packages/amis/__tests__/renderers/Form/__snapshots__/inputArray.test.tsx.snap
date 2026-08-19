@@ -4,7 +4,7 @@ exports[`Renderer:inputArray 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -48,7 +48,7 @@ exports[`Renderer:inputArray 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="array"
+                  data-amis-name="array"
                   data-role="form-item"
                 >
                   <label
@@ -99,7 +99,7 @@ exports[`Renderer:inputArray 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div
@@ -190,7 +190,7 @@ exports[`Renderer:inputArray with draggable & draggableTip 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -234,7 +234,7 @@ exports[`Renderer:inputArray with draggable & draggableTip 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="array"
+                  data-amis-name="array"
                   data-role="form-item"
                 >
                   <label
@@ -298,7 +298,7 @@ exports[`Renderer:inputArray with draggable & draggableTip 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div
@@ -374,7 +374,7 @@ exports[`Renderer:inputArray with draggable & draggableTip 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div
@@ -450,7 +450,7 @@ exports[`Renderer:inputArray with draggable & draggableTip 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div
@@ -546,7 +546,7 @@ exports[`Renderer:inputArray with minLength & maxLength 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -590,7 +590,7 @@ exports[`Renderer:inputArray with minLength & maxLength 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="array"
+                  data-amis-name="array"
                   data-role="form-item"
                 >
                   <label
@@ -641,7 +641,7 @@ exports[`Renderer:inputArray with minLength & maxLength 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div
@@ -694,7 +694,7 @@ exports[`Renderer:inputArray with minLength & maxLength 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div
@@ -775,7 +775,7 @@ exports[`Renderer:inputArray with removable & addable & addButtonText: false 1`]
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -819,7 +819,7 @@ exports[`Renderer:inputArray with removable & addable & addButtonText: false 1`]
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="array"
+                  data-amis-name="array"
                   data-role="form-item"
                 >
                   <label
@@ -870,7 +870,7 @@ exports[`Renderer:inputArray with removable & addable & addButtonText: false 1`]
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div
@@ -923,7 +923,7 @@ exports[`Renderer:inputArray with removable & addable & addButtonText: false 1`]
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div
@@ -991,7 +991,7 @@ exports[`Renderer:inputArray with removable & addable & addButtonText: false 2`]
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1035,7 +1035,7 @@ exports[`Renderer:inputArray with removable & addable & addButtonText: false 2`]
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="array"
+                  data-amis-name="array"
                   data-role="form-item"
                 >
                   <label
@@ -1086,7 +1086,7 @@ exports[`Renderer:inputArray with removable & addable & addButtonText: false 2`]
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="flat"
+                                      data-amis-name="flat"
                                       data-role="form-item"
                                     >
                                       <div

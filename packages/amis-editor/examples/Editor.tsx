@@ -14,7 +14,7 @@ import {currentLocale} from 'i18n-runtime';
 import {Portal} from 'react-overlays';
 import {Icon} from './icons/index';
 import LayoutList from './layout/index';
-import {prismuiData} from 'amis-theme-editor-helper';
+import {cxdData} from 'amis-theme-editor-helper';
 
 // 测试组织属性配置面板的国际化，可以放开如下注释
 // import './renderer/InputTextI18n';
@@ -22,7 +22,7 @@ import {prismuiData} from 'amis-theme-editor-helper';
 // import './utils/overwriteSchemaTpl';
 // const i18nEnabled = true;
 const i18nEnabled = false;
-setThemeConfig(prismuiData);
+setThemeConfig(cxdData);
 
 const schema = {
   type: 'page',
@@ -677,7 +677,7 @@ export default class AMisSchemaEditor extends React.Component<any, any> {
         onSave={this.onSave}
         className="is-fixed"
         i18nEnabled={i18nEnabled}
-        theme={theme || 'prismui'}
+        theme={theme || 'cxd'}
         showCustomRenderersPanel={true}
         plugins={LayoutList} // 存放常见布局组件
         $schemaUrl={`${location.protocol}//${location.host}/schema.json`}

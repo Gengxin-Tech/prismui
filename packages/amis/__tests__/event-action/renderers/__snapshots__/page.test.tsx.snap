@@ -4,7 +4,7 @@ exports[`doAction:page reload 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -26,7 +26,7 @@ exports[`doAction:page reload 1`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="title"
+            data-amis-name="title"
             data-role="form-item"
           >
             <label
@@ -62,7 +62,7 @@ exports[`doAction:page reload 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="age"
+            data-amis-name="age"
             data-role="form-item"
           >
             <label
@@ -107,7 +107,7 @@ exports[`doAction:page reload 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -140,7 +140,7 @@ exports[`doAction:page reload 2`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="title"
+            data-amis-name="title"
             data-role="form-item"
           >
             <label
@@ -176,7 +176,7 @@ exports[`doAction:page reload 2`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="age"
+            data-amis-name="age"
             data-role="form-item"
           >
             <label
@@ -221,7 +221,7 @@ exports[`doAction:page reload with data 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -243,7 +243,7 @@ exports[`doAction:page reload with data 1`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="title"
+            data-amis-name="title"
             data-role="form-item"
           >
             <label
@@ -279,7 +279,7 @@ exports[`doAction:page reload with data 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="age"
+            data-amis-name="age"
             data-role="form-item"
           >
             <label
@@ -324,7 +324,7 @@ exports[`doAction:page reload with data 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -357,7 +357,7 @@ exports[`doAction:page reload with data 2`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="title"
+            data-amis-name="title"
             data-role="form-item"
           >
             <label
@@ -393,7 +393,7 @@ exports[`doAction:page reload with data 2`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="age"
+            data-amis-name="age"
             data-role="form-item"
           >
             <label
@@ -438,7 +438,7 @@ exports[`doAction:page reload with data(same name) 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -460,7 +460,7 @@ exports[`doAction:page reload with data(same name) 1`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="title"
+            data-amis-name="title"
             data-role="form-item"
           >
             <label
@@ -496,7 +496,7 @@ exports[`doAction:page reload with data(same name) 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="date"
+            data-amis-name="date"
             data-role="form-item"
           >
             <label
@@ -541,7 +541,7 @@ exports[`doAction:page reload with data(same name) 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -563,7 +563,7 @@ exports[`doAction:page reload with data(same name) 2`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="title"
+            data-amis-name="title"
             data-role="form-item"
           >
             <label
@@ -599,7 +599,7 @@ exports[`doAction:page reload with data(same name) 2`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="date"
+            data-amis-name="date"
             data-role="form-item"
           >
             <label

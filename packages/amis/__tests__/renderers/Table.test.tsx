@@ -1125,7 +1125,7 @@ test('Renderer:table-accessSuperData4', () => {
   expect(td2?.textContent).toBe('-');
 });
 
-// https://github.com/baidu/amis/issues/9556
+// https://github.com/Gengxin-Tech/prismui/issues/9556
 test('Renderer:table-accessSuperData5', async () => {
   const {container, getByText} = render(
     amisRender(

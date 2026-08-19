@@ -34,7 +34,7 @@ exports[`Renderer:static 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal bg-white"
-          data-prismui-name="static"
+          data-amis-name="static"
           data-role="form-item"
         >
           <label
@@ -73,7 +73,7 @@ exports[`Renderer:static 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="static 1"
+          data-amis-name="static 1"
           data-role="form-item"
         >
           <div
@@ -96,7 +96,7 @@ exports[`Renderer:static 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="static 2"
+          data-amis-name="static 2"
           data-role="form-item"
         >
           <div
@@ -127,7 +127,7 @@ exports[`Renderer:static-quickEdit-icon 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-    data-prismui-name="static"
+    data-amis-name="static"
     data-role="form-item"
   >
     <label
@@ -204,7 +204,7 @@ exports[`Renderer:static2 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -228,7 +228,7 @@ exports[`Renderer:static2 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="b"
+          data-amis-name="b"
           data-role="form-item"
         >
           <label
@@ -264,7 +264,7 @@ exports[`Renderer:static2 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="c"
+          data-amis-name="c"
           data-role="form-item"
         >
           <label
@@ -294,7 +294,7 @@ exports[`Renderer:static2 1`] = `
           >
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="a"
+              data-amis-name="a"
               data-role="form-item"
             >
               <label
@@ -322,7 +322,7 @@ exports[`Renderer:static2 1`] = `
           >
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="b"
+              data-amis-name="b"
               data-role="form-item"
             >
               <label
@@ -362,7 +362,7 @@ exports[`Renderer:static2 1`] = `
           >
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="c"
+              data-amis-name="c"
               data-role="form-item"
             >
               <label
@@ -394,7 +394,7 @@ exports[`Renderer:static2 1`] = `
           >
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="a"
+              data-amis-name="a"
               data-role="form-item"
             >
               <label
@@ -434,7 +434,7 @@ exports[`Renderer:static2 1`] = `
           >
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="b"
+              data-amis-name="b"
               data-role="form-item"
             >
               <label
@@ -474,7 +474,7 @@ exports[`Renderer:static2 1`] = `
           >
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="c"
+              data-amis-name="c"
               data-role="form-item"
             >
               <label

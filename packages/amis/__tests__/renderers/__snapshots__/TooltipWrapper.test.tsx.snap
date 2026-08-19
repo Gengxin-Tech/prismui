@@ -5,7 +5,7 @@ exports[`Renderer:TooltipWrapper with context data 1`] = `
   <div>
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-      data-prismui-theme="prismui"
+      data-prismui-theme="cxd"
     >
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -35,11 +35,11 @@ exports[`Renderer:TooltipWrapper with context data 1`] = `
   </div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip __PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip--light"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
     offset="0,0"
     role="tooltip"
     style="left: 0px; top: 0px; visibility: hidden;"
-    theme="prismui"
+    theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip-arrow"
@@ -67,7 +67,7 @@ exports[`Renderer:TooltipWrapper with offset 1`] = `
   <div>
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-      data-prismui-theme="prismui"
+      data-prismui-theme="cxd"
     >
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -97,11 +97,11 @@ exports[`Renderer:TooltipWrapper with offset 1`] = `
   </div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip __PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip--light"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
     offset="19,-22"
     role="tooltip"
     style="left: 0px; top: 0px; visibility: hidden;"
-    theme="prismui"
+    theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip-arrow"
@@ -136,11 +136,11 @@ exports[`Renderer:TooltipWrapper with showArrow 1`] = `
   </div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip __PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip--light"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
     offset="0,0"
     role="tooltip"
     style="left: 0px; top: 0px; visibility: hidden;"
-    theme="prismui"
+    theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip-title"
@@ -178,11 +178,11 @@ exports[`Renderer:TooltipWrapper with style & tooltipStyle 1`] = `
   </div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip __PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip--light"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
     offset="0,0"
     role="tooltip"
     style="font-weight: bold; left: 0px; top: 0px; visibility: hidden;"
-    theme="prismui"
+    theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Tooltip-arrow"
@@ -204,7 +204,7 @@ exports[`Renderer:TooltipWrapper with trigger & title 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"

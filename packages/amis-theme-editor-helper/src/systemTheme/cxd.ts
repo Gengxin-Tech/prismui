@@ -1,10 +1,10 @@
 import type {ThemeDefinition} from '../helper/declares';
 import component from './component';
 
-const prismuiData: ThemeDefinition = {
+const cxdData: ThemeDefinition = {
   config: {
-    name: 'PrismUI',
-    key: 'prismui',
+    name: '云舍',
+    key: 'cxd',
     description: '系统预设主题'
   },
   global: {
@@ -1510,4 +1510,4 @@ const prismuiData: ThemeDefinition = {
   },
   component
 };
-export default prismuiData;
+export default cxdData;

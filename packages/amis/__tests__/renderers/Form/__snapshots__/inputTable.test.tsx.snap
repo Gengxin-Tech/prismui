@@ -4,7 +4,7 @@ exports[`Renderer:input table 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -48,7 +48,7 @@ exports[`Renderer:input table 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="table"
+                  data-amis-name="table"
                   data-role="form-item"
                 >
                   <div
@@ -326,7 +326,7 @@ exports[`Renderer:input table add 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="table"
+          data-amis-name="table"
           data-role="form-item"
         >
           <div
@@ -436,7 +436,7 @@ exports[`Renderer:input table add 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="a"
+                            data-amis-name="a"
                             data-role="form-item"
                           >
                             <div
@@ -464,7 +464,7 @@ exports[`Renderer:input table add 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="b"
+                            data-amis-name="b"
                             data-role="form-item"
                           >
                             <div
@@ -592,7 +592,7 @@ exports[`Renderer:input-table cell selects delete 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="table"
+          data-amis-name="table"
           data-role="form-item"
         >
           <label
@@ -690,7 +690,7 @@ exports[`Renderer:input-table cell selects delete 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="select"
+                            data-amis-name="select"
                             data-role="form-item"
                           >
                             <div
@@ -830,7 +830,7 @@ exports[`Renderer:input-table init display 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="aaa"
+          data-amis-name="aaa"
           data-role="form-item"
         >
           <label
@@ -898,7 +898,7 @@ exports[`Renderer:input-table init display 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="tableList"
+          data-amis-name="tableList"
           data-role="form-item"
         >
           <label
@@ -1042,7 +1042,7 @@ exports[`Renderer:input-table init display 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="name"
+                            data-amis-name="name"
                             data-role="form-item"
                           >
                             <div
@@ -1070,7 +1070,7 @@ exports[`Renderer:input-table init display 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="score"
+                            data-amis-name="score"
                             data-role="form-item"
                           >
                             <div
@@ -1183,7 +1183,7 @@ exports[`Renderer:input-table init display 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="level"
+                            data-amis-name="level"
                             data-role="form-item"
                           >
                             <div
@@ -1249,7 +1249,7 @@ exports[`Renderer:input-table init display 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="name"
+                            data-amis-name="name"
                             data-role="form-item"
                           >
                             <div
@@ -1277,7 +1277,7 @@ exports[`Renderer:input-table init display 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="score"
+                            data-amis-name="score"
                             data-role="form-item"
                           >
                             <div
@@ -1390,7 +1390,7 @@ exports[`Renderer:input-table init display 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="level"
+                            data-amis-name="level"
                             data-role="form-item"
                           >
                             <div
@@ -1508,7 +1508,7 @@ exports[`Renderer:input-table verifty 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="table"
+          data-amis-name="table"
           data-role="form-item"
         >
           <label
@@ -1581,7 +1581,7 @@ exports[`Renderer:input-table with combo column 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="table"
+          data-amis-name="table"
           data-role="form-item"
         >
           <div
@@ -1643,7 +1643,7 @@ exports[`Renderer:input-table with combo column 1`] = `
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                            data-prismui-name="q1"
+                            data-amis-name="q1"
                             data-role="form-item"
                           >
                             <div
@@ -1675,7 +1675,7 @@ exports[`Renderer:input-table with combo column 1`] = `
                                         >
                                           <div
                                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                            data-prismui-name="score"
+                                            data-amis-name="score"
                                             data-role="form-item"
                                           >
                                             <div
@@ -1740,7 +1740,7 @@ exports[`Renderer:input-table with combo column 1`] = `
                                         >
                                           <div
                                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                            data-prismui-name="comment"
+                                            data-amis-name="comment"
                                             data-role="form-item"
                                           >
                                             <div

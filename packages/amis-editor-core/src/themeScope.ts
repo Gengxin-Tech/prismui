@@ -10,7 +10,7 @@ import {
 
 export function resolveEditorThemeName(
   theme?: any,
-  fallbackTheme: string = 'prismui'
+  fallbackTheme: string = 'cxd'
 ) {
   if (typeof theme === 'string' && theme) {
     return theme;
@@ -29,7 +29,7 @@ export function resolveEditorThemeName(
 
 export function resolveEditorComponentClassPrefix(
   theme?: any,
-  fallbackTheme: string = 'prismui'
+  fallbackTheme: string = 'cxd'
 ) {
   if (typeof theme?.componentClassPrefix === 'string') {
     return theme.componentClassPrefix;
@@ -41,7 +41,7 @@ export function resolveEditorComponentClassPrefix(
 
 export function getEditorThemeClassnames(
   theme?: any,
-  fallbackTheme: string = 'prismui'
+  fallbackTheme: string = 'cxd'
 ) {
   return makeStableClassnames(
     resolveEditorComponentClassPrefix(theme, fallbackTheme) as any
@@ -51,7 +51,7 @@ export function getEditorThemeClassnames(
 export function getEditorThemeClassName(
   theme: any,
   className: string,
-  fallbackTheme: string = 'prismui'
+  fallbackTheme: string = 'cxd'
 ) {
   return getStableClassName(
     getEditorThemeClassnames(theme, fallbackTheme),
@@ -62,7 +62,7 @@ export function getEditorThemeClassName(
 export function getEditorThemeClassSelector(
   theme: any,
   className: string,
-  fallbackTheme: string = 'prismui'
+  fallbackTheme: string = 'cxd'
 ) {
   return getStableClassSelector(
     getEditorThemeClassnames(theme, fallbackTheme),

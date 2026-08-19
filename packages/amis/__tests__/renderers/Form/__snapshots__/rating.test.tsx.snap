@@ -34,7 +34,7 @@ exports[`Renderer:rating with allowClear 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <label
@@ -103,7 +103,7 @@ exports[`Renderer:rating with allowClear 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <div
@@ -212,7 +212,7 @@ exports[`Renderer:rating with char & charClassName 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <label
@@ -320,7 +320,7 @@ exports[`Renderer:rating with colors & inactiveColor 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <label
@@ -394,7 +394,7 @@ exports[`Renderer:rating with colors & inactiveColor 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <label
@@ -516,7 +516,7 @@ exports[`Renderer:rating with count & half 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <label
@@ -647,7 +647,7 @@ exports[`Renderer:rating with readOnly 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <label
@@ -716,7 +716,7 @@ exports[`Renderer:rating with readOnly 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <div
@@ -825,7 +825,7 @@ exports[`Renderer:rating with texts & textPosition & textClassName 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <label
@@ -899,7 +899,7 @@ exports[`Renderer:rating with texts & textPosition & textClassName 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="rating"
+          data-amis-name="rating"
           data-role="form-item"
         >
           <label

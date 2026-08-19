@@ -13,13 +13,14 @@ import {
 } from '../src/theme';
 
 afterEach(() => {
-  theme('prismui', {
+  theme('cxd', {
+    classPrefix: 'prismui-',
     componentClassPrefix: 'prismui-'
   });
 });
 
 test('theme runtime uses stable component classnames by default', () => {
-  const cx = getTheme('prismui').classnames;
+  const cx = getTheme('cxd').classnames;
 
   expect(cx('Button', 'Button--primary', 'is-disabled')).toBe(
     'prismui-Button prismui-Button--primary is-disabled'
@@ -27,28 +28,28 @@ test('theme runtime uses stable component classnames by default', () => {
 });
 
 test('theme runtime exposes stable component classPrefix to components', () => {
-  theme('prismui', {
+  theme('cxd', {
     classPrefix: 'prismui-',
     componentClassPrefix: 'prismui-'
   });
 
   expect(getClassPrefix()).toBe('prismui-');
-  expect(getTheme('prismui').componentClassPrefix).toBe('prismui-');
+  expect(getTheme('cxd').componentClassPrefix).toBe('prismui-');
 });
 
 test('theme runtime exposes a data attribute scope', () => {
-  expect(getThemeScope('prismui')).toMatchObject({
-    theme: 'prismui',
+  expect(getThemeScope('cxd')).toMatchObject({
+    theme: 'cxd',
     attribute: 'data-prismui-theme',
-    value: 'prismui',
-    selector: '[data-prismui-theme="prismui"]',
-    tokenScopeSelector: '[data-prismui-theme="prismui"]'
+    value: 'cxd',
+    selector: '[data-prismui-theme="cxd"]',
+    tokenScopeSelector: '[data-prismui-theme="cxd"]'
   });
 
-  expect(getThemeScopeProps('prismui')).toEqual({
-    'data-prismui-theme': 'prismui'
+  expect(getThemeScopeProps('cxd')).toEqual({
+    'data-prismui-theme': 'cxd'
   });
-  expect(getTheme('default').scope.value).toBe('prismui');
+  expect(getTheme('default').scope.value).toBe('cxd');
 });
 
 test('makeStableClassnames prefixes only component tokens', () => {
@@ -60,7 +61,7 @@ test('makeStableClassnames prefixes only component tokens', () => {
 });
 
 test('stable class selector helpers prefer the primary component class', () => {
-  const cx = getTheme('prismui').classnames;
+  const cx = getTheme('cxd').classnames;
 
   expect(getStableClassName(cx, 'Modal-content')).toBe('prismui-Modal-content');
   expect(getStableClassSelector(cx, 'Modal-content')).toBe(
@@ -69,13 +70,13 @@ test('stable class selector helpers prefer the primary component class', () => {
 });
 
 test('theme classnames do not emit a legacy alias', () => {
-  expect(getTheme('prismui').classnames('Button')).toBe('prismui-Button');
+  expect(getTheme('cxd').classnames('Button')).toBe('prismui-Button');
 
-  theme('prismui', {
+  theme('cxd', {
     classPrefix: 'prismui-'
   });
 
-  expect(getTheme('prismui').classnames('Button', 'Button--primary')).toBe(
+  expect(getTheme('cxd').classnames('Button', 'Button--primary')).toBe(
     'prismui-Button prismui-Button--primary'
   );
 });
@@ -96,15 +97,15 @@ test('overlay theme helpers resolve nearest DOM scope', () => {
 
 test('overlay theme helpers apply scope idempotently', () => {
   const node = document.createElement('div');
-  const prismuiScope = getThemeScope('prismui');
+  const cxdScope = getThemeScope('cxd');
   const darkScope = getThemeScope('dark');
 
-  expect(applyThemeScope(node, prismuiScope)).toBe(prismuiScope);
-  expect(node).toHaveAttribute('data-prismui-theme', 'prismui');
+  expect(applyThemeScope(node, cxdScope)).toBe(cxdScope);
+  expect(node).toHaveAttribute('data-prismui-theme', 'cxd');
   expect(applyThemeScope(node, darkScope)).toMatchObject({
-    value: 'prismui'
+    value: 'cxd'
   });
-  expect(node).toHaveAttribute('data-prismui-theme', 'prismui');
+  expect(node).toHaveAttribute('data-prismui-theme', 'cxd');
 });
 
 test('overlay container resolver preserves custom container scope', () => {
@@ -114,7 +115,7 @@ test('overlay container resolver preserves custom container scope', () => {
   const customResolution = resolveOverlayContainer(
     custom,
     fallback,
-    getThemeScope('prismui')
+    getThemeScope('cxd')
   );
 
   expect(customResolution.container).toBe(custom);
@@ -123,10 +124,10 @@ test('overlay container resolver preserves custom container scope', () => {
     value: 'dark',
     selector: '[data-prismui-theme="dark"]'
   });
-  expect(resolveOverlayContainer(null, fallback, getThemeScope('prismui'))).toEqual(
+  expect(resolveOverlayContainer(null, fallback, getThemeScope('cxd'))).toEqual(
     {
       container: fallback,
-      scope: getThemeScope('prismui')
+      scope: getThemeScope('cxd')
     }
   );
 });

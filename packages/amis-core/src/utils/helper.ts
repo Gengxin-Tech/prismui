@@ -2476,7 +2476,7 @@ export function formateId(id: string) {
   id = id.replace(/^-|-$/g, '');
   // 首字母不能为数字
   if (/^\d/.test(id)) {
-    id = 'prismui-' + id;
+    id = 'amis-' + id;
   }
   return id;
 }

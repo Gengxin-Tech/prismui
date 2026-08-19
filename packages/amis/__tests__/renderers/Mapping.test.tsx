@@ -282,7 +282,7 @@ test('Renderer:mapping schema', async () => {
   expect(value5.innerHTML).toBe(tag('其他').innerHTML);
 });
 
-// 对应 issue https://github.com/baidu/amis/issues/9613
+// 对应 issue https://github.com/Gengxin-Tech/prismui/issues/9613
 test('Renderer:mapping schema status', async () => {
   const {container, getByText} = render(
     amisRender(

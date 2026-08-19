@@ -1023,7 +1023,7 @@ setSchemaTpl('theme:form-description', () => {
       }),
       {
         label: '上间距',
-        type: 'prismui-theme-select',
+        type: 'amis-theme-select',
         name: 'themeCss.descriptionClassName.margin-top:default',
         options: '${sizesOptions}',
         editorValueToken: '--Form-description-gap'
@@ -1037,7 +1037,7 @@ setSchemaTpl('theme:select', (option: any = {}) => {
   return {
     mode: 'horizontal',
     labelAlign: 'left',
-    type: 'prismui-theme-select',
+    type: 'amis-theme-select',
     label: '大小',
     name: `themeCss.className.select:default`,
     options: '${sizesOptions}',
@@ -1049,7 +1049,7 @@ setSchemaTpl('theme:select', (option: any = {}) => {
 setSchemaTpl('theme:font', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'prismui-theme-font-editor',
+    type: 'amis-theme-font-editor',
     label: '文字',
     name: `themeCss.className.font:default`,
     needColorCustom: true,
@@ -1061,7 +1061,7 @@ setSchemaTpl('theme:font', (option: any = {}) => {
 setSchemaTpl('theme:colorPicker', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'prismui-theme-color-picker',
+    type: 'amis-theme-color-picker',
     label: '颜色',
     name: `themeCss.className.color:default`,
     needCustom: true,
@@ -1073,7 +1073,7 @@ setSchemaTpl('theme:colorPicker', (option: any = {}) => {
 setSchemaTpl('theme:border', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'prismui-theme-border',
+    type: 'amis-theme-border',
     label: '边框',
     name: `themeCss.className.border:default`,
     needColorCustom: true,
@@ -1085,7 +1085,7 @@ setSchemaTpl('theme:border', (option: any = {}) => {
 setSchemaTpl('theme:paddingAndMargin', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'prismui-theme-padding-and-margin',
+    type: 'amis-theme-padding-and-margin',
     label: '边距',
     name: `themeCss.className.padding-and-margin:default`,
     ...option
@@ -1096,7 +1096,7 @@ setSchemaTpl('theme:paddingAndMargin', (option: any = {}) => {
 setSchemaTpl('theme:radius', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'prismui-theme-radius',
+    type: 'amis-theme-radius',
     label: '圆角',
     name: `themeCss.className.radius:default`,
     ...option
@@ -1106,7 +1106,7 @@ setSchemaTpl('theme:radius', (option: any = {}) => {
 // 阴影选择器
 setSchemaTpl('theme:shadow', (option: any = {}) => {
   return {
-    type: 'prismui-theme-shadow-editor',
+    type: 'amis-theme-shadow-editor',
     label: false,
     name: `themeCss.className.boxShadow:default`,
     hasSenior: true,
@@ -1118,7 +1118,7 @@ setSchemaTpl('theme:shadow', (option: any = {}) => {
 setSchemaTpl('theme:size', (option: any = {}) => {
   return {
     mode: 'default',
-    type: 'prismui-theme-size-editor',
+    type: 'amis-theme-size-editor',
     label: false,
     name: `themeCss.className.size:default`,
     options: '${sizesOptions}',
@@ -1417,10 +1417,10 @@ setSchemaTpl('animation', () => {
     createAnimationStyle(id, animations);
 
     if (isMobile) {
-      let style = doc.getElementById('prismui-styles');
+      let style = doc.getElementById('amis-styles');
       if (!style) {
         style = doc.createElement('style');
-        style.id = 'prismui-styles';
+        style.id = 'amis-styles';
         doc.head.appendChild(style);
       }
       style.innerHTML = styleManager.styleText;

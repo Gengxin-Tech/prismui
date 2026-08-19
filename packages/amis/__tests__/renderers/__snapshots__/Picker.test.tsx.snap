@@ -8,7 +8,7 @@ exports[`1. Renderer:Picker base 1`] = `
   <div>
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-      data-prismui-name="picker"
+      data-amis-name="picker"
       data-role="form-item"
     >
       <label
@@ -52,8 +52,8 @@ exports[`1. Renderer:Picker base 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -244,7 +244,7 @@ exports[`1. Renderer:Picker base 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-    data-prismui-name="picker"
+    data-amis-name="picker"
     data-role="form-item"
   >
     <label

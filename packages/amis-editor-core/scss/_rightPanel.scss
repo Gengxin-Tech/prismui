@@ -318,8 +318,7 @@ $tooltip-bottom: '[data-tooltip][data-position=' bottom ']:hover:after';
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .editor-right-panel {
     background: var(--ae-editor-surface);
     box-shadow: -2px 0 24px rgba(0, 0, 0, 0.35);
@@ -570,8 +569,7 @@ body[data-prismui-theme='dark'] {
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .right-panel-pop,
   .config-wrapper-contanier {
     color: var(--ae-editor-text);

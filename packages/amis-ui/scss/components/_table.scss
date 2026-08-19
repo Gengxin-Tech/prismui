@@ -603,6 +603,10 @@
         @include font-variant($success);
       }
 
+      &.bg-blue-50 {
+        background: map-get(map-get($colors, blue), 50);
+      }
+
       &.bg-info {
         @include color-variant($info, 5%, 10%, 5%, 10%);
         @include font-variant($info);

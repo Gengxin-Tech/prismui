@@ -47,7 +47,7 @@ amis editor 的定制能力大致分为三层：
 <Editor
   value={schema}
   onChange={setSchema}
-  theme="prismui"
+  theme="cxd"
   className="my-editor"
   schemaFilter={(schema, isPreview) => {
     if (!isPreview) {

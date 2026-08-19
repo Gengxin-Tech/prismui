@@ -109,7 +109,7 @@ function ThemeWrapperControl(props: ThemeWrapperControlProps) {
 }
 
 @Renderer({
-  type: 'prismui-theme-wrapper'
+  type: 'amis-theme-wrapper'
 })
 export default class ThemeWrapperRenderer extends React.Component<ThemeWrapperControlProps> {
   render() {

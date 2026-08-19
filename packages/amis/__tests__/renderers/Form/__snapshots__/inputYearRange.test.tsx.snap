@@ -34,7 +34,7 @@ exports[`Renderer:inputYearRange with embed 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="year"
+          data-amis-name="year"
           data-role="form-item"
         >
           <label

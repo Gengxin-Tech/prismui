@@ -218,7 +218,7 @@ amis 中部分组件，作为展示组件，自身没有**使用接口初始化�
 
 ### jsonp 请求
 
-`schemaApi` 同样支持 `jsonp` 请求，完整用法请参考 prismui-admin 项目。
+`schemaApi` 同样支持 `jsonp` 请求，完整用法请参考 amis-admin 项目。
 
 ```schema: scope="body"
 {

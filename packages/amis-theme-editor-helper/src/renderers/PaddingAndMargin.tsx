@@ -270,7 +270,7 @@ function PaddingAndMarginDialog(props: PaddingAndMarginProps) {
 }
 
 @FormItem({
-  type: 'prismui-theme-padding-and-margin',
+  type: 'amis-theme-padding-and-margin',
   strictMode: false,
   renderLabel: false
 })

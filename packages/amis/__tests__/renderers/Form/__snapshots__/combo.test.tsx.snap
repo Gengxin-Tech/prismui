@@ -4,7 +4,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -48,7 +48,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="combo1"
+                  data-amis-name="combo1"
                   data-role="form-item"
                 >
                   <label
@@ -99,7 +99,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -162,7 +162,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal addAtTopClass"
-                  data-prismui-name="combo"
+                  data-amis-name="combo"
                   data-role="form-item"
                 >
                   <label
@@ -213,7 +213,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -276,7 +276,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -335,7 +335,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal addableClass"
-                  data-prismui-name="combo"
+                  data-amis-name="combo"
                   data-role="form-item"
                 >
                   <label
@@ -386,7 +386,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -449,7 +449,7 @@ exports[`Renderer:combo with addable & addattop & addBtn & addButtonText & addBu
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -527,7 +527,7 @@ exports[`Renderer:combo with canAccessSuperData & strictMode & syncFields 1`] = 
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -571,7 +571,7 @@ exports[`Renderer:combo with canAccessSuperData & strictMode & syncFields 1`] = 
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal parentInput"
-                  data-prismui-name="super_text"
+                  data-amis-name="super_text"
                   data-role="form-item"
                 >
                   <label
@@ -611,7 +611,7 @@ exports[`Renderer:combo with canAccessSuperData & strictMode & syncFields 1`] = 
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="combo1"
+                  data-amis-name="combo1"
                   data-role="form-item"
                 >
                   <label
@@ -667,7 +667,7 @@ exports[`Renderer:combo with canAccessSuperData & strictMode & syncFields 1`] = 
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="combo2"
+                  data-amis-name="combo2"
                   data-role="form-item"
                 >
                   <label
@@ -723,7 +723,7 @@ exports[`Renderer:combo with canAccessSuperData & strictMode & syncFields 1`] = 
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="combo3"
+                  data-amis-name="combo3"
                   data-role="form-item"
                 >
                   <label
@@ -807,7 +807,7 @@ exports[`Renderer:combo with conditions: add button open 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -851,7 +851,7 @@ exports[`Renderer:combo with conditions: add button open 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="combo-conditions"
+                  data-amis-name="combo-conditions"
                   data-role="form-item"
                 >
                   <label
@@ -927,7 +927,7 @@ exports[`Renderer:combo with conditions: add button open 1`] = `
                                 />
                                 <div
                                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                                  data-prismui-name="number"
+                                  data-amis-name="number"
                                   data-role="form-item"
                                 >
                                   <label
@@ -1093,7 +1093,7 @@ exports[`Renderer:combo with draggable 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1137,7 +1137,7 @@ exports[`Renderer:combo with draggable 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="combo"
+                  data-amis-name="combo"
                   data-role="form-item"
                 >
                   <label
@@ -1201,7 +1201,7 @@ exports[`Renderer:combo with draggable 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -1233,7 +1233,7 @@ exports[`Renderer:combo with draggable 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="select"
+                                      data-amis-name="select"
                                       data-role="form-item"
                                     >
                                       <div
@@ -1321,7 +1321,7 @@ exports[`Renderer:combo with draggable 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -1353,7 +1353,7 @@ exports[`Renderer:combo with draggable 1`] = `
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="select"
+                                      data-amis-name="select"
                                       data-role="form-item"
                                     >
                                       <div
@@ -1489,7 +1489,7 @@ exports[`Renderer:combo with items & multiLine 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-          data-prismui-name="combo1"
+          data-amis-name="combo1"
           data-role="form-item"
         >
           <label
@@ -1514,7 +1514,7 @@ exports[`Renderer:combo with items & multiLine 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-          data-prismui-name="combo2"
+          data-amis-name="combo2"
           data-role="form-item"
         >
           <label
@@ -1560,7 +1560,7 @@ exports[`Renderer:combo with minLength & maxLength: minLength error 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1604,7 +1604,7 @@ exports[`Renderer:combo with minLength & maxLength: minLength error 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal is-error"
-                  data-prismui-name="combo1"
+                  data-amis-name="combo1"
                   data-role="form-item"
                 >
                   <label
@@ -1695,7 +1695,7 @@ exports[`Renderer:combo with removable & deleteBtn & deleteApi & deleteConfirmTe
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1739,7 +1739,7 @@ exports[`Renderer:combo with removable & deleteBtn & deleteApi & deleteConfirmTe
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal removableFalse"
-                  data-prismui-name="combo"
+                  data-amis-name="combo"
                   data-role="form-item"
                 >
                   <label
@@ -1790,7 +1790,7 @@ exports[`Renderer:combo with removable & deleteBtn & deleteApi & deleteConfirmTe
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -1843,7 +1843,7 @@ exports[`Renderer:combo with removable & deleteBtn & deleteApi & deleteConfirmTe
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal deleteBtn"
-                  data-prismui-name="combo"
+                  data-amis-name="combo"
                   data-role="form-item"
                 >
                   <label
@@ -1894,7 +1894,7 @@ exports[`Renderer:combo with removable & deleteBtn & deleteApi & deleteConfirmTe
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -1955,7 +1955,7 @@ exports[`Renderer:combo with removable & deleteBtn & deleteApi & deleteConfirmTe
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal superDeleteBtn"
-                  data-prismui-name="combo"
+                  data-amis-name="combo"
                   data-role="form-item"
                 >
                   <label
@@ -2006,7 +2006,7 @@ exports[`Renderer:combo with removable & deleteBtn & deleteApi & deleteConfirmTe
                                   >
                                     <div
                                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--row"
-                                      data-prismui-name="text"
+                                      data-amis-name="text"
                                       data-role="form-item"
                                     >
                                       <div
@@ -2095,7 +2095,7 @@ exports[`Renderer:combo with tabsMode 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -2139,7 +2139,7 @@ exports[`Renderer:combo with tabsMode 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="combo"
+                  data-amis-name="combo"
                   data-role="form-item"
                 >
                   <label
@@ -2260,7 +2260,7 @@ exports[`Renderer:combo with tabsMode 1`] = `
                                 />
                                 <div
                                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                                  data-prismui-name="a"
+                                  data-amis-name="a"
                                   data-role="form-item"
                                 >
                                   <label

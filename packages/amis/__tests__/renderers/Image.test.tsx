@@ -279,7 +279,7 @@ describe('Renderer:image', () => {
         data: {
           imageUrl:
             'https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg',
-          imageHref: 'https://github.com/baidu/amis'
+          imageHref: 'https://github.com/Gengxin-Tech/prismui'
         },
         body: {
           type: 'image',
@@ -291,7 +291,7 @@ describe('Renderer:image', () => {
 
     expect(container.querySelector('.prismui-ImageField a')!).toHaveAttribute(
       'href',
-      'https://github.com/baidu/amis'
+      'https://github.com/Gengxin-Tech/prismui'
     );
     expect(container).toMatchSnapshot();
   });

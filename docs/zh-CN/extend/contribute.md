@@ -46,7 +46,7 @@ amis 主要代码在 `src` 和 `scss` 目录下，这里主要介绍 `src` 下�
 
 ## 实战：avatar 组件
 
-本文的目标是新增 avatar 头像组件，完整演示如何在 amis 中添加一个新组件，完整实现可以参考这个 [pr](https://github.com/baidu/amis/pull/1684/files)，本文基于这个例子进行了简化。
+本文的目标是新增 avatar 头像组件，完整演示如何在 amis 中添加一个新组件，完整实现可以参考这个 [pr](https://github.com/Gengxin-Tech/prismui/pull/1684/files)，本文基于这个例子进行了简化。
 
 ### 编写 React 组件代码代码
 

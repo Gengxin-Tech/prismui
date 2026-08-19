@@ -127,6 +127,7 @@ const sdkChunkPlan = {
 
 const sdkCssFiles = [
   'sdk.css',
+  'cxd.css',
   'prismui.css',
   'ang.css',
   'dark.css',
@@ -136,6 +137,7 @@ const sdkCssFiles = [
 
 const sdkIe11CssFiles = [
   'sdk-ie11.css',
+  'cxd-ie11.css',
   'prismui-ie11.css',
   'ang-ie11.css',
   'dark-ie11.css',

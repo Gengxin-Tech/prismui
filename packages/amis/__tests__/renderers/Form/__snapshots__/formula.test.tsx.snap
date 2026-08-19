@@ -34,7 +34,7 @@ exports[`Renderer:formula 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -102,7 +102,7 @@ exports[`Renderer:formula 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="b"
+          data-amis-name="b"
           data-role="form-item"
         >
           <label
@@ -170,7 +170,7 @@ exports[`Renderer:formula 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="sum1"
+          data-amis-name="sum1"
           data-role="form-item"
         >
           <label
@@ -238,7 +238,7 @@ exports[`Renderer:formula 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="sum2"
+          data-amis-name="sum2"
           data-role="form-item"
         >
           <label
@@ -306,7 +306,7 @@ exports[`Renderer:formula 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="sum3"
+          data-amis-name="sum3"
           data-role="form-item"
         >
           <label
@@ -374,7 +374,7 @@ exports[`Renderer:formula 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="sum4"
+          data-amis-name="sum4"
           data-role="form-item"
         >
           <label

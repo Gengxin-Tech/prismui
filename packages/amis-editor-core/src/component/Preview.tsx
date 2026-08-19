@@ -669,7 +669,7 @@ export default class Preview extends Component<PreviewProps> {
 
     const themeName = resolveEditorThemeName(
       theme || amisEnv?.theme || this.env.theme,
-      manager.config.theme || 'prismui'
+      manager.config.theme || 'cxd'
     );
     const env = {
       ...this.env,

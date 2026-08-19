@@ -6,7 +6,7 @@ import {wait, makeEnv} from '../../helper';
 import {clearStoresCache} from '../../../src';
 
 afterEach(() => {
-  theme('prismui', {
+  theme('cxd', {
     componentClassPrefix: 'prismui-'
   });
   cleanup();
@@ -77,7 +77,7 @@ test('Renderer:button', async () => {
 });
 
 test('Renderer:button emits only the stable PrismUI component prefix', () => {
-  theme('prismui', {});
+  theme('cxd', {});
 
   const {getByText} = render(
     amisRender({

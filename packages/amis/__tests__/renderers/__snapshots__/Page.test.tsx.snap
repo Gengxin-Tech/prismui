@@ -3,7 +3,7 @@
 exports[`Renderer:Page 1`] = `
 <div
   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-  data-prismui-theme="prismui"
+  data-prismui-theme="cxd"
 >
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -85,7 +85,7 @@ exports[`Renderer:Page classNames 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page __PRISMUI_COMPONENT_CLASS_PREFIX__Page--withSidebar __PRISMUI_COMPONENT_CLASS_PREFIX__Page--asideSticky __PRISMUI_COMPONENT_CLASS_PREFIX__Page--leftAside"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-aside __PRISMUI_COMPONENT_CLASS_PREFIX__Page-aside--withWidth aside-class-name"
@@ -179,7 +179,7 @@ exports[`Renderer:Page handleAction actionType=ajax & feedback 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -215,8 +215,8 @@ exports[`Renderer:Page handleAction actionType=ajax & feedback 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -285,7 +285,7 @@ exports[`Renderer:Page handleAction actionType=ajax & feedback 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -327,7 +327,7 @@ exports[`Renderer:Page handleAction actionType=ajax 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -369,7 +369,7 @@ exports[`Renderer:Page handleAction actionType=dialog default 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -403,7 +403,7 @@ exports[`Renderer:Page handleAction actionType=dialog default 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -437,7 +437,7 @@ exports[`Renderer:Page handleAction actionType=dialog mergeData 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -473,8 +473,8 @@ exports[`Renderer:Page handleAction actionType=dialog mergeData 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -516,7 +516,7 @@ exports[`Renderer:Page handleAction actionType=dialog mergeData 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="a"
+            data-amis-name="a"
             data-role="form-item"
           >
             <label
@@ -577,7 +577,7 @@ exports[`Renderer:Page handleAction actionType=dialog mergeData 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -619,7 +619,7 @@ exports[`Renderer:Page handleAction actionType=drawer default 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -647,8 +647,8 @@ exports[`Renderer:Page handleAction actionType=drawer default 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -709,7 +709,7 @@ exports[`Renderer:Page handleAction actionType=drawer default 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -743,7 +743,7 @@ exports[`Renderer:Page handleAction actionType=drawer mergeData 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -779,8 +779,8 @@ exports[`Renderer:Page handleAction actionType=drawer mergeData 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -811,7 +811,7 @@ exports[`Renderer:Page handleAction actionType=drawer mergeData 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="a"
+            data-amis-name="a"
             data-role="form-item"
           >
             <label
@@ -872,7 +872,7 @@ exports[`Renderer:Page handleAction actionType=drawer mergeData 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -914,7 +914,7 @@ exports[`Renderer:Page initApi 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -944,7 +944,7 @@ exports[`Renderer:Page initApi error show Message 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -988,7 +988,7 @@ exports[`Renderer:Page initApi error show Message 1`] = `
 exports[`Renderer:Page initApi reFetch when condition changes 1`] = `
 <div
   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-  data-prismui-theme="prismui"
+  data-prismui-theme="cxd"
 >
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1016,7 +1016,7 @@ exports[`Renderer:Page initApi reFetch when condition changes 1`] = `
 exports[`Renderer:Page initApi reFetch when condition changes 2`] = `
 <div
   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-  data-prismui-theme="prismui"
+  data-prismui-theme="cxd"
 >
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1045,7 +1045,7 @@ exports[`Renderer:Page initApi reload by Dialog action 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1087,7 +1087,7 @@ exports[`Renderer:Page initApi reload by Dialog action 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1123,8 +1123,8 @@ exports[`Renderer:Page initApi reload by Dialog action 2`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -1166,7 +1166,7 @@ exports[`Renderer:Page initApi reload by Dialog action 2`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="a"
+            data-amis-name="a"
             data-role="form-item"
           >
             <label
@@ -1227,7 +1227,7 @@ exports[`Renderer:Page initApi reload by Dialog action 3`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1269,7 +1269,7 @@ exports[`Renderer:Page initApi reload by Drawer action 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1311,7 +1311,7 @@ exports[`Renderer:Page initApi reload by Drawer action 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1347,8 +1347,8 @@ exports[`Renderer:Page initApi reload by Drawer action 2`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--right __PRISMUI_COMPONENT_CLASS_PREFIX__Drawer--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -1379,7 +1379,7 @@ exports[`Renderer:Page initApi reload by Drawer action 2`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="a"
+            data-amis-name="a"
             data-role="form-item"
           >
             <label
@@ -1440,7 +1440,7 @@ exports[`Renderer:Page initApi reload by Drawer action 3`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1482,7 +1482,7 @@ exports[`Renderer:Page initApi reload by Form submit 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1525,7 +1525,7 @@ exports[`Renderer:Page initApi reload by Form submit 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <div
@@ -1588,7 +1588,7 @@ exports[`Renderer:Page initApi reload by Form submit 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1631,7 +1631,7 @@ exports[`Renderer:Page initApi reload by Form submit 2`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <div
@@ -1694,7 +1694,7 @@ exports[`Renderer:Page initApi reload by action 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1736,7 +1736,7 @@ exports[`Renderer:Page initApi reload by action 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1778,7 +1778,7 @@ exports[`Renderer:Page initApi show loading 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1819,7 +1819,7 @@ exports[`Renderer:Page initApi show loading 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1849,7 +1849,7 @@ exports[`Renderer:Page initApi silentPolling 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1879,7 +1879,7 @@ exports[`Renderer:Page initApi silentPolling 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1908,7 +1908,7 @@ exports[`Renderer:Page initApi silentPolling 2`] = `
 exports[`Renderer:Page initData 1`] = `
 <div
   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-  data-prismui-theme="prismui"
+  data-prismui-theme="cxd"
 >
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1936,7 +1936,7 @@ exports[`Renderer:Page initData 1`] = `
 exports[`Renderer:Page initFetchOn trigger initApi fetch when condition becomes ture 1`] = `
 <div
   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-  data-prismui-theme="prismui"
+  data-prismui-theme="cxd"
 >
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1964,7 +1964,7 @@ exports[`Renderer:Page initFetchOn trigger initApi fetch when condition becomes 
 exports[`Renderer:Page location query 1`] = `
 <div
   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-  data-prismui-theme="prismui"
+  data-prismui-theme="cxd"
 >
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1992,7 +1992,7 @@ exports[`Renderer:Page location query 1`] = `
 exports[`Renderer:Page location query 2`] = `
 <div
   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-  data-prismui-theme="prismui"
+  data-prismui-theme="cxd"
 >
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"

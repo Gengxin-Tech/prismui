@@ -16,7 +16,7 @@ class StyleManager {
   constructor() {
     this.styles = {};
     this.styleDom = document.createElement('style');
-    this.styleDom.id = 'prismui-styles';
+    this.styleDom.id = 'amis-styles';
     document.head.appendChild(this.styleDom);
   }
 

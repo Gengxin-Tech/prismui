@@ -296,7 +296,7 @@ function ThemeSelect(props: ThemeSelectProps) {
 export default ThemeSelect;
 
 @FormItem({
-  type: 'prismui-theme-select',
+  type: 'amis-theme-select',
   strictMode: false,
   renderLabel: true
 })

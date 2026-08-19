@@ -268,9 +268,9 @@ export class Alert extends React.Component<AlertProps, AlertState> {
       cancelBtnLevel,
       classnames: cx
     } = this.props;
-    let theme = this.props.theme || 'prismui';
+    let theme = this.props.theme || 'cxd';
     if (theme === 'default') {
-      theme = 'prismui';
+      theme = 'cxd';
     }
     const __ = this.props.translate;
     const finalTitle = __(this.state.title ?? title);

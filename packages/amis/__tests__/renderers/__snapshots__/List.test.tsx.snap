@@ -4,7 +4,7 @@ exports[`Renderer:list 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -778,7 +778,7 @@ exports[`Renderer:list with itemAction 1`] = `
   <div>
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-      data-prismui-theme="prismui"
+      data-prismui-theme="cxd"
     >
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -959,8 +959,8 @@ exports[`Renderer:list with itemAction 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -1029,7 +1029,7 @@ exports[`Renderer:list with listItem actions & actionsPosition 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1245,7 +1245,7 @@ exports[`Renderer:list with listItem avatar & avatarClassName 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1449,7 +1449,7 @@ exports[`Renderer:list with listItem title & titleClassName & subTitle & desc 1`
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1686,7 +1686,7 @@ exports[`Renderer:list with title & header & footer & headerClassName & footerCl
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"

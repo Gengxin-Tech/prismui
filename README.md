@@ -2,15 +2,15 @@
 
 [English](./README-en.md) | [在线文档](https://prismui.io/docs/zh-CN/docs/index) | [快速开始](https://prismui.io/docs/zh-CN/docs/start/getting-started)
 
-PrismUI 是基于 [baidu/amis](https://github.com/baidu/amis) 的独立维护 fork，面向企业应用的 UI Schema 驱动前端框架。项目继续围绕 UI Schema、React 渲染器、组件体系、JS SDK 和可视化编辑能力演进。
+PrismUI 是基于 [baidu/amis](https://github.com/Gengxin-Tech/prismui) 的独立维护 fork，面向企业应用的 UI Schema 驱动前端框架。项目继续围绕 UI Schema、React 渲染器、组件体系、JS SDK 和可视化编辑能力演进。
 
 PrismUI 不是 baidu/amis 的官方发布渠道。原项目版权和许可声明会继续保留；PrismUI 后续修改由 PrismUI contributors 独立维护。
 
 ## 当前状态
 
-- **包名过渡**：当前 npm 包仍保留 `amis`、`amis-ui`、`amis-core` 等兼容包名；计划在 2026-09-15 前完成 `prismui` 系列包名迁移。
+- **包名过渡**：当前 npm 包仍保留 `amis`、`amis-ui`、`amis-core` 等兼容包名；包名迁移如有后续安排会在 release notes 中说明。
 - **兼容策略**：迁移期优先保持现有 UI Schema、渲染器 API、主题样式和 SDK 接入方式稳定。
-- **文档口径**：新文档使用 PrismUI 名称；历史文档、代码示例或运行时 API 中仍可能出现 `amis`，会随包名迁移逐步收敛。
+- **文档口径**：新文档使用 PrismUI 名称；历史文档、代码示例或运行时 API 中仍可能出现 `amis`。
 - **维护方式**：采用轻量社区协作模式，贡献默认按对应文件或子包的现有开源许可证授权。
 
 ## 能力概览
@@ -25,7 +25,7 @@ PrismUI 不是 baidu/amis 的官方发布渠道。原项目版权和许可声明
 
 ### 当前兼容包名
 
-在包名迁移完成前，安装命令仍沿用 amis 包名：
+安装命令继续沿用 amis 包名：
 
 ```bash
 npm install amis amis-ui
@@ -34,7 +34,7 @@ npm install amis amis-ui
 React 工程中可以继续使用现有入口：
 
 ```tsx
-import 'amis/lib/themes/prismui.css';
+import 'amis/lib/themes/cxd.css';
 import 'amis/lib/helper.css';
 import 'amis/sdk/iconfont.css';
 import {render as renderUI} from 'amis';
@@ -59,13 +59,13 @@ const env = {
   notify,
   jumpTo,
   getModalContainer: () => document.body,
-  theme: 'prismui'
+  theme: 'cxd'
 };
 
 export function App() {
   return <>
-    <ToastComponent theme="prismui" position="top-right" />
-    <AlertComponent theme="prismui" />
+    <ToastComponent theme="cxd" position="top-right" />
+    <AlertComponent theme="cxd" />
     {renderUI(schema, {data: {}}, env)}
   </>;
 }
@@ -85,21 +85,7 @@ export function App() {
 </script>
 ```
 
-### PrismUI 包名迁移
-
-目标包名会以 release notes 为准，预计核心映射如下：
-
-| 当前包名 | 计划包名 |
-| --- | --- |
-| `amis` | `prismui` |
-| `amis-core` | `prismui-core` |
-| `amis-ui` | `prismui-ui` |
-| `amis-formula` | `prismui-formula` |
-| `amis-editor` | `prismui-editor` |
-| `amis-editor-core` | `prismui-editor-core` |
-| `amis-theme-editor-helper` | `prismui-theme-editor-helper` |
-
-迁移完成前，请不要在生产文档或安装脚本中假设 PrismUI 包已经发布。
+目前仓库不在 README 中承诺新的 npm 包名；如后续发生迁移，会在 release notes 中单独说明。
 
 ## 仓库结构
 
@@ -161,7 +147,7 @@ npm run update-snapshot --workspace amis -- -t <spec-name>
 
 ## 来源与许可
 
-PrismUI 源自 [baidu/amis](https://github.com/baidu/amis)。原项目版权、许可和 attribution 声明会按适用许可证保留。
+PrismUI 源自 [baidu/amis](https://github.com/Gengxin-Tech/prismui)。原项目版权、许可和 attribution 声明会按适用许可证保留。
 
 仓库主体遵循 Apache-2.0，部分自维护子包另有 MIT 或 ISC 声明：
 

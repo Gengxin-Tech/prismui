@@ -229,7 +229,7 @@ export class Action extends React.Component<ActionProps, ActionState> {
   constructor(props: ActionProps) {
     super(props);
     this.localStorageKey =
-      'prismui-countdownend-' +
+      'amis-countdownend-' +
       (this.props.name || '') +
       (this.props?.$schema?.id || uuid());
     const countDownEnd = parseInt(

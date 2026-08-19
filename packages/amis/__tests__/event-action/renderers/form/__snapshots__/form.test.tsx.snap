@@ -4,7 +4,7 @@ exports[`doAction:form clear 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -196,7 +196,7 @@ exports[`doAction:form clear 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -260,7 +260,7 @@ exports[`doAction:form force validate before submit 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -304,7 +304,7 @@ exports[`doAction:form force validate before submit 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error has-error--equalsField"
-                  data-prismui-name="value1"
+                  data-amis-name="value1"
                   data-role="form-item"
                 >
                   <div
@@ -334,7 +334,7 @@ exports[`doAction:form force validate before submit 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error has-error--equalsField"
-                  data-prismui-name="value2"
+                  data-amis-name="value2"
                   data-role="form-item"
                 >
                   <div
@@ -392,7 +392,7 @@ exports[`doAction:form force validate before submit 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -436,7 +436,7 @@ exports[`doAction:form force validate before submit 2`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="value1"
+                  data-amis-name="value1"
                   data-role="form-item"
                 >
                   <div
@@ -459,7 +459,7 @@ exports[`doAction:form force validate before submit 2`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="value2"
+                  data-amis-name="value2"
                   data-role="form-item"
                 >
                   <div
@@ -510,7 +510,7 @@ exports[`doAction:form reset 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -573,7 +573,7 @@ exports[`doAction:form reset 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -609,7 +609,7 @@ exports[`doAction:form reset 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="author"
+                  data-amis-name="author"
                   data-role="form-item"
                 >
                   <label
@@ -673,7 +673,7 @@ exports[`doAction:form reset 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -725,7 +725,7 @@ exports[`doAction:form reset 2`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -761,7 +761,7 @@ exports[`doAction:form reset 2`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="author"
+                  data-amis-name="author"
                   data-role="form-item"
                 >
                   <label
@@ -825,7 +825,7 @@ exports[`doAction:form setValue 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -877,7 +877,7 @@ exports[`doAction:form setValue 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -913,7 +913,7 @@ exports[`doAction:form setValue 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="email"
+                  data-amis-name="email"
                   data-role="form-item"
                 >
                   <label
@@ -977,7 +977,7 @@ exports[`doAction:form static&nonstatic 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1037,7 +1037,7 @@ exports[`doAction:form static&nonstatic 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="text"
+                  data-amis-name="text"
                   data-role="form-item"
                 >
                   <label
@@ -1093,7 +1093,7 @@ exports[`doAction:form static&nonstatic 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1153,7 +1153,7 @@ exports[`doAction:form static&nonstatic 2`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="text"
+                  data-amis-name="text"
                   data-role="form-item"
                 >
                   <label
@@ -1221,7 +1221,7 @@ exports[`doAction:form submit 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1243,7 +1243,7 @@ exports[`doAction:form submit 1`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="submit_info"
+            data-amis-name="submit_info"
             data-role="form-item"
           >
             <label
@@ -1320,7 +1320,7 @@ exports[`doAction:form submit 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -1368,7 +1368,7 @@ exports[`doAction:form submit 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-                  data-prismui-name="email"
+                  data-amis-name="email"
                   data-role="form-item"
                 >
                   <label
@@ -1444,7 +1444,7 @@ exports[`doAction:form submit 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1466,7 +1466,7 @@ exports[`doAction:form submit 2`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="submit_info"
+            data-amis-name="submit_info"
             data-role="form-item"
           >
             <label
@@ -1532,7 +1532,7 @@ exports[`doAction:form submit 2`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -1580,7 +1580,7 @@ exports[`doAction:form submit 2`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-                  data-prismui-name="email"
+                  data-amis-name="email"
                   data-role="form-item"
                 >
                   <label
@@ -1656,7 +1656,7 @@ exports[`doAction:form submit 3`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1678,7 +1678,7 @@ exports[`doAction:form submit 3`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="submit_info"
+            data-amis-name="submit_info"
             data-role="form-item"
           >
             <label
@@ -1753,7 +1753,7 @@ exports[`doAction:form submit 3`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -1794,7 +1794,7 @@ exports[`doAction:form submit 3`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-                  data-prismui-name="email"
+                  data-amis-name="email"
                   data-role="form-item"
                 >
                   <label
@@ -1863,7 +1863,7 @@ exports[`doAction:form validate 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1885,7 +1885,7 @@ exports[`doAction:form validate 1`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="validate_info"
+            data-amis-name="validate_info"
             data-role="form-item"
           >
             <label
@@ -1962,7 +1962,7 @@ exports[`doAction:form validate 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -2010,7 +2010,7 @@ exports[`doAction:form validate 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-                  data-prismui-name="email"
+                  data-amis-name="email"
                   data-role="form-item"
                 >
                   <label
@@ -2086,7 +2086,7 @@ exports[`doAction:form validate 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -2108,7 +2108,7 @@ exports[`doAction:form validate 2`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="validate_info"
+            data-amis-name="validate_info"
             data-role="form-item"
           >
             <label
@@ -2185,7 +2185,7 @@ exports[`doAction:form validate 2`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -2233,7 +2233,7 @@ exports[`doAction:form validate 2`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-                  data-prismui-name="email"
+                  data-amis-name="email"
                   data-role="form-item"
                 >
                   <label
@@ -2309,7 +2309,7 @@ exports[`doAction:form validate 3`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -2331,7 +2331,7 @@ exports[`doAction:form validate 3`] = `
           </button>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="validate_info"
+            data-amis-name="validate_info"
             data-role="form-item"
           >
             <label
@@ -2403,7 +2403,7 @@ exports[`doAction:form validate 3`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -2444,7 +2444,7 @@ exports[`doAction:form validate 3`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-                  data-prismui-name="email"
+                  data-amis-name="email"
                   data-role="form-item"
                 >
                   <label

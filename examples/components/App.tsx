@@ -44,7 +44,7 @@ export function getContextPath() {
 const themes = [
   {
     label: '云舍',
-    value: 'prismui'
+    value: 'cxd'
   },
   {
     label: '仿 AntD',
@@ -141,16 +141,16 @@ export class App extends React.PureComponent<{
   location: Location;
 }> {
   state = {
-    viewMode: localStorage.getItem('prismui-viewMode') || 'pc',
+    viewMode: localStorage.getItem('amis-viewMode') || 'pc',
     offScreen: false,
     folded: false,
     headerVisible: true,
     themes: themes,
     theme:
-      themes.find(item => item?.value === localStorage.getItem('prismui-theme')) ||
+      themes.find(item => item?.value === localStorage.getItem('amis-theme')) ||
       themes[0],
-    locale: localStorage.getItem('prismui-locale')
-      ? localStorage.getItem('prismui-locale')?.replace('zh-cn', 'zh-CN')
+    locale: localStorage.getItem('amis-locale')
+      ? localStorage.getItem('amis-locale')?.replace('zh-cn', 'zh-CN')
       : '',
     navigations: [],
     filter: '' // 导航过滤，方便找组件
@@ -163,24 +163,15 @@ export class App extends React.PureComponent<{
     this.syncDocumentTheme(this.state.theme.value);
   }
 
-  syncDocumentTheme(theme: string, previousTheme?: string) {
-    const body = document.body;
-    previousTheme && body.classList.remove(previousTheme);
-    body.classList.add(theme);
-    body.setAttribute('data-prismui-theme', theme);
+  syncDocumentTheme(theme: string) {
+    document.body.setAttribute('data-prismui-theme', theme);
   }
 
   componentDidUpdate(preProps: any, preState: any) {
     const props = this.props;
 
     if (preState.theme.value !== this.state.theme.value) {
-      [].slice
-        .call(document.querySelectorAll('link[title]'))
-        .forEach((item: HTMLLinkElement) => {
-          const theme = item.getAttribute('title');
-          item.disabled = theme !== this.state.theme.value;
-        });
-      this.syncDocumentTheme(this.state.theme.value, preState.theme.value);
+      this.syncDocumentTheme(this.state.theme.value);
     }
 
     if (props.location.pathname !== preProps.location.pathname) {
@@ -324,7 +315,7 @@ export class App extends React.PureComponent<{
               options={locales}
               onChange={locale => {
                 this.setState({locale: (locale as any).value});
-                localStorage.setItem('prismui-locale', (locale as any).value);
+                localStorage.setItem('amis-locale', (locale as any).value);
                 window.location.reload();
               }}
             />
@@ -339,7 +330,7 @@ export class App extends React.PureComponent<{
               options={this.state.themes}
               onChange={theme => {
                 this.setState({theme});
-                localStorage.setItem('prismui-theme', `${(theme as any).value}`);
+                localStorage.setItem('amis-theme', `${(theme as any).value}`);
               }}
             />
           </div>
@@ -353,7 +344,7 @@ export class App extends React.PureComponent<{
               options={viewModes}
               onChange={viewMode => {
                 this.setState({viewMode: (viewMode as any).value});
-                localStorage.setItem('prismui-viewMode', (viewMode as any).value);
+                localStorage.setItem('amis-viewMode', (viewMode as any).value);
                 window.location.reload();
               }}
             />

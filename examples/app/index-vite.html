@@ -33,18 +33,16 @@
       }
     </style>
     <script type="module">
-      let theme = localStorage.getItem('prismui-theme') || 'prismui';
+      let theme = localStorage.getItem('amis-theme') || 'cxd';
       if (theme === 'default') {
-        theme = 'prismui';
+        theme = 'cxd';
       }
+      document.documentElement.setAttribute('data-prismui-theme', theme);
 
-      ['ang', 'prismui', 'dark', 'antd'].forEach(key => {
+      ['ang', 'cxd', 'dark', 'antd'].forEach(key => {
         const link = document.createElement('link');
         link.setAttribute('rel', 'stylesheet');
         link.setAttribute('title', key);
-        if (theme !== key) {
-          link.setAttribute('disabled', 'disabled');
-        }
         link.setAttribute(
           'href',
           new URL(

@@ -300,7 +300,7 @@ exports[`Renderer:tabs change active tab 2`] = `
       >
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="c"
+          data-amis-name="c"
           data-role="form-item"
         >
           <label
@@ -336,7 +336,7 @@ exports[`Renderer:tabs change active tab 2`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="d"
+          data-amis-name="d"
           data-role="form-item"
         >
           <label
@@ -1119,10 +1119,10 @@ exports[`Renderer:tabs with collapseOnExceed: popover show 1`] = `
     </div>
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver __PRISMUI_COMPONENT_CLASS_PREFIX__Tabs-PopOver"
-      data-prismui-theme="prismui"
+      data-prismui-theme="cxd"
       role="popover"
       style="display: block; min-width: auto; left: 0px; top: 0px; visibility: hidden;"
-      theme="prismui"
+      theme="cxd"
     >
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver-overlay"

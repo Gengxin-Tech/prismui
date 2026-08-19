@@ -34,7 +34,7 @@ exports[`Renderer:FormItem:validateApi:failed 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -136,7 +136,7 @@ exports[`Renderer:FormItem:validateApi:failed 2`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -238,7 +238,7 @@ exports[`Renderer:FormItem:validateApi:success 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label

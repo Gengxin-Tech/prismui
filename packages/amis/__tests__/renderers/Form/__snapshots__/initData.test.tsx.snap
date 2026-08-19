@@ -12,7 +12,7 @@ exports[`Form:initData 1`] = `
     />
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-      data-prismui-name="a"
+      data-amis-name="a"
       data-role="form-item"
     >
       <div
@@ -35,7 +35,7 @@ exports[`Form:initData 1`] = `
     </div>
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-      data-prismui-name="b"
+      data-amis-name="b"
       data-role="form-item"
     >
       <div
@@ -109,7 +109,7 @@ exports[`Form:initData:remote 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -145,7 +145,7 @@ exports[`Form:initData:remote 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="c"
+          data-amis-name="c"
           data-role="form-item"
         >
           <label
@@ -232,7 +232,7 @@ exports[`Form:initData:super 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -254,7 +254,7 @@ exports[`Form:initData:super 1`] = `
             />
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="a"
+              data-amis-name="a"
               data-role="form-item"
             >
               <div
@@ -277,7 +277,7 @@ exports[`Form:initData:super 1`] = `
             </div>
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="b"
+              data-amis-name="b"
               data-role="form-item"
             >
               <div
@@ -318,7 +318,7 @@ exports[`Form:initData:without-super 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -340,7 +340,7 @@ exports[`Form:initData:without-super 1`] = `
             />
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="a"
+              data-amis-name="a"
               data-role="form-item"
             >
               <div
@@ -363,7 +363,7 @@ exports[`Form:initData:without-super 1`] = `
             </div>
             <div
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-              data-prismui-name="b"
+              data-amis-name="b"
               data-role="form-item"
             >
               <div

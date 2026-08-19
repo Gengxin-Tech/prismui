@@ -100,7 +100,7 @@ exports[`Renderer:tabs 1`] = `
             >
               <div
                 class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                data-prismui-name="c"
+                data-amis-name="c"
                 data-role="form-item"
               >
                 <label
@@ -136,7 +136,7 @@ exports[`Renderer:tabs 1`] = `
               </div>
               <div
                 class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                data-prismui-name="d"
+                data-amis-name="d"
                 data-role="form-item"
               >
                 <label

@@ -1,8 +1,9 @@
 @use 'sass:color';
 @import './mixins';
 @import './stable-selectors';
-:root,
-.PRISMUICSSWrapper {
+$prismui-theme-vars-only: false !default;
+
+@mixin prismui-component-vars {
   --button-default-default-top-border-color: var(--colors-neutral-line-8);
   --button-default-default-top-border-style: var(--borders-style-2);
   --button-default-default-top-border-width: var(--borders-width-2);
@@ -4368,4 +4369,11 @@
   --Form-static-color: var(--colors-neutral-text-2);
   --Form-static-lineHeight: var(--fonts-lineHeight-2);
   --Form-static-fontWeight: var(--fonts-weight-6);
+}
+
+@if not $prismui-theme-vars-only {
+  :root,
+  .PRISMUICSSWrapper {
+    @include prismui-component-vars;
+  }
 }

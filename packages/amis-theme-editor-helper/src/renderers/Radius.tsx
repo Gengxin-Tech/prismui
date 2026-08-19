@@ -216,7 +216,7 @@ function BoxRadius(props: RadiusProps & RendererProps) {
 }
 
 @FormItem({
-  type: 'prismui-theme-radius',
+  type: 'amis-theme-radius',
   strictMode: false,
   renderLabel: false
 })

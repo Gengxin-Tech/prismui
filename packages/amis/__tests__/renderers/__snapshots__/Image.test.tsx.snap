@@ -34,7 +34,7 @@ exports[`Renderer:image image as form item 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="image"
+          data-amis-name="image"
           data-role="form-item"
         >
           <label
@@ -246,7 +246,7 @@ exports[`Renderer:image image:href 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -264,7 +264,7 @@ exports[`Renderer:image image:href 1`] = `
           >
             <a
               class="__PRISMUI_COMPONENT_CLASS_PREFIX__Link"
-              href="https://github.com/baidu/amis"
+              href="https://github.com/Gengxin-Tech/prismui"
               target="_blank"
               title=""
             >
@@ -302,7 +302,7 @@ exports[`Renderer:image image:preview 预览动作 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -440,7 +440,7 @@ exports[`Renderer:image image:zoom & maxScale & minScale 调整图片比例动�
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -505,7 +505,7 @@ exports[`Renderer:images images:basic 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -757,7 +757,7 @@ exports[`Renderer:images images:enlargeAble & originalSrc & source & title & des
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"

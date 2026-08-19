@@ -136,7 +136,7 @@ export class SchemaEditorItemArray extends SchemaEditorItemCommon {
         className={cx('SchemaEditorItem SchemaEditorArray', {
           'SchemaEditorItem--mini': mini
         })}
-        data-prismui-name={this.props.dataName}
+        data-amis-name={this.props.dataName}
       >
         {showInfo !== false ? (
           <>

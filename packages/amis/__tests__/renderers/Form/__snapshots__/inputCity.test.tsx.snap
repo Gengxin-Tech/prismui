@@ -4,7 +4,7 @@ exports[`Renderer:inputCity 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -48,7 +48,7 @@ exports[`Renderer:inputCity 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="city"
+                  data-amis-name="city"
                   data-role="form-item"
                 >
                   <label
@@ -202,7 +202,7 @@ exports[`Renderer:inputCity with searchable: open select 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -246,7 +246,7 @@ exports[`Renderer:inputCity with searchable: open select 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="city"
+                  data-amis-name="city"
                   data-role="form-item"
                 >
                   <label
@@ -295,10 +295,10 @@ exports[`Renderer:inputCity with searchable: open select 1`] = `
                         </span>
                         <div
                           class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver __PRISMUI_COMPONENT_CLASS_PREFIX__Select-popover"
-                          data-prismui-theme="prismui"
+                          data-prismui-theme="cxd"
                           role="popover"
                           style="display: block; width: 0px; left: 0px; top: 0px; visibility: hidden;"
-                          theme="prismui"
+                          theme="cxd"
                         >
                           <div
                             class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver-overlay"

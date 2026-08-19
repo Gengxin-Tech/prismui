@@ -4,10 +4,11 @@ import Overlay from '../../src/components/Overlay';
 import PopOver from '../../src/components/PopOver';
 import {EnvContext} from '../../src/env';
 import {getTheme, theme, ThemeContext} from '../../src/theme';
+import {setReactRef} from '../../src/utils/reactRef';
 
 function renderOverlay({
   container,
-  themeName = 'prismui',
+  themeName = 'cxd',
   label = 'scoped tooltip',
   show = true,
   targetScope
@@ -94,6 +95,33 @@ function mockElementRect(
     } as DOMRect);
 }
 
+class DelayedForwardedRefOverlay extends React.Component<any> {
+  static supportForwardedRef = true;
+  rootRef = React.createRef<HTMLDivElement>();
+  timer: ReturnType<typeof setTimeout> | null = null;
+
+  componentDidMount() {
+    this.timer = setTimeout(() => {
+      setReactRef(this.props.forwardedRef, this.rootRef.current);
+    }, 0);
+  }
+
+  componentWillUnmount() {
+    this.timer && clearTimeout(this.timer);
+    setReactRef(this.props.forwardedRef, null);
+  }
+
+  render() {
+    const {forwardedRef, children, ...props} = this.props;
+
+    return (
+      <div {...props} ref={this.rootRef} role="tooltip">
+        {children}
+      </div>
+    );
+  }
+}
+
 afterEach(() => {
   cleanup();
   document.body.innerHTML = '';
@@ -106,7 +134,7 @@ test('Overlay applies triggering theme scope to body portal child', async () => 
   renderOverlay();
 
   await waitFor(() => {
-    expectTooltipInScope(document.body, 'prismui');
+    expectTooltipInScope(document.body, 'cxd');
   });
 });
 
@@ -120,7 +148,7 @@ test('Overlay applies scope without inserting a layout wrapper', async () => {
 
     expect(tooltip).toBeTruthy();
     expect(tooltip.parentElement).toBe(document.body);
-    expect(tooltip).toHaveAttribute('data-prismui-theme', 'prismui');
+    expect(tooltip).toHaveAttribute('data-prismui-theme', 'cxd');
   });
 });
 
@@ -141,7 +169,7 @@ test('Overlay applies triggering theme scope to custom container child', async (
   renderOverlay({container: customContainer});
 
   await waitFor(() => {
-    expectTooltipInScope(customContainer, 'prismui');
+    expectTooltipInScope(customContainer, 'cxd');
   });
 });
 
@@ -165,11 +193,11 @@ test('Overlay prefers target DOM scope over mutable env theme', async () => {
   renderOverlay({
     label: 'target scoped tooltip',
     themeName: 'dark',
-    targetScope: 'prismui'
+    targetScope: 'cxd'
   });
 
   await waitFor(() => {
-    expectTooltipInScope(document.body, 'prismui', 'target scoped tooltip');
+    expectTooltipInScope(document.body, 'cxd', 'target scoped tooltip');
   });
 });
 
@@ -178,14 +206,14 @@ test('Overlay scopes body portal children per triggering root', async () => {
     componentClassPrefix: 'prismui-'
   });
 
-  renderOverlay({label: 'prismui scoped tooltip', themeName: 'prismui'});
+  renderOverlay({label: 'cxd scoped tooltip', themeName: 'cxd'});
   renderOverlay({label: 'dark scoped tooltip', themeName: 'dark'});
 
   await waitFor(() => {
     expect(document.body.querySelectorAll('[role="tooltip"]')).toHaveLength(2);
   });
 
-  expectTooltipInScope(document.body, 'prismui', 'prismui scoped tooltip');
+  expectTooltipInScope(document.body, 'cxd', 'cxd scoped tooltip');
   expectTooltipInScope(document.body, 'dark', 'dark scoped tooltip');
 });
 
@@ -200,7 +228,7 @@ test('Overlay applies scope inside iframe container document', async () => {
   });
 
   await waitFor(() => {
-    expectTooltipInScope(previewBody, 'prismui', 'iframe scoped tooltip');
+    expectTooltipInScope(previewBody, 'cxd', 'iframe scoped tooltip');
   });
   expect(document.body.querySelector('[role="tooltip"]')).toBeNull();
 });
@@ -217,11 +245,11 @@ test('Overlay preserves PopOver forwarded root ref while positioning', async () 
       value={
         {
           getModalContainer: () => document.body,
-          theme: getTheme('prismui')
+          theme: getTheme('cxd')
         } as any
       }
     >
-      <ThemeContext.Provider value="prismui">
+      <ThemeContext.Provider value="cxd">
         <Overlay show target={() => target}>
           <PopOver forwardedRef={forwardedRef}>popover content</PopOver>
         </Overlay>
@@ -243,6 +271,74 @@ test('Overlay preserves PopOver forwarded root ref while positioning', async () 
   });
 });
 
+test('Overlay repositions when forwarded overlay ref resolves after mount', async () => {
+  const target = document.createElement('button');
+  mockElementRect(target, {left: 8, top: 12, width: 80, height: 24});
+  document.body.appendChild(target);
+
+  render(
+    <EnvContext.Provider
+      value={
+        {
+          getModalContainer: () => document.body,
+          theme: getTheme('cxd')
+        } as any
+      }
+    >
+      <ThemeContext.Provider value="cxd">
+        <Overlay show target={() => target}>
+          <DelayedForwardedRefOverlay>delayed tooltip</DelayedForwardedRefOverlay>
+        </Overlay>
+      </ThemeContext.Provider>
+    </EnvContext.Provider>
+  );
+
+  await waitFor(() => {
+    const tooltip = document.body.querySelector(
+      '[role="tooltip"]'
+    ) as HTMLElement;
+
+    expect(tooltip).toBeTruthy();
+    expect(tooltip.style.visibility).not.toBe('hidden');
+  });
+});
+
+test('Overlay repositions when target resolves after initial mount', async () => {
+  const target = document.createElement('button');
+  mockElementRect(target, {left: 8, top: 12, width: 80, height: 24});
+  document.body.appendChild(target);
+  let targetReady = false;
+  setTimeout(() => {
+    targetReady = true;
+  }, 0);
+
+  render(
+    <EnvContext.Provider
+      value={
+        {
+          getModalContainer: () => document.body,
+          theme: getTheme('cxd')
+        } as any
+      }
+    >
+      <ThemeContext.Provider value="cxd">
+        <Overlay show target={() => (targetReady ? target : null)}>
+          <div role="tooltip">late target tooltip</div>
+        </Overlay>
+      </ThemeContext.Provider>
+    </EnvContext.Provider>
+  );
+
+  await waitFor(() => {
+    const tooltip = document.body.querySelector(
+      '[role="tooltip"]'
+    ) as HTMLElement;
+
+    expect(tooltip).toBeTruthy();
+    expect(tooltip.style.visibility).not.toBe('hidden');
+  });
+});
+
 test('Overlay rootClose listens on positioned overlay DOM', async () => {
   const target = document.createElement('button');
   mockElementRect(target, {left: 8, top: 12, width: 80, height: 24});
@@ -254,11 +350,11 @@ test('Overlay rootClose listens on positioned overlay DOM', async () => {
       value={
         {
           getModalContainer: () => document.body,
-          theme: getTheme('prismui')
+          theme: getTheme('cxd')
         } as any
       }
     >
-      <ThemeContext.Provider value="prismui">
+      <ThemeContext.Provider value="cxd">
         <Overlay show target={() => target} rootClose onHide={onHide}>
           <div role="tooltip">root close tooltip</div>
         </Overlay>

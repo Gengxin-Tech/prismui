@@ -38,7 +38,7 @@ test('Renderer:drawer applies theme scope to portal dialog', async () => {
   await waitFor(() => {
     expect(document.body.querySelector('[role="dialog"]')).toHaveAttribute(
       'data-prismui-theme',
-      'prismui'
+      'cxd'
     );
   });
 });

@@ -10,7 +10,7 @@ test('Renderer:custom', () => {
       {
         type: 'custom',
         name: 'myName',
-        className: 'prismui-custom-demo',
+        className: 'amis-custom-demo',
         html: '<div><h2>hello, world!</h2></div>',
         label: '自定义组件',
         onMount: (dom: HTMLElement, value: any, onChange: any, props: any) => {

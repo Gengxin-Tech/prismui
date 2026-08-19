@@ -136,7 +136,7 @@ const ColSize: React.FC<FormControlProps> = props => {
   ) : (
     props.render('size', {
       label: false,
-      type: 'prismui-theme-select',
+      type: 'amis-theme-select',
       name: 'size',
       value,
       options: [

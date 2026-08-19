@@ -13,6 +13,7 @@ const {
 
 const sdkScopedCssFiles = [
   'sdk.css',
+  'cxd.css',
   'prismui.css',
   'ang.css',
   'dark.css',

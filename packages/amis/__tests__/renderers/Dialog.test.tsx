@@ -25,7 +25,7 @@ const makeEnv = (env?: Partial<RenderOptions>) =>
   makeEnvRaw({updateLocation: () => {}, ...env});
 
 /**
- * https://github.com/baidu/amis/issues/1405
+ * https://github.com/Gengxin-Tech/prismui/issues/1405
  *
  * 验证弹窗的 CRUD 中再次弹出一个 crud，里面的 crud 确认关闭，不会关闭外面的 crud
  */
@@ -139,7 +139,7 @@ test('1. Renderer:dialog inner crud close outter crud component', async () => {
 });
 
 /**
- * https://github.com/baidu/amis/issues/9149
+ * https://github.com/Gengxin-Tech/prismui/issues/9149
  *
  * 验证弹窗内部的 动作是通用动作时是否能正确响应。
  *
@@ -220,7 +220,7 @@ test('Renderer:dialog applies theme scope to body portal dialog', async () => {
   await waitFor(() => {
     expect(document.body.querySelector('[role="dialog"]')).toHaveAttribute(
       'data-prismui-theme',
-      'prismui'
+      'cxd'
     );
   });
 });

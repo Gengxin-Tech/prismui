@@ -14,7 +14,7 @@ describe('editor themeScope helpers', () => {
     expect(resolveEditorThemeName('dark')).toBe('dark');
     expect(resolveEditorThemeName({scope: {value: 'antd'}})).toBe('antd');
     expect(resolveEditorThemeName({name: 'custom'})).toBe('custom');
-    expect(resolveEditorThemeName(undefined, 'prismui')).toBe('prismui');
+    expect(resolveEditorThemeName(undefined, 'cxd')).toBe('cxd');
   });
 
   it('creates preview scope props and applies them to DOM nodes', () => {
@@ -36,7 +36,7 @@ describe('editor themeScope helpers', () => {
       componentClassPrefix: 'brand-' as any
     });
 
-    expect(resolveEditorComponentClassPrefix('prismui')).toBe('prismui-');
+    expect(resolveEditorComponentClassPrefix('cxd')).toBe('prismui-');
     expect(resolveEditorComponentClassPrefix('branded-editor-prefix')).toBe(
       'brand-'
     );

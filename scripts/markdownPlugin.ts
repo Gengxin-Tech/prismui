@@ -244,7 +244,7 @@ function markdown2js(content: string, file: string) {
     });
 
   // content = global.fis ? fis.compile.partial(content, file, 'html') : content;
-  // + `\n\n<div class="m-t-lg b-l b-info b-3x wrapper bg-light dk">文档内容有误？欢迎大家一起来编写，文档地址：<i class="fa fa-github"></i><a href="https://github.com/baidu/amis/tree/master${file.subpath}">${file.subpath}</a>。</div>`;
+  // + `\n\n<div class="m-t-lg b-l b-info b-3x wrapper bg-light dk">文档内容有误？欢迎大家一起来编写，文档地址：<i class="fa fa-github"></i><a href="https://github.com/Gengxin-Tech/prismui/tree/master${file.subpath}">${file.subpath}</a>。</div>`;
   info.html =
     '<div class="markdown-body">' +
     content.replace(

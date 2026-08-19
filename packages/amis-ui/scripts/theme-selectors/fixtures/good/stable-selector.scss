@@ -2,6 +2,6 @@
   color: var(--prismui-color-text);
 }
 
-@include prismui-themed-component('prismui', 'GuardFixture') {
+@include prismui-themed-component('cxd', 'GuardFixture') {
   color: var(--prismui-color-brand);
 }

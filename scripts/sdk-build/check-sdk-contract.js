@@ -46,7 +46,14 @@ if (sdkJs) {
 
 assertRollupEntryStaticAssets();
 
-for (const cssFile of ['sdk.css', 'prismui.css', 'ang.css', 'dark.css', 'antd.css']) {
+for (const cssFile of [
+  'sdk.css',
+  'cxd.css',
+  'prismui.css',
+  'ang.css',
+  'dark.css',
+  'antd.css'
+]) {
   const css = readSdkText(cssFile);
   if (css) {
     assertContains(css, '.prismui-scope', `${cssFile} scoped selector prefix`);
@@ -148,6 +155,7 @@ function assertSdkIe11CssArtifacts(dir, label) {
     }
   });
 
+  assertSameExternalTextFile(dir, 'sdk-ie11.css', 'cxd-ie11.css', label);
   assertSameExternalTextFile(dir, 'sdk-ie11.css', 'prismui-ie11.css', label);
 }
 
@@ -254,6 +262,7 @@ function assertRollupEntryStaticAssets() {
     }
   });
 
+  assertSameTextFile('rollup-entry/sdk.css', 'rollup-entry/cxd.css');
   assertSameTextFile('rollup-entry/sdk.css', 'rollup-entry/prismui.css');
   sdkContract.ie11CssFiles.forEach(file => {
     if (!ie11CssFiles.has(file)) {

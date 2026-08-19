@@ -108,7 +108,7 @@ export default function MobileDevTool(props: {
   const [dimension, setDimension] = React.useState(
     () =>
       JSON.parse(
-        localStorage.getItem('prismui-mobile-dev-tool-dimension') || 'null'
+        localStorage.getItem('amis-mobile-dev-tool-dimension') || 'null'
       ) || dimensions[1]
   );
   const defaultScale = useRef<number>(0);
@@ -121,7 +121,7 @@ export default function MobileDevTool(props: {
 
   useEffect(() => {
     defaultScale.current = parseInt(
-      localStorage.getItem('prismui-mobile-dev-tool-scale') || '0',
+      localStorage.getItem('amis-mobile-dev-tool-scale') || '0',
       10
     );
   }, []);
@@ -162,7 +162,7 @@ export default function MobileDevTool(props: {
   }) {
     setDimension(dimension);
     localStorage.setItem(
-      'prismui-mobile-dev-tool-dimension',
+      'amis-mobile-dev-tool-dimension',
       JSON.stringify(dimension)
     );
   }
@@ -170,7 +170,7 @@ export default function MobileDevTool(props: {
   function updateScale(scale: number) {
     setScale(scale);
     onChangeScale?.(scale);
-    localStorage.setItem('prismui-mobile-dev-tool-scale', scale + '');
+    localStorage.setItem('amis-mobile-dev-tool-scale', scale + '');
   }
 
   function updateAutoScale() {

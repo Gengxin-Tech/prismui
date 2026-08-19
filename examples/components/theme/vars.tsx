@@ -6,148 +6,148 @@ const colors = [
   {
     label: '文字颜色',
     name: '--text-color',
-    prismuiValue: '#666',
+    cxdValue: '#666',
     antdValue: 'rgba(0, 0, 0, 0.85)'
   },
   {
     label: '文字置灰时的颜色',
     name: '--text--muted-color',
-    prismuiValue: '#a6a6a6',
+    cxdValue: '#a6a6a6',
     antdValue: 'rgba(64, 64, 64, 0.85)'
   },
   {
     label: '标题文字颜色',
     name: '--text--loud-color',
-    prismuiValue: '#4d4d4d',
+    cxdValue: '#4d4d4d',
     antdValue: 'rgba(0, 0, 0, 0.85)'
   },
   {
     label: '按钮文字颜色',
     name: '--button-color',
-    prismuiValue: '#fff',
+    cxdValue: '#fff',
     antdValue: '#fff'
   },
 
-  {label: '最浅色', name: '--light', prismuiValue: '#eaf6fe', antdValue: '#d9d9d9'},
-  {label: '最深色', name: '--dark', prismuiValue: '#343a40', antdValue: '#343a40'},
+  {label: '最浅色', name: '--light', cxdValue: '#eaf6fe', antdValue: '#d9d9d9'},
+  {label: '最深色', name: '--dark', cxdValue: '#343a40', antdValue: '#343a40'},
   {
     label: '全局背景色',
     name: '--body-bg',
-    prismuiValue: '#eaf6fe',
+    cxdValue: '#eaf6fe',
     antdValue: '#d9d9d9'
   },
   {
     label: '常用背景色',
     name: '--background',
-    prismuiValue: '#fff',
+    cxdValue: '#fff',
     antdValue: '#fff'
   },
   {
     label: '主颜色',
     name: '--primary',
-    prismuiValue: '#108cee',
+    cxdValue: '#108cee',
     antdValue: '#1890ff'
   },
   {
     label: '主颜色鼠标放上去的颜色',
     name: '--primary-onHover',
-    prismuiValue: '#0e77ca',
+    cxdValue: '#0e77ca',
     antdValue: '#007df1'
   },
   {
     label: '主颜色激活时的颜色',
     name: '--primary-onActive',
-    prismuiValue: '#0d70be',
+    cxdValue: '#0d70be',
     antdValue: '#0076e4'
   },
   {
     label: '次颜色',
     name: '--secondary',
-    prismuiValue: '#6c757d',
+    cxdValue: '#6c757d',
     antdValue: '#6c757d'
   },
   {
     label: '次颜色鼠标放上去的颜色',
     name: '--secondary-onHover',
-    prismuiValue: '#5a6268',
+    cxdValue: '#5a6268',
     antdValue: '#5a6268'
   },
   {
     label: '次颜色激活时的颜色',
     name: '--secondary-onActive',
-    prismuiValue: '#545b62',
+    cxdValue: '#545b62',
     antdValue: '#545b62'
   },
   {
     label: '成功时的颜色',
     name: '--success',
-    prismuiValue: '#5fb333',
+    cxdValue: '#5fb333',
     antdValue: '#52c41a'
   },
   {
     label: '成功时在鼠标移上去后的颜色',
     name: '--success-onHover',
-    prismuiValue: '#4f952b',
+    cxdValue: '#4f952b',
     antdValue: '#44a216'
   },
   {
     label: '成功时激活的颜色',
     name: '--success-onActive',
-    prismuiValue: '#4a8b28',
+    cxdValue: '#4a8b28',
     antdValue: '#3f9714'
   },
   {
     label: '信息的颜色',
     name: '--info',
-    prismuiValue: '#108cee',
+    cxdValue: '#108cee',
     antdValue: '#1890ff'
   },
   {
     label: '信息在鼠标移上去后的颜色',
     name: '--info-onHover',
-    prismuiValue: '#0e77ca',
+    cxdValue: '#0e77ca',
     antdValue: '#007df1'
   },
   {
     label: '信息在激活时的颜色',
     name: '--info-onActive',
-    prismuiValue: '#0d70be',
+    cxdValue: '#0d70be',
     antdValue: '#0076e4'
   },
   {
     label: '警告的颜色',
     name: '--warning',
-    prismuiValue: '#f39000',
+    cxdValue: '#f39000',
     antdValue: '#faad14'
   },
   {
     label: '警告在鼠标移上去后的颜色',
     name: '--warning-onHover',
-    prismuiValue: '#cd7900',
+    cxdValue: '#cd7900',
     antdValue: '#e39905'
   },
   {
     label: '警告在鼠标移上去后的颜色',
     name: '--warning-onActive',
-    prismuiValue: '#c07200',
+    cxdValue: '#c07200',
     antdValue: '#d69005'
   },
   {
     label: '错误的颜色',
     name: '--danger',
-    prismuiValue: '#ea2e2e',
+    cxdValue: '#ea2e2e',
     antdValue: '#ff4d4f'
   },
   {
     label: '错误在鼠标移上去后的颜色',
     name: '--danger-onHover',
-    prismuiValue: '#dc1616',
+    cxdValue: '#dc1616',
     antdValue: '#ff2729'
   },
   {
     label: '错误在激活时的颜色',
     name: '--danger-onActive',
-    prismuiValue: '#d01515',
+    cxdValue: '#d01515',
     antdValue: '#ff1a1d'
   }
 ];
@@ -164,10 +164,10 @@ for (const color of colors) {
         name: `config.theme._vars["${color.name}"]`
       },
       {
-        label: 'PrismUI 默认值',
+        label: 'cxd 默认值',
         type: 'static-color',
-        value: color.prismuiValue,
-        visibleOn: 'data.config.theme.baseTheme === "prismui"',
+        value: color.cxdValue,
+        visibleOn: 'data.config.theme.baseTheme === "cxd"',
         inputClassName: 'text-xs'
       },
       {

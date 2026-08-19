@@ -4,7 +4,7 @@ exports[`EventAction:inputRange 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -18,7 +18,7 @@ exports[`EventAction:inputRange 1`] = `
         >
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="range"
+            data-amis-name="range"
             data-role="form-item"
           >
             <div
@@ -264,7 +264,7 @@ exports[`EventAction:inputRange 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal input-text-range-value"
-                  data-prismui-name="rangeValue"
+                  data-amis-name="rangeValue"
                   data-role="form-item"
                 >
                   <label
@@ -301,7 +301,7 @@ exports[`EventAction:inputRange 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal input-text-range-event"
-                  data-prismui-name="rangeEvent"
+                  data-amis-name="rangeEvent"
                   data-role="form-item"
                 >
                   <label

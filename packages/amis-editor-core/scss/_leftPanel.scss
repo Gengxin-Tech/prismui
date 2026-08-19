@@ -247,8 +247,7 @@
   background: #fff;
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .editor-left-panel {
     background: var(--ae-editor-surface);
     box-shadow: 2px 0 24px rgba(0, 0, 0, 0.35);

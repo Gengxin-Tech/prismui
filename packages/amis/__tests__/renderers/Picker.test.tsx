@@ -343,7 +343,7 @@ test('4. Renderer:Picker with drawer modalMode', async () => {
 //   });
 // });
 
-// 对应 issue https://github.com/baidu/amis/issues/9435
+// 对应 issue https://github.com/Gengxin-Tech/prismui/issues/9435
 test('6. picker with toolbar form', async () => {
   const {container, rerender, getByText, getByPlaceholderText, baseElement} =
     render(

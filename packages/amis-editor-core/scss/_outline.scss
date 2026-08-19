@@ -264,8 +264,7 @@
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .ae-Outline {
     background: var(--ae-editor-surface);
 

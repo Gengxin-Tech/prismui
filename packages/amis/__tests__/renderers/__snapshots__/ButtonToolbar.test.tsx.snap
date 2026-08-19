@@ -4,7 +4,7 @@ exports[`Renderer:button-toolbar 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal show"
-    data-prismui-name="button-toolbar"
+    data-amis-name="button-toolbar"
     data-role="form-item"
   >
     <label

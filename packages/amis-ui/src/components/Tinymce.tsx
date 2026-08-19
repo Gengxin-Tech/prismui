@@ -171,7 +171,7 @@ export default class TinymceEditor extends React.Component<TinymceEditorProps> {
         insert: {
           title: 'Insert',
           items:
-            'image link media codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor toc | insertdatetime'
+            'image link media template codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor toc | insertdatetime'
         },
         format: {
           title: 'Format',
@@ -202,6 +202,7 @@ export default class TinymceEditor extends React.Component<TinymceEditorProps> {
       promotion: false,
       setup: (editor: any) => {
         this.editor = editor;
+        this.registerLegacyTemplateMenu(editor);
 
         editor.on('init', (e: Event) => {
           this.editorInitialized = true;
@@ -231,6 +232,7 @@ export default class TinymceEditor extends React.Component<TinymceEditorProps> {
 
     const value = model || '';
     editor.setContent((this.currentContent = value));
+    this.restoreLegacyAutoresize(editor);
 
     if (onModelChange) {
       editor.on('change keyup setcontent', (e: any) => {
@@ -249,6 +251,45 @@ export default class TinymceEditor extends React.Component<TinymceEditorProps> {
     // iframe 移动后，就不可用了，那只能重新初始化
     // https://poeticcode.wordpress.com/2010/06/08/iframe-reloads-when-moved-around-the-dom-tree/
     editor.contentWindow.addEventListener('unload', this.handleIframeUnload);
+  }
+
+  registerLegacyTemplateMenu(editor: any) {
+    const menuItems = editor.ui?.registry?.getAll?.().menuItems;
+
+    if (menuItems?.template) {
+      return;
+    }
+
+    editor.ui?.registry?.addMenuItem?.('template', {
+      icon: 'template',
+      text: 'Insert template...',
+      onSetup: (api: any) => {
+        const updateEnabled = () =>
+          api.setEnabled(editor.selection.isEditable());
+        editor.on('NodeChange', updateEnabled);
+        updateEnabled();
+
+        return () => editor.off('NodeChange', updateEnabled);
+      },
+      onAction: () => undefined
+    });
+  }
+
+  restoreLegacyAutoresize(editor: Editor) {
+    if (
+      Object.prototype.hasOwnProperty.call(
+        this.props.config || {},
+        'autoresize_bottom_margin'
+      )
+    ) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      editor.options.set('autoresize_bottom_margin', 0);
+      editor.dispatch('ResizeContent');
+      (editor.plugins as any)?.autoresize?.resize?.();
+    });
   }
 
   render() {

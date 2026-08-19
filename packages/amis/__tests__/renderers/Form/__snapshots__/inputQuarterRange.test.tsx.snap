@@ -34,7 +34,7 @@ exports[`Renderer:InputQuarterRange with embed 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label

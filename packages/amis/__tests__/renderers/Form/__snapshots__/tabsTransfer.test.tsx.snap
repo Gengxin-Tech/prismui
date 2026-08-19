@@ -4,7 +4,7 @@ exports[`Renderer:tabsTransfer 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -48,7 +48,7 @@ exports[`Renderer:tabsTransfer 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <label
@@ -135,7 +135,7 @@ exports[`Renderer:tabsTransfer 1`] = `
                                   <input
                                     placeholder="请输入关键字"
                                     size="12"
-                                    theme="prismui"
+                                    theme="cxd"
                                     type="text"
                                     value=""
                                   />
@@ -663,7 +663,7 @@ exports[`Renderer:tabsTransfer with deferApi 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -707,7 +707,7 @@ exports[`Renderer:tabsTransfer with deferApi 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="a"
+                  data-amis-name="a"
                   data-role="form-item"
                 >
                   <label
@@ -794,7 +794,7 @@ exports[`Renderer:tabsTransfer with deferApi 1`] = `
                                   <input
                                     placeholder="请输入关键字"
                                     size="12"
-                                    theme="prismui"
+                                    theme="cxd"
                                     type="text"
                                     value=""
                                   />

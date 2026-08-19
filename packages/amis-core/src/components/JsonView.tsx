@@ -35,6 +35,68 @@ interface JsonViewModules extends JsonViewThemes {
   JsonViewEditor: React.ComponentType<any>;
 }
 
+const legacyEightiesTheme = createLegacyBase16Theme({
+  base00: '#2d2d2d',
+  base01: '#393939',
+  base02: '#515151',
+  base04: '#a09f93',
+  base07: '#f2f0ec',
+  base08: '#f2777a',
+  base09: '#f99157',
+  base0A: '#ffcc66',
+  base0B: '#99cc99',
+  base0C: '#66cccc',
+  base0D: '#6699cc',
+  base0E: '#cc99cc',
+  base0F: '#d27b53'
+});
+
+const legacyTwilightTheme = createLegacyBase16Theme({
+  base00: '#1e1e1e',
+  base01: '#323537',
+  base02: '#464b50',
+  base04: '#838184',
+  base07: '#ffffff',
+  base08: '#cf6a4c',
+  base09: '#cda869',
+  base0A: '#f9ee98',
+  base0B: '#8f9d6a',
+  base0C: '#afc4db',
+  base0D: '#7587a6',
+  base0E: '#9b859d',
+  base0F: '#9b703f'
+});
+
+function createLegacyBase16Theme(theme: Record<string, string>) {
+  return {
+    '--w-rjv-font-family': 'monospace',
+    '--w-rjv-color': theme.base07,
+    '--w-rjv-background-color': theme.base00,
+    '--w-rjv-line-color': theme.base02,
+    '--w-rjv-arrow-color': theme.base0E,
+    '--w-rjv-expanded-icon-color': theme.base0D,
+    '--w-rjv-collapsed-icon-color': theme.base0E,
+    '--w-rjv-edit-color': theme.base0D,
+    '--w-rjv-info-color': theme.base04,
+    '--w-rjv-update-color': theme.base01,
+    '--w-rjv-copied-color': theme.base0D,
+    '--w-rjv-copied-success-color': theme.base0B,
+    '--w-rjv-curlybraces-color': theme.base07,
+    '--w-rjv-colon-color': theme.base07,
+    '--w-rjv-brackets-color': theme.base07,
+    '--w-rjv-type-string-color': theme.base0B,
+    '--w-rjv-type-int-color': theme.base09,
+    '--w-rjv-type-float-color': theme.base09,
+    '--w-rjv-type-bigint-color': theme.base09,
+    '--w-rjv-type-boolean-color': theme.base09,
+    '--w-rjv-type-date-color': theme.base0D,
+    '--w-rjv-type-url-color': theme.base0C,
+    '--w-rjv-type-null-color': theme.base08,
+    '--w-rjv-type-nan-color': theme.base0A,
+    '--w-rjv-type-undefined-color': theme.base0F
+  } as React.CSSProperties;
+}
+
 type JsonViewEditOption = {
   value: unknown;
   oldValue: unknown;
@@ -59,28 +121,43 @@ function LegacyJsonArrow({
   style,
   ...props
 }: LegacyJsonArrowProps) {
-  const shapeProps = {
-    fill: 'none',
-    stroke: 'currentColor',
-    strokeWidth: 1.8
-  };
+  const color = expand
+    ? 'var(--w-rjv-expanded-icon-color, var(--w-rjv-arrow-color, currentColor))'
+    : 'var(--w-rjv-collapsed-icon-color, var(--w-rjv-arrow-color, currentColor))';
 
   return (
     <svg
       {...props}
       data-expand={expand}
       data-icon-style={iconStyle}
-      style={{cursor: 'pointer', height: '1em', width: '1em', ...style}}
-      viewBox="0 0 24 24"
-      fill="none"
+      style={{
+        cursor: 'pointer',
+        fill: color,
+        height: 14,
+        marginRight: 3,
+        verticalAlign: 'middle',
+        width: 14,
+        ...style
+      }}
+      viewBox={iconStyle === 'circle' ? '0 0 24 24' : '0 0 1792 1792'}
     >
       {iconStyle === 'circle' ? (
-        <circle cx="12" cy="12" r="8" {...shapeProps} />
+        <path
+          d={
+            expand
+              ? 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7'
+              : 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z'
+          }
+        />
       ) : (
-        <rect x="5" y="5" width="14" height="14" rx="1.5" {...shapeProps} />
+        <path
+          d={
+            expand
+              ? 'M1344 800v64q0 14-9 23t-23 9h-832q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h832q14 0 23 9t9 23zm128 448v-832q0-66-47-113t-113-47h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113zm128-832v832q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h832q119 0 203.5 84.5t84.5 203.5z'
+              : 'M1344 800v64q0 14-9 23t-23 9h-352v352q0 14-9 23t-23 9h-64q-14 0-23-9t-9-23v-352h-352q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h352v-352q0-14 9-23t23-9h64q14 0 23 9t9 23v352h352q14 0 23 9t9 23zm128 448v-832q0-66-47-113t-113-47h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113zm128-832v832q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h832q119 0 203.5 84.5t84.5 203.5z'
+          }
+        />
       )}
-      <path d="M8 12h8" {...shapeProps} />
-      {!expand ? <path d="M12 8v8" {...shapeProps} /> : null}
     </svg>
   );
 }
@@ -100,13 +177,48 @@ function LegacyCountInfo({count}: {count: number}) {
   );
 }
 
+function LegacyEllipsis({
+  count,
+  className,
+  style,
+  ...props
+}: React.HTMLAttributes<HTMLSpanElement> & {count: number}) {
+  if (count === 0) {
+    return null;
+  }
+
+  return (
+    <span
+      {...props}
+      className={className}
+      style={{cursor: 'pointer', ...style}}
+    >
+      ...
+    </span>
+  );
+}
+
 function createLegacyComponents(iconStyle: JsonViewProps['iconStyle']) {
   return {
     countInfo: LegacyCountInfo,
+    ellipsis: LegacyEllipsis,
     ...(iconStyle && iconStyle !== 'triangle'
       ? {arrow: <LegacyJsonArrow iconStyle={iconStyle} />}
       : null)
   };
+}
+
+function isEmptyCollection(value: any) {
+  if (Array.isArray(value)) {
+    return value.length === 0;
+  }
+
+  return (
+    value &&
+    typeof value === 'object' &&
+    !(value instanceof Date) &&
+    Object.keys(value).length === 0
+  );
 }
 
 function cloneRoot(value: any) {
@@ -225,9 +337,11 @@ function resolveTheme(
   }
 
   switch (theme) {
-    case 'eighties':
-    case 'monokai':
     case 'twilight':
+      return legacyTwilightTheme;
+    case 'eighties':
+      return legacyEightiesTheme;
+    case 'monokai':
       return monokaiTheme;
     case 'dark':
       return darkTheme;
@@ -241,6 +355,42 @@ function resolveTheme(
 
 function normalizeCollapsed(collapsed: JsonViewProps['collapsed']) {
   return typeof collapsed === 'boolean' ? !collapsed : collapsed;
+}
+
+function resolveCollapsed(
+  src: any,
+  collapsed: JsonViewProps['collapsed'],
+  editable: boolean
+) {
+  return !editable && isEmptyCollection(src)
+    ? false
+    : normalizeCollapsed(collapsed);
+}
+
+function resolveClassName(
+  className: string | undefined,
+  emptyRoot: boolean,
+  rootCount: number
+) {
+  const classNames = [
+    className,
+    emptyRoot ? 'w-rjv-empty-root' : '',
+    `w-rjv-root-count-${rootCount}`
+  ].filter(Boolean);
+
+  return classNames.length ? classNames.join(' ') : undefined;
+}
+
+function getRootCount(value: any) {
+  if (Array.isArray(value)) {
+    return value.length;
+  }
+
+  if (value && typeof value === 'object' && !(value instanceof Date)) {
+    return Object.keys(value).length;
+  }
+
+  return 1;
 }
 
 function createJsonViewComponent(modules: JsonViewModules) {
@@ -291,10 +441,12 @@ function createJsonViewComponent(modules: JsonViewModules) {
       () => createLegacyComponents(iconStyle),
       [iconStyle]
     );
+    const emptyRoot = !editable && isEmptyCollection(data);
+    const rootCount = getRootCount(data);
     const commonProps = {
       value: data,
       keyName: typeof name === 'string' ? name : undefined,
-      collapsed: normalizeCollapsed(collapsed),
+      collapsed: resolveCollapsed(data, collapsed, editable),
       enableClipboard: editable ? true : enableClipboard,
       displayDataTypes,
       displayObjectSize,
@@ -303,7 +455,7 @@ function createJsonViewComponent(modules: JsonViewModules) {
       objectSortKeys: sortKeys,
       quotes,
       components,
-      className,
+      className: resolveClassName(className, emptyRoot, rootCount),
       style: {
         ...resolveTheme(theme, themes),
         ...style

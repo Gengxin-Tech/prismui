@@ -278,7 +278,7 @@ exports[`Renderer:Wizard actionPrevLabel actionNextLabel actionFinishLabel class
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="website"
+            data-amis-name="website"
             data-role="form-item"
           >
             <label
@@ -314,7 +314,7 @@ exports[`Renderer:Wizard actionPrevLabel actionNextLabel actionFinishLabel class
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="name"
+            data-amis-name="name"
             data-role="form-item"
           >
             <label
@@ -394,7 +394,7 @@ exports[`Renderer:Wizard default 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-            data-prismui-name="website"
+            data-amis-name="website"
             data-role="form-item"
           >
             <label
@@ -435,7 +435,7 @@ exports[`Renderer:Wizard default 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-            data-prismui-name="name"
+            data-amis-name="name"
             data-role="form-item"
           >
             <label
@@ -485,7 +485,7 @@ exports[`Renderer:Wizard dialog 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -616,7 +616,7 @@ exports[`Renderer:Wizard dialog 1`] = `
                   />
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="website"
+                    data-amis-name="website"
                     data-role="form-item"
                   >
                     <label
@@ -652,7 +652,7 @@ exports[`Renderer:Wizard dialog 1`] = `
                   </div>
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="name"
+                    data-amis-name="name"
                     data-role="form-item"
                   >
                     <label
@@ -721,8 +721,8 @@ exports[`Renderer:Wizard dialog 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -764,7 +764,7 @@ exports[`Renderer:Wizard dialog 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="name"
+            data-amis-name="name"
             data-role="form-item"
           >
             <label
@@ -833,7 +833,7 @@ exports[`Renderer:Wizard dialog 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -964,7 +964,7 @@ exports[`Renderer:Wizard dialog 2`] = `
                   />
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="website"
+                    data-amis-name="website"
                     data-role="form-item"
                   >
                     <label
@@ -1000,7 +1000,7 @@ exports[`Renderer:Wizard dialog 2`] = `
                   </div>
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="name"
+                    data-amis-name="name"
                     data-role="form-item"
                   >
                     <label
@@ -1237,7 +1237,7 @@ exports[`Renderer:Wizard initApi default 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-            data-prismui-name="website"
+            data-amis-name="website"
             data-role="form-item"
           >
             <label
@@ -1278,7 +1278,7 @@ exports[`Renderer:Wizard initApi default 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-            data-prismui-name="name"
+            data-amis-name="name"
             data-role="form-item"
           >
             <label
@@ -1341,7 +1341,7 @@ exports[`Renderer:Wizard initApi reload 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1472,7 +1472,7 @@ exports[`Renderer:Wizard initApi reload 1`] = `
                   />
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="website"
+                    data-amis-name="website"
                     data-role="form-item"
                   >
                     <label
@@ -1508,7 +1508,7 @@ exports[`Renderer:Wizard initApi reload 1`] = `
                   </div>
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="name"
+                    data-amis-name="name"
                     data-role="form-item"
                   >
                     <label
@@ -1570,7 +1570,7 @@ exports[`Renderer:Wizard initApi reload 2`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1745,7 +1745,7 @@ exports[`Renderer:Wizard initApi reload 3`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -2256,7 +2256,7 @@ exports[`Renderer:Wizard initApi show loading 2`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-            data-prismui-name="website"
+            data-amis-name="website"
             data-role="form-item"
           >
             <label
@@ -2297,7 +2297,7 @@ exports[`Renderer:Wizard initApi show loading 2`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-            data-prismui-name="name"
+            data-amis-name="name"
             data-role="form-item"
           >
             <label
@@ -2382,7 +2382,7 @@ exports[`Renderer:Wizard readOnly 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="website"
+            data-amis-name="website"
             data-role="form-item"
           >
             <label
@@ -2419,7 +2419,7 @@ exports[`Renderer:Wizard readOnly 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="name"
+            data-amis-name="name"
             data-role="form-item"
           >
             <label
@@ -2786,7 +2786,7 @@ exports[`Renderer:Wizard step initApi 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-required"
-            data-prismui-name="email"
+            data-amis-name="email"
             data-role="form-item"
           >
             <label
@@ -2884,7 +2884,7 @@ exports[`Renderer:Wizard target 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -3080,7 +3080,7 @@ exports[`Renderer:Wizard target 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="website"
+                  data-amis-name="website"
                   data-role="form-item"
                 >
                   <label
@@ -3116,7 +3116,7 @@ exports[`Renderer:Wizard target 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="name"
+                  data-amis-name="name"
                   data-role="form-item"
                 >
                   <label
@@ -3342,7 +3342,7 @@ exports[`Renderer:Wizard validate 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isUrl"
-            data-prismui-name="website"
+            data-amis-name="website"
             data-role="form-item"
           >
             <label
@@ -3390,7 +3390,7 @@ exports[`Renderer:Wizard validate 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error is-required has-error--isRequired"
-            data-prismui-name="name"
+            data-amis-name="name"
             data-role="form-item"
           >
             <label

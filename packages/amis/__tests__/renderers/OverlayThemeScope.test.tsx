@@ -35,25 +35,25 @@ const dropdownSchema = (label: string) => ({
 
 test('Renderer:overlay body portal uses triggering root theme scope with shared env', async () => {
   theme('dark', {
-    classPrefix: 'dark-',
+    classPrefix: 'prismui-',
     componentClassPrefix: 'prismui-'
   });
 
   const sharedEnv = makeEnv({session: 'overlay-theme-shared'});
-  const prismuiRoot = render(
-    amisRender(dropdownSchema('Open prismui menu'), {theme: 'prismui'}, sharedEnv)
+  const cxdRoot = render(
+    amisRender(dropdownSchema('Open cxd menu'), {theme: 'cxd'}, sharedEnv)
   );
 
   render(
     amisRender(dropdownSchema('Open dark menu'), {theme: 'dark'}, sharedEnv)
   );
 
-  fireEvent.click(prismuiRoot.getByText('Open prismui menu'));
+  fireEvent.click(cxdRoot.getByText('Open cxd menu'));
 
   await waitFor(() => {
     expect(
       document.body.querySelector(
-        scopedPopoverSelector('prismui', componentClass('DropDown-popover'))
+        scopedPopoverSelector('cxd', componentClass('DropDown-popover'))
       )
     ).toBeInTheDocument();
   });

@@ -38,7 +38,7 @@ exports[`Renderer:InputSubForm base 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="form"
+            data-amis-name="form"
             data-role="form-item"
           >
             <label
@@ -109,8 +109,8 @@ exports[`Renderer:InputSubForm base 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -152,7 +152,7 @@ exports[`Renderer:InputSubForm base 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="a"
+            data-amis-name="a"
             data-role="form-item"
           >
             <label
@@ -192,7 +192,7 @@ exports[`Renderer:InputSubForm base 1`] = `
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="b"
+            data-amis-name="b"
             data-role="form-item"
           >
             <label
@@ -291,7 +291,7 @@ exports[`Renderer:InputSubForm with addButtonClassName & itemsClassName & itemCl
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="form2"
+          data-amis-name="form2"
           data-role="form-item"
         >
           <label
@@ -442,7 +442,7 @@ exports[`Renderer:InputSubForm with draggable & addable & removable 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="form"
+          data-amis-name="form"
           data-role="form-item"
         >
           <label
@@ -653,7 +653,7 @@ exports[`Renderer:InputSubForm with multiple & maxLength & btnLabel 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="form"
+          data-amis-name="form"
           data-role="form-item"
         >
           <label

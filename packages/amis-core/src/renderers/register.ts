@@ -43,7 +43,7 @@ window.addEventListener(
       return;
     }
     if (
-      event.data?.type === 'prismui-renderer-register-event' &&
+      event.data?.type === 'amis-renderer-register-event' &&
       event.data?.amisRenderer &&
       event.data.amisRenderer.type
     ) {

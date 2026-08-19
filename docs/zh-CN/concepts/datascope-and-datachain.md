@@ -492,7 +492,7 @@ url 中的参数会进入顶层数据域，比如下面的例子，可以点击[
         mockResponse: {
           status: 200,
           data: {
-            name: "prismui-demo"
+            name: "amis-demo"
           }
         }
       }
@@ -509,7 +509,7 @@ url 中的参数会进入顶层数据域，比如下面的例子，可以点击[
               "componentId": "form_data",
               "args": {
                 "value": {
-                  "name": "prismui-demo2"
+                  "name": "amis-demo2"
                 }
               }
             }

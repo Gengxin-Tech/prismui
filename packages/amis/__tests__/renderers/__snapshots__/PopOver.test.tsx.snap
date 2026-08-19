@@ -4,7 +4,7 @@ exports[`Renderer:PopOver with offset: default 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-    data-prismui-name="static"
+    data-amis-name="static"
     data-role="form-item"
   >
     <label
@@ -49,7 +49,7 @@ exports[`Renderer:PopOver with offset: show popover no offset 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-    data-prismui-name="static"
+    data-amis-name="static"
     data-role="form-item"
   >
     <label
@@ -86,10 +86,10 @@ exports[`Renderer:PopOver with offset: show popover no offset 1`] = `
         </span>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver __PRISMUI_COMPONENT_CLASS_PREFIX__PopOverAble-popover"
-          data-prismui-theme="prismui"
+          data-prismui-theme="cxd"
           role="popover"
           style="display: block; left: 0px; top: 0px; visibility: hidden;"
-          theme="prismui"
+          theme="cxd"
         >
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Panel __PRISMUI_COMPONENT_CLASS_PREFIX__Panel--default"
@@ -118,7 +118,7 @@ exports[`Renderer:PopOver with offset: show popover with offset 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-    data-prismui-name="static"
+    data-amis-name="static"
     data-role="form-item"
   >
     <label
@@ -155,10 +155,10 @@ exports[`Renderer:PopOver with offset: show popover with offset 1`] = `
         </span>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver __PRISMUI_COMPONENT_CLASS_PREFIX__PopOverAble-popover"
-          data-prismui-theme="prismui"
+          data-prismui-theme="cxd"
           role="popover"
           style="display: block; left: 101px; top: 102px; visibility: hidden;"
-          theme="prismui"
+          theme="cxd"
         >
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Panel __PRISMUI_COMPONENT_CLASS_PREFIX__Panel--default"

@@ -1177,7 +1177,7 @@ function FontEditor(props: FontEditorProps) {
 }
 
 @FormItem({
-  type: 'prismui-theme-font-editor',
+  type: 'amis-theme-font-editor',
   strictMode: false,
   renderLabel: false
 })

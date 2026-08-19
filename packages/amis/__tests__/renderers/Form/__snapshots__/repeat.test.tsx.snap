@@ -34,7 +34,7 @@ exports[`Renderer:repeat 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -130,10 +130,10 @@ exports[`Renderer:repeat 1`] = `
                   </span>
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver __PRISMUI_COMPONENT_CLASS_PREFIX__Select-popover"
-                    data-prismui-theme="prismui"
+                    data-prismui-theme="cxd"
                     role="popover"
                     style="display: block; width: 0px; left: 0px; top: 0px; visibility: hidden;"
-                    theme="prismui"
+                    theme="cxd"
                   >
                     <div
                       class="__PRISMUI_COMPONENT_CLASS_PREFIX__PopOver-overlay"

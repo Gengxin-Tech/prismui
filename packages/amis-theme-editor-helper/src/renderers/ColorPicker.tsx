@@ -1409,7 +1409,7 @@ function ColorPickerControl(props: ColorPickerControlProps) {
 export default ColorPicker;
 
 @FormItem({
-  type: 'prismui-theme-color-picker',
+  type: 'amis-theme-color-picker',
   strictMode: false,
   renderLabel: true
 })

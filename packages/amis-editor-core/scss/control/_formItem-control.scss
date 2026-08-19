@@ -190,8 +190,7 @@
   margin-bottom: var(--Form-item-gap);
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .ae-Outline-panel,
   .ae-Settings-content {
     .ae-formItemControl {

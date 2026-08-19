@@ -4,7 +4,7 @@ exports[`Renderer:anchorNav 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -90,7 +90,7 @@ exports[`Renderer:anchorNav 1`] = `
                       />
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="name"
+                        data-amis-name="name"
                         data-role="form-item"
                       >
                         <label
@@ -126,7 +126,7 @@ exports[`Renderer:anchorNav 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="email"
+                        data-amis-name="email"
                         data-role="form-item"
                       >
                         <label
@@ -216,7 +216,7 @@ exports[`Renderer:anchorNav 1`] = `
                       />
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="cname"
+                        data-amis-name="cname"
                         data-role="form-item"
                       >
                         <label
@@ -252,7 +252,7 @@ exports[`Renderer:anchorNav 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="caddress"
+                        data-amis-name="caddress"
                         data-role="form-item"
                       >
                         <label
@@ -342,7 +342,7 @@ exports[`Renderer:anchorNav 1`] = `
                       />
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="interest1"
+                        data-amis-name="interest1"
                         data-role="form-item"
                       >
                         <label
@@ -378,7 +378,7 @@ exports[`Renderer:anchorNav 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="interest2"
+                        data-amis-name="interest2"
                         data-role="form-item"
                       >
                         <label
@@ -414,7 +414,7 @@ exports[`Renderer:anchorNav 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="interest3"
+                        data-amis-name="interest3"
                         data-role="form-item"
                       >
                         <label
@@ -450,7 +450,7 @@ exports[`Renderer:anchorNav 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="interest4"
+                        data-amis-name="interest4"
                         data-role="form-item"
                       >
                         <label
@@ -486,7 +486,7 @@ exports[`Renderer:anchorNav 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="interest5"
+                        data-amis-name="interest5"
                         data-role="form-item"
                       >
                         <label
@@ -522,7 +522,7 @@ exports[`Renderer:anchorNav 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="interest6"
+                        data-amis-name="interest6"
                         data-role="form-item"
                       >
                         <label
@@ -589,7 +589,7 @@ exports[`Renderer:anchorNav with children 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -684,7 +684,7 @@ exports[`Renderer:anchorNav with children 1`] = `
                       />
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="name"
+                        data-amis-name="name"
                         data-role="form-item"
                       >
                         <label
@@ -720,7 +720,7 @@ exports[`Renderer:anchorNav with children 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="email"
+                        data-amis-name="email"
                         data-role="form-item"
                       >
                         <label
@@ -810,7 +810,7 @@ exports[`Renderer:anchorNav with children 1`] = `
                       />
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="cname1"
+                        data-amis-name="cname1"
                         data-role="form-item"
                       >
                         <label
@@ -846,7 +846,7 @@ exports[`Renderer:anchorNav with children 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="caddress1"
+                        data-amis-name="caddress1"
                         data-role="form-item"
                       >
                         <label
@@ -936,7 +936,7 @@ exports[`Renderer:anchorNav with children 1`] = `
                       />
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="cname2"
+                        data-amis-name="cname2"
                         data-role="form-item"
                       >
                         <label
@@ -972,7 +972,7 @@ exports[`Renderer:anchorNav with children 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="caddress2"
+                        data-amis-name="caddress2"
                         data-role="form-item"
                       >
                         <label
@@ -1062,7 +1062,7 @@ exports[`Renderer:anchorNav with children 1`] = `
                       />
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="cname"
+                        data-amis-name="cname"
                         data-role="form-item"
                       >
                         <label
@@ -1098,7 +1098,7 @@ exports[`Renderer:anchorNav with children 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="caddress"
+                        data-amis-name="caddress"
                         data-role="form-item"
                       >
                         <label
@@ -1165,7 +1165,7 @@ exports[`Renderer:anchorNav with horizontal 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1233,7 +1233,7 @@ exports[`Renderer:anchorNav with horizontal 1`] = `
                       />
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="name"
+                        data-amis-name="name"
                         data-role="form-item"
                       >
                         <label
@@ -1269,7 +1269,7 @@ exports[`Renderer:anchorNav with horizontal 1`] = `
                       </div>
                       <div
                         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                        data-prismui-name="email"
+                        data-amis-name="email"
                         data-role="form-item"
                       >
                         <label

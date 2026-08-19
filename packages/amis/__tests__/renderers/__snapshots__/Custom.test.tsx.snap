@@ -3,7 +3,7 @@
 exports[`Renderer:custom 1`] = `
 <div>
   <div
-    class="prismui-custom-demo"
+    class="amis-custom-demo"
   >
     <div>
       <h2>

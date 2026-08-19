@@ -61,7 +61,7 @@ exports[`Renderer:fieldSet 1`] = `
                 >
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                    data-prismui-name="text"
+                    data-amis-name="text"
                     data-role="form-item"
                   >
                     <label
@@ -154,7 +154,7 @@ exports[`Renderer:fieldSet with mode 1`] = `
                 >
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                    data-prismui-name="text1"
+                    data-amis-name="text1"
                     data-role="form-item"
                   >
                     <label
@@ -194,7 +194,7 @@ exports[`Renderer:fieldSet with mode 1`] = `
                   </div>
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                    data-prismui-name="text2"
+                    data-amis-name="text2"
                     data-role="form-item"
                   >
                     <label
@@ -295,7 +295,7 @@ exports[`Renderer:fieldSet with mode 2`] = `
                 >
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--inline"
-                    data-prismui-name="text1"
+                    data-amis-name="text1"
                     data-role="form-item"
                   >
                     <label
@@ -335,7 +335,7 @@ exports[`Renderer:fieldSet with mode 2`] = `
                   </div>
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--inline"
-                    data-prismui-name="text2"
+                    data-amis-name="text2"
                     data-role="form-item"
                   >
                     <label
@@ -436,7 +436,7 @@ exports[`Renderer:fieldSet with mode 3`] = `
                 >
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="text1"
+                    data-amis-name="text1"
                     data-role="form-item"
                   >
                     <label
@@ -472,7 +472,7 @@ exports[`Renderer:fieldSet with mode 3`] = `
                   </div>
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="text2"
+                    data-amis-name="text2"
                     data-role="form-item"
                   >
                     <label
@@ -566,7 +566,7 @@ exports[`Renderer:fieldSet with titlePosition & collapseTitle & title 1`] = `
                 >
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="text1"
+                    data-amis-name="text1"
                     data-role="form-item"
                   >
                     <label
@@ -602,7 +602,7 @@ exports[`Renderer:fieldSet with titlePosition & collapseTitle & title 1`] = `
                   </div>
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="text2"
+                    data-amis-name="text2"
                     data-role="form-item"
                   >
                     <label

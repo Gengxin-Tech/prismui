@@ -14,7 +14,7 @@ describe('MobileDevTool portal exception', () => {
   beforeEach(() => {
     global.ResizeObserver = MockResizeObserver as any;
     localStorage.setItem(
-      'prismui-mobile-dev-tool-dimension',
+      'amis-mobile-dev-tool-dimension',
       JSON.stringify({name: 'custom', width: 375, height: 667})
     );
   });

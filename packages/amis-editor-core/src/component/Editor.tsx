@@ -456,7 +456,7 @@ export default class Editor extends Component<EditorProps> {
     }
     // 增加插件动态添加事件响应机制
     if (
-      event.data.type === 'prismui-widget-register-event' &&
+      event.data.type === 'amis-widget-register-event' &&
       event.data.editorPluginName
     ) {
       console.info(

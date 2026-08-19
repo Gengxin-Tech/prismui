@@ -30,8 +30,16 @@ function updateTheme(theme: any) {
     }
   }
 
+  const themeName =
+    document.body.getAttribute('data-prismui-theme') ||
+    document.documentElement.getAttribute('data-prismui-theme') ||
+    'cxd';
+  const themeSelector = `[data-prismui-theme="${themeName
+    .replace(/\\/g, '\\\\')
+    .replace(/"/g, '\\"')}"]`;
+
   // bca-disable-line
-  varStyleTag.innerHTML = `:root {
+  varStyleTag.innerHTML = `${themeSelector} {
         ${[...vars].join('')}
     }`;
 
@@ -39,7 +47,7 @@ function updateTheme(theme: any) {
   let styleTag = document.getElementById('customStyle');
   if (!styleTag) {
     styleTag = document.createElement('style');
-    styleTag.id = 'customVars';
+    styleTag.id = 'customStyle';
     document.body.appendChild(styleTag);
   }
   if (theme?.style) {
@@ -53,7 +61,7 @@ export default {
   title:
     '这是一个基于 amis 搭建较为复杂界面的例子，部分功能使用代码开发，请参考源码',
   submitText: '',
-  persistData: 'prismui-theme-editor',
+  persistData: 'amis-theme-editor',
   actions: [],
   onEvent: {
     inited: {

@@ -34,7 +34,7 @@ exports[`Renderer:checkboxes 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -129,7 +129,7 @@ exports[`Renderer:checkboxes 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -203,7 +203,7 @@ exports[`Renderer:checkboxes 2`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -298,7 +298,7 @@ exports[`Renderer:checkboxes 2`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -368,7 +368,7 @@ exports[`Renderer:checkboxes with checkall: all selected 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -520,7 +520,7 @@ exports[`Renderer:checkboxes with checkall: all selected 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <div
@@ -597,7 +597,7 @@ exports[`Renderer:checkboxes with checkall: default value 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -749,7 +749,7 @@ exports[`Renderer:checkboxes with checkall: default value 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <div
@@ -826,7 +826,7 @@ exports[`Renderer:checkboxes with checkall: no selected 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -978,7 +978,7 @@ exports[`Renderer:checkboxes with checkall: no selected 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <div
@@ -1055,7 +1055,7 @@ exports[`Renderer:checkboxes with columnsCount 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes2"
+          data-amis-name="checkboxes2"
           data-role="form-item"
         >
           <label
@@ -1228,7 +1228,7 @@ exports[`Renderer:checkboxes with columnsCount 2`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes2"
+          data-amis-name="checkboxes2"
           data-role="form-item"
         >
           <label
@@ -1405,7 +1405,7 @@ exports[`Renderer:checkboxes with columnsCount 3`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -1653,7 +1653,7 @@ exports[`Renderer:checkboxes with creatable & createBtnLabel & addControls & add
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -1833,7 +1833,7 @@ exports[`Renderer:checkboxes with creatable & createBtnLabel & addControls & add
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="checkboxes"
+            data-amis-name="checkboxes"
             data-role="form-item"
           >
             <label
@@ -1956,8 +1956,8 @@ exports[`Renderer:checkboxes with creatable & createBtnLabel & addControls & add
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -1999,7 +1999,7 @@ exports[`Renderer:checkboxes with creatable & createBtnLabel & addControls & add
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="label"
+            data-amis-name="label"
             data-role="form-item"
           >
             <label
@@ -2039,7 +2039,7 @@ exports[`Renderer:checkboxes with creatable & createBtnLabel & addControls & add
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="value"
+            data-amis-name="value"
             data-role="form-item"
           >
             <label
@@ -2169,7 +2169,7 @@ exports[`Renderer:checkboxes with defaultCheckAll & inline 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -2265,7 +2265,7 @@ exports[`Renderer:checkboxes with defaultCheckAll & inline 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes-two"
+          data-amis-name="checkboxes-two"
           data-role="form-item"
         >
           <label
@@ -2418,7 +2418,7 @@ exports[`Renderer:checkboxes with editable & editControls & editApi: dialog open
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="checkboxes"
+            data-amis-name="checkboxes"
             data-role="form-item"
           >
             <label
@@ -2568,8 +2568,8 @@ exports[`Renderer:checkboxes with editable & editControls & editApi: dialog open
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -2611,7 +2611,7 @@ exports[`Renderer:checkboxes with editable & editControls & editApi: dialog open
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="label"
+            data-amis-name="label"
             data-role="form-item"
           >
             <label
@@ -2651,7 +2651,7 @@ exports[`Renderer:checkboxes with editable & editControls & editApi: dialog open
           </div>
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-            data-prismui-name="value"
+            data-amis-name="value"
             data-role="form-item"
           >
             <label
@@ -2750,7 +2750,7 @@ exports[`Renderer:checkboxes with editable & editControls & editApi: edit succes
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -2935,7 +2935,7 @@ exports[`Renderer:checkboxes with editable & editControls & editApi: hover edit 
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -3120,7 +3120,7 @@ exports[`Renderer:checkboxes with group 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -3341,7 +3341,7 @@ exports[`Renderer:checkboxes with menuTpl 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -3530,7 +3530,7 @@ exports[`Renderer:checkboxes with optionType & labelClassName & itemClassName 1`
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label
@@ -3684,7 +3684,7 @@ exports[`Renderer:checkboxes with removable & deleteApi: dialog open 1`] = `
           />
           <div
             class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-            data-prismui-name="checkboxes"
+            data-amis-name="checkboxes"
             data-role="form-item"
           >
             <label
@@ -3835,8 +3835,8 @@ exports[`Renderer:checkboxes with removable & deleteApi: dialog open 1`] = `
   </div>
   <div />
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -3918,7 +3918,7 @@ exports[`Renderer:checkboxes with removable & deleteApi: hover edit 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="checkboxes"
+          data-amis-name="checkboxes"
           data-role="form-item"
         >
           <label

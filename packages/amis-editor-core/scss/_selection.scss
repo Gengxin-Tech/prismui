@@ -31,8 +31,7 @@
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .ae-Editor-selectionCursor {
     background: rgba(36, 104, 242, 0.2);
     border-color: var(--colors-brand-4);

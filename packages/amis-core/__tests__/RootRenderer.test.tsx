@@ -37,7 +37,7 @@ function createRootStore() {
 
 afterEach(() => {
   cleanup();
-  theme('prismui', {
+  theme('cxd', {
     componentClassPrefix: 'prismui-'
   });
   theme('dark', {
@@ -52,8 +52,8 @@ test('RootRenderer scopes its host root without adding a layout wrapper', async 
       schema={{type: 'page'} as any}
       rootStore={rootStore as any}
       statusStore={{} as any}
-      env={{theme: getTheme('prismui')} as any}
-      theme="prismui"
+      env={{theme: getTheme('cxd')} as any}
+      theme="cxd"
       render={path => (!path ? <div className="prismui-Page">content</div> : null)}
     />
   );
@@ -63,7 +63,7 @@ test('RootRenderer scopes its host root without adding a layout wrapper', async 
   });
 
   expect(container.children).toHaveLength(1);
-  expect(container.firstElementChild).toHaveAttribute('data-prismui-theme', 'prismui');
+  expect(container.firstElementChild).toHaveAttribute('data-prismui-theme', 'cxd');
 
   theme('dark', {
     componentClassPrefix: 'prismui-'

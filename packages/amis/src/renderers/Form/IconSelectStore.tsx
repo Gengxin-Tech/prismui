@@ -15,7 +15,7 @@ export interface SvgIconGroup {
 
 export let svgIcons: SvgIconGroup[] = [];
 
-function getSvgMountNode(nodeId: string = 'prismui-icon-manage-mount-node') {
+function getSvgMountNode(nodeId: string = 'amis-icon-manage-mount-node') {
   const node = document.getElementById(nodeId);
 
   if (node) {

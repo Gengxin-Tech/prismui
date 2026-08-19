@@ -25,7 +25,7 @@ const prefix = 'fex/';
 
 async function main() {
   const folder = 'gh-pages';
-  const productName = 'prismui-gh-pages';
+  const productName = 'amis-gh-pages';
 
   if (!fs.existsSync(folder)) {
     throw new Error('文件夹不存在');

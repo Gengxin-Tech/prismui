@@ -67,7 +67,7 @@ exports[`Renderer:Progress as form item 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="progress"
+          data-amis-name="progress"
           data-role="form-item"
         >
           <label

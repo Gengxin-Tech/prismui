@@ -243,8 +243,7 @@
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .editor-InputSearch-panel {
     .editor-InputSearch-content {
       background: var(--ae-editor-surface);

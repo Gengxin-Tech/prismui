@@ -44,7 +44,7 @@ describe('Spinner ThemeScope portal', () => {
     document.body.appendChild(loadingRoot);
 
     render(
-      <Spinner show theme="prismui" loadingConfig={{root: '#dark-loading-root'}} />
+      <Spinner show theme="cxd" loadingConfig={{root: '#dark-loading-root'}} />
     );
 
     await waitFor(() => {

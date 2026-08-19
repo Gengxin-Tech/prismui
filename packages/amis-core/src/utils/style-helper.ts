@@ -111,7 +111,7 @@ export function insertStyle({
   before?: string;
 }) {
   const varStyleTag = findOrCreateStyle({
-    classId: 'prismui-' + classId,
+    classId: 'amis-' + classId,
     doc,
     before,
     id
@@ -518,7 +518,7 @@ export function removeCustomStyle(
   cssHasExpression?: boolean
 ) {
   let styleId =
-    'prismui-' + (type ? type + '-' : '') + (id.replace?.('u:', '') || id + '');
+    'amis-' + (type ? type + '-' : '') + (id.replace?.('u:', '') || id + '');
   if (typeof data?.index === 'number' && cssHasExpression !== false) {
     styleId += `-${data.index}`;
   }

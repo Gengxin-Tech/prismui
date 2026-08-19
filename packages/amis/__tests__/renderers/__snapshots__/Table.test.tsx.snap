@@ -681,7 +681,7 @@ exports[`Renderer:table children 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -1904,7 +1904,7 @@ exports[`Renderer:table combine Renderer:table combineNum only 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -2441,7 +2441,7 @@ exports[`Renderer:table combine Renderer:table combineNum with fromIndex 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -3048,7 +3048,7 @@ exports[`Renderer:table groupName-default 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -3789,7 +3789,7 @@ exports[`Renderer:table groupName-middleNoGroupName 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -4534,7 +4534,7 @@ exports[`Renderer:table groupName-startNoGroupName 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -5267,7 +5267,7 @@ exports[`Renderer:table groupName-withTpl 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -6719,7 +6719,7 @@ exports[`Renderer:table list 1`] = `
                   >
                     <input
                       checked=""
-                      theme="prismui"
+                      theme="cxd"
                       type="checkbox"
                     />
                     <span
@@ -6983,7 +6983,7 @@ exports[`Renderer:table list 1`] = `
                   >
                     <input
                       checked=""
-                      theme="prismui"
+                      theme="cxd"
                       type="checkbox"
                     />
                     <span
@@ -7378,7 +7378,7 @@ exports[`Renderer:table list 1`] = `
                     data-role="switch"
                   >
                     <input
-                      theme="prismui"
+                      theme="cxd"
                       type="checkbox"
                     />
                     <span

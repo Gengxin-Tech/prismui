@@ -21,7 +21,8 @@ mkdir -p lib/themes
 cp ../../node_modules/amis-ui/lib/themes/ang.css lib/themes/ang.css
 cp ../../node_modules/amis-ui/lib/themes/dark.css lib/themes/dark.css
 cp ../../node_modules/amis-ui/lib/themes/antd.css lib/themes/antd.css
-cp ../../node_modules/amis-ui/lib/themes/prismui.css lib/themes/prismui.css
+cp ../../node_modules/amis-ui/lib/themes/cxd.css lib/themes/cxd.css
+cp ../../node_modules/amis-ui/lib/themes/cxd.css lib/themes/prismui.css
 cp ../../node_modules/amis-ui/lib/themes/default.css lib/themes/default.css
 cp ../../node_modules/amis-ui/lib/helper.css lib/helper.css
 
@@ -41,20 +42,23 @@ fi
 
 echo "===postcss ie11==="
 # 生成去掉变量的 css，动画设置为零
-cat lib/themes/ang.css | ../../node_modules/.bin/postcss >lib/themes/ang-ie11.css
-cat lib/themes/dark.css | ../../node_modules/.bin/postcss >lib/themes/dark-ie11.css
-cat lib/themes/antd.css | ../../node_modules/.bin/postcss >lib/themes/antd-ie11.css
-cat lib/themes/prismui.css | ../../node_modules/.bin/postcss >lib/themes/prismui-ie11.css
-cp lib/themes/prismui-ie11.css lib/themes/default-ie11.css
+cat lib/themes/cxd.css | ../../node_modules/.bin/postcss >lib/themes/cxd-ie11.css
+cat lib/themes/cxd.css lib/themes/ang.css | ../../node_modules/.bin/postcss >lib/themes/ang-ie11.css
+cat lib/themes/cxd.css lib/themes/dark.css | ../../node_modules/.bin/postcss >lib/themes/dark-ie11.css
+cat lib/themes/cxd.css lib/themes/antd.css | ../../node_modules/.bin/postcss >lib/themes/antd-ie11.css
+cp lib/themes/cxd-ie11.css lib/themes/prismui-ie11.css
+cp lib/themes/cxd-ie11.css lib/themes/default-ie11.css
 
 if [ "$SDK_BUILDER" = "fis3" ]; then
   printf ':root { --animation-duration: 0s;}\n' >sdk/ie11-patch.css
   cat sdk/sdk.css sdk/ie11-patch.css | ../../node_modules/.bin/postcss >sdk/sdk-ie11.css
-  cat sdk/ang.css sdk/ie11-patch.css | ../../node_modules/.bin/postcss >sdk/ang-ie11.css
-  cat sdk/dark.css sdk/ie11-patch.css | ../../node_modules/.bin/postcss >sdk/dark-ie11.css
-  cat sdk/antd.css sdk/ie11-patch.css | ../../node_modules/.bin/postcss >sdk/antd-ie11.css
+  cat sdk/sdk.css sdk/ang.css sdk/ie11-patch.css | ../../node_modules/.bin/postcss >sdk/ang-ie11.css
+  cat sdk/sdk.css sdk/dark.css sdk/ie11-patch.css | ../../node_modules/.bin/postcss >sdk/dark-ie11.css
+  cat sdk/sdk.css sdk/antd.css sdk/ie11-patch.css | ../../node_modules/.bin/postcss >sdk/antd-ie11.css
 
-  # prismui 是默认主题，同时保留 sdk.css 作为聚合入口
+  # cxd 是默认主题，同时保留 sdk.css 作为聚合入口
+  cp sdk/sdk.css sdk/cxd.css
+  cp sdk/sdk-ie11.css sdk/cxd-ie11.css
   cp sdk/sdk.css sdk/prismui.css
   cp sdk/sdk-ie11.css sdk/prismui-ie11.css
 

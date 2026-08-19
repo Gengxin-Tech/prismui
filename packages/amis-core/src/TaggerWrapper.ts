@@ -28,7 +28,7 @@ export const TaggerWrapper: React.FC<TaggerWrapperProps> = ({
     const attrs: any = {};
     Object.keys(tagger).forEach(key => {
       if (typeof tagger[key] === 'string' || typeof tagger[key] === 'number') {
-        attrs[`data-prismui-tagger-${key}`] = String(tagger[key]);
+        attrs[`data-amis-tagger-${key}`] = String(tagger[key]);
       }
     });
 

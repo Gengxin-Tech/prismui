@@ -54,7 +54,7 @@ const themes: Record<string, ThemeConfig> = {
   default: {
     componentClassPrefix: 'prismui-'
   },
-  prismui: {
+  cxd: {
     classPrefix: 'prismui-',
     componentClassPrefix: 'prismui-'
   }
@@ -196,18 +196,18 @@ export function getClassPrefix() {
 
 export function normalizeThemeName(theme?: string): string {
   let themeName =
-    typeof theme === 'string' && theme ? theme : defaultTheme || 'prismui';
+    typeof theme === 'string' && theme ? theme : defaultTheme || 'cxd';
 
   if (themeName === 'default') {
     themeName =
-      defaultTheme && defaultTheme !== 'default' ? defaultTheme : 'prismui';
+      defaultTheme && defaultTheme !== 'default' ? defaultTheme : 'cxd';
   }
 
   if (!hasTheme(themeName)) {
     themeName =
       defaultTheme && defaultTheme !== 'default' && hasTheme(defaultTheme)
         ? defaultTheme
-        : 'prismui';
+        : 'cxd';
   }
 
   return themeName;
@@ -326,7 +326,7 @@ export interface ThemeProps {
 
 export interface ThemeOuterProps extends Partial<ThemeProps> {}
 
-export let defaultTheme: string = 'prismui';
+export let defaultTheme: string = 'cxd';
 export const ThemeContext = React.createContext('');
 
 export function themeable<

@@ -8,7 +8,7 @@ exports[`Renderer:TabsTransferPicker 1`] = `
   <div>
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-      data-prismui-theme="prismui"
+      data-prismui-theme="cxd"
     >
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -52,7 +52,7 @@ exports[`Renderer:TabsTransferPicker 1`] = `
                   />
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="a"
+                    data-amis-name="a"
                     data-role="form-item"
                   >
                     <label
@@ -148,7 +148,7 @@ exports[`Renderer:TabsTransferPicker: dialog open 1`] = `
   <div>
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-      data-prismui-theme="prismui"
+      data-prismui-theme="cxd"
     >
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -192,7 +192,7 @@ exports[`Renderer:TabsTransferPicker: dialog open 1`] = `
                   />
                   <div
                     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                    data-prismui-name="a"
+                    data-amis-name="a"
                     data-role="form-item"
                   >
                     <label
@@ -263,8 +263,8 @@ exports[`Renderer:TabsTransferPicker: dialog open 1`] = `
     </div>
   </div>
   <div
-    class="prismui-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
-    data-prismui-theme="prismui"
+    class="amis-dialog-widget __PRISMUI_COMPONENT_CLASS_PREFIX__Modal __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--md __PRISMUI_COMPONENT_CLASS_PREFIX__Modal--1th"
+    data-prismui-theme="cxd"
     role="dialog"
   >
     <div
@@ -276,7 +276,7 @@ exports[`Renderer:TabsTransferPicker: dialog open 1`] = `
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Modal-header"
         locale="zh-CN"
-        theme="prismui"
+        theme="cxd"
       >
         <a
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Modal-close"
@@ -292,7 +292,7 @@ exports[`Renderer:TabsTransferPicker: dialog open 1`] = `
       </div>
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Modal-body"
-        theme="prismui"
+        theme="cxd"
       >
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Transfer __PRISMUI_COMPONENT_CLASS_PREFIX__TabsTransfer"
@@ -1463,7 +1463,7 @@ exports[`Renderer:TabsTransferPicker: dialog open 1`] = `
       </div>
       <div
         class="__PRISMUI_COMPONENT_CLASS_PREFIX__Modal-footer"
-        theme="prismui"
+        theme="cxd"
       >
         <button
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Button __PRISMUI_COMPONENT_CLASS_PREFIX__Button--default __PRISMUI_COMPONENT_CLASS_PREFIX__Button--size-default"

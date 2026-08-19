@@ -108,7 +108,7 @@ declare const window: Window & {AMISEditorCustomPlugins: any};
 
 /**
  * 自动加载预先注册的自定义插件
- * 备注：新版 prismui-widget[3.0.0] 需要
+ * 备注：新版 amis-widget[3.0.0] 需要
  */
 export function autoPreRegisterEditorCustomPlugins() {
   if (window.AMISEditorCustomPlugins) {

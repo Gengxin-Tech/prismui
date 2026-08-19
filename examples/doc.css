@@ -52,10 +52,9 @@
   background-color: #dbeafe;
 }
 
-body.dark .prismui-doc > .preview,
-body[data-prismui-theme='dark'] .prismui-doc > .preview {
-  background: var(--colors-neutral-fill-10);
-  color: var(--colors-neutral-text-2);
+[data-prismui-theme='dark'] .prismui-doc > .preview {
+  background: #191c22;
+  color: #fff;
 }
 
 .prismui-doc > pre {

@@ -648,7 +648,7 @@ test('Renderer:input-table init display', async () => {
   expect(container).toMatchSnapshot();
 });
 
-// 对应 github issue: https://github.com/baidu/amis/issues/8263
+// 对应 github issue: https://github.com/Gengxin-Tech/prismui/issues/8263
 test('Renderer:input-table formula', async () => {
   const onSubmit = jest.fn();
   const {container} = render(
@@ -810,7 +810,7 @@ test('Renderer:input-table formula', async () => {
   });
 });
 
-// 对应 github issue: https://github.com/baidu/amis/issues/9494
+// 对应 github issue: https://github.com/Gengxin-Tech/prismui/issues/9494
 test('Renderer:input-table autoFill', async () => {
   const onSubmit = jest.fn();
   const {container} = render(
@@ -948,7 +948,7 @@ test('Renderer:input-table autoFill', async () => {
   });
 });
 
-// 对应 github issue: https://github.com/baidu/amis/issues/9520
+// 对应 github issue: https://github.com/Gengxin-Tech/prismui/issues/9520
 test('Renderer:input-table canAccessSuperData', async () => {
   const onSubmit = jest.fn();
   const {container} = render(
@@ -1020,7 +1020,7 @@ test('Renderer:input-table canAccessSuperData', async () => {
   expect(inputs).toEqual(['a1', '']);
 });
 
-// 对应 github issue: https://github.com/baidu/amis/issues/9537
+// 对应 github issue: https://github.com/Gengxin-Tech/prismui/issues/9537
 test('Renderer:input-table item confirm validate', async () => {
   const onSubmit = jest.fn();
   const {container, findByRole, findByText} = render(
@@ -1155,7 +1155,7 @@ test('Renderer:input-table pagination data issue', async () => {
   expect(c).toHaveValue('');
 });
 
-// 对应 github issue: https://github.com/baidu/amis/issues/9537
+// 对应 github issue: https://github.com/Gengxin-Tech/prismui/issues/9537
 test('Renderer:input-table cancel new item from addAction', async () => {
   const onSubmit = jest.fn();
   const {container, findByRole, findByText} = render(

@@ -42,7 +42,7 @@ const pages: TreeArray = [
   }
 ];
 
-const editorDemoClassnames = getTheme('prismui').stableClassnames;
+const editorDemoClassnames = getTheme('cxd').stableClassnames;
 
 function getPath(path: string) {
   return path ? (path[0] === '/' ? path : `/${path}`) : '';

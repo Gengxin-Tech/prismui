@@ -34,7 +34,7 @@ exports[`Renderer:textarea 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -104,7 +104,7 @@ exports[`Renderer:textarea with maxLength & clearable & resetValue 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal is-error has-error--maxLength"
-          data-prismui-name="text"
+          data-amis-name="text"
           data-role="form-item"
         >
           <label
@@ -219,7 +219,7 @@ exports[`Renderer:textarea with readOnly 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="text"
+          data-amis-name="text"
           data-role="form-item"
         >
           <label
@@ -306,7 +306,7 @@ exports[`Renderer:textarea with trimContents & showCounter 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="text"
+          data-amis-name="text"
           data-role="form-item"
         >
           <label

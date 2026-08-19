@@ -368,16 +368,28 @@ async function warmLazyComponents(page, maxPositions = 36) {
   for (let pass = 0; pass < 2; pass++) {
     const state = await page.evaluate(() => {
       const el = document.scrollingElement || document.documentElement;
+      const lazyYs = Array.from(document.querySelectorAll('.visibility-sensor'))
+        .filter(node =>
+          /(?:加载中，请稍后|Loading\.\.\.)/.test(node.textContent || '')
+        )
+        .map(node => {
+          const rect = node.getBoundingClientRect();
+          return Math.max(0, Math.round(window.scrollY + rect.top - window.innerHeight * 0.4));
+        });
       return {
         scrollHeight: el.scrollHeight,
-        viewportHeight: window.innerHeight
+        viewportHeight: window.innerHeight,
+        lazyYs
       };
     }).catch(() => null);
     if (!state) return;
 
-    const ys = sampleScrollPositions(
+    const sampledYs = sampleScrollPositions(
       yPositions(state.scrollHeight, state.viewportHeight, 240, 0),
       maxPositions
+    );
+    const ys = Array.from(new Set(sampledYs.concat(state.lazyYs || []))).sort(
+      (a, b) => a - b
     );
 
     for (const y of ys) {
@@ -424,6 +436,43 @@ async function installDeterminism(context, args) {
       randomSeed = (randomSeed * 1664525 + 1013904223) >>> 0;
       return randomSeed / 0x100000000;
     };
+    const RealIntersectionObserver = window.IntersectionObserver;
+    if (RealIntersectionObserver) {
+      window.IntersectionObserver = class DeterministicIntersectionObserver {
+        constructor(callback, options) {
+          this.callback = callback;
+          this.options = options;
+          this.elements = new Set();
+        }
+
+        observe(element) {
+          this.elements.add(element);
+          const rect = element.getBoundingClientRect();
+          const entry = {
+            target: element,
+            isIntersecting: true,
+            intersectionRatio: 1,
+            time: Date.now(),
+            boundingClientRect: rect,
+            intersectionRect: rect,
+            rootBounds: null
+          };
+          setTimeout(() => this.callback([entry], this), 0);
+        }
+
+        unobserve(element) {
+          this.elements.delete(element);
+        }
+
+        disconnect() {
+          this.elements.clear();
+        }
+
+        takeRecords() {
+          return [];
+        }
+      };
+    }
     const theme =
       window.location.origin === baselineOrigin
         ? baselineTheme
@@ -432,10 +481,7 @@ async function installDeterminism(context, args) {
           : candidateTheme;
     try {
       localStorage.clear();
-      localStorage.setItem('prismui-theme', theme);
-      if (window.location.origin === baselineOrigin) {
-        localStorage.setItem('amis-theme', theme);
-      }
+      localStorage.setItem('amis-theme', theme);
       localStorage.setItem('amis-viewMode', 'pc');
       localStorage.setItem('amis-locale', 'zh-CN');
     } catch (e) {}
@@ -453,6 +499,15 @@ function stableHash(input) {
 
 function stableInt(input, min = 1, max = 100) {
   return min + (stableHash(input) % (max - min + 1));
+}
+
+function visualMockSeedUrl(requestUrl) {
+  try {
+    const url = new URL(requestUrl);
+    return `${url.pathname}${url.search}`;
+  } catch (error) {
+    return String(requestUrl || '');
+  }
 }
 
 function normalizeVisualMockPayload(value, requestUrl, trail = []) {
@@ -476,7 +531,7 @@ function normalizeVisualMockPayload(value, requestUrl, trail = []) {
 
 function normalizeVisualMockScalar(value, requestUrl, trail) {
   const key = String(trail[trail.length - 1] || '');
-  const marker = `${requestUrl}#${trail.join('.')}`;
+  const marker = `${visualMockSeedUrl(requestUrl)}#${trail.join('.')}`;
 
   if (typeof value === 'string') {
     if (key === 'engine') {

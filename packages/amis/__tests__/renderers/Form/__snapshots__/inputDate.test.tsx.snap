@@ -34,7 +34,7 @@ exports[`Renderer:inputDate 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -93,7 +93,7 @@ exports[`Renderer:inputDate compatible with format & inputFormat 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -137,7 +137,7 @@ exports[`Renderer:inputDate compatible with format & inputFormat 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date1"
+                  data-amis-name="date1"
                   data-role="form-item"
                 >
                   <label
@@ -192,7 +192,7 @@ exports[`Renderer:inputDate compatible with format & inputFormat 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date1"
+                  data-amis-name="date1"
                   data-role="form-item"
                 >
                   <label
@@ -220,7 +220,7 @@ exports[`Renderer:inputDate compatible with format & inputFormat 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date2"
+                  data-amis-name="date2"
                   data-role="form-item"
                 >
                   <label
@@ -275,7 +275,7 @@ exports[`Renderer:inputDate compatible with format & inputFormat 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date2"
+                  data-amis-name="date2"
                   data-role="form-item"
                 >
                   <label
@@ -331,7 +331,7 @@ exports[`Renderer:inputDate with clearable: clearable false 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -375,7 +375,7 @@ exports[`Renderer:inputDate with clearable: clearable false 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date"
+                  data-amis-name="date"
                   data-role="form-item"
                 >
                   <label
@@ -450,7 +450,7 @@ exports[`Renderer:inputDate with clearable: clearable true 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -494,7 +494,7 @@ exports[`Renderer:inputDate with clearable: clearable true 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date"
+                  data-amis-name="date"
                   data-role="form-item"
                 >
                   <label
@@ -541,7 +541,7 @@ exports[`Renderer:inputDate with clearable: clearable true 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date"
+                  data-amis-name="date"
                   data-role="form-item"
                 >
                   <label
@@ -601,7 +601,7 @@ exports[`Renderer:inputDate with valueFormat & displayFormat 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -645,7 +645,7 @@ exports[`Renderer:inputDate with valueFormat & displayFormat 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date"
+                  data-amis-name="date"
                   data-role="form-item"
                 >
                   <label
@@ -700,7 +700,7 @@ exports[`Renderer:inputDate with valueFormat & displayFormat 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal"
-                  data-prismui-name="date"
+                  data-amis-name="date"
                   data-role="form-item"
                 >
                   <label

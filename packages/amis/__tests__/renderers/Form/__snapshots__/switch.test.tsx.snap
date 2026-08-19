@@ -34,7 +34,7 @@ exports[`Renderer:Switch Switch basic props 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal block"
-          data-prismui-name="switch"
+          data-amis-name="switch"
           data-role="form-item"
         >
           <label
@@ -59,7 +59,7 @@ exports[`Renderer:Switch Switch basic props 1`] = `
             >
               <input
                 checked=""
-                theme="prismui"
+                theme="cxd"
                 type="checkbox"
               />
               <span
@@ -118,7 +118,7 @@ exports[`Renderer:Switch Switch size 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="switch"
+          data-amis-name="switch"
           data-role="form-item"
         >
           <label
@@ -142,7 +142,7 @@ exports[`Renderer:Switch Switch size 1`] = `
               data-role="switch"
             >
               <input
-                theme="prismui"
+                theme="cxd"
                 type="checkbox"
               />
               <span

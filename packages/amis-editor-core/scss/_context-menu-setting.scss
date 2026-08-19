@@ -108,8 +108,7 @@
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .context-menu-setting {
     background: var(--ae-editor-surface);
     box-shadow: -2px 0 24px rgba(0, 0, 0, 0.35);

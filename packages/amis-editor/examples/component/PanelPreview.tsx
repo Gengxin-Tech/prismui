@@ -42,7 +42,7 @@ export default function (props: PanelPreviewProps) {
             // popOverContainer
           },
           {
-            // theme: 'prismui' // 右侧属性配置面板固定使用prismui主题展示
+            // theme: 'cxd' // 右侧属性配置面板固定使用cxd主题展示
           }
         )}
       </div>

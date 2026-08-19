@@ -1314,7 +1314,7 @@ export class FormItemWrap extends React.Component<FormItemProps> {
       return (
         <div
           data-role="form-item"
-          data-prismui-name={props.name}
+          data-amis-name={props.name}
           className={cx(
             `Form-item Form-item--horizontal`,
             isStatic && staticClassName ? staticClassName : className,
@@ -1477,7 +1477,7 @@ export class FormItemWrap extends React.Component<FormItemProps> {
       return (
         <div
           data-role="form-item"
-          data-prismui-name={props.name}
+          data-amis-name={props.name}
           className={cx(
             `Form-item Form-item--normal`,
             isStatic && staticClassName ? staticClassName : className,
@@ -1665,7 +1665,7 @@ export class FormItemWrap extends React.Component<FormItemProps> {
       return (
         <div
           data-role="form-item"
-          data-prismui-name={props.name}
+          data-amis-name={props.name}
           className={cx(
             `Form-item Form-item--inline`,
             isStatic && staticClassName ? staticClassName : className,
@@ -1800,7 +1800,7 @@ export class FormItemWrap extends React.Component<FormItemProps> {
       return (
         <div
           data-role="form-item"
-          data-prismui-name={props.name}
+          data-amis-name={props.name}
           className={cx(
             `Form-item Form-item--row`,
             isStatic && staticClassName ? staticClassName : className,
@@ -1939,7 +1939,7 @@ export class FormItemWrap extends React.Component<FormItemProps> {
       return (
         <div
           data-role="form-item"
-          data-prismui-name={props.name}
+          data-amis-name={props.name}
           className={cx(
             `Form-item Form-item--flex`,
             isStatic && staticClassName ? staticClassName : className,

@@ -11,7 +11,7 @@ title: 快速开始
 3. 需要定位组件结构时，使用稳定的 `.prismui-*` 组件类名。
 4. 对单个 schema 做局部调整时，使用辅助 class、`className` / `xxxClassName` 或 `wrapper` 的内嵌 `style`。
 
-不建议把主题类前缀或 `classPrefix` 当作新的样式扩展入口。历史上的 `prismui`、`antd`、`dark` 主题文件名仍可能存在，但组件 DOM 主路径使用稳定 `.prismui-*` 类名，主题身份由 `[data-prismui-theme]` 表达。
+不建议把主题类前缀或 `classPrefix` 当作新的样式扩展入口。主题文件名只用于加载对应变量，组件 DOM 主路径使用稳定 `.prismui-*` 类名，主题身份由 `[data-prismui-theme]` 表达。
 
 ## CSS 变量
 
@@ -111,6 +111,6 @@ title: 快速开始
 
 ## 主题文件与选择器边界
 
-`prismui.css`、`antd.css`、`dark.css` 等文件名用于选择主题包，不代表主题文件名会派生出不同的组件 DOM 前缀。新样式应统一写在 `[data-prismui-theme]`、`.prismui-*` 稳定组件类名和 `--prismui-*` 变量之上，不再提供旧主题前缀的 DOM 或样式兼容路径。
+`cxd.css`、`antd.css`、`dark.css` 等文件名用于选择主题包，不代表主题文件名会派生出不同的组件 DOM 前缀。新样式应统一写在 `[data-prismui-theme]`、`.prismui-*` 稳定组件类名和 `--prismui-*` 变量之上，不再提供旧主题前缀的 DOM 或样式兼容路径。
 
 IE11 只能使用静态 CSS 降级文件，不支持基于 CSS 变量的动态主题切换。

@@ -4,7 +4,7 @@ exports[`Renderer:input-formula button 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -139,7 +139,7 @@ exports[`Renderer:input-formula button 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="formula"
+                  data-amis-name="formula"
                   data-role="form-item"
                 >
                   <label
@@ -200,7 +200,7 @@ exports[`Renderer:input-formula input-group 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -335,7 +335,7 @@ exports[`Renderer:input-formula input-group 1`] = `
                 </div>
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="formula"
+                  data-amis-name="formula"
                   data-role="form-item"
                 >
                   <label

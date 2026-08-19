@@ -34,7 +34,7 @@ exports[`Renderer:inputDate 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="test1"
+          data-amis-name="test1"
           data-role="form-item"
         >
           <label
@@ -70,7 +70,7 @@ exports[`Renderer:inputDate 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="test"
+          data-amis-name="test"
           data-role="form-item"
         >
           <label
@@ -106,7 +106,7 @@ exports[`Renderer:inputDate 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="test1"
+          data-amis-name="test1"
           data-role="form-item"
         >
           <label
@@ -142,7 +142,7 @@ exports[`Renderer:inputDate 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="test4"
+          data-amis-name="test4"
           data-role="form-item"
         >
           <label
@@ -178,7 +178,7 @@ exports[`Renderer:inputDate 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="test5"
+          data-amis-name="test5"
           data-role="form-item"
         >
           <label
@@ -214,7 +214,7 @@ exports[`Renderer:inputDate 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="switch"
+          data-amis-name="switch"
           data-role="form-item"
         >
           <div
@@ -226,7 +226,7 @@ exports[`Renderer:inputDate 1`] = `
             >
               <input
                 checked=""
-                theme="prismui"
+                theme="cxd"
                 type="checkbox"
               />
               <span
@@ -245,7 +245,7 @@ exports[`Renderer:inputDate 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="test6"
+          data-amis-name="test6"
           data-role="form-item"
         >
           <label
@@ -281,7 +281,7 @@ exports[`Renderer:inputDate 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="test7"
+          data-amis-name="test7"
           data-role="form-item"
         >
           <label
@@ -317,7 +317,7 @@ exports[`Renderer:inputDate 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="test8"
+          data-amis-name="test8"
           data-role="form-item"
         >
           <label

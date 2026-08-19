@@ -1,6 +1,6 @@
 var prefixSdkCss = require('./prefix-sdk-css').prefixSdkCss;
 
-var defaultSdkThemes = ['ang', 'prismui', 'dark', 'antd'];
+var defaultSdkThemes = ['ang', 'cxd', 'dark', 'antd'];
 
 function buildSdkThemeCss(cssContents, options) {
   options = options || {};
@@ -28,7 +28,7 @@ function buildSdkThemeCss(cssContents, options) {
 
     return {
       theme: theme,
-      filename: theme === 'prismui' ? 'sdk.css' : theme + '.css',
+      filename: theme === 'cxd' ? 'sdk.css' : theme + '.css',
       content: prefixSdkCss(contents, prefix, theme)
     };
   });

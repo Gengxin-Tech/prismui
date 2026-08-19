@@ -223,7 +223,7 @@ pushing
  rename pkg/{app_eaa9489.js => app_aba673c.js} (97%)
  rename pkg/examples/{index.html_map_36aa437.js => index.html_map_cc4be94.js} (99%)
  rename pkg/examples/{mobile.html_map_11900af.js => mobile.html_map_e6b3129.js} (99%)
-To https://github.com/baidu/amis.git
+To https://github.com/Gengxin-Tech/prismui.git
    a4dc6ff..834cc30  gh-pages -> gh-pages
 done
 [0K

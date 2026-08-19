@@ -115,7 +115,7 @@ export class RightPanels extends React.Component<
     return panels.length > 0 ? (
       <div
         ref={this.rootRef}
-        {...getEditorThemeScopeProps(theme, manager.config.theme || 'prismui')}
+        {...getEditorThemeScopeProps(theme, manager.config.theme || 'cxd')}
         className={cx(
           'editor-right-panel width-draggable',
           'PRISMUICSSWrapper',

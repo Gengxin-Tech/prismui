@@ -9,7 +9,7 @@ import type {Plugin} from 'vite';
  */
 export default function transformMobileHtml(options: {} = {}): Plugin {
   return {
-    name: 'prismui-transform-mobile-html',
+    name: 'amis-transform-mobile-html',
     enforce: 'pre',
     apply: 'serve',
 

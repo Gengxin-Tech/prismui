@@ -437,5 +437,5 @@ test('Renderer:Formitem initial value in table', async () => {
 });
 
 // TODO 补充测试用例
-// https://github.com/baidu/amis/issues/9742
-// https://github.com/baidu/amis/issues/9733
+// https://github.com/Gengxin-Tech/prismui/issues/9742
+// https://github.com/Gengxin-Tech/prismui/issues/9733

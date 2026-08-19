@@ -4,7 +4,7 @@ exports[`Renderer: range with min & max & step by variables 1`] = `
 <div>
   <div
     class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
-    data-prismui-theme="prismui"
+    data-prismui-theme="cxd"
   >
     <div
       class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
@@ -48,7 +48,7 @@ exports[`Renderer: range with min & max & step by variables 1`] = `
                 />
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="range"
+                  data-amis-name="range"
                   data-role="form-item"
                 >
                   <label
@@ -219,7 +219,7 @@ exports[`Renderer:range with marks 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="range"
+          data-amis-name="range"
           data-role="form-item"
         >
           <div
@@ -363,7 +363,7 @@ exports[`Renderer:range with min & max & step & joinValues 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="range"
+          data-amis-name="range"
           data-role="form-item"
         >
           <div
@@ -587,7 +587,7 @@ exports[`Renderer:range with multiple & clearable & delimiter 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="range"
+          data-amis-name="range"
           data-role="form-item"
         >
           <div
@@ -749,7 +749,7 @@ exports[`Renderer:range with multiple & clearable & delimiter 1`] = `
         </div>
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="range"
+          data-amis-name="range"
           data-role="form-item"
         >
           <div
@@ -806,7 +806,7 @@ exports[`Renderer:range with showInput & showInputUnit 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="range"
+          data-amis-name="range"
           data-role="form-item"
         >
           <div
@@ -949,7 +949,7 @@ exports[`Renderer:range with showSteps 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="range"
+          data-amis-name="range"
           data-role="form-item"
         >
           <div
@@ -1125,7 +1125,7 @@ exports[`Renderer:range with tooltipVisible & tooltipPlacement 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-          data-prismui-name="range"
+          data-amis-name="range"
           data-role="form-item"
         >
           <div

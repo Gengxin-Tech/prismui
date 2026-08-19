@@ -456,7 +456,7 @@ function ShadowEditor(props: ShadowEditorProps) {
 export default observer(ShadowEditor);
 
 @FormItem({
-  type: 'prismui-theme-shadow-editor',
+  type: 'amis-theme-shadow-editor',
   strictMode: false,
   renderLabel: false
 })

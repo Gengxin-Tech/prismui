@@ -22,7 +22,7 @@ function loadEditor() {
   );
 }
 
-const viewMode = localStorage.getItem('prismui-viewMode') || 'pc';
+const viewMode = localStorage.getItem('amis-viewMode') || 'pc';
 
 setGlobalOptions({
   pdfjsWorkerSrc: supportsMjs() ? pdfUrlLoad() : ''

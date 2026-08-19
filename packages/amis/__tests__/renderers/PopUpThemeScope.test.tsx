@@ -8,7 +8,7 @@ afterEach(() => {
   cleanup();
   clearStoresCache();
   document.body.innerHTML = '';
-  theme('prismui', {
+  theme('cxd', {
     componentClassPrefix: 'prismui-'
   });
 });
@@ -20,7 +20,7 @@ test('Renderer:popup applies current theme scope to body portal root', async () 
     const popup = document.body.querySelector('.prismui-PopUp') as HTMLElement;
 
     expect(popup).toBeTruthy();
-    expect(popup).toHaveAttribute('data-prismui-theme', 'prismui');
+    expect(popup).toHaveAttribute('data-prismui-theme', 'cxd');
     expect(popup.parentElement).toBe(document.body);
   });
 });

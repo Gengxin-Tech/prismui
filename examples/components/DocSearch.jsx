@@ -10,7 +10,7 @@ const ContextPath = DOCS_BASE_PATH;
 
 function getComponentClassPrefix(theme) {
   const themeName = typeof theme === 'string' ? theme : theme?.value;
-  return getTheme(themeName || 'prismui')?.componentClassPrefix || 'prismui-';
+  return getTheme(themeName || 'cxd')?.componentClassPrefix || 'prismui-';
 }
 
 export default class DocSearch extends React.Component {

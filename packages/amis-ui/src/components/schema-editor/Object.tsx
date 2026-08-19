@@ -507,7 +507,7 @@ export class SchemaEditorItemObject extends SchemaEditorItemCommon<
           'is-collapsed': this.state.collapsed,
           'SchemaEditorItem--mini': mini
         })}
-        data-prismui-name={this.props.dataName}
+        data-amis-name={this.props.dataName}
       >
         {showInfo !== false ? (
           <>

@@ -2,7 +2,7 @@
 
 [中文](./README.md) | [Docs](https://prismui.io/docs/zh-CN/docs/index) | [Getting Started](https://prismui.io/docs/zh-CN/docs/start/getting-started)
 
-PrismUI is an independently maintained fork of [baidu/amis](https://github.com/baidu/amis), focused on UI Schema driven front-end development for enterprise applications. The project continues to evolve the UI Schema runtime, React renderer, component system, JS SDK, and visual editor.
+PrismUI is an independently maintained fork of [baidu/amis](https://github.com/Gengxin-Tech/prismui), focused on UI Schema driven front-end development for enterprise applications. The project continues to evolve the UI Schema runtime, React renderer, component system, JS SDK, and visual editor.
 
 PrismUI is not an official baidu/amis release channel. Original copyright and license notices are retained, and PrismUI changes are maintained independently by PrismUI contributors.
 
@@ -10,9 +10,9 @@ The Chinese README is the primary project document. This English version is kept
 
 ## Current Status
 
-- **Package transition**: current npm packages still use compatible names such as `amis`, `amis-ui`, and `amis-core`; PrismUI package names are planned by 2026-09-15.
+- **Package transition**: current npm packages still use compatible names such as `amis`, `amis-ui`, and `amis-core`; any future package migration will be announced in the release notes.
 - **Compatibility**: during the transition, existing UI Schema, renderer APIs, theme assets, and SDK integration remain the priority.
-- **Docs**: new docs use the PrismUI name. Historical pages, examples, and runtime APIs may still mention `amis` until the package migration is complete.
+- **Docs**: new docs use the PrismUI name. Historical pages, examples, and runtime APIs may still mention `amis`.
 - **Contribution model**: contributions use a lightweight inbound = outbound model and are licensed under the same license as the relevant file or package.
 
 ## Capabilities
@@ -27,7 +27,7 @@ The Chinese README is the primary project document. This English version is kept
 
 ### Current Compatible Package Names
 
-Before the PrismUI package migration is complete, install the existing amis packages:
+Install the existing amis packages:
 
 ```bash
 npm install amis amis-ui
@@ -36,7 +36,7 @@ npm install amis amis-ui
 React applications can continue to use the existing entry points:
 
 ```tsx
-import 'amis/lib/themes/prismui.css';
+import 'amis/lib/themes/cxd.css';
 import 'amis/lib/helper.css';
 import 'amis/sdk/iconfont.css';
 import {render as renderUI} from 'amis';
@@ -61,13 +61,13 @@ const env = {
   notify,
   jumpTo,
   getModalContainer: () => document.body,
-  theme: 'prismui'
+  theme: 'cxd'
 };
 
 export function App() {
   return <>
-    <ToastComponent theme="prismui" position="top-right" />
-    <AlertComponent theme="prismui" />
+    <ToastComponent theme="cxd" position="top-right" />
+    <AlertComponent theme="cxd" />
     {renderUI(schema, {data: {}}, env)}
   </>;
 }
@@ -87,21 +87,7 @@ export function App() {
 </script>
 ```
 
-### Planned PrismUI Package Names
-
-Final names will be confirmed in release notes. The current plan is:
-
-| Current package | Planned package |
-| --- | --- |
-| `amis` | `prismui` |
-| `amis-core` | `prismui-core` |
-| `amis-ui` | `prismui-ui` |
-| `amis-formula` | `prismui-formula` |
-| `amis-editor` | `prismui-editor` |
-| `amis-editor-core` | `prismui-editor-core` |
-| `amis-theme-editor-helper` | `prismui-theme-editor-helper` |
-
-Do not assume the PrismUI npm packages are published until the migration release notes say so.
+This repository does not promise new npm package names in the README; if migration happens later, it will be spelled out in the release notes.
 
 ## Repository Layout
 
@@ -163,7 +149,7 @@ Do not disclose exploitable security details in public issues. See [SECURITY.md]
 
 ## Origin And License
 
-PrismUI is derived from [baidu/amis](https://github.com/baidu/amis). Original copyright, license, and attribution notices are retained under their applicable licenses.
+PrismUI is derived from [baidu/amis](https://github.com/Gengxin-Tech/prismui). Original copyright, license, and attribution notices are retained under their applicable licenses.
 
 Most of the repository is Apache-2.0. Some self-maintained packages declare MIT or ISC:
 

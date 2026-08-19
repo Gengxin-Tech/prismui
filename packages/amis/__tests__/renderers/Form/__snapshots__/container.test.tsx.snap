@@ -34,7 +34,7 @@ exports[`Renderer:container 1`] = `
         />
         <div
           class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--horizontal no-border"
-          data-prismui-name="a"
+          data-amis-name="a"
           data-role="form-item"
         >
           <label
@@ -62,7 +62,7 @@ exports[`Renderer:container 1`] = `
               >
                 <div
                   class="__PRISMUI_COMPONENT_CLASS_PREFIX__Form-item __PRISMUI_COMPONENT_CLASS_PREFIX__Form-item--normal"
-                  data-prismui-name="text"
+                  data-amis-name="text"
                   data-role="form-item"
                 >
                   <div

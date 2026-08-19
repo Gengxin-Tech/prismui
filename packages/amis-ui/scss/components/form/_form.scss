@@ -507,6 +507,39 @@
   position: relative;
   word-wrap: break-word;
   word-break: break-all;
+
+  .w-json-view-container {
+    font-size: 14px !important;
+    line-height: 21px !important;
+    padding-left: 0;
+  }
+
+  .w-rjv-inner > div:first-child {
+    display: inline-block !important;
+  }
+
+  .w-rjv-object-size {
+    margin-right: 6px;
+    padding-left: 10px !important;
+  }
+
+  .w-rjv-content > .w-rjv-line {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .w-rjv-root-count-1 > .w-rjv-content {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .w-rjv-root-count-2 {
+    padding-bottom: 0;
+  }
+
+  .w-rjv-empty-root {
+    height: 21px;
+  }
 }
 
 // .prismui-Form--quickEdit {

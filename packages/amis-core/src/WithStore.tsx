@@ -24,7 +24,7 @@ import {extractObjectChain} from './utils/object';
 /**
  * 忽略静态数据中的 schema 属性
  *
- * 比如 https://github.com/baidu/amis/issues/8972 中的用法
+ * 比如 https://github.com/Gengxin-Tech/prismui/issues/8972 中的用法
  */
 function ignoreSchemaProps(key: string, value: any) {
   if (['clickAction'].includes(key) && typeof value !== 'string') {

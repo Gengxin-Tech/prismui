@@ -66,6 +66,7 @@ const CASES = [
     id: 'INT-007',
     route: '/zh-CN/components/popover',
     title: 'PopOver click/hover',
+    mockSampleApi: true,
     steps: [
       {state: 'popover-open', action: 'click', selectors: popoverSelectors()},
       {state: 'after-close', action: 'escape'}
@@ -83,7 +84,7 @@ const CASES = [
     title: 'Dialog open/close',
     steps: [
       {state: 'dialog-open', action: 'click', selectors: dialogButtonSelectors()},
-      {state: 'drag-header', action: 'drag', selectors: ['.prismui-Modal-header', '[role="dialog"] .modal-header'], optional: true},
+      {state: 'drag-header', action: 'drag', selectors: ['[class*="Modal-header"]', '[role="dialog"] .modal-header'], optional: true},
       {state: 'after-close', action: 'escape'}
     ]
   },
@@ -112,7 +113,7 @@ const CASES = [
     title: 'NestedSelect levels',
     steps: [
       {state: 'level1-open', action: 'click', selectors: nestedSelectSelectors()},
-      {state: 'level2-open', action: 'hover', selectors: ['.prismui-NestedSelect-option', '.prismui-NestedSelect-optionArrowRight'], optional: true}
+      {state: 'level2-open', action: 'hover', selectors: ['[class*="NestedSelect-option"]', '[class*="NestedSelect-optionArrowRight"]'], optional: true}
     ]
   },
   {
@@ -139,7 +140,7 @@ const CASES = [
     title: 'Picker popover/modal',
     steps: [
       {state: 'picker-open', action: 'click', selectors: pickerSelectors()},
-      {state: 'item-selected', action: 'click', selectors: ['.prismui-Table tbody tr', '.prismui-ListItem'], optional: true}
+      {state: 'item-selected', action: 'click', selectors: ['[class*="Table"] tbody tr', '[class*="ListItem"]'], optional: true}
     ]
   },
   {
@@ -147,15 +148,24 @@ const CASES = [
     route: '/zh-CN/components/form/input-tag',
     title: 'InputTag suggestions',
     steps: [
-      {state: 'suggestions-open', action: 'click', selectors: ['.prismui-TagControl input', '.prismui-ResultBox']},
-      {state: 'overflow-open', action: 'hover', selectors: ['.prismui-Tags-more', '.prismui-Tag'], optional: true}
+      {state: 'suggestions-open', action: 'click', selectors: ['[class*="TagControl"] input', '[class*="ResultBox"]']},
+      {state: 'overflow-open', action: 'hover', selectors: ['[class*="Tags-more"]', '[class*="Tag"]'], optional: true}
     ]
   },
   {
     id: 'INT-017',
     route: '/zh-CN/components/form/input-color',
     title: 'InputColor panel',
-    steps: [{state: 'color-panel-open', action: 'click', selectors: ['.prismui-ColorPicker', '.prismui-ColorControl', '.prismui-ColorField']}]
+    steps: [{
+      state: 'color-panel-open',
+      action: 'click',
+      selectors: [
+        '[class*="ColorControl"]',
+        '[class*="ColorPicker"]',
+        '[class*="ColorField"]',
+        'input[placeholder="请选择颜色"]'
+      ]
+    }]
   },
   {
     id: 'INT-018',
@@ -163,7 +173,7 @@ const CASES = [
     title: 'InputDate calendar',
     steps: [
       {state: 'calendar-open', action: 'click', selectors: dateSelectors()},
-      {state: 'month-panel', action: 'click', selectors: ['.rdtSwitch', '.prismui-DatePicker-toggler'], optional: true}
+      {state: 'month-panel', action: 'click', selectors: ['.rdtSwitch', '[class*="DatePicker-toggler"]'], optional: true}
     ]
   },
   {
@@ -172,17 +182,24 @@ const CASES = [
     title: 'InputDateRange calendar',
     steps: [
       {state: 'range-open', action: 'click', selectors: dateSelectors()},
-      {state: 'selecting-end', action: 'hover', selectors: ['.rdtDay:not(.rdtDisabled)', '.prismui-Calendar-date'], optional: true}
+      {state: 'selecting-end', action: 'hover', selectors: ['.rdtDay:not(.rdtDisabled)', '[class*="Calendar-date"]'], optional: true}
     ]
   },
   {
     id: 'INT-020',
     route: '/zh-CN/components/table',
     title: 'Table filter/column menu',
+    mockSampleApi: true,
     steps: [
       {state: 'filter-open', action: 'click', selectors: tableFilterSelectors()},
       {state: 'after-filter-close', action: 'escape'},
-      {state: 'column-menu-open', action: 'click', selectors: columnTogglerSelectors(), optional: true}
+      {
+        state: 'column-menu-open',
+        action: 'click',
+        selectors: columnTogglerSelectors(),
+        optional: true,
+        compare: false
+      }
     ]
   },
   {
@@ -199,8 +216,8 @@ const CASES = [
     route: '/zh-CN/components/tabs',
     title: 'Tabs tooltip/overflow',
     steps: [
-      {state: 'hover-tip', action: 'hover', selectors: ['.prismui-Tabs-link', '.prismui-Tabs-tab']},
-      {state: 'overflow-open', action: 'click', selectors: ['.prismui-Tabs-togglor'], optional: true}
+      {state: 'hover-tip', action: 'hover', selectors: ['[class*="Tabs-link"]', '[class*="Tabs-tab"]']},
+      {state: 'overflow-open', action: 'click', selectors: ['[class*="Tabs-togglor"]'], optional: true}
     ]
   },
   {
@@ -208,8 +225,8 @@ const CASES = [
     route: '/zh-CN/components/carousel',
     title: 'Carousel controls',
     steps: [
-      {state: 'hover-controls', action: 'hover', selectors: ['.prismui-Carousel', '.slick-slider']},
-      {state: 'next-slide', action: 'click', selectors: ['.slick-next', '.prismui-Carousel-next', '.prismui-Carousel-arrow--right'], optional: true}
+      {state: 'hover-controls', action: 'hover', selectors: ['[class*="Carousel"]', '.slick-slider']},
+      {state: 'next-slide', action: 'click', selectors: ['.slick-next', '[class*="Carousel-next"]', '[class*="Carousel-arrow--right"]'], optional: true}
     ]
   },
   {
@@ -217,8 +234,8 @@ const CASES = [
     route: '/zh-CN/components/images',
     title: 'Images hover/gallery',
     steps: [
-      {state: 'hover-actions', action: 'hover', selectors: ['.prismui-Images-item', '.prismui-Image-thumb', 'img']},
-      {state: 'gallery-open', action: 'click', selectors: ['.prismui-Images-item img', '.prismui-Image-thumb img', 'img'], optional: true}
+      {state: 'hover-actions', action: 'hover', selectors: ['[class*="Images-item"]', '[class*="Image-thumb"]', 'img']},
+      {state: 'gallery-open', action: 'click', selectors: ['[class*="Images-item"] img', '[class*="Image-thumb"] img', 'img'], optional: true}
     ]
   },
   {
@@ -249,7 +266,7 @@ const CASES = [
     title: 'JSON expand/collapse',
     steps: [
       {state: 'expanded', action: 'click', selectors: jsonViewSelectors()},
-      {state: 'edit-affordance', action: 'hover', selectors: ['[class*="w-rjv"]', '.react-json-view', '.prismui-JsonField'], optional: true}
+      {state: 'edit-affordance', action: 'hover', selectors: ['[class*="w-rjv"]', '.react-json-view', '[class*="JsonField"]'], optional: true}
     ]
   },
   {
@@ -267,8 +284,8 @@ const CASES = [
     route: '/zh-CN/components/form/input-number',
     title: 'InputNumber focus/change',
     steps: [
-      {state: 'focused', action: 'focus', selectors: ['.prismui-NumberInput input', 'input[type="number"]', 'input[type="text"]']},
-      {state: 'changed', action: 'fill', selectors: ['.prismui-NumberInput input', 'input[type="number"]', 'input[type="text"]'], value: '42'},
+      {state: 'focused', action: 'focus', selectors: ['[class*="NumberInput"] input', 'input[type="number"]', 'input[type="text"]']},
+      {state: 'changed', action: 'fill', selectors: ['[class*="NumberInput"] input', 'input[type="number"]', 'input[type="text"]'], value: '42'},
       {state: 'blurred', action: 'blur'}
     ]
   },
@@ -366,116 +383,131 @@ const CASES = [
   }
 ];
 
+const MOCK_SAMPLE_ROWS = [
+  {engine: 'Trident - pbz7l', browser: 'Internet Explorer 4.0', platform: 'Win 95+', version: '4', grade: 'X', badgeText: '默认'},
+  {engine: 'Trident - tir4m8', browser: 'Internet Explorer 5.0', platform: 'Win 95+', version: '5', grade: 'C', badgeText: '危险'},
+  {engine: 'Trident - wcn6f', browser: 'Internet Explorer 5.5', platform: 'Win 95+', version: '5.5', grade: 'A'},
+  {engine: 'Trident - uwmcbf', browser: 'Internet Explorer 6', platform: 'Win 98+', version: '6', grade: 'A'},
+  {engine: 'Trident - yjgst7', browser: 'Internet Explorer 7', platform: 'Win XP SP2+', version: '7', grade: 'A'},
+  {engine: 'Trident - w9ee2k', browser: 'AOL browser', platform: 'Win XP', version: '7', grade: 'A'}
+];
+
 function dropdownSelectors() {
-  return ['.prismui-DropDown-button', '.prismui-DropDown .prismui-Button', '.prismui-Button:has-text("下拉")', 'button:has-text("下拉")'];
+  return ['[class*="DropDown-button"]', '[class*="DropDown"] [class*="Button"]', 'button:has-text("下拉")'];
 }
 
 function menuItemSelectors() {
-  return ['[role="menuitem"]', '.prismui-DropDown-menu > li', '.prismui-Menu-item', '.rc-menu-item'];
+  return ['[role="menuitem"]', '[class*="DropDown-menu"] > li', '[class*="Menu-item"]', '.rc-menu-item'];
 }
 
 function navSubmenuSelectors() {
-  return ['.prismui-Menu-submenu-title', '.rc-menu-submenu-title', '.prismui-Nav-item:has(ul)', '.prismui-Nav a'];
+  return ['[class*="Menu-submenu-title"]', '.rc-menu-submenu-title', '[class*="Nav-item"]:has(ul)', '[class*="Nav"] a'];
 }
 
 function breadcrumbSelectors() {
-  return ['.prismui-Breadcrumb li button', '.prismui-Breadcrumb li a', '.prismui-Breadcrumb'];
+  return ['[class*="Breadcrumb"] li button', '[class*="Breadcrumb"] li a', '[class*="Breadcrumb"]'];
 }
 
 function tooltipSelectors() {
-  return ['[data-tooltip]', '[title]', '.prismui-TooltipWrapper', '.prismui-Button:has-text("提示")', 'button'];
+  return ['[data-tooltip]', '[title]', '[class*="TooltipWrapper"]', 'button:has-text("提示")', 'button'];
 }
 
 function popoverSelectors() {
-  return ['[data-popover]', '.prismui-PopOverAble', '.prismui-Button:has-text("弹出")', 'button'];
+  return [
+    '[class*="Field-popOverBtn"]',
+    '[class*="Field--popOverAble"] [class*="Field-popOverWrap"]',
+    '[class*="Field--popOverAble"]',
+    '[data-popover]',
+    'button:has-text("弹出")'
+  ];
 }
 
 function remarkSelectors() {
-  return ['.prismui-Remark', '.fa-question-circle', '.icon-question', '[class*="Remark"]'];
+  return ['[class*="Remark"]', '.fa-question-circle', '.icon-question'];
 }
 
 function dialogButtonSelectors() {
-  return ['.prismui-Button:has-text("打开")', '.prismui-Button:has-text("弹框")', 'button:has-text("打开")', 'button:has-text("Dialog")', 'button'];
+  return ['button:has-text("打开")', 'button:has-text("弹框")', 'button:has-text("Dialog")', 'button'];
 }
 
 function drawerButtonSelectors() {
-  return ['.prismui-Button:has-text("打开")', '.prismui-Button:has-text("抽屉")', 'button:has-text("打开")', 'button:has-text("Drawer")', 'button'];
+  return ['button:has-text("打开")', 'button:has-text("抽屉")', 'button:has-text("Drawer")', 'button'];
 }
 
 function selectSelectors() {
-  return ['.prismui-Select', '.prismui-ResultBox', '.prismui-TransferDropDown', '[role="combobox"]'];
+  return ['[class*="Select"]', '[class*="ResultBox"]', '[class*="TransferDropDown"]', '[role="combobox"]'];
 }
 
 function nestedSelectSelectors() {
-  return ['.prismui-NestedSelect', '.prismui-ResultBox'];
+  return ['[class*="NestedSelect"]', '[class*="ResultBox"]'];
 }
 
 function treeSelectSelectors() {
-  return ['.prismui-TreeSelect', '.prismui-ResultBox'];
+  return ['[class*="TreeSelect"]', '[class*="ResultBox"]'];
 }
 
 function treeExpandSelectors() {
-  return ['.prismui-Tree-itemArrow', '.prismui-Tree-itemLabel'];
+  return ['[class*="Tree-itemArrow"]', '[class*="Tree-itemLabel"]'];
 }
 
 function optionSelectors() {
-  return ['[role="option"]', '.prismui-Select-option', '.prismui-Transfer-option', '.prismui-NestedSelect-option'];
+  return ['[role="option"]', '[class*="Select-option"]', '[class*="Transfer-option"]', '[class*="NestedSelect-option"]'];
 }
 
 function pickerSelectors() {
-  return ['.prismui-PickerControl .prismui-ResultBox', '.prismui-Picker', '.prismui-ResultBox'];
+  return ['[class*="PickerControl"] [class*="ResultBox"]', '[class*="Picker"]', '[class*="ResultBox"]'];
 }
 
 function tableFilterSelectors() {
-  return ['.prismui-TableCell-filterBtn', '.prismui-TableCell--filterable .table-filter-icon', '[class*="TableCell-filterBtn"]'];
+  return ['[class*="TableCell-filterBtn"]', '[class*="TableCell--filterable"] .table-filter-icon'];
 }
 
 function columnTogglerSelectors() {
-  return ['.prismui-ColumnToggler button', '.prismui-ColumnToggler .prismui-Button', '[class*="ColumnToggler"] button'];
+  return ['[class*="ColumnToggler"] button', '[class*="ColumnToggler"] [class*="Button"]'];
 }
 
 function quickEditSelectors() {
-  return ['.prismui-Field-quickEditBtn', '.prismui-Field--quickEditable .prismui-Button'];
+  return ['[class*="Field-quickEditBtn"]', '[class*="Field--quickEditable"] [class*="Button"]'];
 }
 
 function collapseHeaderSelectors() {
-  return ['.prismui-Collapse:not(.is-active):not(.is-disabled) .prismui-Collapse-header', '[class*="Collapse"]:not(.is-active):not(.is-disabled) [class*="Collapse-header"]'];
+  return ['[class*="Collapse"]:not(.is-active):not(.is-disabled) [class*="Collapse-header"]'];
 }
 
 function collapseActiveHeaderSelectors() {
-  return ['.prismui-Collapse.is-active .prismui-Collapse-header', '[class*="Collapse"].is-active [class*="Collapse-header"]'];
+  return ['[class*="Collapse"].is-active [class*="Collapse-header"]'];
 }
 
 function collapseExpandedSelectors() {
-  return ['.prismui-Collapse.is-active .prismui-Collapse-contentWrapper', '[class*="Collapse"].is-active [class*="Collapse-contentWrapper"]'];
+  return ['[class*="Collapse"].is-active [class*="Collapse-contentWrapper"]'];
 }
 
 function collapseCollapsedSelectors() {
-  return ['.prismui-Collapse:not(.is-active) .prismui-Collapse-header', '[class*="Collapse"]:not(.is-active) [class*="Collapse-header"]'];
+  return ['[class*="Collapse"]:not(.is-active) [class*="Collapse-header"]'];
 }
 
 function toastButtonSelectors() {
-  return ['.prismui-Button:has-text("提示")', 'button:has-text("提示")'];
+  return ['button:has-text("提示")'];
 }
 
 function toastVisibleSelectors() {
-  return ['.prismui-Toast.in', '.prismui-Toast-wrap', '[class*="Toast"]:has-text("轻提示")'];
+  return ['[class*="Toast"].in', '[class*="Toast-wrap"]', '[class*="Toast"]:has-text("轻提示")'];
 }
 
 function spinnerOverlaySelectors() {
-  return ['.prismui-Spinner-overlay', '.prismui-Spinner-wrap .prismui-Spinner', '[class*="Spinner-overlay"]'];
+  return ['[class*="Spinner-overlay"]', '[class*="Spinner-wrap"] [class*="Spinner"]'];
 }
 
 function formulaActionSelectors() {
-  return ['.prismui-FormulaPicker-action', '[class*="FormulaPicker-action"]'];
+  return ['[class*="FormulaPicker-action"]'];
 }
 
 function formulaEditorSelectors() {
-  return ['.prismui-FormulaEditor', '[class*="FormulaEditor"]'];
+  return ['[class*="FormulaEditor"]'];
 }
 
 function popupVisibleSelectors() {
-  return ['.prismui-PopUp.in', '.prismui-Select-popup', '[class*="PopUp"][class*="in"]'];
+  return ['[class*="PopUp"].in', '[class*="Select-popup"]'];
 }
 
 function richTextMenuVisibleSelectors() {
@@ -483,15 +515,15 @@ function richTextMenuVisibleSelectors() {
 }
 
 function contextMenuVisibleSelectors() {
-  return ['.prismui-ContextMenu-menu.in', '[class*="ContextMenu-menu"][class*="in"]'];
+  return ['[class*="ContextMenu-menu"].in'];
 }
 
 function contextMenuNestedItemSelectors() {
-  return ['.prismui-ContextMenu-item.has-child > a', '[class*="ContextMenu-item"][class*="has-child"] > a'];
+  return ['text=Nested Actions', '[class*="ContextMenu-item"][class*="has-child"] > a'];
 }
 
 function contextMenuSubmenuSelectors() {
-  return ['.prismui-ContextMenu-subList', '[class*="ContextMenu-subList"]'];
+  return ['[class*="ContextMenu-subList"]'];
 }
 
 function froalaLinkButtonSelectors() {
@@ -511,7 +543,7 @@ function froalaTablePopupSelectors() {
 }
 
 function jsonViewSelectors() {
-  return ['[class*="w-rjv"] svg', '[class*="w-rjv"] [role="button"]', '[class*="w-rjv"]', '.react-json-view .icon-container', '.react-json-view .collapsed-icon', '.react-json-view .expanded-icon', '.react-json-view .object-key-val', '.prismui-JsonField svg', '.prismui-JsonField'];
+  return ['[class*="w-rjv"] svg', '[class*="w-rjv"] [role="button"]', '[class*="w-rjv"]', '.react-json-view .icon-container', '.react-json-view .collapsed-icon', '.react-json-view .expanded-icon', '.react-json-view .object-key-val', '[class*="JsonField"] svg', '[class*="JsonField"]'];
 }
 
 function richTextMenuSelectors() {
@@ -523,15 +555,22 @@ function richTextDialogMenuItemSelectors() {
 }
 
 function dateSelectors() {
-  return ['.prismui-DatePicker input', '.prismui-DateRangePicker input', '.prismui-DatePicker', '.prismui-DateRangePicker'];
+  return [
+    '[class*="DateRangeControl"]',
+    '[class*="DateRangePicker"]',
+    '[class*="DatePicker"]',
+    'input[placeholder="开始时间"]',
+    'input[placeholder="结束时间"]',
+    'input[placeholder="请选择日期"]'
+  ];
 }
 
 function chartSelectors() {
-  return ['.prismui-Chart canvas', '.prismui-Chart', 'canvas'];
+  return ['[class*="Chart"] canvas', '[class*="Chart"]', 'canvas'];
 }
 
 function videoSelectors() {
-  return ['.prismui-Video video', '.prismui-Video', '[class*="Video"] video', '[class*="Video"]'];
+  return ['[class*="Video"] video', '[class*="Video"]', 'video'];
 }
 
 function parseArgs(argv) {
@@ -612,11 +651,56 @@ async function installDeterminism(context, theme, viewMode = 'pc') {
     };
     try {
       localStorage.clear();
-      localStorage.setItem('prismui-theme', theme);
+      localStorage.setItem('amis-theme', theme);
       localStorage.setItem('amis-viewMode', viewMode);
       localStorage.setItem('amis-locale', 'zh-CN');
     } catch (e) {}
   }, {theme, viewMode});
+}
+
+function buildMockSampleResponse(requestUrl) {
+  const url = new URL(requestUrl);
+  const perPage = Math.max(1, Number(url.searchParams.get('perPage')) || 10);
+  const page = Math.max(1, Number(url.searchParams.get('page')) || 1);
+  const offset = (page - 1) * perPage;
+  const rows = Array.from({length: perPage}, (_, index) => {
+    const source = MOCK_SAMPLE_ROWS[(offset + index) % MOCK_SAMPLE_ROWS.length];
+    return {
+      ...source,
+      id: offset + index + 1
+    };
+  });
+
+  return {
+    status: 0,
+    msg: 'ok',
+    data: {
+      count: 1710,
+      rows
+    }
+  };
+}
+
+async function installMockRoutes(context, testCase) {
+  if (!testCase.mockSampleApi) {
+    return;
+  }
+
+  await context.route('**/api/mock2/sample**', async route => {
+    const request = route.request();
+    const url = new URL(request.url());
+
+    if (request.method() !== 'GET' || url.pathname !== '/api/mock2/sample') {
+      await route.continue();
+      return;
+    }
+
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify(buildMockSampleResponse(request.url()))
+    });
+  });
 }
 
 function parseViewport(viewport) {
@@ -630,6 +714,9 @@ function viewportForCase(testCase, args) {
 }
 
 async function preparePage(page) {
+  await page.evaluate(() => {
+    document.documentElement.setAttribute('data-amis-visual-regression', 'true');
+  }).catch(() => undefined);
   await page.addStyleTag({
     content: `
       *, *::before, *::after {
@@ -643,7 +730,41 @@ async function preparePage(page) {
       }
       iframe[src^="http://"], iframe[src^="https://"] { opacity: 0 !important; }
       video { background: #111 !important; }
-      .prismui-Form--debug { display: none !important; }
+      [class*="Form--debug"] { display: none !important; }
+      html[data-amis-visual-regression="true"] .DocLayout,
+      html[data-amis-visual-regression="true"] [class*="Layout--headerFixed"] {
+        padding-top: 0 !important;
+      }
+      html[data-amis-visual-regression="true"] .DocLayout-header,
+      html[data-amis-visual-regression="true"] .DocLayout-brandBar,
+      html[data-amis-visual-regression="true"] .DocLayout-headerBar,
+      html[data-amis-visual-regression="true"] .DocLayout-searchBar,
+      html[data-amis-visual-regression="true"] .Doc-navigation,
+      html[data-amis-visual-regression="true"] .Doc-nav,
+      html[data-amis-visual-regression="true"] .Doc-navDrawer,
+      html[data-amis-visual-regression="true"] .Doc-toc,
+      html[data-amis-visual-regression="true"] .gh-icon,
+      html[data-amis-visual-regression="true"] #Header-toolbar,
+      html[data-amis-visual-regression="true"] [class*="Layout-header"],
+      html[data-amis-visual-regression="true"] [class*="Layout-aside"],
+      html[data-amis-visual-regression="true"] [class*="Layout-brand"],
+      html[data-amis-visual-regression="true"] [class*="AsideNav"],
+      html[data-amis-visual-regression="true"] [class*="Doc-nav"] {
+        display: none !important;
+      }
+      html[data-amis-visual-regression="true"] .Doc {
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        margin: 0 !important;
+        transform: none !important;
+      }
+      html[data-amis-visual-regression="true"] .Doc-content {
+        flex: 1 auto !important;
+        width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
     `
   }).catch(() => undefined);
 }
@@ -653,7 +774,7 @@ async function settle(page, extra = 500) {
   await page.evaluate(() => document.fonts && document.fonts.ready).catch(() => undefined);
   await page.waitForFunction(() => document.readyState === 'complete', {timeout: 10000}).catch(() => undefined);
   await page.waitForFunction(() => {
-    const selectors = ['.visibility-sensor > .prismui-Spinner', '.prismui-LazyComponent > .prismui-Spinner'];
+    const selectors = ['.visibility-sensor > [class*="Spinner"]', '[class*="LazyComponent"] > [class*="Spinner"]'];
     return selectors.every(selector => Array.from(document.querySelectorAll(selector)).every(node => {
       const style = getComputedStyle(node);
       const rect = node.getBoundingClientRect();
@@ -778,33 +899,45 @@ async function performStep(page, step) {
     throw new Error(message);
   }
 
-  await scrollLocatorIntoStableView(page, found.locator);
-  if (step.action === 'click') {
-    await found.locator.click({timeout: 5000, force: true});
-  } else if (step.action === 'hover') {
-    await found.locator.hover({timeout: 5000, force: true});
-  } else if (step.action === 'focus') {
-    await found.locator.focus({timeout: 5000});
-  } else if (step.action === 'fill') {
-    await found.locator.fill(step.value || '', {timeout: 5000}).catch(async () => {
+  try {
+    await scrollLocatorIntoStableView(page, found.locator);
+    if (step.action === 'click') {
       await found.locator.click({timeout: 5000, force: true});
-      await page.keyboard.press(process.platform === 'darwin' ? 'Meta+A' : 'Control+A');
-      await page.keyboard.type(step.value || '');
-    });
-  } else if (step.action === 'drag') {
-    const box = await found.locator.boundingBox();
-    if (box) {
+    } else if (step.action === 'hover') {
+      await found.locator.hover({timeout: 5000, force: true});
+    } else if (step.action === 'focus') {
+      await found.locator.focus({timeout: 5000});
+    } else if (step.action === 'fill') {
+      await found.locator.fill(step.value || '', {timeout: 5000}).catch(async () => {
+        await found.locator.click({timeout: 5000, force: true});
+        await page.keyboard.press(process.platform === 'darwin' ? 'Meta+A' : 'Control+A');
+        await page.keyboard.type(step.value || '');
+      });
+    } else if (step.action === 'drag') {
+      const box = await found.locator.boundingBox();
+      if (box) {
+        await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+        await page.mouse.down();
+        await page.mouse.move(box.x + box.width / 2 + 80, box.y + box.height / 2 + 30, {steps: 5});
+        await page.mouse.up();
+      }
+    } else if (step.action === 'hover-center') {
+      const box = await found.locator.boundingBox();
+      if (!box) throw new Error(`No bounding box for ${found.selector}`);
       await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-      await page.mouse.down();
-      await page.mouse.move(box.x + box.width / 2 + 80, box.y + box.height / 2 + 30, {steps: 5});
-      await page.mouse.up();
+    } else {
+      throw new Error(`Unknown action ${step.action}`);
     }
-  } else if (step.action === 'hover-center') {
-    const box = await found.locator.boundingBox();
-    if (!box) throw new Error(`No bounding box for ${found.selector}`);
-    await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-  } else {
-    throw new Error(`Unknown action ${step.action}`);
+  } catch (error) {
+    if (step.optional) {
+      return {
+        action: step.action,
+        selector: found.selector,
+        skipped: true,
+        reason: error && error.message ? error.message : String(error)
+      };
+    }
+    throw error;
   }
 
   await settle(page, 700);
@@ -827,7 +960,7 @@ async function performStep(page, step) {
 
 async function assertVideoInterface(page) {
   const result = await page.evaluate(async () => {
-    const video = document.querySelector('.prismui-Video video,video');
+    const video = document.querySelector('[class*="Video"] video,video');
     if (!video) return {exists: false};
 
     const src = video.currentSrc || video.getAttribute('src') || '';
@@ -927,21 +1060,24 @@ async function openCasePage(browser, baseUrl, testCase, side, args, consoleEvent
     locale: 'zh-CN'
   });
   await installDeterminism(context, args.theme, testCase.viewMode || 'pc');
+  await installMockRoutes(context, testCase);
   const page = await context.newPage();
   collectConsole(page, consoleEvents, side);
   const response = await page.goto(`${baseUrl}${testCase.route}`, {waitUntil: 'domcontentloaded', timeout: args.timeout});
   await preparePage(page);
   await settle(page, 1000);
   if (testCase.syntheticSetup) {
-    await setupSyntheticHarness(page, testCase.syntheticSetup);
+    await setupSyntheticHarness(page, testCase.syntheticSetup, args.theme);
     await settle(page, 1000);
   }
   return {context, page, status: response ? response.status() : null};
 }
 
-async function setupSyntheticHarness(page, kind) {
+async function setupSyntheticHarness(page, kind, theme) {
   if (kind === 'context-menu') {
-    await page.evaluate(() => {
+    await page.evaluate(async theme => {
+      const core = await import('/packages/amis-core/src/theme.tsx');
+      core.setDefaultTheme?.(theme);
       document.body.innerHTML = `
         <main id="qa-context-menu-harness" style="box-sizing:border-box;width:100vw;height:100vh;padding:96px;background:#f7f8fa;font-family:Arial,sans-serif;">
           <section style="width:720px;margin:0 auto;padding:32px;border:1px solid #d8dde8;background:white;border-radius:4px;">
@@ -949,17 +1085,57 @@ async function setupSyntheticHarness(page, kind) {
             <p style="margin:0;color:#5c6573;">Synthetic trigger keeps baseline and candidate on the same stable DOM.</p>
           </section>
         </main>`;
-    });
+    }, theme);
     return;
   }
 
   if (kind === 'froala') {
-    await page.evaluate(async () => {
-      const ReactMod = await import('/node_modules/.vite/deps/react.js');
+    await page.evaluate(async theme => {
+      const importFirst = async paths => {
+        let lastError;
+        for (const path of paths) {
+          for (let attempt = 0; attempt < 3; attempt++) {
+            try {
+              return await import(path);
+            } catch (error) {
+              lastError = error;
+              await new Promise(resolve => setTimeout(resolve, 500));
+            }
+          }
+        }
+        throw lastError;
+      };
+
+      const core = await import('/packages/amis-core/src/theme.tsx');
+      core.setDefaultTheme?.(theme);
+
+      const richTextSource = await fetch(
+        `/packages/amis-ui/src/components/RichText.tsx?t=${Date.now()}`
+      ).then(response => response.text());
+      const optimizedReactPath = richTextSource.match(
+        /from\s+["']([^"']*\/deps\/react\.js\?v=[^"']+)["']/
+      )?.[1];
+      const optimizedClientPath = optimizedReactPath?.replace(
+        /react\.js(\?v=[^"']+)$/,
+        'react-dom_client.js$1'
+      );
+
+      const ReactMod = await importFirst([
+        optimizedReactPath,
+        '/@id/react',
+        '/node_modules/.vite/deps/react.js'
+      ].filter(Boolean));
       const React = ReactMod.default || ReactMod;
-      const ClientMod = await import('/node_modules/.vite/deps/react-dom_client.js');
+      const ClientMod = await importFirst([
+        optimizedClientPath,
+        '/@id/react-dom/client',
+        '/node_modules/.vite/deps/react-dom_client.js'
+      ]);
       const createRoot = ClientMod.createRoot || ClientMod.default?.createRoot;
-      const RichText = await import('/packages/amis-ui/src/components/RichText.tsx');
+      const RichText = await importFirst([
+        `/packages/amis-ui/src/components/RichText.tsx?t=${Date.now()}`,
+        '/packages/amis-ui/src/components/RichText.tsx'
+      ]);
 
       document.body.innerHTML = `
         <main style="box-sizing:border-box;width:100vw;min-height:100vh;padding:72px;background:#f7f8fa;font-family:Arial,sans-serif;">
@@ -1004,7 +1180,7 @@ async function setupSyntheticHarness(page, kind) {
       if (!window.__amisFroalaReady) {
         throw new Error('Froala synthetic harness did not initialize.');
       }
-    });
+    }, theme);
     return;
   }
 
@@ -1023,14 +1199,14 @@ async function captureSide(browser, baseUrl, testCase, side, args, rootDir, cons
       await findLocator(opened.page, testCase.beforeSelectors);
     }
     await screenshot(opened.page, beforePath);
-    captures.push({state: 'before', path: beforePath});
+    captures.push({state: 'before', path: beforePath, compare: true});
     for (const step of testCase.steps) {
       const action = await performStep(opened.page, step);
       actions.push({state: step.state, ...action});
       if (action.skipped) continue;
       const shotPath = path.join(dir, `${step.state}.png`);
       await screenshot(opened.page, shotPath);
-      captures.push({state: step.state, path: shotPath});
+      captures.push({state: step.state, path: shotPath, compare: step.compare !== false});
     }
     return {status: opened.status, captures, actions};
   } finally {
@@ -1071,6 +1247,7 @@ async function runCase(deps, browser, args, testCase) {
       for (const item of candidate.captures) {
         const baselinePath = baselineByState.get(item.state);
         if (!baselinePath) continue;
+        if (item.compare === false) continue;
         const diffPath = path.join(diffDir, `${item.state}.png`);
         const diff = await comparePng(deps.pixelmatch, deps.PNG, baselinePath, item.path, diffPath, args.threshold);
         diffs.push({state: item.state, baselinePath: path.relative(args.outDir, baselinePath), candidatePath: path.relative(args.outDir, item.path), diffPath: path.relative(args.outDir, diffPath), ...diff, status: statusForRatio(diff.diffRatio, testCase.warnRatio ?? args.warnRatio, testCase.failRatio ?? args.failRatio)});

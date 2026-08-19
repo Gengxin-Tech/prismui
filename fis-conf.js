@@ -509,7 +509,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
   sdkEnv.match('*.{js,jsx,ts,tsx}', {
     optimizer: fis.plugin('terser'),
     moduleId: function (m, path) {
-      return fis.util.md5(package.version + 'prismui-sdk' + path);
+      return fis.util.md5(package.version + 'amis-sdk' + path);
     }
   });
 

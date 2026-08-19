@@ -490,8 +490,7 @@
   }
 }
 
-body.dark,
-body[data-prismui-theme='dark'] {
+[data-prismui-theme='dark'] {
   .ae-RendererList-tabs {
     > .ae-RendererList-tabs-content,
     .ae-RendererList-tabs-panel {
