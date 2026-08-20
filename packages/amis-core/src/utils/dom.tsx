@@ -4,17 +4,37 @@ import getPosition from './position';
 import {getScrollParent} from './helper';
 
 export function resolveDOMElement(target: any): HTMLElement | null {
-  if (!target) {
-    return null;
-  }
+  const seen = new Set<any>();
+  let current = target;
 
-  if (typeof HTMLElement !== 'undefined' && target instanceof HTMLElement) {
-    return target;
-  }
+  while (current && !seen.has(current)) {
+    seen.add(current);
 
-  const HTMLElementCtor = target.ownerDocument?.defaultView?.HTMLElement;
-  if (HTMLElementCtor && target instanceof HTMLElementCtor) {
-    return target;
+    if (typeof HTMLElement !== 'undefined' && current instanceof HTMLElement) {
+      return current;
+    }
+
+    const HTMLElementCtor = current.ownerDocument?.defaultView?.HTMLElement;
+    if (HTMLElementCtor && current instanceof HTMLElementCtor) {
+      return current;
+    }
+
+    if (typeof current.getWrappedInstance === 'function') {
+      current = current.getWrappedInstance();
+      continue;
+    }
+
+    if (current.current) {
+      current = current.current;
+      continue;
+    }
+
+    if (current.rootRef?.current) {
+      current = current.rootRef.current;
+      continue;
+    }
+
+    break;
   }
 
   return null;
