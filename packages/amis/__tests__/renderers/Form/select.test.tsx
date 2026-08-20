@@ -297,7 +297,9 @@ test('Renderer:select table with labelField & valueField', async () => {
 
   await waitFor(() => {
     expect(
-      baseElement.querySelector(componentSelector('.prismui-TransferDropDown-popover'))
+      baseElement.querySelector(
+        componentSelector('.prismui-TransferDropDown-popover')
+      )
     ).toBeInTheDocument();
   });
 
@@ -1009,4 +1011,123 @@ test('Choose default search results should be more relevant', async () => {
   });
 
   expect(container.querySelectorAll('[role="option"]').length).toBe(2);
+});
+
+test('Renderer:select mouse hover syncs downshift highlight state', async () => {
+  render(
+    amisRender(
+      {
+        type: 'page',
+        body: {
+          type: 'form',
+          body: [
+            {
+              label: '选项',
+              type: 'select',
+              name: 'select',
+              options: [
+                {
+                  label: 'A',
+                  value: 'a'
+                },
+                {
+                  label: 'B',
+                  value: 'b'
+                },
+                {
+                  label: 'C',
+                  value: 'c'
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {},
+      makeEnv({})
+    )
+  );
+
+  fireEvent.click(screen.getByText('请选择'));
+
+  await waitFor(() => {
+    expect(
+      document.body.querySelectorAll('.prismui-Select-option')
+    ).toHaveLength(3);
+  });
+
+  const options = document.body.querySelectorAll('.prismui-Select-option');
+  fireEvent.mouseMove(options[1]);
+
+  // itemMouseEnter 必须回写受控的 highlightedIndex：
+  // 否则 Downshift 的 `index === getState().highlightedIndex` 守卫永远不通过，
+  // 鼠标在选项上每移动一个像素都会触发一次 state 更新（闪烁回归的根因）。
+  await waitFor(() => {
+    expect(options[1]).toHaveClass('is-highlight');
+  });
+  expect(options[0]).not.toHaveClass('is-highlight');
+  expect(options[2]).not.toHaveClass('is-highlight');
+});
+
+test('Renderer:select keyboard continues from hovered item', async () => {
+  render(
+    amisRender(
+      {
+        type: 'page',
+        body: {
+          type: 'form',
+          body: [
+            {
+              label: '选项',
+              type: 'select',
+              name: 'select',
+              searchable: true,
+              options: [
+                {
+                  label: 'A',
+                  value: 'a'
+                },
+                {
+                  label: 'B',
+                  value: 'b'
+                },
+                {
+                  label: 'C',
+                  value: 'c'
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {},
+      makeEnv({})
+    )
+  );
+
+  fireEvent.click(screen.getByText('请选择'));
+
+  await waitFor(() => {
+    expect(
+      document.body.querySelectorAll('.prismui-Select-option')
+    ).toHaveLength(3);
+  });
+
+  const options = document.body.querySelectorAll('.prismui-Select-option');
+  fireEvent.mouseMove(options[1]);
+
+  await waitFor(() => {
+    expect(options[1]).toHaveClass('is-highlight');
+  });
+
+  // 悬停在高亮项上按 ArrowDown 应从当前项继续（B -> C）。
+  // 若 hover 不同步 highlightedIndex，Downshift 会从陈旧的 -1/0 继续，
+  // 高亮会错误地跳到 A/B。
+  const input = document.querySelector('.prismui-Select-input input')!;
+  fireEvent.keyDown(input, {key: 'ArrowDown'});
+
+  await waitFor(() => {
+    expect(options[2]).toHaveClass('is-highlight');
+  });
+  expect(options[1]).not.toHaveClass('is-highlight');
 });
