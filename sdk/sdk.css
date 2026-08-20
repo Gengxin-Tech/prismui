@@ -63737,11 +63737,11 @@ readers do not read off random characters that represent icons */
 .prismui-scope .prismui-Select-option.is-active .prismui-Select-option-checkbox > label > span {
   color: var(--Form-select-menu-onActive-color);
 }
-.prismui-scope .prismui-Select-option.is-highlight {
+.prismui-scope .prismui-Select-option:not(.is-disabled):hover, .prismui-scope .prismui-Select-option.is-highlight {
   color: var(--Form-select-menu-onHover-color);
   background: var(--Form-select-menu-onHover-bg);
 }
-.prismui-scope .prismui-Select-option.is-highlight .prismui-Select-option-checkbox > label > span {
+.prismui-scope .prismui-Select-option:not(.is-disabled):hover .prismui-Select-option-checkbox > label > span, .prismui-scope .prismui-Select-option.is-highlight .prismui-Select-option-checkbox > label > span {
   color: var(--Form-select-menu-onHover-color);
 }
 .prismui-scope .prismui-Select-option.is-disabled {
@@ -73917,14 +73917,29 @@ readers do not read off random characters that represent icons */
 }
 
 .prismui-scope .ae-MobileDevTool {
+  --MobileDevTool-bg: #fff;
+  --MobileDevTool-color: #151b26;
+  --MobileDevTool-muted-color: #666;
+  --MobileDevTool-border-color: #dee2e6;
+  --MobileDevTool-hover-color: #000;
+  --MobileDevTool-primary-color: #2468f2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
-  background-color: #fff;
+  color: var(--MobileDevTool-color);
+  background-color: var(--MobileDevTool-bg);
   z-index: 1001;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--MobileDevTool-border-color);
   height: 20px;
+}
+.prismui-scope [data-prismui-theme=dark] .ae-MobileDevTool {
+  --MobileDevTool-bg: var(--colors-neutral-fill-10);
+  --MobileDevTool-color: var(--colors-neutral-text-2);
+  --MobileDevTool-muted-color: var(--colors-neutral-text-6);
+  --MobileDevTool-border-color: var(--colors-neutral-line-8);
+  --MobileDevTool-hover-color: var(--colors-neutral-text-1);
+  --MobileDevTool-primary-color: var(--colors-brand-3);
 }
 .prismui-scope .ae-MobileDevTool-dimensions {
   width: 40%;
@@ -73959,10 +73974,12 @@ readers do not read off random characters that represent icons */
   font-size: 12px;
   text-align: center;
   margin-right: 5px;
+  color: var(--MobileDevTool-color);
+  background-color: var(--MobileDevTool-bg);
 }
 .prismui-scope .ae-MobileDevTool-dimension-input:focus, .prismui-scope .ae-MobileDevTool-dimension-input:hover {
   outline: none;
-  border: 1px solid #2468f2;
+  border: 1px solid var(--MobileDevTool-primary-color);
 }
 .prismui-scope .ae-MobileDevTool-right {
   width: 40%;
@@ -73978,7 +73995,7 @@ readers do not read off random characters that represent icons */
 }
 .prismui-scope .ae-MobileDevTool-right-scale-auto-value {
   position: absolute;
-  background-color: #fff;
+  background-color: var(--MobileDevTool-bg);
   width: 40px;
   left: 10px;
 }
@@ -73987,7 +74004,7 @@ readers do not read off random characters that represent icons */
   margin-left: 10px;
 }
 .prismui-scope .ae-MobileDevTool-right-scale-auto:hover {
-  color: #2468f2;
+  color: var(--MobileDevTool-primary-color);
 }
 .prismui-scope .ae-MobileDevTool-right-rotate-screen {
   width: 16px;
@@ -73997,7 +74014,7 @@ readers do not read off random characters that represent icons */
   top: 1px;
 }
 .prismui-scope .ae-MobileDevTool-right-rotate-screen:hover {
-  color: #2468f2;
+  color: var(--MobileDevTool-primary-color);
 }
 
 .prismui-scope .ae-PreviewIFrameBody * {
@@ -74012,16 +74029,16 @@ readers do not read off random characters that represent icons */
   width: 10px;
   height: 22px;
   z-index: 1000;
-  border: 1px solid #dee2e6;
-  background-color: #fff;
+  border: 1px solid var(--MobileDevTool-border-color, #dee2e6);
+  background-color: var(--MobileDevTool-bg, #fff);
   border-radius: 0.125rem;
-  color: #666;
+  color: var(--MobileDevTool-muted-color, #666);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .prismui-scope .ae-MobileDevTool-rightHandle:hover {
-  color: #000;
+  color: var(--MobileDevTool-hover-color, #000);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
 .prismui-scope .ae-MobileDevTool-rightHandle::before {
@@ -74038,16 +74055,16 @@ readers do not read off random characters that represent icons */
   width: 22px;
   height: 10px;
   z-index: 1000;
-  border: 1px solid #dee2e6;
-  background-color: #fff;
+  border: 1px solid var(--MobileDevTool-border-color, #dee2e6);
+  background-color: var(--MobileDevTool-bg, #fff);
   border-radius: 0.125rem;
-  color: #666;
+  color: var(--MobileDevTool-muted-color, #666);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .prismui-scope .ae-MobileDevTool-bottomHandle:hover {
-  color: #000;
+  color: var(--MobileDevTool-hover-color, #000);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
 .prismui-scope .ae-MobileDevTool-bottomHandle::before {
