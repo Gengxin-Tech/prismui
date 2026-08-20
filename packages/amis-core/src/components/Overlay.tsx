@@ -133,7 +133,11 @@ class Position extends React.Component<any, any> {
     if (!target || !target.offsetWidth) {
       // 靠这个 re-render 来重置 position
       this.schedulePositionRetry();
-      if (this.state.ready) {
+      // target 为 null 通常是目标元素 ref 在重渲染时被瞬时 detach/attach
+      // （React 19 下 ref 回调身份变化会先以 null 调用再以节点调用），
+      // 此时弹层已定位过的话不应隐藏，否则每次重渲染都会闪一下；
+      // 只有目标真实存在但尺寸为 0（如父级被隐藏）时才隐藏等待重试。
+      if (this.state.ready && target && !target.offsetWidth) {
         this.setState({ready: false});
       }
       return;
