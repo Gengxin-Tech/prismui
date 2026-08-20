@@ -443,6 +443,15 @@ export class Select extends React.Component<SelectProps, SelectState> {
   input: HTMLInputElement;
   target: HTMLDivElement | null = null;
   menu: React.RefObject<HTMLDivElement | null> = React.createRef();
+  /**
+   * 合并了 Select.targetRef 与 Downshift rootRef 的稳定 ref。
+   * Downshift 的 cloneElement 每次渲染都会生成新的 handleRefs 函数，
+   * React 19 会因此先以 null 调用旧 ref 再以节点调用新 ref（ref 抖动），
+   * 导致 this.target 被瞬时置空、Overlay 把弹层隐藏造成闪烁。
+   * 这里显式调用 getRootProps 让 Downshift 跳过 cloneElement，
+   * 并只缓存第一次生成的合并 ref，保证每次渲染 ref 身份稳定。
+   */
+  mergedRootRef: ((node: any) => void) | null = null;
   constructor(props: SelectProps) {
     super(props);
 
@@ -723,6 +732,11 @@ export class Select extends React.Component<SelectProps, SelectState> {
       case DownshiftChangeTypes.keyDownArrowDown:
       case DownshiftChangeTypes.keyDownArrowUp:
       case DownshiftChangeTypes.itemMouseEnter:
+        // itemMouseEnter 必须同步回受控的 highlightedIndex：
+        // Downshift 的 onMouseMove 会先判断 `index === getState().highlightedIndex`，
+        // 而受控模式下 getState() 读的是 props 值。不同步的话该守卫永远不通过，
+        // 鼠标在选项间每移动一个像素都会触发一次 state 更新。
+        // 渲染开销由 getRootProps 稳定 ref 解决（见 render 中 root div 的用法）。
         update = {
           ...update,
           ...changes
@@ -1318,10 +1332,24 @@ export class Select extends React.Component<SelectProps, SelectState> {
         }
       >
         {(options: ControllerStateAndHelpers<any>) => {
-          const {isOpen} = options;
+          const {isOpen, getRootProps} = options;
+          // 每次渲染都要调用 getRootProps()：Downshift 据此跳过 cloneElement，
+          // 否则它会把根元素克隆一份并注入新的 ref 函数（ref 抖动根源）。
+          const rootProps = getRootProps();
+          // 合并 ref 只在首次渲染构造一次：同时驱动 Select 的 targetRef
+          // （Overlay 定位目标）与 Downshift 内部 rootRef（外点关闭检测）。
+          // 不能直接用 rootProps.ref（handleRefs 每次都是新函数）。
+          if (!this.mergedRootRef && rootProps.ref) {
+            const downshiftRef = rootProps.ref;
+            this.mergedRootRef = (node: any) => {
+              this.targetRef(node);
+              downshiftRef(node);
+            };
+          }
           return (
             <div
-              ref={this.targetRef}
+              {...rootProps}
+              ref={this.mergedRootRef}
               tabIndex={disabled ? -1 : 0}
               onKeyPress={this.handleKeyPress}
               onClick={this.toggle}
