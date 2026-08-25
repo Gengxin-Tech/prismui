@@ -28,6 +28,14 @@ export default [
       },
 
       {
+        label: '从 amis 迁移',
+        path: '/zh-CN/docs/start/migration-from-amis',
+        component: React.lazy(() =>
+          import('../../docs/zh-CN/start/migration-from-amis.md').then(wrapDoc)
+        )
+      },
+
+      {
         label: '更新记录',
         path: '/zh-CN/docs/start/changelog',
         component: React.lazy(() =>
