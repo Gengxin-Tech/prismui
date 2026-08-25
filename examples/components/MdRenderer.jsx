@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import {getTheme, render} from 'prismui';
+import {getTheme, render} from 'prismui-framework';
 import {LazyComponent} from 'prismui-core';
 import {Overlay} from 'prismui-core';
 import {PopOver} from 'prismui-core';

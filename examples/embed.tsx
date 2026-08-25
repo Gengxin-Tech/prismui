@@ -11,7 +11,7 @@ import {alert, confirm} from 'prismui-ui/lib/components/Alert';
 import {toast, default as ToastComponent} from 'prismui-ui/lib/components/Toast';
 import AlertComponent from 'prismui-ui/lib/components/Alert';
 import {render as renderAmis, makeTranslator} from 'prismui-core';
-import 'prismui/lib/minimal';
+import 'prismui-framework/lib/minimal';
 
 import 'prismui-ui/lib/locale/en-US';
 import 'prismui-ui/lib/locale/zh-CN';

@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import axios from 'axios';
-import {getTheme, Icon, Drawer, SearchBox} from 'prismui';
+import {getTheme, Icon, Drawer, SearchBox} from 'prismui-framework';
 import {DOCS_BASE_PATH} from './publicPath';
 
 const ContextPath = DOCS_BASE_PATH;

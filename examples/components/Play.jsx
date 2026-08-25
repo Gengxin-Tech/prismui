@@ -1,6 +1,6 @@
 import React from 'react';
 import {DOCS_BASE_PATH, isDocsDeployment} from './publicPath';
-import {toast, render, makeTranslator} from 'prismui';
+import {toast, render, makeTranslator} from 'prismui-framework';
 import {normalizeLink} from 'prismui-core';
 import {isMobile} from 'prismui-core';
 import {attachmentAdpator} from 'prismui-core';
