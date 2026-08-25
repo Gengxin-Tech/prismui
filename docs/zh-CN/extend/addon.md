@@ -2,7 +2,7 @@
 title: 扩展现有组件
 ---
 
-除了新增组件，在 amis 中还能扩展和修改现有组件。
+除了新增组件，在 PrismUI 中还能扩展和修改现有组件。
 
 ## 扩展表单验证
 
@@ -47,7 +47,7 @@ amisLib.addRule(
 在 React 的使用方法是类似的
 
 ```javascript
-import {addRule} from 'amis';
+import {addRule} from 'prismui-framework';
 ```
 
 ### 更加灵活的提示错误

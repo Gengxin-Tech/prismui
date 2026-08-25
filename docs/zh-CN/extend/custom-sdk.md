@@ -4,7 +4,7 @@ title: 自定义组件 - SDK
 
 ## 使用 custom 组件临时扩展
 
-基于 custom 组件可以直接在 amis 配置实现自定义功能，它的支持面最广，是唯一支持在可视化编辑器中使用的方法。
+基于 custom 组件可以直接在 PrismUI 配置实现自定义功能，它的支持面最广，是唯一支持在可视化编辑器中使用的方法。
 
 使用 custom 组件类似如下写法：
 
@@ -59,13 +59,13 @@ title: 自定义组件 - SDK
 }
 ```
 
-注意上面的例子中两个组件的 name 是一样的，这是为了方便示例，因为 amis 中的数据是双向绑定的，因此 onChange 修改自身的时候，另一个「姓名」输入框由于 name 一样，也会同步更新。
+注意上面的例子中两个组件的 name 是一样的，这是为了方便示例，因为 PrismUI 中的数据是双向绑定的，因此 onChange 修改自身的时候，另一个「姓名」输入框由于 name 一样，也会同步更新。
 
 关于 custom 组件的更多属性请参考「[Custom 组件](../../components/custom)」。
 
 ## JS SDK 注册组件
 
-amis 组件都是基于 React 的，所以需要使用一个简单的 React 组件来注册，可以是函数组件也可以是类组件，下面以函数组件为例，将[快速开始](../start/getting-started)中的代码替换成如下示例：
+PrismUI 组件都是基于 React 的，所以需要使用一个简单的 React 组件来注册，可以是函数组件也可以是类组件，下面以函数组件为例，将[快速开始](../start/getting-started)中的代码替换成如下示例：
 
 ```javascript
 let amis = amisRequire('amis/embed');

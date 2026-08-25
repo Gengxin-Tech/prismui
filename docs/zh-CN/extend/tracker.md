@@ -2,19 +2,19 @@
 title: 页面交互行为跟踪
 ---
 
-从 1.5.0 版本开始，amis 内置了跟踪用户交互行为采集功能。
+PrismUI 内置了跟踪用户交互行为采集功能。
 
 ## 使用方法
 
-amis 只负责采集，对行为的存储和分析都需要外部实现。
+PrismUI 只负责采集，对行为的存储和分析都需要外部实现。
 
-在 amis 渲染时的第三个参数 env 可以传递 tracker 函数，下面以 sdk 作为示例，具体实现可以根据实际需求修改，比如可以收集一段时间后再批量提交等。
+在 PrismUI 渲染时的第三个参数 env 可以传递 tracker 函数，下面以 SDK 作为示例，具体实现可以根据实际需求修改，比如可以收集一段时间后再批量提交等。
 
 ```js
 amis.embed(
   '#root',
   {
-    // amis schema
+    // PrismUI schema
   },
   {
     // 这里是初始 props
@@ -433,7 +433,7 @@ action 中的事件，主要用于关闭弹框
     "name": "name",
     "label": "用户名",
     "type": "input-text",
-    "value": "amis"
+    "value": "PrismUI"
   }
 }
 ```
@@ -452,7 +452,7 @@ action 中的事件，主要用于关闭弹框
     "name": "name",
     "label": "用户名",
     "type": "input-text",
-    "value": "amis"
+    "value": "PrismUI"
   }
 }
 ```
@@ -482,7 +482,7 @@ tab 切换事件，示例
 
 当用户又切换回当前页面的时间，可以当做是用户重新访问的开始时间。
 
-由于 amis 可能被嵌入到页面中，所以 amis 无法知晓页面首次打开的时间，需要自行处理。
+由于 PrismUI 可能被嵌入到页面中，所以 PrismUI 无法知晓页面首次打开的时间，需要自行处理。
 
 ### pageLoaded
 

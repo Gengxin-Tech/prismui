@@ -8,9 +8,9 @@ PrismUI 不是 baidu/amis 的官方发布渠道。原项目版权和许可声明
 
 ## 当前状态
 
-- **包名过渡**：当前 npm 包仍保留 `amis`、`amis-ui`、`amis-core` 等兼容包名；包名迁移如有后续安排会在 release notes 中说明。
-- **兼容策略**：迁移期优先保持现有 UI Schema、渲染器 API、主题样式和 SDK 接入方式稳定。
-- **文档口径**：新文档使用 PrismUI 名称；历史文档、代码示例或运行时 API 中仍可能出现 `amis`。
+- **包名切换**：npm 包已切换到无 scope 的 `prismui-framework` / `prismui-*` 包名；旧 `amis*` 包名不再作为 PrismUI 的发布目标。
+- **兼容策略**：UI Schema、渲染器 API、主题样式和 SDK 接入方式优先保持稳定；SDK loader 全局仍可能保留历史 `amisRequire`/`window.amis` 标识。
+- **文档口径**：新文档使用 PrismUI 名称；历史说明、上游归属或运行时兼容 API 中仍可能出现 `amis`。
 - **维护方式**：采用轻量社区协作模式，贡献默认按对应文件或子包的现有开源许可证授权。
 
 ## 能力概览
@@ -23,22 +23,24 @@ PrismUI 不是 baidu/amis 的官方发布渠道。原项目版权和许可声明
 
 ## 快速开始
 
-### 当前兼容包名
+### npm 包名
 
-安装命令继续沿用 amis 包名：
+安装 PrismUI 包：
 
 ```bash
-npm install amis amis-ui
+npm install prismui-framework@beta prismui-ui@beta
 ```
 
-React 工程中可以继续使用现有入口：
+当前 PrismUI 7 使用 `beta` dist-tag 发布；正式版发布后可省略 `@beta`。
+
+React 工程中使用新的 PrismUI 入口：
 
 ```tsx
-import 'amis/lib/themes/cxd.css';
-import 'amis/lib/helper.css';
-import 'amis/sdk/iconfont.css';
-import {render as renderUI} from 'amis';
-import {ToastComponent, AlertComponent} from 'amis-ui';
+import 'prismui-framework/lib/themes/cxd.css';
+import 'prismui-framework/lib/helper.css';
+import 'prismui-framework/sdk/iconfont.css';
+import {render as renderUI} from 'prismui-framework';
+import {ToastComponent, AlertComponent} from 'prismui-ui';
 
 const schema = {
   type: 'page',
@@ -85,18 +87,22 @@ export function App() {
 </script>
 ```
 
-目前仓库不在 README 中承诺新的 npm 包名；如后续发生迁移，会在 release notes 中单独说明。
+更多发版和首次 bootstrap 步骤见 [PrismUI npm Publishing Runbook](./docs/prismui-npm-publishing.md)。
 
 ## 仓库结构
 
 ```text
-packages/amis                   UI Schema 渲染器、SDK 和主包
-packages/amis-core              数据域、事件、渲染器注册和运行时核心
-packages/amis-ui                基础 UI 组件与主题样式
-packages/amis-formula           表达式和公式能力
-packages/amis-editor            可视化编辑器
-packages/amis-editor-core       编辑器核心模型和插件能力
-packages/amis-theme-editor-helper 主题编辑辅助能力
+packages/amis                   UI Schema 渲染器、SDK 和主包（发布为 prismui-framework）
+packages/amis-core              数据域、事件、渲染器注册和运行时核心（发布为 prismui-core）
+packages/amis-ui                基础 UI 组件与主题样式（发布为 prismui-ui）
+packages/amis-formula           表达式和公式能力（发布为 prismui-formula）
+packages/office-viewer          Office 文档预览能力（发布为 prismui-office-viewer）
+packages/amis-editor            可视化编辑器（发布为 prismui-editor）
+packages/amis-editor-core       编辑器核心模型和插件能力（发布为 prismui-editor-core）
+packages/amis-theme-editor-helper 主题编辑辅助能力（发布为 prismui-theme-editor-helper）
+packages/prismui-i18n-runtime   PrismUI 多语言运行时
+packages/prismui-postcss        PrismUI 编辑器样式处理运行时
+packages/vite-plugin-amisr      PrismUI JSON schema 转 React 组件的 Vite 插件（发布为 vite-plugin-prismui）
 examples                        文档站和本地示例
 scripts/sdk-build               SDK 构建、契约检查和迁移工具
 ```
@@ -130,9 +136,9 @@ npm run check-sdk-contract
 单包或单测示例：
 
 ```bash
-npm test --workspace amis -- -t <spec-name>
+npm test --workspace prismui-framework -- -t <spec-name>
 ./node_modules/.bin/jest packages/amis/__tests__/renderers/Form/buttonToolBar.test.tsx
-npm run update-snapshot --workspace amis -- -t <spec-name>
+npm run update-snapshot --workspace prismui-framework -- -t <spec-name>
 ```
 
 ## 贡献
@@ -153,8 +159,8 @@ PrismUI 源自 [baidu/amis](https://github.com/baidu/amis)。原项目版权、�
 
 | 许可证 | 当前子包 |
 | --- | --- |
-| Apache-2.0 | `amis`, `amis-core`, `amis-ui`, `office-viewer` |
-| MIT | `amis-formula`, `vite-plugin-amisr` |
-| ISC | `amis-editor`, `amis-editor-core`, `amis-theme-editor-helper`, `amis-mock` |
+| Apache-2.0 | `prismui-framework`, `prismui-core`, `prismui-ui`, `prismui-office-viewer` |
+| MIT | `prismui-formula`, `vite-plugin-prismui` |
+| ISC | `prismui-editor`, `prismui-editor-core`, `prismui-theme-editor-helper`, `prismui-i18n-runtime`, `prismui-postcss`, `amis-mock` |
 
 请在再分发源码、npm 包、SDK、镜像或其它产物时保留对应的版权和许可声明。修改源自 Apache-2.0 授权的文件时，也请保留必要的修改说明。

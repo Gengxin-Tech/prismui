@@ -1287,7 +1287,7 @@ run action ajax
 
 | 属性名     | 类型     | 默认值 | 说明                                                                                                                          |
 | ---------- | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| link       | `string` | `link` | 用来指定跳转地址，跟 url 不同的是，这是单页跳转方式，不会渲染浏览器，请指定 amis 平台内的页面。可用 `${xxx}` 取值             |
+| link       | `string` | `link` | 用来指定跳转地址，跟 url 不同的是，这是单页跳转方式，不会渲染浏览器，请指定应用内页面。可用 `${xxx}` 取值                   |
 | params     | `object` | -      | 页面参数`{key:value}`，支持数据映射，`> 1.9.0 及以上版本`                                                                     |
 | targetType | `string` | `page` | 默认为内容区打开`page`，可设置为新窗口打开`blank`，当前页签打开`self`，`blank\|self` 方式会重新渲染浏览器`> 6.1.0 及以上版本` |
 
@@ -1835,7 +1835,7 @@ run action ajax
 - 数据类型支持范围：`基础类型`、`对象类型`、`数组类型`，数据类型取决于目标组件所需数据值类型
 - 目标组件支持范围：`form`、`dialog`、`drawer`、`wizard`、`service`、`page`、`app`、`chart`，以及数据`输入类`组件
 - < 2.3.2 及以下版本，虽然更新数据可以实现对组件数据域的更新，但如果更新数据动作的数据值来自前面的异步动作（例如 发送 http 请求、自定义 JS（异步）），则后面的动作只能通过事件变量`${event.data.xxx}`来获取异步动作产生的数据，无法通过当前数据域`${xxx}`直接获取更新后的数据。
-- 它的值通常都是对象形式，比如 form 传递的值应该是类似 `{"user": "amis"}`，这时就会更新表单里的 `user` 字段值为 `amis`
+- 它的值通常都是对象形式，比如 form 传递的值应该是类似 `{"user": "PrismUI"}`，这时就会更新表单里的 `user` 字段值为 `PrismUI`
 
 ```schema
 {
@@ -1951,7 +1951,7 @@ run action ajax
 {
   "type": "page",
   "data": {
-    "name": "amis",
+    "name": "PrismUI",
     "age": 18,
     "date": "2023-6-6"
   },
@@ -2641,7 +2641,7 @@ run action ajax
 
 ## 注册自定义动作
 
-除了以上内置动作，你还可以注册自己的动作。通过对`RendererAction`的`run`方法的实现可以定制自己的动作逻辑，最后通过`registerAction`注册到 amis 事件动作中。
+除了以上内置动作，你还可以注册自己的动作。通过对`RendererAction`的`run`方法的实现可以定制自己的动作逻辑，最后通过`registerAction`注册到 PrismUI 事件动作中。
 
 ```javascript
 import {
@@ -2649,8 +2649,8 @@ import {
   ListenerContext,
   registerAction,
   RendererAction
-} from 'amis-core';
-import {RendererEvent} from 'amis-core';
+} from 'prismui-core';
+import {RendererEvent} from 'prismui-core';
 
 // 动作定义
 interface IMyAction extends ListenerAction {
@@ -2694,9 +2694,9 @@ registerAction('my-action', new MyAction());
     wrapWithPanel: false,
     data: {
       expression: 'okk',
-      name: 'amis',
+      name: 'PrismUI',
       features: ['flexible', 'powerful'],
-      tool: 'amis-editor',
+      tool: 'prismui-editor',
       platform: 'aisuda',
       detail: {
         version: '2.8.0',
@@ -2743,7 +2743,7 @@ registerAction('my-action', new MyAction());
                         field: 'name'
                       },
                       op: 'equal',
-                      right: 'amis'
+                      right: 'PrismUI'
                     },
                     {
                       id: '3779845521db',
@@ -3233,7 +3233,7 @@ registerAction('my-action', new MyAction());
 
 # 动作间数据传递
 
-从事件触发开始，整个数据流包含事件本身产生的事件数据和动作产生的动作数据，事件源头产生的数据在 AMIS 事件动作机制底层已经自动加入渲染器数据域，可以通过`xxx`直接获取（`< 2.3.2 及以下版本 为 event.data.xxx`），而部分动作产生的数据如何流动需要交互设计者进行介入，对于数据流动可以通过数据映射，将上一个动作产生的数据作为动作参数写入下一个动作。
+从事件触发开始，整个数据流包含事件本身产生的事件数据和动作产生的动作数据，事件源头产生的数据在 PrismUI 事件动作机制底层已经自动加入渲染器数据域，可以通过`xxx`直接获取（`< 2.3.2 及以下版本 为 event.data.xxx`），而部分动作产生的数据如何流动需要交互设计者进行介入，对于数据流动可以通过数据映射，将上一个动作产生的数据作为动作参数写入下一个动作。
 
 #### 传递数据
 
@@ -3284,7 +3284,7 @@ registerAction('my-action', new MyAction());
         }
       ],
       data: {
-        name: 'amis'
+        name: 'PrismUI'
       },
       onEvent: {
         broadcast_1: {
@@ -3374,7 +3374,7 @@ http 请求动作执行结束后，后面的动作可以通过 `${responseResult
       id: 'form_get_render',
       wrapWithPanel: false,
       data: {
-        name: 'amis',
+        name: 'PrismUI',
         age: '18'
       },
       body: [

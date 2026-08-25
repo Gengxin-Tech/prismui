@@ -2,17 +2,17 @@
 title: 编辑器架构
 ---
 
-本文面向需要理解、集成或二次开发 amis 可视化编辑器的开发者，说明编辑器里的核心概念、静态结构、插件加载流程、渲染接入流程，以及面板、物料、工具栏和右键菜单如何围绕当前选中节点重建。
+本文面向需要理解、集成或二次开发 PrismUI 可视化编辑器的开发者，说明编辑器里的核心概念、静态结构、插件加载流程、渲染接入流程，以及面板、物料、工具栏和右键菜单如何围绕当前选中节点重建。
 
 如果只想快速接入编辑器，请先看[可视化编辑器](./editor)。如果要写插件或定制编辑器能力，请结合[可视化编辑器定制指南](./editor-customization)阅读本文。
 
 ## 核心心智模型
 
-amis editor 本质上是在 amis 渲染流程外包了一层“编辑态协议”。业务 schema 仍然由 amis renderer 渲染；编辑器通过插件识别每个 schema 节点，把节点包装成可点选、可高亮、可拖拽、可配置的编辑节点。
+PrismUI editor 本质上是在 PrismUI 渲染流程外包了一层“编辑态协议”。业务 schema 仍然由 PrismUI renderer 渲染；编辑器通过插件识别每个 schema 节点，把节点包装成可点选、可高亮、可拖拽、可配置的编辑节点。
 
 ```mermaid
 flowchart TD
-  Schema[amis schema] --> Preview[Preview 渲染区]
+  Schema[PrismUI schema] --> Preview[Preview 渲染区]
   Preview --> Resolver[rendererResolver]
   Resolver --> Info[RendererInfo]
   Info --> Wrapper[NodeWrapper / ContainerWrapper]
@@ -27,7 +27,7 @@ flowchart TD
 
 - `Editor` 是 React 外壳，负责创建 `EditorStore` 和 `EditorManager`，组合左侧面板、预览区、右侧面板、弹窗、脚手架等 UI。
 - `EditorManager` 是编辑器控制层，负责插件实例化、事件派发、渲染器 hack、物料收集、面板收集、DND、schema 修改。
-- 插件是扩展点，负责声明“某类 amis renderer 在编辑器里应该如何被识别、展示、配置和插入”。
+- 插件是扩展点，负责声明“某类 PrismUI renderer 在编辑器里应该如何被识别、展示、配置和插入”。
 
 ## 概念名词
 
@@ -35,9 +35,9 @@ flowchart TD
 | ------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
 | `Editor`           | 可视化编辑器主组件，承载编辑器外壳、预览区和左右面板                                       | `packages/amis-editor-core/src/component/Editor.tsx` |
 | `EditorStore`      | 编辑器状态树，保存 schema、当前选中节点、面板、物料、拖拽状态、弹窗状态等                  | `packages/amis-editor-core/src/store/editor.ts`      |
-| `EditorManager`    | 非 UI 控制层，连接 store、插件、amis renderer、DND 和事件系统                              | `packages/amis-editor-core/src/manager.ts`           |
+| `EditorManager`    | 非 UI 控制层，连接 store、插件、PrismUI renderer、DND 和事件系统                           | `packages/amis-editor-core/src/manager.ts`           |
 | 插件               | 编辑器能力单元，可以提供渲染器识别、配置面板、组件物料、工具栏、右键菜单、事件动作等       | `BasePlugin` 或自定义 `PluginInterface`              |
-| 渲染器插件         | 绑定了 `rendererName` 的插件，用于让某种 amis renderer 可点选、可配置、可拖入              | `rendererName = 'input-text'`                        |
+| 渲染器插件         | 绑定了 `rendererName` 的插件，用于让某种 PrismUI renderer 可点选、可配置、可拖入           | `rendererName = 'input-text'`                        |
 | 全局插件           | 不绑定具体 renderer 的插件，用于新增全局面板、菜单、工具或监听事件                         | 左侧业务资源面板、审计插件                           |
 | `RendererInfo`     | 某个 schema 节点在编辑器中的能力描述，包含名称、区域、面板、schema、wrapper 行为等         | `getRendererInfo()` 返回值                           |
 | `SubRendererInfo`  | 组件物料信息，用于左侧“组件”面板或插入面板展示和拖入                                       | `buildSubRenderers()` 返回值                         |
@@ -53,12 +53,12 @@ flowchart TD
 
 ## 静态架构
 
-编辑器分为“包层级”“运行时层级”和“扩展层级”。`amis-editor-core` 提供编辑器核心，`amis-editor` 在核心之上注册 amis 内置组件插件。
+编辑器分为“包层级”“运行时层级”和“扩展层级”。`prismui-editor-core` 提供编辑器核心，`prismui-editor` 在核心之上注册 PrismUI 内置组件插件。
 
 ```mermaid
 flowchart TD
-  Full[amis-editor] --> Core[amis-editor-core]
-  Core --> Amis[amis / amis-core / amis-ui]
+  Full[prismui-editor] --> Core[prismui-editor-core]
+  Core --> Runtime[prismui-framework / prismui-core / prismui-ui]
   Core --> Editor[Editor]
   Editor --> Store[EditorStore]
   Editor --> Manager[EditorManager]
@@ -73,7 +73,7 @@ flowchart TD
 
 - `Editor` 不直接决定某个组件能否编辑，它只创建核心对象并摆放 UI 区域。
 - `EditorManager` 统一调用插件，避免面板、工具栏、菜单、物料各自绕过插件体系。
-- `Preview` 通过 amis 的 `rendererResolver` 切入渲染流程，在 editable 模式下把普通 renderer 替换成编辑态 wrapper。
+- `Preview` 通过 PrismUI 的 `rendererResolver` 切入渲染流程，在 editable 模式下把普通 renderer 替换成编辑态 wrapper。
 - `EditorStore` 只保存状态和 schema 树，不负责解释插件语义。
 - 插件是所有二次开发能力的主要入口，同一个插件可以同时提供 renderer 识别、配置面板、物料、工具栏和右键菜单。
 
@@ -83,7 +83,7 @@ flowchart TD
 
 | 视图         | 作用                                                                    |
 | ------------ | ----------------------------------------------------------------------- |
-| schema 树    | 最终输出给业务方的 amis 配置，节点通过 `$$id` 保持唯一标识              |
+| schema 树    | 最终输出给业务方的 PrismUI 配置，节点通过 `$$id` 保持唯一标识           |
 | 编辑器节点树 | 运行时的可编辑节点模型，记录父子关系、区域、渲染器信息、组件实例等      |
 | DOM 标记     | 画布上可交互的真实 DOM，靠 `data-editor-id` 和 `data-region` 回到节点树 |
 
@@ -139,7 +139,7 @@ sequenceDiagram
   participant Manager as EditorManager
   participant Plugin as 插件集合
   participant Preview as Preview
-  participant Amis as amis renderer
+  participant Runtime as PrismUI renderer
 
   App->>Editor: 传入 value / onChange / plugins / amisEnv
   Editor->>Store: MainStore.create()
@@ -150,13 +150,13 @@ sequenceDiagram
   Manager->>Plugin: 实例化并按 order 排序
   Manager->>Manager: hackRenderers()
   Editor->>Preview: 渲染画布
-  Preview->>Amis: render schema with rendererResolver
-  Amis->>Preview: resolveRenderer(path, schema)
+  Preview->>Runtime: render schema with rendererResolver
+  Runtime->>Preview: resolveRenderer(path, schema)
   Preview->>Manager: getEditorInfo(renderer, path, schema)
   Manager->>Plugin: beforeResolveEditorInfo / getRendererInfo / afterResolveEditorInfo
   Manager-->>Preview: RendererInfo
   Preview->>Manager: makeWrapper(info, renderer)
-  Preview-->>Amis: 返回编辑态 renderer
+  Preview-->>Runtime: 返回编辑态 renderer
 ```
 
 插件来源有三类：
@@ -169,11 +169,11 @@ sequenceDiagram
 
 ## 渲染接入流程
 
-编辑态的核心不是重写 amis renderer，而是在 `rendererResolver` 里替换 renderer 的 `component`。
+编辑态的核心不是重写 PrismUI renderer，而是在 `rendererResolver` 里替换 renderer 的 `component`。
 
 ```mermaid
 flowchart TD
-  Start[amis 准备渲染某个 schema 节点] --> Resolve[Preview.rendererResolver]
+  Start[PrismUI 准备渲染某个 schema 节点] --> Resolve[Preview.rendererResolver]
   Resolve --> Editable{editable?}
   Editable -- 否 --> Raw[返回原始 renderer]
   Editable -- 是 --> Info[manager.getEditorInfo]
@@ -191,7 +191,7 @@ flowchart TD
   RegionWrapper --> MarkRegion[标记 data-region / data-region-host]
 ```
 
-`BasePlugin.getRendererInfo()` 的默认规则是：schema 有 `$$id`，插件有 `name` 和 `rendererName`，并且 `rendererName` 匹配 amis renderer 的 `name` 或 `origin.name`。满足后，它会把插件上的 `regions`、`panelBody`、`wrapperResolve`、`filterProps`、`scaffoldForm` 等能力复制到 `RendererInfo`。
+`BasePlugin.getRendererInfo()` 的默认规则是：schema 有 `$$id`，插件有 `name` 和 `rendererName`，并且 `rendererName` 匹配 PrismUI renderer 的 `name` 或 `origin.name`。满足后，它会把插件上的 `regions`、`panelBody`、`wrapperResolve`、`filterProps`、`scaffoldForm` 等能力复制到 `RendererInfo`。
 
 容器区域有两种插入方式：
 
@@ -357,7 +357,7 @@ flowchart LR
 ## 设计约束
 
 - 插件应该通过官方扩展点参与编辑器流程，不要直接修改 store 内部状态或手动操作 DOM 标记。
-- `rendererName` 只表达“这个插件绑定哪类 amis renderer”，不要把它当作分类、场景或业务类型。
+- `rendererName` 只表达“这个插件绑定哪类 PrismUI renderer”，不要把它当作分类、场景或业务类型。
 - `regions` 必须和 schema 子结构对应，区域 key 应该稳定、可读、可被 `addChild()` 写回。
 - 面板修改 schema 应通过 `panelChangeValue()` 或 manager 提供的 schema 操作方法，避免绕过 `before-update` / `after-update`。
 - 全局插件和渲染器插件要分清边界：全局插件负责外壳能力，渲染器插件负责某类组件的编辑能力。

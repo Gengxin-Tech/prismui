@@ -10,7 +10,7 @@ order: 13
 
 ## 使用场景
 
-amis 中有很多场景会用到表达式。
+PrismUI 中有很多场景会用到表达式。
 
 - 模板中变量取值。 如：`my name is ${xxx}`
 - api 地址参数取值 如 `http://mydomain.com/api/xxx?id=${id}`
@@ -53,7 +53,7 @@ amis 中有很多场景会用到表达式。
 
 - 等等
 
-amis 中表达式有两种语法：
+PrismUI 中表达式有两种语法：
 
 - 一种是纯 js 表达式，如 `data.xxx === 1`。
 - 另一种是用 `${` 和 `}` 包裹的表达式。如：`${ xxx === 1}`。
@@ -240,4 +240,4 @@ _特殊字符变量名_
 
 下面是目前所支持函数的使用手册
 
-!!!include(amis-formula/lib/doc.md)!!!
+!!!include(prismui-formula/lib/doc.md)!!!

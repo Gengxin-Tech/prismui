@@ -3,7 +3,7 @@ title: 快速开始
 description:
 ---
 
-amis 有两种使用方法：
+PrismUI 有两种使用方法：
 
 - [JS SDK](#SDK)，可以用在任意页面中
 - [React](#react)，可以用在 React 项目中
@@ -15,7 +15,7 @@ SDK 版本适合对前端或 React 不了解的开发者，它不依赖 npm 及 
 下载方式：
 
 1. github 的 [releases](https://github.com/Gengxin-Tech/prismui/releases)，文件是 sdk.tar.gz。
-1. 使用 `npm i amis` 来下载，在 `node_modules\amis\sdk` 目录里就能找到。
+1. 使用 `npm i prismui-framework@beta` 来下载，在 `node_modules\prismui-framework\sdk` 目录里就能找到。
 
 新建一个 hello.html 文件，内容如下：
 
@@ -24,7 +24,7 @@ SDK 版本适合对前端或 React 不了解的开发者，它不依赖 npm 及 
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <title>amis demo</title>
+    <title>PrismUI demo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta
       name="viewport"
@@ -37,7 +37,7 @@ SDK 版本适合对前端或 React 不了解的开发者，它不依赖 npm 及 
     <!-- 这是默认主题所需的，如果是其他主题则不需要 -->
     <!-- 从 1.1.0 开始 sdk.css 将不支持 IE11；如果要支持 IE11，只能使用静态 CSS 降级文件，并把前面的 sdk.css 删掉 -->
     <!-- <link rel="stylesheet" href="sdk-ie11.css" /> -->
-    <!-- 不过 amis 开发团队几乎没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
+    <!-- 不过当前项目几乎没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
     <style>
       html,
       body,
@@ -93,7 +93,7 @@ jssdk 版本默认使用 `sdk.css`（cxd 主题）。如果要使用其它主题
 amis.embed(
   '#root',
   {
-    // amis schema
+    // PrismUI schema
   },
   {
     // 这里是初始 props
@@ -109,7 +109,7 @@ amis.embed(
 
 ### 初始值
 
-可以通过 props 里的 data 属性来赋予 amis 顶层数据域的值，类似下面的例子。
+可以通过 props 里的 data 属性来赋予 PrismUI 顶层数据域的值，类似下面的例子。
 
 > 3.1.0 开始可以传入 context 数据，无论哪层都可以使用到这个里面的数据。适合用来传递一些平台数据。
 
@@ -124,7 +124,7 @@ let amisJSON = {
 };
 let amisScoped = amis.embed('#root', amisJSON, {
   data: {
-    myData: 'amis'
+    myData: 'PrismUI'
   },
   context: {
     amisUser: {
@@ -135,9 +135,9 @@ let amisScoped = amis.embed('#root', amisJSON, {
 });
 ```
 
-### 控制 amis 的行为
+### 控制 PrismUI 的行为
 
-`amis.embed` 函数还支持以下配置项来控制 amis 的行为，比如在 fetcher 的时候加入自己的处理逻辑，这些函数参数的说明在后面 React 中也有介绍。
+`amis.embed` 函数还支持以下配置项来控制 PrismUI 的行为，比如在 fetcher 的时候加入自己的处理逻辑，这些函数参数的说明在后面 React 中也有介绍。
 
 ```js
 let amisScoped = amis.embed(
@@ -152,7 +152,7 @@ let amisScoped = amis.embed(
     // 在 sdk 中可以不传，用来实现 ajax 请求，但在 npm 中这是必须提供的
     // fetcher: (url, method, data, config) => {},
     // 全局 api 请求适配器
-    // 另外在 amis 配置项中的 api 也可以配置适配器，针对某个特定接口单独处理。
+    // 另外在 PrismUI 配置项中的 api 也可以配置适配器，针对某个特定接口单独处理。
     //
     // requestAdaptor(api) {
     //   // 支持异步，可以通过 api.mockResponse 来设置返回结果，跳过真正的请求发送
@@ -162,12 +162,12 @@ let amisScoped = amis.embed(
     // }
     //
     // 全局 api 适配器。
-    // 另外在 amis 配置项中的 api 也可以配置适配器，针对某个特定接口单独处理。
+    // 另外在 PrismUI 配置项中的 api 也可以配置适配器，针对某个特定接口单独处理。
     // responseAdaptor(api, payload, query, request, response) {
     //   return payload;
     // }
     //
-    // 用来接管页面跳转，比如用 location.href 或 window.open，或者自己实现 amis 配置更新
+    // 用来接管页面跳转，比如用 location.href 或 window.open，或者自己实现 PrismUI 配置更新
     // jumpTo: to => { location.href = to; },
     //
     // 用来实现地址栏更新
@@ -204,7 +204,7 @@ let amisScoped = amis.embed(
 );
 ```
 
-同时返回的 `amisScoped` 对象可以获取到 amis 渲染的内部信息，它有如下方法：
+同时返回的 `amisScoped` 对象可以获取到 PrismUI 渲染的内部信息，它有如下方法：
 
 `getComponentByName(name)` 用于获取渲染出来的组件，比如下面的示例
 
@@ -231,9 +231,9 @@ let amisScoped = amis.embed(
 
 还可以通过 `amisScoped.getComponentByName('page1.form1').setValues({'name1': 'othername'})` 来修改表单中的值。
 
-### 调用 amis 动作
+### 调用 PrismUI 动作
 
-可以通过`amisScoped.doAction(actions, ctx)`来调用 amis 中的通用动作和目标组件的动作。了解事件动作机制可以查看[事件动作](../../docs/concepts/event-action)。参数说明如下：
+可以通过 `amisScoped.doAction(actions, ctx)` 来调用 PrismUI 中的通用动作和目标组件的动作。了解事件动作机制可以查看[事件动作](../../docs/concepts/event-action)。参数说明如下：
 
 - `actions`：动作列表，支持执行单个或多个动作
 - `ctx`：上下文，它可以为动作配置补充上下文数据，例如下面`toast`动作中`msg`配置中的`${myName}`就来自于补充上下文`ctx`
@@ -279,14 +279,14 @@ amisScoped.doAction(
     }
   ],
   {
-    myName: 'amis'
+    myName: 'PrismUI'
   }
 );
 ```
 
 ### 更新属性
 
-可以通过 amisScoped 对象的 updateProps 方法来更新下发到 amis 的属性。
+可以通过 amisScoped 对象的 updateProps 方法来更新下发到 PrismUI 的属性。
 
 ```ts
 amisScoped.updateProps(
@@ -326,7 +326,7 @@ function handleChange() {
 
 ### 多页模式
 
-默认 amis 渲染是单页模式，如果想实现多页应用，请使用 [app 渲染器](../../components/app)。
+默认 PrismUI 渲染是单页模式，如果想实现多页应用，请使用 [app 渲染器](../../components/app)。
 
 ### Hash 路由
 
@@ -344,11 +344,11 @@ amisScoped.unmount();
 
 ## vue
 
-可以基于 SDK 版本封装成 component 供 vue 使用，具体请参考示例：https://github.com/aisuda/vue2-amis-demo
+可以基于 SDK 版本封装成 component 供 Vue 使用；历史 amis 示例仍可作为封装思路参考：https://github.com/aisuda/vue2-amis-demo
 
 ## react
 
-初始项目请参考 <https://github.com/aisuda/amis-react-starter>。
+React 初始项目可以按本文示例自行搭建；历史 amis starter 仍可作为 webpack 结构参考：<https://github.com/aisuda/amis-react-starter>。
 
 如果在已有项目中，React 版本需要是 `>=18.0.0`，mobx 需要 `^4.5.0`。
 
@@ -357,7 +357,7 @@ amisScoped.unmount();
 ### 安装
 
 ```
-npm i amis
+npm i prismui-framework@beta prismui-ui@beta
 ```
 
 ### webpack 配置参考
@@ -435,28 +435,28 @@ module.exports = {
 html 中引入：
 
 ```html
-<link href="./node_modules/amis/lib/themes/cxd.css" />
-<link href="./node_modules/amis/lib/helper.css" />
-<link href="./node_modules/amis/sdk/iconfont.css" />
-<!-- 或 <link href="./node_modules/amis/lib/themes/antd.css" /> -->
+<link href="./node_modules/prismui-framework/lib/themes/cxd.css" />
+<link href="./node_modules/prismui-framework/lib/helper.css" />
+<link href="./node_modules/prismui-framework/sdk/iconfont.css" />
+<!-- 或 <link href="./node_modules/prismui-framework/lib/themes/antd.css" /> -->
 ```
 
 js 中引入：
 
 ```js
-import 'amis/lib/themes/cxd.css';
-import 'amis/lib/helper.css';
-import 'amis/sdk/iconfont.css';
-// 或 import 'amis/lib/themes/antd.css';
+import 'prismui-framework/lib/themes/cxd.css';
+import 'prismui-framework/lib/helper.css';
+import 'prismui-framework/sdk/iconfont.css';
+// 或 import 'prismui-framework/lib/themes/antd.css';
 ```
 
 > 上面只是示例，请根据自己的项目结构调整引用路径。
-> 如果要支持 IE11，只能引入对应的静态 CSS 降级文件，例如 `amis/lib/themes/cxd-ie11.css`；IE11 不支持基于 CSS 变量的动态 token 主题切换。
+> 如果要支持 IE11，只能引入对应的静态 CSS 降级文件，例如 `prismui-framework/lib/themes/cxd-ie11.css`；IE11 不支持基于 CSS 变量的动态 token 主题切换。
 
 2. 渲染器使用配置主题
 
 ```js
-renderAmis(
+renderPrismUI(
   {
     type: 'page',
     title: '简单页面',
@@ -491,8 +491,8 @@ import * as React from 'react';
 import axios from 'axios';
 import copy from 'copy-to-clipboard';
 
-import {render as renderAmis} from 'amis';
-import {ToastComponent, AlertComponent, alert, confirm, toast} from 'amis-ui';
+import {render as renderPrismUI} from 'prismui-framework';
+import {ToastComponent, AlertComponent, alert, confirm, toast} from 'prismui-ui';
 
 class MyComponent extends React.Component<any, any> {
   render() {
@@ -503,7 +503,7 @@ class MyComponent extends React.Component<any, any> {
     // 请勿使用 React.StrictMode，目前还不支持
     return (
       <div>
-        <p>通过 amis 渲染页面</p>
+        <p>通过 PrismUI 渲染页面</p>
         <ToastComponent
           theme={theme}
           key="toast"
@@ -511,9 +511,9 @@ class MyComponent extends React.Component<any, any> {
           locale={locale}
         />
         <AlertComponent theme={theme} key="alert" locale={locale} />
-        {renderAmis(
+        {renderPrismUI(
           {
-            // 这里是 amis 的 Json 配置。
+            // 这里是 PrismUI 的 JSON 配置。
             type: 'page',
             title: '简单页面',
             body: '内容'
@@ -636,9 +636,9 @@ render 有三个参数，后面会详细说明这三个参数内的属性
 
 ```jsx
 () =>
-  renderAmis(schema, {
+  renderPrismUI(schema, {
     data: {
-      username: 'amis'
+      username: 'PrismUI'
     }
   });
 ```
@@ -647,14 +647,14 @@ render 有三个参数，后面会详细说明这三个参数内的属性
 
 ```jsx
 () =>
-  renderAmis(
+  renderPrismUI(
     {
       //其它配置
       detectField: 'somekey'
     },
     {
       somekey: {
-        username: 'amis'
+        username: 'PrismUI'
       }
     }
   );
@@ -662,7 +662,7 @@ render 有三个参数，后面会详细说明这三个参数内的属性
 
 ### env
 
-环境变量，可以理解为这个渲染器工具的配置项，需要使用 amis 用户实现部分接口。他有下面若干参数：
+环境变量，可以理解为这个渲染器工具的配置项，需要 PrismUI 使用者实现部分接口。它有下面若干参数：
 
 #### fetcher（必须实现）
 

@@ -8,13 +8,13 @@ icon:
 order: 10
 ---
 
-本文面向需要理解 amis runtime 渲染机制、开发自定义渲染器、排查 schema 渲染问题的开发者，说明渲染器的核心概念、静态架构、注册与匹配机制，以及 schema 如何通过递归渲染形成最终 React 组件树。
+本文面向需要理解 PrismUI runtime 渲染机制、开发自定义渲染器、排查 schema 渲染问题的开发者，说明渲染器的核心概念、静态架构、注册与匹配机制，以及 schema 如何通过递归渲染形成最终 React 组件树。
 
-如果还不了解 amis 配置和组件树，请先阅读[配置与组件](./schema)。如果要理解可视化编辑器如何在渲染器之上增加编辑态能力，请阅读[编辑器架构](../../editor/editor-architecture)。
+如果还不了解 PrismUI 配置和组件树，请先阅读[配置与组件](./schema)。如果要理解可视化编辑器如何在渲染器之上增加编辑态能力，请阅读[编辑器架构](../extend/editor-architecture)。
 
 ## 核心心智模型
 
-amis 的渲染器机制把 JSON schema 转换成 React 组件树。schema 里的 `type` 不是 React 组件本身，而是一个渲染器查找 key；runtime 会根据 `type` 或路径匹配到 `RendererConfig`，再由 `SchemaRenderer` 把 schema、数据域、环境能力和递归 `render` 方法一起下发给真实组件。
+PrismUI 的渲染器机制把 JSON schema 转换成 React 组件树。schema 里的 `type` 不是 React 组件本身，而是一个渲染器查找 key；runtime 会根据 `type` 或路径匹配到 `RendererConfig`，再由 `SchemaRenderer` 把 schema、数据域、环境能力和递归 `render` 方法一起下发给真实组件。
 
 ```mermaid
 flowchart TD
@@ -42,22 +42,22 @@ flowchart TD
 | schema               | 描述页面或组件的 JSON 配置，通常包含 `type` 和其他属性                                  | `docs/zh-CN/concepts/schema.md`               |
 | schema 节点          | schema 树上的一个节点，可以是对象、数组、字符串、数字或 React element                   | `SchemaNode`                                  |
 | renderer / 渲染器    | 接收 schema props 并输出 React UI 的组件实现                                            | `packages/amis/src/renderers/`                |
-| `RendererConfig`     | 渲染器注册信息，包含 `type`、`test`、`name`、`component`、`storeType`、`alias` 等       | `amis-core/src/factory.tsx`                   |
-| `RendererProps`      | 下发给真实 renderer 的运行时 props，包含 `render`、`env`、`data`、`$path`、`$schema` 等 | `amis-core/src/factory.tsx`                   |
-| `@Renderer()`        | 注册渲染器的装饰器，内部调用 `registerRenderer()`                                       | `amis-core/src/factory.tsx`                   |
-| `registerRenderer()` | 把 renderer 加入全局 registry，建立 type 到 renderer 的映射                             | `amis-core/src/factory.tsx`                   |
-| `resolveRenderer()`  | 根据 schema 的 `type` 或路径查找命中的 `RendererConfig`                                 | `amis-core/src/factory.tsx`                   |
-| `SchemaRenderer`     | 通用 schema 节点渲染器，负责把 schema 节点适配成真实 renderer props                     | `amis-core/src/SchemaRenderer.tsx`            |
-| `Root`               | 根渲染容器，提供主题、语言、root store、定义解析和根级 wrapper                          | `amis-core/src/Root.tsx`                      |
-| `RootRenderer`       | 根页面运行时，维护页面数据、弹窗、抽屉、动作、错误和 loading                            | `amis-core/src/RootRenderer.tsx`              |
-| `RendererStore`      | 一次渲染会话的 root store，按 `options.session` 缓存                                    | `amis-core/src/store/`                        |
-| `env`                | 运行时环境能力，如 fetcher、notify、jumpTo、rendererResolver、loadRenderer              | `amis-core/src/env.tsx`                       |
+| `RendererConfig`     | 渲染器注册信息，包含 `type`、`test`、`name`、`component`、`storeType`、`alias` 等       | `packages/amis-core/src/factory.tsx`          |
+| `RendererProps`      | 下发给真实 renderer 的运行时 props，包含 `render`、`env`、`data`、`$path`、`$schema` 等 | `packages/amis-core/src/factory.tsx`          |
+| `@Renderer()`        | 注册渲染器的装饰器，内部调用 `registerRenderer()`                                       | `packages/amis-core/src/factory.tsx`          |
+| `registerRenderer()` | 把 renderer 加入全局 registry，建立 type 到 renderer 的映射                             | `packages/amis-core/src/factory.tsx`          |
+| `resolveRenderer()`  | 根据 schema 的 `type` 或路径查找命中的 `RendererConfig`                                 | `packages/amis-core/src/factory.tsx`          |
+| `SchemaRenderer`     | 通用 schema 节点渲染器，负责把 schema 节点适配成真实 renderer props                     | `packages/amis-core/src/SchemaRenderer.tsx`   |
+| `Root`               | 根渲染容器，提供主题、语言、root store、定义解析和根级 wrapper                          | `packages/amis-core/src/Root.tsx`             |
+| `RootRenderer`       | 根页面运行时，维护页面数据、弹窗、抽屉、动作、错误和 loading                            | `packages/amis-core/src/RootRenderer.tsx`     |
+| `RendererStore`      | 一次渲染会话的 root store，按 `options.session` 缓存                                    | `packages/amis-core/src/store/`               |
+| `env`                | 运行时环境能力，如 fetcher、notify、jumpTo、rendererResolver、loadRenderer              | `packages/amis-core/src/env.tsx`              |
 | region               | 子 schema 的逻辑区域名，如 `body`、`toolbar`、`actions`、`columns`                      | renderer 调用 `render(region, schema)` 时传入 |
 | `$path`              | 当前节点在渲染树中的路径，用于 renderer 匹配、调试和递归定位                            | `renderChild()` 生成                          |
 
 ## 静态架构
 
-amis runtime 的静态结构可以分成注册层、会话层、适配层和组件层。
+PrismUI runtime 的静态结构可以分成注册层、会话层、适配层和组件层。
 
 ```mermaid
 flowchart TB
@@ -293,7 +293,7 @@ flowchart LR
 
 ## 数据域、Store 和 Scoped
 
-amis 的渲染过程不只是组件树递归，还包含数据域和组件作用域。
+PrismUI 的渲染过程不只是组件树递归，还包含数据域和组件作用域。
 
 ```mermaid
 flowchart TB
