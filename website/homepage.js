@@ -596,7 +596,7 @@
       return;
     }
 
-    const runtime = window.amisRequire('amis/embed');
+    const runtime = window.prismuiRequire('prismui/embed');
     const overlayRoot = document.querySelector('#schemaOverlayRoot');
     const env = {
       getModalContainer: () => overlayRoot,

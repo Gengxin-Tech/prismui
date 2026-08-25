@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="data:," />
+  <link rel="icon" type="image/svg+xml" href="/prismui-icon.svg" />
   <title>PrismUI - 面向企业应用的 UI Schema 驱动系统</title>
   <meta name="description" content="PrismUI 用 UI Schema、组件和可视化编辑能力构建可持续演进的企业应用。" />
   <link rel="stylesheet" href="/sdk/sdk.css" />
@@ -504,7 +504,7 @@
 &lt;<span class="key">script</span> src=<span class="str">"/sdk/sdk.js"</span>&gt;&lt;/<span class="key">script</span>&gt;
 
 &lt;<span class="key">script</span>&gt;
-  <span class="key">const</span> prism = amisRequire(<span class="str">'amis/embed'</span>);
+  <span class="key">const</span> prism = prismuiRequire(<span class="str">'prismui/embed'</span>);
   <span class="key">const</span> uiSchema = {
     type: <span class="str">'page'</span>,
     title: <span class="str">'客户管理'</span>,
@@ -527,9 +527,9 @@
             <pre><span class="comment">// main.tsx</span>
 <span class="key">import</span> <span class="str">'prismui-framework/lib/themes/cxd.css'</span>;
 <span class="key">import</span> <span class="str">'prismui-framework/lib/helper.css'</span>;
-<span class="key">import</span> <span class="str">'amis/sdk/iconfont.css'</span>;
-<span class="key">import</span> {render <span class="key">as</span> renderUI} <span class="key">from</span> <span class="str">'amis'</span>;
-<span class="key">import</span> {ToastComponent, AlertComponent} <span class="key">from</span> <span class="str">'amis-ui'</span>;
+<span class="key">import</span> <span class="str">'prismui-framework/sdk/iconfont.css'</span>;
+<span class="key">import</span> {render <span class="key">as</span> renderUI} <span class="key">from</span> <span class="str">'prismui-framework'</span>;
+<span class="key">import</span> {ToastComponent, AlertComponent} <span class="key">from</span> <span class="str">'prismui-ui'</span>;
 
 <span class="key">const</span> env = {
   fetcher,
