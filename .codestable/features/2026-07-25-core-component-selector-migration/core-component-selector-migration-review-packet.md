@@ -27418,8 +27418,8 @@ index 9df8ea02c..5d5df596f 100644
 +  getStableClassName,
 +  getStableClassSelector,
    themeable
- } from 'amis-core';
- import type {ThemeScope} from 'amis-core';
+ } from 'prismui\-core';
+ import type {ThemeScope} from 'prismui\-core';
 @@ -172,7 +173,7 @@ export class Drawer extends React.Component<DrawerProps, DrawerState> {
        applyThemeScope(ref as HTMLElement, this.portalThemeScope);
        addModal(this);
@@ -29149,7 +29149,7 @@ index 7e6f4d666..f0744ec98 100644
  import '../../src';
  import {clearStoresCache, render as amisRender} from '../../src';
  import {makeEnv as makeEnvRaw, replaceReactAriaIds, wait} from '../helper';
-+import {Drawer, Modal} from 'amis-ui';
++import {Drawer, Modal} from 'prismui\-ui';
  import rows from '../mockData/rows';
  import type {RenderOptions} from '../../src';
 
@@ -53082,9 +53082,9 @@ index 6bfe32323..a06dd78fe 100644
 -  RendererEvent
 +  RendererEvent,
 +  getStableClassSelector
- } from 'amis-core';
- import {Renderer, RendererProps} from 'amis-core';
- import {SchemaNode, Schema, ActionObject} from 'amis-core';
+ } from 'prismui\-core';
+ import {Renderer, RendererProps} from 'prismui\-core';
+ import {SchemaNode, Schema, ActionObject} from 'prismui\-core';
 @@ -387,7 +388,7 @@ export default class Dialog extends React.Component<DialogProps> {
    @autobind
    getPopOverContainer() {
@@ -53105,9 +53105,9 @@ index 38d488acf..5e8ca71f5 100644
 -  AMISButtonSchema
 +  AMISButtonSchema,
 +  getStableClassSelector
- } from 'amis-core';
- import {Renderer, RendererProps} from 'amis-core';
- import {SchemaNode, Schema, ActionObject} from 'amis-core';
+ } from 'prismui\-core';
+ import {Renderer, RendererProps} from 'prismui\-core';
+ import {SchemaNode, Schema, ActionObject} from 'prismui\-core';
 @@ -360,7 +361,7 @@ export default class Drawer extends React.Component<DrawerProps> {
    @autobind
    getPopOverContainer() {
@@ -53128,9 +53128,9 @@ index df0a9c351..c0a0d5fb9 100644
 -  AMISFormItemWithOptions
 +  AMISFormItemWithOptions,
 +  getStableClassName
- } from 'amis-core';
- import {Select, Spinner} from 'amis-ui';
- import {Api, ApiObject} from 'amis-core';
+ } from 'prismui\-core';
+ import {Select, Spinner} from 'prismui\-ui';
+ import {Api, ApiObject} from 'prismui\-core';
 @@ -289,7 +290,6 @@ export default class ChainedSelectControl extends React.Component<
        options = [],
        labelField,
@@ -53210,8 +53210,8 @@ index e80443069..cf532bdf2 100644
 -  AMISSpinnerConfig
 +  AMISSpinnerConfig,
 +  getStableClassName
- } from 'amis-core';
- import {TransferDropDown, Spinner, Select, SpinnerExtraProps} from 'amis-ui';
+ } from 'prismui\-core';
+ import {TransferDropDown, Spinner, Select, SpinnerExtraProps} from 'prismui\-ui';
  import {FormOptionsSchema, SchemaApi} from '../../Schema';
 @@ -541,7 +542,6 @@ export default class SelectControl extends React.Component<SelectProps, any> {
        multiple,
@@ -53266,7 +53266,7 @@ index 07738d47e..5fbcc8f72 100644
 +++ b/packages/amis/src/renderers/Table/VirtualTableBody.tsx
 @@ -1,5 +1,12 @@
  import React, {startTransition} from 'react';
--import {ITableStore, localeable, themeable, ThemeProps} from 'amis-core';
+-import {ITableStore, localeable, themeable, ThemeProps} from 'prismui\-core';
 +import {
 +  getStableClassName,
 +  getStableClassSelector,
@@ -53274,10 +53274,10 @@ index 07738d47e..5fbcc8f72 100644
 +  localeable,
 +  themeable,
 +  ThemeProps
-+} from 'amis-core';
- import {getScrollParent} from 'amis-core';
- import {resizeSensor} from 'amis-core';
- import type {IRow} from 'amis-core/lib/store/table';
++} from 'prismui\-core';
+ import {getScrollParent} from 'prismui\-core';
+ import {resizeSensor} from 'prismui\-core';
+ import type {IRow} from 'prismui\-core/lib/store/table';
 @@ -10,7 +17,7 @@ export interface VirtualTableBodyProps extends ThemeProps {
  }
 

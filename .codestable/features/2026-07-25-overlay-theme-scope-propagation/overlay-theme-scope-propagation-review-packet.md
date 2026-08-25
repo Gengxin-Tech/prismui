@@ -1664,15 +1664,15 @@ index 9566b1b02..8247050ad 100644
  import {Icon} from './icons';
  import cx from 'classnames';
  import {current, addModal, removeModal} from './ModalManager';
--import {ClassNamesFn, themeable} from 'amis-core';
+-import {ClassNamesFn, themeable} from 'prismui\-core';
 +import {
 +  applyThemeScope,
 +  ClassNamesFn,
 +  getThemeScope,
 +  themeable
-+} from 'amis-core';
-+import type {ThemeScope} from 'amis-core';
- import {noop, autobind, getScrollbarWidth} from 'amis-core';
++} from 'prismui\-core';
++import type {ThemeScope} from 'prismui\-core';
+ import {noop, autobind, getScrollbarWidth} from 'prismui\-core';
 -import {getContainerWithFullscreen} from './Modal';
 +import {
 +  getScopedContainerWithFullscreen
@@ -1729,7 +1729,7 @@ index 77cd876f7..347541340 100644
  } from 'react-transition-group/Transition';
  import Portal from 'react-overlays/Portal';
  import {current, addModal, removeModal} from './ModalManager';
--import {ClassNamesFn, themeable, ThemeProps} from 'amis-core';
+-import {ClassNamesFn, themeable, ThemeProps} from 'prismui\-core';
 +import {
 +  applyThemeScope,
 +  ClassNamesFn,
@@ -1737,11 +1737,11 @@ index 77cd876f7..347541340 100644
 +  resolveOverlayContainer,
 +  themeable,
 +  ThemeProps
-+} from 'amis-core';
-+import type {ThemeScope} from 'amis-core';
++} from 'prismui\-core';
++import type {ThemeScope} from 'prismui\-core';
  import {Icon} from './icons';
- import {LocaleProps, localeable} from 'amis-core';
- import {autobind, getScrollbarWidth} from 'amis-core';
+ import {LocaleProps, localeable} from 'prismui\-core';
+ import {autobind, getScrollbarWidth} from 'prismui\-core';
 @@ -42,6 +50,31 @@ export const getContainerWithFullscreen =
      return envContainer || null;
    };

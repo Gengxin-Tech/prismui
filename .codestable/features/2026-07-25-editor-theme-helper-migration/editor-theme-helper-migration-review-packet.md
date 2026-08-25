@@ -1097,7 +1097,7 @@ index 96d13ffdd..313edbbec 100644
 +++ b/packages/amis-editor-core/src/component/IFramePreview.tsx
 @@ -12,6 +12,12 @@ import {
    resizeSensor
- } from 'amis';
+ } from 'prismui';
  import {isAlive} from 'mobx-state-tree';
 +import {
 +  applyEditorThemeScope,
@@ -1165,7 +1165,7 @@ index a9f478027..81ba37b33 100644
 --- a/packages/amis-editor-core/src/component/Panel/RightPanels.tsx
 +++ b/packages/amis-editor-core/src/component/Panel/RightPanels.tsx
 @@ -9,6 +9,7 @@ import {autobind, isHasPluginIcon} from '../../util';
- import {findDomCompat as findDOMNode} from 'amis-core';
+ import {findDomCompat as findDOMNode} from 'prismui\-core';
  import {PanelItem} from '../../plugin';
  import {WidthDraggableBtn} from '../base/WidthDraggableBtn';
 +import {getEditorThemeScopeProps} from '../../themeScope';
@@ -1185,7 +1185,7 @@ index decde3ab3..f39f3dde7 100644
 --- a/packages/amis-editor-core/src/component/Preview.tsx
 +++ b/packages/amis-editor-core/src/component/Preview.tsx
 @@ -25,6 +25,10 @@ import {reaction} from 'mobx';
- import type {RendererConfig} from 'amis-core';
+ import type {RendererConfig} from 'prismui\-core';
  import IFramePreview from './IFramePreview';
  import {SchemaRenderer} from './SchemaRenderer';
 +import {
@@ -1224,7 +1224,7 @@ index 7ef7b166c..9070888b3 100644
 --- a/packages/amis-editor-core/src/component/ScaffoldModal.tsx
 +++ b/packages/amis-editor-core/src/component/ScaffoldModal.tsx
 @@ -4,6 +4,7 @@ import {EditorStoreType} from '../store/editor';
- import {render, Modal, getTheme, Icon, Spinner, Button} from 'amis';
+ import {render, Modal, getTheme, Icon, Spinner, Button} from 'prismui';
  import {observer} from 'mobx-react';
  import {autobind, isObject} from '../util';
 +import {getEditorThemeScopeProps} from '../themeScope';
@@ -2189,7 +2189,7 @@ import {
   applyThemeScope,
   ThemeScope,
   ThemeScopeProps
-} from 'amis-core';
+} from 'prismui\-core';
 
 export function resolveEditorThemeName(
   theme?: any,
