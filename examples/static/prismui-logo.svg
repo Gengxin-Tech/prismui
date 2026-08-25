@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214 68" role="img" aria-label="PrismUI">
   <g transform="translate(32 34) rotate(45) translate(-32 -34)" fill="none" stroke-linejoin="round">
-    <rect x="18.5" y="20.5" width="23" height="23" rx="3" stroke="#4f7cff" stroke-width="5"/>
-    <rect x="28.5" y="30.5" width="23" height="23" rx="3" stroke="#a8bfff" stroke-width="5"/>
+    <rect x="18.5" y="20.5" width="23" height="23" rx="3" stroke="#2f6bff" stroke-width="5"/>
+    <rect x="28.5" y="30.5" width="23" height="23" rx="3" stroke="#9db7ff" stroke-width="5"/>
   </g>
-  <text x="75" y="43" fill="#172033" font-family="Avenir Next, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="760">PrismUI</text>
+  <text x="75" y="43" fill="#2f6bff" font-family="Avenir Next, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="760">PrismUI</text>
 </svg>
