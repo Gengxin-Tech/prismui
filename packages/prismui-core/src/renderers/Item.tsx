@@ -659,6 +659,10 @@ const getItemInputClassName = (props: FormItemProps) => {
     : inputClassName;
 };
 
+function isFormItemAlive(model: FormItemProps['formItem']) {
+  return !!model && isAlive(model);
+}
+
 export class FormItemWrap extends React.Component<FormItemProps> {
   lastSearchTerm: any;
   rootRef = React.createRef<HTMLElement>();
@@ -677,11 +681,16 @@ export class FormItemWrap extends React.Component<FormItemProps> {
 
     this.toDispose.push(
       reaction(
-        () =>
-          `${model.errors.join('')}${model.isFocused}${
+        () => {
+          if (!isFormItemAlive(model)) {
+            return '';
+          }
+
+          return `${model.errors.join('')}${model.isFocused}${
             model.dialogOpen
-          }${JSON.stringify(model.filteredOptions)}${model.popOverOpen}`,
-        () => this.forceUpdate()
+          }${JSON.stringify(model.filteredOptions)}${model.popOverOpen}`;
+        },
+        () => this.mounted && this.forceUpdate()
       )
     );
 
@@ -704,16 +713,23 @@ export class FormItemWrap extends React.Component<FormItemProps> {
 
       this.toDispose.push(
         reaction(
-          () => JSON.stringify(model.tmpValue),
-          () => this.mounted && this.handleAutoFill('change')
+          () => (isFormItemAlive(model) ? JSON.stringify(model.tmpValue) : ''),
+          () =>
+            this.mounted &&
+            isFormItemAlive(model) &&
+            this.handleAutoFill('change')
         )
       );
 
       this.toDispose.push(
         reaction(
-          () => JSON.stringify(model.getSelectedOptions(model.tmpValue)),
+          () =>
+            isFormItemAlive(model)
+              ? JSON.stringify(model.getSelectedOptions(model.tmpValue))
+              : '',
           () =>
             this.mounted &&
+            isFormItemAlive(model) &&
             this.initedOptionFilled &&
             this.syncOptionAutoFill(model.getSelectedOptions(model.tmpValue))
         )
@@ -736,6 +752,7 @@ export class FormItemWrap extends React.Component<FormItemProps> {
 
     if (
       model &&
+      isFormItemAlive(model) &&
       isEffectiveApi(props.autoFill?.api, props.data) &&
       isApiOutdated(
         prevProps.autoFill?.api,

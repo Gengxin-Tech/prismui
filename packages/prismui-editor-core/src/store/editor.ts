@@ -1137,6 +1137,10 @@ export const MainStore = types
 
     return {
       markReady() {
+        if (!isAlive(self)) {
+          return;
+        }
+
         self.ready = true;
       },
       setLayer(value: any) {
@@ -2208,6 +2212,10 @@ export const MainStore = types
       },
 
       activeHighlightNodes(ids: Array<string>) {
+        if (!isAlive(self)) {
+          return;
+        }
+
         ids.forEach(id => {
           const node = self.getNodeById(id);
           const target = node?.getTarget();
@@ -2224,6 +2232,10 @@ export const MainStore = types
       },
 
       deActiveHighlightNodes(ids: Array<string>) {
+        if (!isAlive(self)) {
+          return;
+        }
+
         ids.forEach(id => {
           const node = self.getNodeById(id);
           const target = node?.getTarget();
@@ -2236,9 +2248,12 @@ export const MainStore = types
         });
       },
 
-      calculateHighlightBox(
-        ids: Array<string> = self.highlightNodes.map(item => item.id)
-      ) {
+      calculateHighlightBox(ids?: Array<string>) {
+        if (!isAlive(self)) {
+          return;
+        }
+
+        ids = ids ?? self.highlightNodes.map(item => item.id);
         self.calculateStarted = true;
         ids.forEach(id => {
           const node = self.getNodeById(id);
@@ -2247,6 +2262,10 @@ export const MainStore = types
       },
 
       resetHighlightBox(ids: Array<string>) {
+        if (!isAlive(self)) {
+          return;
+        }
+
         ids.forEach(id => {
           const node = self.getNodeById(id);
           node?.resetHighlightBox(self);

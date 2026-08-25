@@ -22,7 +22,9 @@ export interface VRendererProps extends RendererInfo {
 export class VRenderer extends React.Component<VRendererProps> {
   static contextType = EditorNodeContext;
   editorNode: EditorNodeType;
+  parentNode: EditorNodeType;
   rootDom: HTMLElement | null = null;
+  unmountCleanupTimer?: ReturnType<typeof setTimeout>;
 
   setRootRef = (ref: HTMLElement | null) => {
     this.rootDom = ref;
@@ -30,8 +32,8 @@ export class VRenderer extends React.Component<VRendererProps> {
 
   UNSAFE_componentWillMount() {
     const {data, path, widthMutable, ...info} = this.props;
-    const parent = resolveEditorNodeFacade(this.context as any)!;
-    this.editorNode = parent.addChild({
+    this.parentNode = resolveEditorNodeFacade(this.context as any)!;
+    this.editorNode = this.parentNode.addChild({
       id: info.id,
       type: info.type,
       label: info.name,
@@ -45,18 +47,45 @@ export class VRenderer extends React.Component<VRendererProps> {
   }
 
   componentDidMount() {
-    this.markDom(this.editorNode.id);
+    this.cancelUnmountCleanup();
+
+    if (this.editorNode && isAlive(this.editorNode)) {
+      this.markDom(this.editorNode.id);
+    }
   }
 
   componentDidUpdate() {
-    this.markDom(this.editorNode.id);
+    if (this.editorNode && isAlive(this.editorNode)) {
+      this.markDom(this.editorNode.id);
+    }
   }
 
   componentWillUnmount() {
-    if (this.editorNode && isAlive(this.editorNode)) {
-      const parent = resolveEditorNodeFacade(this.context as any)!;
-      parent.removeChild(this.editorNode);
+    this.scheduleUnmountCleanup();
+  }
+
+  cancelUnmountCleanup() {
+    if (this.unmountCleanupTimer) {
+      clearTimeout(this.unmountCleanupTimer);
+      this.unmountCleanupTimer = undefined;
     }
+  }
+
+  scheduleUnmountCleanup() {
+    this.cancelUnmountCleanup();
+
+    this.unmountCleanupTimer = setTimeout(() => {
+      this.unmountCleanupTimer = undefined;
+
+      if (
+        this.editorNode &&
+        isAlive(this.editorNode) &&
+        this.parentNode &&
+        isAlive(this.parentNode)
+      ) {
+        this.parentNode.removeChild(this.editorNode);
+      }
+    }, 0);
   }
 
   /**
@@ -66,6 +95,10 @@ export class VRenderer extends React.Component<VRendererProps> {
     const root = this.rootDom;
 
     if (!root) {
+      return;
+    }
+
+    if (!this.editorNode || !isAlive(this.editorNode)) {
       return;
     }
 

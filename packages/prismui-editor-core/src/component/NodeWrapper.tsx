@@ -33,7 +33,9 @@ export class NodeWrapper extends React.Component<NodeWrapperProps> {
     const node = getAliveEditorNode(this.props);
     node &&
       requestAnimationFrame(() => {
-        () => isAlive(node) && node.calculateHighlightBox();
+        if (isAlive(node)) {
+          node.calculateHighlightBox();
+        }
       });
   }
 

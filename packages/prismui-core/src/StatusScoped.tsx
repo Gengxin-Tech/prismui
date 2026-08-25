@@ -2,7 +2,7 @@
 import React from 'react';
 import hoistNonReactStatic from 'hoist-non-react-statics';
 import {IStatusStore, StatusStore} from './store/status';
-import {destroy} from 'mobx-state-tree';
+import {destroy, isAlive} from 'mobx-state-tree';
 
 export interface StatusScopedProps {
   statusStore: IStatusStore;
@@ -14,11 +14,26 @@ export interface StatusScopedWrapperProps {
 
 export function StatusScopedWrapper({children}: StatusScopedWrapperProps) {
   const store = React.useMemo(() => StatusStore.create({}), []);
+  const storeRemovalTimer = React.useRef<
+    ReturnType<typeof setTimeout> | undefined
+  >(undefined);
+
   React.useEffect(() => {
+    if (storeRemovalTimer.current) {
+      clearTimeout(storeRemovalTimer.current);
+      storeRemovalTimer.current = undefined;
+    }
+
     return () => {
-      destroy(store);
+      storeRemovalTimer.current = setTimeout(() => {
+        storeRemovalTimer.current = undefined;
+
+        if (isAlive(store)) {
+          destroy(store);
+        }
+      }, 0);
     };
-  }, []);
+  }, [store]);
 
   return children({statusStore: store});
 }

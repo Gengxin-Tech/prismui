@@ -1,9 +1,10 @@
 import {
+  clearStoresCache,
   registerRenderer,
   unRegisterRenderer,
   RendererProps
 } from '../src/factory';
-import {render as amisRender} from '../src';
+import {render as amisRender, hasAsyncRenderers as exportedHasAsyncRenderers} from '../src';
 import React from 'react';
 import {render, fireEvent, waitFor} from '@testing-library/react';
 import {makeEnv} from './helper';
@@ -138,6 +139,89 @@ test('factory:registerRenderer', () => {
 
   expect(container).toMatchSnapshot();
   unRegisterRenderer(renderer);
+});
+
+test('index exports hasAsyncRenderers at runtime', () => {
+  expect(typeof exportedHasAsyncRenderers).toBe('function');
+});
+
+test('factory render works inside React.StrictMode', async () => {
+  interface MyProps extends RendererProps {
+    message?: string;
+  }
+
+  class MyComponent extends React.Component<MyProps> {
+    render() {
+      return <div>{this.props.message}</div>;
+    }
+  }
+
+  const renderer = registerRenderer({
+    component: MyComponent,
+    test: /\bstrict-mode-renderer$/
+  });
+
+  try {
+    const {getByText} = render(
+      <React.StrictMode>
+        {amisRender(
+          {
+            type: 'strict-mode-renderer',
+            message: 'Strict mode render OK'
+          },
+          {},
+          {session: 'strict-mode-renderer'}
+        )}
+      </React.StrictMode>
+    );
+
+    await waitFor(() => {
+      expect(getByText('Strict mode render OK')).toBeInTheDocument();
+    });
+  } finally {
+    unRegisterRenderer(renderer);
+    clearStoresCache('strict-mode-renderer');
+  }
+});
+
+test('factory store-backed render works inside React.StrictMode', async () => {
+  interface MyProps extends RendererProps {
+    message?: string;
+  }
+
+  class MyComponent extends React.Component<MyProps> {
+    render() {
+      return <div>{this.props.message}</div>;
+    }
+  }
+
+  const renderer = registerRenderer({
+    component: MyComponent,
+    storeType: 'ServiceStore',
+    test: /\bstrict-mode-store-renderer$/
+  });
+
+  try {
+    const {getByText} = render(
+      <React.StrictMode>
+        {amisRender(
+          {
+            type: 'strict-mode-store-renderer',
+            message: 'Strict mode store render OK'
+          },
+          {},
+          {session: 'strict-mode-store-renderer'}
+        )}
+      </React.StrictMode>
+    );
+
+    await waitFor(() => {
+      expect(getByText('Strict mode store render OK')).toBeInTheDocument();
+    });
+  } finally {
+    unRegisterRenderer(renderer);
+    clearStoresCache('strict-mode-store-renderer');
+  }
 });
 
 // test('factory:definitions', async () => {

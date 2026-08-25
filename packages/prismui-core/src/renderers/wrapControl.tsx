@@ -114,6 +114,7 @@ export function wrapControl<
           hook2?: () => any;
           hook3?: () => any;
           reaction?: () => void;
+          modelDisposeTimer?: ReturnType<typeof setTimeout>;
 
           static displayName = `WrapControl${
             ComposedComponent.displayName || ComposedComponent.name
@@ -330,6 +331,8 @@ export function wrapControl<
           }
 
           componentDidMount() {
+            this.cancelModelDispose();
+
             const {
               store,
               formStore: form,
@@ -515,14 +518,31 @@ export function wrapControl<
           }
 
           componentWillUnmount() {
-            this.hook && this.props.removeHook?.(this.hook);
-            this.hook2 && this.props.removeHook?.(this.hook2);
-            this.hook3 && this.props.removeHook?.(this.hook3, 'flush');
-            // this.lazyEmitChange.flush();
+            this.scheduleModelDispose();
+          }
 
-            this.lazyEmitChange.cancel();
-            this.reaction?.();
-            this.disposeModel();
+          cancelModelDispose() {
+            if (this.modelDisposeTimer) {
+              clearTimeout(this.modelDisposeTimer);
+              this.modelDisposeTimer = undefined;
+            }
+          }
+
+          scheduleModelDispose() {
+            this.cancelModelDispose();
+
+            this.modelDisposeTimer = setTimeout(() => {
+              this.modelDisposeTimer = undefined;
+
+              this.hook && this.props.removeHook?.(this.hook);
+              this.hook2 && this.props.removeHook?.(this.hook2);
+              this.hook3 && this.props.removeHook?.(this.hook3, 'flush');
+              // this.lazyEmitChange.flush();
+
+              this.lazyEmitChange.cancel();
+              this.reaction?.();
+              this.disposeModel();
+            }, 0);
           }
 
           setInitialValue(value: any) {
@@ -596,7 +616,7 @@ export function wrapControl<
               combo.unBindUniuqueItem(this.model);
             }
 
-            if (this.model) {
+            if (this.model && isAlive(this.model)) {
               formItem &&
                 isAlive(formItem) &&
                 formItem.removeSubFormItem(this.model);
