@@ -3,7 +3,7 @@
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
-  "version": "7.0.0-beta.1",
+  "version": "7.0.0-beta.6",
   "description": "PrismUI component library",
   "scripts": {
     "build": "npm run clean-dist && cross-env NODE_ENV=production rollup -c ",
@@ -77,8 +77,8 @@
     "tinymce": "7.9.3",
     "tslib": "^2.3.1",
     "uncontrollable": "7.2.1",
-    "prismui-core": "7.0.0-beta.1",
-    "prismui-formula": "7.0.0-beta.1"
+    "prismui-core": "7.0.0-beta.6",
+    "prismui-formula": "7.0.0-beta.6"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
@@ -114,8 +114,8 @@
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
-    "prismui-core": "*",
-    "prismui-formula": "*"
+    "prismui-core": "7.0.0-beta.6",
+    "prismui-formula": "7.0.0-beta.6"
   },
   "jest": {
     "testEnvironment": "jsdom",

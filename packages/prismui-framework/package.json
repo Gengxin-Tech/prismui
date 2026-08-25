@@ -1,6 +1,6 @@
 {
   "name": "prismui-framework",
-  "version": "7.0.0-beta.1",
+  "version": "7.0.0-beta.6",
   "description": "PrismUI UI Schema rendering framework",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -73,9 +73,9 @@
     "tslib": "^2.3.1",
     "xlsx": "^0.18.5",
     "mobx-react-lite": "^4.1.1",
-    "prismui-core": "7.0.0-beta.1",
-    "prismui-ui": "7.0.0-beta.1",
-    "prismui-office-viewer": "7.0.0-beta.1"
+    "prismui-core": "7.0.0-beta.6",
+    "prismui-ui": "7.0.0-beta.6",
+    "prismui-office-viewer": "7.0.0-beta.6"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
@@ -255,9 +255,9 @@
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
-    "prismui-core": "*",
-    "prismui-ui": "*",
-    "prismui-office-viewer": "*"
+    "prismui-core": "7.0.0-beta.6",
+    "prismui-ui": "7.0.0-beta.6",
+    "prismui-office-viewer": "7.0.0-beta.6"
   },
   "gitHead": "37d23b4a8eb1c663bc38e8dd9040889ea1526ec4",
   "bugs": {

@@ -1,6 +1,6 @@
 {
   "name": "prismui-core",
-  "version": "7.0.0-beta.1",
+  "version": "7.0.0-beta.6",
   "description": "PrismUI core runtime",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -78,12 +78,12 @@
     "tslib": "^2.3.1",
     "uncontrollable": "7.2.1",
     "react-is": ">=16.8.6",
-    "prismui-formula": "7.0.0-beta.1"
+    "prismui-formula": "7.0.0-beta.6"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
-    "prismui-formula": "*"
+    "prismui-formula": "7.0.0-beta.6"
   },
   "jest": {
     "testEnvironment": "jsdom",
