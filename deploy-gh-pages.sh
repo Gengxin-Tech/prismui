@@ -37,7 +37,7 @@ cd "$ROOT_DIR"
 echo "building docs into $GH_PAGES_DIR"
 node "$ROOT_DIR/scripts/generate-search-data.js"
 
-npm run build --workspaces
+npm run release:prismui:build
 
 ./node_modules/.bin/fis3 release gh-pages -c
 
