@@ -1537,7 +1537,7 @@ run action ajax
             {
               actionType: 'email',
               args: {
-                to: 'amis@baidu.com',
+                to: 'prismui@example.com',
                 cc: 'baidu@baidu.com',
                 subject: '这是邮件主题',
                 body: '这是邮件正文'

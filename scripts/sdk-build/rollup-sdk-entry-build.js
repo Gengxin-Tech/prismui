@@ -16,7 +16,12 @@ const {getSdkRuntimeResourceEntries} = require('./sdk-contract');
 const repoRoot = path.resolve(__dirname, '../..');
 const defaultEntry = path.join(repoRoot, 'examples/embed.tsx');
 const sdkEntryModuleId = 'sdk';
-const sdkEntryAliases = ['amis/embed', `amis@${version}/embed`];
+const sdkEntryAliases = [
+  'amis/embed',
+  `amis@${version}/embed`,
+  'prismui/embed',
+  `prismui@${version}/embed`
+];
 const sdkBasePathExpression = `amis['sdk@${version}BasePath']`;
 const expectedUnresolvedImports = new Set([
   'rc-resize-observer',
@@ -320,6 +325,7 @@ function createSdkEntryAliasSource() {
   // Rollup currently emits one AMD entry module, so only expose aliases backed by that module.
 ${assignments}
   window.amisRequire = require;
+  window.prismuiRequire = require;
 })();`;
 }
 

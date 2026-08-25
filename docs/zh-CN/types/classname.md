@@ -7,7 +7,7 @@ icon:
 order: 40
 ---
 
-amis 中大部分的组件都支持配置 className 和 xxxClassName，他可以用来配置组件 dom 上的 css 类名，可以结合帮助类 css 来定制一些样式。具体帮助类 css 请前往[这里](../../style/index#辅助-class)。
+PrismUI 中大部分的组件都支持配置 className 和 xxxClassName，他可以用来配置组件 dom 上的 css 类名，可以结合帮助类 css 来定制一些样式。具体帮助类 css 请前往[这里](../../style/index#辅助-class)。
 
 配置方式有两种：
 

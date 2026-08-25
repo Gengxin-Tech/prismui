@@ -8,7 +8,7 @@ icon:
 order: 63
 ---
 
-amis 中部分组件，作为展示组件，自身没有**使用接口初始化数据域的能力**，例如：[Table](./table)、[Cards](./cards)、[List](./list)等，他们需要使用某些配置项，例如`source`，通过[数据映射](../../docs/concepts/data-mapping)功能，在当前的 **数据链** 中获取数据，并进行数据展示。
+PrismUI 中部分组件，作为展示组件，自身没有**使用接口初始化数据域的能力**，例如：[Table](./table)、[Cards](./cards)、[List](./list)等，他们需要使用某些配置项，例如`source`，通过[数据映射](../../docs/concepts/data-mapping)功能，在当前的 **数据链** 中获取数据，并进行数据展示。
 
 而`Service`组件就是专门为该类组件而生，它的功能是：**配置初始化接口，进行数据域的初始化，然后在`Service`内容器中配置子组件，这些子组件通过数据链的方法，获取`Service`所拉取到的数据**
 
@@ -214,11 +214,11 @@ amis 中部分组件，作为展示组件，自身没有**使用接口初始化�
 }
 ```
 
-它将`data`返回的对象作为 amis 页面配置，进行了解析渲染，实现动态渲染页面的功能。
+它将`data`返回的对象作为 PrismUI 页面配置，进行了解析渲染，实现动态渲染页面的功能。
 
 ### jsonp 请求
 
-`schemaApi` 同样支持 `jsonp` 请求，完整用法请参考 amis-admin 项目。
+`schemaApi` 同样支持 `jsonp` 请求，完整用法可参考历史上游 admin 项目。
 
 ```schema: scope="body"
 {
@@ -500,7 +500,7 @@ WebSocket 客户端的默认实现是使用标准 WebSocket，如果后端使用
 
 > 1.4.0 及以上版本修改了 ws 类型，将之前的字符串改成了对象的方式，会有两个参数 url 和 body
 
-下面是目前 amis 中 WebSocket 支持的默认实现：
+下面是目前 PrismUI 中 WebSocket 支持的默认实现：
 
 ```javascript
 wsFetcher(ws, onMessage, onError) {
@@ -538,7 +538,7 @@ wsFetcher(ws, onMessage, onError) {
   }
 ```
 
-通过 onMessage 来通知 amis 数据修改了，并返回 close 函数来关闭连接。
+通过 onMessage 来通知 PrismUI 数据修改了，并返回 close 函数来关闭连接。
 
 > 1.8.0 及以上版本
 
@@ -741,7 +741,7 @@ ws.on('connection', function connection(ws) {
 
 当前组件会对外派发以下事件，可以通过`onEvent`来监听这些事件，并通过`actions`来配置执行的动作，在`actions`中可以通过`${事件参数名}`或`${event.data.[事件参数名]}`来获取事件产生的数据，详细请查看[事件动作](../../docs/concepts/event-action)。
 
-> `[name]`为当前数据域中的字段名，例如：当前数据域为 {username: 'amis'}，则可以通过${username}获取对应的值。
+> `[name]`为当前数据域中的字段名，例如：当前数据域为 {username: 'PrismUI'}，则可以通过${username}获取对应的值。
 
 | 事件名称          | 事件参数                                                                                                                                                                                   | 说明                                                |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
@@ -1030,8 +1030,8 @@ schemaApi 接口请求完成。
       "id": "service-setvalue",
       "name": "service-setvalue",
       "data": {
-        "name": "amis",
-        "email": "amis@baidu.com"
+        "name": "PrismUI",
+        "email": "prismui@example.com"
       },
       "body": [
         {
@@ -1074,8 +1074,8 @@ schemaApi 接口请求完成。
       "id": "service-setvalue",
       "name": "service-setvalue",
       "data": {
-        "name": "amis",
-        "email": "amis@baidu.com"
+        "name": "PrismUI",
+        "email": "prismui@example.com"
       },
       "body": [
         {

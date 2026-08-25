@@ -3,7 +3,7 @@ export default {
   data: {
     globalData: {
       website: 'http://www.baidu.com',
-      email: 'amis!@baidu.com',
+      email: 'prismui@example.com',
       rememberMe: true
     }
   },
@@ -28,7 +28,7 @@ export default {
                 title: '在弹框中的表单',
                 id: 'dialog_003',
                 data: {
-                  username: 'amis',
+                  username: 'PrismUI',
                   rememberMe: '${globalData.rememberMe}'
                 },
                 body: {

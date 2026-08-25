@@ -45,7 +45,7 @@ title: 常见问题
 
 ## 如何实现左侧导航栏页面跳转？
 
-PrismUI 提供了 app 组件，可以基于它实现导航功能。历史 amis admin 示例仍可作为配置思路参考：`https://github.com/aisuda/amis-admin`。
+PrismUI 提供了 app 组件，可以基于它实现导航功能。历史上游 admin 示例仍可作为配置思路参考：`https://github.com/aisuda/amis-admin`。
 
 低代码平台类产品也可以基于这套 UI Schema 能力封装更上层的应用搭建体验。
 
@@ -68,17 +68,17 @@ PrismUI 提供了 app 组件，可以基于它实现导航功能。历史 amis a
 有个常用场景是在开发时使用 `localhost` 地址，而线上使用 `xxx.com`，这时可以使用 `replaceText` 属性，它是第四个参数，也就是 env 参数
 
 ```javascript
-let amis = amisRequire('amis/embed');
-let amisJSON = {
+let prismui = prismuiRequire('prismui/embed');
+let prismuiJSON = {
   type: 'page',
   body: {
     type: 'service',
     api: 'HOST/api'
   }
 };
-let amisScoped = amis.embed(
+let prismuiScoped = prismui.embed(
   '#root',
-  amisJSON,
+  prismuiJSON,
   {},
   {
     replaceText: {
@@ -93,7 +93,7 @@ let amisScoped = amis.embed(
 使用下面的方式
 
 ```
-amisScoped.updateProps({
+prismuiScoped.updateProps({
   data: {
     xxx: 'yyy'
   }

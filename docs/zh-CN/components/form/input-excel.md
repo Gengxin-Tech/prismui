@@ -38,7 +38,7 @@ order: 14
 
 ```
 |名称|网址|
-|amis|https://baidu.gitee.io/amis|
+|PrismUI|https://prismui.io|
 |百度|https://www.baidu.com|
 ```
 
@@ -47,8 +47,8 @@ order: 14
 ```json
 [
   {
-    "名称": "amis",
-    "网址": "https://baidu.gitee.io/amis"
+    "名称": "PrismUI",
+    "网址": "https://prismui.io"
   },
   {
     "名称": "百度",
@@ -118,7 +118,7 @@ order: 14
 ```json
 [
   ["名称", "网址"],
-  ["amis", "https://baidu.gitee.io/amis"],
+  ["PrismUI", "https://prismui.io"],
   ["百度", "https://www.baidu.com"]
 ]
 ```
@@ -151,8 +151,8 @@ order: 14
     "sheetName": "Sheet1",
     "data": [
       {
-        "名称": "amis",
-        "网址": "https://baidu.gitee.io/amis"
+        "名称": "PrismUI",
+        "网址": "https://prismui.io"
       },
       {
         "名称": "百度",

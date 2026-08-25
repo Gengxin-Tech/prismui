@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <title>amis demo</title>
+    <title>PrismUI demo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta
       name="viewport"
@@ -15,7 +15,7 @@
     <!-- 这是默认主题所需的，如果是其他主题则不需要 -->
     <!-- 从 1.1.0 开始 sdk.css 将不支持 IE 11，如果要支持 IE11 请引用可选 IE11 CSS，并把前面那个删了 -->
     <!-- <link rel="stylesheet" href="../packages/prismui-framework/sdk/sdk-ie11.css" /> -->
-    <!-- 不过 amis 开发团队几乎没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
+    <!-- PrismUI 对 IE 11 仅保留历史兼容能力，可能有细节功能不可用；如果发现请报 issue -->
     <style>
       html,
       body,
@@ -33,9 +33,9 @@
     <script src="../packages/prismui-framework/sdk/sdk.js"></script>
     <script type="text/javascript">
       (function () {
-        let amis = amisRequire('amis/embed');
+        let prismui = prismuiRequire('prismui/embed');
         // 通过替换下面这个配置来生成不同页面
-        let amisJSON = {
+        let prismuiJSON = {
           type: 'page',
           title: '表单页面',
           body: {
@@ -56,7 +56,7 @@
             ]
           }
         };
-        let amisScoped = amis.embed('#root', amisJSON);
+        let prismuiScoped = prismui.embed('#root', prismuiJSON);
       })();
     </script>
   </body>

@@ -1881,7 +1881,7 @@ combo 还有一个作用是增加层级，比如返回的数据是一个深层�
     "combo": [
       {
         "table": [{
-          "name": "amis",
+          "name": "PrismUI",
           "age": "18"
         }]
       },

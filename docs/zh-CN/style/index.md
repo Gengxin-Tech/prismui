@@ -4,7 +4,7 @@ title: 快速开始
 
 示例有个[主题编辑器](../../examples/theme)，可以在线实时预览效果。
 
-在 amis 中自定义样式推荐按下面的顺序选择：
+在 PrismUI 中自定义样式推荐按下面的顺序选择：
 
 1. 标准化样式值使用 `--prismui-*` CSS 变量，例如品牌色、按钮色、文本色等。
 2. 需要按主题区分的非标准样式，使用 `[data-prismui-theme="主题名"]` 作为作用域。
@@ -15,7 +15,7 @@ title: 快速开始
 
 ## CSS 变量
 
-在 page 下可以设置 `cssVars` 属性，通过它来动态修改 amis 内的 CSS 变量。
+在 page 下可以设置 `cssVars` 属性，通过它来动态修改 PrismUI 内的 CSS 变量。
 
 ```schema
 {
@@ -76,7 +76,7 @@ title: 快速开始
 
 目前这个文件没有和主题文件合并在一起，用户可以选择性加载。
 
-大部分 amis 组件都有 `className` 或者 `xxxClassName` 的配置，比如下面的配置给表单增加了边框、圆角和阴影
+大部分 PrismUI 组件都有 `className` 或者 `xxxClassName` 的配置，比如下面的配置给表单增加了边框、圆角和阴影
 
 ```schema: scope="body"
 {

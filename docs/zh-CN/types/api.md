@@ -34,7 +34,7 @@ API 类型用于配置请求接口的格式，涉及请求方式、请求地址�
 
 ## 接口返回格式（重要）
 
-所有配置在 amis 组件中的接口，都要符合下面的返回格式
+所有配置在 PrismUI 组件中的接口，都要符合下面的返回格式
 
 ```json
 {
@@ -91,12 +91,12 @@ API 类型用于配置请求接口的格式，涉及请求方式、请求地址�
 
 > 1.0.19 及以上版本。
 
-为了支持多种后端，amis 支持直接返回数据的方式，无需返回 status 和将数据放在 data 字段中，比如下面的例子：
+为了支持多种后端，PrismUI 支持直接返回数据的方式，无需返回 status 和将数据放在 data 字段中，比如下面的例子：
 
 ```json
 {
-  "username": "amis",
-  "email": "amis@amis.com"
+  "username": "PrismUI",
+  "email": "hello@prismui.io"
 }
 ```
 
@@ -578,7 +578,7 @@ API 还支持配置对象类型
 
 ### 配置请求适配器
 
-amis 的 API 配置，如果无法配置出你想要的请求结构，那么可以配置`requestAdaptor`发送适配器
+PrismUI 的 API 配置，如果无法配置出你想要的请求结构，那么可以配置`requestAdaptor`发送适配器
 
 **发送适配器** 是指在接口请求前，对请求进行一些自定义处理，例如修改发送数据体、添加请求头、等等，基本用法是，获取暴露的`api`参数，并且对该参数进行一些修改，并`return`出去：
 
@@ -694,7 +694,7 @@ const schema = {
 
 #### 拦截请求
 
-如果 api 发送适配器中，修改 api 对象，在 api 对象里面放入 `mockResponse` 属性，则会拦截请求发送，amis 内部会直接使用 `mockResponse` 的结果返回。
+如果 api 发送适配器中，修改 api 对象，在 api 对象里面放入 `mockResponse` 属性，则会拦截请求发送，PrismUI 内部会直接使用 `mockResponse` 的结果返回。
 
 ```js
 const schema = {
@@ -735,11 +735,11 @@ const schema = {
 
 ### 配置接收适配器
 
-同样的，如果后端返回的响应结构不符合 amis 的[接口格式要求](#%E6%8E%A5%E5%8F%A3%E8%BF%94%E5%9B%9E%E6%A0%BC%E5%BC%8F-%E9%87%8D%E8%A6%81-)，而后端不方便调整时，可以配置`adaptor`实现接收适配器
+同样的，如果后端返回的响应结构不符合 PrismUI 的[接口格式要求](#%E6%8E%A5%E5%8F%A3%E8%BF%94%E5%9B%9E%E6%A0%BC%E5%BC%8F-%E9%87%8D%E8%A6%81-)，而后端不方便调整时，可以配置`adaptor`实现接收适配器
 
 **接收适配器** 是指在接口请求后，对响应进行一些自定义处理，例如修改响应的数据结构、修改响应的数据等等。
 
-例如：接口正确返回的格式中，会返回`"code": 200`，而 amis 中，接口返回格式需要`"status": 0`，这时候就需要接收适配器进行调整结构。
+例如：接口正确返回的格式中，会返回`"code": 200`，而 PrismUI 中，接口返回格式需要`"status": 0`，这时候就需要接收适配器进行调整结构。
 
 ##### 暴露的参数
 
@@ -923,7 +923,7 @@ response = await attachmentAdpator(response, __);
 
 ## 自动刷新
 
-凡是拉取类接口，默认都会开启自动刷新，比如 form 配置 initApi: `/api/initForm?tpl=${tpl}`。这个接口会在 form 初始化的请求。当接口中有参数时，amis 会监控这个接口的实际结果是否有变化，假如这个时候 form 里面有个字段名为 tpl 的表单项，它的值发生变化，这个 form 的 initApi 又会请求一次。
+凡是拉取类接口，默认都会开启自动刷新，比如 form 配置 initApi: `/api/initForm?tpl=${tpl}`。这个接口会在 form 初始化的请求。当接口中有参数时，PrismUI 会监控这个接口的实际结果是否有变化，假如这个时候 form 里面有个字段名为 tpl 的表单项，它的值发生变化，这个 form 的 initApi 又会请求一次。
 
 ```schema:scope="body"
 {
@@ -1146,7 +1146,7 @@ response = await attachmentAdpator(response, __);
 | sendOn          | 请求条件     | [表达式](../concepts/expression)                                                                     | -                                                                                                                                                                                             |
 | cache           | 接口缓存时间 | 整型数字                                                                                             | -                                                                                                                                                                                             |
 | requestAdaptor  | 发送适配器   | 字符串                                                                                               | ，支持字符串串格式，或者直接就是函数如：                                                                                                                                                      |
-| adaptor         | 接收适配器   | 字符串                                                                                               | 如果接口返回不符合要求，可以通过配置一个适配器来处理成 amis 需要的。同样支持 Function 或者 字符串函数体格式                                                                                   |
+| adaptor         | 接收适配器   | 字符串                                                                                               | 如果接口返回不符合要求，可以通过配置一个适配器来处理成 PrismUI 需要的。同样支持 Function 或者 字符串函数体格式                                                                                   |
 | replaceData     | 替换当前数据 | 布尔                                                                                                 | 返回的数据是否替换掉当前的数据，默认为 `false`，即：`追加`，设置成 `true` 就是完全替换。                                                                                                      |
 | responseType    | 返回类型     | 字符串                                                                                               | 如果是下载需要设置为 'blob'                                                                                                                                                                   |
 | autoRefresh     | 是否自动刷新 | 布尔                                                                                                 | 配置是否需要自动刷新接口。                                                                                                                                                                    |

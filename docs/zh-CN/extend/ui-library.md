@@ -12,7 +12,7 @@ PrismUI 不仅有纯配置的用法，还能当成 UI 库来使用，实现 90% 
 PrismUI 提供了一些交互配置，但有时候这些交互无法满足需求，这时我们可以监听这些事件，然后用代码实现复杂交互需求，比如最常见的是表单事件。
 
 ```javascript
-let amisJSON = {
+let prismuiJSON = {
   type: 'page',
   title: '表单页面',
   body: [
@@ -57,7 +57,7 @@ PrismUI 支持[事件动作](../concepts/event-action)，各个组件内部也�
 配置 form 事件动作，当表单提交成功后，广播一个 `formSubmited` 事件。
 
 ```js
-let amisJSON = {
+let prismuiJSON = {
   type: 'page',
   title: '表单页面',
   body: [
@@ -106,7 +106,7 @@ function DemoComponent() {
   }
 
   return <div>
-    {renderPrismUI(amisJSON, {onBroadcast: handleBroadcast})}
+    {renderPrismUI(prismuiJSON, {onBroadcast: handleBroadcast})}
   </div>
 };
 ```
@@ -116,9 +116,9 @@ function DemoComponent() {
 PrismUI 对外还提供了一些方法，比如弹出消息通知。JS SDK 兼容入口可以通过 `amisRequire('amis')` 获取这些公共方法。
 
 ```javascript
-let amis = amisRequire('amis/embed');
+let prismui = prismuiRequire('prismui/embed');
 let amisLib = amisRequire('amis');
-let amisScoped = amis.embed('#root', {
+let prismuiScoped = prismui.embed('#root', {
   type: 'page',
   title: '表单页面',
   body: {

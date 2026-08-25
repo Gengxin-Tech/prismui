@@ -130,9 +130,9 @@ export function bootstrap(mountTo) {
     {
       location: history.location,
       context: {
-        amisUser: {
+        prismuiUser: {
           id: 1,
-          name: 'AMIS User'
+          name: 'PrismUI User'
         }
       }
     },

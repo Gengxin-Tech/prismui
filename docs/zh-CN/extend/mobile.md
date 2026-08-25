@@ -11,7 +11,7 @@ PrismUI 会默认在移动端下使用仿原生 UI 的展现，比如日期选�
 方法 1：全局关闭
 
 ```js
-amis.embed(
+prismui.embed(
   '#root',
   {
     // PrismUI schema

@@ -29,7 +29,7 @@ order: 63
 
 ## 点击行为
 
-可以通过配置`"clickAction": {}`，来指定图表节点的点击行为，支持 amis 的 [行为](./action)。
+可以通过配置`"clickAction": {}`，来指定图表节点的点击行为，支持 PrismUI 的 [行为](./action)。
 
 ```schema
 {

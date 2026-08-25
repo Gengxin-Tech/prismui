@@ -184,7 +184,7 @@ export default [
         )
       },
       {
-        label: '将 amis 当成 UI 库用',
+        label: '将 PrismUI 当成 UI 库用',
         path: '/zh-CN/docs/extend/ui-library',
         component: React.lazy(() =>
           import('../../docs/zh-CN/extend/ui-library.md').then(wrapDoc)

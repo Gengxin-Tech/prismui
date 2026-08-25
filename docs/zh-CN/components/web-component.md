@@ -8,7 +8,7 @@ icon:
 order: 73
 ---
 
-专门用来渲染 web component 的组件，可以通过这种方式来扩展 amis 组件，比如使用 Angular。
+专门用来渲染 web component 的组件，可以通过这种方式来扩展 PrismUI 组件，比如使用 Angular。
 
 ## 基本用法
 
@@ -40,7 +40,7 @@ class RandomNumber extends HTMLElement {
 customElements.define('random-number', RandomNumber);
 ```
 
-使用 amis 可以这样渲染出来
+使用 PrismUI 可以这样渲染出来
 
 ```json
 {

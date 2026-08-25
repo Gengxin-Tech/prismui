@@ -715,13 +715,13 @@ order: 43
     "title": "在抽屉中的表单",
     "id": "drawer_setvalue",
     "data": {
-      "username": "amis",
-      "password": "amis@baidu.com"
+      "username": "PrismUI",
+      "password": "prismui@example.com"
     },
     "body": [
       {
         "type": "alert",
-        "body": "初始化时，抽屉的数据 data 为 {username: 'amis', password: 'fex'}，表单内或者表单外都可以读取这些数据，当点击【更新抽屉数据】按钮后，抽屉的数据被更新为 {username: 'aisuda', password: 'aisuda@baidu.com'}"
+        "body": "初始化时，抽屉的数据 data 为 {username: 'PrismUI', password: 'fex'}，表单内或者表单外都可以读取这些数据，当点击【更新抽屉数据】按钮后，抽屉的数据被更新为 {username: 'aisuda', password: 'aisuda@baidu.com'}"
       },
       {
         "type": "input-text",
@@ -789,13 +789,13 @@ order: 43
     "title": "在抽屉中的表单",
     "id": "drawer_setvalue2",
     "data": {
-      "username": "amis",
-      "password": "amis@baidu.com"
+      "username": "PrismUI",
+      "password": "prismui@example.com"
     },
     "body": [
       {
         "type": "alert",
-        "body": "初始化时，抽屉的数据 data 为 {username: 'amis', password: 'fex'}，表单内或者表单外都可以读取这些数据，当点击【更新抽屉数据】按钮后，抽屉的数据被更新为 {username: 'aisuda'}，即 password 将被删除"
+        "body": "初始化时，抽屉的数据 data 为 {username: 'PrismUI', password: 'fex'}，表单内或者表单外都可以读取这些数据，当点击【更新抽屉数据】按钮后，抽屉的数据被更新为 {username: 'aisuda'}，即 password 将被删除"
       },
       {
         "type": "input-text",

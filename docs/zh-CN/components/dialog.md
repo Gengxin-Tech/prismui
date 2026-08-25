@@ -911,7 +911,7 @@ feedback 反馈弹框是指，在 ajax 请求后，可以显示一个弹框，�
 
 当前组件会对外派发以下事件，可以通过`onEvent`来监听这些事件，并通过`actions`来配置执行的动作，在`actions`中可以通过`${事件参数名}`或`${event.data.[事件参数名]}`来获取事件产生的数据，详细请查看[事件动作](../../docs/concepts/event-action)。
 
-> `[name]`为当前数据域中的字段名，例如：当前数据域为 {username: 'amis'}，则可以通过${username}获取对应的值。
+> `[name]`为当前数据域中的字段名，例如：当前数据域为 {username: 'PrismUI'}，则可以通过${username}获取对应的值。
 
 | 事件名称 | 事件参数                                                                 | 说明               |
 | -------- | ------------------------------------------------------------------------ | ------------------ |
@@ -1151,13 +1151,13 @@ feedback 反馈弹框是指，在 ajax 请求后，可以显示一个弹框，�
         "title": "在弹框中的表单",
         "id": "dialog_setvalue",
         "data": {
-          "username": "amis",
-          "password": "amis@baidu.com"
+          "username": "PrismUI",
+          "password": "prismui@example.com"
         },
         "body": [
           {
             "type": "alert",
-            "body": "初始化时，弹窗的数据data为{username: 'amis', password: 'fex'}，表单内或者表单外都可以读取这些数据，当点击【更新弹窗数据】按钮后，弹窗的数据被更新为{username: 'aisuda', password: 'aisuda@baidu.com'}"
+            "body": "初始化时，弹窗的数据data为{username: 'PrismUI', password: 'fex'}，表单内或者表单外都可以读取这些数据，当点击【更新弹窗数据】按钮后，弹窗的数据被更新为{username: 'aisuda', password: 'aisuda@baidu.com'}"
           },
           {
             "type": "input-text",
@@ -1225,13 +1225,13 @@ feedback 反馈弹框是指，在 ajax 请求后，可以显示一个弹框，�
         "title": "在弹框中的表单",
         "id": "dialog_setvalue2",
         "data": {
-          "username": "amis",
-          "password": "amis@baidu.com"
+          "username": "PrismUI",
+          "password": "prismui@example.com"
         },
         "body": [
           {
             "type": "alert",
-            "body": "初始化时，弹窗的数据data为{username: 'amis', password: 'fex'}，表单内或者表单外都可以读取这些数据，当点击【更新弹窗数据】按钮后，弹窗的数据被更新为{username: 'aisuda'}，即password将被删除"
+            "body": "初始化时，弹窗的数据data为{username: 'PrismUI', password: 'fex'}，表单内或者表单外都可以读取这些数据，当点击【更新弹窗数据】按钮后，弹窗的数据被更新为{username: 'aisuda'}，即password将被删除"
           },
           {
             "type": "input-text",

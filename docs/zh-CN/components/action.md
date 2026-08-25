@@ -437,7 +437,7 @@ Access-Control-Expose-Headers:  Content-Disposition
 | 属性名     | 类型     | 默认值 | 说明                                                                                                                |
 | ---------- | -------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
 | actionType | `string` | `link` | 单页跳转                                                                                                            |
-| link       | `string` | `link` | 用来指定跳转地址，跟 url 不同的是，这是单页跳转方式，不会渲染浏览器，请指定 amis 平台内的页面。可用 `${xxx}` 取值。 |
+| link       | `string` | `link` | 用来指定跳转地址，跟 url 不同的是，这是单页跳转方式，不会渲染浏览器，请指定 PrismUI 平台内的页面。可用 `${xxx}` 取值。 |
 
 ### 直接跳转
 
@@ -466,7 +466,7 @@ Access-Control-Expose-Headers:  Content-Disposition
   "label": "发送邮件",
   "type": "button",
   "actionType": "email",
-  "to": "amis@baidu.com",
+  "to": "prismui@example.com",
   "cc": "baidu@baidu.com",
   "subject": "这是邮件主题",
   "body": "这是邮件正文"
@@ -835,7 +835,7 @@ Access-Control-Expose-Headers:  Content-Disposition
 }
 ```
 
-amis 会传入两个参数 `event` 和 `props`，`event` 就是 React 的事件，而 `props` 可以拿到这个组件的其他属性，同时还能调用 amis 中的内部方法。
+PrismUI 会传入两个参数 `event` 和 `props`，`event` 就是 React 的事件，而 `props` 可以拿到这个组件的其他属性，同时还能调用 PrismUI 中的内部方法。
 
 ```schema: scope="body"
 {
@@ -855,7 +855,7 @@ props.onAction(event, {
 });
 ```
 
-这个函数如果返回 `false` 就会阻止 amis 其他 action 的执行，比如这个例子
+这个函数如果返回 `false` 就会阻止 PrismUI 其他 action 的执行，比如这个例子
 
 ```schema: scope="body"
 {
@@ -870,7 +870,7 @@ props.onAction(event, {
 }
 ```
 
-它的行为是先执行 alert，再执行弹框，但如果我们加上一个 `return false`，就会发现后面的 amis 弹框不执行了。
+它的行为是先执行 alert，再执行弹框，但如果我们加上一个 `return false`，就会发现后面的 PrismUI 弹框不执行了。
 
 ```schema: scope="body"
 {
@@ -906,7 +906,7 @@ props.onAction(event, {
       "label": "修改姓名",
       "name": "name",
       "type": "button",
-      "onClick": "props.formStore.setValues({name: 'amis', email: 'amis@baidu.com'});"
+      "onClick": "props.formStore.setValues({name: 'PrismUI', email: 'prismui@example.com'});"
     }
   ]
 }

@@ -1,5 +1,5 @@
 /**
- * @file 基于 amis 实现简单样式编辑
+ * @file 基于 PrismUI 实现简单样式编辑
  */
 
 // 此文件是基于 https://github.com/ChromeDevTools/devtools-frontend/blob/master/third_party/blink/renderer/core/css/css_properties.json5 编译出来的

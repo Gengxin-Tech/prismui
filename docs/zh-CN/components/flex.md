@@ -46,7 +46,7 @@ Flex 布局是基于 CSS Flex 实现的布局效果，它比 Grid 和 HBox 对�
 }
 ```
 
-其中 `items` 里的每一个都可以是其他 amis 类型。
+其中 `items` 里的每一个都可以是其他 PrismUI 类型。
 
 ## 子节点水平分布
 

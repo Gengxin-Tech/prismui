@@ -156,7 +156,7 @@ CRUD 组件对数据源接口的数据结构要求如下：
 }
 ```
 
-如果无法知道数据总数，只能知道是否有下一页，请返回如下格式，amis 会简单生成一个简单版本的分页控件。
+如果无法知道数据总数，只能知道是否有下一页，请返回如下格式，PrismUI 会简单生成一个简单版本的分页控件。
 
 ```json
 {
@@ -180,7 +180,7 @@ CRUD 组件对数据源接口的数据结构要求如下：
 
 ### Query 参数
 
-数据源接口地址可以通过变量实现动态拼接，例如： `/api/mock2/sample/${id}`，但需要注意的是接口地址拼接变量后，amis 就不会自动追加默认参数了，例如：分页参数、查询参数等，如需追加，可以自行拼接，例如： `/api/mock2/sample/${id}?page=${page}&perPage=${perPage}`
+数据源接口地址可以通过变量实现动态拼接，例如： `/api/mock2/sample/${id}`，但需要注意的是接口地址拼接变量后，PrismUI 就不会自动追加默认参数了，例如：分页参数、查询参数等，如需追加，可以自行拼接，例如： `/api/mock2/sample/${id}?page=${page}&perPage=${perPage}`
 
 默认的分页参数是 `page` 和 `perPage`，page 代表页数，比如第一页，perPage 代表每页显示几行。
 
@@ -1171,7 +1171,7 @@ Cards 模式支持 [Cards](./cards) 中的所有功能。
 }
 ```
 
-amis 只负责生成排序组件，并将排序参数传递给接口，而不会在前端对数据进行排序处理。参数格式如下：
+PrismUI 只负责生成排序组件，并将排序参数传递给接口，而不会在前端对数据进行排序处理。参数格式如下：
 
 ```json
 {
@@ -1235,7 +1235,7 @@ amis 只负责生成排序组件，并将排序参数传递给接口，而不会
 }
 ```
 
-amis 只负责生成搜索组件，并将搜索参数传递给接口，而不会在前端对数据进行搜索处理。参数格式如下：
+PrismUI 只负责生成搜索组件，并将搜索参数传递给接口，而不会在前端对数据进行搜索处理。参数格式如下：
 
 ```json
 {
@@ -1286,7 +1286,7 @@ amis 只负责生成搜索组件，并将搜索参数传递给接口，而不会
 }
 ```
 
-amis 只负责生成下拉选择器组件，并将搜索参数传递给接口，而不会在前端对数据进行搜索处理。参数格式如下：
+PrismUI 只负责生成下拉选择器组件，并将搜索参数传递给接口，而不会在前端对数据进行搜索处理。参数格式如下：
 
 ```json
 {
@@ -1729,9 +1729,9 @@ crud 组件支持通过配置`headerToolbar`和`footerToolbar`属性，实现在
 }
 ```
 
-### 其它 amis 组件
+### 其它 PrismUI 组件
 
-在 `headerToolbar` 和 `footerToolbar` 中可以配置各种 amis 其它组件，比如按钮和 tpl：
+在 `headerToolbar` 和 `footerToolbar` 中可以配置各种 PrismUI 其它组件，比如按钮和 tpl：
 
 ```schema: scope="body"
 {
@@ -1907,7 +1907,7 @@ crud 组件支持通过配置`headerToolbar`和`footerToolbar`属性，实现在
 }
 ```
 
-这样 amis 会在配置分页组件的地方，渲染出一个简单的页面跳转控件。
+这样 PrismUI 会在配置分页组件的地方，渲染出一个简单的页面跳转控件。
 
 > 如果总数据只够展示一页，则默认不显示该分页组件
 
@@ -1917,7 +1917,7 @@ crud 组件支持通过配置`headerToolbar`和`footerToolbar`属性，实现在
 
 <div class="p-4 text-base text-gray-800 rounded-lg bg-gray-50" role="alert">
   <span class="font-medium text-gray-800 block">温馨提示</span>
-  <span class="block">开启<code>loadDataOnce</code>后，搜索和过滤将交给组件处理，默认对所有字段采用模糊匹配（比如：<code>mi</code>将会匹配<code>amis</code>）。如果首次加载数据时设置了预设条件，导致接口返回的数据集合未按照此规则过滤，则可能导致切换页码后分页错误。此时有2种方案处理：</span>
+  <span class="block">开启<code>loadDataOnce</code>后，搜索和过滤将交给组件处理，默认对所有字段采用模糊匹配（比如：<code>mi</code>将会匹配<code>PrismUI</code>）。如果首次加载数据时设置了预设条件，导致接口返回的数据集合未按照此规则过滤，则可能导致切换页码后分页错误。此时有2种方案处理：</span>
   <span class="block" style="text-indent: 2em">1. 将接口返回的列表数据按照所有字段模糊匹配的规则处理</span>
   <span class="block" style="text-indent: 2em">2. 配置<a href="#匹配函数"><code>matchFunc</code></a>，自定义处理过滤</span>
 </div>
@@ -2304,8 +2304,8 @@ interface CRUDMatchFunc {
 
 有两种方式来约束。
 
-1. 批量操作按钮上配置 `disabledOn` 值为 `this.selectedItems.some(item => item.owner === this.amisUser.name)`
-2. 给表格加上 `itemCheckableOn` 值为 `this.owner === this.amisUser.name` 表示只有 owner 是自己的才可以打勾。
+1. 批量操作按钮上配置 `disabledOn` 值为 `this.selectedItems.some(item => item.owner === this.prismuiUser.name)`
+2. 给表格加上 `itemCheckableOn` 值为 `this.owner === this.prismuiUser.name` 表示只有 owner 是自己的才可以打勾。
 
 **保留条目选择**
 
@@ -3997,7 +3997,7 @@ interface CRUDMatchFunc {
 
 - `ids` 字符串如： `2,3,1,4,5,6` 用 id 来记录新的顺序。 前提是你的列表接口返回了 id 字段。另外如果你的 primaryField 不是 `id`，则需要配置如： `primaryField: "order_id"`。注意：无论你配置成什么 primayField，这个字段名始终是 ids。
 - `rows` `Array<Item>` 数组格式，新的顺序，数组里面包含所有原始信息。
-- `insertAfter` 或者 `insertBefore` 这是 amis 生成的 diff 信息，对象格式，key 为目标成员的 primaryField 值，即 id，value 为数组，数组中存放成员 primaryField 值。如：
+- `insertAfter` 或者 `insertBefore` 这是 PrismUI 生成的 diff 信息，对象格式，key 为目标成员的 primaryField 值，即 id，value 为数组，数组中存放成员 primaryField 值。如：
 
   ```json
   {
@@ -5461,7 +5461,7 @@ value 结构说明：
 {
   "type": "page",
   "data": {
-    "name": "amis",
+    "name": "PrismUI",
     "age": 18,
     "date": "2023-6-6"
   },
@@ -5583,7 +5583,7 @@ value 结构说明：
 {
   "type": "page",
   "data": {
-    "name": "amis",
+    "name": "PrismUI",
     "age": 18,
     "date": "${DATETOSTR(NOW())}"
   },
@@ -5707,7 +5707,7 @@ value 结构说明：
 {
   "type": "page",
   "data": {
-    "name": "amis",
+    "name": "PrismUI",
     "age": 18,
     "date": "2023-6-6"
   },
@@ -5834,7 +5834,7 @@ value 结构说明：
 {
   "type": "page",
   "data": {
-    "name": "amis",
+    "name": "PrismUI",
     "age": 18,
     "date": "2023-6-6"
   },

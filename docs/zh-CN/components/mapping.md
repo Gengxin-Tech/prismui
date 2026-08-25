@@ -47,7 +47,7 @@ order: 57
 
 ## 渲染其它组件
 
-映射的值也可以是 amis schema，渲染其它组件
+映射的值也可以是 PrismUI schema，渲染其它组件
 
 > 配置了`itemSchema`后，映射值不会再作为`schema`渲染
 
