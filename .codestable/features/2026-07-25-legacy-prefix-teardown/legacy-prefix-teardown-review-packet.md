@@ -1876,9 +1876,9 @@ index deebec4b8..c18ce69c4 100644
 +++ b/packages/amis-ui/src/components/ArrayInput.tsx
 @@ -1,5 +1,5 @@
  import React from 'react';
--import {ThemeProps, themeable} from 'amis-core';
-+import {getStableClassName, ThemeProps, themeable} from 'amis-core';
- import {LocaleProps, localeable} from 'amis-core';
+-import {ThemeProps, themeable} from 'prismui\-core';
++import {getStableClassName, ThemeProps, themeable} from 'prismui\-core';
+ import {LocaleProps, localeable} from 'prismui\-core';
  import InputBox from './InputBox';
  import {Icon} from './icons';
 @@ -88,7 +88,7 @@ export class ArrayInput extends React.Component<ArrayInputProps> {
@@ -1907,10 +1907,10 @@ index 3f753f1b5..6bf235e38 100644
  import React from 'react';
  import moment from 'moment';
  import Calendar from './calendar/Calendar';
--import {themeable, ThemeProps} from 'amis-core';
-+import {getStableClassSelector, themeable, ThemeProps} from 'amis-core';
- import {LocaleProps, localeable} from 'amis-core';
- import {autobind} from 'amis-core';
+-import {themeable, ThemeProps} from 'prismui\-core';
++import {getStableClassSelector, themeable, ThemeProps} from 'prismui\-core';
+ import {LocaleProps, localeable} from 'prismui\-core';
+ import {autobind} from 'prismui\-core';
  import {ShortCuts} from './DatePicker';
 @@ -154,7 +154,7 @@ export class CalendarMobile extends React.Component<
 
@@ -1945,11 +1945,11 @@ index cff554e0e..33888cbbe 100644
 --- a/packages/amis-ui/src/components/ResultList.tsx
 +++ b/packages/amis-ui/src/components/ResultList.tsx
 @@ -11,6 +11,7 @@ import {Option, Options} from './Select';
- import {ThemeProps, themeable} from 'amis-core';
+ import {ThemeProps, themeable} from 'prismui\-core';
  import {Icon} from './icons';
- import {autobind, guid} from 'amis-core';
-+import {getStableClassName, getStableClassSelector} from 'amis-core';
- import {LocaleProps, localeable, ClassNamesFn} from 'amis-core';
+ import {autobind, guid} from 'prismui\-core';
++import {getStableClassName, getStableClassSelector} from 'prismui\-core';
+ import {LocaleProps, localeable, ClassNamesFn} from 'prismui\-core';
  import TransferSearch from './TransferSearch';
  import VirtualList, {AutoSizer} from './virtual-list';
 @@ -123,10 +124,10 @@ export class ResultList extends React.Component<
@@ -1980,14 +1980,14 @@ diff --git a/packages/amis-ui/src/components/Tabs.tsx b/packages/amis-ui/src/com
 index 4ef059109..d77821a86 100644
 --- a/packages/amis-ui/src/components/Tabs.tsx
 +++ b/packages/amis-ui/src/components/Tabs.tsx
-@@ -18,6 +18,7 @@ import {themeable, ThemeProps, noop} from 'amis-core';
- import {uncontrollable} from 'amis-core';
- import {isObjectShallowModified} from 'amis-core';
- import {autobind, guid} from 'amis-core';
-+import {getStableClassName, getStableClassSelector} from 'amis-core';
+@@ -18,6 +18,7 @@ import {themeable, ThemeProps, noop} from 'prismui\-core';
+ import {uncontrollable} from 'prismui\-core';
+ import {isObjectShallowModified} from 'prismui\-core';
+ import {autobind, guid} from 'prismui\-core';
++import {getStableClassName, getStableClassSelector} from 'prismui\-core';
  import {Icon} from './icons';
  import debounce from 'lodash/debounce';
- import {findDomCompat as findDOMNode} from 'amis-core';
+ import {findDomCompat as findDOMNode} from 'prismui\-core';
 @@ -334,12 +335,11 @@ export class Tabs extends React.Component<TabsProps, any> {
      }
 
@@ -2037,9 +2037,9 @@ index 5d3a48322..e99e6d4b3 100644
 -  calculateHeight
 +  calculateHeight,
 +  getStableClassSelector
- } from 'amis-core';
+ } from 'prismui\-core';
  import {Option, Options, value2array} from './Select';
- import {themeable, ThemeProps, highlight} from 'amis-core';
+ import {themeable, ThemeProps, highlight} from 'prismui\-core';
 @@ -293,7 +294,7 @@ export class TreeSelector extends React.Component<
    }
 
@@ -2090,7 +2090,7 @@ index 4991f5313..25d8731b2 100644
   */
 
  import React from 'react';
--import {eachTree, Payload, themeable, ThemeProps} from 'amis-core';
+-import {eachTree, Payload, themeable, ThemeProps} from 'prismui\-core';
 +import {
 +  eachTree,
 +  getStableClassName,
@@ -2098,10 +2098,10 @@ index 4991f5313..25d8731b2 100644
 +  Payload,
 +  themeable,
 +  ThemeProps
-+} from 'amis-core';
- import {LocaleProps, localeable} from 'amis-core';
++} from 'prismui\-core';
+ import {LocaleProps, localeable} from 'prismui\-core';
  import ResultBox from './ResultBox';
- import type {Option} from 'amis-core';
+ import type {Option} from 'prismui\-core';
 @@ -244,14 +251,16 @@ export class UserSelect extends React.Component<
    }
 
@@ -2130,14 +2130,14 @@ index e6e30e9b7..435b5f9f8 100644
 @@ -1,6 +1,12 @@
  import React, {useEffect} from 'react';
 
--import {themeable, ThemeProps, filterTree, mapTree} from 'amis-core';
+-import {themeable, ThemeProps, filterTree, mapTree} from 'prismui\-core';
 +import {
 +  themeable,
 +  ThemeProps,
 +  filterTree,
 +  mapTree,
 +  getStableClassSelector
-+} from 'amis-core';
++} from 'prismui\-core';
  import GroupedSelection from '../GroupedSelection';
  import Tabs, {Tab} from '../Tabs';
  import TreeSelection from '../TreeSelection';
@@ -2162,9 +2162,9 @@ index a88cff786..4e405acbe 100644
 +  position,
 +  getStableClassName,
 +  getStableClassSelector
- } from 'amis-core';
- import {resizeSensor} from 'amis-core';
- import {getStyleNumber} from 'amis-core';
+ } from 'prismui\-core';
+ import {resizeSensor} from 'prismui\-core';
+ import {getStyleNumber} from 'prismui\-core';
 @@ -515,7 +517,7 @@ export class Table extends React.PureComponent<TableProps, TableState> {
      this.sortable = new Sortable(this.tbodyDom?.current as HTMLElement, {
        group: 'table',
@@ -10894,7 +10894,7 @@ index af9e12f60..9202a1279 100644
 +  getStableClassSelector,
    getMatchedEventTargets,
    getPropValue
- } from 'amis-core';
+ } from 'prismui\-core';
 @@ -594,13 +595,15 @@ export default class Cards extends React.Component<GridProps, object> {
 
      const store = this.props.store;
@@ -10989,14 +10989,14 @@ index 0ff2facff..43172e352 100644
 +++ b/packages/amis/src/renderers/Form/InputSubForm.tsx
 @@ -1,5 +1,11 @@
  import React from 'react';
--import {FormItem, FormControlProps, FormBaseControl} from 'amis-core';
+-import {FormItem, FormControlProps, FormBaseControl} from 'prismui\-core';
 +import {
 +  FormItem,
 +  FormControlProps,
 +  FormBaseControl,
 +  getStableClassName,
 +  getStableClassSelector
-+} from 'amis-core';
++} from 'prismui\-core';
  import cx from 'classnames';
  import omit from 'lodash/omit';
  import pick from 'lodash/pick';
@@ -11034,7 +11034,7 @@ index be930ab74..9cb4d53c5 100644
 -  isClickOnInput
 +  isClickOnInput,
 +  getStableClassSelector
- } from 'amis-core';
+ } from 'prismui\-core';
 
  import QuickEdit, {SchemaQuickEdit} from './QuickEdit';
 @@ -728,13 +729,15 @@ export default class List extends React.Component<ListProps, ListState> {
@@ -11186,14 +11186,14 @@ diff --git a/packages/amis/src/renderers/Table/ColumnToggler.tsx b/packages/amis
 index 9592c78fa..d12e6b1b9 100644
 --- a/packages/amis/src/renderers/Table/ColumnToggler.tsx
 +++ b/packages/amis/src/renderers/Table/ColumnToggler.tsx
-@@ -12,6 +12,7 @@ import {TooltipWrapper} from 'amis-ui';
+@@ -12,6 +12,7 @@ import {TooltipWrapper} from 'prismui\-ui';
 
- import {noop, autobind, anyChanged, createObject} from 'amis-core';
- import {filter} from 'amis-core';
-+import {getStableClassName, getStableClassSelector} from 'amis-core';
- import {Icon} from 'amis-ui';
- import {RootClose} from 'amis-core';
- import type {TooltipObject} from 'amis-ui/lib/components/TooltipWrapper';
+ import {noop, autobind, anyChanged, createObject} from 'prismui\-core';
+ import {filter} from 'prismui\-core';
++import {getStableClassName, getStableClassSelector} from 'prismui\-core';
+ import {Icon} from 'prismui\-ui';
+ import {RootClose} from 'prismui\-core';
+ import type {TooltipObject} from 'prismui\-ui/lib/components/TooltipWrapper';
 @@ -259,15 +260,17 @@ export default class ColumnToggler<
 
    initDragging() {
@@ -11223,8 +11223,8 @@ index 48de66eff..081c904c9 100644
 @@ -47,6 +47,7 @@ import {
    loopTooMuch,
    filterClassNameObject
- } from 'amis-core';
-+import {getStableClassSelector} from 'amis-core';
+ } from 'prismui\-core';
++import {getStableClassSelector} from 'prismui\-core';
  import {
    Button,
    Icon,
@@ -11257,16 +11257,16 @@ index 329dd9539..a4a6b25aa 100644
    PlaybackRateMenuButton
    // @ts-ignore
  } from 'video-react';
--import {autobind, getPropValue, padArr} from 'amis-core';
+-import {autobind, getPropValue, padArr} from 'prismui\-core';
 +import {
 +  autobind,
 +  getPropValue,
 +  getStableClassSelector,
 +  padArr
-+} from 'amis-core';
- import {Renderer, RendererProps} from 'amis-core';
- import {resolveVariable} from 'amis-core';
- import {filter} from 'amis-core';
++} from 'prismui\-core';
+ import {Renderer, RendererProps} from 'prismui\-core';
+ import {resolveVariable} from 'prismui\-core';
+ import {filter} from 'prismui\-core';
 @@ -539,11 +544,13 @@ export default class Video extends React.Component<VideoProps, VideoState> {
    }
 
@@ -12104,7 +12104,7 @@ new Sortable(root, {
 #### `packages/amis-ui/scripts/theme-selectors/fixtures/good/stable-dom-selector.tsx`
 
 ```
-import {getStableClassName, getStableClassSelector} from 'amis-core';
+import {getStableClassName, getStableClassSelector} from 'prismui\-core';
 
 const cx = (value: string) => `amis-${value}`;
 const root = document.body;
