@@ -12185,7 +12185,7 @@
                     },
                     "arguments": {},
                     "caller": {
-                      "$ref": "#/definitions/interface-1471878567-9888-11315-1471878567-0-218439"
+                      "$ref": "#/definitions/interface-_lib.es5.d.ts-9888-11315-_lib.es5.d.ts-0-218439"
                     }
                   },
                   "required": [
@@ -12213,7 +12213,7 @@
                     },
                     "arguments": {},
                     "caller": {
-                      "$ref": "#/definitions/interface-1471878567-9888-11315-1471878567-0-218439"
+                      "$ref": "#/definitions/interface-_lib.es5.d.ts-9888-11315-_lib.es5.d.ts-0-218439"
                     }
                   },
                   "required": [
@@ -12241,7 +12241,7 @@
                     },
                     "arguments": {},
                     "caller": {
-                      "$ref": "#/definitions/interface-1471878567-9888-11315-1471878567-0-218439"
+                      "$ref": "#/definitions/interface-_lib.es5.d.ts-9888-11315-_lib.es5.d.ts-0-218439"
                     }
                   },
                   "required": [
@@ -12321,7 +12321,7 @@
         "type"
       ]
     },
-    "interface-1471878567-9888-11315-1471878567-0-218439": {
+    "interface-_lib.es5.d.ts-9888-11315-_lib.es5.d.ts-0-218439": {
       "type": "object",
       "properties": {
         "prototype": {},
@@ -12330,7 +12330,7 @@
         },
         "arguments": {},
         "caller": {
-          "$ref": "#/definitions/interface-1471878567-9888-11315-1471878567-0-218439"
+          "$ref": "#/definitions/interface-_lib.es5.d.ts-9888-11315-_lib.es5.d.ts-0-218439"
         }
       },
       "required": [
@@ -33776,7 +33776,7 @@
                 },
                 "arguments": {},
                 "caller": {
-                  "$ref": "#/definitions/interface-1471878567-9888-11315-1471878567-0-218439"
+                  "$ref": "#/definitions/interface-_lib.es5.d.ts-9888-11315-_lib.es5.d.ts-0-218439"
                 }
               },
               "required": [

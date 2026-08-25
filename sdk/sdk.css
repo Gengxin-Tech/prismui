@@ -39401,13 +39401,13 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Cropper.js v1.6.2
+ * Cropper.js v1.6.3
  * https://fengyuanchen.github.io/cropperjs
  *
  * Copyright 2015-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2024-04-21T07:43:02.731Z
+ * Date: 2026-08-23T09:24:55.184Z
  */
 .prismui-scope .cropper-container {
   direction: ltr;
@@ -48235,12 +48235,6 @@ readers do not read off random characters that represent icons */
   display: none;
   animation-duration: var(--animation-duration);
   animation-fill-mode: both;
-}
-@media screen and (min-width: 0\0 ) {
-  .prismui-scope [data-tooltip]:after {
-    white-space: nowrap;
-    max-width: unset;
-  }
 }
 .prismui-scope [data-tooltip]:not(.is-disabled):hover:after {
   display: inline-block;
