@@ -2,11 +2,11 @@
 title: 工作原理
 ---
 
-实现自定义类型需要了解 amis 的工作原理。
+实现自定义类型需要了解 PrismUI 的工作原理。
 
 ## 工作原理
 
-amis 的渲染过程是将 `json` 转成对应的 React 组件。先通过 `json` 的 type 找到对应的 `Component`，然后把其他属性作为 `props` 传递过去完成渲染。
+PrismUI 的渲染过程是将 `json` 转成对应的 React 组件。先通过 `json` 的 type 找到对应的 `Component`，然后把其他属性作为 `props` 传递过去完成渲染。
 
 拿一个表单页面来说，如果用 React 组件开发一般长这样。
 
@@ -18,7 +18,7 @@ amis 的渲染过程是将 `json` 转成对应的 React 组件。先通过 `json
 </Page>
 ```
 
-把以上配置方式换成 amis JSON, 则是：
+把以上配置方式换成 PrismUI JSON，则是：
 
 ```json
 {
@@ -48,7 +48,7 @@ Page 组件的示例代码
 
 ```jsx
 import * as React from 'react';
-import {Renderer} from 'amis-core';
+import {Renderer} from 'prismui-core';
 
 @Renderer({
   type: 'page'

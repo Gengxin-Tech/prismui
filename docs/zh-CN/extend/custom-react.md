@@ -4,7 +4,7 @@ title: 自定义组件 - React
 
 ## React 临时扩展
 
-amis 的配置最终会转成 React 组件来执行，所以如果只是想在某个配置中加入定制功能，可以直接在这个 JSON 配置里写 React 代码，比如下面这个例子：
+PrismUI 的配置最终会转成 React 组件来执行，所以如果只是想在某个配置中加入定制功能，可以直接在这个 JSON 配置里写 React 代码，比如下面这个例子：
 
 ```jsx
 {
@@ -55,11 +55,11 @@ amis 的配置最终会转成 React 组件来执行，所以如果只是想在�
 
 ```jsx
 import * as React from 'react';
-import {Renderer} from 'amis';
+import {Renderer} from 'prismui-framework';
 
 @Renderer({
   type: 'my-renderer',
-  autoVar: true // amis 1.8 之后新增的功能，自动解析出参数里的变量
+  autoVar: true // 自动解析出参数里的变量
 })
 class CustomRenderer extends React.Component {
   render() {
@@ -91,13 +91,13 @@ Renderer({
 }
 ```
 
-看了前面[amis 工作原理](#工作原理)应该不难理解，这里注册一个 React 组件，当节点的 type 信息是 `my-renderer` 结尾时，交给当前组件来完成渲染。
+看了前面[PrismUI 工作原理](#工作原理)应该不难理解，这里注册一个 React 组件，当节点的 type 信息是 `my-renderer` 结尾时，交给当前组件来完成渲染。
 
 如果这个组件还能通过 `children` 属性添加子节点，则需要使用下面这种写法：
 
 ```jsx
 import * as React from 'react';
-import {Renderer} from 'amis';
+import {Renderer} from 'prismui-framework';
 
 @Renderer({
   type: 'my-renderer2'
@@ -152,7 +152,7 @@ class CustomRenderer extends React.Component {
 
 ### 属性支持变量
 
-> 1.8.0 及以上版本新增配置，之前版本需要调用 amis 里的 resolveVariableAndFilter 方法
+> 如果不使用 `autoVar`，可以调用 PrismUI 里的 `resolveVariableAndFilter` 方法手动解析变量。
 
 前面的例子中组件参数都是静态的，但因为配置了 `autoVar: true`，使得所有组件参数将自动支持变量，比如下面例子中的 `tip` 在组件内拿到的将是解析后的值
 
@@ -176,7 +176,7 @@ class CustomRenderer extends React.Component {
 
 ```jsx
 import * as React from 'react';
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 
 @FormItem({
   type: 'custom'
@@ -242,15 +242,15 @@ class MyFormItem extends React.Component {
 
 ### 其它高级定制
 
-下面是一些不太常用的 amis 扩展方式及技巧。
+下面是一些不太常用的 PrismUI 扩展方式及技巧。
 
 #### 自定义验证器
 
-如果 amis [自带的验证](../../components/form/formitem.md)能满足需求了，则不需要关心。组件可以有自己的验证逻辑。
+如果 PrismUI [自带的验证](../../components/form/formitem.md)能满足需求了，则不需要关心。组件可以有自己的验证逻辑。
 
 ```jsx
 import * as React from 'react';
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 import * as cx from 'classnames';
 
 @FormItem({
@@ -270,7 +270,7 @@ export default class CustomCheckbox extends React.Component {
 
 #### OptionsControl
 
-如果你的表单组件性质和 amis 的 Select、Checkboxes、List 差不多，用户配置 source 可通过 API 拉取选项，你可以用 OptionsControl 取代 FormItem 这个注解。
+如果你的表单组件性质和 PrismUI 的 Select、Checkboxes、List 差不多，用户配置 source 可通过 API 拉取选项，你可以用 OptionsControl 取代 FormItem 这个注解。
 
 用法是一样，功能方面主要多了以下功能。
 
@@ -285,11 +285,11 @@ export default class CustomCheckbox extends React.Component {
 
 #### 组件间通信
 
-关于组件间通信，amis 中有个机制就是，把需要被引用的组件设置一个 name 值，然后其他组件就可以通过这个 name 与其通信，比如这个[例子](../concepts/linkage)。其实内部是依赖于内部的一个 Scoped Context。你的组件希望可以被别的组件引用，你需要把自己注册进去，默认自定义的非表单类组件并没有把自己注册进去，可以参考以下代码做添加。
+关于组件间通信，PrismUI 中有个机制就是，把需要被引用的组件设置一个 name 值，然后其他组件就可以通过这个 name 与其通信，比如这个[例子](../concepts/linkage)。其实内部是依赖于内部的一个 Scoped Context。你的组件希望可以被别的组件引用，你需要把自己注册进去，默认自定义的非表单类组件并没有把自己注册进去，可以参考以下代码做添加。
 
 ```js
 import * as React from 'react';
-import {Renderer, ScopedContext} from 'amis';
+import {Renderer, ScopedContext} from 'prismui-framework';
 @Renderer({
   type: 'my-renderer'
 })

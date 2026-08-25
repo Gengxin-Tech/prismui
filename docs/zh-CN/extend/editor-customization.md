@@ -2,19 +2,19 @@
 title: 可视化编辑器定制指南
 ---
 
-本文面向需要集成或二次开发 amis 可视化编辑器的开发者，说明编辑器可以通过哪些入口定制、各入口适合什么场景，以及插件机制和渲染器之间的关系。
+本文面向需要集成或二次开发 PrismUI 可视化编辑器的开发者，说明编辑器可以通过哪些入口定制、各入口适合什么场景，以及插件机制和渲染器之间的关系。
 
 如果需要先理解面板、组件物料、插件、容器区域、工具栏、右键菜单等概念之间的架构关系，请参考[编辑器架构](./editor-architecture)。
 
 ## 定制入口总览
 
-amis editor 的定制能力大致分为三层：
+PrismUI Editor 的定制能力大致分为三层：
 
 | 入口                                                                      | 适合场景                                                     | 是否需要写插件 | 是否必须关联渲染器 |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------- | ------------------ |
 | `Editor` 属性                                                             | 调整编辑器运行方式、禁用插件、注入事件监听、替换左右面板容器 | 否             | 否                 |
 | 插件 `buildEditorPanel` / `buildEditorToolbar` / `buildEditorContextMenu` | 新增左侧/右侧面板、工具按钮、右键菜单                        | 是             | 否                 |
-| 渲染器插件能力                                                            | 让某种 amis renderer 可点选、可拖入、可配置、可声明区域      | 是             | 通常需要           |
+| 渲染器插件能力                                                            | 让某种 PrismUI renderer 可点选、可拖入、可配置、可声明区域   | 是             | 通常需要           |
 
 判断用哪一种入口时，可以按下面的顺序选：
 
@@ -30,15 +30,15 @@ amis editor 的定制能力大致分为三层：
 
 常见属性包括：
 
-- `value`：当前 amis schema。
+- `value`：当前 PrismUI schema。
 - `onChange`：编辑器修改 schema 后触发。
 - `preview`：切换预览模式。
 - `isMobile`：移动端预览模式。
-- `theme`：amis 主题。
+- `theme`：PrismUI 主题。
 - `className`：给编辑器外层追加 class，方便做样式覆盖。
 - `$schemaUrl`：提供 schema JSON 地址，主要用于代码编辑时的属性提示。
 - `schemaFilter`：预览前改写 schema，常用于 API proxy。
-- `amisEnv`：注入 amis 渲染环境，如 fetcher、tracker、notify、jumpTo 等。
+- `amisEnv`：注入 PrismUI 渲染环境，如 fetcher、tracker、notify、jumpTo 等。
 - `readonly`：只读模式。
 
 示例：
@@ -162,7 +162,7 @@ export class MyGlobalPanelPlugin extends BasePlugin {
 示例：在默认左侧面板外增加一个不参与 tab 的常驻区域。
 
 ```tsx
-import {LeftPanelsProps} from 'amis-editor-core';
+import {LeftPanelsProps} from 'prismui-editor-core';
 import {LeftPanels} from './your-local-export';
 
 function CustomLeftPanels(props: LeftPanelsProps) {
@@ -181,7 +181,7 @@ function CustomLeftPanels(props: LeftPanelsProps) {
 />;
 ```
 
-注意：当前公共入口导出了 `LeftPanelsProps` / `RightPanelsProps` 类型，但默认 `LeftPanels` 组件本身不是公共导出。如果需要“包一层默认左侧面板”，要么在项目内部引用源码组件，要么在 amis editor 侧补充导出；如果是业务项目外部集成，更稳妥的方式是完全自定义 `LeftPanelsComponent`，或优先用 plugin 添加左侧 tab。
+注意：当前公共入口导出了 `LeftPanelsProps` / `RightPanelsProps` 类型，但默认 `LeftPanels` 组件本身不是公共导出。如果需要“包一层默认左侧面板”，要么在项目内部引用源码组件，要么在 PrismUI Editor 侧补充导出；如果是业务项目外部集成，更稳妥的方式是完全自定义 `LeftPanelsComponent`，或优先用 plugin 添加左侧 tab。
 
 ## 通过插件定制
 
@@ -192,7 +192,7 @@ function CustomLeftPanels(props: LeftPanelsProps) {
 全局注册：
 
 ```tsx
-import {BasePlugin, registerEditorPlugin} from 'amis-editor-core';
+import {BasePlugin, registerEditorPlugin} from 'prismui-editor-core';
 
 export class MyPlugin extends BasePlugin {
   static scene = ['layout'];
@@ -220,7 +220,7 @@ registerEditorPlugin(MyPlugin);
 插件分为两类：
 
 1. **全局编辑器插件**：不设置 `rendererName`，只参与面板、工具栏、菜单、事件监听、组件物料收集等全局流程。
-2. **渲染器插件**：设置 `rendererName` 和 `name`，让某种 amis renderer 在编辑器中具备可点选、可配置、可拖入、可声明区域等能力。
+2. **渲染器插件**：设置 `rendererName` 和 `name`，让某种 PrismUI renderer 在编辑器中具备可点选、可配置、可拖入、可声明区域等能力。
 
 也就是说：
 
@@ -243,7 +243,7 @@ import {
   BasePlugin,
   BasicPanelItem,
   BuildPanelEventContext
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 function ResourcePanel({store, manager}: any) {
   return <div className="my-resource-panel">业务资源</div>;
@@ -509,7 +509,7 @@ export class AuditPlugin extends BasePlugin {
 
 ## 定制渲染器编辑能力
 
-如果希望某种 amis renderer 在编辑器画布中可点选、可显示名称、可配置区域、可拖入子组件，需要提供渲染器插件信息。
+如果希望某种 PrismUI renderer 在编辑器画布中可点选、可显示名称、可配置区域、可拖入子组件，需要提供渲染器插件信息。
 
 最小写法：
 
@@ -526,7 +526,7 @@ export class MyRendererPlugin extends BasePlugin {
 - schema 上有 `$$id`。
 - 插件有 `name`。
 - 插件有 `rendererName`。
-- `rendererName` 匹配当前 amis renderer 的 `name` 或 `origin.name`。
+- `rendererName` 匹配当前 PrismUI renderer 的 `name` 或 `origin.name`。
 
 如果匹配成功，编辑器会用这些信息包裹渲染器 DOM，使节点可以被点选、高亮、拖拽定位和生成配置面板。
 
@@ -577,7 +577,7 @@ export class MyLayoutPlugin extends BasePlugin {
 核心原则：
 
 - 插件类本身不要求有 `rendererName`。
-- `rendererName` 的作用是把插件和某个 amis renderer 绑定起来。
+- `rendererName` 的作用是把插件和某个 PrismUI renderer 绑定起来。
 - 只做编辑器外壳扩展时，保持插件全局化更清晰。
 - 只做某个组件的编辑体验时，绑定 `rendererName` 更清晰。
 
@@ -607,7 +607,7 @@ export class MyLayoutPlugin extends BasePlugin {
 
 对于自定义 renderer，至少要提供：
 
-- amis renderer 注册。
+- PrismUI renderer 注册。
 - editor plugin 的 `rendererName`。
 - editor plugin 的 `name`。
 - 必要时提供 `regions`、`panelBody`、`scaffold` 等。
@@ -674,7 +674,7 @@ export class BusinessAssetsPanelPlugin extends BasePlugin {
 
 推荐：
 
-- 注册 amis renderer。
+- 注册 PrismUI renderer。
 - 写 editor plugin，并设置 `rendererName` / `name` / `description`。
 - 提供 `scaffold` 进入组件物料列表。
 - 提供 `panelBody` 或 `panelBodyCreator` 生成右侧配置。
@@ -741,7 +741,7 @@ export class ChartCardPlugin extends BasePlugin {
 3. 面板是否被 push：在 `buildEditorPanel()` 中检查 `panels` 和 `context`。
 4. 左右位置是否正确：左侧必须设置 `position: 'left'`。
 5. 右侧配置是否出现：检查当前选中节点的 `context.info.plugin === this`。
-6. 自定义 renderer 是否可点选：检查 `rendererName` 是否匹配 amis renderer 的注册名。
+6. 自定义 renderer 是否可点选：检查 `rendererName` 是否匹配 PrismUI renderer 的注册名。
 7. 物料是否出现：检查 `name`、`description`、`scaffold`、`disabledRendererPlugin`。
 8. 容器是否可拖入：检查 `regions` 和真实渲染结构是否能被编辑器包裹。
 

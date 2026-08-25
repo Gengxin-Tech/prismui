@@ -10,9 +10,9 @@ The Chinese README is the primary project document. This English version is kept
 
 ## Current Status
 
-- **Package transition**: current npm packages still use compatible names such as `amis`, `amis-ui`, and `amis-core`; any future package migration will be announced in the release notes.
-- **Compatibility**: during the transition, existing UI Schema, renderer APIs, theme assets, and SDK integration remain the priority.
-- **Docs**: new docs use the PrismUI name. Historical pages, examples, and runtime APIs may still mention `amis`.
+- **Package rename**: npm packages now use the unscoped `prismui-framework` / `prismui-*` package family; old `amis*` package names are no longer PrismUI publish targets.
+- **Compatibility**: UI Schema, renderer APIs, theme assets, and SDK integration remain the priority. The JS SDK loader may still expose historical `amisRequire`/`window.amis` runtime identifiers.
+- **Docs**: new docs use the PrismUI name. Historical notes, upstream attribution, and compatibility APIs may still mention `amis`.
 - **Contribution model**: contributions use a lightweight inbound = outbound model and are licensed under the same license as the relevant file or package.
 
 ## Capabilities
@@ -25,22 +25,24 @@ The Chinese README is the primary project document. This English version is kept
 
 ## Getting Started
 
-### Current Compatible Package Names
+### npm Packages
 
-Install the existing amis packages:
+Install the PrismUI packages:
 
 ```bash
-npm install amis amis-ui
+npm install prismui-framework@beta prismui-ui@beta
 ```
 
-React applications can continue to use the existing entry points:
+PrismUI 7 currently publishes under the `beta` dist-tag; after the stable release, the `@beta` suffix can be omitted.
+
+React applications should use the PrismUI entry points:
 
 ```tsx
-import 'amis/lib/themes/cxd.css';
-import 'amis/lib/helper.css';
-import 'amis/sdk/iconfont.css';
-import {render as renderUI} from 'amis';
-import {ToastComponent, AlertComponent} from 'amis-ui';
+import 'prismui-framework/lib/themes/cxd.css';
+import 'prismui-framework/lib/helper.css';
+import 'prismui-framework/sdk/iconfont.css';
+import {render as renderUI} from 'prismui-framework';
+import {ToastComponent, AlertComponent} from 'prismui-ui';
 
 const schema = {
   type: 'page',
@@ -87,18 +89,21 @@ export function App() {
 </script>
 ```
 
-This repository does not promise new npm package names in the README; if migration happens later, it will be spelled out in the release notes.
 
 ## Repository Layout
 
 ```text
-packages/amis                   UI Schema renderer, SDK, and main package
-packages/amis-core              data scope, events, renderer registry, and runtime core
-packages/amis-ui                base UI components and theme styles
-packages/amis-formula           expression and formula support
-packages/amis-editor            visual editor
-packages/amis-editor-core       editor model and plugin system
-packages/amis-theme-editor-helper theme editor helper package
+packages/amis                   UI Schema renderer, SDK, and main package (published as prismui-framework)
+packages/amis-core              data scope, events, renderer registry, and runtime core (published as prismui-core)
+packages/amis-ui                base UI components and theme styles (published as prismui-ui)
+packages/amis-formula           expression and formula support (published as prismui-formula)
+packages/office-viewer          Office document viewer (published as prismui-office-viewer)
+packages/amis-editor            visual editor (published as prismui-editor)
+packages/amis-editor-core       editor model and plugin system (published as prismui-editor-core)
+packages/amis-theme-editor-helper theme editor helper package (published as prismui-theme-editor-helper)
+packages/prismui-i18n-runtime   PrismUI i18n runtime
+packages/prismui-postcss        PrismUI editor style processing runtime
+packages/vite-plugin-amisr      Vite plugin that turns PrismUI JSON schema into React components (published as vite-plugin-prismui)
 examples                        docs site and local examples
 scripts/sdk-build               SDK build, contract checks, and migration tooling
 ```
@@ -132,9 +137,9 @@ npm run check-sdk-contract
 Focused examples:
 
 ```bash
-npm test --workspace amis -- -t <spec-name>
+npm test --workspace prismui-framework -- -t <spec-name>
 ./node_modules/.bin/jest packages/amis/__tests__/renderers/Form/buttonToolBar.test.tsx
-npm run update-snapshot --workspace amis -- -t <spec-name>
+npm run update-snapshot --workspace prismui-framework -- -t <spec-name>
 ```
 
 ## Contributing
@@ -155,8 +160,8 @@ Most of the repository is Apache-2.0. Some self-maintained packages declare MIT 
 
 | License | Current packages |
 | --- | --- |
-| Apache-2.0 | `amis`, `amis-core`, `amis-ui`, `office-viewer` |
-| MIT | `amis-formula`, `vite-plugin-amisr` |
-| ISC | `amis-editor`, `amis-editor-core`, `amis-theme-editor-helper`, `amis-mock` |
+| Apache-2.0 | `prismui-framework`, `prismui-core`, `prismui-ui`, `prismui-office-viewer` |
+| MIT | `prismui-formula`, `vite-plugin-prismui` |
+| ISC | `prismui-editor`, `prismui-editor-core`, `prismui-theme-editor-helper`, `prismui-i18n-runtime`, `prismui-postcss`, `amis-mock` |
 
 When redistributing source code, npm packages, SDK archives, images, or other artifacts, keep the relevant copyright and license notices. When modifying files derived from Apache-2.0 licensed code, keep appropriate modification notices.

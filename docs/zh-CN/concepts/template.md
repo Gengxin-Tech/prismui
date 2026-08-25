@@ -8,7 +8,7 @@ icon:
 order: 11
 ---
 
-为了可以更加灵活渲染文本、数据结构，amis 借鉴其他模板引擎，实现了一套模板渲染功能。
+为了可以更加灵活渲染文本、数据结构，PrismUI 借鉴其他模板引擎，实现了一套模板渲染功能。
 
 ## 模板字符串
 
@@ -80,7 +80,7 @@ order: 11
 
 ## JavaScript 模板引擎
 
-amis 还支持用 JavaScript 模板引擎进行组织输出，内部采用 [lodash template](https://lodash.com/docs/4.17.15#template) 进行实现。
+PrismUI 还支持用 JavaScript 模板引擎进行组织输出，内部采用 [lodash template](https://lodash.com/docs/4.17.15#template) 进行实现。
 
 ```schema
 {

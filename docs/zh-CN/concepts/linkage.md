@@ -145,7 +145,7 @@ order: 14
 > - `crud`组件中的`api`；（crud 默认是跟地址栏联动，如果要做请关闭同步地址栏 syncLocation: false）
 > - 等等...
 
-> 如果 api 地址中有变量，比如 `/api/mock2/sample/${id}`，amis 就不会自动加上分页参数，需要自己加上，改成 `/api/mock2/sample/${id}?page=${page}&perPage=${perPage}`
+> 如果 api 地址中有变量，比如 `/api/mock2/sample/${id}`，PrismUI 就不会自动加上分页参数，需要自己加上，改成 `/api/mock2/sample/${id}?page=${page}&perPage=${perPage}`
 
 #### 配置请求条件
 
@@ -286,7 +286,7 @@ order: 14
 }
 ```
 
-amis 会将返回的 `data` 写入表单数据域，因此下面的 `static` 组件就能显示了。
+PrismUI 会将返回的 `data` 写入表单数据域，因此下面的 `static` 组件就能显示了。
 
 ### 其他联动
 
@@ -393,7 +393,7 @@ amis 会将返回的 `data` 写入表单数据域，因此下面的 `static` 组
 1. 为`crud`组件设置了`name`属性为`my_crud`
 2. 为`form`组件配置了`target`属性为`crud`的`name`：`my_crud`
 
-更改配置后，提交表单时，amis 会寻找`target`所配置的目标组件，把`form`中所提交的数据，发送给该目标组件中，并将该数据**合并**到目标组件的数据域中，并触发目标组件的刷新操作，对于 CRUD 组件来说，刷新即重新拉取数据接口。
+更改配置后，提交表单时，PrismUI 会寻找`target`所配置的目标组件，把`form`中所提交的数据，发送给该目标组件中，并将该数据**合并**到目标组件的数据域中，并触发目标组件的刷新操作，对于 CRUD 组件来说，刷新即重新拉取数据接口。
 
 > 当然，`crud`组件内置已经支持此功能，你只需要配置`crud`中的`filter`属性，就可以实现上面的效果，更多内容查看 [crud -> filter](../../components/crud) 文档。
 

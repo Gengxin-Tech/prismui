@@ -531,7 +531,7 @@ Tab 结构：
 | evalMode          | `boolean`                                                                                  | `true`         | 表达式模式 或者 模板模式，模板模式则需要将表达式写在 `${` 和 `}` 中间。        |
 | variables         | `{label: string; value: string; children?: any[]; tag?: string}[]`                         | `[]`           | 可用变量                                                                       |
 | variableMode      | `string`                                                                                   | `list`         | 可配置成 `tabs` 或者 `tree` 默认为列表，支持分组。                             |
-| functions         | `Object[]`                                                                                 | -              | 可以不设置，默认就是 amis-formula 里面定义的函数，如果扩充了新的函数则需要指定 |
+| functions         | `Object[]`                                                                                 | -              | 可以不设置，默认就是 prismui-formula 里面定义的函数，如果扩充了新的函数则需要指定 |
 | inputMode         | `'button' \| 'input-button' \| 'input-group'`                                              | -              | 控件的展示模式                                                                 |
 | icon              | `string`                                                                                   | -              | 按钮图标，例如`fa fa-list`                                                     |
 | btnLabel          | `string`                                                                                   | `'公示编辑'`   | 按钮文本，`inputMode`为`button`时生效                                          |

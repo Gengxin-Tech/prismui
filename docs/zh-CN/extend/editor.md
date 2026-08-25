@@ -2,7 +2,7 @@
 title: 可视化编辑器
 ---
 
-目前 amis 可视化编辑器也作为单独的 npm 包发布了出来，可以通过 npm 安装使用。
+目前 PrismUI 可视化编辑器也作为单独的 npm 包发布了出来，可以通过 npm 安装使用。
 
 如果想先上手体验，可以直接打开左侧菜单中的「在线编辑器」。
 
@@ -12,21 +12,21 @@ title: 可视化编辑器
 
 ## 使用
 
-目前有两个 npm 包：`amis-editor` 和 `amis-editor-core`。
+目前有两个 npm 包：`prismui-editor` 和 `prismui-editor-core`。
 
-- `amis-editor-core` 包含了少量底层必要的功能实现，里面没有包含 amis 内置渲染器插件的任何实现。
-- `amis-editor` 基于 `amis-editor-core` 实现了 amis 内置的所有渲染器的可视化编辑器插件。
+- `prismui-editor-core` 包含了少量底层必要的功能实现，里面没有包含 PrismUI 内置渲染器插件的任何实现。
+- `prismui-editor` 基于 `prismui-editor-core` 实现了 PrismUI 内置的所有渲染器的可视化编辑器插件。
 
-如果你没有使用 amis 内置渲染器，推荐只使用 `amis-editor-core`，否则推荐使用 `amis-editor`。这里主要介绍 `amis-editor`, `amis-editor-core` 的使用方式是一样的。
+如果你没有使用 PrismUI 内置渲染器，推荐只使用 `prismui-editor-core`，否则推荐使用 `prismui-editor`。这里主要介绍 `prismui-editor`，`prismui-editor-core` 的使用方式是一样的。
 
 ```
-npm i amis-editor
+npm i prismui-editor@beta prismui-editor-core@beta prismui-framework@beta prismui-core@beta prismui-ui@beta prismui-formula@beta prismui-theme-editor-helper@beta
 ```
 
 通过 `npm` 安装完后，在 React 项目中这样使用：
 
 ```jsx
-import {Editor} from 'amis-editor';
+import {Editor} from 'prismui-editor';
 
 
 render() {
@@ -40,17 +40,17 @@ render() {
 
 ## 属性说明
 
-- `value: Schema` amis json 配置，比如：`{type: 'page', body: 'contents...'}`
+- `value: Schema` PrismUI JSON 配置，比如：`{type: 'page', body: 'contents...'}`
 - `onChange: (value: Schema) => void` 当编辑器修改的时候会触发。
 - `preview?: boolean` 是否为预览模式。
 - `autoFocus?: boolean` 是否自动聚焦第一个可编辑的组件。
 - `isMobile?: boolean` 是否为移动端模式，当为移动模式时，将采用 iframe 来预览，编辑器外层工具条和主题也会跟随当前编辑器配置同步。
-- `$schemaUrl?: string` 提供 amis 产出的 schema.json 的访问路径。主要用来给代码编辑模式提供属性提示信息。
+- `$schemaUrl?: string` 提供 PrismUI 产出的 schema.json 的访问路径。主要用来给代码编辑模式提供属性提示信息。
 - `className?: string` 额外加个 css 类名，辅助样式定义。
 - `schemas?: JSONSchemaObject` 用来定义有哪些全局变量，辅助编辑器格式化绑定全局数据。
-- `theme?: string` amis 主题
+- `theme?: string` PrismUI 主题
 - `schemaFilter?: (schema: any, isPreview?: boolean) => any` 配置过滤器。可以用来实现 api proxy，比如原始配置中请求地址是 `https://example.com/api` 如果直接给编辑器预览请求，很可能会报跨域，可以自动转成 `/api/proxy?_url=xxxx`，走 proxy 解决。
-- `amisEnv?: any` 这是给 amis 的 Env 对象，具体请前往 [env 说明](../start/getting-started#env)
+- `amisEnv?: any` 这是给 PrismUI 的 Env 对象，具体请前往 [env 说明](../start/getting-started#env)
 - `disableBultinPlugin?: boolean` 是否禁用内置插件
 - `disablePluginList?: Array<string> | (id: string, plugin: PluginClass) => boolean` 禁用插件列表
 - `plugins?: Array<PluginClass>` 额外的自定义插件，具体看下面的说明。
@@ -84,11 +84,11 @@ render() {
 
 ## 自定义插件
 
-开始之前，需要先自定义一个 amis 渲染器，然后再添加编辑器插件，让这个自定义渲染器可以在编辑器中可编辑。
+开始之前，需要先自定义一个 PrismUI 渲染器，然后再添加编辑器插件，让这个自定义渲染器可以在编辑器中可编辑。
 
 ```jsx
 import React from 'react';
-import {Renderer} from 'amis';
+import {Renderer} from 'prismui-framework';
 
 @Renderer({
   type: 'my-renderer',
@@ -107,7 +107,7 @@ export default class MyRenderer extends React.Component<MyRendererProps> {
 }
 ```
 
-通过以上代码，amis 配置中通过 `type` 指定为 `my-renderer` 即可启用此组件。
+通过以上代码，PrismUI 配置中通过 `type` 指定为 `my-renderer` 即可启用此组件。
 
 接下来添加编辑器插件，添加插件的方式有两种。
 
@@ -117,7 +117,7 @@ export default class MyRenderer extends React.Component<MyRendererProps> {
 效果都一样，重点还是怎么写个 Plugin，示例：
 
 ```jsx
-import {BasePlugin} from 'amis-editor';
+import {BasePlugin} from 'prismui-editor';
 
 export class MyRendererPlugin extends BasePlugin {
   // 这里要跟对应的渲染器名字对应上
@@ -183,7 +183,7 @@ export class MyRendererPlugin extends BasePlugin {
 
 ```jsx
 // 方式 1，注册默认插件，所有编辑器实例都会自动实例话。
-import {registerEditorPlugin} from 'amis-editor';
+import {registerEditorPlugin} from 'prismui-editor';
 
 registerEditorPlugin(MyRendererPlugin);
 
@@ -195,7 +195,7 @@ registerEditorPlugin(MyRendererPlugin);
 
 ## 工作原理
 
-编辑器在渲染 amis 配置的时候，会把所有的 json（配置） 节点都自动加个 `$$id` 唯一 id。然后复写了 `rendererResolver` 方法。某个节点 {type: 'xxxx'} 在找到对应 amis 组件渲染前，都会调用这个方法。
+编辑器在渲染 PrismUI 配置的时候，会把所有的 JSON（配置）节点都自动加个 `$$id` 唯一 id。然后复写了 `rendererResolver` 方法。某个节点 {type: 'xxxx'} 在找到对应 PrismUI 组件渲染前，都会调用这个方法。
 这个方法会在渲染之前，基于 schema、渲染器信息，通过插件去收集编辑器信息，如果收集到了，会额外的通过一个 `Wrapper` 包裹。这个 `Wrapper` 主要是自动把 `$$id` 写入到 dom 的属性上`data-editor-id="$$id"`。这样鼠标点击的时候，能够根据 dom 上的标记知道是哪个 json 节点，同时根据渲染器编辑器信息，能够生成对应的配置面板，并把对应 json 的节点做配置修改。
 
 有些组件是带区域的，所以除了 dom 上标记节点信息外，还需要标记区域信息。节点能够通过 `Wrapper` 自动包裹来实现，但是区域则不能，这个要去分析组件本身是怎么实现。最终目的是要通过 `RegionWrapper` 去包裹对应 JSX.Element 来完成标记。这个 `RegionWrapper` 会自动完成 dom 的标记 `data-region="xxx" data-region-host="$$id"`，这样点击到这个 dom 的时候，能知道是哪个组件的哪个区域，这样就能往里面拖入新组件。
@@ -252,7 +252,7 @@ schema
 
 - `schema` 渲染器的配置
 - `schemaPath` 渲染器在整个配置中的路径信息
-- `renderer` 渲染器信息，即注册 amis 渲染器的时候注册的渲染器信息
+- `renderer` 渲染器信息，即注册 PrismUI 渲染器的时候注册的渲染器信息
 
 插件中可以基于这些信息来决定要不要注册编辑器插件，如果注册了则此渲染器可在编辑器中点选。可注册的信息主要包含：
 
@@ -305,7 +305,7 @@ buildEditorPanel(
 
 ![editor-panel](../../../examples/static/editor-panel.png)
 
-通常右侧面板都是表单配置，使用 amis 配置就可以完成。所以推荐的做法是，直接在这个插件上面定义 `panelBody` 或者 `panelBodyCreator` 即可。
+通常右侧面板都是表单配置，使用 PrismUI 配置就可以完成。所以推荐的做法是，直接在这个插件上面定义 `panelBody` 或者 `panelBodyCreator` 即可。
 
 ```js
 panelBody = [
@@ -381,7 +381,7 @@ panelBodyCreator = context => {
 
 开始之前请先阅读 [工作原理](#工作原理)，如果是容器组件，还需要在对应 React 虚拟 dom 前包裹 `RegionWrapper`, 来完成 dom 标记。如果在注册编辑器信息的时候定义了 `regions` 信息，则会根据这个信息，自动完成 `RegionWrapper` 包裹。
 
-这里先看简单的情况，比如 `container` 组件。它在 amis 大概是这样实现的容器功能。通过 `this.props.render('body', schema)` 来实现的容器功能。
+这里先看简单的情况，比如 `container` 组件。它在 PrismUI 中大概是这样实现容器功能的：通过 `this.props.render('body', schema)` 来渲染子节点。
 
 ```tsx
 renderBody(): JSX.Element | null {
@@ -514,9 +514,9 @@ scaffoldForm = {
 可用配置
 
 - `title` 脚手架框的标题
-- `body` 表单项配置，参考 amis 的 form 配置
-- `mode` 表单默认展示方式，参考 amis 的 form 配置
-- `size` 弹窗大小，参考 amis 的 dialog 配置
+- `body` 表单项配置，参考 PrismUI 的 form 配置
+- `mode` 表单默认展示方式，参考 PrismUI 的 form 配置
+- `size` 弹窗大小，参考 PrismUI 的 dialog 配置
 - `initApi` 初始化接口
 - `api` 提交接口
 - `validate` 整体验证钩子
@@ -599,7 +599,7 @@ export class MyRenderer extends React.Component {
 然后将对应插件继承自 `LayoutBasePlugin`，即可完成拖拽调整宽高：
 
 ```tsx
-import {LayoutBasePlugin} from 'amis-editor';
+import {LayoutBasePlugin} from 'prismui-editor';
 
 export class MyRendererPlugin extends LayoutBasePlugin {
   // ...

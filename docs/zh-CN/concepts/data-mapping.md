@@ -27,7 +27,7 @@ order: 12
 }
 ```
 
-**tip：** 默认 amis 在解析模板字符串时，遇到`$`字符会尝试去解析该变量并替换改模板变量，如果你想输出纯文本`"${xxx}"`或`"$xxx"`，那么需要在`$`前加转义字符`"\\"`，即`"\\${xxx}"`
+**tip：** 默认 PrismUI 在解析模板字符串时，遇到`$`字符会尝试去解析该变量并替换该模板变量，如果你想输出纯文本`"${xxx}"`或`"$xxx"`，那么需要在`$`前加转义字符`"\\"`，即`"\\${xxx}"`
 
 ```schema
 {
@@ -65,7 +65,7 @@ order: 12
 
 ## 自定义 api 请求体数据格式
 
-在表单提交接口时，amis 默认的请求体数据格式可能不符合你的预期，不用担心，你可以使用数据映射定制想要的数据格式：
+在表单提交接口时，PrismUI 默认的请求体数据格式可能不符合你的预期，不用担心，你可以使用数据映射定制想要的数据格式：
 
 查看下面这种场景：
 
@@ -416,7 +416,7 @@ ${xxx | html}
 
 ### raw
 
-不同场景下，在使用数据映射时，amis 可能默认会使用`html`过滤器对数据进行转义显示，这时如果想要输出原始文本，请配置`raw`过滤器。
+不同场景下，在使用数据映射时，PrismUI 可能默认会使用`html`过滤器对数据进行转义显示，这时如果想要输出原始文本，请配置`raw`过滤器。
 
 ##### 基本用法
 
@@ -1817,7 +1817,7 @@ ${xxx | filter[:keys][:directive][:arg1]}
 
 ## 串联使用过滤器
 
-使用单一的过滤器可能无法满足你的所有需求，幸运的是 amis 支持串联使用过滤器，而前一个过滤器的值会作为下一个过滤器的入参，进行下一步处理。语法如下:
+使用单一的过滤器可能无法满足你的所有需求，幸运的是 PrismUI 支持串联使用过滤器，而前一个过滤器的值会作为下一个过滤器的入参，进行下一步处理。语法如下:
 
 ```
 ${xxx|filter1|filter2|...}
@@ -1846,14 +1846,14 @@ ${xxx|filter1|filter2|...}
 
 ## 自定义过滤器
 
-amis npm 包里面暴露了 `registerFilter` 方法，通过它可以添加自己的过滤器逻辑。
+`prismui-framework` 包里面暴露了 `registerFilter` 方法，通过它可以添加自己的过滤器逻辑。
 
 > 注意方法名不要出现 - 号，比如 a-b，要改成 a_b
 
 如：
 
 ```ts
-import {registerFilter} from 'amis';
+import {registerFilter} from 'prismui-framework';
 
 registerFilter('count', (input: string) =>
   typeof input === 'string' ? input.length : 0
@@ -1865,7 +1865,7 @@ registerFilter('count', (input: string) =>
 如果你的过滤器还要支持参数，可以参考这个例子。
 
 ```ts
-import {registerFilter} from 'amis';
+import {registerFilter} from 'prismui-framework';
 
 registerFilter('my_replace', (input: string, search: string, repalceWith) =>
   typeof input === 'string' ? input.replace(search, repalceWith) : input
