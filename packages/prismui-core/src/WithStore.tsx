@@ -1,7 +1,7 @@
 import hoistNonReactStatic from 'hoist-non-react-statics';
 import {reaction} from 'mobx';
 import {observer} from 'mobx-react';
-import {isAlive} from 'mobx-state-tree';
+import {isAlive, isStateTreeNode} from 'mobx-state-tree';
 import React from 'react';
 import {RendererProps} from './factory';
 import {IIRendererStore, IRendererStore} from './store';
@@ -32,6 +32,10 @@ function ignoreSchemaProps(key: string, value: any) {
   }
 
   return false;
+}
+
+function isStoreNodeAlive(store: any) {
+  return !!store && (!isStateTreeNode(store) || isAlive(store));
 }
 
 export function HocStoreFactory(renderer: {
@@ -69,6 +73,7 @@ export function HocStoreFactory(renderer: {
       state: any;
       unReaction: any;
       renderFn: Props['render'];
+      storeRemovalTimer?: ReturnType<typeof setTimeout>;
 
       constructor(
         props: Props,
@@ -397,19 +402,44 @@ export function HocStoreFactory(renderer: {
         }
       }
 
+      componentDidMount() {
+        this.cancelStoreRemoval();
+      }
+
       componentWillUnmount() {
         const rootStore = this.context as IRendererStore;
         const store = this.store;
 
-        this.unReaction?.();
-        if (isAlive(store)) {
-          store.setTopStore(null);
-          rootStore.removeStore(store);
-        }
+        this.scheduleStoreRemoval(rootStore, store);
+      }
 
-        // @ts-ignore
-        delete this.store;
-        this.props.storeRef?.(null);
+      cancelStoreRemoval() {
+        if (this.storeRemovalTimer) {
+          clearTimeout(this.storeRemovalTimer);
+          this.storeRemovalTimer = undefined;
+        }
+      }
+
+      scheduleStoreRemoval(rootStore: IRendererStore, store: IIRendererStore) {
+        this.cancelStoreRemoval();
+        this.storeRemovalTimer = setTimeout(() => {
+          this.storeRemovalTimer = undefined;
+
+          this.unReaction?.();
+          if (isStoreNodeAlive(store)) {
+            store.setTopStore(null);
+
+            if (isStoreNodeAlive(rootStore)) {
+              rootStore.removeStore(store);
+            }
+          }
+
+          if (this.store === store) {
+            // @ts-ignore
+            delete this.store;
+          }
+          this.props.storeRef?.(null);
+        }, 0);
       }
 
       renderChild(

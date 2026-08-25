@@ -222,6 +222,7 @@ export class EditorManager {
   readonly dnd: EditorDNDManager;
   readonly id = guid();
   disableHover = false;
+  disposed = false;
 
   // Chrome 要求必须 https 才能支持读剪贴板，所以基于内存实现
   private clipboardData: string;
@@ -2035,6 +2036,10 @@ export class EditorManager {
 
     await Promise.all(renderers.map(renderer => loadAsyncRenderer(renderer)));
 
+    if (this.disposed || !isAlive(this.store)) {
+      return;
+    }
+
     renderers.forEach(renderer => {
       const plugins = this.plugins.filter(
         plugin =>
@@ -2519,6 +2524,12 @@ export class EditorManager {
    * 销毁函数
    */
   dispose() {
+    if (this.disposed) {
+      return;
+    }
+
+    this.disposed = true;
+
     // 有些插件需要销毁，靠这个事件
     this.trigger('dispose', {
       data: this

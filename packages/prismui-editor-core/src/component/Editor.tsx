@@ -170,6 +170,7 @@ export default class Editor extends Component<EditorProps> {
   readonly mainPreviewRef = React.createRef<HTMLDivElement>();
   readonly mainPreviewBodyRef = React.createRef<any>();
   toDispose: Array<Function> = [];
+  unmountCleanupTimer?: ReturnType<typeof setTimeout>;
   lastResult: any;
   curCopySchemaData: any; // 用于记录当前复制的元素
 
@@ -253,11 +254,17 @@ export default class Editor extends Component<EditorProps> {
   }
 
   componentDidMount() {
+    this.cancelUnmountCleanup();
+
     const store = this.manager.store;
     if (this.props.isSubEditor) {
       // 等待子编辑器动画结束重新获取高亮组件位置
       setTimeout(() => {
-        store.calculateHighlightBox(store.highlightNodes.map(node => node.id));
+        if (isAlive(store)) {
+          store.calculateHighlightBox(
+            store.highlightNodes.map(node => node.id)
+          );
+        }
       }, 500);
     } else {
       this.manager.trigger('init', {
@@ -301,13 +308,33 @@ export default class Editor extends Component<EditorProps> {
   }
 
   componentWillUnmount() {
-    this.props.onEditorUnmount?.(this.manager);
-    document.removeEventListener('keydown', this.handleKeyDown);
-    window.removeEventListener('message', this.handleMessage);
-    this.toDispose.forEach(fn => fn());
-    this.toDispose = [];
-    this.manager.dispose();
-    setTimeout(() => destroy(this.store), 4);
+    this.scheduleUnmountCleanup();
+  }
+
+  cancelUnmountCleanup() {
+    if (this.unmountCleanupTimer) {
+      clearTimeout(this.unmountCleanupTimer);
+      this.unmountCleanupTimer = undefined;
+    }
+  }
+
+  scheduleUnmountCleanup() {
+    this.cancelUnmountCleanup();
+
+    this.unmountCleanupTimer = setTimeout(() => {
+      this.unmountCleanupTimer = undefined;
+
+      this.props.onEditorUnmount?.(this.manager);
+      document.removeEventListener('keydown', this.handleKeyDown);
+      window.removeEventListener('message', this.handleMessage);
+      this.toDispose.forEach(fn => fn());
+      this.toDispose = [];
+      this.manager.dispose();
+
+      if (isAlive(this.store)) {
+        destroy(this.store);
+      }
+    }, 0);
   }
 
   // 快捷功能键

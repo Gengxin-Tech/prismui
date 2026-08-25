@@ -59,6 +59,7 @@ export function makeWrapper(
     static contextType = EditorNodeContext;
     editorNode?: EditorNodeType;
     scopeId?: string;
+    unmountCleanupTimer?: ReturnType<typeof setTimeout>;
 
     UNSAFE_componentWillMount() {
       const parent = resolveContextNode(this.context as any);
@@ -121,30 +122,59 @@ export function makeWrapper(
       }
     }
 
+    componentDidMount() {
+      this.cancelUnmountCleanup();
+    }
+
     componentDidUpdate(prevProps: Props) {
       const props = this.props;
+      const editorNode = this.editorNode;
 
       if (
-        this.editorNode &&
+        editorNode &&
+        isAlive(editorNode) &&
         props.$$commonSchema !== prevProps.$$commonSchema
       ) {
-        this.editorNode.updateIsCommonConfig(!!this.props.$$commonSchema);
+        editorNode.updateIsCommonConfig(!!this.props.$$commonSchema);
       }
 
-      if (this.editorNode && props.$$formSchema !== prevProps.$$formSchema) {
-        this.editorNode.updateIsFormConfig(!!this.props.$$formSchema);
+      if (
+        editorNode &&
+        isAlive(editorNode) &&
+        props.$$formSchema !== prevProps.$$formSchema
+      ) {
+        editorNode.updateIsFormConfig(!!this.props.$$formSchema);
       }
     }
 
     componentWillUnmount() {
-      if (this.editorNode && isAlive(this.editorNode)) {
-        const parent = resolveContextNode(this.context as any);
-        parent.removeChild(this.editorNode);
-      }
+      this.scheduleUnmountCleanup();
+    }
 
-      if (this.scopeId) {
-        manager.dataSchema.removeScope(this.scopeId);
+    cancelUnmountCleanup() {
+      if (this.unmountCleanupTimer) {
+        clearTimeout(this.unmountCleanupTimer);
+        this.unmountCleanupTimer = undefined;
       }
+    }
+
+    scheduleUnmountCleanup() {
+      this.cancelUnmountCleanup();
+
+      this.unmountCleanupTimer = setTimeout(() => {
+        this.unmountCleanupTimer = undefined;
+
+        if (this.editorNode && isAlive(this.editorNode)) {
+          const parent = resolveContextNode(this.context as any);
+          if (isAlive(parent)) {
+            parent.removeChild(this.editorNode);
+          }
+        }
+
+        if (this.scopeId && manager.dataSchema.hasScope(this.scopeId)) {
+          manager.dataSchema.removeScope(this.scopeId);
+        }
+      }, 0);
     }
 
     @autobind

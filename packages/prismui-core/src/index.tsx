@@ -24,14 +24,10 @@ import {
   addSchemaFilter,
   extendDefaultEnv,
   getGlobalOptions,
-  setGlobalOptions
-} from './factory';
-import type {
-  RenderOptions,
-  RendererConfig,
-  RendererProps,
+  setGlobalOptions,
   hasAsyncRenderers
 } from './factory';
+import type {RenderOptions, RendererConfig, RendererProps} from './factory';
 import './polyfills';
 import './renderers/builtin';
 import './renderers/register';

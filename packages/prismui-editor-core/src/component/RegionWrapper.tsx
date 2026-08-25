@@ -38,6 +38,7 @@ export class RegionWrapper extends React.Component<RegionWrapperProps> {
   editorNode: EditorNodeType;
   rootDom: HTMLElement | null = null;
   placeholderDom: HTMLSpanElement | null = null;
+  unmountCleanupTimer?: ReturnType<typeof setTimeout>;
 
   setRootRef = (ref: HTMLElement | null) => {
     this.rootDom = ref;
@@ -88,6 +89,8 @@ export class RegionWrapper extends React.Component<RegionWrapperProps> {
   }
 
   componentDidMount() {
+    this.cancelUnmountCleanup();
+
     if (this.editorNode && isAlive(this.editorNode)) {
       this.editorNode &&
         this.markDom(
@@ -105,6 +108,7 @@ export class RegionWrapper extends React.Component<RegionWrapperProps> {
     }
 
     this.editorNode &&
+      isAlive(this.editorNode) &&
       this.markDom(
         this.editorNode.id,
         this.props.name,
@@ -114,10 +118,31 @@ export class RegionWrapper extends React.Component<RegionWrapperProps> {
 
   componentWillUnmount() {
     setReactRef(this.props.forwardedRef, null);
+    this.scheduleUnmountCleanup();
+  }
 
-    if (this.editorNode && isAlive(this.editorNode) && this.parentNode) {
-      this.parentNode.removeChild(this.editorNode);
+  cancelUnmountCleanup() {
+    if (this.unmountCleanupTimer) {
+      clearTimeout(this.unmountCleanupTimer);
+      this.unmountCleanupTimer = undefined;
     }
+  }
+
+  scheduleUnmountCleanup() {
+    this.cancelUnmountCleanup();
+
+    this.unmountCleanupTimer = setTimeout(() => {
+      this.unmountCleanupTimer = undefined;
+
+      if (
+        this.editorNode &&
+        isAlive(this.editorNode) &&
+        this.parentNode &&
+        isAlive(this.parentNode)
+      ) {
+        this.parentNode.removeChild(this.editorNode);
+      }
+    }, 0);
   }
 
   /**

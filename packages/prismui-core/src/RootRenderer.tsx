@@ -1,4 +1,5 @@
 import {observer} from 'mobx-react';
+import {isAlive, isStateTreeNode} from 'mobx-state-tree';
 import React from 'react';
 import type {RootProps} from './Root';
 import {IScopedContext, ScopedContext, filterTarget} from './Scoped';
@@ -17,6 +18,10 @@ import {dispatchEvent} from './utils/renderer-event';
 import {GlobalVariableItem} from './globalVar';
 import {getThemeScope} from './theme';
 import {getReactElementRef, mergeRefs} from './utils/reactRef';
+
+function isStoreNodeAlive(store: any) {
+  return !!store && (!isStateTreeNode(store) || isAlive(store));
+}
 
 export interface RootRendererProps extends RootProps {
   /**
@@ -50,6 +55,7 @@ export interface RootRendererProps extends RootProps {
 export class RootRenderer extends React.Component<RootRendererProps> {
   store: IRootStore;
   rootRef = React.createRef<HTMLElement>();
+  storeRemovalTimer?: ReturnType<typeof setTimeout>;
   static contextType = ScopedContext;
 
   constructor(props: RootRendererProps) {
@@ -125,6 +131,7 @@ export class RootRenderer extends React.Component<RootRendererProps> {
   }
 
   componentDidMount() {
+    this.cancelStoreRemoval();
     this.applyRootThemeScope();
 
     // 不要设置太早，否则组件内部的监控可能会监控不到，因为初始值可能在监控之前就设置了。
@@ -189,11 +196,32 @@ export class RootRenderer extends React.Component<RootRendererProps> {
   }
 
   componentWillUnmount() {
-    this.props.rootStore.removeStore(this.store);
+    this.scheduleStoreRemoval();
     document.removeEventListener(
       'visibilitychange',
       this.handlePageVisibilityChange
     );
+  }
+
+  cancelStoreRemoval() {
+    if (this.storeRemovalTimer) {
+      clearTimeout(this.storeRemovalTimer);
+      this.storeRemovalTimer = undefined;
+    }
+  }
+
+  scheduleStoreRemoval() {
+    this.cancelStoreRemoval();
+    const rootStore = this.props.rootStore;
+    const store = this.store;
+
+    this.storeRemovalTimer = setTimeout(() => {
+      this.storeRemovalTimer = undefined;
+
+      if (isStoreNodeAlive(rootStore) && isStoreNodeAlive(store)) {
+        rootStore.removeStore(store);
+      }
+    }, 0);
   }
 
   applyRootThemeScope() {
