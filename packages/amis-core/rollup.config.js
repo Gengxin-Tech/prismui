@@ -49,14 +49,21 @@ const external = id =>
   pkgs.some(pkg => id.startsWith(pkg) || ~id.indexOf(`node_modules/${pkg}`));
 const input = './src/index.tsx';
 
+const compiledPackageDirs = {
+  'prismui-formula': 'amis-formula'
+};
+
 /** 获取子包编译后的入口路径，需要使用相对路径 */
-const getCompiledEntryPath = (repo, format) =>
-  path.join(
+const getCompiledEntryPath = (repo, format) => {
+  const packageDir = compiledPackageDirs[repo] || repo;
+
+  return path.join(
     '..',
-    repo,
-    repo === 'amis-formula' || format === 'cjs' ? 'lib' : 'esm',
+    packageDir,
+    packageDir === 'amis-formula' || format === 'cjs' ? 'lib' : 'esm',
     'index.js'
   );
+};
 
 export default [
   {
@@ -153,7 +160,7 @@ function transpileReactCreateElement() {
 }
 
 function getPlugins(format = 'esm') {
-  const overridePaths = ['amis-formula'].reduce(
+  const overridePaths = ['prismui-formula'].reduce(
     (prev, current) => ({
       ...prev,
       [current]: [getCompiledEntryPath(current, format)]

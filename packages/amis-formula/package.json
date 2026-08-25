@@ -1,7 +1,7 @@
 {
-  "name": "amis-formula",
-  "version": "6.13.0",
-  "description": "负责 amis 里面的表达式实现，内置公式，编辑器等",
+  "name": "prismui-formula",
+  "version": "7.0.0-beta.1",
+  "description": "PrismUI expression and formula engine",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -28,9 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aisuda/amis-tpl.git"
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
   },
   "keywords": [
+    "prismui",
     "amis",
     "tpl",
     "parser",
@@ -43,9 +44,9 @@
   "author": "fex",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aisuda/amis-tpl/issues"
+    "url": "https://github.com/Gengxin-Tech/prismui/issues"
   },
-  "homepage": "https://github.com/aisuda/amis-tpl#readme",
+  "homepage": "https://github.com/Gengxin-Tech/prismui#readme",
   "dependencies": {
     "lodash": "^4.17.15",
     "moment": "^2.19.4",
@@ -113,5 +114,8 @@
       "printBasicPrototype": false
     }
   },
-  "gitHead": "37d23b4a8eb1c663bc38e8dd9040889ea1526ec4"
+  "gitHead": "37d23b4a8eb1c663bc38e8dd9040889ea1526ec4",
+  "publishConfig": {
+    "access": "public"
+  }
 }

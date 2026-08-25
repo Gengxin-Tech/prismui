@@ -1,7 +1,7 @@
 {
-  "name": "amis-theme-editor-helper",
-  "version": "2.0.26",
-  "description": "amis主题编辑器通用方法",
+  "name": "prismui-theme-editor-helper",
+  "version": "7.0.0-beta.1",
+  "description": "PrismUI theme editor helper",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -14,6 +14,7 @@
     "i18n:merge": "npx i18n merge --config=./i18nConfig.js --l=en-US"
   },
   "keywords": [
+    "prismui",
     "amis",
     "theme-editor-helper"
   ],
@@ -29,10 +30,13 @@
     ]
   },
   "dependencies": {
-    "amis": "*",
-    "amis-core": "*",
-    "amis-ui": "*",
-    "style-inject": "^0.3.0"
+    "mobx": "^6.16.1",
+    "mobx-react": "^9.2.2",
+    "style-inject": "^0.3.0",
+    "prismui-i18n-runtime": "7.0.0-beta.1",
+    "prismui-framework": "7.0.0-beta.1",
+    "prismui-core": "7.0.0-beta.1",
+    "prismui-ui": "7.0.0-beta.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
@@ -65,11 +69,22 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "amis": "*",
-    "amis-core": "*",
-    "amis-ui": "*",
-    "i18n-runtime": "1.0.10",
+    "prismui-i18n-runtime": "*",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "prismui-framework": "*",
+    "prismui-core": "*",
+    "prismui-ui": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gengxin-Tech/prismui/issues"
+  },
+  "homepage": "https://github.com/Gengxin-Tech/prismui#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -52,6 +52,36 @@ const external = id =>
   pkgs.some(pkg => id.startsWith(pkg) || ~id.indexOf(`node_modules/${pkg}`));
 const input = './src/index.tsx';
 
+const compiledPackageDirs = {
+  'prismui-formula': 'amis-formula',
+  'prismui-core': 'amis-core',
+  'prismui-ui': 'amis-ui',
+  'prismui-office-viewer': 'office-viewer',
+  'prismui-framework': 'amis',
+  'prismui-editor-core': 'amis-editor-core',
+  'prismui-theme-editor-helper': 'amis-theme-editor-helper'
+};
+
+const getCompiledEntryPath = (repo, format) => {
+  const packageDir = compiledPackageDirs[repo] || repo;
+
+  return path.join(
+    '..',
+    packageDir,
+    format === 'cjs' ? 'lib' : 'esm',
+    'index.js'
+  );
+};
+
+const getPrismUIBuildPaths = format =>
+  Object.keys(compiledPackageDirs).reduce(
+    (prev, current) => ({
+      ...prev,
+      [current]: [getCompiledEntryPath(current, format)]
+    }),
+    {}
+  );
+
 export default [
   {
     input,
@@ -115,6 +145,7 @@ function transpileDynamicImportForCJS(options) {
 }
 
 function getPlugins(format = 'esm') {
+  const paths = getPrismUIBuildPaths(format);
   const typeScriptOptions = {
     typescript: require('typescript'),
     sourceMap: false,
@@ -123,13 +154,15 @@ function getPlugins(format = 'esm') {
       ? {
           compilerOptions: {
             rootDir: './src',
-            outDir: path.dirname(module)
+            outDir: path.dirname(module),
+            paths
           }
         }
       : {
           compilerOptions: {
             rootDir: './src',
-            outDir: path.dirname(main)
+            outDir: path.dirname(main),
+            paths
           }
         })
   };

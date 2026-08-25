@@ -4,7 +4,12 @@
     "rootDir": "./",
     "module": "commonjs",
     "target": "es5",
-    "lib": ["ES6", "DOM", "ES2015", "ES2021"],
+    "lib": [
+      "ES6",
+      "DOM",
+      "ES2015",
+      "ES2021"
+    ],
     "jsx": "react",
     "moduleResolution": "node",
     "importHelpers": true,
@@ -23,15 +28,65 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
-      "amis-core": ["./packages/amis-core/src/index.tsx"],
-      "amis-formula": ["./packages/amis-formula/src/index.ts"],
-      "amis-ui": ["./packages/amis-ui/src/index.tsx"],
-      "amis": ["./packages/amis/src/index.tsx"],
-      "office-viewer": ["./packages/office-viewer/src/index.ts"],
-      "amis-editor-core": ["./packages/amis-editor-core/src/index.ts"],
-      "amis-editor": ["./packages/amis-editor/src/index.tsx"],
-      "amis-theme-editor-helper": [
+      "prismui-core": [
+        "./packages/amis-core/src/index.tsx"
+      ],
+      "prismui-core/lib/*": [
+        "./packages/amis-core/src/*"
+      ],
+      "prismui-formula": [
+        "./packages/amis-formula/src/index.ts"
+      ],
+      "prismui-formula/lib/*": [
+        "./packages/amis-formula/src/*"
+      ],
+      "prismui-ui": [
+        "./packages/amis-ui/src/index.tsx"
+      ],
+      "prismui-ui/lib/*": [
+        "./packages/amis-ui/src/*"
+      ],
+      "prismui": [
+        "./packages/amis/src/index.tsx"
+      ],
+      "prismui/lib/*": [
+        "./packages/amis/src/*"
+      ],
+      "prismui-framework": [
+        "./packages/amis/src/index.tsx"
+      ],
+      "prismui-framework/lib/*": [
+        "./packages/amis/src/*"
+      ],
+      "prismui-i18n-runtime": [
+        "./packages/prismui-i18n-runtime/es/index.js"
+      ],
+      "prismui-office-viewer": [
+        "./packages/office-viewer/src/index.ts"
+      ],
+      "prismui-office-viewer/lib/*": [
+        "./packages/office-viewer/src/*"
+      ],
+      "prismui-editor-core": [
+        "./packages/amis-editor-core/src/index.ts"
+      ],
+      "prismui-editor-core/lib/*": [
+        "./packages/amis-editor-core/src/*"
+      ],
+      "packages/amis-editor-core/lib": [
+        "./packages/amis-editor-core/src/index.ts"
+      ],
+      "prismui-editor": [
+        "./packages/amis-editor/src/index.tsx"
+      ],
+      "prismui-editor/lib/*": [
+        "./packages/amis-editor/src/*"
+      ],
+      "prismui-theme-editor-helper": [
         "./packages/amis-theme-editor-helper/src/index.ts"
+      ],
+      "prismui-theme-editor-helper/lib/*": [
+        "./packages/amis-theme-editor-helper/src/*"
       ]
     }
   },
@@ -40,9 +95,13 @@
     "watchDirectory": "useFsEvents",
     "fallbackPolling": "dynamicPriority",
     "synchronousWatchDirectory": true,
-    "excludeDirectories": ["**/node_modules"]
+    "excludeDirectories": [
+      "**/node_modules"
+    ]
   },
-  "types": ["typePatches"],
+  "types": [
+    "typePatches"
+  ],
   "references": [],
   "include": [
     "**/*.ts",

@@ -116,12 +116,12 @@ export default defineConfig({
     })
   ].filter(n => n),
   optimizeDeps: {
-    include: ['amis-formula/lib/doc'],
+    include: ['prismui-formula/lib/doc'],
     exclude: [
-      'amis-core',
-      'amis-formula',
-      'amis',
-      'amis-ui',
+      'prismui-core',
+      'prismui-formula',
+      'prismui',
+      'prismui-ui',
       'qrcode-react-next'
     ],
     esbuildOptions: {
@@ -150,51 +150,51 @@ export default defineConfig({
         replacement: 'moment/dist/locale'
       },
       {
-        find: 'amis-formula/lib',
+        find: 'prismui-formula/lib',
         replacement: path.resolve(__dirname, './packages/amis-formula/src')
       },
       {
-        find: 'amis-formula',
+        find: 'prismui-formula',
         replacement: path.resolve(__dirname, './packages/amis-formula/src')
       },
       {
-        find: 'amis-ui/lib',
+        find: 'prismui-ui/lib',
         replacement: path.resolve(__dirname, './packages/amis-ui/src')
       },
       {
-        find: 'amis-ui',
+        find: 'prismui-ui',
         replacement: path.resolve(__dirname, './packages/amis-ui/src')
       },
       {
-        find: 'amis-core',
+        find: 'prismui-core',
         replacement: path.resolve(__dirname, './packages/amis-core/src')
       },
       {
-        find: 'amis/lib',
+        find: 'prismui/lib',
         replacement: path.resolve(__dirname, './packages/amis/src')
       },
       {
-        find: 'amis/schema.json',
+        find: 'prismui/schema.json',
         replacement: path.resolve(__dirname, './packages/amis/schema.json')
       },
       {
-        find: 'amis',
+        find: 'prismui',
         replacement: path.resolve(__dirname, './packages/amis/src')
       },
       {
-        find: 'amis-editor',
+        find: 'prismui-editor',
         replacement: path.resolve(__dirname, './packages/amis-editor/src')
       },
       {
-        find: 'amis-editor-core',
+        find: 'prismui-editor-core',
         replacement: path.resolve(__dirname, './packages/amis-editor-core/src')
       },
       {
-        find: 'office-viewer',
+        find: 'prismui-office-viewer',
         replacement: path.resolve(__dirname, './packages/office-viewer/src')
       },
       {
-        find: 'amis-theme-editor-helper',
+        find: 'prismui-theme-editor-helper',
         replacement: path.resolve(
           __dirname,
           './packages/amis-theme-editor-helper/src'

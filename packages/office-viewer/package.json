@@ -1,7 +1,7 @@
 {
-  "name": "office-viewer",
-  "version": "0.3.14",
-  "description": "office 文档在线预览",
+  "name": "prismui-office-viewer",
+  "version": "7.0.0-beta.1",
+  "description": "PrismUI office document viewer",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -47,15 +47,16 @@
     "esm"
   ],
   "keywords": [
+    "prismui",
     "office",
     "word",
     "excel",
     "docx",
     "xlsx"
   ],
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/baidu/amis/issues"
+    "url": "https://github.com/Gengxin-Tech/prismui/issues"
   },
   "homepage": "https://github.com/Gengxin-Tech/prismui#readme",
   "dependencies": {
@@ -74,7 +75,6 @@
     "@types/node": "^14.0.24",
     "@types/jest": "^28.1.0",
     "@types/prettier": "^2.7.3",
-    "amis-formula": "^2.7.2",
     "jest": "^29.0.3",
     "jest-environment-jsdom": "^29.0.3",
     "puppeteer": "^22.8.0",
@@ -119,5 +119,12 @@
       "escapeString": false,
       "printBasicPrototype": false
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

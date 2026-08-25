@@ -7,11 +7,11 @@ module.exports = {
   },
   includes: ['src/renderers'],
   importInfo: {
-    source: 'i18n-runtime',
+    source: 'prismui-i18n-runtime',
     imported: 'i18n',
     local: '_i18n'
   },
-  i18nModule: 'i18n-runtime',
+  i18nModule: 'prismui-i18n-runtime',
   languages: [
     {
       name: 'en-US',

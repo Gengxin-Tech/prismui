@@ -27,30 +27,36 @@ jobs:
           NODE_OPTIONS: '--max-old-space-size=8192'
         run: |
           npm i --legacy-peer-deps
-          cd packages/office-viewer
-          npm i --legacy-peer-deps
-          cd ../../
-      - name: build amis-formula
+      - name: build prismui-formula
         run: |
-          npm run build --workspace amis-formula
-      - name: build amis-core
+          npm run build --workspace prismui\-formula
+      - name: build prismui-core
         run: |
-          npm run build --workspace amis-core
-      - name: build amis-ui
+          npm run build --workspace prismui\-core
+      - name: build prismui-ui
         run: |
-          npm run build --workspace amis-ui
-      - name: build amis
+          npm run build --workspace prismui\-ui
+      - name: build prismui-office-viewer
         run: |
-          npm run build --workspace amis
+          npm run build --workspace prismui\-office\-viewer
+      - name: build prismui
+        run: |
+          npm run build --workspace prismui
       - name: check schema.json
         run: |
           cp ./packages/amis/schema.json .
-      - name: build amis-editor-core
+      - name: build prismui-theme-editor-helper
         run: |
-          npm run build --workspace amis-editor-core
-      - name: build amis-editor
+          npm run build --workspace prismui\-theme\-editor\-helper
+      - name: build prismui-editor-core
         run: |
-          npm run build --workspace amis-editor
+          npm run build --workspace prismui\-editor\-core
+      - name: build prismui-editor
+        run: |
+          npm run build --workspace prismui\-editor
+      - name: build vite-plugin-prismui
+        run: |
+          npm run build --workspace vite\-plugin\-prismui
       - name: typescript check
         env:
           NODE_OPTIONS: '--max-old-space-size=8192'
@@ -59,7 +65,4 @@ jobs:
       - name: test
         run: |
           npm test --workspaces
-          cd packages/office-viewer
-          npm test
-          cd ../../
           sh deploy-gh-pages.sh

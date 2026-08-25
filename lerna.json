@@ -3,10 +3,15 @@
     "packages/amis-formula",
     "packages/amis-core",
     "packages/amis-ui",
+    "packages/office-viewer",
     "packages/amis",
+    "packages/prismui-i18n-runtime",
+    "packages/prismui-postcss",
+    "packages/amis-theme-editor-helper",
     "packages/amis-editor-core",
-    "packages/amis-editor"
+    "packages/amis-editor",
+    "packages/vite-plugin-amisr"
   ],
   "useWorkspaces": false,
-  "version": "6.13.0"
+  "version": "7.0.0-prerelease.5"
 }

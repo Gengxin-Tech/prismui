@@ -43,14 +43,24 @@ const external = id =>
 
 const input = './src/index.tsx';
 
+const compiledPackageDirs = {
+  'prismui-formula': 'amis-formula',
+  'prismui-core': 'amis-core',
+  'prismui-ui': 'amis-ui',
+  'prismui-office-viewer': 'office-viewer'
+};
+
 /** 获取子包编译后的入口路径，需要使用相对路径 */
-const getCompiledEntryPath = (repo, format) =>
-  path.join(
+const getCompiledEntryPath = (repo, format) => {
+  const packageDir = compiledPackageDirs[repo] || repo;
+
+  return path.join(
     '..',
-    repo,
-    repo === 'amis-formula' || format === 'cjs' ? 'lib' : 'esm',
+    packageDir,
+    packageDir === 'amis-formula' || format === 'cjs' ? 'lib' : 'esm',
     'index.js'
   );
+};
 
 export default [
   {
@@ -148,10 +158,10 @@ function transpileReactCreateElement() {
 
 function getPlugins(format = 'esm') {
   const overridePaths = [
-    'amis-formula',
-    'amis-core',
-    'amis-ui',
-    'office-viewer'
+    'prismui-formula',
+    'prismui-core',
+    'prismui-ui',
+    'prismui-office-viewer'
   ].reduce(
     (prev, current) => ({
       ...prev,
@@ -206,27 +216,27 @@ function getPlugins(format = 'esm') {
             [
               'import',
               {
-                libraryName: 'amis-ui',
+                libraryName: 'prismui-ui',
                 libraryDirectory: 'lib',
                 camel2DashComponentName: false,
                 customName: (name, file) => {
                   if (
                     ['alert', 'confirm', 'setRenderSchemaFn'].includes(name)
                   ) {
-                    return `amis-ui/lib/components/Alert`;
+                    return `prismui-ui/lib/components/Alert`;
                   } else if (['toast'].includes(name)) {
-                    return `amis-ui/lib/components/Toast`;
+                    return `prismui-ui/lib/components/Toast`;
                   } else if ('NotFound' === name) {
-                    return `amis-ui/lib/components/404`;
+                    return `prismui-ui/lib/components/404`;
                   } else if (['withStore', 'withRemoteConfig', 'HTMLFilterContext'].includes(name)) {
-                    return `amis-ui/lib/${name}`;
+                    return `prismui-ui/lib/${name}`;
                   } /* else if (name[0].toUpperCase() === name[0]) {
-                    return `amis-ui/lib/components/${name}`;
+                    return `prismui-ui/lib/components/${name}`;
                   }*/
-                  return `amis-ui/lib/components/${name}`;
+                  return `prismui-ui/lib/components/${name}`;
                 }
               },
-              'amis-ui'
+              'prismui-ui'
             ]
           ]
         }),

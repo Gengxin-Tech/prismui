@@ -21,9 +21,9 @@
     "typeRoots": ["./node_modules/@types", "./types"],
     "skipLibCheck": true,
     "paths": {
-      "amis-core": ["../amis-core/src/index.tsx"],
-      "amis-formula": ["../amis-formula/src/index.ts"],
-      "amis-ui": ["../amis-ui/src/index.tsx"]
+      "prismui-core": ["../amis-core/src/index.tsx"],
+      "prismui-formula": ["../amis-formula/src/index.ts"],
+      "prismui-ui": ["../amis-ui/src/index.tsx"]
     }
   },
   "include": ["src/**/*"],

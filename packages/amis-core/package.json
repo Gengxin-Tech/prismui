@@ -1,7 +1,7 @@
 {
-  "name": "amis-core",
-  "version": "6.13.0",
-  "description": "amis-core",
+  "name": "prismui-core",
+  "version": "7.0.0-beta.1",
+  "description": "PrismUI core runtime",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -60,7 +60,6 @@
   "dependencies": {
     "@rc-component/mini-decimal": "^1.0.1",
     "@uiw/react-json-view": "1.12.0",
-    "amis-formula": "^6.13.0",
     "classnames": "2.3.2",
     "cross-env": "^7.0.3",
     "file-saver": "^2.0.2",
@@ -78,12 +77,13 @@
     "react-overlays": "5.1.1",
     "tslib": "^2.3.1",
     "uncontrollable": "7.2.1",
-    "react-is": ">=16.8.6"
+    "react-is": ">=16.8.6",
+    "prismui-formula": "7.0.0-beta.1"
   },
   "peerDependencies": {
-    "amis-formula": "*",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "prismui-formula": "*"
   },
   "jest": {
     "testEnvironment": "jsdom",
@@ -109,8 +109,8 @@
     "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/../../__mocks__/styleMock.js",
       "\\.(svg)$": "<rootDir>/../../__mocks__/svgMock.js",
-      "^amis\\-core$": "<rootDir>/../../packages/amis-core/src/index.tsx",
-      "^amis\\-formula$": "<rootDir>/../../packages/amis-formula/src/index.ts"
+      "^prismui-core$": "<rootDir>/../../packages/amis-core/src/index.tsx",
+      "^prismui-formula$": "<rootDir>/../../packages/amis-formula/src/index.ts"
     },
     "setupFilesAfterEnv": [
       "<rootDir>/../amis-core/__tests__/jest.setup.js"
@@ -120,5 +120,16 @@
       "/.rollup.cache/"
     ]
   },
-  "gitHead": "37d23b4a8eb1c663bc38e8dd9040889ea1526ec4"
+  "gitHead": "37d23b4a8eb1c663bc38e8dd9040889ea1526ec4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gengxin-Tech/prismui/issues"
+  },
+  "homepage": "https://github.com/Gengxin-Tech/prismui#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }

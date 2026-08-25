@@ -16,15 +16,15 @@ rm -rf output
 echo "===rollup build==="
 NODE_ENV=production ../../node_modules/.bin/rollup -c
 
-# 从 amis-ui 中复制 css
+# 从 prismui-ui 中复制 css
 mkdir -p lib/themes
-cp ../../node_modules/amis-ui/lib/themes/ang.css lib/themes/ang.css
-cp ../../node_modules/amis-ui/lib/themes/dark.css lib/themes/dark.css
-cp ../../node_modules/amis-ui/lib/themes/antd.css lib/themes/antd.css
-cp ../../node_modules/amis-ui/lib/themes/cxd.css lib/themes/cxd.css
-cp ../../node_modules/amis-ui/lib/themes/cxd.css lib/themes/prismui.css
-cp ../../node_modules/amis-ui/lib/themes/default.css lib/themes/default.css
-cp ../../node_modules/amis-ui/lib/helper.css lib/helper.css
+cp ../../node_modules/prismui-ui/lib/themes/ang.css lib/themes/ang.css
+cp ../../node_modules/prismui-ui/lib/themes/dark.css lib/themes/dark.css
+cp ../../node_modules/prismui-ui/lib/themes/antd.css lib/themes/antd.css
+cp ../../node_modules/prismui-ui/lib/themes/cxd.css lib/themes/cxd.css
+cp ../../node_modules/prismui-ui/lib/themes/cxd.css lib/themes/prismui.css
+cp ../../node_modules/prismui-ui/lib/themes/default.css lib/themes/default.css
+cp ../../node_modules/prismui-ui/lib/helper.css lib/helper.css
 
 # 生成 sdk
 if [ "$SDK_BUILDER" = "fis3" ]; then

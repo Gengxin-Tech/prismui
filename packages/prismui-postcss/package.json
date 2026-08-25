@@ -1,0 +1,39 @@
+{
+  "name": "prismui-postcss",
+  "version": "7.0.0-beta.1",
+  "description": "PostCSS parser utility for PrismUI editor",
+  "main": "lib/index.min.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.min.js",
+      "import": "./lib/index.min.js"
+    }
+  },
+  "scripts": {
+    "build": "node -e \"\"",
+    "test": "echo \"Warnings: no test specified\""
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "prismui",
+    "postcss",
+    "css"
+  ],
+  "author": "@fex",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gengxin-Tech/prismui/issues"
+  },
+  "homepage": "https://github.com/Gengxin-Tech/prismui#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

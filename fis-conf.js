@@ -175,7 +175,7 @@ fis.match('tinymce/plugins/*/index.js', {
   ignoreDependencies: false
 });
 
-fis.match(/(?:mpegts\.js|object\-inspect\/util\.inspect\.js)/, {
+fis.match(/(?:mpegts\.js|object-inspect\/util\.inspect\.js)/, {
   ignoreDependencies: true
 });
 

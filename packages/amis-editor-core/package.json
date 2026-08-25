@@ -1,7 +1,7 @@
 {
-  "name": "amis-editor-core",
-  "version": "6.13.0",
-  "description": "amis 可视化编辑器",
+  "name": "prismui-editor-core",
+  "version": "7.0.0-beta.1",
+  "description": "PrismUI visual editor core",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -36,6 +36,7 @@
     "format": "prettier --write \"{src,scss}/**/**/*.{js,jsx,ts,tsx,vue,scss,json}\""
   },
   "keywords": [
+    "prismui",
     "amis",
     "editor"
   ],
@@ -47,7 +48,6 @@
     "static"
   ],
   "dependencies": {
-    "amis-theme-editor-helper": "*",
     "axios": "1.19.0",
     "deep-diff": "1.0.2",
     "json-ast-comments": "^1.1.0",
@@ -56,7 +56,9 @@
     "mobx-react": "^9.2.2",
     "mobx-state-tree": "^7.3.2",
     "react-frame-component": "^5.2.6",
-    "sortablejs": "^1.14.0"
+    "sortablejs": "^1.14.0",
+    "prismui-i18n-runtime": "7.0.0-beta.1",
+    "prismui-theme-editor-helper": "7.0.0-beta.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
@@ -111,13 +113,24 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "amis": "*",
-    "amis-core": "*",
-    "amis-formula": "*",
-    "amis-theme-editor-helper": "*",
-    "amis-ui": "*",
-    "i18n-runtime": "1.0.10",
+    "prismui-i18n-runtime": "*",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "prismui-framework": "*",
+    "prismui-core": "*",
+    "prismui-ui": "*",
+    "prismui-formula": "*",
+    "prismui-theme-editor-helper": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gengxin-Tech/prismui/issues"
+  },
+  "homepage": "https://github.com/Gengxin-Tech/prismui#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }

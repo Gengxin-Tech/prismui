@@ -1,0 +1,31 @@
+{
+  "name": "prismui-i18n-runtime",
+  "version": "7.0.0-beta.1",
+  "description": "PrismUI i18n runtime helpers",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "build": "node -e \"\"",
+    "build-esm": "node -e \"\"",
+    "test": "node -e \"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
+  },
+  "keywords": [
+    "prismui",
+    "amis",
+    "i18n"
+  ],
+  "author": "qhy",
+  "license": "ISC",
+  "dependencies": {
+    "prismui-core": "7.0.0-beta.1"
+  }
+}

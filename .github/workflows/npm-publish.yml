@@ -1,0 +1,73 @@
+name: npm publish PrismUI
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Run a dry-run pack check or publish packages.
+        type: choice
+        required: true
+        default: dry-run
+        options:
+          - dry-run
+          - publish
+      tag:
+        description: npm dist-tag to publish under.
+        type: string
+        required: true
+        default: prismui-next
+      build:
+        description: Run package builds before publish checks.
+        type: boolean
+        required: true
+        default: true
+  push:
+    tags:
+      - 'prismui-v*'
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: npm-publish-prismui-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'Gengxin-Tech/prismui'
+    runs-on: ubuntu-latest
+    environment: npm-publish
+    env:
+      NODE_OPTIONS: '--max-old-space-size=8192'
+      PRISMUI_NPM_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || 'latest' }}
+      PRISMUI_RELEASE_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'publish' }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+
+      - name: Install root dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build packages
+        if: github.event_name != 'workflow_dispatch' || inputs.build
+        run: npm run build --workspaces
+
+      - name: Verify PrismUI publish plan
+        run: npm run release:prismui:verify -- --tag "$PRISMUI_NPM_TAG"
+
+      - name: Pack dry run
+        if: env.PRISMUI_RELEASE_MODE == 'dry-run'
+        run: npm run release:prismui:pack -- --tag "$PRISMUI_NPM_TAG"
+
+      - name: Publish packages
+        if: env.PRISMUI_RELEASE_MODE == 'publish'
+        run: npm run release:prismui:publish -- --tag "$PRISMUI_NPM_TAG" --provenance

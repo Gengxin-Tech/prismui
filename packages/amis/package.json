@@ -1,7 +1,7 @@
 {
-  "name": "amis",
-  "version": "6.13.0",
-  "description": "一种MIS页面生成工具",
+  "name": "prismui-framework",
+  "version": "7.0.0-beta.1",
+  "description": "PrismUI UI Schema rendering framework",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -18,9 +18,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Gengxin-Tech/prismui.git"
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
   },
   "keywords": [
+    "prismui",
     "react",
     "amis",
     "mis",
@@ -37,8 +38,6 @@
     }
   ],
   "dependencies": {
-    "amis-core": "^6.13.0",
-    "amis-ui": "^6.13.0",
     "attr-accept": "2.2.2",
     "blueimp-canvastoblob": "2.1.0",
     "classnames": "2.3.2",
@@ -63,7 +62,6 @@
     "moment": "^2.19.4",
     "moment-timezone": "^0.5.34",
     "mpegts.js": "^1.6.10",
-    "office-viewer": "*",
     "prop-types": "^15.6.1",
     "qrcode-react-next": "1.0.0",
     "react-cropper": "^2.1.8",
@@ -74,7 +72,10 @@
     "sortablejs": "1.15.0",
     "tslib": "^2.3.1",
     "xlsx": "^0.18.5",
-    "mobx-react-lite": "^4.1.1"
+    "mobx-react-lite": "^4.1.1",
+    "prismui-core": "7.0.0-beta.1",
+    "prismui-ui": "7.0.0-beta.1",
+    "prismui-office-viewer": "7.0.0-beta.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
@@ -233,10 +234,10 @@
       "\\.(css|less|sass|scss)$": "<rootDir>/../../__mocks__/styleMock.js",
       "\\.(svg)$": "<rootDir>/../../__mocks__/svgMock.js",
       "\\.svg\\.js$": "<rootDir>/../../__mocks__/svgJsMock.js",
-      "^amis\\-core$": "<rootDir>/../amis-core/src/index.tsx",
-      "^amis\\-ui$": "<rootDir>/../amis-ui/src/index.tsx",
-      "^amis\\-ui/lib/(.*)$": "<rootDir>/../amis-ui/src/$1",
-      "^amis\\-formula$": "<rootDir>/../amis-formula/src/index.ts"
+      "^prismui-core$": "<rootDir>/../amis-core/src/index.tsx",
+      "^prismui-ui$": "<rootDir>/../amis-ui/src/index.tsx",
+      "^prismui-ui/lib/(.*)$": "<rootDir>/../amis-ui/src/$1",
+      "^prismui-formula$": "<rootDir>/../amis-formula/src/index.ts"
     },
     "setupFilesAfterEnv": [
       "<rootDir>/../amis-core/__tests__/jest.setup.js",
@@ -252,11 +253,18 @@
     }
   },
   "peerDependencies": {
-    "amis-core": "*",
-    "amis-ui": "*",
-    "office-viewer": "*",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "prismui-core": "*",
+    "prismui-ui": "*",
+    "prismui-office-viewer": "*"
   },
-  "gitHead": "37d23b4a8eb1c663bc38e8dd9040889ea1526ec4"
+  "gitHead": "37d23b4a8eb1c663bc38e8dd9040889ea1526ec4",
+  "bugs": {
+    "url": "https://github.com/Gengxin-Tech/prismui/issues"
+  },
+  "homepage": "https://github.com/Gengxin-Tech/prismui#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -1,8 +1,8 @@
 {
-  "name": "vite-plugin-amisr",
-  "version": "0.0.5",
+  "name": "vite-plugin-prismui",
+  "version": "7.0.0-beta.1",
   "type": "module",
-  "description": "将 amis json 文件转换为 react 组件",
+  "description": "Transform PrismUI JSON schema files into React components",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -19,9 +19,10 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Warnings: no test specified\""
   },
   "keywords": [
+    "prismui",
     "dsl",
     "amis",
     "amisr"
@@ -41,5 +42,16 @@
   },
   "dependencies": {
     "@rollup/pluginutils": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gengxin-Tech/prismui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gengxin-Tech/prismui/issues"
+  },
+  "homepage": "https://github.com/Gengxin-Tech/prismui#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }
