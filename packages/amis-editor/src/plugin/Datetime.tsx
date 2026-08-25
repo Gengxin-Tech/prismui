@@ -1,6 +1,6 @@
-import {registerEditorPlugin, tipedLabel} from 'amis-editor-core';
-import {BaseEventContext} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin, tipedLabel} from 'prismui-editor-core';
+import {BaseEventContext} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 import {DatePlugin} from './Date';
 
 const dateFormatOptions = [

@@ -15,8 +15,8 @@ import {
   Spinner,
   Tag,
   autobind
-} from 'amis';
-import {TooltipWrapper} from 'amis-ui';
+} from 'prismui-framework';
+import {TooltipWrapper} from 'prismui-ui';
 import {DSFeatureEnum, ModelDSBuilderKey} from '../../builder/constants';
 import {traverseSchemaDeep} from '../../builder/utils';
 import {deepRemove} from '../../plugin/CRUD2/utils';
@@ -26,8 +26,8 @@ import type {
   DSBuilderInterface,
   CRUDScaffoldConfig
 } from '../../builder';
-import type {EditorNodeType} from 'amis-editor-core';
-import type {FormControlProps, PlainObject} from 'amis';
+import type {EditorNodeType} from 'prismui-editor-core';
+import type {FormControlProps, PlainObject} from 'prismui-framework';
 
 interface Option {
   label: string;

@@ -1,8 +1,8 @@
 import React from 'react';
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
-import type {SchemaObject} from 'amis';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
+import type {SchemaObject} from 'prismui-framework';
 import {generateId} from '../util';
 
 export class AlertPlugin extends BasePlugin {

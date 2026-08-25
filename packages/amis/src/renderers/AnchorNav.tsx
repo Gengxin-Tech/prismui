@@ -1,8 +1,8 @@
 import React from 'react';
-import {Renderer, RendererProps, BaseSchemaWithoutType} from 'amis-core';
-import {AnchorNav as CAnchorNav, AnchorNavSection} from 'amis-ui';
-import {isVisible, autobind} from 'amis-core';
-import {filter, AMISSchemaCollection, AMISSchemaBase} from 'amis-core';
+import {Renderer, RendererProps, BaseSchemaWithoutType} from 'prismui-core';
+import {AnchorNav as CAnchorNav, AnchorNavSection} from 'prismui-ui';
+import {isVisible, autobind} from 'prismui-core';
+import {filter, AMISSchemaCollection, AMISSchemaBase} from 'prismui-core';
 import {BaseSchema, AMISClassName} from '../Schema';
 
 /**

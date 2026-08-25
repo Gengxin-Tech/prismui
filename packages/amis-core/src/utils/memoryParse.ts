@@ -1,5 +1,5 @@
-import {parse} from 'amis-formula';
-import type {ASTNode} from 'amis-formula';
+import {parse} from 'prismui-formula';
+import type {ASTNode} from 'prismui-formula';
 import VisitedCache from './visitedCache';
 
 // NOTE 缓存前40条表达式

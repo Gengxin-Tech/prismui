@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import {themeable, ThemeProps} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
 import {radiusStartEndPoint} from '../utils/vectorComputed';
 
 export type IShapeType =

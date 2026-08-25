@@ -9,9 +9,9 @@ import {
   filter,
   getPropValue,
   resolveVariableAndFilter
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {MultilineText} from 'amis-ui';
+import {MultilineText} from 'prismui-ui';
 
 /**
  * MultilineText

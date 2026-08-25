@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import {matchSorter} from 'match-sorter';
-import {FormItem, FormControlProps, autobind, AMISFormItem} from 'amis-core';
+import {FormItem, FormControlProps, autobind, AMISFormItem} from 'prismui-core';
 import {
   Modal,
   Button,
@@ -9,7 +9,7 @@ import {
   SearchBox,
   Icon,
   SpinnerExtraProps
-} from 'amis-ui';
+} from 'prismui-ui';
 
 import debounce from 'lodash/debounce';
 import find from 'lodash/find';

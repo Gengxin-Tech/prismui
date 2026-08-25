@@ -3,8 +3,8 @@ import omit from 'lodash/omit';
 import debounce from 'lodash/debounce';
 import cx from 'classnames';
 import {matchSorter} from 'match-sorter';
-import {SpinnerExtraProps, Tree as TreeSelector} from 'amis-ui';
-import {value2array} from 'amis-ui/lib/components/Select';
+import {SpinnerExtraProps, Tree as TreeSelector} from 'prismui-ui';
+import {value2array} from 'prismui-ui/lib/components/Select';
 import {
   Option,
   OptionsControl,
@@ -25,11 +25,11 @@ import {
   CustomStyle,
   AMISFormItemWithOptions,
   AMISSchemaCollection
-} from 'amis-core';
-import {Spinner, SearchBox} from 'amis-ui';
+} from 'prismui-core';
+import {Spinner, SearchBox} from 'prismui-ui';
 import {FormOptionsSchema, SchemaApi} from '../../Schema';
 import {supportStatic} from './StaticHoc';
-import type {ItemRenderStates} from 'amis-ui/lib/components/Selection';
+import type {ItemRenderStates} from 'prismui-ui/lib/components/Selection';
 
 type NodeBehaviorType = 'unfold' | 'check';
 

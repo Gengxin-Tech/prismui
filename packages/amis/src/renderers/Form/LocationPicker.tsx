@@ -8,19 +8,19 @@ import {
   autobind,
   getVariable,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 import {
   FormItem,
   FormBaseControl,
   FormControlProps,
   resolveEventData
-} from 'amis-core';
-import {Api, ActionObject} from 'amis-core';
-import {LocationPicker, Alert2, BaiduMapPicker, Icon} from 'amis-ui';
-import {filter} from 'amis-core';
+} from 'prismui-core';
+import {Api, ActionObject} from 'prismui-core';
+import {LocationPicker, Alert2, BaiduMapPicker, Icon} from 'prismui-ui';
+import {filter} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
-import {isMobile} from 'amis-core';
+import {isMobile} from 'prismui-core';
 /**
  * Location 选点组件
  * 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/form/location

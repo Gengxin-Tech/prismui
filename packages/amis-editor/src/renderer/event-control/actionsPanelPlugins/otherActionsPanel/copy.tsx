@@ -1,7 +1,7 @@
 import React from 'react';
 import {registerActionPanel} from '../../actionsPanelManager';
 import {getArgsWrapper} from '../../helper';
-import {getSchemaTpl} from 'amis-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
 registerActionPanel('copy', {
   label: '复制内容',

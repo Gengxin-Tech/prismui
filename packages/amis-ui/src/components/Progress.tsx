@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import {Circle} from '@rc-component/progress';
-import {ClassNamesFn, ClassName, themeable, ThemeProps} from 'amis-core';
+import {ClassNamesFn, ClassName, themeable, ThemeProps} from 'prismui-core';
 
 interface ColorProps {
   value: number;

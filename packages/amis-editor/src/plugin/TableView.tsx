@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import {PluginInterface, registerEditorPlugin} from 'amis-editor-core';
+import {PluginInterface, registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -15,11 +15,11 @@ import {
   VRendererConfig,
   ContextMenuEventContext,
   ContextMenuItem
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {VRenderer} from 'amis-editor-core';
-import {type TableViewSchema} from 'amis';
-import {JSONGetById} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {VRenderer} from 'prismui-editor-core';
+import {type TableViewSchema} from 'prismui-framework';
+import {JSONGetById} from 'prismui-editor-core';
 import {TableViewEditor} from '../component/TableViewEditor';
 import {generateId} from '../util';
 

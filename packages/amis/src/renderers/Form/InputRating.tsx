@@ -5,14 +5,14 @@ import {
   FormBaseControl,
   resolveEventData,
   getVariable
-} from 'amis-core';
-import {autobind, createObject, filter, toNumber} from 'amis-core';
-import {ActionObject} from 'amis-core';
-import {Rating} from 'amis-ui';
-import type {textPositionType} from 'amis-ui/lib/components/Rating';
+} from 'prismui-core';
+import {autobind, createObject, filter, toNumber} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
+import {Rating} from 'prismui-ui';
+import type {textPositionType} from 'prismui-ui/lib/components/Rating';
 import {FormBaseControlSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
-import {AMISFormItem} from 'amis-core';
+import {AMISFormItem} from 'prismui-core';
 
 /**
  * Rating

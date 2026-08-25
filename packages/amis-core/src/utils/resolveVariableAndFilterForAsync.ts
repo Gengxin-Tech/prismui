@@ -1,4 +1,4 @@
-import {AsyncEvaluator} from 'amis-formula';
+import {AsyncEvaluator} from 'prismui-formula';
 import {memoryParse} from './memoryParse';
 
 let formulaEvalErrorHandler: (

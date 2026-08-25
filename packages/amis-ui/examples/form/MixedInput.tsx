@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, InputTable, Form, Controller, MixedInput} from 'amis-ui';
+import {Button, InputTable, Form, Controller, MixedInput} from 'prismui-ui';
 
 export default function MixedInputExamples() {
   const handleSubmit = React.useCallback((data: any) => {

@@ -11,11 +11,11 @@ const placeholderHtml = fs.readFileSync(placeholderFile, 'utf8');
 const expectedCssAssets = [
   '@fortawesome/fontawesome-free/css/all.css',
   '@fortawesome/fontawesome-free/css/v4-shims.css',
-  'amis-ui/scss/themes/ang.scss',
-  'amis-ui/scss/themes/cxd.scss',
-  'amis-ui/scss/themes/dark.scss',
-  'amis-ui/scss/themes/antd.scss',
-  'amis-ui/scss/helper.scss'
+  'prismui-ui/scss/themes/ang.scss',
+  'prismui-ui/scss/themes/cxd.scss',
+  'prismui-ui/scss/themes/dark.scss',
+  'prismui-ui/scss/themes/antd.scss',
+  'prismui-ui/scss/helper.scss'
 ];
 const expectedExternalScripts = ['./mod.js'];
 const knownAssets = new Set(expectedCssAssets.concat(expectedExternalScripts));

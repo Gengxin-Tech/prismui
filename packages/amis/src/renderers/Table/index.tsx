@@ -46,8 +46,8 @@ import {
   getMatchedEventTargets,
   loopTooMuch,
   filterClassNameObject
-} from 'amis-core';
-import {getStableClassSelector} from 'amis-core';
+} from 'prismui-core';
+import {getStableClassSelector} from 'prismui-core';
 import {
   Button,
   Icon,
@@ -55,7 +55,7 @@ import {
   Checkbox,
   Spinner,
   SpinnerExtraProps
-} from 'amis-ui';
+} from 'prismui-ui';
 import {TableCell} from './TableCell';
 import type {AMISAutoGenerateFilterObject} from '../CRUD';
 import {HeadCellFilterDropDown} from './HeadCellFilterDropdown';
@@ -92,7 +92,7 @@ import type {
   AMISBadgeBase,
   AMISSchemaBase,
   AMISRemarkBase
-} from 'amis-core';
+} from 'prismui-core';
 
 /**
  * 表格列配置，不指定类型时默认为文本类型

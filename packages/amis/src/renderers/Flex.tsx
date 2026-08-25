@@ -11,8 +11,8 @@ import {
   setThemeClassName,
   AMISSchemaBase,
   AMISSchemaCollection
-} from 'amis-core';
-import {Schema} from 'amis-core';
+} from 'prismui-core';
+import {Schema} from 'prismui-core';
 import {BaseSchema, SchemaObject} from '../Schema';
 
 /**

@@ -7,10 +7,10 @@ import {
   BaseEventContext,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
-import {getRendererByName} from 'amis-core';
+} from 'prismui-editor-core';
+import {getRendererByName} from 'prismui-core';
 import omit from 'lodash/omit';
-import type {Schema} from 'amis';
+import type {Schema} from 'prismui-framework';
 import {ValidatorTag} from '../../validator';
 import {
   getEventControlConfig,

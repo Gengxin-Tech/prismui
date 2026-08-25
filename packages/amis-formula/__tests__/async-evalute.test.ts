@@ -614,7 +614,7 @@ test('async-evalute:namespace', async () => {
   });
   // 被认为是减操作
   expect(await evaluateForAsync('${ls: spec-var-name}', {})).toBe(0);
-  expect(await evaluateForAsync('${ls: spec\\-var\\-name}', {})).toBe(
+  expect(await evaluateForAsync('${ls: spec-var-name}', {})).toBe(
     'you are right'
   );
   expect(await evaluateForAsync('${ls: &["spec-var-name"]}', {})).toBe(

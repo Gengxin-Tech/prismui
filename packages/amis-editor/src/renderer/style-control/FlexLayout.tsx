@@ -3,8 +3,8 @@
  */
 
 import React, {useEffect, useState} from 'react';
-import {InputBox, TooltipWrapper} from 'amis-ui';
-import {FormControlProps, FormItem} from 'amis-core';
+import {InputBox, TooltipWrapper} from 'prismui-ui';
+import {FormControlProps, FormItem} from 'prismui-core';
 import cx from 'classnames';
 
 function LayoutItem({

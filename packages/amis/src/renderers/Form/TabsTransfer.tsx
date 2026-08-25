@@ -3,17 +3,17 @@ import {
   OptionsControl,
   resolveEventData,
   getVariable
-} from 'amis-core';
+} from 'prismui-core';
 import React from 'react';
 import find from 'lodash/find';
-import {Spinner, SpinnerExtraProps} from 'amis-ui';
+import {Spinner, SpinnerExtraProps} from 'prismui-ui';
 import {
   AMISTransferSchemaBase,
   BaseTransferRenderer,
   AMISTransferSchema
 } from './Transfer';
-import {TabsTransfer} from 'amis-ui';
-import {Option, optionValueCompare} from 'amis-core';
+import {TabsTransfer} from 'prismui-ui';
+import {Option, optionValueCompare} from 'prismui-core';
 import {
   autobind,
   string2regExp,
@@ -22,10 +22,10 @@ import {
   findTreeIndex,
   getTree,
   spliceTree
-} from 'amis-core';
-import {BaseSelection} from 'amis-ui/lib/components/Selection';
-import {ActionObject, toNumber} from 'amis-core';
-import type {ItemRenderStates} from 'amis-ui/lib/components/Selection';
+} from 'prismui-core';
+import {BaseSelection} from 'prismui-ui/lib/components/Selection';
+import {ActionObject, toNumber} from 'prismui-core';
+import type {ItemRenderStates} from 'prismui-ui/lib/components/Selection';
 import {supportStatic} from './StaticHoc';
 import {matchSorter} from 'match-sorter';
 

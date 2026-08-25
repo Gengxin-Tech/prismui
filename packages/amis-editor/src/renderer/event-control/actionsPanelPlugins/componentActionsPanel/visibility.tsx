@@ -1,5 +1,5 @@
 import React from 'react';
-import {getSchemaTpl, defaultValue} from 'amis-editor-core';
+import {getSchemaTpl, defaultValue} from 'prismui-editor-core';
 import {registerActionPanel} from '../../actionsPanelManager';
 import {renderCmptSelect, renderCmptIdInput} from './helper';
 import {buildLinkActionDesc} from '../../helper';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {resizeSensor} from 'amis-core';
+import {resizeSensor} from 'prismui-core';
 
 export type Size = {
   height: number;

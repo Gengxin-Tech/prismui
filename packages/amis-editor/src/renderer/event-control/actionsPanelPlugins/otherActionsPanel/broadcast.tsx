@@ -1,6 +1,6 @@
 import React from 'react';
 import {registerActionPanel} from '../../actionsPanelManager';
-import {getSchemaTpl, EditorManager} from 'amis-editor-core';
+import {getSchemaTpl, EditorManager} from 'prismui-editor-core';
 
 registerActionPanel('broadcast', {
   label: '全局广播事件',

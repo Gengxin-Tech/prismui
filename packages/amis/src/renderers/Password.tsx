@@ -2,9 +2,9 @@
  * @file Password
  */
 import React from 'react';
-import {AMISSchemaBase, autobind, Renderer, RendererProps} from 'amis-core';
+import {AMISSchemaBase, autobind, Renderer, RendererProps} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {Icon} from 'amis-ui';
+import {Icon} from 'prismui-ui';
 
 /**
  * Password

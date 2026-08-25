@@ -4,13 +4,13 @@
  */
 
 import React from 'react';
-import {autobind} from 'amis';
+import {autobind} from 'prismui-framework';
 import {
   EditorManager,
   JSONPipeIn,
   BuildPanelEventContext,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {DSBuilderManager, DSFeatureEnum} from '../../builder';
 import {Table2RenderereEvent, Table2RendererAction} from '../Table2';
 import {BaseCRUDPlugin} from './BaseCRUD';

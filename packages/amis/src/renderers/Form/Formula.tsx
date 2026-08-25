@@ -1,9 +1,9 @@
 import React from 'react';
-import {FormItem, FormControlProps, FormBaseControl} from 'amis-core';
-import {evalJS, filter} from 'amis-core';
-import {autobind, isObjectShallowModified, setVariable} from 'amis-core';
+import {FormItem, FormControlProps, FormBaseControl} from 'prismui-core';
+import {evalJS, filter} from 'prismui-core';
+import {autobind, isObjectShallowModified, setVariable} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
-import {AMISFormItem} from 'amis-core';
+import {AMISFormItem} from 'prismui-core';
 
 /**
  * 公式功能控件。

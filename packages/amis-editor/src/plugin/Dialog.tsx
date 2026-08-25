@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Drawer, Icon, Modal} from 'amis-ui';
+import {Button, Drawer, Icon, Modal} from 'prismui-ui';
 import {
   registerEditorPlugin,
   BaseEventContext,
@@ -17,14 +17,14 @@ import {
   PluginEvent,
   ChangeEventContext,
   JSONPipeOut
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   getEventControlConfig,
   getActionCommonProps
 } from '../renderer/event-control/helper';
 import omit from 'lodash/omit';
-import type {RendererConfig, Schema} from 'amis-core';
-import {ModalProps} from 'amis-ui/lib/components/Modal';
+import type {RendererConfig, Schema} from 'prismui-core';
+import {ModalProps} from 'prismui-ui/lib/components/Modal';
 import ModalSettingPanel from '../component/ModalSettingPanel';
 import find from 'lodash/find';
 

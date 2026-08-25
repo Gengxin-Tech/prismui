@@ -1,5 +1,5 @@
-import {Button} from 'amis';
-import type {SchemaCollection} from 'amis';
+import {Button} from 'prismui-framework';
+import type {SchemaCollection} from 'prismui-framework';
 import React from 'react';
 import {
   BaseEventContext,
@@ -13,7 +13,7 @@ import {
   JSONPipeOut,
   EditorNodeType,
   jsonToJsonSchema
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {generateId} from '../../util';
 
 export class SubFormControlPlugin extends BasePlugin {

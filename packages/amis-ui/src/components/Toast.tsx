@@ -13,10 +13,10 @@ import Transition, {
 import React from 'react';
 import cx from 'classnames';
 import Html from './Html';
-import {guid, autobind, noop, isMobile} from 'amis-core';
-import {ClassNamesFn, themeable, classnames, ThemeProps} from 'amis-core';
+import {guid, autobind, noop, isMobile} from 'prismui-core';
+import {ClassNamesFn, themeable, classnames, ThemeProps} from 'prismui-core';
 import {Icon} from './icons';
-import {LocaleProps, localeable, TranslateFn} from 'amis-core';
+import {LocaleProps, localeable, TranslateFn} from 'prismui-core';
 import groupBy from 'lodash/groupBy';
 
 interface Config {
@@ -219,7 +219,7 @@ export class ToastComponent extends React.Component<
         <div
           key={position}
           className={cx(
-            `Toast-wrap Toast-wrap--${position.replace(/\-(\w)/g, (_, l) =>
+            `Toast-wrap Toast-wrap--${position.replace(/-(\w)/g, (_, l) =>
               l.toUpperCase()
             )}`,
             {

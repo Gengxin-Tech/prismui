@@ -1,5 +1,5 @@
-import type {BaseEventContext} from 'amis-editor-core';
-import {registerEditorPlugin, getSchemaTpl} from 'amis-editor-core';
+import type {BaseEventContext} from 'prismui-editor-core';
+import {registerEditorPlugin, getSchemaTpl} from 'prismui-editor-core';
 import {ContainerPlugin} from '../Container';
 
 export default class Layout_free_container extends ContainerPlugin {

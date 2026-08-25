@@ -8,7 +8,7 @@ import {
   createObject,
   extractObjectChain,
   GlobalVariableItem
-} from 'amis-core';
+} from 'prismui-core';
 import {cast, getEnv, Instance, types} from 'mobx-state-tree';
 import {
   diff,
@@ -52,8 +52,8 @@ import {
   JSONPipeOut,
   JSONUpdate
 } from '../util';
-import type {JSONSchema, Schema} from 'amis';
-import {toast, resolveVariable} from 'amis';
+import type {JSONSchema, Schema} from 'prismui-framework';
+import {toast, resolveVariable} from 'prismui-framework';
 import find from 'lodash/find';
 import {InsertSubRendererPanel} from '../component/Panel/InsertSubRendererPanel';
 import {AvailableRenderersPanel} from '../component/Panel/AvailableRenderersPanel';
@@ -63,8 +63,8 @@ import {EditorNode, EditorNodeType} from './node';
 import findIndex from 'lodash/findIndex';
 import {matchSorter} from 'match-sorter';
 import debounce from 'lodash/debounce';
-import type {DialogSchema} from 'amis/lib/renderers/Dialog';
-import type {DrawerSchema} from 'amis/lib/renderers/Drawer';
+import type {DialogSchema} from 'prismui-framework/lib/renderers/Dialog';
+import type {DrawerSchema} from 'prismui-framework/lib/renderers/Drawer';
 import getLayoutInstance from '../layout';
 import {isAlive} from 'mobx-state-tree';
 import {modalsToDefinitions} from '../util';

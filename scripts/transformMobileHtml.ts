@@ -24,7 +24,7 @@ export default function transformMobileHtml(options: {} = {}): Plugin {
           } else if (/^amis\/lib\/helper\.css$/.test(value)) {
             return `href=${quote}../../packages/amis-ui/scss/helper.scss${quote}`;
           } else if (
-            /^(?:amis|amis\-core|amis\-formula|amis\-ui|office\-viewer)/.test(
+            /^(?:amis|amis-core|amis-formula|amis-ui|office-viewer)/.test(
               value
             )
           ) {

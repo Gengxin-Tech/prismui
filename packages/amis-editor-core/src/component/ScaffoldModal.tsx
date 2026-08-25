@@ -1,7 +1,14 @@
 import React from 'react';
 import {EditorManager} from '../manager';
 import {EditorStoreType} from '../store/editor';
-import {render, Modal, getTheme, Icon, Spinner, Button} from 'amis';
+import {
+  render,
+  Modal,
+  getTheme,
+  Icon,
+  Spinner,
+  Button
+} from 'prismui-framework';
 import {observer} from 'mobx-react';
 import {autobind, isObject} from '../util';
 import {getEditorThemeScopeProps} from '../themeScope';

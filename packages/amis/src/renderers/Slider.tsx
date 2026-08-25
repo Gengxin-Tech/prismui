@@ -4,8 +4,8 @@ import {
   Renderer,
   RendererProps,
   AMISSchemaCollection
-} from 'amis-core';
-import {Slider} from 'amis-ui';
+} from 'prismui-core';
+import {Slider} from 'prismui-ui';
 import React from 'react';
 import {BaseSchema} from '../Schema';
 

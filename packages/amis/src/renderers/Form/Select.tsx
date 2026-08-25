@@ -22,14 +22,14 @@ import {
   AMISFormItemWithOptions,
   AMISSpinnerConfig,
   getStableClassName
-} from 'amis-core';
-import {TransferDropDown, Spinner, Select, SpinnerExtraProps} from 'amis-ui';
+} from 'prismui-core';
+import {TransferDropDown, Spinner, Select, SpinnerExtraProps} from 'prismui-ui';
 import {FormOptionsSchema, SchemaApi} from '../../Schema';
 import {BaseTransferRenderer, AMISTransferSchema} from './Transfer';
 import {supportStatic} from './StaticHoc';
 
 import type {AMISClassName} from '../../Schema';
-import type {TooltipObject} from 'amis-ui/lib/components/TooltipWrapper';
+import type {TooltipObject} from 'prismui-ui/lib/components/TooltipWrapper';
 
 /**
  * 下拉选择框，支持单选/多选、异步加载选项、搜索过滤等功能。

@@ -25,15 +25,15 @@ import {
   CustomStyle,
   isIntegerInRange,
   setThemeClassName
-} from 'amis-core';
-import {Html, Icon, OverflowTpl, TooltipWrapper} from 'amis-ui';
+} from 'prismui-core';
+import {Html, Icon, OverflowTpl, TooltipWrapper} from 'prismui-ui';
 import {FormOptionsSchema, SchemaTpl} from '../../Schema';
 import intersectionWith from 'lodash/intersectionWith';
 import type {AMISTooltipWrapperSchema} from '../TooltipWrapper';
-import type {AMISFormItemWithOptions, Option} from 'amis-core';
+import type {AMISFormItemWithOptions, Option} from 'prismui-core';
 import {supportStatic} from './StaticHoc';
 import {reaction} from 'mobx';
-import {AutoFoldedList} from 'amis-ui';
+import {AutoFoldedList} from 'prismui-ui';
 
 /**
  * Picker

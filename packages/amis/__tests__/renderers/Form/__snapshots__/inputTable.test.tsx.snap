@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Renderer: input-table with default value column 1`] = `<div />`;
+
 exports[`Renderer:input table 1`] = `
 <div>
   <div

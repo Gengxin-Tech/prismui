@@ -5,11 +5,11 @@ import {
   render,
   themeable,
   ThemeProps
-} from 'amis-core';
-import {HTMLFilterContext, ImageGallery} from 'amis-ui';
-import {setRenderSchemaFn} from 'amis-ui/lib/components/Alert';
-import {alert, confirm} from 'amis-ui/lib/components/Alert';
-import {toast} from 'amis-ui/lib/components/Toast';
+} from 'prismui-core';
+import {HTMLFilterContext, ImageGallery} from 'prismui-ui';
+import {setRenderSchemaFn} from 'prismui-ui/lib/components/Alert';
+import {alert, confirm} from 'prismui-ui/lib/components/Alert';
+import {toast} from 'prismui-ui/lib/components/Toast';
 import React from 'react';
 
 extendDefaultEnv({

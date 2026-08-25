@@ -8,10 +8,10 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import axios from 'axios';
 import copy from 'copy-to-clipboard';
-import {toast} from 'amis';
-import 'amis-ui/lib/locale/en-US';
+import {toast} from 'prismui';
+import 'prismui-ui/lib/locale/en-US';
 
-import {render as renderAmis} from 'amis';
+import {render as renderAmis} from 'prismui';
 
 class AMISComponent extends React.Component {
   state = {

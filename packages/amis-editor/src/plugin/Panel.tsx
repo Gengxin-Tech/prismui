@@ -1,4 +1,4 @@
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import React from 'react';
 import {
   BasePlugin,
@@ -11,8 +11,8 @@ import {
   getSchemaTpl,
   registerEditorPlugin,
   PluginInterface
-} from 'amis-editor-core';
-import {InlineEditableElement} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {InlineEditableElement} from 'prismui-editor-core';
 
 export class PanelPlugin extends BasePlugin {
   static id = 'PanelPlugin';
@@ -215,13 +215,13 @@ export class PanelPlugin extends BasePlugin {
                     id: 'panel-settings-panelClassName',
                     pipeIn: (value: any) =>
                       typeof value === 'string' &&
-                      /(?:^|\s)(Panel\-\-(\w+))(?:$|\s)/.test(value)
+                      /(?:^|\s)(Panel--(\w+))(?:$|\s)/.test(value)
                         ? RegExp.$1
                         : 'Panel--default',
                     pipeOut: (value: string, origin: string) =>
                       origin
                         ? `${origin.replace(
-                            /(?:^|\s)(Panel\-\-(\w+))(?=($|\s))/g,
+                            /(?:^|\s)(Panel--(\w+))(?=($|\s))/g,
                             ''
                           )} ${value}`
                             .replace(/\s+/g, ' ')

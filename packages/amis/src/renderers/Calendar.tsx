@@ -1,8 +1,8 @@
 import React from 'react';
-import {Renderer} from 'amis-core';
+import {Renderer} from 'prismui-core';
 import {SchemaObject, BaseSchema} from '../Schema';
 import {DateControlRenderer} from './Form/InputDate';
-import type {AMISClassName, AMISSchemaBase} from 'amis-core';
+import type {AMISClassName, AMISSchemaBase} from 'prismui-core';
 
 interface AMISScheduleItem {
   startTime: string;

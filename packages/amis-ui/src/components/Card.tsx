@@ -1,7 +1,7 @@
 import React from 'react';
-import {isClickOnInput, setReactRef} from 'amis-core';
-import {ClassNamesFn, themeable, ThemeProps} from 'amis-core';
-import {buildStyle} from 'amis-core';
+import {isClickOnInput, setReactRef} from 'prismui-core';
+import {ClassNamesFn, themeable, ThemeProps} from 'prismui-core';
+import {buildStyle} from 'prismui-core';
 export interface CardProps extends ThemeProps {
   className?: string;
   headerClassName?: string;

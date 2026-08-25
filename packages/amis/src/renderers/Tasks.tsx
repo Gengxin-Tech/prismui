@@ -1,15 +1,15 @@
 import React from 'react';
-import {Renderer, RendererProps} from 'amis-core';
-import {ServiceStore, IServiceStore} from 'amis-core';
+import {Renderer, RendererProps} from 'prismui-core';
+import {ServiceStore, IServiceStore} from 'prismui-core';
 import cx from 'classnames';
-import {getExprProperties} from 'amis-core';
-import {Api, ApiObject, Payload} from 'amis-core';
+import {getExprProperties} from 'prismui-core';
+import {Api, ApiObject, Payload} from 'prismui-core';
 import update from 'immutability-helper';
-import {isEffectiveApi, isApiOutdated} from 'amis-core';
-import {ScopedContext, IScopedContext} from 'amis-core';
-import {Spinner, SpinnerExtraProps} from 'amis-ui';
+import {isEffectiveApi, isApiOutdated} from 'prismui-core';
+import {ScopedContext, IScopedContext} from 'prismui-core';
+import {Spinner, SpinnerExtraProps} from 'prismui-ui';
 import {BaseSchema, SchemaApi, AMISClassName, SchemaName} from '../Schema';
-import {createObject} from 'amis-core';
+import {createObject} from 'prismui-core';
 
 /**
  * Tasks 渲染器，格式说明

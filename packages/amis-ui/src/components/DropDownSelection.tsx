@@ -13,13 +13,13 @@ import {
   findTree,
   filterTree,
   noop
-} from 'amis-core';
+} from 'prismui-core';
 import {matchSorter} from 'match-sorter';
 
 import {Icon} from './icons';
 import SearchBox from './SearchBox';
 import {Option} from './Select';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface DropDownSelectionProps
   extends ThemeProps,

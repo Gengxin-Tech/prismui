@@ -4,17 +4,17 @@ import {
   FormBaseControl,
   FormControlProps,
   AMISFormItem
-} from 'amis-core';
-import {FormulaPicker} from 'amis-ui';
-import {autobind} from 'amis-core';
+} from 'prismui-core';
+import {FormulaPicker} from 'prismui-ui';
+import {autobind} from 'prismui-core';
 
 import type {FormBaseControlSchema, SchemaIcon} from '../../Schema';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 import type {
   FuncGroup,
   VariableItem
-} from 'amis-ui/lib/components/formula/CodeEditor';
-import type {FormulaPickerInputSettings} from 'amis-ui/lib/components/formula/Picker';
+} from 'prismui-ui/lib/components/formula/CodeEditor';
+import type {FormulaPickerInputSettings} from 'prismui-ui/lib/components/formula/Picker';
 
 /**
  * InputFormula 公式编辑器

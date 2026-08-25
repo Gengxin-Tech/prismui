@@ -1,16 +1,16 @@
 /**
  * @file 功能类函数集合。
  */
-import {hasIcon, mapObject, utils} from 'amis';
-import type {PlainObject, Schema, SchemaNode} from 'amis';
-import {getGlobalData} from 'amis-theme-editor-helper';
+import {hasIcon, mapObject, utils} from 'prismui-framework';
+import type {PlainObject, Schema, SchemaNode} from 'prismui-framework';
+import {getGlobalData} from 'prismui-theme-editor-helper';
 import {
   mapTree,
   isExpression,
   resolveVariableAndFilter,
   filterTree
-} from 'amis-core';
-import type {VariableItem} from 'amis-ui';
+} from 'prismui-core';
+import type {VariableItem} from 'prismui-ui';
 import {isObservable, reaction} from 'mobx';
 import DeepDiff, {Diff} from 'deep-diff';
 import assign from 'lodash/assign';
@@ -22,9 +22,9 @@ import debounce from 'lodash/debounce';
 import merge from 'lodash/merge';
 import {EditorModalBody} from './store/editor';
 import {filter} from 'lodash';
-import type {SchemaType} from 'amis/lib/Schema';
-import type {DialogSchema} from 'amis/lib/renderers/Dialog';
-import type {DrawerSchema} from 'amis/lib/renderers/Drawer';
+import type {SchemaType} from 'prismui-framework/lib/Schema';
+import type {DialogSchema} from 'prismui-framework/lib/renderers/Dialog';
+import type {DrawerSchema} from 'prismui-framework/lib/renderers/Drawer';
 import {resolveEditorComponentClassPrefix} from './themeScope';
 
 const {
@@ -882,7 +882,7 @@ export function persistSet(key: string, value: any) {
 }
 
 export function normalizeId(id: string) {
-  return id.replace(/\-[a-z0-9]+$/g, '');
+  return id.replace(/-[a-z0-9]+$/g, '');
 }
 
 export const autobind = utils.autobind;

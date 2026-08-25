@@ -7,15 +7,15 @@ import {
   createObject,
   CustomStyle,
   setThemeClassName
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema, SchemaTpl} from '../Schema';
 import {
   BadgeObject,
   withBadge,
   Icon as IconUI,
   IconCheckedSchema
-} from 'amis-ui';
-import {AMISSchemaBase} from 'amis-core';
+} from 'prismui-ui';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * Icon 图标渲染器

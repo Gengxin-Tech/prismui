@@ -15,7 +15,7 @@ import {
   evalExpression,
   insertStyle,
   isObjectShallowModified
-} from 'amis-core';
+} from 'prismui-core';
 import {
   guid,
   autobind,
@@ -30,24 +30,24 @@ import {
   noop,
   AMISSchemaCollection,
   str2function
-} from 'amis-core';
-import {isEffectiveApi} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
-import {Icon, SpinnerExtraProps, SearchBox} from 'amis-ui';
-import {BadgeObject} from 'amis-ui';
-import {RemoteOptionsProps, withRemoteConfig} from 'amis-ui';
-import {Spinner, Menu} from 'amis-ui';
-import {ScopedContext, IScopedContext} from 'amis-core';
-import type {NavigationItem} from 'amis-ui/lib/components/menu/index';
-import type {MenuItemProps} from 'amis-ui/lib/components/menu/MenuItem';
-import {HorizontalScroll} from 'amis-ui/lib/components/HorizontalScroll';
+} from 'prismui-core';
+import {isEffectiveApi} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import {Icon, SpinnerExtraProps, SearchBox} from 'prismui-ui';
+import {BadgeObject} from 'prismui-ui';
+import {RemoteOptionsProps, withRemoteConfig} from 'prismui-ui';
+import {Spinner, Menu} from 'prismui-ui';
+import {ScopedContext, IScopedContext} from 'prismui-core';
+import type {NavigationItem} from 'prismui-ui/lib/components/menu/index';
+import type {MenuItemProps} from 'prismui-ui/lib/components/menu/MenuItem';
+import {HorizontalScroll} from 'prismui-ui/lib/components/HorizontalScroll';
 
 import type {
   AMISFunction,
   AMISSchemaBase,
   BaseSchemaWithoutType,
   Payload
-} from 'amis-core';
+} from 'prismui-core';
 import type {
   BaseSchema,
   SchemaObject,

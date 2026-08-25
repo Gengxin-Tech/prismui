@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from 'amis';
+import {Icon} from 'prismui-framework';
 import {registerEditorPlugin} from '../manager';
 import {
   BuildPanelEventContext,

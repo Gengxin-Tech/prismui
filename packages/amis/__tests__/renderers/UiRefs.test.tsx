@@ -1,7 +1,7 @@
 import React from 'react';
 import {cleanup, render} from '@testing-library/react';
 import '../../src';
-import {InputBox} from 'amis-ui';
+import {InputBox} from 'prismui-ui';
 
 afterEach(() => {
   cleanup();

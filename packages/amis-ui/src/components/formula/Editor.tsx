@@ -6,7 +6,7 @@ import {
   eachTree,
   resolveVariableAndFilterForAsync,
   uncontrollable
-} from 'amis-core';
+} from 'prismui-core';
 import {
   parse,
   autobind,
@@ -14,14 +14,14 @@ import {
   ThemeProps,
   localeable,
   LocaleProps
-} from 'amis-core';
+} from 'prismui-core';
 import {editorFactory} from './plugin';
 import FuncList from './FuncList';
 import VariableList from './VariableList';
 import {toast} from '../Toast';
 import Switch from '../Switch';
 import CodeEditor, {FuncGroup, FuncItem, VariableItem} from './CodeEditor';
-import {getFunctionsDoc} from 'amis-formula';
+import {getFunctionsDoc} from 'prismui-formula';
 import Transition, {
   EXITED,
   ENTERING,

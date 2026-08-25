@@ -12,11 +12,11 @@ import {
   labelToString,
   filter,
   AMISSchemaBase
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema, SchemaObject} from '../Schema';
-import {Tag} from 'amis-ui';
+import {Tag} from 'prismui-ui';
 import {AMISTagSchema} from './Tag';
-import {createObject} from 'amis-core';
+import {createObject} from 'prismui-core';
 
 type Words = string | string[];
 /**

@@ -9,12 +9,12 @@ import {
   GlobalVariableEventContext,
   GlobalVariablesEventContext
 } from '../src/index';
-import {Select, Renderer, uuid, Button} from 'amis';
-import {currentLocale} from 'i18n-runtime';
+import {Select, Renderer, uuid, Button} from 'prismui-framework';
+import {currentLocale} from 'prismui-i18n-runtime';
 import {Portal} from 'react-overlays';
 import {Icon} from './icons/index';
 import LayoutList from './layout/index';
-import {cxdData} from 'amis-theme-editor-helper';
+import {cxdData} from 'prismui-theme-editor-helper';
 
 // 测试组织属性配置面板的国际化，可以放开如下注释
 // import './renderer/InputTextI18n';

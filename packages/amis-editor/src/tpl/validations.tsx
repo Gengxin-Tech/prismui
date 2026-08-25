@@ -4,9 +4,9 @@ import {
   defaultValue,
   getSchemaTpl,
   getI18nEnabled
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {ValidationOptions} from '../component/BaseControl';
-import {Schema, str2rules} from 'amis';
+import {Schema, str2rules} from 'prismui-framework';
 import {ValidatorTag} from '../validator';
 
 import find from 'lodash/find';

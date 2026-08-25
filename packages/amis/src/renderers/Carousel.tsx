@@ -10,8 +10,8 @@ import {
   Renderer,
   RendererProps,
   setThemeClassName
-} from 'amis-core';
-import {resolveVariableAndFilter} from 'amis-core';
+} from 'prismui-core';
+import {resolveVariableAndFilter} from 'prismui-core';
 import {
   autobind,
   createObject,
@@ -19,13 +19,13 @@ import {
   isArrayChildrenModified,
   getPropValue,
   CustomStyle
-} from 'amis-core';
-import {ActionObject, AMISSchemaCollection} from 'amis-core';
-import {Icon} from 'amis-ui';
+} from 'prismui-core';
+import {ActionObject, AMISSchemaCollection} from 'prismui-core';
+import {Icon} from 'prismui-ui';
 import {BaseSchema, SchemaName} from '../Schema';
-import {Html} from 'amis-ui';
+import {Html} from 'prismui-ui';
 import Image from '../renderers/Image';
-import {ScopedContext, IScopedContext} from 'amis-core';
+import {ScopedContext, IScopedContext} from 'prismui-core';
 
 /**
  * 轮播图组件，用于图片或内容的轮播展示。支持自动播放、指示器、切换动画等。

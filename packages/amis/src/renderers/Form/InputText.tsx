@@ -21,14 +21,14 @@ import {
   ucFirst,
   isEffectiveApi,
   getVariable
-} from 'amis-core';
-import {Icon, SpinnerExtraProps, Input, Spinner, OverflowTpl} from 'amis-ui';
+} from 'prismui-core';
+import {Icon, SpinnerExtraProps, Input, Spinner, OverflowTpl} from 'prismui-ui';
 import {ActionSchema} from '../Action';
 import {FormOptionsSchema, SchemaApi, SchemaObject} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 
-import type {AMISFormItemWithOptions, Option} from 'amis-core';
-import type {ListenerAction} from 'amis-core';
+import type {AMISFormItemWithOptions, Option} from 'prismui-core';
+import type {ListenerAction} from 'prismui-core';
 
 // declare function matchSorter(items:Array<any>, input:any, options:any): Array<any>;
 
@@ -139,7 +139,7 @@ export type InputTextRendererEvent =
   | 'enter';
 
 export interface TextProps extends OptionsControlProps, SpinnerExtraProps {
-  placeholder?: string | { [propName: string]: string; };
+  placeholder?: string | {[propName: string]: string};
   addOn?: ActionObject & {
     position?: 'left' | 'right';
     label?: string;
@@ -794,7 +794,7 @@ export default class TextControl extends React.PureComponent<
       nativeAutoComplete,
       testIdBuilder
     } = this.props;
-    let type = this.props.type?.replace(/^(?:native|input)\-/, '');
+    let type = this.props.type?.replace(/^(?:native|input)-/, '');
 
     return (
       <Downshift
@@ -1067,7 +1067,7 @@ export default class TextControl extends React.PureComponent<
       testIdBuilder
     } = this.props;
 
-    const type = this.props.type?.replace(/^(?:native|input)\-/, '');
+    const type = this.props.type?.replace(/^(?:native|input)-/, '');
 
     return (
       <div

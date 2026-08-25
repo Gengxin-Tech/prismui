@@ -1,7 +1,13 @@
-import {Icon, InputBox, FormulaPicker, FormItem, DataSchema} from 'amis';
-import type {FormControlProps} from 'amis-core';
+import {
+  Icon,
+  InputBox,
+  FormulaPicker,
+  FormItem,
+  DataSchema
+} from 'prismui-framework';
+import type {FormControlProps} from 'prismui-core';
 import React from 'react';
-import {autobind} from 'amis-editor-core';
+import {autobind} from 'prismui-editor-core';
 
 class DataPickerControl extends React.Component<FormControlProps> {
   @autobind

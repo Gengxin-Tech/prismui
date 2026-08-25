@@ -3,11 +3,11 @@
  */
 
 import React from 'react';
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 
-import {getSchemaTpl, tipedLabel} from 'amis-editor-core';
+import {getSchemaTpl, tipedLabel} from 'prismui-editor-core';
 
-import type {FormControlProps} from 'amis-core';
+import type {FormControlProps} from 'prismui-core';
 
 export interface ValidationApiControlProps extends FormControlProps {}
 

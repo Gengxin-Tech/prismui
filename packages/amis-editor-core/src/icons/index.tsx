@@ -1,4 +1,4 @@
-import {registerIcon, Icon} from 'amis';
+import {registerIcon, Icon} from 'prismui-framework';
 import ArrowToRight from './arrow-to-right.svg';
 import LeftArrowToleft from './left-arrow-to-left.svg';
 import TopArrowToTop from './top-arrow-to-top.svg';

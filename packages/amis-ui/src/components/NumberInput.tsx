@@ -16,7 +16,7 @@ import {
   autobind,
   ucFirst,
   TestIdBuilder
-} from 'amis-core';
+} from 'prismui-core';
 
 export type ValueType = string | number;
 

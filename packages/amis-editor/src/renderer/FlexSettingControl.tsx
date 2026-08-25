@@ -2,7 +2,7 @@
  * @file icon按钮组
  */
 import React from 'react';
-import {FormControlProps, FormItem} from 'amis';
+import {FormControlProps, FormItem} from 'prismui-framework';
 import ButtonGroup from './ButtonGroupControl';
 
 interface PlainObject {

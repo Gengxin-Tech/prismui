@@ -3,13 +3,13 @@
  */
 
 import React from 'react';
-import {autobind, FormControlProps, isExpression} from 'amis-core';
+import {autobind, FormControlProps, isExpression} from 'prismui-core';
 import cx from 'classnames';
-import {FormItem, Button, Icon, PickerContainer} from 'amis';
-import {FormulaCodeEditor, FormulaEditor, InputBox} from 'amis-ui';
-import type {VariableItem} from 'amis-ui';
+import {FormItem, Button, Icon, PickerContainer} from 'prismui-framework';
+import {FormulaCodeEditor, FormulaEditor, InputBox} from 'prismui-ui';
+import type {VariableItem} from 'prismui-ui';
 import {reaction} from 'mobx';
-import {getVariables} from 'amis-editor-core';
+import {getVariables} from 'prismui-editor-core';
 
 interface ExpressionFormulaControlProps extends FormControlProps {
   /**

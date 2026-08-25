@@ -10,16 +10,16 @@ import {
   CustomStyle,
   setThemeClassName,
   BaseSchemaWithoutType
-} from 'amis-core';
-import {Steps, RemoteOptionsProps, withRemoteConfig} from 'amis-ui';
-import {StepStatus} from 'amis-ui/lib/components/Steps';
+} from 'prismui-core';
+import {Steps, RemoteOptionsProps, withRemoteConfig} from 'prismui-ui';
+import {StepStatus} from 'prismui-ui/lib/components/Steps';
 import {BaseSchema} from '../Schema';
 import isPlainObject from 'lodash/isPlainObject';
 import type {
   AMISSchemaBase,
   SchemaExpression,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 
 export interface StepSchema extends AMISSchemaBase {
   /**

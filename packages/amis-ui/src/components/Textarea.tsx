@@ -1,8 +1,8 @@
 import React from 'react';
 import BaseTextArea from 'react-textarea-autosize';
-import {localeable, LocaleProps, TestIdBuilder} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
-import {autobind, ucFirst} from 'amis-core';
+import {localeable, LocaleProps, TestIdBuilder} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import {autobind, ucFirst} from 'prismui-core';
 import {Icon} from './icons';
 
 export interface TextAreaProps extends ThemeProps, LocaleProps {

@@ -11,10 +11,10 @@ import {
   Overlay,
   PopOver,
   Drawer
-} from 'amis';
+} from 'prismui-framework';
 import {observer} from 'mobx-react';
 import {diff} from '../util';
-import {autobind, createObject} from 'amis-core';
+import {autobind, createObject} from 'prismui-core';
 
 export interface ModalFormProps {
   store: EditorStoreType;

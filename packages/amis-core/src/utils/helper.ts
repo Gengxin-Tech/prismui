@@ -1454,14 +1454,14 @@ export function lcFirst(str?: string) {
 export function camel(str?: string) {
   return str
     ? str
-        .split(/[\s_\-]/)
+        .split(/[\s_-]/)
         .map((item, index) => (index === 0 ? lcFirst(item) : ucFirst(item)))
         .join('')
     : '';
 }
 
 export function getWidthRate(value: any, strictMode = false): number {
-  if (typeof value === 'string' && /\bcol\-\w+\-(\d+)\b/.test(value)) {
+  if (typeof value === 'string' && /\bcol-\w+-(\d+)\b/.test(value)) {
     return parseInt(RegExp.$1, 10);
   }
 

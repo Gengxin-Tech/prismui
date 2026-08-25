@@ -9,8 +9,8 @@ import {
   VRenderer,
   RendererInfo,
   BasicToolbarItem
-} from 'amis-editor-core';
-import {RegionWrapper as Region} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {RegionWrapper as Region} from 'prismui-editor-core';
 import {getEventControlConfig} from '../renderer/event-control';
 import React from 'react';
 import {generateId} from '../util';

@@ -67,7 +67,7 @@ export class Evaluator {
   // 主入口
   evalute(ast: any) {
     if (ast && ast.type) {
-      const name = (ast.type as string).replace(/(?:_|\-)(\w)/g, (_, l) =>
+      const name = (ast.type as string).replace(/(?:_|-)(\w)/g, (_, l) =>
         l.toUpperCase()
       );
       const fn = this.functions[name] || (this as any)[name];

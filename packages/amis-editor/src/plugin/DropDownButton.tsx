@@ -1,4 +1,4 @@
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import React from 'react';
 import {
   BaseEventContext,
@@ -11,7 +11,7 @@ import {
   defaultValue,
   getSchemaTpl,
   diff
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {BUTTON_DEFAULT_ACTION} from '../component/BaseControl';
 import {buttonStateFunc} from '../renderer/style-control/helper';
 import {generateId} from '../util';

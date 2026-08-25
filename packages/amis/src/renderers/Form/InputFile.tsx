@@ -5,23 +5,23 @@ import {
   prettyBytes,
   resolveEventData,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 import find from 'lodash/find';
 import isPlainObject from 'lodash/isPlainObject';
-import {Payload, ApiObject, ApiString, ActionObject} from 'amis-core';
-import {qsstringify, createObject, guid, isEmpty} from 'amis-core';
+import {Payload, ApiObject, ApiString, ActionObject} from 'prismui-core';
+import {qsstringify, createObject, guid, isEmpty} from 'prismui-core';
 import {
   buildApi,
   isEffectiveApi,
   normalizeApi,
   isApiOutdated,
   isApiOutdatedWithData
-} from 'amis-core';
-import {Icon} from 'amis-ui';
-import {TooltipWrapper, Button} from 'amis-ui';
+} from 'prismui-core';
+import {Icon} from 'prismui-ui';
+import {TooltipWrapper, Button} from 'prismui-ui';
 import DropZone from 'react-dropzone';
 import {FileRejection} from 'react-dropzone';
-import {dataMapping} from 'amis-core';
+import {dataMapping} from 'prismui-core';
 import {
   FormBaseControlSchema,
   SchemaApi,
@@ -30,7 +30,7 @@ import {
 } from '../../Schema';
 import merge from 'lodash/merge';
 import omit from 'lodash/omit';
-import {filter} from 'amis-core';
+import {filter} from 'prismui-core';
 
 /**
  * File 文件上传控件

@@ -1,10 +1,10 @@
 import {observer} from 'mobx-react';
 import React from 'react';
-import {Icon} from 'amis';
+import {Icon} from 'prismui-framework';
 import cx from 'classnames';
 import {EditorManager} from '../../manager';
 import {EditorStoreType} from '../../store/editor';
-import {Tab, Tabs} from 'amis';
+import {Tab, Tabs} from 'prismui-framework';
 import {autobind} from '../../util';
 import find from 'lodash/find';
 import {PanelItem} from '../../plugin';

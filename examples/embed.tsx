@@ -4,29 +4,29 @@ import {createRoot} from 'react-dom/client';
 import axios from 'axios';
 import {match} from 'path-to-regexp';
 import copy from 'copy-to-clipboard';
-import {normalizeLink, supportsMjs} from 'amis-core';
+import {normalizeLink, supportsMjs} from 'prismui-core';
 
 import qs from 'qs';
-import {alert, confirm} from 'amis-ui/lib/components/Alert';
-import {toast, default as ToastComponent} from 'amis-ui/lib/components/Toast';
-import AlertComponent from 'amis-ui/lib/components/Alert';
-import {render as renderAmis, makeTranslator} from 'amis-core';
-import 'amis/lib/minimal';
+import {alert, confirm} from 'prismui-ui/lib/components/Alert';
+import {toast, default as ToastComponent} from 'prismui-ui/lib/components/Toast';
+import AlertComponent from 'prismui-ui/lib/components/Alert';
+import {render as renderAmis, makeTranslator} from 'prismui-core';
+import 'prismui/lib/minimal';
 
-import 'amis-ui/lib/locale/en-US';
-import 'amis-ui/lib/locale/zh-CN';
-import 'amis-ui/lib/locale/en-US';
-import 'amis-ui/lib/locale/de-DE';
-import 'amis-ui/lib/themes/cxd';
-import 'amis-ui/lib/themes/ang';
-import 'amis-ui/lib/themes/antd';
-import 'amis-ui/lib/themes/dark';
+import 'prismui-ui/lib/locale/en-US';
+import 'prismui-ui/lib/locale/zh-CN';
+import 'prismui-ui/lib/locale/en-US';
+import 'prismui-ui/lib/locale/de-DE';
+import 'prismui-ui/lib/themes/cxd';
+import 'prismui-ui/lib/themes/ang';
+import 'prismui-ui/lib/themes/antd';
+import 'prismui-ui/lib/themes/dark';
 
 import 'history';
-import {attachmentAdpator, setGlobalOptions} from 'amis-core';
+import {attachmentAdpator, setGlobalOptions} from 'prismui-core';
 import {pdfUrlLoad} from './loadPdfjsWorker';
 
-import type {ToastLevel, ToastConf} from 'amis-ui/lib/components/Toast';
+import type {ToastLevel, ToastConf} from 'prismui-ui/lib/components/Toast';
 
 setGlobalOptions({
   pdfjsWorkerSrc: supportsMjs() ? pdfUrlLoad() : ''

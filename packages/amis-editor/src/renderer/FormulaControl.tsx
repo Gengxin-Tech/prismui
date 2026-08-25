@@ -6,28 +6,34 @@ import React from 'react';
 import isString from 'lodash/isString';
 import omit from 'lodash/omit';
 import cx from 'classnames';
-import {FormItem, Button, InputBox, Icon, TooltipWrapper} from 'amis';
-import {FormulaExec, isExpression} from 'amis';
-import {CodeMirrorEditor, FormulaEditor} from 'amis-ui';
-import {FormulaCodeEditor, Overlay, PopOver, VariableList} from 'amis-ui';
+import {
+  FormItem,
+  Button,
+  InputBox,
+  Icon,
+  TooltipWrapper
+} from 'prismui-framework';
+import {FormulaExec, isExpression} from 'prismui-framework';
+import {CodeMirrorEditor, FormulaEditor} from 'prismui-ui';
+import {FormulaCodeEditor, Overlay, PopOver, VariableList} from 'prismui-ui';
 import {
   FormControlProps,
   RootClose,
   isMobile,
   isObjectShallowModified
-} from 'amis-core';
+} from 'prismui-core';
 import FormulaPicker, {
   CustomFormulaPickerProps
 } from './textarea-formula/FormulaPicker';
 import {FormulaPlugin, editorFactory} from './textarea-formula/plugin';
-import {JSONPipeOut, autobind, translateSchema} from 'amis-editor-core';
-import {EditorManager} from 'amis-editor-core';
+import {JSONPipeOut, autobind, translateSchema} from 'prismui-editor-core';
+import {EditorManager} from 'prismui-editor-core';
 import {reaction} from 'mobx';
-import {getVariables, getQuickVariables, utils} from 'amis-editor-core';
+import {getVariables, getQuickVariables, utils} from 'prismui-editor-core';
 
-import type {BaseEventContext} from 'amis-editor-core';
-import type {VariableItem, FuncGroup} from 'amis-ui';
-import {SchemaType} from 'amis/lib/Schema';
+import type {BaseEventContext} from 'prismui-editor-core';
+import type {VariableItem, FuncGroup} from 'prismui-ui';
+import {SchemaType} from 'prismui-framework/lib/Schema';
 
 export enum FormulaDateType {
   NotDate, // 不是时间类

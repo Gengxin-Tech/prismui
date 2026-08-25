@@ -8,14 +8,14 @@ import {
   CustomStyle,
   setThemeClassName,
   AMISSchemaBase
-} from 'amis-core';
-import {filter} from 'amis-core';
-import {autobind, createObject} from 'amis-core';
-import {ScopedContext, IScopedContext} from 'amis-core';
-import {buildApi, isApiOutdated} from 'amis-core';
+} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {autobind, createObject} from 'prismui-core';
+import {ScopedContext, IScopedContext} from 'prismui-core';
+import {buildApi, isApiOutdated} from 'prismui-core';
 import {BaseSchema, SchemaUrlPath} from '../Schema';
 import {ActionSchema} from './Action';
-import {dataMapping, resolveVariableAndFilter} from 'amis-core';
+import {dataMapping, resolveVariableAndFilter} from 'prismui-core';
 
 /**
  * IFrame 渲染器

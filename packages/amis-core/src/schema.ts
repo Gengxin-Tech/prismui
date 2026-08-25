@@ -259,7 +259,7 @@ export type AMISButtonSchema = AMISLegacyActionSchema | AMISButton;
  * 可通过以下方式扩展 AMIS 渲染器组件
  *
  * ```ts
- * declare module 'amis-core' {
+ * declare module 'prismui-core' {
  *   interface AMISSchemaRegistry {
  *     'my-renderer': MyAMISSchema;
  *   }

@@ -2,7 +2,7 @@
  * @file 公式语法解析
  */
 
-import {parse} from 'amis-formula';
+import {parse} from 'prismui-formula';
 import {memoryParse} from './memoryParse';
 
 function traverseAst(ast: any, iterator: (ast: any) => void) {

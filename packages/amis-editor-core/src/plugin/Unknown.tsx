@@ -17,7 +17,7 @@ export class UnknownRendererPlugin extends BasePlugin {
   }: RendererInfoResolveEventContext): BasicRendererInfo | void {
     if (schema.$$id && renderer) {
       // 有些就是不想做编辑器
-      if (/(^|\/)static\-field/.test(path)) {
+      if (/(^|\/)static-field/.test(path)) {
         return;
       } else if (
         renderer.name === 'card-item' ||

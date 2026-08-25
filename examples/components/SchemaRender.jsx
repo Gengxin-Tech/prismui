@@ -1,9 +1,9 @@
 import React from 'react';
 import {DOCS_BASE_PATH, isDocsDeployment} from './publicPath';
-import {render, toast, makeTranslator, LazyComponent, Drawer} from 'amis';
+import {render, toast, makeTranslator, LazyComponent, Drawer} from 'prismui';
 import axios from 'axios';
 import Portal from 'react-overlays/Portal';
-import {normalizeLink} from 'amis-core';
+import {normalizeLink} from 'prismui-core';
 import {withRouter} from 'react-router-dom';
 import copy from 'copy-to-clipboard';
 import {
@@ -12,13 +12,13 @@ import {
   attachmentAdpator,
   supportsMjs,
   setGlobalOptions
-} from 'amis-core';
+} from 'prismui-core';
 import isPlainObject from 'lodash/isPlainObject';
 import {pdfUrlLoad} from '../loadPdfjsWorker';
 
 function loadEditor() {
   return new Promise(resolve =>
-    import('amis-ui').then(component => resolve(component.Editor))
+    import('prismui-ui').then(component => resolve(component.Editor))
   );
 }
 

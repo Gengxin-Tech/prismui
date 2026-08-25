@@ -10,11 +10,11 @@
 import React from 'react';
 import mapValues from 'lodash/mapValues';
 
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 
 import {parseBoxShadow, normalizeBoxShadow} from './transformation';
 
-import type {FormControlProps, RendererProps} from 'amis-core';
+import type {FormControlProps, RendererProps} from 'prismui-core';
 import type {BoxShadowProps} from './types';
 
 function BoxShadow({

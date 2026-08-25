@@ -4,10 +4,10 @@ import {
   Renderer,
   AMISFormItem,
   AMISSchemaCollection
-} from 'amis-core';
-import {autobind} from 'amis-core';
-import {resolveVariable} from 'amis-core';
-import {FormBaseControl, FormItemWrap} from 'amis-core';
+} from 'prismui-core';
+import {autobind} from 'prismui-core';
+import {resolveVariable} from 'prismui-core';
+import {FormBaseControl, FormItemWrap} from 'prismui-core';
 
 /**
  * Control 表单项包裹

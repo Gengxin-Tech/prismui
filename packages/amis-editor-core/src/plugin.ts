@@ -19,11 +19,14 @@ import type {
   RendererConfig,
   RendererProps,
   Schema
-} from 'amis-core';
-import type {MenuDivider, MenuItem} from 'amis-ui/lib/components/ContextMenu';
-import type {BaseSchema, SchemaCollection} from 'amis';
+} from 'prismui-core';
+import type {
+  MenuDivider,
+  MenuItem
+} from 'prismui-ui/lib/components/ContextMenu';
+import type {BaseSchema, SchemaCollection} from 'prismui-framework';
 import type {AsyncLayerOptions} from './component/AsyncLayer';
-import type {SchemaType} from 'amis/lib/Schema';
+import type {SchemaType} from 'prismui-framework/lib/Schema';
 
 /**
  * 区域的定义，容器渲染器都需要定义区域信息。

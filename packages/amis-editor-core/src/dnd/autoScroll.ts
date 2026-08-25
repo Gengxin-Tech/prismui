@@ -1,7 +1,7 @@
 /**
  * @file 拖拽过程中自动滚动容器
  */
-import {getScrollParent} from 'amis-core';
+import {getScrollParent} from 'prismui-core';
 
 export interface AutoScrollOptions {
   /** 滚动容器，默认为 document.documentElement */

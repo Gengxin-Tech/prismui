@@ -11,8 +11,8 @@ import {
   BasePlugin,
   tipedLabel,
   diff
-} from 'amis-editor-core';
-import type {Schema} from 'amis';
+} from 'prismui-editor-core';
+import type {Schema} from 'prismui-framework';
 import {
   buildLinkActionDesc,
   getArgsWrapper,

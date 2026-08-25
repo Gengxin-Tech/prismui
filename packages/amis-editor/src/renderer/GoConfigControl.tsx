@@ -4,10 +4,10 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {Renderer, toast} from 'amis';
+import {Renderer, toast} from 'prismui-framework';
 
-import {EditorManager} from 'amis-editor-core';
-import {autobind, FormControlProps} from 'amis-core';
+import {EditorManager} from 'prismui-editor-core';
+import {autobind, FormControlProps} from 'prismui-core';
 
 export interface GoCongigControlProps extends FormControlProps {
   label: string;

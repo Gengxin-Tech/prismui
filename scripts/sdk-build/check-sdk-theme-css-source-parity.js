@@ -12,7 +12,7 @@ const maxDiffs = 20;
 
 if (!fs.existsSync(sdkDir)) {
   throw new Error(
-    'Missing packages/amis/sdk. Run `npm run build --workspace amis` first.'
+    'Missing packages/amis/sdk. Run `npm run build --workspace prismui` first.'
   );
 }
 
@@ -247,7 +247,7 @@ function normalizeCssValue(value) {
 function normalizeColors(value) {
   return value
     .replace(
-      /hsla\(\s*([0-9.]+)\s*,\s*([0-9.]+)%\s*,\s*([0-9.\-]+)%\s*,\s*([0-9.]+)\s*\)/gi,
+      /hsla\(\s*([0-9.]+)\s*,\s*([0-9.]+)%\s*,\s*([0-9.-]+)%\s*,\s*([0-9.]+)\s*\)/gi,
       (_, hue, saturation, lightness, alpha) =>
         hslToHex(hue, saturation, lightness) + toAlphaByte(alpha)
     )
@@ -267,7 +267,7 @@ function normalizeColors(value) {
         `#${toPercentByte(red)}${toPercentByte(green)}${toPercentByte(blue)}`
     )
     .replace(
-      /hsl\(\s*([0-9.]+)\s*,\s*([0-9.]+)%\s*,\s*([0-9.\-]+)%\s*\)/gi,
+      /hsl\(\s*([0-9.]+)\s*,\s*([0-9.]+)%\s*,\s*([0-9.-]+)%\s*\)/gi,
       (_, hue, saturation, lightness) =>
         hslToHex(hue, saturation, lightness)
     )

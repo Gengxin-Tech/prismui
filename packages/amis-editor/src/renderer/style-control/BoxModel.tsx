@@ -7,12 +7,12 @@ import cx from 'classnames';
 import React from 'react';
 import {observer} from 'mobx-react';
 import camelCase from 'lodash/camelCase';
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 
-import {isNumeric} from 'amis-editor-core';
+import {isNumeric} from 'prismui-editor-core';
 import {isAuto} from '../../util';
 
-import type {FormControlProps} from 'amis-core';
+import type {FormControlProps} from 'prismui-core';
 import type {PlainObject} from './types';
 
 export type Direction = 'left' | 'right' | 'top' | 'bottom';

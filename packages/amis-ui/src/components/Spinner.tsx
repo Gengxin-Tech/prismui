@@ -13,7 +13,7 @@ import {
   themeable,
   ThemeProps,
   ThemeScopeProps
-} from 'amis-core';
+} from 'prismui-core';
 import Transition, {ENTERED, ENTERING} from 'react-transition-group/Transition';
 import {Icon, hasIcon} from './icons';
 import {types} from 'mobx-state-tree';

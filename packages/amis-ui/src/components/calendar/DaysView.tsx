@@ -14,8 +14,8 @@ import {
   localeable,
   ClassNamesFn,
   convertArrayValueToMoment
-} from 'amis-core';
-import type {RendererEnv, TestIdBuilder} from 'amis-core';
+} from 'prismui-core';
+import type {RendererEnv, TestIdBuilder} from 'prismui-core';
 import Picker from '../Picker';
 import {PickerOption} from '../PickerColumn';
 import {DateType} from './Calendar';

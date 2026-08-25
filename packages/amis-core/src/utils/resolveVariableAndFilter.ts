@@ -1,4 +1,4 @@
-import {Evaluator, parse} from 'amis-formula';
+import {Evaluator, parse} from 'prismui-formula';
 import {memoParse} from './tokenize';
 
 export const resolveVariableAndFilter = (

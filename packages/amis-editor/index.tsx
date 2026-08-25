@@ -5,8 +5,8 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 
-import {Layout, AsideNav, Spinner, NotFound} from 'amis-ui';
-import {eachTree, getTheme, TreeArray, TreeItem} from 'amis-core';
+import {Layout, AsideNav, Spinner, NotFound} from 'prismui-ui';
+import {eachTree, getTheme, TreeArray, TreeItem} from 'prismui-core';
 import {
   HashRouter as Router,
   Route,

@@ -9,7 +9,7 @@ import {
   BasicToolbarItem,
   ContextMenuEventContext,
   ContextMenuItem
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {schemaArrayFormat, schemaToArray} from '../util';
 
 export class MappingPlugin extends BasePlugin {

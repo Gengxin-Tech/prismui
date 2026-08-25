@@ -5,9 +5,9 @@ import {
   FormControlProps,
   FormItem,
   resolveVariableAndFilter
-} from 'amis-core';
+} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
-import {VerificationCode} from 'amis-ui';
+import {VerificationCode} from 'prismui-ui';
 
 export interface VerificationCodeSchema extends AMISFormItem {
   value?: string;

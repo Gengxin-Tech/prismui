@@ -5,9 +5,9 @@ import {
   FormBaseControl,
   autobind,
   AMISFormItem
-} from 'amis-core';
-import {InputJSONSchema} from 'amis-ui';
-import {withRemoteConfig} from 'amis-ui';
+} from 'prismui-core';
+import {InputJSONSchema} from 'prismui-ui';
+import {withRemoteConfig} from 'prismui-ui';
 import {FormBaseControlSchema} from '../../Schema';
 import {AMISInputFormulaSchema} from './InputFormula';
 

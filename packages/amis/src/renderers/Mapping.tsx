@@ -6,25 +6,25 @@ import {
   RendererEnv,
   RendererProps,
   AMISSchemaCollection
-} from 'amis-core';
-import {Api, Payload} from 'amis-core';
+} from 'prismui-core';
+import {Api, Payload} from 'prismui-core';
 import {
   BaseSchema,
   SchemaApi,
   SchemaTokenizeableString,
   SchemaTpl
 } from '../Schema';
-import {withStore} from 'amis-ui';
+import {withStore} from 'prismui-ui';
 import {flow, Instance, types} from 'mobx-state-tree';
-import {getPropValue, guid, isObject} from 'amis-core';
-import {StoreNode} from 'amis-core';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+import {getPropValue, guid, isObject} from 'prismui-core';
+import {StoreNode} from 'prismui-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 import {
   isApiOutdated,
   isEffectiveApi,
   normalizeApi,
   normalizeApiResponseData
-} from 'amis-core';
+} from 'prismui-core';
 /**
  * Mapping 映射展示控件。
  * 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/mapping

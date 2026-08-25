@@ -1,7 +1,7 @@
 /**
  * @file 总入口
  */
-import 'amis';
+import 'prismui-framework';
 import './locale/index';
 import Editor from './component/Editor';
 import './component/ClassNameControl';

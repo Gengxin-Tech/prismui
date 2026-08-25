@@ -6,7 +6,7 @@ import {
   RegionConfig,
   BaseEventContext,
   BasicToolbarItem
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 export class SliderPlugin extends BasePlugin {
   static id = 'SliderPlugin';

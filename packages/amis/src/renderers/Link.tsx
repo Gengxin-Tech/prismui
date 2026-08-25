@@ -1,10 +1,10 @@
 import React from 'react';
-import {AMISSchemaBase, Renderer, RendererProps} from 'amis-core';
+import {AMISSchemaBase, Renderer, RendererProps} from 'prismui-core';
 import {BaseSchema, SchemaTpl} from '../Schema';
-import {autobind, createObject, getPropValue} from 'amis-core';
-import {filter} from 'amis-core';
-import {BadgeObject, withBadge} from 'amis-ui';
-import {Link} from 'amis-ui';
+import {autobind, createObject, getPropValue} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {BadgeObject, withBadge} from 'prismui-ui';
+import {Link} from 'prismui-ui';
 
 /**
  * Link 链接展示控件。

@@ -4,10 +4,10 @@ import {
   AMISSchemaBase,
   Renderer,
   RendererProps
-} from 'amis-core';
-import {ServiceStore, IServiceStore} from 'amis-core';
-import {Api, SchemaNode, ActionObject} from 'amis-core';
-import {filter} from 'amis-core';
+} from 'prismui-core';
+import {ServiceStore, IServiceStore} from 'prismui-core';
+import {Api, SchemaNode, ActionObject} from 'prismui-core';
+import {filter} from 'prismui-core';
 import cx from 'classnames';
 import moment from 'moment';
 import {BaseSchema} from '../Schema';

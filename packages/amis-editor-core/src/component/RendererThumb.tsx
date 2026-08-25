@@ -1,7 +1,7 @@
-import type {Schema} from 'amis-core';
-import {LazyComponent} from 'amis-core';
+import type {Schema} from 'prismui-core';
+import {LazyComponent} from 'prismui-core';
 import React from 'react';
-import {resizeSensor, render, Icon} from 'amis';
+import {resizeSensor, render, Icon} from 'prismui-framework';
 
 interface ThumbProps {
   schema: Schema;

@@ -5,11 +5,11 @@
  * This source code is licensed under the Apache license found in the
  * LICENSE file in the root directory of this source tree.
  */
-export * from 'amis-core';
-export * from 'amis-ui';
+export * from 'prismui-core';
+export * from 'prismui-ui';
 import './minimal';
-import {registerFilter, registerFormula} from 'amis-formula';
-import type {AMISFormSchema} from 'amis-core';
+import {registerFilter, registerFormula} from 'prismui-formula';
+import type {AMISFormSchema} from 'prismui-core';
 
 import type {
   BaseSchema,

@@ -1,11 +1,11 @@
 import React from 'react';
-import {uncontrollable, flattenTree, TestIdBuilder} from 'amis-core';
+import {uncontrollable, flattenTree, TestIdBuilder} from 'prismui-core';
 
 import {BaseSelection, BaseSelectionProps} from './Selection';
-import {themeable} from 'amis-core';
+import {themeable} from 'prismui-core';
 import Checkbox from './Checkbox';
 import {Option} from './Select';
-import {localeable} from 'amis-core';
+import {localeable} from 'prismui-core';
 import VirtualList, {AutoSizer} from './virtual-list';
 
 export class GroupedSelection extends BaseSelection<BaseSelectionProps> {

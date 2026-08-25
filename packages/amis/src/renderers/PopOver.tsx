@@ -4,13 +4,13 @@
  */
 
 import React from 'react';
-import {mergeRefs, RendererProps} from 'amis-core';
+import {mergeRefs, RendererProps} from 'prismui-core';
 import cx from 'classnames';
 import hoistNonReactStatic from 'hoist-non-react-statics';
-import {PopOver} from 'amis-core';
-import {Overlay} from 'amis-core';
-import {Icon} from 'amis-ui';
-import {RootClose, AMISPopOverBase} from 'amis-core';
+import {PopOver} from 'prismui-core';
+import {Overlay} from 'prismui-core';
+import {Icon} from 'prismui-ui';
+import {RootClose, AMISPopOverBase} from 'prismui-core';
 
 export interface AMISPopOver extends AMISPopOverBase {
   type: 'popOver';
@@ -211,7 +211,7 @@ export const HocPopOver =
         const position =
           (popOver && (popOver as SchemaPopOverObject).position) || '';
 
-        const isFixed = /^fixed\-/.test(position);
+        const isFixed = /^fixed-/.test(position);
         return isFixed ? (
           <RootClose
             disabled={!this.state.isOpened}

@@ -6,7 +6,7 @@ import {
   AMISSchemaBase,
   Renderer,
   AMISButtonSchema
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema, AMISClassName, SchemaExpression} from '../Schema';
 import {ActionSchema} from './Action';
 

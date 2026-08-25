@@ -1,5 +1,5 @@
 import {registerActionPanel} from '../../actionsPanelManager';
-import {getSchemaTpl} from 'amis-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
 registerActionPanel('download', {
   label: '下载文件',

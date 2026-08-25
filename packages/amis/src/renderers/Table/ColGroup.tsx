@@ -4,7 +4,7 @@ import {
   isSafari,
   type IColumn,
   type ITableStore
-} from 'amis-core';
+} from 'prismui-core';
 import {observer} from 'mobx-react';
 
 export function ColGroup({

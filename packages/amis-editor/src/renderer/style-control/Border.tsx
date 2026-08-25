@@ -7,10 +7,10 @@ import cx from 'classnames';
 import React, {useEffect, useState} from 'react';
 import camelCase from 'lodash/camelCase';
 import {observer} from 'mobx-react';
-import {FormItem, Select, NumberInput} from 'amis';
+import {FormItem, Select, NumberInput} from 'prismui-framework';
 
 import type {PlainObject} from './types';
-import type {FormControlProps, RendererProps, SchemaNode} from 'amis-core';
+import type {FormControlProps, RendererProps, SchemaNode} from 'prismui-core';
 
 const borderItems = [
   {

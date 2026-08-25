@@ -1,6 +1,6 @@
-import {ClassNamesFn, renderReactNode, themeable} from 'amis-core';
+import {ClassNamesFn, renderReactNode, themeable} from 'prismui-core';
 import React from 'react';
-import {autobind, calculatePosition} from 'amis-core';
+import {autobind, calculatePosition} from 'prismui-core';
 import Transition, {
   ENTERED,
   ENTERING,

@@ -4,8 +4,8 @@
  */
 
 import React from 'react';
-import {autobind, getTreeAncestors} from 'amis-core';
-import {themeable} from 'amis-core';
+import {autobind, getTreeAncestors} from 'prismui-core';
+import {themeable} from 'prismui-core';
 import {Option, Options} from './Select';
 import intersectionBy from 'lodash/intersectionBy';
 import compact from 'lodash/compact';
@@ -13,8 +13,8 @@ import find from 'lodash/find';
 import uniqBy from 'lodash/uniqBy';
 import Button from './Button';
 import Checkbox from './Checkbox';
-import {flattenTree, findTree, getTreeDepth} from 'amis-core';
-import type {OptionsControlProps} from 'amis-core';
+import {flattenTree, findTree, getTreeDepth} from 'prismui-core';
+import type {OptionsControlProps} from 'prismui-core';
 import {Icon} from './icons';
 
 export type CascaderOption = {

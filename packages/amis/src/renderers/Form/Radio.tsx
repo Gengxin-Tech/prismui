@@ -6,12 +6,12 @@ import {
   resolveEventData,
   getVariable,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 import cx from 'classnames';
-import {Checkbox} from 'amis-ui';
-import {withBadge, BadgeObject} from 'amis-ui';
-import {autobind, createObject} from 'amis-core';
-import {ActionObject} from 'amis-core';
+import {Checkbox} from 'prismui-ui';
+import {withBadge, BadgeObject} from 'prismui-ui';
+import {autobind, createObject} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
 import {BaseSchema, FormBaseControlSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 

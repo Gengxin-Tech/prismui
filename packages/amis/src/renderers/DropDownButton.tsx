@@ -8,21 +8,21 @@ import {
   setThemeClassName,
   AMISSchemaCollection,
   AMISButtonSchema
-} from 'amis-core';
-import {Overlay} from 'amis-core';
-import {PopOver} from 'amis-core';
-import {TooltipWrapper} from 'amis-ui';
-import {isDisabled, isVisible, noop, filterClassNameObject} from 'amis-core';
-import {filter} from 'amis-core';
-import {Icon} from 'amis-ui';
+} from 'prismui-core';
+import {Overlay} from 'prismui-core';
+import {PopOver} from 'prismui-core';
+import {TooltipWrapper} from 'prismui-ui';
+import {isDisabled, isVisible, noop, filterClassNameObject} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {Icon} from 'prismui-ui';
 import {AMISClassName, SchemaIcon} from '../Schema';
 import {AMISDividerSchema} from './Divider';
-import {RootClose} from 'amis-core';
+import {RootClose} from 'prismui-core';
 import type {
   TooltipObject,
   Trigger
-} from 'amis-ui/lib/components/TooltipWrapper';
-import {resolveVariableAndFilter} from 'amis-core';
+} from 'prismui-ui/lib/components/TooltipWrapper';
+import {resolveVariableAndFilter} from 'prismui-core';
 
 export type DropdownNestedButton = AMISButtonSchema & {
   children?: Array<DropdownButton>;

@@ -1,4 +1,4 @@
-import {setVariable, someTree} from 'amis-core';
+import {setVariable, someTree} from 'prismui-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -13,7 +13,7 @@ import {
   getI18nEnabled,
   EditorNodeType,
   EditorManager
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {DSBuilderManager} from '../../builder/DSBuilderManager';
 import {ValidatorTag} from '../../validator';
 import {

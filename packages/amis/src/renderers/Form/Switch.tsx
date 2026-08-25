@@ -8,13 +8,13 @@ import {
   ListenerAction,
   AMISFormItem,
   AMISSchemaCollection
-} from 'amis-core';
-import {Icon, Switch} from 'amis-ui';
-import {autobind, isObject} from 'amis-core';
+} from 'prismui-core';
+import {Icon, Switch} from 'prismui-ui';
+import {autobind, isObject} from 'prismui-core';
 import {AMISIconSchema} from '../Icon';
 import {supportStatic} from './StaticHoc';
 
-import type {SpinnerExtraProps} from 'amis-ui';
+import type {SpinnerExtraProps} from 'prismui-ui';
 
 /**
  * 开关组件，用于布尔值切换。支持开启/关闭状态的切换操作。

@@ -6,7 +6,7 @@
 
 import React from 'react';
 import type {NavigationItem} from './';
-import {ClassNamesFn, themeable} from 'amis-core';
+import {ClassNamesFn, themeable} from 'prismui-core';
 import {Item as RcItem} from '@rc-component/menu';
 import {MenuContextProps, MenuContext} from './MenuContext';
 import Icon from '../Icon';

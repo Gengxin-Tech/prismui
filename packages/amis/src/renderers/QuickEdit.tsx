@@ -15,12 +15,12 @@ import {
   mergeRefs,
   noop,
   setVariable
-} from 'amis-core';
+} from 'prismui-core';
 import hoistNonReactStatic from 'hoist-non-react-statics';
-import {ActionObject} from 'amis-core';
+import {ActionObject} from 'prismui-core';
 import keycode from 'keycode';
-import {Overlay} from 'amis-core';
-import {PopOver, AMISSchemaCollection} from 'amis-core';
+import {Overlay} from 'prismui-core';
+import {PopOver, AMISSchemaCollection} from 'prismui-core';
 import omit from 'lodash/omit';
 import {SchemaApi} from '../Schema';
 

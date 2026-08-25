@@ -11,7 +11,7 @@ import {
   BasePlugin,
   BaseEventContext,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {ValidatorTag} from '../../validator';
 import {
   getEventControlConfig,

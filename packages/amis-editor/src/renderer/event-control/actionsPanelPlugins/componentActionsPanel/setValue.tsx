@@ -4,8 +4,8 @@ import {
   defaultValue,
   JSONGetById,
   EditorManager
-} from 'amis-editor-core';
-import {getRendererByName} from 'amis-core';
+} from 'prismui-editor-core';
+import {getRendererByName} from 'prismui-core';
 import {registerActionPanel} from '../../actionsPanelManager';
 import {renderCmptActionSelect, renderCmptIdInput} from './helper';
 import {buildLinkActionDesc, getArgsWrapper} from '../../helper';

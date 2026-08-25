@@ -1,7 +1,7 @@
 import React from 'react';
-import {Renderer, RendererProps, AMISSchemaCollection} from 'amis-core';
-import {buildStyle} from 'amis-core';
-import {AMISSchemaBase} from 'amis-core';
+import {Renderer, RendererProps, AMISSchemaCollection} from 'prismui-core';
+import {buildStyle} from 'prismui-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * Wrapper 容器渲染器。

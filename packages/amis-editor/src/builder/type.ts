@@ -4,7 +4,7 @@
  */
 
 import {DSFeature} from './constants';
-import type {BaseApiObject} from 'amis-core';
+import type {BaseApiObject} from 'prismui-core';
 
 export interface DSField {
   value: string;

@@ -54,7 +54,7 @@ async function main() {
         'virtual:entry': `
           import {message} from 'virtual:shared';
           import {chart} from 'echarts/core';
-          import {Markdown} from 'amis-ui/lib/components/Markdown.js';
+          import {Markdown} from 'prismui-ui/lib/components/Markdown.js';
           import {JsonView} from '@uiw/react-json-view';
           console.log(message);
           console.log(chart, Markdown, JsonView);
@@ -66,7 +66,7 @@ async function main() {
           id: path.join(repoRoot, 'node_modules/echarts/core.js'),
           code: `export const chart = 'chart';`
         },
-        'amis-ui/lib/components/Markdown.js': {
+        'prismui-ui/lib/components/Markdown.js': {
           id: path.join(
             repoRoot,
             'packages/amis-ui/lib/components/Markdown.js'

@@ -11,8 +11,8 @@ import {
   RendererPluginEvent,
   getI18nEnabled,
   undefinedPipeOut
-} from 'amis-editor-core';
-import type {Schema} from 'amis';
+} from 'prismui-editor-core';
+import type {Schema} from 'prismui-framework';
 import {getEventControlConfig} from '../../renderer/event-control/helper';
 import {ValidatorTag} from '../../validator';
 import {resolveOptionEventDataSchame, resolveOptionType} from '../../util';

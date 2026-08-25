@@ -27,8 +27,8 @@ import {
   toNumber,
   evalExpression,
   getVariable
-} from 'amis-core';
-import {SpinnerExtraProps, Transfer, Spinner, ResultList} from 'amis-ui';
+} from 'prismui-core';
+import {SpinnerExtraProps, Transfer, Spinner, ResultList} from 'prismui-ui';
 import {
   FormOptionsSchema,
   SchemaApi,
@@ -38,14 +38,14 @@ import {
 } from '../../Schema';
 import {supportStatic} from './StaticHoc';
 
-import type {ItemRenderStates} from 'amis-ui/lib/components/Selection';
+import type {ItemRenderStates} from 'prismui-ui/lib/components/Selection';
 import type {
   AMISFormItemWithOptions,
   AMISSpinnerConfig,
   Option
-} from 'amis-core';
+} from 'prismui-core';
 import type {AMISPaginationSchema} from '../Pagination';
-import {AMISExpression} from 'amis-core';
+import {AMISExpression} from 'prismui-core';
 
 export interface AMISTransferSchemaBase
   extends AMISFormItemWithOptions,

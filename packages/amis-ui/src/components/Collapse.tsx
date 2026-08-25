@@ -5,15 +5,15 @@
  */
 
 import React from 'react';
-import {ClassNamesFn, ThemeProps, themeable} from 'amis-core';
+import {ClassNamesFn, ThemeProps, themeable} from 'prismui-core';
 import Transition, {
   EXITED,
   ENTERING,
   EXITING
 } from 'react-transition-group/Transition';
-import {autobind} from 'amis-core';
-import {isClickOnInput} from 'amis-core';
-import {TranslateFn} from 'amis-core';
+import {autobind} from 'prismui-core';
+import {isClickOnInput} from 'prismui-core';
+import {TranslateFn} from 'prismui-core';
 import {Icon} from './icons';
 
 const collapseStyles: {

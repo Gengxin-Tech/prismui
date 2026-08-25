@@ -9,14 +9,14 @@ import {
   createObject,
   evalExpression,
   AMISConditionRule
-} from 'amis-core';
+} from 'prismui-core';
 import {
   FormBaseControlSchema,
   SchemaApi,
   SchemaTokenizeableString
 } from '../../Schema';
 
-import {autobind} from 'amis-core';
+import {autobind} from 'prismui-core';
 import {
   ConditionBuilderFields,
   ConditionBuilderFuncs,
@@ -24,12 +24,12 @@ import {
   withRemoteConfig,
   RemoteOptionsProps,
   ConditionBuilder
-} from 'amis-ui';
+} from 'prismui-ui';
 
 import {AMISIconSchema} from '../Icon';
-import {isMobile} from 'amis-core';
+import {isMobile} from 'prismui-core';
 import type {AMISInputFormulaSchemaBase} from './InputFormula';
-import {AMISFormItem} from 'amis-core';
+import {AMISFormItem} from 'prismui-core';
 
 /**
  * 条件组合控件

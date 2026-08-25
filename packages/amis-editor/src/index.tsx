@@ -1,6 +1,6 @@
-import 'amis';
+import 'prismui-framework';
 export * from './locale/index';
-export * from 'amis-editor-core';
+export * from 'prismui-editor-core';
 export * from './builder';
 import './tpl/index';
 export * from './plugin';
@@ -63,7 +63,7 @@ import './renderer/InputRangeValueControl';
 import './renderer/FunctionEditorControl';
 import './renderer/ListItemControl';
 
-import 'amis-theme-editor-helper';
+import 'prismui-theme-editor-helper';
 
 export * from './component/BaseControl';
 export {OptionAutoFill} from './component/OptionAutoFill';

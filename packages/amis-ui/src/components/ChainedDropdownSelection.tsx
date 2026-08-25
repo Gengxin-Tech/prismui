@@ -7,13 +7,13 @@ import {
   themeable,
   localeable,
   LocaleProps
-} from 'amis-core';
+} from 'prismui-core';
 
 import {Options} from './Select';
 import {BaseSelection, BaseSelectionProps} from './Selection';
 
 import DropDownSelection from './DropDownSelection';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface ChainedDropDownSelectionProps
   extends ThemeProps,

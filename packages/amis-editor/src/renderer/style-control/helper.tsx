@@ -1,4 +1,4 @@
-import {getSchemaTpl} from 'amis-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 interface InputStateOptions {
   state?: {
     label: string;

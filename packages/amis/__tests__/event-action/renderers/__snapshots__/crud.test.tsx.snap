@@ -1812,3 +1812,285 @@ exports[`doAction:crud reload with data2 1`] = `
   </div>
 </div>
 `;
+
+exports[`doAction:crud reload with data2 2`] = `
+<div>
+  <div
+    class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page"
+    data-prismui-theme="cxd"
+  >
+    <div
+      class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-content"
+    >
+      <div
+        class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-main"
+      >
+        <div
+          class="__PRISMUI_COMPONENT_CLASS_PREFIX__Page-body"
+          role="page-body"
+        >
+          <button
+            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Button __PRISMUI_COMPONENT_CLASS_PREFIX__Button--primary __PRISMUI_COMPONENT_CLASS_PREFIX__Button--size-default mb-2"
+            type="button"
+          >
+            <span>
+              刷新CRUD数据加载请求，同时追加按钮所在数据域的所有数据
+            </span>
+          </button>
+          <div
+            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Crud"
+            data-id="crud_reload"
+            data-role="container"
+          >
+            <div
+              class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table __PRISMUI_COMPONENT_CLASS_PREFIX__Crud-body"
+              data-id="crud_reload"
+              style="--Table-thead-height: 0px; --Table-column-3-width: 0px; --Table-column-4-width: 0px; --Table-column-5-width: 0px; --Table-column-6-width: 0px; --Table-column-7-width: 0px; --Table-column-8-width: 0px; --Table-column-9-width: 0px;"
+            >
+              <div
+                class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-fixedTop"
+              >
+                <div
+                  class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-toolbar __PRISMUI_COMPONENT_CLASS_PREFIX__Table-headToolbar"
+                >
+                  <div
+                    class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-actions"
+                  >
+                    <div
+                      class="__PRISMUI_COMPONENT_CLASS_PREFIX__ColumnToggler"
+                    >
+                      <button
+                        class="__PRISMUI_COMPONENT_CLASS_PREFIX__Button __PRISMUI_COMPONENT_CLASS_PREFIX__Button--default __PRISMUI_COMPONENT_CLASS_PREFIX__Button--size-sm"
+                      >
+                        <icon-mock
+                          class="icon icon-columns"
+                          icon="columns"
+                        />
+                        <span
+                          class="__PRISMUI_COMPONENT_CLASS_PREFIX__ColumnToggler-caret"
+                        >
+                          <icon-mock
+                            class="icon icon-right-arrow-bold"
+                            icon="right-arrow-bold"
+                          />
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-contentWrap"
+              >
+                <div
+                  class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-content"
+                >
+                  <table
+                    class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-table"
+                  >
+                    <colgroup>
+                      <col
+                        data-index="3"
+                      />
+                      <col
+                        data-index="4"
+                      />
+                      <col
+                        data-index="5"
+                      />
+                      <col
+                        data-index="6"
+                      />
+                      <col
+                        data-index="7"
+                      />
+                      <col
+                        data-index="8"
+                      />
+                      <col
+                        data-index="9"
+                      />
+                    </colgroup>
+                    <thead>
+                      <tr
+                        class=""
+                      >
+                        <th
+                          class=""
+                          data-index="3"
+                        >
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__TableCell--title"
+                          >
+                            <span
+                              class="__PRISMUI_COMPONENT_CLASS_PREFIX__TplField fr-view"
+                            >
+                              <span>
+                                ID
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-content-colDragLine"
+                            data-index="3"
+                          />
+                        </th>
+                        <th
+                          class=""
+                          data-index="4"
+                        >
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__TableCell--title"
+                          >
+                            <span
+                              class="__PRISMUI_COMPONENT_CLASS_PREFIX__TplField fr-view"
+                            >
+                              <span>
+                                Rendering engine
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-content-colDragLine"
+                            data-index="4"
+                          />
+                        </th>
+                        <th
+                          class=""
+                          data-index="5"
+                        >
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__TableCell--title"
+                          >
+                            <span
+                              class="__PRISMUI_COMPONENT_CLASS_PREFIX__TplField fr-view"
+                            >
+                              <span>
+                                Browser
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-content-colDragLine"
+                            data-index="5"
+                          />
+                        </th>
+                        <th
+                          class=""
+                          data-index="6"
+                        >
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__TableCell--title"
+                          >
+                            <span
+                              class="__PRISMUI_COMPONENT_CLASS_PREFIX__TplField fr-view"
+                            >
+                              <span>
+                                Platform(s)
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-content-colDragLine"
+                            data-index="6"
+                          />
+                        </th>
+                        <th
+                          class=""
+                          data-index="7"
+                        >
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__TableCell--title"
+                          >
+                            <span
+                              class="__PRISMUI_COMPONENT_CLASS_PREFIX__TplField fr-view"
+                            >
+                              <span>
+                                Engine version
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-content-colDragLine"
+                            data-index="7"
+                          />
+                        </th>
+                        <th
+                          class=""
+                          data-index="8"
+                        >
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__TableCell--title"
+                          >
+                            <span
+                              class="__PRISMUI_COMPONENT_CLASS_PREFIX__TplField fr-view"
+                            >
+                              <span>
+                                CSS grade
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-content-colDragLine"
+                            data-index="8"
+                          />
+                        </th>
+                        <th
+                          class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-operationCell"
+                          data-index="9"
+                        >
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__TableCell--title"
+                          >
+                            <span
+                              class="__PRISMUI_COMPONENT_CLASS_PREFIX__TplField fr-view"
+                            >
+                              <span>
+                                操作
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-content-colDragLine"
+                            data-index="9"
+                          />
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-placeholder"
+                      >
+                        <td
+                          colspan="7"
+                        >
+                          <icon-mock
+                            class="__PRISMUI_COMPONENT_CLASS_PREFIX__Table-placeholder-empty-icon icon icon-desk-empty"
+                            icon="desk-empty"
+                          />
+                          暂无数据
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="__PRISMUI_COMPONENT_CLASS_PREFIX__Spinner-overlay"
+                />
+                <div
+                  class="__PRISMUI_COMPONENT_CLASS_PREFIX__Spinner __PRISMUI_COMPONENT_CLASS_PREFIX__Spinner--overlay"
+                  data-testid="spinner"
+                >
+                  <div
+                    class="__PRISMUI_COMPONENT_CLASS_PREFIX__Spinner-icon __PRISMUI_COMPONENT_CLASS_PREFIX__Spinner-icon--default"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

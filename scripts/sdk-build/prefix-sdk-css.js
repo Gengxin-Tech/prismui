@@ -58,9 +58,9 @@ function prefixSelector(selector, prefix) {
   var bodyOrHtml = selector.match(/(^| )(body|html)($|\W.*)/i);
   if (bodyOrHtml) return bodyOrHtml[1] + prefix + bodyOrHtml[3];
 
-  if (selector.match(/^\.is\-modalOpened/)) {
+  if (selector.match(/^\.is-modalOpened/)) {
     return selector.replace(
-      /^\.is\-modalOpened\s/,
+      /^\.is-modalOpened\s/,
       '.is-modalOpened ' + prefix + ' '
     );
   }

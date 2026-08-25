@@ -1,4 +1,4 @@
-import {SparkLine} from 'amis-ui';
+import {SparkLine} from 'prismui-ui';
 import {
   Renderer,
   RendererProps,
@@ -7,9 +7,9 @@ import {
   getPropValue,
   CustomStyle,
   AMISSchemaBase
-} from 'amis-core';
+} from 'prismui-core';
 import React from 'react';
-import {resolveVariableAndFilter} from 'amis-core';
+import {resolveVariableAndFilter} from 'prismui-core';
 import {BaseSchema, AMISClassName} from '../Schema';
 import {ActionSchema} from './Action';
 

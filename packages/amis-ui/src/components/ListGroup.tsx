@@ -1,4 +1,4 @@
-import {ThemeProps, themeable} from 'amis-core';
+import {ThemeProps, themeable} from 'prismui-core';
 import React from 'react';
 
 export interface ListGroupProps

@@ -5,16 +5,16 @@ import {
   FormBaseControl,
   resolveEventData,
   getVariable
-} from 'amis-core';
+} from 'prismui-core';
 import cx from 'classnames';
-import {filterDate, parseDuration} from 'amis-core';
-import {DateRangePicker} from 'amis-ui';
-import {isMobile, createObject, autobind} from 'amis-core';
-import {ActionObject} from 'amis-core';
-import type {ShortCuts} from 'amis-ui/lib/components/DatePicker';
+import {filterDate, parseDuration} from 'prismui-core';
+import {DateRangePicker} from 'prismui-ui';
+import {isMobile, createObject, autobind} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
+import type {ShortCuts} from 'prismui-ui/lib/components/DatePicker';
 import {FormBaseControlSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
-import type {AMISFormItem, TestIdBuilder} from 'amis-core';
+import type {AMISFormItem, TestIdBuilder} from 'prismui-core';
 
 export interface AMISDateRangeSchemaBase extends AMISFormItem {
   /**

@@ -3,13 +3,13 @@
  */
 
 import React from 'react';
-import {Renderer, RendererProps} from 'amis-core';
+import {Renderer, RendererProps} from 'prismui-core';
 import {BaseSchema, SchemaExpression, SchemaObject, SchemaTpl} from '../Schema';
-import {resolveVariableAndFilter} from 'amis-core';
-import {visibilityFilter} from 'amis-core';
-import {buildStyle} from 'amis-core';
-import {AMISExpression} from 'amis-core';
-import {AMISSchemaBase} from 'amis-core';
+import {resolveVariableAndFilter} from 'prismui-core';
+import {visibilityFilter} from 'prismui-core';
+import {buildStyle} from 'prismui-core';
+import {AMISExpression} from 'prismui-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 export type PropertyItemProps = {
   /**

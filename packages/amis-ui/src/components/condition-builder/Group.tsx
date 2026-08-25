@@ -11,7 +11,7 @@ import {
   someTree,
   isPureVariable,
   resolveVariableAndFilter
-} from 'amis-core';
+} from 'prismui-core';
 import Button from '../Button';
 import GroupOrItem from './GroupOrItem';
 import {ConditionBuilderConfig} from './config';
@@ -19,7 +19,7 @@ import {FormulaPickerProps} from '../formula/Picker';
 import Select from '../Select';
 
 import {DownArrowBoldIcon} from '../icons';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 interface ConditionGroupState {
   isCollapsed: boolean;

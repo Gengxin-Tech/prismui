@@ -1,4 +1,4 @@
-import type {SchemaObject} from 'amis';
+import type {SchemaObject} from 'prismui-framework';
 
 /**
  * @file amis schema 配置模板，主要很多地方都要全部配置的化，

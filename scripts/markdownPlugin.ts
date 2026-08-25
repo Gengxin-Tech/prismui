@@ -248,7 +248,7 @@ function markdown2js(content: string, file: string) {
   info.html =
     '<div class="markdown-body">' +
     content.replace(
-      /<\!\-\-(?:amis|prismui)\-preview\-(start|end)\-\-\>/g,
+      /<\!--(?:amis|prismui)-preview-(start|end)--\>/g,
       function (_, type) {
         return type === 'start' ? '</div>' : '<div class="markdown-body">';
       }

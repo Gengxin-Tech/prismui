@@ -1,10 +1,10 @@
 import React from 'react';
 import mapValues from 'lodash/mapValues';
 
-import {Tabs as CTabs, Tab} from 'amis-ui';
-import {AMISSchemaBase, Renderer, RendererProps} from 'amis-core';
-import {resolveVariable} from 'amis-core';
-import {str2AsyncFunction} from 'amis-core';
+import {Tabs as CTabs, Tab} from 'prismui-ui';
+import {AMISSchemaBase, Renderer, RendererProps} from 'prismui-core';
+import {resolveVariable} from 'prismui-core';
+import {str2AsyncFunction} from 'prismui-core';
 import {
   isVisible,
   autobind,
@@ -13,13 +13,13 @@ import {
   createObject,
   BaseSchemaWithoutType,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 
-import {filter} from 'amis-core';
+import {filter} from 'prismui-core';
 import {SchemaTpl, AMISClassName, BaseSchema, SchemaIcon} from '../Schema';
 
 import {ActionSchema} from './Action';
-import {AMISButtonSchema} from 'amis-core';
+import {AMISButtonSchema} from 'prismui-core';
 
 /**
  * 栏目容器渲染器。

@@ -2,9 +2,9 @@
  * @file 走势图
  */
 
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin, BaseEventContext} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin, BaseEventContext} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 
 export class SparklinePlugin extends BasePlugin {
   static id = 'SparklinePlugin';

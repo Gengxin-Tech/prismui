@@ -9,14 +9,14 @@ import {
   getSchemaTpl,
   defaultValue,
   persistGet
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import React from 'react';
 import {ActionConfig, ComponentInfo} from './types';
 import ActionConfigPanel from './action-config-panel';
 import {BASE_ACTION_PROPS} from './comp-action-select';
 import {findActionNode} from './eventControlConfigHelper';
-import {PlainObject, SchemaNode, Option} from 'amis-core';
-import {i18n as _i18n} from 'i18n-runtime';
+import {PlainObject, SchemaNode, Option} from 'prismui-core';
+import {i18n as _i18n} from 'prismui-i18n-runtime';
 import './actionsPanelPlugins';
 
 interface ActionDialogProp {

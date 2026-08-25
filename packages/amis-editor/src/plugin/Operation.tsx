@@ -1,6 +1,6 @@
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import React from 'react';
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -8,8 +8,8 @@ import {
   RegionConfig,
   RendererEventContext,
   SubRendererInfo
-} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 import {generateId} from '../util';
 
 export class OperationPlugin extends BasePlugin {

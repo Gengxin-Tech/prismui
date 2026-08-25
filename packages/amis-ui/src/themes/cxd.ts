@@ -1,4 +1,4 @@
-import {theme, ClassNamesFn, makeClassnames} from 'amis-core';
+import {theme, ClassNamesFn, makeClassnames} from 'prismui-core';
 
 export const classPrefix: string = 'prismui-';
 export const classnames: ClassNamesFn = makeClassnames(classPrefix);

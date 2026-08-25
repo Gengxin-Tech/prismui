@@ -1,8 +1,8 @@
 import React from 'react';
-import {modalsToDefinitions} from 'amis-editor-core';
+import {modalsToDefinitions} from 'prismui-editor-core';
 import {registerActionPanel} from '../../actionsPanelManager';
 import DialogActionPanel from '../../DialogActionPanel';
-import {TooltipWrapper} from 'amis';
+import {TooltipWrapper} from 'prismui-framework';
 
 const modalDescDetail: (info: any, context: any, props: any) => any = (
   info,

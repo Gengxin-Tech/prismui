@@ -7,12 +7,12 @@ import {
   resolveEventData,
   autobind,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 import isEqual from 'lodash/isEqual';
 import cx from 'classnames';
-import {LazyComponent} from 'amis-core';
-import {normalizeApi} from 'amis-core';
-import {ucFirst, anyChanged} from 'amis-core';
+import {LazyComponent} from 'prismui-core';
+import {normalizeApi} from 'prismui-core';
+import {ucFirst, anyChanged} from 'prismui-core';
 import type {FormBaseControlSchema, SchemaApi} from '../../Schema';
 
 /**
@@ -75,8 +75,8 @@ function loadRichText(
 ): () => Promise<any> {
   return () =>
     type === 'tinymce'
-      ? import('amis-ui/lib/components/Tinymce').then(item => item.default)
-      : import('amis-ui/lib/components/RichText').then(item => item.default);
+      ? import('prismui-ui/lib/components/Tinymce').then(item => item.default)
+      : import('prismui-ui/lib/components/RichText').then(item => item.default);
 }
 
 export default class RichTextControl extends React.Component<

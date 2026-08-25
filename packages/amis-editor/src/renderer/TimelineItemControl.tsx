@@ -5,13 +5,13 @@ import React from 'react';
 import cx from 'classnames';
 import uniqBy from 'lodash/uniqBy';
 import Sortable from 'sortablejs';
-import {render as amisRender, FormItem, Icon} from 'amis';
-import {getI18nEnabled} from 'amis-editor-core';
-import {autobind} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
-import {isExpression} from 'amis-core';
-import type {FormControlProps} from 'amis-core';
-import type {SchemaApi} from 'amis';
+import {render as amisRender, FormItem, Icon} from 'prismui-framework';
+import {getI18nEnabled} from 'prismui-editor-core';
+import {autobind} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
+import {isExpression} from 'prismui-core';
+import type {FormControlProps} from 'prismui-core';
+import type {SchemaApi} from 'prismui-framework';
 
 type TimelineItem = {
   title: string;

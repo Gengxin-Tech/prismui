@@ -13,10 +13,10 @@ import {
   persistSet,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
-import {DataSchema, Schema, Option, getRendererByName} from 'amis-core';
-import {Button, toast, TooltipWrapper} from 'amis';
-import {i18n as _i18n} from 'i18n-runtime';
+} from 'prismui-editor-core';
+import {DataSchema, Schema, Option, getRendererByName} from 'prismui-core';
+import {Button, toast, TooltipWrapper} from 'prismui-framework';
+import {i18n as _i18n} from 'prismui-i18n-runtime';
 import {ActionConfig} from './types';
 import CmptActionSelect from './comp-action-select';
 import {ActionData} from '.';

@@ -7,10 +7,10 @@ import {
   getStableClassSelector,
   getMatchedEventTargets,
   getPropValue
-} from 'amis-core';
-import {SchemaNode, Schema, ActionObject} from 'amis-core';
-import {Button, Spinner, SpinnerExtraProps} from 'amis-ui';
-import {ListStore, IListStore} from 'amis-core';
+} from 'prismui-core';
+import {SchemaNode, Schema, ActionObject} from 'prismui-core';
+import {Button, Spinner, SpinnerExtraProps} from 'prismui-ui';
+import {ListStore, IListStore} from 'prismui-core';
 import {Action} from '../types';
 import {
   anyChanged,
@@ -21,15 +21,15 @@ import {
   createObject,
   CustomStyle,
   setThemeClassName
-} from 'amis-core';
+} from 'prismui-core';
 import {
   isPureVariable,
   resolveVariableAndFilter,
   filterClassNameObject
-} from 'amis-core';
+} from 'prismui-core';
 import Sortable from 'sortablejs';
-import {filter} from 'amis-core';
-import {Icon} from 'amis-ui';
+import {filter} from 'prismui-core';
+import {Icon} from 'prismui-ui';
 import {
   BaseSchema,
   AMISClassName,
@@ -47,7 +47,7 @@ import type {
   AMISSchemaCollection,
   AMISLocalSource,
   AMISExpression
-} from 'amis-core';
+} from 'prismui-core';
 import find from 'lodash/find';
 
 /**

@@ -22,7 +22,7 @@ export interface AMISROptions {
 
 const defaultDevTemplate = `
 import React from 'react';
-import {useRenderOptionsContext, render} from 'amis-core';
+import {useRenderOptionsContext, render} from 'prismui-core';
 import {useParams} from "react-router-dom";
 
 export const schema = {{JSON_CODE}}
@@ -50,7 +50,7 @@ if (import.meta.hot) {
 
 const defaultJsTemplate = `
 import React from 'react';
-import {useRenderOptionsContext, render} from 'amis-core';
+import {useRenderOptionsContext, render} from 'prismui-core';
 import {useParams} from "react-router-dom";
 
 export const schema = {{JSON_CODE}}

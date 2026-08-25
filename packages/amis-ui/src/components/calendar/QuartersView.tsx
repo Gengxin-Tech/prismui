@@ -1,11 +1,11 @@
 import moment from 'moment';
 import React from 'react';
-import {localeable, LocaleProps, ThemeProps} from 'amis-core';
+import {localeable, LocaleProps, ThemeProps} from 'prismui-core';
 import Picker from '../Picker';
 import {PickerColumnItem} from '../PickerColumn';
-import {getRange} from 'amis-core';
-import {autobind} from 'amis-core';
-import type {TestIdBuilder} from 'amis-core';
+import {getRange} from 'prismui-core';
+import {autobind} from 'prismui-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface QuarterViewProps extends LocaleProps, ThemeProps {
   viewDate: moment.Moment;

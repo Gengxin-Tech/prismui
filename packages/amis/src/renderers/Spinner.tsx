@@ -1,5 +1,5 @@
-import {Spinner, SpinnerExtraProps} from 'amis-ui';
-import {Renderer, RendererProps, AMISSchemaCollection} from 'amis-core';
+import {Spinner, SpinnerExtraProps} from 'prismui-ui';
+import {Renderer, RendererProps, AMISSchemaCollection} from 'prismui-core';
 import React from 'react';
 import {BaseSchema} from '../Schema';
 

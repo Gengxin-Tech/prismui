@@ -8,7 +8,13 @@ import {parse, stringify} from 'json-ast-comments';
 import debounce from 'lodash/debounce';
 import findIndex from 'lodash/findIndex';
 import omit from 'lodash/omit';
-import {openContextMenus, toast, alert, DataScope, DataSchema} from 'amis';
+import {
+  openContextMenus,
+  toast,
+  alert,
+  DataScope,
+  DataSchema
+} from 'prismui-framework';
 import {
   getRenderers,
   RenderOptions,
@@ -16,7 +22,7 @@ import {
   wrapFetcher,
   GlobalVariableItem,
   setVariable
-} from 'amis-core';
+} from 'prismui-core';
 import {
   PluginInterface,
   BasicPanelItem,
@@ -83,10 +89,10 @@ import {
   resolveEditorComponentClassPrefix
 } from './themeScope';
 
-import type {IScopedContext} from 'amis';
-import type {SchemaObject, SchemaCollection} from 'amis';
-import type {Api, Payload, RendererConfig, RendererEnv} from 'amis-core';
-import {loadAsyncRenderer} from 'amis-core';
+import type {IScopedContext} from 'prismui-framework';
+import type {SchemaObject, SchemaCollection} from 'prismui-framework';
+import type {Api, Payload, RendererConfig, RendererEnv} from 'prismui-core';
+import {loadAsyncRenderer} from 'prismui-core';
 import {startInlineEdit} from './inlineEdit';
 
 export interface EditorManagerConfig
@@ -2209,7 +2215,7 @@ export class EditorManager {
 
     // 删掉当前行记录scope，保持原始scope
     for (const key in this.dataSchema.idMap) {
-      if (/\-currentRow$/.test(key)) {
+      if (/-currentRow$/.test(key)) {
         this.dataSchema.removeScope(key);
       }
     }
@@ -2299,7 +2305,7 @@ export class EditorManager {
     const nearestScopeId =
       Object.keys(this.dataSchema.idMap).find(
         key =>
-          /\-currentRow$/.test(key) &&
+          /-currentRow$/.test(key) &&
           !this.dataSchema.idMap[key].children?.length
       ) || nearestScope?.id;
 

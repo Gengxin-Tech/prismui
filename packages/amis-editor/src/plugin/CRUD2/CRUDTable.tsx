@@ -5,14 +5,14 @@
 
 import React from 'react';
 import sortBy from 'lodash/sortBy';
-import {autobind} from 'amis';
+import {autobind} from 'prismui-framework';
 import {
   EditorManager,
   JSONPipeIn,
   BuildPanelEventContext,
   EditorNodeType,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   DSBuilder,
   DSBuilderManager,

@@ -11,7 +11,7 @@ import {
   getSchemaTpl,
   PluginEvent,
   PreventClickEventContext
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   buildLinkActionDesc,
   getEventControlConfig

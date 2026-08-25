@@ -4,9 +4,9 @@
  */
 
 import React, {useCallback} from 'react';
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 
-import type {FormControlProps} from 'amis-core';
+import type {FormControlProps} from 'prismui-core';
 
 export interface InputRangeValueProps extends FormControlProps {
   value?: any;

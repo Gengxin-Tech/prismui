@@ -11,8 +11,8 @@ import {
   tipedLabel,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
-import {isPureVariable} from 'amis';
+} from 'prismui-editor-core';
+import {isPureVariable} from 'prismui-framework';
 import omit from 'lodash/omit';
 import {inputStateTpl} from '../../renderer/style-control/helper';
 import {ValidatorTag} from '../../validator';

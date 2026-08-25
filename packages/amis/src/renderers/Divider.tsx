@@ -8,7 +8,7 @@ import {
   resolveVariableAndFilter,
   AMISSchemaBase,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 
 /**
  * Divider 分割线渲染器。

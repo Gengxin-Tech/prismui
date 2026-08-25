@@ -1,9 +1,9 @@
 import React from 'react';
-import {Renderer, RendererProps} from 'amis-core';
-import {Api, SchemaNode, Schema, ActionObject} from 'amis-core';
-import {isVisible} from 'amis-core';
+import {Renderer, RendererProps} from 'prismui-core';
+import {Api, SchemaNode, Schema, ActionObject} from 'prismui-core';
+import {isVisible} from 'prismui-core';
 import {BaseSchema, SchemaObject} from '../Schema';
-import {AMISSchemaBase} from 'amis-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 export type GridObject = {
   /**

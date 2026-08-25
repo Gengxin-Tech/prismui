@@ -10,8 +10,8 @@ import {
   evalTrackExpression,
   TestIdBuilder,
   filterClassNameObject
-} from 'amis-core';
-import {BadgeObject, Checkbox, Icon, Spinner} from 'amis-ui';
+} from 'prismui-core';
+import {BadgeObject, Checkbox, Icon, Spinner} from 'prismui-ui';
 import React from 'react';
 
 export interface CellProps extends ThemeProps {

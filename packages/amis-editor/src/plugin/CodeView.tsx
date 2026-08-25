@@ -1,9 +1,9 @@
 /**
  * @file 代码高亮显示
  */
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
 export class CodeViewPlugin extends BasePlugin {
   static id = 'CodeViewPlugin';

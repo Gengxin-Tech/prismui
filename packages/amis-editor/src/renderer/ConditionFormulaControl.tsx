@@ -8,11 +8,16 @@ import {
   autobind,
   FormControlProps,
   flattenTree
-} from 'amis-core';
+} from 'prismui-core';
 import cx from 'classnames';
-import {FormItem, Button, PickerContainer, ConditionBuilderFields} from 'amis';
+import {
+  FormItem,
+  Button,
+  PickerContainer,
+  ConditionBuilderFields
+} from 'prismui-framework';
 import {reaction} from 'mobx';
-import {getConditionVariables} from 'amis-editor-core';
+import {getConditionVariables} from 'prismui-editor-core';
 
 interface ConditionFormulaControlProps extends FormControlProps {
   /**

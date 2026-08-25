@@ -1,5 +1,5 @@
 import React from 'react';
-import {guid} from 'amis-core';
+import {guid} from 'prismui-core';
 import Button from '../Button';
 import {Icon} from '../icons';
 import InputBox from '../InputBox';

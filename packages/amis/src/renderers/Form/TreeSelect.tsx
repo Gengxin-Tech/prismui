@@ -7,9 +7,9 @@ import {
   hasAbility,
   resolveEventData,
   setThemeClassName
-} from 'amis-core';
-import {PopOver} from 'amis-core';
-import {PopUp, SpinnerExtraProps} from 'amis-ui';
+} from 'prismui-core';
+import {PopOver} from 'prismui-core';
+import {PopUp, SpinnerExtraProps} from 'prismui-ui';
 
 import {
   OptionsControl,
@@ -18,24 +18,24 @@ import {
   toNumber,
   CustomStyle,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 
-import {Tree as TreeSelector} from 'amis-ui';
+import {Tree as TreeSelector} from 'prismui-ui';
 import {matchSorter} from 'match-sorter';
 import debouce from 'lodash/debounce';
 import find from 'lodash/find';
-import {Api} from 'amis-core';
-import {isEffectiveApi} from 'amis-core';
-import {Spinner} from 'amis-ui';
-import {ResultBox} from 'amis-ui';
-import {autobind, getTreeAncestors, isMobile, createObject} from 'amis-core';
-import {normalizeOptions} from 'amis-core';
-import {ActionObject} from 'amis-core';
+import {Api} from 'prismui-core';
+import {isEffectiveApi} from 'prismui-core';
+import {Spinner} from 'prismui-ui';
+import {ResultBox} from 'prismui-ui';
+import {autobind, getTreeAncestors, isMobile, createObject} from 'prismui-core';
+import {normalizeOptions} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
 import {FormOptionsSchema, SchemaApi} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 import {AMISTooltipWrapperSchema} from '../TooltipWrapper';
-import type {ItemRenderStates} from 'amis-ui/lib/components/Selection';
-import type {AMISFormItemWithOptions, TestIdBuilder} from 'amis-core';
+import type {ItemRenderStates} from 'prismui-ui/lib/components/Selection';
+import type {AMISFormItemWithOptions, TestIdBuilder} from 'prismui-core';
 
 type NodeBehaviorType = 'unfold' | 'check';
 

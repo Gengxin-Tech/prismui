@@ -1,9 +1,9 @@
-import {EditorNodeType, getSchemaTpl} from 'amis-editor-core';
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin, BaseEventContext} from 'amis-editor-core';
+import {EditorNodeType, getSchemaTpl} from 'prismui-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin, BaseEventContext} from 'prismui-editor-core';
 import {ValidatorTag} from '../../validator';
 import {getEventControlConfig} from '../../renderer/event-control/helper';
-import {RendererPluginAction, RendererPluginEvent} from 'amis-editor-core';
+import {RendererPluginAction, RendererPluginEvent} from 'prismui-editor-core';
 
 export class SignaturePlugin extends BasePlugin {
   static id = 'SignaturePlugin';

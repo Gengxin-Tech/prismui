@@ -12,8 +12,8 @@ import {
   setReactRef,
   themeable,
   ThemeProps
-} from 'amis-core';
-import {localeable, LocaleProps} from 'amis-core';
+} from 'prismui-core';
+import {localeable, LocaleProps} from 'prismui-core';
 import Transition, {
   ENTERED,
   EXITING,

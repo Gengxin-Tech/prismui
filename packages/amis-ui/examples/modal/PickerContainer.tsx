@@ -1,5 +1,5 @@
 import React from 'react';
-import {PickerContainer, Button, Form, Controller, InputBox} from 'amis-ui';
+import {PickerContainer, Button, Form, Controller, InputBox} from 'prismui-ui';
 
 export default function () {
   const body = React.createRef<any>();

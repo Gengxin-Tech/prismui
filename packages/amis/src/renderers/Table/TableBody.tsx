@@ -1,14 +1,14 @@
 import React from 'react';
-import {ClassNamesFn, RendererEvent, autobind} from 'amis-core';
+import {ClassNamesFn, RendererEvent, autobind} from 'prismui-core';
 
-import {SchemaNode, ActionObject} from 'amis-core';
+import {SchemaNode, ActionObject} from 'prismui-core';
 import TableRow from './TableRow';
-import {filter} from 'amis-core';
+import {filter} from 'prismui-core';
 import {observer} from 'mobx-react';
-import {createObject} from 'amis-core';
-import {LocaleProps} from 'amis-core';
+import {createObject} from 'prismui-core';
+import {LocaleProps} from 'prismui-core';
 import {ActionSchema} from '../Action';
-import type {IColumn, IRow, ITableStore, TestIdBuilder} from 'amis-core';
+import type {IColumn, IRow, ITableStore, TestIdBuilder} from 'prismui-core';
 import flatten from 'lodash/flatten';
 import VirtualTableBody from './VirtualTableBody';
 

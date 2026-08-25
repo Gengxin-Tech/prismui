@@ -9,8 +9,8 @@ import {
   EditorNodeType,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
-import {isExpression, isPureVariable} from 'amis-core';
+} from 'prismui-editor-core';
+import {isExpression, isPureVariable} from 'prismui-core';
 import omit from 'lodash/omit';
 import {ValidatorTag} from '../../validator';
 import {

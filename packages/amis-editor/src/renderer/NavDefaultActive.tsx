@@ -3,9 +3,9 @@
  */
 
 import React from 'react';
-import {FormItem} from 'amis';
-import {tipedLabel} from 'amis-editor-core';
-import type {FormControlProps} from 'amis-core';
+import {FormItem} from 'prismui-framework';
+import {tipedLabel} from 'prismui-editor-core';
+import type {FormControlProps} from 'prismui-core';
 import set from 'lodash/set';
 import get from 'lodash/get';
 

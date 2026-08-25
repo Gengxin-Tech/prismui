@@ -1,10 +1,10 @@
 import React from 'react';
-import {Checkbox} from 'amis-ui';
-import {Renderer, RendererProps, AMISSchemaCollection} from 'amis-core';
+import {Checkbox} from 'prismui-ui';
+import {Renderer, RendererProps, AMISSchemaCollection} from 'prismui-core';
 import {BaseSchema, AMISClassName} from '../Schema';
-import {autobind} from 'amis-core';
-import {buildStyle} from 'amis-core';
-import {AMISSchemaBase} from 'amis-core';
+import {autobind} from 'prismui-core';
+import {buildStyle} from 'prismui-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * Card2 新卡片渲染器。

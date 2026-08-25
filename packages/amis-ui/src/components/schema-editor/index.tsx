@@ -10,8 +10,8 @@ import {
   ThemeProps,
   autobind,
   JSONSchema
-} from 'amis-core';
-import {uncontrollable} from 'amis-core';
+} from 'prismui-core';
+import {uncontrollable} from 'prismui-core';
 import {SchemaEditorItem} from './Item';
 import {schemaEditorItemPlaceholder} from './Common';
 import type {JSONSchema7TypeName} from 'json-schema';

@@ -1,10 +1,15 @@
 import React from 'react';
 import upperFirst from 'lodash/upperFirst';
-import {AMISSchemaBase, AMISUrlPath, Renderer, RendererProps} from 'amis-core';
-import {autobind, detectPropValueChanged, getPropValue} from 'amis-core';
-import {Icon} from 'amis-ui';
-import {resolveVariable} from 'amis-core';
-import {filter} from 'amis-core';
+import {
+  AMISSchemaBase,
+  AMISUrlPath,
+  Renderer,
+  RendererProps
+} from 'prismui-core';
+import {autobind, detectPropValueChanged, getPropValue} from 'prismui-core';
+import {Icon} from 'prismui-ui';
+import {resolveVariable} from 'prismui-core';
+import {filter} from 'prismui-core';
 import {BaseSchema, SchemaUrlPath} from '../Schema';
 
 /**

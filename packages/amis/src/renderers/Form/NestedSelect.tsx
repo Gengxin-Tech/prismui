@@ -7,7 +7,7 @@ import {
   Checkbox,
   Cascader,
   SpinnerExtraProps
-} from 'amis-ui';
+} from 'prismui-ui';
 import {
   Overlay,
   resolveEventData,
@@ -33,7 +33,7 @@ import {
   labelToString,
   setThemeClassName,
   CustomStyle
-} from 'amis-core';
+} from 'prismui-core';
 import xor from 'lodash/xor';
 import union from 'lodash/union';
 import compact from 'lodash/compact';
@@ -41,8 +41,8 @@ import {FormOptionsSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 import {matchSorter} from 'match-sorter';
 
-import type {TooltipObject} from 'amis-ui/lib/components/TooltipWrapper';
-import {AMISFormItemWithOptions} from 'amis-core';
+import type {TooltipObject} from 'prismui-ui/lib/components/TooltipWrapper';
+import {AMISFormItemWithOptions} from 'prismui-core';
 
 /**
  * Nested Select

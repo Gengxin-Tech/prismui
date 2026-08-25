@@ -6,7 +6,7 @@ import React from 'react';
 import cx from 'classnames';
 import camelCase from 'lodash/camelCase';
 import mapKeys from 'lodash/mapKeys';
-import {FormItem, Switch} from 'amis';
+import {FormItem, Switch} from 'prismui-framework';
 
 import {
   autobind,
@@ -14,11 +14,11 @@ import {
   isEmpty,
   anyChanged,
   getI18nEnabled
-} from 'amis-editor-core';
-import {defaultValue, tipedLabel} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, tipedLabel} from 'prismui-editor-core';
 
-import type {AMISExpression, FormControlProps} from 'amis-core';
-import type {SchemaExpression} from 'amis';
+import type {AMISExpression, FormControlProps} from 'prismui-core';
+import type {SchemaExpression} from 'prismui-framework';
 
 export interface BadgeControlProps extends FormControlProps {
   /**

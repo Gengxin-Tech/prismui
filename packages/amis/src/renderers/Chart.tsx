@@ -16,21 +16,25 @@ import {
   AMISLocalSource,
   AMISFunction,
   AMISTokenizeableString
-} from 'amis-core';
-import {ServiceStore, IServiceStore} from 'amis-core';
+} from 'prismui-core';
+import {ServiceStore, IServiceStore} from 'prismui-core';
 
-import {filter} from 'amis-core';
+import {filter} from 'prismui-core';
 import cx from 'classnames';
-import {LazyComponent} from 'amis-core';
-import {resizeSensor} from 'amis-core';
-import {resolveVariableAndFilter, isPureVariable, dataMapping} from 'amis-core';
+import {LazyComponent} from 'prismui-core';
+import {resizeSensor} from 'prismui-core';
+import {
+  resolveVariableAndFilter,
+  isPureVariable,
+  dataMapping
+} from 'prismui-core';
 import {
   isApiOutdated,
   isEffectiveApi,
   normalizeApiResponseData
-} from 'amis-core';
-import {ScopedContext, IScopedContext} from 'amis-core';
-import {createObject, findObjectsWithKey} from 'amis-core';
+} from 'prismui-core';
+import {ScopedContext, IScopedContext} from 'prismui-core';
+import {createObject, findObjectsWithKey} from 'prismui-core';
 import {
   BaseSchema,
   SchemaApi,
@@ -44,9 +48,9 @@ import {isAlive} from 'mobx-state-tree';
 import debounce from 'lodash/debounce';
 import pick from 'lodash/pick';
 import isString from 'lodash/isString';
-import {ApiObject} from 'amis-core';
-import {AMISSchemaBase} from 'amis-core';
-import {AMISVariableName} from 'amis-core';
+import {ApiObject} from 'prismui-core';
+import {AMISSchemaBase} from 'prismui-core';
+import {AMISVariableName} from 'prismui-core';
 
 const DEFAULT_EVENT_PARAMS = [
   'componentType',

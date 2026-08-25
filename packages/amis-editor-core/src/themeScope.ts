@@ -6,7 +6,7 @@ import {
   makeStableClassnames,
   ThemeScope,
   ThemeScopeProps
-} from 'amis-core';
+} from 'prismui-core';
 
 export function resolveEditorThemeName(
   theme?: any,

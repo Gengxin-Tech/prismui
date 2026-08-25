@@ -13,14 +13,14 @@ import uniqBy from 'lodash/uniqBy';
 import uniq from 'lodash/uniq';
 import sortBy from 'lodash/sortBy';
 import pick from 'lodash/pick';
-import {toast, autobind, isObject} from 'amis';
+import {toast, autobind, isObject} from 'prismui-framework';
 import {
   BasePlugin,
   EditorManager,
   defaultValue,
   getSchemaTpl,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   DSBuilderManager,
   DSFeatureEnum,
@@ -34,7 +34,7 @@ import {
   getActionCommonProps,
   buildLinkActionDesc
 } from '../../renderer/event-control/helper';
-import {CRUD2Schema} from 'amis';
+import {CRUD2Schema} from 'prismui-framework';
 import {deepRemove, findObj, findSchema} from './utils';
 import {
   ToolsConfig,
@@ -44,7 +44,7 @@ import {
 } from './constants';
 import {FieldSetting} from '../../renderer/FieldSetting';
 
-import type {IFormItemStore, IFormStore} from 'amis-core';
+import type {IFormItemStore, IFormStore} from 'prismui-core';
 import type {CRUDScaffoldConfig} from '../../builder/type';
 import type {
   ScaffoldForm,
@@ -52,7 +52,7 @@ import type {
   EditorNodeType,
   RendererPluginEvent,
   RendererPluginAction
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 /** 需要动态控制的属性 */
 export type CRUD2DynamicControls = Partial<

@@ -1,9 +1,9 @@
 /**
  * @file Steps 步骤条
  */
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 import {
   inputStepStateTpl,
   inputSwitchStateTpl

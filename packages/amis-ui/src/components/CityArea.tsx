@@ -6,9 +6,9 @@ import React, {useEffect, useState, memo} from 'react';
 import Picker from './Picker';
 import ResultBox from './ResultBox';
 import {useSetState, useUpdateEffect} from '../hooks';
-import {localeable, LocaleProps} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
-import {uncontrollable} from 'amis-core';
+import {localeable, LocaleProps} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import {uncontrollable} from 'prismui-core';
 import PopUp from './PopUp';
 import {PickerObjectOption} from './PickerColumn';
 

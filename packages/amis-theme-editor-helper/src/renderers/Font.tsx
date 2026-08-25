@@ -4,11 +4,11 @@
  */
 
 import React, {useEffect} from 'react';
-import {FormItem} from 'amis-core';
-import type {FormControlProps} from 'amis-core';
+import {FormItem} from 'prismui-core';
+import type {FormControlProps} from 'prismui-core';
 import {Icon as ThemeIcon} from '../icons/index';
 import cx from 'classnames';
-import {TooltipWrapper} from 'amis-ui';
+import {TooltipWrapper} from 'prismui-ui';
 import ColorPicker from './ColorPicker';
 import cloneDeep from 'lodash/cloneDeep';
 import assign from 'lodash/assign';

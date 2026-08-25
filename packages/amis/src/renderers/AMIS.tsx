@@ -6,10 +6,10 @@ import {
   AMISSchemaBase,
   AMISVariableName,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 import React from 'react';
 import {BaseSchema, SchemaObject, SchemaIcon} from '../Schema';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 
 /**
  * 渲染数据里的 amis schema

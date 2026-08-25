@@ -1,11 +1,11 @@
 import React from 'react';
-import {RendererProps} from 'amis-core';
-import {ActionObject} from 'amis-core';
-import {Icon} from 'amis-ui';
-import {Overlay} from 'amis-core';
-import {PopOver} from 'amis-core';
-import {setVariable, createObject} from 'amis-core';
-import type {TestIdBuilder} from 'amis-core';
+import {RendererProps} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
+import {Icon} from 'prismui-ui';
+import {Overlay} from 'prismui-core';
+import {PopOver} from 'prismui-core';
+import {setVariable, createObject} from 'prismui-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface QuickSearchConfig {
   type?: string;

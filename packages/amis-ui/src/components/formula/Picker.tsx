@@ -3,7 +3,7 @@ import {
   isExpression,
   resolveVariableAndFilterForAsync,
   uncontrollable
-} from 'amis-core';
+} from 'prismui-core';
 import React from 'react';
 import {FormulaEditor, FormulaEditorProps} from './Editor';
 import {
@@ -15,7 +15,7 @@ import {
   Evaluator,
   evaluate,
   isPureVariable
-} from 'amis-core';
+} from 'prismui-core';
 import Editor from './Editor';
 import ResultBox from '../ResultBox';
 import Button from '../Button';

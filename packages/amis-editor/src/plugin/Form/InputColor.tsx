@@ -1,7 +1,7 @@
-import {registerEditorPlugin} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl, tipedLabel} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl, tipedLabel} from 'prismui-editor-core';
 import {ValidatorTag} from '../../validator';
-import {BasePlugin, BaseEventContext} from 'amis-editor-core';
+import {BasePlugin, BaseEventContext} from 'prismui-editor-core';
 import {getEventControlConfig} from '../../renderer/event-control/helper';
 import tinyColor from 'tinycolor2';
 

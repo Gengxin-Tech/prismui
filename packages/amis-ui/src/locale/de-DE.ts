@@ -1,4 +1,4 @@
-import {registerLocale as register} from 'amis-core';
+import {registerLocale as register} from 'prismui-core';
 
 register('de-DE', {
   'Action.countDown': '${timeLeft} warten',

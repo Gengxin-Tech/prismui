@@ -27,10 +27,10 @@ const sdkChunkPlan = {
       '!xlsx/**',
       '!docsearch.js/**',
       '!monaco-editor/**.css',
-      '!amis-ui/lib/components/RichText.js',
-      '!amis-ui/lib/components/Tinymce.js',
-      '!amis-ui/lib/components/ColorPicker.js',
-      '!amis-ui/lib/components/PdfViewer.js',
+      '!prismui-ui/lib/components/RichText.js',
+      '!prismui-ui/lib/components/Tinymce.js',
+      '!prismui-ui/lib/components/ColorPicker.js',
+      '!prismui-ui/lib/components/PdfViewer.js',
       '!react-pdf/**',
       '!pdfjs-dist/**',
       '!react-color/**',
@@ -41,10 +41,10 @@ const sdkChunkPlan = {
       '!@uiw/react-json-view/**',
       '!react-cropper/**',
       '!jsbarcode/**',
-      '!amis-ui/lib/components/BarCode.js',
-      '!amis-ui/lib/renderers/Form/CityDB.js',
-      '!amis-ui/lib/components/Markdown.js',
-      '!amis-core/lib/utils/markdown.js',
+      '!prismui-ui/lib/components/BarCode.js',
+      '!prismui-ui/lib/renderers/Form/CityDB.js',
+      '!prismui-ui/lib/components/Markdown.js',
+      '!prismui-core/lib/utils/markdown.js',
       '!highlight.js/**',
       '!entities/**',
       '!linkify-it/**',
@@ -53,18 +53,18 @@ const sdkChunkPlan = {
       '!markdown-it/**',
       '!markdown-it-html5-media/**',
       '!punycode/**',
-      '!office-viewer/**',
+      '!prismui-office-viewer/**',
       '!numfmt/**',
-      '!amis-formula/lib/doc.js'
+      '!prismui-formula/lib/doc.js'
     ],
-    'rich-text.js': ['amis-ui/lib/components/RichText.js', 'froala-editor/**'],
-    'tinymce.js': ['amis-ui/lib/components/Tinymce.js', 'tinymce/**'],
+    'rich-text.js': ['prismui-ui/lib/components/RichText.js', 'froala-editor/**'],
+    'tinymce.js': ['prismui-ui/lib/components/Tinymce.js', 'tinymce/**'],
     'codemirror.js': ['codemirror/**'],
     'papaparse.js': ['papaparse/**'],
     'exceljs.js': ['exceljs/**'],
     'xlsx.js': ['xlsx/**'],
     'markdown.js': [
-      'amis-ui/lib/components/Markdown.js',
+      'prismui-ui/lib/components/Markdown.js',
       'highlight.js/**',
       'entities/**',
       'linkify-it/**',
@@ -75,14 +75,14 @@ const sdkChunkPlan = {
       'punycode/**'
     ],
     'color-picker.js': [
-      'amis-ui/lib/components/ColorPicker.js',
+      'prismui-ui/lib/components/ColorPicker.js',
       'react-color/**',
       'material-colors/**',
       'reactcss/**',
       'tinycolor2/**'
     ],
-    'pdf-viewer-shared.js': ['amis-ui/lib/components/Input.js', 'clsx/**'],
-    'pdf-viewer.js': ['amis-ui/lib/components/PdfViewer.js', 'react-pdf/**'],
+    'pdf-viewer-shared.js': ['prismui-ui/lib/components/Input.js', 'clsx/**'],
+    'pdf-viewer.js': ['prismui-ui/lib/components/PdfViewer.js', 'react-pdf/**'],
     'cropperjs.js': ['cropperjs/**', 'react-cropper/**'],
     'barcode.js': ['src/components/BarCode.tsx', 'jsbarcode/**'],
     'charts.js': [
@@ -91,10 +91,10 @@ const sdkChunkPlan = {
       'echarts-stat/**',
       'echarts-wordcloud/**'
     ],
-    'office-viewer.js': ['office-viewer/**', 'numfmt/**'],
+    'office-viewer.js': ['prismui-office-viewer/**', 'numfmt/**'],
     'json-view.js': ['@uiw/react-json-view/**'],
     // Preserve the historical output typo. Renaming it would be an SDK break.
-    'fomula-doc.js': ['amis-formula/lib/doc.js'],
+    'fomula-doc.js': ['prismui-formula/lib/doc.js'],
     'rest.js': [
       '*.js',
       '!monaco-editor/**',
@@ -104,7 +104,7 @@ const sdkChunkPlan = {
       '!froala-editor/**',
       '!react-pdf/**',
       '!pdfjs-dist/**',
-      '!amis-ui/lib/components/RichText.js',
+      '!prismui-ui/lib/components/RichText.js',
       '!zrender/**',
       '!echarts/**',
       '!echarts-wordcloud/**',
@@ -119,7 +119,7 @@ const sdkChunkPlan = {
       '!uc.micro/**',
       '!markdown-it/**',
       '!markdown-it-html5-media/**',
-      '!office-viewer/**',
+      '!prismui-office-viewer/**',
       '!numfmt/**'
     ]
   }

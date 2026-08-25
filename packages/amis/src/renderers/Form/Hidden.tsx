@@ -4,7 +4,7 @@ import {
   FormControlProps,
   FormBaseControl,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
 
 /**

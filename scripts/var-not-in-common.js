@@ -18,13 +18,13 @@ const commonVariables = fs.readFileSync(
 
 const cxdVariableSet = new Set();
 
-cxdVariables.match(/\-\-[\-a-zA-Z0-9]+/g).forEach(function (variable) {
+cxdVariables.match(/--[-a-zA-Z0-9]+/g).forEach(function (variable) {
   cxdVariableSet.add(variable);
 });
 
 const commonVariableSet = new Set();
 
-commonVariables.match(/\-\-[\-a-zA-Z0-9]+/g).forEach(function (variable) {
+commonVariables.match(/--[-a-zA-Z0-9]+/g).forEach(function (variable) {
   commonVariableSet.add(variable);
 });
 

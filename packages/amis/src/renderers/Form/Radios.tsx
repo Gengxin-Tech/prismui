@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import {Radios} from 'amis-ui';
+import {Radios} from 'prismui-ui';
 import {
   OptionsControl,
   OptionsControlProps,
@@ -13,12 +13,12 @@ import {
   CustomStyle,
   formateCheckThemeCss,
   AMISFormItemWithOptions
-} from 'amis-core';
-import {autobind, isEmpty, createObject} from 'amis-core';
-import {ActionObject} from 'amis-core';
+} from 'prismui-core';
+import {autobind, isEmpty, createObject} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
 import {FormOptionsSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
-import {filter} from 'amis-core';
+import {filter} from 'prismui-core';
 
 /**
  * Radio 单选框。

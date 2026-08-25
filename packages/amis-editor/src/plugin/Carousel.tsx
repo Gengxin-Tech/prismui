@@ -8,7 +8,7 @@ import {
   getSchemaTpl,
   mockValue,
   diff
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {schemaArrayFormat} from '../util';
 
 export class CarouselPlugin extends BasePlugin {

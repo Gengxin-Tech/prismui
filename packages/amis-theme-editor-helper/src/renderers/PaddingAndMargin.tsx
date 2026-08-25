@@ -2,9 +2,9 @@
  * 主题内外边距
  */
 
-import {FormItem} from 'amis-core';
-import type {FormControlProps} from 'amis-core';
-import {Overlay, PopOver} from 'amis-ui';
+import {FormItem} from 'prismui-core';
+import type {FormControlProps} from 'prismui-core';
+import {Overlay, PopOver} from 'prismui-ui';
 import React, {useEffect, useState} from 'react';
 import cx from 'classnames';
 import cloneDeep from 'lodash/cloneDeep';

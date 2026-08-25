@@ -6,15 +6,22 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {FormItem, Button, Overlay, PopOver, Icon, Switch} from 'amis';
+import {
+  FormItem,
+  Button,
+  Overlay,
+  PopOver,
+  Icon,
+  Switch
+} from 'prismui-framework';
 
-import {isObject, autobind} from 'amis-editor-core';
+import {isObject, autobind} from 'prismui-editor-core';
 
-import type {Action} from 'amis';
-import type {SchemaCollection} from 'amis';
-import type {IScopedContext} from 'amis-core';
-import type {FormSchema} from 'amis';
-import type {FormControlProps} from 'amis-core';
+import type {Action} from 'prismui-framework';
+import type {SchemaCollection} from 'prismui-framework';
+import type {IScopedContext} from 'prismui-core';
+import type {FormSchema} from 'prismui-framework';
+import type {FormControlProps} from 'prismui-core';
 import fromPairs from 'lodash/fromPairs';
 import some from 'lodash/some';
 import pick from 'lodash/pick';

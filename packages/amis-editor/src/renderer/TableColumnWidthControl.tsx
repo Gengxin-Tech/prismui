@@ -5,9 +5,9 @@
 import React from 'react';
 import cx from 'classnames';
 import findIndex from 'lodash/findIndex';
-import {FormControlProps, FormItem, TreeSelection} from 'amis';
-import {toNumber} from 'amis-core';
-import {getSchemaTpl} from 'amis-editor-core';
+import {FormControlProps, FormItem, TreeSelection} from 'prismui-framework';
+import {toNumber} from 'prismui-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
 interface optionType {
   label: string;

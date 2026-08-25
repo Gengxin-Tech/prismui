@@ -9,8 +9,8 @@ import {
   BaseEventContext,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
-import type {Schema, SchemaType} from 'amis';
+} from 'prismui-editor-core';
+import type {Schema, SchemaType} from 'prismui-framework';
 import {ValidatorTag} from '../../validator';
 import {
   getEventControlConfig,

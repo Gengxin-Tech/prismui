@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {ClassNamesFn} from 'amis-core';
+import {ClassNamesFn} from 'prismui-core';
 
 export interface ItemActionsProps {
   classnames: ClassNamesFn;

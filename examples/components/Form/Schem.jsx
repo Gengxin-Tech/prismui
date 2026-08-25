@@ -1,6 +1,6 @@
 import React from 'react';
-import {TitleBar} from 'amis-ui';
-import {render} from 'amis';
+import {TitleBar} from 'prismui-ui';
+import {render} from 'prismui';
 
 const Schema = {
   title: 'Person',

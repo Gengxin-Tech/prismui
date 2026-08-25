@@ -12,17 +12,17 @@ import {
   Schema,
   filter,
   TestIdBuilder
-} from 'amis-core';
+} from 'prismui-core';
 import Transition, {ENTERED, ENTERING} from 'react-transition-group/Transition';
-import {themeable, ThemeProps, noop} from 'amis-core';
-import {uncontrollable} from 'amis-core';
-import {isObjectShallowModified} from 'amis-core';
-import {autobind, guid} from 'amis-core';
-import {getStableClassName, getStableClassSelector} from 'amis-core';
+import {themeable, ThemeProps, noop} from 'prismui-core';
+import {uncontrollable} from 'prismui-core';
+import {isObjectShallowModified} from 'prismui-core';
+import {autobind, guid} from 'prismui-core';
+import {getStableClassName, getStableClassSelector} from 'prismui-core';
 import {Icon} from './icons';
 import debounce from 'lodash/debounce';
 import TooltipWrapper from './TooltipWrapper';
-import {resizeSensor} from 'amis-core';
+import {resizeSensor} from 'prismui-core';
 import PopOverContainer from './PopOverContainer';
 
 import Sortable from 'sortablejs';
@@ -507,43 +507,40 @@ export class Tabs extends React.Component<TabsProps, any> {
       return;
     }
 
-    this.sortable = new Sortable(
-      links,
-      {
-        group: this.id,
-        animation: 250,
-        handle: getStableClassSelector(cx, 'Tabs-link'),
-        ghostClass: getStableClassName(cx, 'Tabs-link--dragging'),
-        onStart: () => {
-          this.draging = true;
-        },
-        onEnd: (e: any) => {
-          // 没有移动
-          if (e.newIndex === e.oldIndex) {
-            return;
-          }
-
-          // 再交换回来
-          const parent = e.to as HTMLElement;
-          if (e.oldIndex < parent.childNodes.length - 1) {
-            parent.insertBefore(
-              e.item,
-              parent.childNodes[
-                e.oldIndex > e.newIndex ? e.oldIndex + 1 : e.oldIndex
-              ]
-            );
-          } else {
-            parent.appendChild(e.item);
-          }
-
-          setTimeout(() => {
-            this.draging = false;
-          });
-
-          onDragChange && onDragChange(e);
+    this.sortable = new Sortable(links, {
+      group: this.id,
+      animation: 250,
+      handle: getStableClassSelector(cx, 'Tabs-link'),
+      ghostClass: getStableClassName(cx, 'Tabs-link--dragging'),
+      onStart: () => {
+        this.draging = true;
+      },
+      onEnd: (e: any) => {
+        // 没有移动
+        if (e.newIndex === e.oldIndex) {
+          return;
         }
+
+        // 再交换回来
+        const parent = e.to as HTMLElement;
+        if (e.oldIndex < parent.childNodes.length - 1) {
+          parent.insertBefore(
+            e.item,
+            parent.childNodes[
+              e.oldIndex > e.newIndex ? e.oldIndex + 1 : e.oldIndex
+            ]
+          );
+        } else {
+          parent.appendChild(e.item);
+        }
+
+        setTimeout(() => {
+          this.draging = false;
+        });
+
+        onDragChange && onDragChange(e);
       }
-    );
+    });
   }
 
   handleArrow(type: 'left' | 'right') {

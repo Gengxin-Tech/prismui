@@ -1,8 +1,8 @@
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import React from 'react';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin, RegionConfig} from 'amis-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin, RegionConfig} from 'prismui-editor-core';
 import {generateId} from '../../util';
 
 export class FieldSetControlPlugin extends BasePlugin {

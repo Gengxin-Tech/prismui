@@ -7,7 +7,7 @@ import {
   registerEditorPlugin,
   tipedLabel,
   valuePipeOut
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 export class DividerPlugin extends BasePlugin {
   static id = 'DividerPlugin';

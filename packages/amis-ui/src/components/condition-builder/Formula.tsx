@@ -1,5 +1,5 @@
 import React from 'react';
-import {localeable, LocaleProps, ThemeProps, themeable} from 'amis-core';
+import {localeable, LocaleProps, ThemeProps, themeable} from 'prismui-core';
 import InputBox from '../InputBox';
 
 export interface FormulaProps extends ThemeProps, LocaleProps {

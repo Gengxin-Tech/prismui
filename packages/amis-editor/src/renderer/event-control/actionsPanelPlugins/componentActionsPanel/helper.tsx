@@ -1,5 +1,5 @@
-import {JSONGetById, EditorManager} from 'amis-editor-core';
-import {DataSchema} from 'amis-core';
+import {JSONGetById, EditorManager} from 'prismui-editor-core';
+import {DataSchema} from 'prismui-core';
 import CmptActionSelect from '../../comp-action-select';
 
 // 下拉展示可赋值属性范围

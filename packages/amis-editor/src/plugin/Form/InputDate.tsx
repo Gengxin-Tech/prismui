@@ -7,8 +7,8 @@ import {
   BasePlugin,
   BaseEventContext,
   tipedLabel
-} from 'amis-editor-core';
-import type {Schema} from 'amis';
+} from 'prismui-editor-core';
+import type {Schema} from 'prismui-framework';
 import {ValidatorTag} from '../../validator';
 import {
   getEventControlConfig,

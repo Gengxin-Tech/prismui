@@ -2,11 +2,11 @@ import React from 'react';
 import mergeWith from 'lodash/mergeWith';
 import cloneDeep from 'lodash/cloneDeep';
 import cx from 'classnames';
-import {FormItem, InputBox} from 'amis';
-import {PickerContainer} from 'amis-ui';
+import {FormItem, InputBox} from 'prismui-framework';
+import {PickerContainer} from 'prismui-ui';
 
 import {getEnv} from 'mobx-state-tree';
-import {normalizeApi, isEffectiveApi, isApiOutdated} from 'amis-core';
+import {normalizeApi, isEffectiveApi, isApiOutdated} from 'prismui-core';
 
 import {
   autobind,
@@ -14,17 +14,17 @@ import {
   anyChanged,
   createObject,
   getSchemaTpl
-} from 'amis-editor-core';
-import {tipedLabel} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {tipedLabel} from 'prismui-editor-core';
 
-import type {SchemaObject, SchemaApi} from 'amis';
-import type {Api} from 'amis';
+import type {SchemaObject, SchemaApi} from 'prismui-framework';
+import type {Api} from 'prismui-framework';
 import type {
   FormControlProps,
   AMISButtonSchema,
   AMISSchemaCollection
-} from 'amis-core';
-import type {ActionSchema} from 'amis';
+} from 'prismui-core';
+import type {ActionSchema} from 'prismui-framework';
 
 export interface APIControlProps extends FormControlProps {
   name?: string;

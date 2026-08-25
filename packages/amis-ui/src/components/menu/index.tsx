@@ -20,8 +20,8 @@ import {
   findTree,
   getTreeAncestors,
   TestIdBuilder
-} from 'amis-core';
-import {ClassNamesFn, themeable} from 'amis-core';
+} from 'prismui-core';
+import {ClassNamesFn, themeable} from 'prismui-core';
 
 import {Icon} from '../icons';
 import {BadgeObject} from '../Badge';
@@ -754,12 +754,15 @@ export class Menu extends React.Component<MenuProps, MenuState> {
           getPopupContainer={popOverContainer}
           overflowedIndicator={
             React.isValidElement(overflowedIndicator) ? (
-              React.cloneElement(overflowedIndicator as React.ReactElement<any>, {
-                className: cx(
-                  'Nav-Menu-item-icon Nav-Menu-overflowedIcon',
-                  (overflowedIndicator.props as any)?.className
-                )
-              })
+              React.cloneElement(
+                overflowedIndicator as React.ReactElement<any>,
+                {
+                  className: cx(
+                    'Nav-Menu-item-icon Nav-Menu-overflowedIcon',
+                    (overflowedIndicator.props as any)?.className
+                  )
+                }
+              )
             ) : (
               <i
                 className={cx(

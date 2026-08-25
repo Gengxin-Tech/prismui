@@ -18,4 +18,4 @@ export {
   FunctionPropertyNames,
   JSONSchema,
   EventTrack
-} from 'amis-core';
+} from 'prismui-core';

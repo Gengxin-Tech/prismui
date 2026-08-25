@@ -1,10 +1,10 @@
 /**
  * @file 文字提示容器
  */
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin, RegionConfig, BaseEventContext} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {tipedLabel} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin, RegionConfig, BaseEventContext} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {tipedLabel} from 'prismui-editor-core';
 import {generateId} from '../util';
 
 export class TooltipWrapperPlugin extends BasePlugin {

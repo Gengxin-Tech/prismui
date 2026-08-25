@@ -6,12 +6,12 @@ import {
   RendererProps,
   AMISSchemaCollection,
   AMISSchema
-} from 'amis-core';
-import {Api, SchemaNode, Schema, ActionObject} from 'amis-core';
+} from 'prismui-core';
+import {Api, SchemaNode, Schema, ActionObject} from 'prismui-core';
 import cx from 'classnames';
-import {isVisible, ucFirst} from 'amis-core';
+import {isVisible, ucFirst} from 'prismui-core';
 import {BaseSchema, SchemaExpression, SchemaObject} from '../Schema';
-import {FormHorizontal} from 'amis-core';
+import {FormHorizontal} from 'prismui-core';
 
 export type AMISHBoxColumn = {
   /**

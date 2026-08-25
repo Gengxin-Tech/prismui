@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Icon} from 'amis';
+import {Modal, Icon} from 'prismui-framework';
 import cx from 'classnames';
 import {autobind} from '../../util';
 

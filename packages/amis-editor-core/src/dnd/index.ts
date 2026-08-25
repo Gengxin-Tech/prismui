@@ -3,7 +3,7 @@
  */
 import find from 'lodash/find';
 import {isAlive} from 'mobx-state-tree';
-import {findTree, toast} from 'amis';
+import {findTree, toast} from 'prismui-framework';
 import debounce from 'lodash/debounce';
 import {EditorManager} from '../manager';
 import {DragEventContext, SubRendererInfo} from '../plugin';

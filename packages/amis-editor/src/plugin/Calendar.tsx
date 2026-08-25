@@ -4,7 +4,7 @@ import {
   BaseEventContext,
   BasePlugin,
   getSchemaTpl
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   getEventControlConfig,
   getActionCommonProps

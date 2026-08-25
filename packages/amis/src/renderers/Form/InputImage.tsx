@@ -12,28 +12,28 @@ import {
   PlainObject,
   localeFormatter,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 // import 'cropperjs/dist/cropper.css';
 const Cropper = React.lazy(() => import('react-cropper'));
 import DropZone from 'react-dropzone';
 import {FileRejection, ErrorCode, DropEvent} from 'react-dropzone';
 import 'blueimp-canvastoblob';
 import find from 'lodash/find';
-import {Payload, ActionObject} from 'amis-core';
+import {Payload, ActionObject} from 'prismui-core';
 import {
   buildApi,
   isEffectiveApi,
   normalizeApi,
   isApiOutdated,
   isApiOutdatedWithData
-} from 'amis-core';
-import {createObject, qsstringify, guid, isEmpty, qsparse} from 'amis-core';
-import {Icon, TooltipWrapper, Button} from 'amis-ui';
+} from 'prismui-core';
+import {createObject, qsstringify, guid, isEmpty, qsparse} from 'prismui-core';
+import {Icon, TooltipWrapper, Button} from 'prismui-ui';
 import accepts from 'attr-accept';
 import {getNameFromUrl} from './InputFile';
 import ImageComponent, {ImageThumbProps} from '../Image';
-import {TranslateFn} from 'amis-core';
-import {dataMapping} from 'amis-core';
+import {TranslateFn} from 'prismui-core';
+import {dataMapping} from 'prismui-core';
 import {
   FormBaseControlSchema,
   SchemaApi,
@@ -41,7 +41,7 @@ import {
   SchemaTokenizeableString,
   SchemaUrlPath
 } from '../../Schema';
-import {filter} from 'amis-core';
+import {filter} from 'prismui-core';
 import isPlainObject from 'lodash/isPlainObject';
 import merge from 'lodash/merge';
 import omit from 'lodash/omit';

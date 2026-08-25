@@ -1,4 +1,4 @@
-import {registerEditorPlugin, RendererPluginEvent} from 'amis-editor-core';
+import {registerEditorPlugin, RendererPluginEvent} from 'prismui-editor-core';
 
 import {TransferPlugin} from './Transfer';
 

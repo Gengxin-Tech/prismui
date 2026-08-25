@@ -4,7 +4,7 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {FormItem, Switch} from 'amis';
+import {FormItem, Switch} from 'prismui-framework';
 
 import {
   autobind,
@@ -12,11 +12,11 @@ import {
   isEmpty,
   anyChanged,
   getI18nEnabled
-} from 'amis-editor-core';
-import {defaultValue, tipedLabel, getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, tipedLabel, getSchemaTpl} from 'prismui-editor-core';
 
-import type {FormControlProps} from 'amis-core';
-import type {SchemaExpression} from 'amis';
+import type {FormControlProps} from 'prismui-core';
+import type {SchemaExpression} from 'prismui-framework';
 
 export interface BadgeControlProps extends FormControlProps {
   /**

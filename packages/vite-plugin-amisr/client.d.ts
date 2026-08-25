@@ -1,6 +1,6 @@
 declare module '*.dslpage.json?react' {
   import * as React from 'react';
-  import {RootRendererProps, AMISSchema, AMISPageMeta} from 'amis';
+  import {RootRendererProps, AMISSchema, AMISPageMeta} from 'prismui-framework';
 
   const ReactComponent: React.FunctionComponent<
     React.ComponentProps<RootRendererProps>
@@ -14,7 +14,7 @@ declare module '*.dslpage.json?react' {
 
 declare module '*.amis.json?react' {
   import * as React from 'react';
-  import {RootRendererProps, AMISSchema, AMISPageMeta} from 'amis';
+  import {RootRendererProps, AMISSchema, AMISPageMeta} from 'prismui-framework';
 
   const ReactComponent: React.FunctionComponent<
     React.ComponentProps<RootRendererProps>

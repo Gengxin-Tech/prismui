@@ -1,6 +1,6 @@
 import React from 'react';
-import {localeable, LocaleProps, mergeRefs} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
+import {localeable, LocaleProps, mergeRefs} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
 // @ts-ignore
 import {matchSorter} from 'match-sorter';
 import PopOverContainer from './PopOverContainer';

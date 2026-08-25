@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, ConfirmBox, Controller, Form, InputBox} from 'amis-ui';
+import {Button, ConfirmBox, Controller, Form, InputBox} from 'prismui-ui';
 
 export default function ButtonExamples() {
   const [isShow, setIsShow] = React.useState(false);

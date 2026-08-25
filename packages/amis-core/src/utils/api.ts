@@ -27,7 +27,7 @@ import {
 } from './helper';
 import isPlainObject from 'lodash/isPlainObject';
 import {debug, warning} from './debug';
-import {evaluate} from 'amis-formula';
+import {evaluate} from 'prismui-formula';
 import {memoryParse} from './memoryParse';
 import cloneDeep from 'lodash/cloneDeep';
 import isEqual from 'lodash/isEqual';

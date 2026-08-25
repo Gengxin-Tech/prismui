@@ -7,13 +7,13 @@
 import React from 'react';
 import {SketchPicker, GithubPicker, ColorResult} from 'react-color';
 import {Icon} from './icons';
-import {Overlay} from 'amis-core';
-import {uncontrollable} from 'amis-core';
-import {PopOver} from 'amis-core';
+import {Overlay} from 'prismui-core';
+import {uncontrollable} from 'prismui-core';
+import {PopOver} from 'prismui-core';
 import PopUp from './PopUp';
-import {ClassNamesFn, themeable, ThemeProps} from 'amis-core';
-import {autobind, isObject} from 'amis-core';
-import {localeable, LocaleProps} from 'amis-core';
+import {ClassNamesFn, themeable, ThemeProps} from 'prismui-core';
+import {autobind, isObject} from 'prismui-core';
+import {localeable, LocaleProps} from 'prismui-core';
 
 export type PresetColor = {color: string; title: string} | string;
 

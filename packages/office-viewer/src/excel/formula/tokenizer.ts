@@ -45,7 +45,7 @@ export const tokenDefines = {
   },
 
   NUMBER: {
-    pattern: /[0-9]+[.]?[0-9]*([eE][+\-][0-9]+)?/
+    pattern: /[0-9]+[.]?[0-9]*([eE][+-][0-9]+)?/
   },
 
   AT: {

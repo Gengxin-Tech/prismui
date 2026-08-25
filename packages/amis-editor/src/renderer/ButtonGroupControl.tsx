@@ -2,7 +2,13 @@
  * @file icon按钮组
  */
 import React from 'react';
-import {FormItem, Button, Icon, hasIcon, FormControlProps} from 'amis';
+import {
+  FormItem,
+  Button,
+  Icon,
+  hasIcon,
+  FormControlProps
+} from 'prismui-framework';
 import cx from 'classnames';
 
 export interface ButtonGroupControlProps extends FormControlProps {

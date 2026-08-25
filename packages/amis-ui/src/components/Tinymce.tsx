@@ -40,7 +40,7 @@ import 'tinymce/plugins/help/js/i18n/keynav/zh_CN';
 import 'tinymce/plugins/help/js/i18n/keynav/en';
 import 'tinymce/plugins/help/js/i18n/keynav/de';
 
-import {LocaleProps, autobind} from 'amis-core';
+import {LocaleProps, autobind} from 'prismui-core';
 import isEqual from 'lodash/isEqual';
 
 interface TinymceEditorProps extends LocaleProps {

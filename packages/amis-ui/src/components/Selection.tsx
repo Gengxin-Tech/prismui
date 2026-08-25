@@ -19,11 +19,11 @@ import {
   getOptionValue,
   getOptionValueBindField,
   ClassNamesFn
-} from 'amis-core';
+} from 'prismui-core';
 import Checkbox from './Checkbox';
 import {Option, Options} from './Select';
 
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface BaseSelectionProps extends ThemeProps, LocaleProps {
   options: Options;

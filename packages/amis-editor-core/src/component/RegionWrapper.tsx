@@ -1,6 +1,6 @@
 import {isAlive} from 'mobx-state-tree';
 import React from 'react';
-import {getReactElementRef, mergeRefs, setReactRef} from 'amis-core';
+import {getReactElementRef, mergeRefs, setReactRef} from 'prismui-core';
 import {EditorManager} from '../manager';
 import {RegionConfig, RendererInfo} from '../plugin';
 import {needFillPlaceholder} from '../util';
@@ -11,7 +11,7 @@ import {
   getEditorNodeFacade,
   resolveEditorNodeFacade
 } from '../store/node';
-import {RendererProps} from 'amis-core';
+import {RendererProps} from 'prismui-core';
 
 export interface RegionWrapperProps {
   name: string;

@@ -13,11 +13,11 @@ import {
   BaseSchemaWithoutType,
   AMISSchemaBase,
   AMISSchemaCollection
-} from 'amis-core';
-import {RemoteOptionsProps, withRemoteConfig, Timeline} from 'amis-ui';
+} from 'prismui-core';
+import {RemoteOptionsProps, withRemoteConfig, Timeline} from 'prismui-ui';
 
 import type {BaseSchema, SchemaApi, SchemaTokenizeableString} from '../Schema';
-import type {IconCheckedSchema} from 'amis-ui';
+import type {IconCheckedSchema} from 'prismui-ui';
 import {AMISCardSchema} from './Card';
 
 type DotSize = 'sm' | 'md' | 'lg' | 'xl';

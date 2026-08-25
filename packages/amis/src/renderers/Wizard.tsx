@@ -7,23 +7,23 @@ import {
   AMISExpression,
   AMISApi,
   ApiObject
-} from 'amis-core';
-import {Renderer, RendererProps} from 'amis-core';
-import {ServiceStore, IServiceStore} from 'amis-core';
-import {Api, ActionObject} from 'amis-core';
-import {filter, evalExpression} from 'amis-core';
-import {toNumber} from 'amis-core';
+} from 'prismui-core';
+import {Renderer, RendererProps} from 'prismui-core';
+import {ServiceStore, IServiceStore} from 'prismui-core';
+import {Api, ActionObject} from 'prismui-core';
+import {filter, evalExpression} from 'prismui-core';
+import {toNumber} from 'prismui-core';
 import {
   createObject,
   until,
   isVisible,
   autobind,
   SkipOperation
-} from 'amis-core';
-import {isApiOutdated, isEffectiveApi} from 'amis-core';
-import {IFormStore} from 'amis-core';
-import {Spinner, SpinnerExtraProps} from 'amis-ui';
-import {Steps} from 'amis-ui';
+} from 'prismui-core';
+import {isApiOutdated, isEffectiveApi} from 'prismui-core';
+import {IFormStore} from 'prismui-core';
+import {Spinner, SpinnerExtraProps} from 'prismui-ui';
+import {Steps} from 'prismui-ui';
 import {
   BaseSchema,
   SchemaApi,
@@ -35,10 +35,10 @@ import {
 
 import {ActionSchema} from './Action';
 
-import {tokenize, evalExpressionWithConditionBuilderAsync} from 'amis-core';
+import {tokenize, evalExpressionWithConditionBuilderAsync} from 'prismui-core';
 import {StepSchema} from './Steps';
 import isEqual from 'lodash/isEqual';
-import {AMISButtonSchema} from 'amis-core';
+import {AMISButtonSchema} from 'prismui-core';
 
 export interface WizardStepSchema extends AMISFormBase, StepSchema {
   /**

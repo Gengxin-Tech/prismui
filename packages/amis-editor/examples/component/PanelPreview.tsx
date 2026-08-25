@@ -1,4 +1,4 @@
-import {JsonView, render} from 'amis';
+import {JsonView, render} from 'prismui-framework';
 import cx from 'classnames';
 import React from 'react';
 export interface PanelPreviewProps {

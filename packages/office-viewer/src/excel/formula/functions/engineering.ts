@@ -21,11 +21,11 @@ const MAX_OCT = 536870911, // OCT2DEC(3777777777)
   MAX_BIN = 511, // BIN2DEC(111111111)
   MIN_BIN = -512; // BIN2DEC(1000000000)
 
-const numberRegex = /^\s?[+-]?\s?[0-9]+[.]?[0-9]*([eE][+\-][0-9]+)?\s?$/;
+const numberRegex = /^\s?[+-]?\s?[0-9]+[.]?[0-9]*([eE][+-][0-9]+)?\s?$/;
 const IMWithoutRealRegex =
-  /^\s?([+-]?\s?([0-9]+[.]?[0-9]*([eE][+\-][0-9]+)?)?)\s?[ij]\s?$/;
+  /^\s?([+-]?\s?([0-9]+[.]?[0-9]*([eE][+-][0-9]+)?)?)\s?[ij]\s?$/;
 const IMRegex =
-  /^\s?([+-]?\s?[0-9]+[.]?[0-9]*([eE][+\-][0-9]+)?)\s?([+-]?\s?([0-9]+[.]?[0-9]*([eE][+\-][0-9]+)?)?)\s?[ij]\s?$/;
+  /^\s?([+-]?\s?[0-9]+[.]?[0-9]*([eE][+-][0-9]+)?)\s?([+-]?\s?([0-9]+[.]?[0-9]*([eE][+-][0-9]+)?)?)\s?[ij]\s?$/;
 
 function parseIM(textOrNumber: EvalResult) {
   textOrNumber = textOrNumber as number | string;

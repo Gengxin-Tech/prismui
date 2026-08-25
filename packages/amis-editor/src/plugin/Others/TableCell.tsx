@@ -1,11 +1,11 @@
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import React from 'react';
 import get from 'lodash/get';
 import {
   getI18nEnabled,
   registerEditorPlugin,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   BasePlugin,
   BasicRendererInfo,
@@ -13,9 +13,9 @@ import {
   RendererInfoResolveEventContext,
   ReplaceEventContext,
   PluginEvent
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {getVariable, RendererProps} from 'amis-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {getVariable, RendererProps} from 'prismui-core';
 
 export class TableCellPlugin extends BasePlugin {
   static id = 'TableCellPlugin';
@@ -461,10 +461,10 @@ export class TableCellPlugin extends BasePlugin {
                 '开启此项，换行处理将在任意字母处断行，长英文单词或长英文字符会被切断，如url链接'
               ),
               pipeIn: (value: any) =>
-                typeof value === 'string' && /\word\-break\b/.test(value),
+                typeof value === 'string' && /\word-break\b/.test(value),
               pipeOut: (value: any, originValue: any) =>
                 (value ? 'word-break ' : '') +
-                (originValue || '').replace(/\bword\-break\b/g, '').trim()
+                (originValue || '').replace(/\bword-break\b/g, '').trim()
             }),
 
             getSchemaTpl('className'),

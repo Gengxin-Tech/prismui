@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch} from 'react-router-dom';
-import {flattenTree, mapTree} from 'amis-core';
+import {flattenTree, mapTree} from 'prismui-core';
 import {navigations2route} from './App';
 import makeMarkdownRenderer from './MdRenderer';
 import EditorPlayground from './EditorPlayground';

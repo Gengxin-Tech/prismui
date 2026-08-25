@@ -2,15 +2,15 @@
  * @file 兼容配置，对于一些老的 api 设计的得不合理的地方做一些适配。
  * @author fex
  */
-import {Schema} from 'amis-core';
-import {addSchemaFilter} from 'amis-core';
+import {Schema} from 'prismui-core';
+import {addSchemaFilter} from 'prismui-core';
 import {CheckboxControlRenderer} from './renderers/Form/Checkbox';
-import {FormRenderer, isObjectShallowModified} from 'amis-core';
+import {FormRenderer, isObjectShallowModified} from 'prismui-core';
 import {FieldSetRenderer} from './renderers/Form/FieldSet';
 import {CardRenderer} from './renderers/Card';
 import {ListItemRenderer} from './renderers/List';
 import {ButtonGroupControlRenderer} from './renderers/Form/ButtonGroupSelect';
-import {getLevelFromClassName} from 'amis-core';
+import {getLevelFromClassName} from 'prismui-core';
 import {FileControlRenderer} from './renderers/Form/InputFile';
 import {ImageControlRenderer} from './renderers/Form/InputImage';
 import {RichTextControlRenderer} from './renderers/Form/InputRichText';

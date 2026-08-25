@@ -5,7 +5,7 @@ import {autobind} from '../util';
 import {MainStore, EditorStoreType} from '../store/editor';
 import {EditorManager, EditorManagerConfig, PluginClass} from '../manager';
 import {reaction} from 'mobx';
-import {RenderOptions, closeContextMenus, toast} from 'amis';
+import {RenderOptions, closeContextMenus, toast} from 'prismui-framework';
 import {
   PluginEventListener,
   RendererPluginAction,
@@ -21,10 +21,10 @@ import {ModalForm} from './ModalForm';
 import {ContextMenuPanel} from './Panel/ContextMenuPanel';
 import {LeftPanels} from './Panel/LeftPanels';
 import {RightPanels} from './Panel/RightPanels';
-import type {SchemaObject} from 'amis';
+import type {SchemaObject} from 'prismui-framework';
 import type {VariableGroup, VariableOptions} from '../variable';
 import type {EditorNodeType} from '../store/node';
-import {MobileDevTool} from 'amis-ui';
+import {MobileDevTool} from 'prismui-ui';
 import {LeftPanelsProps} from './Panel/LeftPanels';
 import {RightPanelsProps} from './Panel/RightPanels';
 import {getEditorThemeScopeProps, resolveEditorThemeName} from '../themeScope';

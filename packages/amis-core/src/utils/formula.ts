@@ -1,7 +1,7 @@
 import isObjectByLodash from 'lodash/isObject';
 import isString from 'lodash/isString';
 import isBoolean from 'lodash/isBoolean';
-import {evaluate} from 'amis-formula';
+import {evaluate} from 'prismui-formula';
 
 import {filter} from './tpl';
 import {getFilters, resolveVariableAndFilter} from './tpl-builtin';

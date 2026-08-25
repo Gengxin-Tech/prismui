@@ -1,4 +1,4 @@
-import {RendererPluginAction, EditorManager} from 'amis-editor-core';
+import {RendererPluginAction, EditorManager} from 'prismui-editor-core';
 const builtInActionsPanel: Array<RendererPluginAction> = [];
 
 export interface ActionLeftPanelTree {

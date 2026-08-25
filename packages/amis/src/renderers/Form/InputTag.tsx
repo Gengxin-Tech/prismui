@@ -5,26 +5,26 @@ import {
   Option,
   resolveEventData,
   getVariable
-} from 'amis-core';
+} from 'prismui-core';
 import Downshift from 'downshift';
 import find from 'lodash/find';
 import isInteger from 'lodash/isInteger';
 import unionWith from 'lodash/unionWith';
 import compact from 'lodash/compact';
 import uniq from 'lodash/uniq';
-import {PopUp, ResultBox, SpinnerExtraProps} from 'amis-ui';
-import {autobind, filterTree, createObject} from 'amis-core';
-import {Spinner} from 'amis-ui';
-import {Overlay} from 'amis-core';
-import {PopOver} from 'amis-core';
-import {ListMenu, Button} from 'amis-ui';
-import {ActionObject} from 'amis-core';
-import {isMobile} from 'amis-core';
+import {PopUp, ResultBox, SpinnerExtraProps} from 'prismui-ui';
+import {autobind, filterTree, createObject} from 'prismui-core';
+import {Spinner} from 'prismui-ui';
+import {Overlay} from 'prismui-core';
+import {PopOver} from 'prismui-core';
+import {ListMenu, Button} from 'prismui-ui';
+import {ActionObject} from 'prismui-core';
+import {isMobile} from 'prismui-core';
 import {FormOptionsSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 import {AMISTooltipWrapperSchema} from '../TooltipWrapper';
 import {matchSorter} from 'match-sorter';
-import {AMISFormItemWithOptions} from 'amis-core';
+import {AMISFormItemWithOptions} from 'prismui-core';
 
 /**
  * Tag 输入框

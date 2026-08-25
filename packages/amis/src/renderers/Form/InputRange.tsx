@@ -17,13 +17,13 @@ import {
   resolveVariableAndFilter,
   isNumeric,
   getVariable
-} from 'amis-core';
-import {Range as InputRange, NumberInput, Icon} from 'amis-ui';
+} from 'prismui-core';
+import {Range as InputRange, NumberInput, Icon} from 'prismui-ui';
 import {FormBaseControlSchema, SchemaObject} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 
 import type {SchemaTokenizeableString} from '../../Schema';
-import {AMISFormItem} from 'amis-core';
+import {AMISFormItem} from 'prismui-core';
 
 /**
  * Range

@@ -3,16 +3,16 @@ import {
   RendererPluginEvent,
   getI18nEnabled,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   ActiveEventContext,
   BaseEventContext,
   BasePlugin,
   PluginEvent,
   ResizeMoveEventContext
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl, tipedLabel} from 'amis-editor-core';
-import {mockValue} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl, tipedLabel} from 'prismui-editor-core';
+import {mockValue} from 'prismui-editor-core';
 import {
   buildLinkActionDesc,
   getArgsWrapper,

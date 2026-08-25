@@ -7,14 +7,14 @@ import {
   getVariable,
   BaseSchemaWithoutType,
   FormBaseControlWithoutSize
-} from 'amis-core';
-import {LazyComponent} from 'amis-core';
-import {Editor} from 'amis-ui';
-import {autobind} from 'amis-core';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+} from 'prismui-core';
+import {LazyComponent} from 'prismui-core';
+import {Editor} from 'prismui-ui';
+import {autobind} from 'prismui-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 
 import type {Position} from 'monaco-editor';
-import type {ListenerAction} from 'amis-core';
+import type {ListenerAction} from 'prismui-core';
 
 /**
  * Editor 代码编辑器

@@ -3,10 +3,10 @@
  * @desc 数据源配置构建器
  */
 
-import {EditorManager} from 'amis-editor-core';
+import {EditorManager} from 'prismui-editor-core';
 import {getFeatValueByKey, getFeatLabelByKey} from './utils';
 
-import type {EditorNodeType} from 'amis-editor-core';
+import type {EditorNodeType} from 'prismui-editor-core';
 import type {
   DSFeatureType,
   GenericSchema,

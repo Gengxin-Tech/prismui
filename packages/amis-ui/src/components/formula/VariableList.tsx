@@ -6,7 +6,7 @@ import {
   filterTree,
   mapTree,
   getStableClassSelector
-} from 'amis-core';
+} from 'prismui-core';
 import GroupedSelection from '../GroupedSelection';
 import Tabs, {Tab} from '../Tabs';
 import TreeSelection from '../TreeSelection';

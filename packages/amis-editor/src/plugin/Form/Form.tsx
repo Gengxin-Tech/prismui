@@ -4,7 +4,7 @@ import DeepDiff from 'deep-diff';
 import flatten from 'lodash/flatten';
 import cloneDeep from 'lodash/cloneDeep';
 import pick from 'lodash/pick';
-import {isObject, getRendererByName, setVariable} from 'amis-core';
+import {isObject, getRendererByName, setVariable} from 'prismui-core';
 import {
   BasePlugin,
   tipedLabel,
@@ -23,14 +23,14 @@ import {
   getI18nEnabled,
   registerEditorPlugin,
   JSONPipeOut
-} from 'amis-editor-core';
-import type {FormSchema} from 'amis';
+} from 'prismui-editor-core';
+import type {FormSchema} from 'prismui-framework';
 import type {
   IFormStore,
   IFormItemStore,
   Schema,
   RendererConfig
-} from 'amis-core';
+} from 'prismui-core';
 import {
   DSFeatureType,
   DSBuilderManager,
@@ -45,7 +45,7 @@ import {
 } from '../../renderer/event-control/helper';
 import {FieldSetting} from '../../renderer/FieldSetting';
 import {_isModelComp, generateId} from '../../util';
-import {InlineEditableElement} from 'amis-editor-core';
+import {InlineEditableElement} from 'prismui-editor-core';
 
 import type {FormScaffoldConfig} from '../../builder';
 

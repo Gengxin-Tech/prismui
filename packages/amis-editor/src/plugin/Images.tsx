@@ -1,7 +1,7 @@
-import {getI18nEnabled, registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl, tipedLabel} from 'amis-editor-core';
-import {mockValue} from 'amis-editor-core';
+import {getI18nEnabled, registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl, tipedLabel} from 'prismui-editor-core';
+import {mockValue} from 'prismui-editor-core';
 
 export class ImagesPlugin extends BasePlugin {
   static id = 'ImagesPlugin';

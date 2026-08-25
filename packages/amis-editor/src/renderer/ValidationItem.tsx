@@ -4,12 +4,16 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {render, Button, Switch} from 'amis';
+import {render, Button, Switch} from 'prismui-framework';
 
-import {autobind, getI18nEnabled} from 'amis-editor-core';
+import {autobind, getI18nEnabled} from 'prismui-editor-core';
 import {Validator} from '../validator';
-import {tipedLabel} from 'amis-editor-core';
-import type {ConditionBuilderFields, Schema, SchemaCollection} from 'amis';
+import {tipedLabel} from 'prismui-editor-core';
+import type {
+  ConditionBuilderFields,
+  Schema,
+  SchemaCollection
+} from 'prismui-framework';
 
 export type ValidatorData = {
   name: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {registerActionPanel} from '../../actionsPanelManager';
 import {getArgsWrapper} from '../../helper';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 
 registerActionPanel('url', {
   label: '跳转链接',

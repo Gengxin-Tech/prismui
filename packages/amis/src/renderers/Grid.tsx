@@ -8,13 +8,13 @@ import {
   setThemeClassName,
   AMISSchemaCollection,
   AMISSchema
-} from 'amis-core';
+} from 'prismui-core';
 import pick from 'lodash/pick';
 import {BaseSchema, AMISClassName} from '../Schema';
 
-import {ucFirst} from 'amis-core';
-import {Spinner, SpinnerExtraProps} from 'amis-ui';
-import {AMISSchemaBase} from 'amis-core';
+import {ucFirst} from 'prismui-core';
+import {Spinner, SpinnerExtraProps} from 'prismui-ui';
+import {AMISSchemaBase} from 'prismui-core';
 
 export const ColProps = ['lg', 'md', 'sm', 'xs'];
 

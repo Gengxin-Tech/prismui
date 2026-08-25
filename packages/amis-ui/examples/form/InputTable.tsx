@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, InputTable, Form, Controller, InputBox} from 'amis-ui';
+import {Button, InputTable, Form, Controller, InputBox} from 'prismui-ui';
 
 export default function ButtonExamples() {
   const handleSubmit = React.useCallback((data: any) => {

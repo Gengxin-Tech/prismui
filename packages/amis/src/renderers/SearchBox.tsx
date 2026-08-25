@@ -11,13 +11,13 @@ import {
   getPropValue,
   setVariable,
   AMISSchemaBase
-} from 'amis-core';
+} from 'prismui-core';
 
 import {BaseSchema, AMISClassName} from '../Schema';
-import {SearchBox} from 'amis-ui';
+import {SearchBox} from 'prismui-ui';
 
-import {ListenerAction, TestIdBuilder} from 'amis-core';
-import type {SpinnerExtraProps} from 'amis-ui';
+import {ListenerAction, TestIdBuilder} from 'prismui-core';
+import type {SpinnerExtraProps} from 'prismui-ui';
 
 /**
  * 搜索框渲染器

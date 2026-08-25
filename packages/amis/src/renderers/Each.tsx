@@ -8,10 +8,10 @@ import {
   isPureVariable,
   setThemeClassName,
   AMISSchemaCollection
-} from 'amis-core';
-import {Schema} from 'amis-core';
-import {resolveVariable, resolveVariableAndFilter} from 'amis-core';
-import {createObject, getPropValue, isObject} from 'amis-core';
+} from 'prismui-core';
+import {Schema} from 'prismui-core';
+import {resolveVariable, resolveVariableAndFilter} from 'prismui-core';
+import {createObject, getPropValue, isObject} from 'prismui-core';
 import {BaseSchema} from '../Schema';
 
 export interface EachExtraProps extends RendererProps {

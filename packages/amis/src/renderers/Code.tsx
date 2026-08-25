@@ -4,9 +4,14 @@
 import React from 'react';
 import isPlainObject from 'lodash/isPlainObject';
 import {BaseSchema} from '../Schema';
-import {AMISSchemaBase, Renderer, RendererProps, anyChanged} from 'amis-core';
-import {getPropValue} from 'amis-core';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+import {
+  AMISSchemaBase,
+  Renderer,
+  RendererProps,
+  anyChanged
+} from 'prismui-core';
+import {getPropValue} from 'prismui-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 import type {editor as EditorNamespace} from 'monaco-editor';
 
 export type MonacoEditor = typeof EditorNamespace;

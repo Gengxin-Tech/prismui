@@ -37,9 +37,9 @@ import {
   AMISLocalSource,
   AMISExpression,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 import pickBy from 'lodash/pickBy';
-import {Html, PullRefresh, SpinnerExtraProps} from 'amis-ui';
+import {Html, PullRefresh, SpinnerExtraProps} from 'prismui-ui';
 import {
   BaseSchema,
   SchemaApi,

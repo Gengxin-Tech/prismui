@@ -7,9 +7,9 @@ import {
   createObject,
   ClassNamesFn,
   ITableStore2
-} from 'amis-core';
-import {Icon, HeadCellDropDown} from 'amis-ui';
-import type {FilterDropdownProps} from 'amis-ui/lib/components/table/HeadCellDropDown';
+} from 'prismui-core';
+import {Icon, HeadCellDropDown} from 'prismui-ui';
+import type {FilterDropdownProps} from 'prismui-ui/lib/components/table/HeadCellDropDown';
 
 export interface QuickSearchConfig {
   type?: string;

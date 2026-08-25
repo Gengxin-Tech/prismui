@@ -10,7 +10,7 @@ import {
   IFormStore,
   render,
   toast
-} from 'amis';
+} from 'prismui-framework';
 import omit from 'lodash/omit';
 import cx from 'classnames';
 import {resolveEditorThemeName} from '../../themeScope';

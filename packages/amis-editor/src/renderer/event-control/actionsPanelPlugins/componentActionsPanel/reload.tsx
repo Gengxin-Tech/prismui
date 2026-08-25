@@ -1,12 +1,12 @@
 import React from 'react';
-import {getRendererByName} from 'amis-core';
+import {getRendererByName} from 'prismui-core';
 import {
   getSchemaTpl,
   defaultValue,
   JSONGetById,
   tipedLabel,
   EditorManager
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {registerActionPanel} from '../../actionsPanelManager';
 import {renderCmptSelect, renderCmptIdInput} from './helper';
 import {buildLinkActionDesc} from '../../helper';

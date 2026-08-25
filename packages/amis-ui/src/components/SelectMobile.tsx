@@ -1,7 +1,7 @@
 import React from 'react';
 import Picker from './Picker';
 import PopUp from './PopUp';
-import {autobind, highlight} from 'amis-core';
+import {autobind, highlight} from 'prismui-core';
 import merge from 'lodash/merge';
 // @ts-ignore
 import {matchSorter} from 'match-sorter';

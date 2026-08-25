@@ -10,10 +10,10 @@ import {
   Button,
   Overlay,
   PopOver
-} from 'amis';
+} from 'prismui-framework';
 import {observer} from 'mobx-react';
 import {diff} from '../util';
-import {createObject} from 'amis-core';
+import {createObject} from 'prismui-core';
 import {getEditorThemeScopeProps} from '../themeScope';
 
 export interface PopOverFormProps {

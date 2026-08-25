@@ -1,4 +1,4 @@
-import {theme} from 'amis-core';
+import {theme} from 'prismui-core';
 
 theme('antd', {
   classPrefix: 'prismui-',

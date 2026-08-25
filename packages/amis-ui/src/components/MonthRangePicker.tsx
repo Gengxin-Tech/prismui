@@ -8,20 +8,20 @@ import React from 'react';
 import moment from 'moment';
 import cx from 'classnames';
 import {Icon} from './icons';
-import {Overlay} from 'amis-core';
+import {Overlay} from 'prismui-core';
 import Calendar from './calendar/Calendar';
-import {PopOver} from 'amis-core';
+import {PopOver} from 'prismui-core';
 import PopUp from './PopUp';
-import {themeable, ThemeProps} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
 
-import {noop} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
+import {noop} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import {DateRangePicker} from './DateRangePicker';
 import capitalize from 'lodash/capitalize';
 import {ShortCuts, ShortCutDateRange} from './DatePicker';
 import {availableShortcuts} from './DateRangePicker';
 import CalendarMobile from './CalendarMobile';
-import type {PlainObject} from 'amis-core';
+import type {PlainObject} from 'prismui-core';
 
 export interface MonthRangePickerProps extends ThemeProps, LocaleProps {
   className?: string;

@@ -2,12 +2,12 @@
  * @file 用来渲染 Markdown
  */
 import React from 'react';
-import {AMISSchemaBase, Renderer, RendererProps} from 'amis-core';
+import {AMISSchemaBase, Renderer, RendererProps} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
-import {LazyComponent} from 'amis-core';
-import {getPropValue} from 'amis-core';
-import {isApiOutdated, isEffectiveApi} from 'amis-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
+import {LazyComponent} from 'prismui-core';
+import {getPropValue} from 'prismui-core';
+import {isApiOutdated, isEffectiveApi} from 'prismui-core';
 
 /**
  * Markdown 渲染组件，用于渲染 Markdown 内容。支持代码高亮、数学公式等扩展语法。
@@ -35,7 +35,9 @@ export interface AMISMarkdownSchema extends AMISSchemaBase {
 }
 
 function loadComponent(): Promise<any> {
-  return import('amis-ui/lib/components/Markdown').then(item => item.default);
+  return import('prismui-ui/lib/components/Markdown').then(
+    item => item.default
+  );
 }
 
 export interface MarkdownProps

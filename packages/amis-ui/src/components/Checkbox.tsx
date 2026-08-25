@@ -4,8 +4,8 @@
  */
 
 import React from 'react';
-import {TestIdBuilder, ThemeProps, themeable} from 'amis-core';
-import {autobind} from 'amis-core';
+import {TestIdBuilder, ThemeProps, themeable} from 'prismui-core';
+import {autobind} from 'prismui-core';
 import Icon from './icons';
 
 const preventEvent = (e: any) => e.stopPropagation();

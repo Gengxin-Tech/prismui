@@ -10,21 +10,21 @@ import uniq from 'lodash/uniq';
 import omit from 'lodash/omit';
 import intersection from 'lodash/intersection';
 import isFunction from 'lodash/isFunction';
-import {isObject} from 'amis-core';
-import {toast} from 'amis';
+import {isObject} from 'prismui-core';
+import {toast} from 'prismui-framework';
 import {
   getSchemaTpl,
   tipedLabel,
   generateNodeId,
   JSONPipeOut
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {DSBuilder, registerDSBuilder} from './DSBuilder';
 import {FormOperatorMap, DSFeatureEnum, DSFeature} from './constants';
 import {traverseSchemaDeep, displayType2inputType} from './utils';
 
-import type {ColumnSchema} from 'amis/lib/renderers/Table2';
-import type {EditorNodeType} from 'amis-editor-core';
-import type {ButtonSchema} from 'amis';
+import type {ColumnSchema} from 'prismui-framework/lib/renderers/Table2';
+import type {EditorNodeType} from 'prismui-editor-core';
+import type {ButtonSchema} from 'prismui-framework';
 import type {
   DSRendererType,
   DSFeatureType,

@@ -1,6 +1,6 @@
 import React from 'react';
-import {FormItem, FormControlProps} from 'amis-core';
-import {ComboStore, IComboStore, AMISSchemaCollection} from 'amis-core';
+import {FormItem, FormControlProps} from 'prismui-core';
+import {ComboStore, IComboStore, AMISSchemaCollection} from 'prismui-core';
 import Combo, {AMISComboSchemaBase} from './Combo';
 
 /**

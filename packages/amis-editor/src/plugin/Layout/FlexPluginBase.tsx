@@ -8,9 +8,9 @@ import {
   PluginEvent,
   reGenerateID,
   tipedLabel
-} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
-import {Button, PlainObject} from 'amis';
+} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
+import {Button, PlainObject} from 'prismui-framework';
 import type {
   BaseEventContext,
   EditorNodeType,
@@ -18,9 +18,9 @@ import type {
   RendererJSONSchemaResolveEventContext,
   BasicToolbarItem,
   PluginInterface
-} from 'amis-editor-core';
-import {Icon} from 'amis-editor-core';
-import {JSONChangeInArray, JSONPipeIn, repeatArray} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {Icon} from 'prismui-editor-core';
+import {JSONChangeInArray, JSONPipeIn, repeatArray} from 'prismui-editor-core';
 import {isAlive} from 'mobx-state-tree';
 
 // 默认的列容器Schema

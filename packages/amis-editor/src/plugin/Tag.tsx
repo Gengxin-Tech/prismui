@@ -2,9 +2,9 @@ import {
   registerEditorPlugin,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {undefinedPipeOut, getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {undefinedPipeOut, getSchemaTpl} from 'prismui-editor-core';
 import {getEventControlConfig} from '../renderer/event-control/helper';
 
 const presetColors = [

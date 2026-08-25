@@ -6,7 +6,7 @@ const originalDebug = console.warn.bind(console.debug);
 const originalError = console.error.bind(console.error);
 require('@testing-library/jest-dom');
 require('moment-timezone');
-const loadAllAsyncRenderers = require('amis-core').loadAllAsyncRenderers;
+const loadAllAsyncRenderers = require('prismui-core').loadAllAsyncRenderers;
 const moment = require('moment');
 moment.tz.setDefault('Asia/Shanghai');
 const cleanup = require('@testing-library/react').cleanup;

@@ -84,7 +84,7 @@ export const filterDate = (
 
 export function parseDuration(str: string): moment.Duration | undefined {
   const matches =
-    /^((?:\-|\+)?(?:\d*\.)?\d+)(minute|min|hour|day|week|month|quarter|year|weekday|second|millisecond)s?$/.exec(
+    /^((?:-|\+)?(?:\d*\.)?\d+)(minute|min|hour|day|week|month|quarter|year|weekday|second|millisecond)s?$/.exec(
       str
     );
 

@@ -61,14 +61,22 @@ const input = [
   './src/components/PdfViewer.tsx'
 ];
 
+const compiledPackageDirs = {
+  'prismui-formula': 'amis-formula',
+  'prismui-core': 'amis-core'
+};
+
 /** 获取子包编译后的入口路径，需要使用相对路径 */
-const getCompiledEntryPath = (repo, format) =>
-  path.join(
+const getCompiledEntryPath = (repo, format) => {
+  const packageDir = compiledPackageDirs[repo] || repo;
+
+  return path.join(
     '..',
-    repo,
-    repo === 'amis-formula' || format === 'cjs' ? 'lib' : 'esm',
+    packageDir,
+    packageDir === 'amis-formula' || format === 'cjs' ? 'lib' : 'esm',
     'index.js'
   );
+};
 
 export default [
   {
@@ -188,7 +196,10 @@ function transpileReactCreateElement() {
 }
 
 function getPlugins(format = 'esm') {
-  const overridePaths = ['amis-formula', 'amis-core'].reduce(
+  const overridePaths = [
+    'prismui-formula',
+    'prismui-core'
+  ].reduce(
     (prev, current) => ({
       ...prev,
       [current]: [getCompiledEntryPath(current, format)]

@@ -12,8 +12,8 @@ import {
   filter,
   Renderer,
   RendererProps
-} from 'amis-core';
-import {Shape, IShapeType} from 'amis-ui';
+} from 'prismui-core';
+import {Shape, IShapeType} from 'prismui-ui';
 import cx from 'classnames';
 import {BaseSchema} from '../Schema';
 

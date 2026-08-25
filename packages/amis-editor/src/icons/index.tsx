@@ -1,4 +1,4 @@
-import {registerIcon, Icon} from 'amis-editor-core';
+import {registerIcon, Icon} from 'prismui-editor-core';
 
 /**
  * 新版组件 icon

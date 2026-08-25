@@ -15,7 +15,7 @@ import {InputBoxProps} from '../../../amis-ui/src/components/InputBox';
 import cx from 'classnames';
 import {getEnv} from 'mobx-state-tree';
 import {pick} from 'lodash';
-import {LocaleProps} from 'amis-core';
+import {LocaleProps} from 'prismui-core';
 
 /** 语料 key 正则表达式 */
 export const corpusKeyReg =

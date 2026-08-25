@@ -7,9 +7,9 @@
 import React from 'react';
 import moment from 'moment';
 import Calendar from './calendar/Calendar';
-import {getStableClassSelector, themeable, ThemeProps} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
-import {autobind} from 'amis-core';
+import {getStableClassSelector, themeable, ThemeProps} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
+import {autobind} from 'prismui-core';
 import {ShortCuts} from './DatePicker';
 import type {ViewMode} from './calendar/Calendar';
 import PopUp from './PopUp';

@@ -1,5 +1,5 @@
 import React from 'react';
-import {localeable, themeable} from 'amis-core';
+import {localeable, themeable} from 'prismui-core';
 import PickerContainer from '../PickerContainer';
 import SchemaVariableList, {
   SchemaVariableListProps

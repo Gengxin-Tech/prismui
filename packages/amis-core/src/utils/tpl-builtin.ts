@@ -5,7 +5,7 @@ import {
   registerFilter,
   registerFunction,
   Evaluator
-} from 'amis-formula';
+} from 'prismui-formula';
 import {prettyBytes} from './prettyBytes';
 import {escapeHtml} from './escapeHtml';
 import {formatDuration} from './formatDuration';

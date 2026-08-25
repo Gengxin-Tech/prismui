@@ -1,5 +1,5 @@
 import {AMISPageSchema} from './renderers/Page';
-import {AMISFormSchema} from 'amis-core';
+import {AMISFormSchema} from 'prismui-core';
 import {
   AMISFormItem,
   AMISFormItemWithOptions,
@@ -8,7 +8,7 @@ import {
   AMISSchema,
   AMISSchemaType,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 import type {
   AMISApi,
   AMISApiObject,
@@ -27,7 +27,7 @@ import type {
   AMISTooltip,
   AMISUrlPath,
   AMISVariableName
-} from 'amis-core';
+} from 'prismui-core';
 
 export type SchemaType = AMISSchemaType;
 export type SchemaObject = AMISSchema;

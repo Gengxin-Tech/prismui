@@ -6,10 +6,10 @@ import {
   localeable,
   themeable,
   ThemeProps
-} from 'amis-core';
-import {getScrollParent} from 'amis-core';
-import {resizeSensor} from 'amis-core';
-import type {IRow} from 'amis-core/lib/store/table';
+} from 'prismui-core';
+import {getScrollParent} from 'prismui-core';
+import {resizeSensor} from 'prismui-core';
+import type {IRow} from 'prismui-core/lib/store/table';
 type VirtualTableRowElement = React.ReactElement<{item?: IRow}>;
 
 export interface VirtualTableBodyProps extends ThemeProps {

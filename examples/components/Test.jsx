@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'amis';
+import {Button} from 'prismui';
 
 export default class TestComponent extends React.Component {
   render() {

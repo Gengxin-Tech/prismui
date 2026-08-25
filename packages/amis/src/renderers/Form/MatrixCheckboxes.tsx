@@ -10,15 +10,15 @@ import {
   FormItem,
   getVariable,
   resolveEventData
-} from 'amis-core';
-import {buildApi, isValidApi, isEffectiveApi} from 'amis-core';
-import {Checkbox, Spinner, SpinnerExtraProps} from 'amis-ui';
-import {setVariable, createObject} from 'amis-core';
-import {ApiObject, ActionObject, isMobile} from 'amis-core';
+} from 'prismui-core';
+import {buildApi, isValidApi, isEffectiveApi} from 'prismui-core';
+import {Checkbox, Spinner, SpinnerExtraProps} from 'prismui-ui';
+import {setVariable, createObject} from 'prismui-core';
+import {ApiObject, ActionObject, isMobile} from 'prismui-core';
 import {FormBaseControlSchema, SchemaApi} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 
-import type {AMISFormItem, TestIdBuilder} from 'amis-core';
+import type {AMISFormItem, TestIdBuilder} from 'prismui-core';
 
 /**
  * Matrix 选择控件。适合做权限勾选。

@@ -1,9 +1,9 @@
 /**
  * 传给 amis 渲染器的默认 env
  */
-import {attachmentAdpator, RenderOptions} from 'amis-core';
+import {attachmentAdpator, RenderOptions} from 'prismui-core';
 import axios from 'axios';
-import {alert, confirm, toast} from 'amis';
+import {alert, confirm, toast} from 'prismui-framework';
 
 export const env: RenderOptions = {
   updateLocation: () => {},

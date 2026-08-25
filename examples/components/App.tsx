@@ -11,9 +11,9 @@ import {
   Select,
   SearchBox,
   InputBox
-} from 'amis';
-import {eachTree, getTheme} from 'amis-core';
-import 'amis-ui/lib/locale/en-US';
+} from 'prismui';
+import {eachTree, getTheme} from 'prismui-core';
+import 'prismui-ui/lib/locale/en-US';
 import {withRouter} from 'react-router-dom';
 // @ts-ignore
 import DocSearch from './DocSearch';

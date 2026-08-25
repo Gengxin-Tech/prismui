@@ -2,7 +2,7 @@ import React from 'react';
 import {cleanup, render, waitFor} from '@testing-library/react';
 import '../../src';
 import {clearStoresCache, theme} from '../../src';
-import {PopUp} from 'amis-ui';
+import {PopUp} from 'prismui-ui';
 
 afterEach(() => {
   cleanup();

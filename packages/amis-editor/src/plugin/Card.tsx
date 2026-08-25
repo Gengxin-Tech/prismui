@@ -1,6 +1,6 @@
-import {Button} from 'amis-ui';
+import {Button} from 'prismui-ui';
 import React from 'react';
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -12,10 +12,10 @@ import {
   RendererInfo,
   RendererInfoResolveEventContext,
   VRendererConfig
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 import flatten from 'lodash/flatten';
-import {VRenderer} from 'amis-editor-core';
+import {VRenderer} from 'prismui-editor-core';
 import {generateId} from '../util';
 
 export class CardPlugin extends BasePlugin {

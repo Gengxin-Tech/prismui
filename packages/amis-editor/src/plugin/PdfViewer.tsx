@@ -1,6 +1,6 @@
-import {RendererPluginAction, registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+import {RendererPluginAction, registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 
 export class PdfViewerPlugin extends BasePlugin {
   static id = 'PdfViewerPlugin';

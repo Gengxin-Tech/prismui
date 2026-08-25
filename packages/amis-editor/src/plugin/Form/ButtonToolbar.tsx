@@ -1,6 +1,6 @@
-import {registerEditorPlugin, translateSchema} from 'amis-editor-core';
-import {BasePlugin, RegionConfig, BaseEventContext} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin, translateSchema} from 'prismui-editor-core';
+import {BasePlugin, RegionConfig, BaseEventContext} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
 import {
   BUTTON_DEFAULT_ACTION,

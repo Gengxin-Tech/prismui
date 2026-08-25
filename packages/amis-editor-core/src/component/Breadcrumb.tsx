@@ -1,6 +1,6 @@
 import React from 'react';
 import {reaction} from 'mobx';
-import {Icon, resizeSensor} from 'amis';
+import {Icon, resizeSensor} from 'prismui-framework';
 import {EditorStoreType} from '../store/editor';
 import {EditorManager} from '../manager';
 import {observer} from 'mobx-react';

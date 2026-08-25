@@ -1,12 +1,12 @@
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BasePlugin,
   RegionConfig,
   RendererInfo,
   BaseEventContext,
   tipedLabel
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl, valuePipeOut} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl, valuePipeOut} from 'prismui-editor-core';
 
 export class IFramePlugin extends BasePlugin {
   static id = 'IFramePlugin';

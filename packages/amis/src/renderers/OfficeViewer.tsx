@@ -15,11 +15,11 @@ import {
   resolveVariable,
   resolveVariableAndFilter,
   ScopedContext
-} from 'amis-core';
-import type {Word, Excel} from 'office-viewer';
-import {Spinner} from 'amis-ui';
+} from 'prismui-core';
+import type {Word, Excel} from 'prismui-office-viewer';
+import {Spinner} from 'prismui-ui';
 import {Payload} from '../types';
-import {AMISSchemaBase} from 'amis-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * Office 文档查看器组件，用于预览 Word/Excel/PPT 等文档。
@@ -269,7 +269,7 @@ export default class OfficeViewer extends React.Component<
       return;
     }
 
-    import('office-viewer').then(async (officeViewer: any) => {
+    import('prismui-office-viewer').then(async (officeViewer: any) => {
       const office = await this.initOffice(officeViewer);
 
       if (display !== false) {
@@ -301,7 +301,7 @@ export default class OfficeViewer extends React.Component<
       reader.onload = _e => {
         const data = reader.result as ArrayBuffer;
 
-        import('office-viewer').then(async (officeViewer: any) => {
+        import('prismui-office-viewer').then(async (officeViewer: any) => {
           const office = await this.initOffice(officeViewer, data);
           if (display !== false) {
             office.render(this.rootElement?.current!);

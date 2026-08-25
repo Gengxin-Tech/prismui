@@ -461,11 +461,11 @@ function resolveSdkOptimizedImports() {
 
 function resolveWorkspaceLibImports() {
   const packages = new Map([
-    ['amis', 'packages/amis/lib'],
-    ['amis-core', 'packages/amis-core/lib'],
-    ['amis-formula', 'packages/amis-formula/lib'],
-    ['amis-ui', 'packages/amis-ui/lib'],
-    ['office-viewer', 'packages/office-viewer/lib']
+    ['prismui', 'packages/amis/lib'],
+    ['prismui-core', 'packages/amis-core/lib'],
+    ['prismui-formula', 'packages/amis-formula/lib'],
+    ['prismui-ui', 'packages/amis-ui/lib'],
+    ['prismui-office-viewer', 'packages/office-viewer/lib']
   ]);
 
   return {

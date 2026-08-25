@@ -8,8 +8,8 @@ import {
   RendererProps,
   resolveEventData,
   setThemeClassName
-} from 'amis-core';
-import {ActionObject, isGlobalVarExpression} from 'amis-core';
+} from 'prismui-core';
+import {ActionObject, isGlobalVarExpression} from 'prismui-core';
 import find from 'lodash/find';
 import {
   isVisible,
@@ -21,9 +21,9 @@ import {
   isObjectShallowModified,
   BaseSchemaWithoutType,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 import findIndex from 'lodash/findIndex';
-import {Tabs as CTabs, Tab} from 'amis-ui';
+import {Tabs as CTabs, Tab} from 'prismui-ui';
 import {
   BaseSchema,
   AMISClassName,
@@ -32,12 +32,12 @@ import {
   SchemaObject
 } from '../Schema';
 import {ActionSchema} from './Action';
-import {filter} from 'amis-core';
-import {resolveVariableAndFilter} from 'amis-core';
-import {FormHorizontal} from 'amis-core';
-import {str2AsyncFunction} from 'amis-core';
-import {ScopedContext, IScopedContext} from 'amis-core';
-import type {TabsMode} from 'amis-ui/lib/components/Tabs';
+import {filter} from 'prismui-core';
+import {resolveVariableAndFilter} from 'prismui-core';
+import {FormHorizontal} from 'prismui-core';
+import {str2AsyncFunction} from 'prismui-core';
+import {ScopedContext, IScopedContext} from 'prismui-core';
+import type {TabsMode} from 'prismui-ui/lib/components/Tabs';
 import isNaN from 'lodash/isNaN';
 import debounce from 'lodash/debounce';
 

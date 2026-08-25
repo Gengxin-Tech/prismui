@@ -1,11 +1,11 @@
 import React from 'react';
-import {getStableClassName, ThemeProps, themeable} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
+import {getStableClassName, ThemeProps, themeable} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import InputBox from './InputBox';
 import {Icon} from './icons';
 import Button from './Button';
-import {autobind, guid} from 'amis-core';
-import {uncontrollable} from 'amis-core';
+import {autobind, guid} from 'prismui-core';
+import {uncontrollable} from 'prismui-core';
 import Sortable from 'sortablejs';
 
 export interface ArrayInputProps extends ThemeProps, LocaleProps {

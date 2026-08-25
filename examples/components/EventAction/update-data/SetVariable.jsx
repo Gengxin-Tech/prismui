@@ -3,7 +3,7 @@
  */
 import update from 'lodash/update';
 import isEqual from 'lodash/isEqual';
-import {cloneObject, setVariable} from 'amis-core';
+import {cloneObject, setVariable} from 'prismui-core';
 
 const variables = [
   {

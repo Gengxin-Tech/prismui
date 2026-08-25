@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import {FormItem, Renderer} from 'amis-core';
+import {FormItem, Renderer} from 'prismui-core';
 
 @FormItem({
   type: 'my-custom'

@@ -12,8 +12,8 @@ import {
   Renderer,
   RendererProps,
   resolveVariableAndFilter
-} from 'amis-core';
-import {Icon, SearchBox, VirtualList} from 'amis-ui';
+} from 'prismui-core';
+import {Icon, SearchBox, VirtualList} from 'prismui-ui';
 
 const foregroundColors = {
   '30': 'black',

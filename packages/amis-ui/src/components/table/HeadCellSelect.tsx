@@ -11,7 +11,7 @@ import {
   ClassNamesFn,
   LocaleProps,
   localeable
-} from 'amis-core';
+} from 'prismui-core';
 import HeadCellDropDown, {
   FilterPayload,
   FilterDropdownProps

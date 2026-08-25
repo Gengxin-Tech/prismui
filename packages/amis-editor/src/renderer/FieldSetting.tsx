@@ -8,19 +8,19 @@ import {reaction} from 'mobx';
 import pick from 'lodash/pick';
 import isEqual from 'lodash/isEqual';
 import debounce from 'lodash/debounce';
-import {isObject} from 'amis-core';
+import {isObject} from 'prismui-core';
 import {
   FormItem,
   FormControlProps,
   autobind,
   isValidApi,
   normalizeApi
-} from 'amis-core';
-import {Button, toast} from 'amis-ui';
+} from 'prismui-core';
+import {Button, toast} from 'prismui-ui';
 import {DSFeatureEnum} from '../builder/constants';
 
 import type {IReactionDisposer} from 'mobx';
-import type {InputTableColumnProps} from 'amis-ui';
+import type {InputTableColumnProps} from 'prismui-ui';
 import type {DSFeatureType, ScaffoldField} from '../builder/type';
 
 interface FieldSettingProps extends FormControlProps {

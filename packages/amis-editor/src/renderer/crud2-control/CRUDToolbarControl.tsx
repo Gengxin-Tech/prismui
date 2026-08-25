@@ -6,16 +6,23 @@
 import React from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import pick from 'lodash/pick';
-import {FormItem, Button, Icon, toast, Spinner, autobind} from 'amis';
-import {TooltipWrapper} from 'amis-ui';
-import {JSONPipeIn} from 'amis-editor-core';
+import {
+  FormItem,
+  Button,
+  Icon,
+  toast,
+  Spinner,
+  autobind
+} from 'prismui-framework';
+import {TooltipWrapper} from 'prismui-ui';
+import {JSONPipeIn} from 'prismui-editor-core';
 import {DSFeature, DSFeatureType, DSFeatureEnum} from '../../builder';
 import {traverseSchemaDeep} from '../../builder/utils';
 import {deepRemove, addSchema2Toolbar} from '../../plugin/CRUD2/utils';
 
-import type {FormControlProps} from 'amis';
-import type {EditorNodeType} from 'amis-editor-core';
-import type {ColumnSchema} from 'amis/lib/renderers/Table2';
+import type {FormControlProps} from 'prismui-framework';
+import type {EditorNodeType} from 'prismui-editor-core';
+import type {ColumnSchema} from 'prismui-framework/lib/renderers/Table2';
 import type {DSBuilderInterface} from '../../builder';
 
 type ActionValue =

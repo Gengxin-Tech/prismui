@@ -5,11 +5,11 @@
  */
 
 import React from 'react';
-import {ClassNamesFn, themeable} from 'amis-core';
-import {isObject} from 'amis-core';
-import {validations} from 'amis-core';
+import {ClassNamesFn, themeable} from 'prismui-core';
+import {isObject} from 'prismui-core';
+import {validations} from 'prismui-core';
 import {Icon} from './icons';
-import {isObjectShallowModified} from 'amis-core';
+import {isObjectShallowModified} from 'prismui-core';
 import isEmpty from 'lodash/isEmpty';
 
 export type textPositionType = 'left' | 'right';

@@ -1,11 +1,11 @@
 import React from 'react';
-import {Icon} from 'amis';
+import {Icon} from 'prismui-framework';
 import {
   BuildPanelEventContext,
   BasePlugin,
   BasicPanelItem,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {GlobalVarManagerPanel} from '../renderer/global-var-control/GlobalVarManagerPanel';
 
 /**

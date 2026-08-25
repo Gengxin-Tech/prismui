@@ -11,21 +11,21 @@ import {
   Payload,
   themeable,
   ThemeProps
-} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
+} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import ResultBox from './ResultBox';
-import type {Option} from 'amis-core';
+import type {Option} from 'prismui-core';
 import Sortable from 'sortablejs';
 import PopUp from './PopUp';
 import InputBox from './InputBox';
 import {Icon} from './icons';
 import debounce from 'lodash/debounce';
-import {autobind, findTree} from 'amis-core';
+import {autobind, findTree} from 'prismui-core';
 import Checkbox from './Checkbox';
 import {optionValueCompare, value2array} from './Select';
 import Spinner, {SpinnerExtraProps} from './Spinner';
 import flatten from 'lodash/flatten';
-import {Api, PlainObject} from 'amis-core';
+import {Api, PlainObject} from 'prismui-core';
 
 export interface UserSelectProps
   extends ThemeProps,

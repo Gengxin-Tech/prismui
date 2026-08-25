@@ -6,11 +6,17 @@ import React from 'react';
 import cx from 'classnames';
 import get from 'lodash/get';
 import Sortable from 'sortablejs';
-import {FormItem, Button, Icon, render as amisRender, toast} from 'amis';
-import {autobind} from 'amis-editor-core';
-import type {Option} from 'amis';
-import {createObject, FormControlProps} from 'amis-core';
-import type {SchemaApi} from 'amis';
+import {
+  FormItem,
+  Button,
+  Icon,
+  render as amisRender,
+  toast
+} from 'prismui-framework';
+import {autobind} from 'prismui-editor-core';
+import type {Option} from 'prismui-framework';
+import {createObject, FormControlProps} from 'prismui-core';
+import type {SchemaApi} from 'prismui-framework';
 import type {PlainObject} from './style-control/types';
 
 export type valueType = 'text' | 'boolean' | 'number';
@@ -378,11 +384,7 @@ export default class ListItemControl extends React.Component<
             </div>
           )}
           <div className="ae-OptionControl-footer" ref={this.targetRef}>
-            <Button
-              level="enhance"
-              onClick={this.handleAdd}
-              className="w-full"
-            >
+            <Button level="enhance" onClick={this.handleAdd} className="w-full">
               {addTip || '添加选项'}
             </Button>
           </div>

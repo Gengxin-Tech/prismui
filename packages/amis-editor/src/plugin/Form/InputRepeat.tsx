@@ -1,6 +1,6 @@
-import {getSchemaTpl} from 'amis-editor-core';
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin} from 'amis-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin} from 'prismui-editor-core';
 
 export class RepeatControlPlugin extends BasePlugin {
   static id = 'RepeatControlPlugin';

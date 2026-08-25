@@ -9,7 +9,7 @@ import {
   setThemeClassName,
   AMISSchemaBase,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 
 export interface AMISStatusSchemaBase extends AMISSchemaBase {
   /**

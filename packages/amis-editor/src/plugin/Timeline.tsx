@@ -1,8 +1,8 @@
 import React from 'react';
 import {getEventControlConfig} from '../renderer/event-control/helper';
-import {tipedLabel} from 'amis-editor-core';
-import {registerEditorPlugin, getSchemaTpl, diff} from 'amis-editor-core';
-import {BasePlugin, BaseEventContext} from 'amis-editor-core';
+import {tipedLabel} from 'prismui-editor-core';
+import {registerEditorPlugin, getSchemaTpl, diff} from 'prismui-editor-core';
+import {BasePlugin, BaseEventContext} from 'prismui-editor-core';
 import {schemaArrayFormat, schemaToArray} from '../util';
 
 export class TimelinePlugin extends BasePlugin {

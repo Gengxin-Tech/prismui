@@ -7,13 +7,13 @@ import {
   BasePlugin,
   BaseEventContext,
   diff
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import type {
   EditorManager,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
-import type {Schema} from 'amis';
+} from 'prismui-editor-core';
+import type {Schema} from 'prismui-framework';
 import {formItemControl} from '../../component/BaseControl';
 import {
   resolveOptionEventDataSchame,

@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import {Icon} from 'amis';
+import {Icon} from 'prismui-framework';
 import {EditorStoreType} from '../store/editor';
 import {observer} from 'mobx-react';
 import {EditorManager} from '../manager';

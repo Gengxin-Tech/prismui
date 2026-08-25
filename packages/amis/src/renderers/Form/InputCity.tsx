@@ -5,19 +5,23 @@ import {
   FormBaseControl,
   resolveEventData,
   getVariable
-} from 'amis-core';
-import {ClassNamesFn, themeable, ThemeProps} from 'amis-core';
-import {Spinner, SpinnerExtraProps} from 'amis-ui';
-import {Select} from 'amis-ui';
-import {CityArea} from 'amis-ui';
-import {autobind, isMobile, createObject} from 'amis-core';
-import {ActionObject} from 'amis-core';
-import {Option} from 'amis-core';
-import {localeable, LocaleProps} from 'amis-core';
+} from 'prismui-core';
+import {ClassNamesFn, themeable, ThemeProps} from 'prismui-core';
+import {Spinner, SpinnerExtraProps} from 'prismui-ui';
+import {Select} from 'prismui-ui';
+import {CityArea} from 'prismui-ui';
+import {autobind, isMobile, createObject} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
+import {Option} from 'prismui-core';
+import {localeable, LocaleProps} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 
-import type {AMISFormItem, AMISSpinnerConfig, TestIdBuilder} from 'amis-core';
+import type {
+  AMISFormItem,
+  AMISSpinnerConfig,
+  TestIdBuilder
+} from 'prismui-core';
 
 /**
  * City 城市选择框。
@@ -186,7 +190,7 @@ const getCityFromCode = ({
 };
 
 const loadDb = (callback: (db: any) => void): void => {
-  import('amis-ui/lib/components/CityDB').then(callback);
+  import('prismui-ui/lib/components/CityDB').then(callback);
 };
 
 export class CityPicker extends React.Component<

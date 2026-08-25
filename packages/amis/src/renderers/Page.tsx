@@ -12,9 +12,9 @@ import {
   filterTarget,
   setReactRef,
   setThemeClassName
-} from 'amis-core';
+} from 'prismui-core';
 import {observer} from 'mobx-react';
-import {ServiceStore, IServiceStore} from 'amis-core';
+import {ServiceStore, IServiceStore} from 'prismui-core';
 import {
   Api,
   SchemaNode,
@@ -23,8 +23,8 @@ import {
   ApiObject,
   FunctionPropertyNames,
   CustomStyle
-} from 'amis-core';
-import {filter, evalExpression} from 'amis-core';
+} from 'prismui-core';
+import {filter, evalExpression} from 'prismui-core';
 import {
   isVisible,
   autobind,
@@ -33,11 +33,11 @@ import {
   createObject,
   AMISSchemaCollection,
   AMISSchema
-} from 'amis-core';
-import {ScopedContext, IScopedContext} from 'amis-core';
-import {Alert2 as Alert, SpinnerExtraProps} from 'amis-ui';
-import {isApiOutdated, isEffectiveApi} from 'amis-core';
-import {Spinner} from 'amis-ui';
+} from 'prismui-core';
+import {ScopedContext, IScopedContext} from 'prismui-core';
+import {Alert2 as Alert, SpinnerExtraProps} from 'prismui-ui';
+import {isApiOutdated, isEffectiveApi} from 'prismui-core';
+import {Spinner} from 'prismui-ui';
 import {
   BaseSchema,
   SchemaDefaultData,
@@ -49,10 +49,10 @@ import {
 import {SchemaRemark, AMISRemarkObject} from './Remark';
 import {isAlive, onAction} from 'mobx-state-tree';
 import mapValues from 'lodash/mapValues';
-import {resolveVariable} from 'amis-core';
-import {buildStyle} from 'amis-core';
-import {PullRefresh} from 'amis-ui';
-import {AMISSchemaBase, AMISSpinnerConfig, AMISTemplate} from 'amis-core';
+import {resolveVariable} from 'prismui-core';
+import {buildStyle} from 'prismui-core';
+import {PullRefresh} from 'prismui-ui';
+import {AMISSchemaBase, AMISSpinnerConfig, AMISTemplate} from 'prismui-core';
 
 /**
  * css 定义

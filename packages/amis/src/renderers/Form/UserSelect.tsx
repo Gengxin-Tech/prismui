@@ -7,13 +7,13 @@ import {
   FormOptionsControl,
   resolveEventData,
   AMISFormItemWithOptions
-} from 'amis-core';
-import {SpinnerExtraProps, UserSelect} from 'amis-ui';
-import {UserTabSelect} from 'amis-ui';
-import {isEffectiveApi} from 'amis-core';
+} from 'prismui-core';
+import {SpinnerExtraProps, UserSelect} from 'prismui-ui';
+import {UserTabSelect} from 'prismui-ui';
+import {isEffectiveApi} from 'prismui-core';
 import find from 'lodash/find';
-import {createObject, autobind} from 'amis-core';
-import {PlainObject} from 'amis-core';
+import {createObject, autobind} from 'prismui-core';
+import {PlainObject} from 'prismui-core';
 import {FormOptionsSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 

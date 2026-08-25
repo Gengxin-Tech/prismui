@@ -1,6 +1,6 @@
 import findLastIndex from 'lodash/findLastIndex';
 import find from 'lodash/find';
-import {isBreakpoint} from 'amis-core';
+import {isBreakpoint} from 'prismui-core';
 
 import {ColumnProps, SummaryProps, ThProps, TdProps, SortProps} from './index';
 

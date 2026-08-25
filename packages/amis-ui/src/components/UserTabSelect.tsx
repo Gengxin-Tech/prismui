@@ -4,19 +4,19 @@
  */
 
 import React from 'react';
-import {themeable, ThemeProps} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import ResultBox from './ResultBox';
 import UserSelect from './UserSelect';
-import type {Option} from 'amis-core';
+import type {Option} from 'prismui-core';
 import Sortable from 'sortablejs';
 import PopUp from './PopUp';
 import {Icon} from './icons';
-import {autobind, findTree} from 'amis-core';
+import {autobind, findTree} from 'prismui-core';
 import {default as Tabs, Tab} from './Tabs';
 import {UserSelectProps} from './UserSelect';
-import type {PlainObject} from 'amis-core';
-import {resolveVariableAndFilter} from 'amis-core';
+import type {PlainObject} from 'prismui-core';
+import {resolveVariableAndFilter} from 'prismui-core';
 
 export interface UserSelectTop extends UserSelectProps {
   title: string;

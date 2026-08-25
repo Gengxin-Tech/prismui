@@ -15,14 +15,14 @@
  */
 
 import React from 'react';
-import {uncontrollable} from 'amis-core';
+import {uncontrollable} from 'prismui-core';
 import Checkbox from './Checkbox';
 import Button from './Button';
 import {value2array, OptionProps, Option} from './Select';
 import chunk from 'lodash/chunk';
-import {ClassNamesFn, themeable} from 'amis-core';
-import {columnsSplit} from 'amis-core';
-import {TestIdBuilder} from 'amis-core';
+import {ClassNamesFn, themeable} from 'prismui-core';
+import {columnsSplit} from 'prismui-core';
+import {TestIdBuilder} from 'prismui-core';
 import TooltipWrapper from './TooltipWrapper';
 import Icon from './icons';
 

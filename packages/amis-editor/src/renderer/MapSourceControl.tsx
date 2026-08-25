@@ -4,15 +4,15 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 import {
   autobind,
   getSchemaTpl,
   getI18nEnabled,
   tipedLabel
-} from 'amis-editor-core';
-import {FormControlProps, isObject} from 'amis-core';
-import type {SchemaApi} from 'amis';
+} from 'prismui-editor-core';
+import {FormControlProps, isObject} from 'prismui-core';
+import type {SchemaApi} from 'prismui-framework';
 import debounce from 'lodash/debounce';
 
 enum MapType {

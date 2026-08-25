@@ -7,9 +7,9 @@ import isEqual from 'lodash/isEqual';
 import omit from 'lodash/omit';
 
 import {Option, Options} from './Select';
-import {ThemeProps, themeable} from 'amis-core';
-import {autobind, noop} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
+import {ThemeProps, themeable} from 'prismui-core';
+import {autobind, noop} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import {BaseSelectionProps} from './Selection';
 import Tree from './Tree';
 import TransferSearch from './TransferSearch';

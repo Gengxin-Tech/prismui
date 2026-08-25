@@ -5,13 +5,13 @@
 
 import cx from 'classnames';
 import React, {useEffect, useState} from 'react';
-import {FormItem} from 'amis-core';
-import type {FormControlProps} from 'amis-core';
+import {FormItem} from 'prismui-core';
+import type {FormControlProps} from 'prismui-core';
 import cloneDeep from 'lodash/cloneDeep';
-import {Select} from 'amis-ui';
+import {Select} from 'prismui-ui';
 import ColorPicker from './ColorPicker';
 import ThemeSelect from './ThemeSelect';
-import {i18n as _i18n} from 'i18n-runtime';
+import {i18n as _i18n} from 'prismui-i18n-runtime';
 import {getDefaultValue} from '../util';
 
 interface BorderProps {

@@ -1,8 +1,8 @@
-import {ThemeProps, themeable} from 'amis-core';
+import {ThemeProps, themeable} from 'prismui-core';
 import React from 'react';
-import {Options, Option} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
-import type {TestIdBuilder} from 'amis-core';
+import {Options, Option} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface ListMenuProps extends ThemeProps, LocaleProps {
   options: Options;

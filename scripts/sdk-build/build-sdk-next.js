@@ -101,7 +101,7 @@ function readOption(name) {
 function assertDirectory(dir, label) {
   if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) {
     throw new Error(
-      `Missing ${label}: ${relative(dir)}. Run \`npm run build --workspace amis\` first.`
+      `Missing ${label}: ${relative(dir)}. Run \`npm run build --workspace prismui\` first.`
     );
   }
 }

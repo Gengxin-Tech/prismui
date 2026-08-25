@@ -1,5 +1,5 @@
 import React from 'react';
-import {defaultValue} from 'amis-editor-core';
+import {defaultValue} from 'prismui-editor-core';
 import without from 'lodash/without';
 import {registerActionPanel} from '../../actionsPanelManager';
 import {renderCmptSelect, renderCmptIdInput} from './helper';

@@ -11,12 +11,12 @@ import {
   RendererProps,
   resolveVariableAndFilter,
   ScopedContext
-} from 'amis-core';
-import {FormItem, FormControlProps} from 'amis-core';
-import {filter} from 'amis-core';
+} from 'prismui-core';
+import {FormItem, FormControlProps} from 'prismui-core';
+import {filter} from 'prismui-core';
 import {QRCode as QRCodeRender} from 'qrcode-react-next';
 import {BaseSchema, AMISClassName} from '../Schema';
-import {getPropValue} from 'amis-core';
+import {getPropValue} from 'prismui-core';
 import mapValues from 'lodash/mapValues';
 import {saveAs} from 'file-saver';
 

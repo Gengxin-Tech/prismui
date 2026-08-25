@@ -1,4 +1,4 @@
-import {EditorAvailableLanguages as availableLanguages} from 'amis';
+import {EditorAvailableLanguages as availableLanguages} from 'prismui-framework';
 import {
   defaultValue,
   getSchemaTpl,
@@ -7,8 +7,8 @@ import {
   BasePlugin,
   RendererPluginEvent,
   RendererPluginAction
-} from 'amis-editor-core';
-import type {BaseEventContext} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import type {BaseEventContext} from 'prismui-editor-core';
 import {ValidatorTag} from '../../validator';
 import {getEventControlConfig} from '../../renderer/event-control/helper';
 import {getActionCommonProps} from '../../renderer/event-control/helper';

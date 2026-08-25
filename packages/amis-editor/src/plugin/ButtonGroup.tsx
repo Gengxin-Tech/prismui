@@ -7,7 +7,7 @@ import {
   getSchemaTpl,
   registerEditorPlugin,
   translateSchema
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {BUTTON_DEFAULT_ACTION} from '../component/BaseControl';
 import {generateId} from '../util';
 

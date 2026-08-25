@@ -10,13 +10,13 @@ import {
   getPropValue,
   getStableClassSelector,
   padArr
-} from 'amis-core';
-import {Renderer, RendererProps} from 'amis-core';
-import {resolveVariable} from 'amis-core';
-import {filter} from 'amis-core';
-import {CustomStyle, setThemeClassName} from 'amis-core';
+} from 'prismui-core';
+import {Renderer, RendererProps} from 'prismui-core';
+import {resolveVariable} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {CustomStyle, setThemeClassName} from 'prismui-core';
 import {AMISClassName, SchemaUrlPath} from '../Schema';
-import {AMISSchemaBase} from 'amis-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * 视频播放器组件，用于播放视频内容。支持封面、自动播放、倍速、弹幕等配置。

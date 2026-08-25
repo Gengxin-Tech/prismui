@@ -4,11 +4,11 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {autobind, getSchemaTpl, setSchemaTpl} from 'amis-editor-core';
-import {tipedLabel} from 'amis-editor-core';
-import {FormControlProps} from 'amis-core';
-import {FormItem, Icon, TooltipWrapper} from 'amis';
-import {TooltipObject} from 'amis-ui/lib/components/TooltipWrapper';
+import {autobind, getSchemaTpl, setSchemaTpl} from 'prismui-editor-core';
+import {tipedLabel} from 'prismui-editor-core';
+import {FormControlProps} from 'prismui-core';
+import {FormItem, Icon, TooltipWrapper} from 'prismui-framework';
+import {TooltipObject} from 'prismui-ui/lib/components/TooltipWrapper';
 
 interface AdaptorFuncParam {
   label: string;

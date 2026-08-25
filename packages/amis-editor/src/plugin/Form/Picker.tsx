@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import omit from 'lodash/omit';
 import uniq from 'lodash/uniq';
 import get from 'lodash/get';
@@ -10,8 +10,8 @@ import {
   getSchemaTpl,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
-import {registerEditorPlugin} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -20,10 +20,10 @@ import {
   ContextMenuItem,
   defaultValue,
   tipedLabel
-} from 'amis-editor-core';
-import {diff} from 'amis-editor-core';
-import {isPureVariable} from 'amis-core';
-import type {Schema} from 'amis';
+} from 'prismui-editor-core';
+import {diff} from 'prismui-editor-core';
+import {isPureVariable} from 'prismui-core';
+import type {Schema} from 'prismui-framework';
 import {getEventControlConfig} from '../../renderer/event-control/helper';
 import {resolveOptionEventDataSchame, resolveOptionType} from '../../util';
 import {ValidatorTag} from '../../validator';

@@ -8,12 +8,12 @@ import {
   setThemeClassName,
   AMISSchemaCollection,
   AMISButtonSchema
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema, AMISClassName, SchemaTpl} from '../Schema';
 import {ActionSchema} from './Action';
-import {FormHorizontal} from 'amis-core';
+import {FormHorizontal} from 'prismui-core';
 import omit from 'lodash/omit';
-import {Icon} from 'amis-ui';
+import {Icon} from 'prismui-ui';
 
 /**
  * Panel渲染器。

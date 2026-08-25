@@ -1,4 +1,4 @@
-import {registerCustomVendor} from 'amis-core';
+import {registerCustomVendor} from 'prismui-core';
 
 function guid() {
   return (

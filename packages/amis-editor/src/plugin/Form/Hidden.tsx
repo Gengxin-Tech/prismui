@@ -1,6 +1,6 @@
 import React from 'react';
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin, getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin, getSchemaTpl} from 'prismui-editor-core';
 
 export class HiddenControlPlugin extends BasePlugin {
   static id = 'HiddenControlPlugin';

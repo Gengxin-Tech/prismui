@@ -9,16 +9,16 @@ import {
   Collapse,
   Checkbox,
   Spinner
-} from 'amis';
-import {FormControlProps, Renderer, RendererProps} from 'amis-core';
+} from 'prismui-framework';
+import {FormControlProps, Renderer, RendererProps} from 'prismui-core';
 import debounce from 'lodash/debounce';
 import remove from 'lodash/remove';
 import React from 'react';
-import {EditorManager, EditorNodeType, autobind} from 'amis-editor-core';
+import {EditorManager, EditorNodeType, autobind} from 'prismui-editor-core';
 import {matchSorter} from 'match-sorter';
 import {default as cx} from 'classnames';
 
-import type {SchemaCollection} from 'amis';
+import type {SchemaCollection} from 'prismui-framework';
 import type {DSField, DSFieldGroup} from '../builder';
 
 export interface DataBindingProps extends FormControlProps {

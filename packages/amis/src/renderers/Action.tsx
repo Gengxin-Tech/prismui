@@ -26,9 +26,9 @@ import {
   AMISLegacyBehaviorActionButton,
   AMISLegacyActionSchema,
   AMISButtonSchema
-} from 'amis-core';
-import {filter} from 'amis-core';
-import {BadgeObject, Button, SpinnerExtraProps} from 'amis-ui';
+} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {BadgeObject, Button, SpinnerExtraProps} from 'prismui-ui';
 import pick from 'lodash/pick';
 import omit from 'lodash/omit';
 
@@ -101,8 +101,8 @@ const ActionProps = [
   'downloadFileName'
 ];
 import {filterContents} from './Remark';
-import {ClassNamesFn, themeable, ThemeProps} from 'amis-core';
-import {autobind, createObject} from 'amis-core';
+import {ClassNamesFn, themeable, ThemeProps} from 'prismui-core';
+import {autobind, createObject} from 'prismui-core';
 import {
   BaseSchema,
   FeedbackDialog,
@@ -115,9 +115,9 @@ import {
   SchemaTpl
 } from '../Schema';
 import {ToastSchemaBase} from '../Schema';
-import {withBadge, Icon} from 'amis-ui';
-import {normalizeApi, str2AsyncFunction} from 'amis-core';
-import {TooltipWrapper} from 'amis-ui';
+import {withBadge, Icon} from 'prismui-ui';
+import {normalizeApi, str2AsyncFunction} from 'prismui-core';
+import {TooltipWrapper} from 'prismui-ui';
 
 // 构造一个假的 React 事件避免可能的报错，主要用于快捷键功能
 // 来自 https://stackoverflow.com/questions/27062455/reactjs-can-i-create-my-own-syntheticevent

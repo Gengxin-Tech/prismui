@@ -4,12 +4,12 @@
  */
 
 import React from 'react';
-import {RendererProps} from 'amis-core';
+import {RendererProps} from 'prismui-core';
 
 import hoistNonReactStatic from 'hoist-non-react-statics';
 
-import {filter} from 'amis-core';
-import {Icon, TooltipWrapper} from 'amis-ui';
+import {filter} from 'prismui-core';
+import {Icon, TooltipWrapper} from 'prismui-ui';
 import {SchemaIcon, SchemaTpl} from '../Schema';
 
 export interface AMISCopyableObject {

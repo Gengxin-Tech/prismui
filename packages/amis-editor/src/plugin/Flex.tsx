@@ -1,7 +1,7 @@
 /**
  * @file Flex 布局
  */
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {FlexPluginBase} from './Layout/FlexPluginBase';
 
 export class FlexPlugin extends FlexPluginBase {

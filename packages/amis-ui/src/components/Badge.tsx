@@ -5,9 +5,9 @@
 import React from 'react';
 import hoistNonReactStatic from 'hoist-non-react-statics';
 
-import {evalExpression, buildStyle} from 'amis-core';
-import {resolveVariable, resolveVariableAndFilter} from 'amis-core';
-import {ClassNamesFn, AMISBadgeBase} from 'amis-core';
+import {evalExpression, buildStyle} from 'prismui-core';
+import {resolveVariable, resolveVariableAndFilter} from 'prismui-core';
+import {ClassNamesFn, AMISBadgeBase} from 'prismui-core';
 
 // 保留原来的叫法
 export type BadgeObject = AMISBadgeBase;

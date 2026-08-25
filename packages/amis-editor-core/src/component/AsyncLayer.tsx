@@ -3,7 +3,7 @@
  * @desc 异步加载层
  */
 import React from 'react';
-import {Spinner} from 'amis';
+import {Spinner} from 'prismui-framework';
 
 export interface AsyncLayerOptions {
   fallback?: React.ReactNode;

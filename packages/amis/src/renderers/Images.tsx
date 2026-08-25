@@ -4,15 +4,15 @@ import {
   RendererProps,
   CustomStyle,
   setThemeClassName
-} from 'amis-core';
-import {filter} from 'amis-core';
+} from 'prismui-core';
+import {filter} from 'prismui-core';
 import {
   resolveVariable,
   isPureVariable,
   resolveVariableAndFilter
-} from 'amis-core';
+} from 'prismui-core';
 import Image, {ImageThumbProps, imagePlaceholder} from './Image';
-import {autobind, getPropValue} from 'amis-core';
+import {autobind, getPropValue} from 'prismui-core';
 import {BaseSchema, AMISClassName, SchemaUrlPath} from '../Schema';
 import type {ImageToolbarAction} from './Image';
 import Transition, {
@@ -21,7 +21,7 @@ import Transition, {
   EXITING,
   EXITED
 } from 'react-transition-group/Transition';
-import {AMISSchemaBase} from 'amis-core';
+import {AMISSchemaBase} from 'prismui-core';
 /**
  * 图片集展示控件。
  * 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/images

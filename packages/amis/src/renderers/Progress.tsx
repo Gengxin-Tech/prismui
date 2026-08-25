@@ -8,15 +8,15 @@ import {
   IScopedContext,
   ScopedComponentType,
   AMISSchemaBase
-} from 'amis-core';
+} from 'prismui-core';
 import isEqual from 'lodash/isEqual';
 import pick from 'lodash/pick';
 import cx from 'classnames';
 import {BaseSchema, AMISClassName, SchemaTpl} from '../Schema';
-import {autobind, getPropValue, createObject} from 'amis-core';
+import {autobind, getPropValue, createObject} from 'prismui-core';
 
-import {Progress} from 'amis-ui';
-import type {ColorMapType} from 'amis-ui/lib/components/Progress';
+import {Progress} from 'prismui-ui';
+import type {ColorMapType} from 'prismui-ui/lib/components/Progress';
 
 /**
  * 进度展示控件。

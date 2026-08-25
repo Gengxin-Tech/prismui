@@ -1,5 +1,5 @@
 import React from 'react';
-import {ThemeProps, themeable} from 'amis-core';
+import {ThemeProps, themeable} from 'prismui-core';
 import FieldValue from './condition-builder/Value';
 import {FieldSimple} from './condition-builder/types';
 import Select from './Select';

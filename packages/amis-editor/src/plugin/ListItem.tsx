@@ -1,5 +1,5 @@
 import React from 'react';
-import {getI18nEnabled, registerEditorPlugin} from 'amis-editor-core';
+import {getI18nEnabled, registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -10,9 +10,9 @@ import {
   RendererInfo,
   RendererInfoResolveEventContext,
   VRendererConfig
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {VRenderer} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {VRenderer} from 'prismui-editor-core';
 
 export class ListItemPlugin extends BasePlugin {
   static id = 'ListItemPlugin';

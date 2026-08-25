@@ -3,18 +3,18 @@ import {
   OptionsControl,
   resolveEventData,
   getVariable
-} from 'amis-core';
+} from 'prismui-core';
 import React from 'react';
-import {Spinner, SpinnerExtraProps} from 'amis-ui';
+import {Spinner, SpinnerExtraProps} from 'prismui-ui';
 import {BaseTabsTransferRenderer} from './TabsTransfer';
-import {TabsTransferPicker} from 'amis-ui';
+import {TabsTransferPicker} from 'prismui-ui';
 import {AMISTransferSchemaBase} from './Transfer';
-import {autobind, createObject} from 'amis-core';
-import {Selection as BaseSelection} from 'amis-ui';
-import {ActionObject, toNumber} from 'amis-core';
-import type {ItemRenderStates} from 'amis-ui/lib/components/Selection';
+import {autobind, createObject} from 'prismui-core';
+import {Selection as BaseSelection} from 'prismui-ui';
+import {ActionObject, toNumber} from 'prismui-core';
+import type {ItemRenderStates} from 'prismui-ui/lib/components/Selection';
 import {supportStatic} from './StaticHoc';
-import {isMobile} from 'amis-core';
+import {isMobile} from 'prismui-core';
 
 /**
  * TabsTransferPicker 穿梭器的弹框形态

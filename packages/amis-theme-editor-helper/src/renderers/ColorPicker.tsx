@@ -11,8 +11,8 @@ import {
   classnames as amisCx,
   render,
   eachTree
-} from 'amis-core';
-import type {FormControlProps} from 'amis-core';
+} from 'prismui-core';
+import type {FormControlProps} from 'prismui-core';
 import cx from 'classnames';
 import {SketchPicker} from 'react-color';
 import {
@@ -23,11 +23,11 @@ import {
   SearchBox,
   Select,
   TooltipWrapper
-} from 'amis-ui';
+} from 'prismui-ui';
 import type {GlobalData} from '../helper/getGlobalData';
 import cloneDeep from 'lodash/cloneDeep';
 import debounce from 'lodash/debounce';
-import {i18n as _i18n} from 'i18n-runtime';
+import {i18n as _i18n} from 'prismui-i18n-runtime';
 import {getDefaultValue} from '../util';
 import {Icon as ThemeIcon} from '../icons/index';
 

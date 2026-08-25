@@ -8,13 +8,13 @@ import {
   labelToString,
   Renderer,
   RendererProps
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema, AMISClassName, SchemaIcon} from '../Schema';
-import {getPropValue} from 'amis-core';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+import {getPropValue} from 'prismui-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 
-import {Tag} from 'amis-ui';
-import {AMISSchemaBase} from 'amis-core';
+import {Tag} from 'prismui-ui';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * Tag

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AlertComponent, ToastComponent, ContextMenu} from 'amis';
+import {AlertComponent, ToastComponent, ContextMenu} from 'prismui-framework';
 // @ts-ignore
 import AMisSchemaEditor from './Editor';
 import {Link} from 'react-router-dom';

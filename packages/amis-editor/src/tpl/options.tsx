@@ -6,16 +6,16 @@ import {
   getI18nEnabled,
   tipedLabel,
   JSONPipeOut
-} from 'amis-editor-core';
-import {findObjectsWithKey} from 'amis-core';
-import {Button, Icon} from 'amis-ui';
-import type {SchemaObject} from 'amis';
+} from 'prismui-editor-core';
+import {findObjectsWithKey} from 'prismui-core';
+import {Button, Icon} from 'prismui-ui';
+import type {SchemaObject} from 'prismui-framework';
 import assign from 'lodash/assign';
 import cloneDeep from 'lodash/cloneDeep';
 import omit from 'lodash/omit';
 
-import type {RendererProps} from 'amis';
-import type {EditorManager} from 'amis-editor-core';
+import type {RendererProps} from 'prismui-framework';
+import type {EditorManager} from 'prismui-editor-core';
 
 setSchemaTpl('options', () => {
   const i18nEnabled = getI18nEnabled();

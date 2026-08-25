@@ -595,7 +595,7 @@ test('evalute:namespace', () => {
   expect(evaluate('${ls: c}', {})).toMatchObject({a: 1, b: 2, c: {d: 4}});
   // 被认为是减操作
   expect(evaluate('${ls: spec-var-name}', {})).toBe(0);
-  expect(evaluate('${ls: spec\\-var\\-name}', {})).toBe('you are right');
+  expect(evaluate('${ls: spec-var-name}', {})).toBe('you are right');
   expect(evaluate('${ls: &["spec-var-name"]}', {})).toBe('you are right');
   expect(evaluate('${ls: &["c"]["c"]}', {})).toMatchObject({d: 4});
   expect(evaluate('${ls: &["c"][key]}', {})).toMatchObject({d: 4});

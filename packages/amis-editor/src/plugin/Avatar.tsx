@@ -1,10 +1,10 @@
 /**
  * @file 头像
  */
-import {registerEditorPlugin, RendererPluginEvent} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {getSchemaTpl, defaultValue} from 'amis-editor-core';
-import {tipedLabel} from 'amis-editor-core';
+import {registerEditorPlugin, RendererPluginEvent} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {getSchemaTpl, defaultValue} from 'prismui-editor-core';
+import {tipedLabel} from 'prismui-editor-core';
 import {getEventControlConfig} from '../renderer/event-control';
 
 const DefaultSize = 40;

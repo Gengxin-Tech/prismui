@@ -1,5 +1,9 @@
-import {JSONValueMap, findTree, resolveVariableAndFilter} from 'amis';
-import {EditorManager, guid} from 'amis-editor-core';
+import {
+  JSONValueMap,
+  findTree,
+  resolveVariableAndFilter
+} from 'prismui-framework';
+import {EditorManager, guid} from 'prismui-editor-core';
 import isString from 'lodash/isString';
 
 /**

@@ -1,4 +1,4 @@
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import React from 'react';
 import {
   registerEditorPlugin,
@@ -11,7 +11,7 @@ import {
   CodeEditor as AmisCodeEditor,
   RendererPluginEvent,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   getEventControlConfig,
   getActionCommonProps

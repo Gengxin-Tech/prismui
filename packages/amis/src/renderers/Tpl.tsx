@@ -6,15 +6,15 @@ import {
   RendererProps,
   CustomStyle,
   setThemeClassName
-} from 'amis-core';
-import {filter, asyncFilter, TestIdBuilder} from 'amis-core';
+} from 'prismui-core';
+import {filter, asyncFilter, TestIdBuilder} from 'prismui-core';
 import isEmpty from 'lodash/isEmpty';
-import {anyChanged, getPropValue} from 'amis-core';
-import {escapeHtml} from 'amis-core';
+import {anyChanged, getPropValue} from 'prismui-core';
+import {escapeHtml} from 'prismui-core';
 import {BaseSchema, SchemaTpl} from '../Schema';
-import {BadgeObject, withBadge} from 'amis-ui';
-import {buildStyle} from 'amis-core';
-import {AMISSchemaBase} from 'amis-core';
+import {BadgeObject, withBadge} from 'prismui-ui';
+import {buildStyle} from 'prismui-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * tpl 渲染器

@@ -5,9 +5,9 @@
 import flatten from 'lodash/flatten';
 import {NO_SUPPORT_STATIC_FORMITEM_CMPTS} from '../renderer/event-control/constants';
 import {getEventControlConfig} from '../renderer/event-control/helper';
-import {getSchemaTpl, isObject, tipedLabel} from 'amis-editor-core';
-import type {BaseEventContext} from 'amis-editor-core';
-import {getRendererByName} from 'amis-core';
+import {getSchemaTpl, isObject, tipedLabel} from 'prismui-editor-core';
+import type {BaseEventContext} from 'prismui-editor-core';
+import {getRendererByName} from 'prismui-core';
 
 // 默认动作
 export const BUTTON_DEFAULT_ACTION = {

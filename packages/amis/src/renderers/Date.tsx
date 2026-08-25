@@ -5,12 +5,12 @@ import {
   normalizeDate,
   CustomStyle,
   setThemeClassName
-} from 'amis-core';
+} from 'prismui-core';
 import moment, {Moment} from 'moment';
 import 'moment-timezone';
 import {BaseSchema} from '../Schema';
-import {getPropValue} from 'amis-core';
-import {AMISSchemaBase} from 'amis-core';
+import {getPropValue} from 'prismui-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * Date 展示渲染器。

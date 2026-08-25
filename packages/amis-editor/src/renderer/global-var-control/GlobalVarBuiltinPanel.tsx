@@ -1,6 +1,6 @@
 import {registerGlobalVarPanel} from './GlobalVarManagerPanel';
 import React from 'react';
-import {SchemaForm} from 'amis-editor-core';
+import {SchemaForm} from 'prismui-editor-core';
 
 const basicControls: Array<any> = [
   {

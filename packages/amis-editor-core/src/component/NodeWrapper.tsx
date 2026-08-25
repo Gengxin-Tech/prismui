@@ -1,4 +1,4 @@
-import {RendererProps, isObject, mergeRefs} from 'amis-core';
+import {RendererProps, isObject, mergeRefs} from 'prismui-core';
 import {observer} from 'mobx-react';
 import {isAlive} from 'mobx-state-tree';
 import React from 'react';
@@ -6,7 +6,7 @@ import merge from 'lodash/merge';
 import omit from 'lodash/omit';
 import {RendererInfo} from '../plugin';
 import {autobind, isEmpty} from '../util';
-import {filter} from 'amis-core';
+import {filter} from 'prismui-core';
 
 export interface NodeWrapperProps extends RendererProps {
   $$editor: RendererInfo; // 当前节点信息（info）

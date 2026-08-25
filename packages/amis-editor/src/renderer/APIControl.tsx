@@ -2,11 +2,11 @@ import React from 'react';
 import mergeWith from 'lodash/mergeWith';
 import cloneDeep from 'lodash/cloneDeep';
 import cx from 'classnames';
-import {FormItem, Icon} from 'amis';
-import {Input, PickerContainer, Spinner} from 'amis-ui';
+import {FormItem, Icon} from 'prismui-framework';
+import {Input, PickerContainer, Spinner} from 'prismui-ui';
 
 import {getEnv} from 'mobx-state-tree';
-import {normalizeApi, isEffectiveApi, isApiOutdated} from 'amis-core';
+import {normalizeApi, isEffectiveApi, isApiOutdated} from 'prismui-core';
 
 import {
   isObject,
@@ -15,12 +15,12 @@ import {
   tipedLabel,
   anyChanged,
   getSchemaTpl
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
-import type {SchemaObject, SchemaApi} from 'amis';
-import type {Api, AMISButtonSchema} from 'amis';
-import type {AMISSchemaCollection, FormControlProps} from 'amis-core';
-import type {ActionSchema} from 'amis';
+import type {SchemaObject, SchemaApi} from 'prismui-framework';
+import type {Api, AMISButtonSchema} from 'prismui-framework';
+import type {AMISSchemaCollection, FormControlProps} from 'prismui-core';
+import type {ActionSchema} from 'prismui-framework';
 import debounce from 'lodash/debounce';
 
 export type ApiObject = Api & {

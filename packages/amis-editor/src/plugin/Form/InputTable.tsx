@@ -15,10 +15,10 @@ import {
   EditorNodeType,
   EditorManager,
   RAW_TYPE_MAP
-} from 'amis-editor-core';
-import {someTree} from 'amis-core';
-import type {SchemaType} from 'amis';
-import {isObject} from 'amis';
+} from 'prismui-editor-core';
+import {someTree} from 'prismui-core';
+import type {SchemaType} from 'prismui-framework';
+import {isObject} from 'prismui-framework';
 import set from 'lodash/set';
 import {DSBuilderManager} from '../../builder/DSBuilderManager';
 import {ValidatorTag} from '../../validator';

@@ -4,13 +4,13 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {FormItem, Switch, Option} from 'amis';
+import {FormItem, Switch, Option} from 'prismui-framework';
 
-import {autobind, getSchemaTpl} from 'amis-editor-core';
+import {autobind, getSchemaTpl} from 'prismui-editor-core';
 
-import type {FormControlProps} from 'amis-core';
-import type {SchemaCollection} from 'amis';
-import type {FormSchema} from 'amis/lib/Schema';
+import type {FormControlProps} from 'prismui-core';
+import type {SchemaCollection} from 'prismui-framework';
+import type {FormSchema} from 'prismui-framework/lib/Schema';
 
 export interface StatusControlProps extends FormControlProps {
   name: string;

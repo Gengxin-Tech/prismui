@@ -6,7 +6,7 @@ import {
   FormItem,
   FormBaseControlWithoutSize,
   AMISButtonSchema
-} from 'amis-core';
+} from 'prismui-core';
 
 /**
  * Button Toolar 渲染器。

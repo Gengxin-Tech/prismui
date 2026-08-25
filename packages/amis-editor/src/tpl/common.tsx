@@ -6,17 +6,17 @@ import {
   tipedLabel,
   getI18nEnabled,
   EditorManager
-} from 'amis-editor-core';
-import {render, type SchemaObject} from 'amis';
+} from 'prismui-editor-core';
+import {render, type SchemaObject} from 'prismui-framework';
 import flatten from 'lodash/flatten';
 import {InputComponentName} from '../component/InputComponentName';
 import {FormulaDateType} from '../renderer/FormulaControl';
-import type {VariableItem} from 'amis-ui/lib/components/formula/CodeEditor';
+import type {VariableItem} from 'prismui-ui/lib/components/formula/CodeEditor';
 import reduce from 'lodash/reduce';
 import map from 'lodash/map';
 import omit from 'lodash/omit';
 import keys from 'lodash/keys';
-import type {Schema} from 'amis';
+import type {Schema} from 'prismui-framework';
 
 import type {DSField} from '../builder';
 import OptionAutoFill from '../component/OptionAutoFill';
@@ -75,7 +75,7 @@ setSchemaTpl('formItemName', {
     onBulkChange(field.resolveEditSchema?.() || {label: field.label});
   }
   // validations: {
-  //     matchRegexp: /^[a-z\$][a-z0-0\-_]*$/i
+  //     matchRegexp: /^[a-z\$][a-z0-0-_]*$/i
   // },
   // validationErrors: {
   //     "matchRegexp": "请输入合法的变量名"

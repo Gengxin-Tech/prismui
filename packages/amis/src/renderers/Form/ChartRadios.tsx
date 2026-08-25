@@ -3,11 +3,11 @@ import {
   OptionsControl,
   OptionsControlProps,
   FormOptionsControl
-} from 'amis-core';
-import {autobind} from 'amis-core';
+} from 'prismui-core';
+import {autobind} from 'prismui-core';
 import {FormOptionsSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
-import {AMISFormItemWithOptions} from 'amis-core';
+import {AMISFormItemWithOptions} from 'prismui-core';
 
 /**
  * 图表 Radio 单选框。

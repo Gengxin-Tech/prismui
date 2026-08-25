@@ -1,4 +1,4 @@
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {TextControlPlugin} from './InputText';
 
 export class PasswordControlPlugin extends TextControlPlugin {

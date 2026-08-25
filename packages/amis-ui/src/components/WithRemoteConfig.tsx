@@ -13,12 +13,12 @@ import {
   isEffectiveApi,
   normalizeApi,
   normalizeApiResponseData
-} from 'amis-core';
-import type {RendererEnv} from 'amis-core';
-import {isPureVariable, resolveVariableAndFilter, tokenize} from 'amis-core';
+} from 'prismui-core';
+import type {RendererEnv} from 'prismui-core';
+import {isPureVariable, resolveVariableAndFilter, tokenize} from 'prismui-core';
 import {reaction, comparer} from 'mobx';
-import {createObject, findTreeIndex, isObject} from 'amis-core';
-import {Api, ApiObject, Payload} from 'amis-core';
+import {createObject, findTreeIndex, isObject} from 'prismui-core';
+import {Api, ApiObject, Payload} from 'prismui-core';
 
 import {withStore} from './WithStore';
 

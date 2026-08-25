@@ -1,4 +1,4 @@
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {FlexPluginBase, defaultFlexColumnSchema} from './FlexPluginBase';
 
 export default class Layout_fixed_top extends FlexPluginBase {

@@ -6,8 +6,8 @@ import {
   NotFound,
   Spinner,
   SpinnerExtraProps
-} from 'amis-ui';
-import {Layout} from 'amis-ui';
+} from 'prismui-ui';
+import {Layout} from 'prismui-ui';
 import {
   Renderer,
   RendererProps,
@@ -15,14 +15,14 @@ import {
   filter,
   replaceText,
   AMISSchemaBase
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema, SchemaApi, AMISClassName} from '../Schema';
-import {IScopedContext, ScopedContext} from 'amis-core';
-import {AppStore, IAppStore} from 'amis-core';
-import {isApiOutdated, isEffectiveApi} from 'amis-core';
-import {autobind} from 'amis-core';
-import type {AMISApi, AMISSchemaCollection} from 'amis-core';
-import {AMISDefinitions} from 'amis-core';
+import {IScopedContext, ScopedContext} from 'prismui-core';
+import {AppStore, IAppStore} from 'prismui-core';
+import {isApiOutdated, isEffectiveApi} from 'prismui-core';
+import {autobind} from 'prismui-core';
+import type {AMISApi, AMISSchemaCollection} from 'prismui-core';
+import {AMISDefinitions} from 'prismui-core';
 
 export interface AMISAppPage extends SpinnerExtraProps {
   /**

@@ -5,7 +5,7 @@ import {
   LocaleProps,
   themeable,
   ThemeProps
-} from 'amis-core';
+} from 'prismui-core';
 import InputJSONSchemaItem from './Item';
 import {FormulaPickerProps} from '../formula/Picker';
 

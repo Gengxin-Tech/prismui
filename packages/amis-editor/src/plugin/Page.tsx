@@ -1,22 +1,22 @@
-import {ContainerWrapper, JSONPipeOut} from 'amis-editor-core';
-import {registerEditorPlugin} from 'amis-editor-core';
+import {ContainerWrapper, JSONPipeOut} from 'prismui-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
   getSchemaTpl,
   defaultValue
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   getEventControlConfig,
   getActionCommonProps
 } from '../renderer/event-control/helper';
-import {RendererPluginAction, RendererPluginEvent} from 'amis-editor-core';
-import type {SchemaObject} from 'amis';
-import {tipedLabel} from 'amis-editor-core';
-import {jsonToJsonSchema, EditorNodeType} from 'amis-editor-core';
+import {RendererPluginAction, RendererPluginEvent} from 'prismui-editor-core';
+import type {SchemaObject} from 'prismui-framework';
+import {tipedLabel} from 'prismui-editor-core';
+import {jsonToJsonSchema, EditorNodeType} from 'prismui-editor-core';
 import omit from 'lodash/omit';
 import {generateId} from '../util';
-import {InlineEditableElement} from 'amis-editor-core';
+import {InlineEditableElement} from 'prismui-editor-core';
 
 export class PagePlugin extends BasePlugin {
   static id = 'PagePlugin';

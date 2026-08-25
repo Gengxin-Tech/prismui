@@ -1,4 +1,4 @@
-import {RendererProps} from 'amis-core';
+import {RendererProps} from 'prismui-core';
 import React, {useEffect, useState} from 'react';
 
 interface InputComponentNameProps extends RendererProps {

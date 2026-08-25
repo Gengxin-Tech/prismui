@@ -11,7 +11,7 @@ import {
   PopOverContainer,
   Tree,
   Button
-} from 'amis';
+} from 'prismui-framework';
 import cloneDeep from 'lodash/cloneDeep';
 import groupBy from 'lodash/groupBy';
 import {
@@ -23,7 +23,7 @@ import {
   findTree,
   getRendererByName,
   guid
-} from 'amis-core';
+} from 'prismui-core';
 import ActionDialog from './action-config-dialog';
 import {
   getEventDesc,
@@ -53,12 +53,12 @@ import {
   RendererPluginEvent,
   SubRendererPluginAction,
   IGlobalEvent
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 export * from './helper';
-import {i18n as _i18n} from 'i18n-runtime';
+import {i18n as _i18n} from 'prismui-i18n-runtime';
 import {reaction} from 'mobx';
-import {updateComponentContext} from 'amis-editor-core';
-import type {VariableItem} from 'amis-ui';
+import {updateComponentContext} from 'prismui-editor-core';
+import type {VariableItem} from 'prismui-ui';
 
 interface EventControlProps extends FormControlProps {
   manager: EditorManager;

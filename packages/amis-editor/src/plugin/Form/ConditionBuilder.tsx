@@ -1,4 +1,4 @@
-import {getI18nEnabled, registerEditorPlugin} from 'amis-editor-core';
+import {getI18nEnabled, registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -7,14 +7,14 @@ import {
   RendererEventContext,
   ScaffoldForm,
   SubRendererInfo
-} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
 import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
 import defaultConfig, {
   OperationMap
-} from 'amis-ui/lib/components/condition-builder/config';
+} from 'prismui-ui/lib/components/condition-builder/config';
 import {generateId} from '../../util';
 
 export class ConditionBilderPlugin extends BasePlugin {

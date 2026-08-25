@@ -26,7 +26,7 @@ const expectedFiles = sdkContract.expectedFiles;
 
 if (!fs.existsSync(sdkDir)) {
   fail(
-    `SDK directory does not exist: ${sdkDir}. Run \`npm run build --workspace amis\` first.`
+    `SDK directory does not exist: ${sdkDir}. Run \`npm run build --workspace prismui\` first.`
   );
   reportAndExit();
 }

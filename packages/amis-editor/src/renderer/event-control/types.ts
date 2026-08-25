@@ -1,5 +1,5 @@
-import {ListenerAction} from 'amis-core';
-import {RendererPluginAction} from 'amis-editor-core';
+import {ListenerAction} from 'prismui-core';
+import {RendererPluginAction} from 'prismui-editor-core';
 
 export interface ActionConfig extends ListenerAction {
   [propName: string]: any;

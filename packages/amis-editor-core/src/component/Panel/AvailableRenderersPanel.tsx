@@ -1,6 +1,6 @@
 import {observer} from 'mobx-react';
 import React from 'react';
-import {Tab, Tabs} from 'amis';
+import {Tab, Tabs} from 'prismui-framework';
 import RenderersPanel from './RenderersPanel';
 import {PanelProps} from '../../plugin';
 import {autobind} from '../../util';

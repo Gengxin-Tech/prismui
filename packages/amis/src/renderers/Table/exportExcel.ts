@@ -8,9 +8,9 @@ import {
   arraySlice,
   isObject,
   AMISSchema
-} from 'amis-core';
+} from 'prismui-core';
 import './ColumnToggler';
-import {TableStore} from 'amis-core';
+import {TableStore} from 'prismui-core';
 import {saveAs} from 'file-saver';
 import {
   getVariable,
@@ -18,10 +18,10 @@ import {
   decodeEntity,
   flattenTree,
   createObject
-} from 'amis-core';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+} from 'prismui-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 import {BaseSchema} from '../../Schema';
-import {toDataURL, getImageDimensions} from 'amis-core';
+import {toDataURL, getImageDimensions} from 'prismui-core';
 import memoize from 'lodash/memoize';
 import {getSnapshot} from 'mobx-state-tree';
 import moment from 'moment';
@@ -29,7 +29,7 @@ import type {TableProps, ExportExcelToolbar} from './index';
 
 const loadDb = () => {
   // @ts-ignore
-  return import('amis-ui/lib/components/CityDB');
+  return import('prismui-ui/lib/components/CityDB');
 };
 
 /**

@@ -1,9 +1,9 @@
 import React from 'react';
-import {FormItem, Button, render as amisRender} from 'amis';
-import {autobind, getI18nEnabled} from 'amis-editor-core';
+import {FormItem, Button, render as amisRender} from 'prismui-framework';
+import {autobind, getI18nEnabled} from 'prismui-editor-core';
 import uniqBy from 'lodash/uniqBy';
 
-import type {FormControlProps} from 'amis-core';
+import type {FormControlProps} from 'prismui-core';
 
 interface IOption {
   label: string;

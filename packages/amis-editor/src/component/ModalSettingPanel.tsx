@@ -3,7 +3,7 @@ import {
   EditorStoreType,
   SchemaFrom,
   getSchemaTpl
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {observer} from 'mobx-react';
 import React from 'react';
 

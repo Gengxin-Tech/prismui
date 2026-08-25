@@ -9,11 +9,11 @@ import {
   AMISIcon,
   AMISLegacyActionSchema,
   AMISButtonSchema
-} from 'amis-core';
-import {Alert2 as Alert} from 'amis-ui';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+} from 'prismui-core';
+import {Alert2 as Alert} from 'prismui-ui';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 
-import type {AlertProps} from 'amis-ui/lib/components/Alert2';
+import type {AlertProps} from 'prismui-ui/lib/components/Alert2';
 
 /**
  * 信息提示组件，用于展示通知、警告或成功/失败消息。支持标题、图标、操作按钮。

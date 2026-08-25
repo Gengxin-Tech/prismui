@@ -7,7 +7,7 @@ import {
   RendererInfoResolveEventContext,
   getSchemaTpl,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 export class ColumnToggler extends BasePlugin {
   static id = 'ColumnToggler';

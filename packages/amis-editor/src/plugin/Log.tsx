@@ -1,9 +1,9 @@
 /**
  * @file 日志组件
  */
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {getSchemaTpl, tipedLabel} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {getSchemaTpl, tipedLabel} from 'prismui-editor-core';
 
 export class LogPlugin extends BasePlugin {
   static id = 'LogPlugin';

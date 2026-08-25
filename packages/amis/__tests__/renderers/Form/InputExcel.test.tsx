@@ -2,7 +2,7 @@ import React from 'react';
 import {render, fireEvent, waitFor} from '@testing-library/react';
 import {render as amisRender} from '../../../src';
 import {makeEnv} from '../../helper';
-import type {RenderOptions} from 'amis-core';
+import type {RenderOptions} from 'prismui-core';
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {

@@ -2,12 +2,12 @@
  * @file 用来展示面包屑导航
  */
 import React from 'react';
-import {Renderer, RendererProps} from 'amis-core';
+import {Renderer, RendererProps} from 'prismui-core';
 import {BaseSchema, SchemaIcon, SchemaUrlPath} from '../Schema';
-import {filter, BaseSchemaWithoutType} from 'amis-core';
-import {resolveVariableAndFilter} from 'amis-core';
-import {Breadcrumb} from 'amis-ui';
-import type {AMISClassName, AMISSchemaBase, TestIdBuilder} from 'amis-core';
+import {filter, BaseSchemaWithoutType} from 'prismui-core';
+import {resolveVariableAndFilter} from 'prismui-core';
+import {Breadcrumb} from 'prismui-ui';
+import type {AMISClassName, AMISSchemaBase, TestIdBuilder} from 'prismui-core';
 
 export interface BreadcrumbBaseItemSchema extends AMISSchemaBase {
   /**

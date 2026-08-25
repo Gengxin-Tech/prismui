@@ -5,12 +5,12 @@
  */
 
 import React from 'react';
-import {ThemeProps, themeable} from 'amis-core';
+import {ThemeProps, themeable} from 'prismui-core';
 
-import {autobind} from 'amis-core';
-import {uncontrollable} from 'amis-core';
+import {autobind} from 'prismui-core';
+import {uncontrollable} from 'prismui-core';
 import find from 'lodash/find';
-import type {Schema} from 'amis-core';
+import type {Schema} from 'prismui-core';
 
 export interface AnchorNavSectionProps extends ThemeProps {
   title?: string; // 标题

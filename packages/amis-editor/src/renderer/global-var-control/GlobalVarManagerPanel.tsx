@@ -1,9 +1,9 @@
 import React from 'react';
-import {GlobalVariableItem, noop, guid} from 'amis-core';
-import {PanelProps, SchemaForm, EditorManager} from 'amis-editor-core';
+import {GlobalVariableItem, noop, guid} from 'prismui-core';
+import {PanelProps, SchemaForm, EditorManager} from 'prismui-editor-core';
 import {observer} from 'mobx-react';
-import {Alert2, Button, ConfirmBox, LazyComponent, Spinner} from 'amis-ui';
-import {confirm} from 'amis';
+import {Alert2, Button, ConfirmBox, LazyComponent, Spinner} from 'prismui-ui';
+import {confirm} from 'prismui-framework';
 import {Icon} from '../../icons/index';
 
 type PanelComponentProps = {

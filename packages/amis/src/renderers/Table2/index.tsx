@@ -34,8 +34,8 @@ import {
   getPropValue,
   CustomStyle,
   setThemeClassName
-} from 'amis-core';
-import {Icon, Table, BadgeObject, SpinnerExtraProps} from 'amis-ui';
+} from 'prismui-core';
+import {Icon, Table, BadgeObject, SpinnerExtraProps} from 'prismui-ui';
 import type {
   SortProps,
   ColumnProps,
@@ -44,7 +44,7 @@ import type {
   RowSelectionProps,
   ExpandableProps,
   AutoFillHeightObject
-} from 'amis-ui/lib/components/table/index';
+} from 'prismui-ui/lib/components/table/index';
 import {
   BaseSchema,
   SchemaObject,
@@ -58,7 +58,11 @@ import './TableCell';
 import './ColumnToggler';
 import {SchemaQuickEdit} from '../QuickEdit';
 
-import type {AMISButtonSchema, AMISSchemaBase, TestIdBuilder} from 'amis-core';
+import type {
+  AMISButtonSchema,
+  AMISSchemaBase,
+  TestIdBuilder
+} from 'prismui-core';
 
 /**
  * Table 表格2渲染器。

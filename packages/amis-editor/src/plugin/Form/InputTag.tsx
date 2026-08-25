@@ -8,10 +8,10 @@ import {
   registerEditorPlugin,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {formItemControl} from '../../component/BaseControl';
 import {resolveOptionEventDataSchame, resolveOptionType} from '../../util';
-import type {Schema} from 'amis';
+import type {Schema} from 'prismui-framework';
 import {getActionCommonProps} from '../../renderer/event-control/helper';
 
 export class TagControlPlugin extends BasePlugin {

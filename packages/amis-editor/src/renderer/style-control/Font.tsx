@@ -6,11 +6,11 @@
 import React from 'react';
 import pick from 'lodash/pick';
 import mapValues from 'lodash/mapValues';
-import {getSchemaTpl} from 'amis-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 import {fontFamilyList} from './font-family';
-import {string2CSSUnit, isObject} from 'amis-editor-core';
-import {FormItem} from 'amis';
-import type {FormControlProps} from 'amis-core';
+import {string2CSSUnit, isObject} from 'prismui-editor-core';
+import {FormItem} from 'prismui-framework';
+import type {FormControlProps} from 'prismui-core';
 import type {PlainObject} from './types';
 
 export interface FontProps extends FormControlProps {

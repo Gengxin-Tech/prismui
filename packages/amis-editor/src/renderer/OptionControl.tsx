@@ -15,17 +15,17 @@ import {
   Icon,
   RendererProps,
   normalizeApi
-} from 'amis';
-import {value2array} from 'amis-ui/lib/components/Select';
+} from 'prismui-framework';
+import {value2array} from 'prismui-ui/lib/components/Select';
 
-import {autobind, getI18nEnabled} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
-import {tipedLabel} from 'amis-editor-core';
+import {autobind, getI18nEnabled} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
+import {tipedLabel} from 'prismui-editor-core';
 
-import type {Option} from 'amis';
-import {createObject, FormControlProps} from 'amis-core';
-import type {OptionValue} from 'amis-core';
-import type {SchemaApi} from 'amis';
+import type {Option} from 'prismui-framework';
+import {createObject, FormControlProps} from 'prismui-core';
+import type {OptionValue} from 'prismui-core';
+import type {SchemaApi} from 'prismui-framework';
 import debounce from 'lodash/debounce';
 import {valueType} from './ValueFormatControl';
 import {getOwnValue} from '../util';

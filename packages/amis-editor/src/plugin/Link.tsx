@@ -3,7 +3,7 @@ import {
   BasePlugin,
   getSchemaTpl,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 export class LinkPlugin extends BasePlugin {
   static id = 'LinkPlugin';

@@ -1,4 +1,4 @@
-import {FormControlProps, FormItem} from 'amis-core';
+import {FormControlProps, FormItem} from 'prismui-core';
 import React from 'react';
 import cx from 'classnames';
 

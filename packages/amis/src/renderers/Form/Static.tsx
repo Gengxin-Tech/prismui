@@ -4,13 +4,13 @@ import {
   FormControlProps,
   FormBaseControl,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 import {TableCell} from '../Table';
 import PopOver, {SchemaPopOver} from '../PopOver';
 import QuickEdit, {SchemaQuickEdit} from '../QuickEdit';
 
 import Copyable, {SchemaCopyable} from '../Copyable';
-import {extendObject, ucFirst} from 'amis-core';
+import {extendObject, ucFirst} from 'prismui-core';
 import omit from 'lodash/omit';
 import {
   FormBaseControlSchema,
@@ -162,7 +162,7 @@ export default class StaticControl extends React.Component<StaticProps, any> {
 }
 
 @FormItem({
-  test: /(^|\/)static(\-[^\/]+)?$/,
+  test: /(^|\/)static(-[^\/]+)?$/,
   weight: -90,
   strictMode: false,
   sizeMutable: false,

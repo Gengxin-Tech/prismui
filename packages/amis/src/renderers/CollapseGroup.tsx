@@ -10,9 +10,9 @@ import {
   CustomStyle,
   AMISSchemaCollection,
   AMISSchemaBase
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema, SchemaObject} from '../Schema';
-import {CollapseGroup} from 'amis-ui';
+import {CollapseGroup} from 'prismui-ui';
 import cx from 'classnames';
 
 /**

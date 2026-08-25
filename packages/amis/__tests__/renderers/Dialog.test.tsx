@@ -10,7 +10,7 @@ import {
 import '../../src';
 import {clearStoresCache, render as amisRender} from '../../src';
 import {makeEnv as makeEnvRaw, replaceReactAriaIds, wait} from '../helper';
-import {Drawer, Modal} from 'amis-ui';
+import {Drawer, Modal} from 'prismui-ui';
 import rows from '../mockData/rows';
 import type {RenderOptions} from '../../src';
 

@@ -16,11 +16,11 @@ import {
   ScopedContext,
   getGlobalOptions,
   AMISSchemaBase
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema} from '../Schema';
 
 export const PdfView = React.lazy(
-  () => import('amis-ui/lib/components/PdfViewer')
+  () => import('prismui-ui/lib/components/PdfViewer')
 );
 
 /**

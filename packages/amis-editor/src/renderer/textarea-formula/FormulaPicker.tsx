@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import {Modal, Button} from 'amis';
-import {FormControlProps, resolveVariableAndFilter} from 'amis-core';
+import {Modal, Button} from 'prismui-framework';
+import {FormControlProps, resolveVariableAndFilter} from 'prismui-core';
 import cx from 'classnames';
-import {FormulaEditor} from 'amis-ui';
+import {FormulaEditor} from 'prismui-ui';
 
 export interface FormulaPickerProps extends FormControlProps {
   onConfirm: (data: string | undefined) => void;

@@ -11,18 +11,18 @@ import {
   resolveVariableAndFilter,
   isPureVariable,
   AMISSchemaBase
-} from 'amis-core';
-import {filter} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
-import {autobind, getPropValue} from 'amis-core';
-import {Icon} from 'amis-ui';
-import {LocaleProps, localeable} from 'amis-core';
+} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import {autobind, getPropValue} from 'prismui-core';
+import {Icon} from 'prismui-ui';
+import {LocaleProps, localeable} from 'prismui-core';
 import {BaseSchema, AMISClassName, SchemaTpl, SchemaUrlPath} from '../Schema';
-import {handleAction} from 'amis-core';
+import {handleAction} from 'prismui-core';
 import type {
   ImageAction,
   ImageActionKey
-} from 'amis-ui/lib/components/ImageGallery';
+} from 'prismui-ui/lib/components/ImageGallery';
 
 export interface ImageToolbarAction {
   /**

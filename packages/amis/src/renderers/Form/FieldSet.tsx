@@ -1,10 +1,10 @@
 import React from 'react';
-import {Renderer, RendererProps} from 'amis-core';
+import {Renderer, RendererProps} from 'prismui-core';
 import {SchemaTpl} from '../../Schema';
 import Collapse, {AMISCollapseSchemaBase} from '../Collapse';
-import {FormBaseControlWithoutSize, BaseSchemaWithoutType} from 'amis-core';
-import type {FormHorizontal, AMISSchemaCollection} from 'amis-core';
-import {AMISFormItemBase} from 'amis-core';
+import {FormBaseControlWithoutSize, BaseSchemaWithoutType} from 'prismui-core';
+import type {FormHorizontal, AMISSchemaCollection} from 'prismui-core';
+import {AMISFormItemBase} from 'prismui-core';
 
 /**
  * FieldSet 表单项集合

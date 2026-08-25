@@ -4,10 +4,10 @@
 import React from 'react';
 import debounce from 'lodash/debounce';
 
-import {ThemeProps, themeable} from 'amis-core';
+import {ThemeProps, themeable} from 'prismui-core';
 import {Icon} from './icons';
-import {autobind} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
+import {autobind} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import InputBox from './InputBox';
 
 export interface TransferSearchProps extends ThemeProps, LocaleProps {

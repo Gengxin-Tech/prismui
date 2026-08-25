@@ -5,11 +5,11 @@
 import React from 'react';
 
 import {BaseSelection, BaseSelectionProps} from './Selection';
-import {themeable} from 'amis-core';
+import {themeable} from 'prismui-core';
 import {Option, Options} from './Select';
-import {resolveVariable} from 'amis-core';
-import {localeable} from 'amis-core';
-import {autobind} from 'amis-core';
+import {resolveVariable} from 'prismui-core';
+import {localeable} from 'prismui-core';
+import {autobind} from 'prismui-core';
 import TransferSearch from './TransferSearch';
 
 import {CloseIcon} from './icons';

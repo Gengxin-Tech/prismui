@@ -4,9 +4,9 @@
  */
 
 import React from 'react';
-import {themeable} from 'amis-core';
+import {themeable} from 'prismui-core';
 import {Icon} from './icons';
-import {ThemeProps} from 'amis-core';
+import {ThemeProps} from 'prismui-core';
 import PopOverContainer from './PopOverContainer';
 
 /**

@@ -12,8 +12,8 @@ import {
   setThemeClassName,
   CustomStyle,
   AMISSchemaBase
-} from 'amis-core';
-import {Collapse as BasicCollapse, Icon} from 'amis-ui';
+} from 'prismui-core';
+import {Collapse as BasicCollapse, Icon} from 'prismui-ui';
 import {BaseSchema, SchemaTpl, SchemaObject} from '../Schema';
 import classNames from 'classnames';
 

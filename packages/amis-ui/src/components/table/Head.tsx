@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import {ThemeProps, noop} from 'amis-core';
+import {ThemeProps, noop} from 'prismui-core';
 import {
   getBuildColumns,
   getAllSelectableRows,
@@ -24,7 +24,7 @@ import Cell from './Cell';
 import HeadCellSort from './HeadCellSort';
 import HeadCellFilter from './HeadCellFilter';
 import HeadCellSelect from './HeadCellSelect';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface Props extends ThemeProps {
   draggable: boolean;

@@ -22,11 +22,11 @@ import {
   resolveOverlayContainer,
   themeable,
   ThemeProps
-} from 'amis-core';
-import type {ThemeScope} from 'amis-core';
+} from 'prismui-core';
+import type {ThemeScope} from 'prismui-core';
 import {Icon} from './icons';
-import {LocaleProps, localeable} from 'amis-core';
-import {autobind, getScrollbarWidth, setReactRef} from 'amis-core';
+import {LocaleProps, localeable} from 'prismui-core';
+import {autobind, getScrollbarWidth, setReactRef} from 'prismui-core';
 import {
   DraggableCore,
   type DraggableBounds,

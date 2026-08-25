@@ -50,8 +50,12 @@ function resolveSdkPlaceholderPath(root, placeholderFile, url) {
     return require.resolve(url);
   }
 
-  if (url.startsWith('amis-ui/')) {
-    return path.join(root, 'packages', url);
+  if (url.startsWith('prismui-ui/')) {
+    return path.join(
+      root,
+      'packages/amis-ui',
+      url.slice('prismui-ui/'.length)
+    );
   }
 
   if (url.startsWith('./') || url.startsWith('../')) {

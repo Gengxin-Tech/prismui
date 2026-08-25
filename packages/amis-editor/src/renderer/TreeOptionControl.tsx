@@ -16,14 +16,14 @@ import {
   Modal,
   toast,
   render as amisRender
-} from 'amis';
+} from 'prismui-framework';
 
-import {autobind, getI18nEnabled} from 'amis-editor-core';
-import {getSchemaTpl, tipedLabel} from 'amis-editor-core';
+import {autobind, getI18nEnabled} from 'prismui-editor-core';
+import {getSchemaTpl, tipedLabel} from 'prismui-editor-core';
 
-import type {Option} from 'amis';
-import type {FormControlProps} from 'amis-core';
-import type {SchemaApi} from 'amis';
+import type {Option} from 'prismui-framework';
+import type {FormControlProps} from 'prismui-core';
+import type {SchemaApi} from 'prismui-framework';
 
 export type OptionControlItem = Option & {checked?: boolean; _key?: string};
 

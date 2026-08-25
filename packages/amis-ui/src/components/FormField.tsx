@@ -2,7 +2,7 @@
  * @file 给组件用的，渲染器里面不要用这个
  */
 import React from 'react';
-import {localeable, themeable, ThemeProps, LocaleProps} from 'amis-core';
+import {localeable, themeable, ThemeProps, LocaleProps} from 'prismui-core';
 import {
   ControllerProps as ReactHookFormControllerProps,
   Controller as ReactHookFormController,

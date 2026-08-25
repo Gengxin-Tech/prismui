@@ -1,6 +1,6 @@
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 import flatten from 'lodash/flatten';
 export class JsonPlugin extends BasePlugin {
   static id = 'JsonPlugin';

@@ -4,12 +4,12 @@
  */
 
 import React from 'react';
-import {render, Renderer} from 'amis';
+import {render, Renderer} from 'prismui-framework';
 import {Icon as ThemeIcon} from '../icons/index';
 import cx from 'classnames';
-import type {FormControlProps} from 'amis-core';
+import type {FormControlProps} from 'prismui-core';
 import {pick} from 'lodash';
-import {TooltipWrapper} from 'amis-ui';
+import {TooltipWrapper} from 'prismui-ui';
 
 interface ThemeWrapperProps {
   hasSenior?: boolean;

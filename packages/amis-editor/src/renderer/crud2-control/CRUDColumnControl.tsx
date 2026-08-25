@@ -5,14 +5,22 @@
 
 import React from 'react';
 import Sortable from 'sortablejs';
-import {FormItem, Button, Icon, toast, Tag, Spinner, autobind} from 'amis';
-import {TooltipWrapper} from 'amis-ui';
-import {JSONPipeIn} from 'amis-editor-core';
+import {
+  FormItem,
+  Button,
+  Icon,
+  toast,
+  Tag,
+  Spinner,
+  autobind
+} from 'prismui-framework';
+import {TooltipWrapper} from 'prismui-ui';
+import {JSONPipeIn} from 'prismui-editor-core';
 import AddColumnModal from './AddColumnModal';
 
-import type {FormControlProps} from 'amis';
+import type {FormControlProps} from 'prismui-framework';
 import type {SortableEvent} from 'sortablejs';
-import type {ColumnSchema} from 'amis/lib/renderers/Table2';
+import type {ColumnSchema} from 'prismui-framework/lib/renderers/Table2';
 import type {DSBuilderInterface} from '../../builder';
 
 interface Option {

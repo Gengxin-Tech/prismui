@@ -3,7 +3,7 @@ import {
   getSchemaTpl,
   defaultValue,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import isNumber from 'lodash/isNumber';
 import isString from 'lodash/isString';
 import compact from 'lodash/compact';

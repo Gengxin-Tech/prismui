@@ -6,8 +6,8 @@
  */
 
 import React from 'react';
-import {FormItem} from 'amis';
-import type {FormControlProps} from 'amis';
+import {FormItem} from 'prismui-framework';
+import type {FormControlProps} from 'prismui-framework';
 
 export interface valueFormatControlProps extends FormControlProps {
   supportNumberType: boolean; // 是否支持数字类型，默认支持

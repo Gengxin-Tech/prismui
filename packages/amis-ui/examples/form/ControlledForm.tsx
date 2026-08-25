@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Combo, Form, Controller, InputBox} from 'amis-ui';
+import {Button, Combo, Form, Controller, InputBox} from 'prismui-ui';
 
 export default function ControlledFormExamples() {
   const [formValues, setFormValues] = React.useState<{

@@ -5,8 +5,8 @@ import {
   RendererPluginEvent,
   RendererPluginAction,
   getSchemaTpl
-} from 'amis-editor-core';
-import {type Schema} from 'amis-core';
+} from 'prismui-editor-core';
+import {type Schema} from 'prismui-core';
 import {
   getEventControlConfig,
   getActionCommonProps

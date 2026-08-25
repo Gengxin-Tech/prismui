@@ -4,12 +4,12 @@
 import React from 'react';
 import cx from 'classnames';
 import Sortable from 'sortablejs';
-import {FormItem, Icon} from 'amis';
+import {FormItem, Icon} from 'prismui-framework';
 
-import {FormControlProps, Option, optionValueCompare} from 'amis-core';
-import {BaseEventContext, getSchemaTpl} from 'amis-editor-core';
+import {FormControlProps, Option, optionValueCompare} from 'prismui-core';
+import {BaseEventContext, getSchemaTpl} from 'prismui-editor-core';
 
-import {autobind} from 'amis-editor-core';
+import {autobind} from 'prismui-editor-core';
 import {FormulaDateType} from './FormulaControl';
 
 const DefaultValue = [

@@ -11,7 +11,7 @@ import {
   BasePlugin,
   tipedLabel,
   diff
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   getEventControlConfig,
   getActionCommonProps

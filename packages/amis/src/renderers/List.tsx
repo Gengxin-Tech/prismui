@@ -7,8 +7,8 @@ import {
   getMatchedEventTargets,
   getPropValue,
   BaseSchemaWithoutType
-} from 'amis-core';
-import {Button, Spinner, Checkbox, Icon, SpinnerExtraProps} from 'amis-ui';
+} from 'prismui-core';
+import {Button, Spinner, Checkbox, Icon, SpinnerExtraProps} from 'prismui-ui';
 import {
   ListStore,
   IListStore,
@@ -32,7 +32,7 @@ import {
   noop,
   isClickOnInput,
   getStableClassSelector
-} from 'amis-core';
+} from 'prismui-core';
 
 import QuickEdit, {SchemaQuickEdit} from './QuickEdit';
 import PopOver, {SchemaPopOver} from './PopOver';
@@ -59,10 +59,10 @@ import type {
   AMISUrlPath,
   IItem,
   IScopedContext
-} from 'amis-core';
-import type {OnEventProps, AMISSchema, AMISPopOverBase} from 'amis-core';
+} from 'prismui-core';
+import type {OnEventProps, AMISSchema, AMISPopOverBase} from 'prismui-core';
 import find from 'lodash/find';
-import {AlphabetIndexer} from 'amis-ui';
+import {AlphabetIndexer} from 'prismui-ui';
 import {AMISQuickEdit} from './QuickEdit';
 
 /**

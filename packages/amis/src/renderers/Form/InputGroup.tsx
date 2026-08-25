@@ -9,9 +9,9 @@ import {
   anyChanged,
   AMISFormItem,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
-import {isMobile} from 'amis-core';
+import {isMobile} from 'prismui-core';
 
 /**
  * InputGroup

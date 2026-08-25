@@ -1,4 +1,4 @@
-import type {Schema, SchemaType} from 'amis';
+import type {Schema, SchemaType} from 'prismui-framework';
 import {
   registerEditorPlugin,
   getSchemaTpl,
@@ -6,14 +6,14 @@ import {
   tipedLabel,
   undefinedPipeOut,
   RAW_TYPE_MAP
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import type {
   EditorNodeType,
   RendererPluginAction,
   RendererPluginEvent,
   BaseEventContext,
   EditorManager
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 import {ValidatorTag} from '../../validator';
 import {

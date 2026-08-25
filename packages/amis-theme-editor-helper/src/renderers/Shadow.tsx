@@ -6,10 +6,10 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import cx from 'classnames';
-import {FormItem, PlainObject, render} from 'amis-core';
-import type {FormControlProps} from 'amis-core';
+import {FormItem, PlainObject, render} from 'prismui-core';
+import type {FormControlProps} from 'prismui-core';
 import type {ShadowData} from '../helper/declares';
-import {NumberInput, Overlay, PopOver, Select} from 'amis-ui';
+import {NumberInput, Overlay, PopOver, Select} from 'prismui-ui';
 import cloneDeep from 'lodash/cloneDeep';
 import find from 'lodash/find';
 import isEqual from 'lodash/isEqual';

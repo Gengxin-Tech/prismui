@@ -1,5 +1,5 @@
-import {Button} from 'amis';
-import {EditorNodeType, registerEditorPlugin} from 'amis-editor-core';
+import {Button} from 'prismui-framework';
+import {EditorNodeType, registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -9,10 +9,10 @@ import {
   ContextMenuItem,
   RendererEventContext,
   SubRendererInfo
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl, valuePipeOut} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl, valuePipeOut} from 'prismui-editor-core';
 import React from 'react';
-import {diff, JSONPipeOut} from 'amis-editor-core';
+import {diff, JSONPipeOut} from 'prismui-editor-core';
 import {generateId} from '../../util';
 
 export class ArrayControlPlugin extends BasePlugin {

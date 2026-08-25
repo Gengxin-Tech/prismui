@@ -10,26 +10,26 @@ import {
   RendererEvent,
   AMISSchema,
   AMISButtonSchema
-} from 'amis-core';
-import {Renderer, RendererProps} from 'amis-core';
-import {SchemaNode, Schema, ActionObject} from 'amis-core';
-import {Drawer as DrawerContainer, SpinnerExtraProps} from 'amis-ui';
+} from 'prismui-core';
+import {Renderer, RendererProps} from 'prismui-core';
+import {SchemaNode, Schema, ActionObject} from 'prismui-core';
+import {Drawer as DrawerContainer, SpinnerExtraProps} from 'prismui-ui';
 import {
   guid,
   isVisible,
   autobind,
   createObject,
   isObjectShallowModified
-} from 'amis-core';
+} from 'prismui-core';
 import {reaction} from 'mobx';
-import {IModalStore, ModalStore} from 'amis-core';
-import {filter} from 'amis-core';
-import {Spinner} from 'amis-ui';
-import {IServiceStore, CustomStyle} from 'amis-core';
+import {IModalStore, ModalStore} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {Spinner} from 'prismui-ui';
+import {IServiceStore, CustomStyle} from 'prismui-core';
 import {BaseSchema, AMISClassName, SchemaName} from '../Schema';
 import {ActionSchema} from './Action';
 import {isAlive} from 'mobx-state-tree';
-import {AMISDrawerSchemaBase, AMISSchemaCollection} from 'amis-core';
+import {AMISDrawerSchemaBase, AMISSchemaCollection} from 'prismui-core';
 
 /**
  * 抽屉组件，用于侧边弹窗展示内容。支持从左右两侧滑出、自定义内容等。

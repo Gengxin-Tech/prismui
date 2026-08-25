@@ -14,11 +14,11 @@ import {
 import uniq from 'lodash/uniq';
 import {RegionConfig, RendererInfo} from '../plugin';
 import {guid, JSONPipeIn} from '../util';
-import {filterSchema} from 'amis';
+import {filterSchema} from 'prismui-framework';
 import React from 'react';
 import {EditorStoreType} from './editor';
 import findIndex from 'lodash/findIndex';
-import type {RendererConfig} from 'amis-core';
+import type {RendererConfig} from 'prismui-core';
 
 export const EditorNode = types
   .model('EditorNode', {

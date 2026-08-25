@@ -4,9 +4,9 @@ import {
   Renderer,
   RendererProps,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {resolveVariable, resolveVariableAndFilter} from 'amis-core';
+import {resolveVariable, resolveVariableAndFilter} from 'prismui-core';
 import mapValues from 'lodash/mapValues';
 
 /**

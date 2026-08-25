@@ -1,8 +1,8 @@
 import React from 'react';
 import {EditorManager} from '../manager';
 import {EditorStoreType} from '../store/editor';
-import {render} from 'amis';
-import {createObject, RenderOptions} from 'amis-core';
+import {render} from 'prismui-framework';
+import {createObject, RenderOptions} from 'prismui-core';
 
 import {observer} from 'mobx-react';
 import Editor from './Editor';

@@ -1,13 +1,13 @@
-import {setReactRef, TestIdBuilder, ThemeProps, themeable} from 'amis-core';
+import {setReactRef, TestIdBuilder, ThemeProps, themeable} from 'prismui-core';
 import React from 'react';
 import omit from 'lodash/omit';
 import isInteger from 'lodash/isInteger';
 import {InputBoxProps} from './InputBox';
-import {uncontrollable} from 'amis-core';
+import {uncontrollable} from 'prismui-core';
 import {Icon} from './icons';
 import Input from './Input';
-import {autobind, ucFirst} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
+import {autobind, ucFirst} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import isPlainObject from 'lodash/isPlainObject';
 import TooltipWrapper, {TooltipObject} from './TooltipWrapper';
 import AutoFoldedList from './AutoFoldedList';

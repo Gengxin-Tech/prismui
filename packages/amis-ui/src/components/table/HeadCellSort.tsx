@@ -11,10 +11,10 @@ import {
   ClassNamesFn,
   LocaleProps,
   localeable
-} from 'amis-core';
+} from 'prismui-core';
 import {Icon} from '../icons';
 import {ColumnProps} from './index';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface Props extends ThemeProps, LocaleProps {
   column: ColumnProps;

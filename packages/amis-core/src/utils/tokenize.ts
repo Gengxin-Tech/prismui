@@ -1,4 +1,4 @@
-import {Evaluator, parse, evaluateForAsync} from 'amis-formula';
+import {Evaluator, parse, evaluateForAsync} from 'prismui-formula';
 
 const AST_CACHE: {[key: string]: any} = {};
 export function memoParse(str: string, options?: any) {

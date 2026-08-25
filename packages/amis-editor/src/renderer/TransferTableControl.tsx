@@ -3,14 +3,14 @@
  */
 
 import React from 'react';
-import {render as amisRender, FormItem} from 'amis';
-import type {SchemaApi} from 'amis';
-import {autobind, getSchemaTpl} from 'amis-editor-core';
+import {render as amisRender, FormItem} from 'prismui-framework';
+import type {SchemaApi} from 'prismui-framework';
+import {autobind, getSchemaTpl} from 'prismui-editor-core';
 import cx from 'classnames';
-import {tipedLabel} from 'amis-editor-core';
+import {tipedLabel} from 'prismui-editor-core';
 
-import type {FormControlProps} from 'amis-core';
-import type {Option} from 'amis';
+import type {FormControlProps} from 'prismui-core';
+import type {Option} from 'prismui-framework';
 
 interface OptionControlProps extends FormControlProps {
   className?: string;

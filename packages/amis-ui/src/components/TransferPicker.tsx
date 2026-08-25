@@ -1,12 +1,12 @@
-import {localeable} from 'amis-core';
-import {themeable} from 'amis-core';
+import {localeable} from 'prismui-core';
+import {themeable} from 'prismui-core';
 import Transfer, {TransferProps} from './Transfer';
-import {uncontrollable} from 'amis-core';
+import {uncontrollable} from 'prismui-core';
 import React from 'react';
 import ResultBox from './ResultBox';
 import {Icon} from './icons';
 import PickerContainer from './PickerContainer';
-import {autobind, mapTree} from 'amis-core';
+import {autobind, mapTree} from 'prismui-core';
 
 export interface TransferPickerProps extends Omit<TransferProps, 'itemRender'> {
   // 新的属性？

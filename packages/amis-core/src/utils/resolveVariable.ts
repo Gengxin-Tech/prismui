@@ -1,4 +1,4 @@
-import {Evaluator} from 'amis-formula';
+import {Evaluator} from 'prismui-formula';
 import {getVariable} from './getVariable';
 import {memoryParse} from './memoryParse';
 

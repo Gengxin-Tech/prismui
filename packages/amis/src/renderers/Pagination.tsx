@@ -8,10 +8,10 @@ import {
   isPureVariable,
   resolveEventData,
   resolveVariableAndFilter
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {Pagination as BasicPagination} from 'amis-ui';
-import type {MODE_TYPE} from 'amis-ui/lib/components/Pagination';
+import {Pagination as BasicPagination} from 'prismui-ui';
+import type {MODE_TYPE} from 'prismui-ui/lib/components/Pagination';
 
 /**
  * 分页组件，用于数据分页跳转。支持页码、页大小与快速跳转。

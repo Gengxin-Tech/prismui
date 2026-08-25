@@ -1,6 +1,6 @@
 import React from 'react';
-import {themeable, ThemeProps} from 'amis-core';
-import {autobind} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import {autobind} from 'prismui-core';
 import {Icon} from './icons';
 
 export interface LinkProps

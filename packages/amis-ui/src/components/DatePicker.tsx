@@ -15,19 +15,19 @@ import {
   filterDate,
   string2regExp,
   autobind
-} from 'amis-core';
+} from 'prismui-core';
 import PopUp from './PopUp';
-import {Overlay} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
+import {Overlay} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
 import Calendar from './calendar/Calendar';
-import {localeable, LocaleProps, TranslateFn} from 'amis-core';
-import {ucFirst} from 'amis-core';
+import {localeable, LocaleProps, TranslateFn} from 'prismui-core';
+import {ucFirst} from 'prismui-core';
 import CalendarMobile from './CalendarMobile';
 import Input from './Input';
 import Button from './Button';
 
 import type {Moment} from 'moment';
-import type {PlainObject, RendererEnv, TestIdBuilder} from 'amis-core';
+import type {PlainObject, RendererEnv, TestIdBuilder} from 'prismui-core';
 import type {ChangeEventViewMode, MutableUnitOfTime} from './calendar/Calendar';
 
 const availableShortcuts: {[propName: string]: any} = {
@@ -750,12 +750,12 @@ export class DatePicker extends React.Component<DateProps, DatePickerState> {
     if (value === '') {
       onChange('');
     } else {
-      // 将输入的格式转成正则匹配，比如 YYYY-MM-DD HH:mm:ss 改成 \d\d\d\d\-
+      // 将输入的格式转成正则匹配，比如 YYYY-MM-DD HH:mm:ss 改成 \d\d\d\d-
       // 只有匹配成功才更新
       const inputCheckRegex = new RegExp(
         (inputFormat || displayFormat)!
           .replace(/[ymdhs]/gi, '\\d')
-          .replace(/-/gi, '\\-')
+          .replace(/-/gi, '-')
       );
 
       if (inputCheckRegex.test(value)) {

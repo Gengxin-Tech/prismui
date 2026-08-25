@@ -17,7 +17,7 @@ import {
   createObject,
   TestIdBuilder,
   filter
-} from 'amis-core';
+} from 'prismui-core';
 
 import {getIcon, Icon} from '../icons';
 import {Badge} from '../Badge';

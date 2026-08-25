@@ -1,13 +1,13 @@
 import React from 'react';
-import {themeable, ClassNamesFn, ThemeProps} from 'amis-core';
-import {Overlay} from 'amis-core';
-import {PopOver} from 'amis-core';
+import {themeable, ClassNamesFn, ThemeProps} from 'prismui-core';
+import {Overlay} from 'prismui-core';
+import {PopOver} from 'prismui-core';
 import {Icon} from './icons';
-import {autobind} from 'amis-core';
+import {autobind} from 'prismui-core';
 import Alert2 from './Alert2';
 import BaiduMapPicker from './BaiduMapPicker';
 import GaodeMapPicker from './GaodeMapPicker';
-import {LocaleProps, localeable} from 'amis-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import PopUp from './PopUp';
 
 export interface LocationProps extends ThemeProps, LocaleProps {

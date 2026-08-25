@@ -5,19 +5,19 @@
 import React from 'react';
 import cx from 'classnames';
 import {reaction} from 'mobx';
-import {CodeMirrorEditor, FormulaEditor} from 'amis-ui';
-import {Icon, Button, FormItem, TooltipWrapper} from 'amis';
-import {autobind, FormControlProps} from 'amis-core';
-import {Overlay, PopOver, VariableList} from 'amis-ui';
-import {RootClose, isMobile} from 'amis-core';
+import {CodeMirrorEditor, FormulaEditor} from 'prismui-ui';
+import {Icon, Button, FormItem, TooltipWrapper} from 'prismui-framework';
+import {autobind, FormControlProps} from 'prismui-core';
+import {Overlay, PopOver, VariableList} from 'prismui-ui';
+import {RootClose, isMobile} from 'prismui-core';
 import {FormulaPlugin, editorFactory} from './textarea-formula/plugin';
 import {renderFormulaValue} from './FormulaControl';
 import FormulaPicker, {
   CustomFormulaPickerProps
 } from './textarea-formula/FormulaPicker';
-import {getVariables, getQuickVariables} from 'amis-editor-core';
+import {getVariables, getQuickVariables} from 'prismui-editor-core';
 
-import type {VariableItem, CodeMirror} from 'amis-ui';
+import type {VariableItem, CodeMirror} from 'prismui-ui';
 
 export interface TplFormulaControlProps extends FormControlProps {
   /**

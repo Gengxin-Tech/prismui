@@ -1,8 +1,8 @@
 import React, {StrictMode} from 'react';
 import get from 'lodash/get';
 import flattenDeep from 'lodash/flattenDeep';
-import {Button, Icon} from 'amis';
-import {dataMapping, getVariable, isObject} from 'amis-core';
+import {Button, Icon} from 'prismui-framework';
+import {dataMapping, getVariable, isObject} from 'prismui-core';
 import {
   BasePlugin,
   BasicRendererInfo,
@@ -15,7 +15,7 @@ import {
   getSchemaTpl,
   tipedLabel,
   BaseEventContext
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {remarkTpl} from '../component/BaseControl';
 
 import type {DSField} from '../builder';
@@ -674,10 +674,10 @@ export class TableCell2Plugin extends BasePlugin {
                     '开启此项，换行处理将在任意字母处断行，长英文单词或长英文字符会被切断，如url链接'
                   ),
                   pipeIn: (value: any) =>
-                    typeof value === 'string' && /\word\-break\b/.test(value),
+                    typeof value === 'string' && /\word-break\b/.test(value),
                   pipeOut: (value: any, originValue: any) =>
                     (value ? 'word-break ' : '') +
-                    (originValue || '').replace(/\bword\-break\b/g, '').trim()
+                    (originValue || '').replace(/\bword-break\b/g, '').trim()
                 }),
                 {
                   type: 'select',

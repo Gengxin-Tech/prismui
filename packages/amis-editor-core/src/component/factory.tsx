@@ -1,4 +1,4 @@
-import {render, RendererProps} from 'amis';
+import {render, RendererProps} from 'prismui-framework';
 import {isAlive} from 'mobx-state-tree';
 import React from 'react';
 import {NodeWrapper} from './NodeWrapper';
@@ -17,12 +17,12 @@ import {
 import {EditorManager} from '../manager';
 import flatten from 'lodash/flatten';
 import {autobind, JSONGetById, JSONUpdate, appTranslate} from '../util';
-import {ErrorBoundary, LazyComponent} from 'amis-core';
+import {ErrorBoundary, LazyComponent} from 'prismui-core';
 import {CommonConfigWrapper} from './CommonConfigWrapper';
-import type {Schema} from 'amis';
-import type {DataScope} from 'amis-core';
-import type {RendererConfig} from 'amis-core';
-import type {SchemaCollection} from 'amis';
+import type {Schema} from 'prismui-framework';
+import type {DataScope} from 'prismui-core';
+import type {RendererConfig} from 'prismui-core';
+import type {SchemaCollection} from 'prismui-framework';
 import {SchemaForm} from './base/SchemaForm';
 import memoize from 'lodash/memoize';
 import {FormConfigWrapper} from './FormConfigWrapper';

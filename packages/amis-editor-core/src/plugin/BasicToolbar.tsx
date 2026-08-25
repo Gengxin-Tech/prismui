@@ -11,7 +11,7 @@ import {
   PluginInterface
 } from '../plugin';
 import {registerEditorPlugin} from '../manager';
-import type {MenuItem} from 'amis-ui/lib/components/ContextMenu';
+import type {MenuItem} from 'prismui-ui/lib/components/ContextMenu';
 import {EditorNodeType} from '../store/node';
 
 /**

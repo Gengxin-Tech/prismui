@@ -1,5 +1,5 @@
 import React from 'react';
-import {themeable, ThemeProps} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
 import TimelineItem, {
   TimelineContentComponent,
   TimelineItemProps,

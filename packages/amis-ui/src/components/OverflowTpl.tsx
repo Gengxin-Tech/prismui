@@ -5,10 +5,10 @@
 
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import omit from 'lodash/omit';
-import {themeable, isObject, getReactElementRef, mergeRefs} from 'amis-core';
+import {themeable, isObject, getReactElementRef, mergeRefs} from 'prismui-core';
 import TooltipWrapper from './TooltipWrapper';
 
-import type {ThemeProps} from 'amis-core';
+import type {ThemeProps} from 'prismui-core';
 import type {TooltipWrapperProps} from './TooltipWrapper';
 
 export interface OverflowTplProps extends ThemeProps {

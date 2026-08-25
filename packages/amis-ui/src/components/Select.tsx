@@ -10,14 +10,14 @@ import {
   getOptionValueBindField,
   labelToString,
   uncontrollable
-} from 'amis-core';
+} from 'prismui-core';
 import React from 'react';
 import isInteger from 'lodash/isInteger';
 import omit from 'lodash/omit';
 import merge from 'lodash/merge';
 import VirtualList from './virtual-list';
-import {Overlay} from 'amis-core';
-import {PopOver} from 'amis-core';
+import {Overlay} from 'prismui-core';
+import {PopOver} from 'prismui-core';
 import TooltipWrapper from './TooltipWrapper';
 import Downshift, {ControllerStateAndHelpers} from 'downshift';
 import {closeIcon, Icon} from './icons';
@@ -29,17 +29,17 @@ import {
   autobind,
   ucFirst,
   normalizeNodePath
-} from 'amis-core';
+} from 'prismui-core';
 import find from 'lodash/find';
 import isPlainObject from 'lodash/isPlainObject';
 import union from 'lodash/union';
-import {highlight} from 'amis-core';
-import {ClassNamesFn, themeable, ThemeProps} from 'amis-core';
+import {highlight} from 'prismui-core';
+import {ClassNamesFn, themeable, ThemeProps} from 'prismui-core';
 import Checkbox from './Checkbox';
 import Input from './Input';
-import {LocaleProps, localeable} from 'amis-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import Spinner, {SpinnerExtraProps} from './Spinner';
-import type {Option, Options, TestIdBuilder} from 'amis-core';
+import type {Option, Options, TestIdBuilder} from 'prismui-core';
 import {RemoteOptionsProps, withRemoteConfig} from './WithRemoteConfig';
 import Picker from './Picker';
 import PopUp from './PopUp';

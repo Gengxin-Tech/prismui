@@ -1,6 +1,6 @@
 import React from 'react';
-import {Renderer, isVisible, ClassNamesFn, AMISSchemaBase} from 'amis-core';
-import {Checkbox} from 'amis-ui';
+import {Renderer, isVisible, ClassNamesFn, AMISSchemaBase} from 'prismui-core';
+import {Checkbox} from 'prismui-ui';
 
 import ColumnToggler, {ColumnTogglerProps} from '../Table/ColumnToggler';
 import {BaseSchema} from '../../Schema';

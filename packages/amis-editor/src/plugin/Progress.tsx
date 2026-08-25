@@ -6,7 +6,7 @@ import {
   defaultValue,
   getSchemaTpl,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {getActionCommonProps} from '../renderer/event-control/helper';
 
 export class ProgressPlugin extends BasePlugin {

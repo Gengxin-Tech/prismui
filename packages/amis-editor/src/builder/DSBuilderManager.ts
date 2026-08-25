@@ -5,9 +5,9 @@
 
 import {builderFactory, DSBuilderInterface} from './DSBuilder';
 
-import type {EditorManager} from 'amis-editor-core';
+import type {EditorManager} from 'prismui-editor-core';
 import type {GenericSchema} from './type';
-import type {Option} from 'amis-core';
+import type {Option} from 'prismui-core';
 
 export class DSBuilderManager {
   private builders: Map<string, DSBuilderInterface>;

@@ -1,6 +1,6 @@
 import React from 'react';
-import {Icon, Button} from 'amis';
-import {setVariable, someTree, isObject} from 'amis-core';
+import {Icon, Button} from 'prismui-framework';
+import {setVariable, someTree, isObject} from 'prismui-core';
 import {
   BasePlugin,
   BaseEventContext,
@@ -21,7 +21,7 @@ import {
   RendererPluginAction,
   RendererPluginEvent,
   BuildPanelEventContext
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {DSBuilderManager} from '../builder/DSBuilderManager';
 import {DefaultMaxDisplayRows} from './CRUD2/constants';
 import {
@@ -30,9 +30,9 @@ import {
 } from '../renderer/event-control/helper';
 import {resolveArrayDatasource} from '../util';
 
-import type {SchemaObject} from 'amis';
-import type {IFormItemStore, IFormStore} from 'amis-core';
-import type {EditorManager} from 'amis-editor-core';
+import type {SchemaObject} from 'prismui-framework';
+import type {IFormItemStore, IFormStore} from 'prismui-core';
+import type {EditorManager} from 'prismui-editor-core';
 import {getActionCommonProps} from '../renderer/event-control/helper';
 import cloneDeep from 'lodash/cloneDeep';
 import {addSchema2Toolbar, deepRemove} from './CRUD2/utils';

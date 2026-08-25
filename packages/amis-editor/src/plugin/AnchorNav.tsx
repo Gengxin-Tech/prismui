@@ -1,13 +1,13 @@
 import React from 'react';
-import {registerEditorPlugin, translateSchema} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
-import {BasePlugin, RendererInfo, VRendererConfig} from 'amis-editor-core';
-import {VRenderer} from 'amis-editor-core';
-import {mapReactElement} from 'amis-editor-core';
+import {registerEditorPlugin, translateSchema} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
+import {BasePlugin, RendererInfo, VRendererConfig} from 'prismui-editor-core';
+import {VRenderer} from 'prismui-editor-core';
+import {mapReactElement} from 'prismui-editor-core';
 import findIndex from 'lodash/findIndex';
-import {RegionWrapper as Region} from 'amis-editor-core';
-import {AnchorNavSection} from 'amis-ui';
-import {registerFilter} from 'amis-formula';
+import {RegionWrapper as Region} from 'prismui-editor-core';
+import {AnchorNavSection} from 'prismui-ui';
+import {registerFilter} from 'prismui-formula';
 import {generateId} from '../util';
 registerFilter('appTranslate', (input: any) => translateSchema(input));
 

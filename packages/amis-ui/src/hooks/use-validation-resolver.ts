@@ -3,7 +3,7 @@
  */
 import pick from 'lodash/pick';
 import React from 'react';
-import {validateObject, validations} from 'amis-core';
+import {validateObject, validations} from 'prismui-core';
 
 function formatErrors(errors: any) {
   const formated: any = {};

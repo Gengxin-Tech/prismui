@@ -3,9 +3,9 @@
  */
 
 import type CodeMirror from 'codemirror';
-import {findTree} from 'amis-core';
+import {findTree} from 'prismui-core';
 import {FuncGroup, VariableItem} from './CodeEditor';
-import {parse} from 'amis-formula';
+import {parse} from 'prismui-formula';
 import debounce from 'lodash/debounce';
 
 export function editorFactory(

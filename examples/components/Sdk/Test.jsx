@@ -1,6 +1,6 @@
 import React from 'react';
-import {TitleBar} from 'amis';
-import {render} from 'amis';
+import {TitleBar} from 'prismui';
+import {render} from 'prismui';
 
 export default class SdkTest extends React.Component {
   state = {

@@ -99,7 +99,7 @@ export function formatStyleObject(style: string | null, px2number = true) {
 export function replaceReactAriaIds(container: HTMLElement) {
   const selectors = ['aria-labelledby'];
   const ariaSelector = (el: string) => `[${el}]`;
-  const regexp = /downshift\-\d+-label/g;
+  const regexp = /downshift-\d+-label/g;
 
   container
     .querySelectorAll(selectors.map(ariaSelector).join(', '))

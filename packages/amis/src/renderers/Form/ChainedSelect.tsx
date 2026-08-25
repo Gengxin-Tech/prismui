@@ -11,12 +11,12 @@ import {
   CustomStyle,
   AMISFormItemWithOptions,
   getStableClassName
-} from 'amis-core';
-import {Select, Spinner} from 'amis-ui';
-import {Api, ApiObject} from 'amis-core';
-import {isEffectiveApi} from 'amis-core';
-import {isMobile, createObject} from 'amis-core';
-import {ActionObject} from 'amis-core';
+} from 'prismui-core';
+import {Select, Spinner} from 'prismui-ui';
+import {Api, ApiObject} from 'prismui-core';
+import {isEffectiveApi} from 'prismui-core';
+import {isMobile, createObject} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
 import {FormOptionsSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 import find from 'lodash/find';

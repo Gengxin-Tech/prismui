@@ -5,8 +5,8 @@
 
 import cx from 'classnames';
 import React, {useEffect, useState} from 'react';
-import {FormItem, RendererProps, resolveVariableAndFilter} from 'amis-core';
-import type {FormControlProps} from 'amis-core';
+import {FormItem, RendererProps, resolveVariableAndFilter} from 'prismui-core';
+import type {FormControlProps} from 'prismui-core';
 import cloneDeep from 'lodash/cloneDeep';
 import ThemeSelect from './ThemeSelect';
 import {getDefaultValue} from '../util';

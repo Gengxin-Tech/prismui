@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react';
-import {ClassNamesFn} from 'amis-core';
+import {ClassNamesFn} from 'prismui-core';
 
 interface AlphabetIndexerProps {
   items: Array<any>;

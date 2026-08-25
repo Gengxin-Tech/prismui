@@ -134,8 +134,8 @@ import {
   parse,
   registerFilter,
   registerFunction
-} from 'amis-formula';
-import type {FilterContext} from 'amis-formula';
+} from 'prismui-formula';
+import type {FilterContext} from 'prismui-formula';
 import LazyComponent from './components/LazyComponent';
 import JsonView from './components/JsonView';
 import type {JsonViewInteractionProps} from './components/JsonView';

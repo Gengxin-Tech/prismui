@@ -8,9 +8,15 @@ import cx from 'classnames';
 import cloneDeep from 'lodash/cloneDeep';
 import remove from 'lodash/remove';
 import isPlainObject from 'lodash/isPlainObject';
-import {FormItem, Button, Icon, FormControlProps, autobind} from 'amis';
-import {Checkbox} from 'amis-ui';
-import {evalExpression} from 'amis-core';
+import {
+  FormItem,
+  Button,
+  Icon,
+  FormControlProps,
+  autobind
+} from 'prismui-framework';
+import {Checkbox} from 'prismui-ui';
+import {evalExpression} from 'prismui-core';
 import {GoConfigControl} from './GoConfigControl';
 
 const klass = 'ae-FeatureControl';

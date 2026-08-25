@@ -15,7 +15,7 @@ import {
   LocaleProps,
   findTree,
   filterTree
-} from 'amis-core';
+} from 'prismui-core';
 import Value from './Value';
 import InputSwitch from './InputSwitch';
 import ConditionFunc from './Func';
@@ -27,7 +27,7 @@ import type {
   AMISOperatorType,
   AMISExpressionFunc,
   TestIdBuilder
-} from 'amis-core';
+} from 'prismui-core';
 
 /**
  * 支持4中表达式设置方式

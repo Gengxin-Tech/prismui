@@ -14,15 +14,15 @@ import {
   guid,
   noop,
   AMISConditionRule
-} from 'amis-core';
-import {uncontrollable} from 'amis-core';
+} from 'prismui-core';
+import {uncontrollable} from 'prismui-core';
 import {ConditionBuilderFields, ConditionBuilderFuncs} from './types';
 import ConditionGroup from './Group';
 import defaultConfig, {ConditionBuilderConfig} from './config';
 import {FormulaPickerProps} from '../formula/Picker';
 import PickerContainer from '../PickerContainer';
 import ResultBox from '../ResultBox';
-import type {AMISConditionGroupValue, TestIdBuilder} from 'amis-core';
+import type {AMISConditionGroupValue, TestIdBuilder} from 'prismui-core';
 
 export interface ConditionBuilderProps extends ThemeProps, LocaleProps {
   builderMode?: 'simple' | 'full'; // 简单模式｜完整模式

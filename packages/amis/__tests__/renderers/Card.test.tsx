@@ -3,7 +3,7 @@ import {render} from '@testing-library/react';
 import '../../src';
 import {render as amisRender} from '../../src';
 import {makeEnv, wait} from '../helper';
-import {Card} from 'amis-ui';
+import {Card} from 'prismui-ui';
 
 test('Components:Card exposes root DOM through forwardedRef', () => {
   const cardRef = React.createRef<HTMLDivElement>();

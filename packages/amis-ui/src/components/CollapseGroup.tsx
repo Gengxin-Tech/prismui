@@ -11,8 +11,8 @@ export interface CollapseItem {
   [propName: string]: any;
 }
 
-import {ClassNamesFn, themeable, autobind} from 'amis-core';
-import type {SchemaNode, ThemeProps} from 'amis-core';
+import {ClassNamesFn, themeable, autobind} from 'prismui-core';
+import type {SchemaNode, ThemeProps} from 'prismui-core';
 import isEqual from 'lodash/isEqual';
 
 export interface CollapseGroupProps extends ThemeProps {

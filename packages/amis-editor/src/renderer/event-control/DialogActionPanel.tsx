@@ -11,10 +11,10 @@ import {
   getVariables,
   modalsToDefinitions,
   patchDiff
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import React from 'react';
 import {observer} from 'mobx-react';
-import {JSONTraverse, JSONValueMap, RendererProps, guid} from 'amis-core';
+import {JSONTraverse, JSONValueMap, RendererProps, guid} from 'prismui-core';
 import {
   Button,
   FormField,
@@ -22,8 +22,8 @@ import {
   InputJSONSchema,
   Select,
   Switch
-} from 'amis-ui';
-import type {EditorModalBody} from 'amis-editor-core/lib/store/editor';
+} from 'prismui-ui';
+import type {EditorModalBody} from 'prismui-editor-core/lib/store/editor';
 
 export interface DialogActionPanelProps extends RendererProps {
   manager: EditorManager;

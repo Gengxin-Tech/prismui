@@ -1,6 +1,6 @@
 import React from 'react';
-import {getPropValue, FormControlProps, createObject} from 'amis-core';
-import {ErrorBoundary} from 'amis-core';
+import {getPropValue, FormControlProps, createObject} from 'prismui-core';
+import {ErrorBoundary} from 'prismui-core';
 import omit from 'lodash/omit';
 
 function renderCommonStatic(props: any, defaultValue: string) {

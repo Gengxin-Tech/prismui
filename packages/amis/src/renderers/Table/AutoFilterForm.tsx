@@ -4,8 +4,8 @@ import {
   RendererProps,
   createObject,
   padArr
-} from 'amis-core';
-import {Icon} from 'amis-ui';
+} from 'prismui-core';
+import {Icon} from 'prismui-ui';
 import {observer} from 'mobx-react';
 import React from 'react';
 

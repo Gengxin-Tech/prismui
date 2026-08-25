@@ -3,11 +3,15 @@ import {
   getSchemaTpl,
   defaultValue,
   tipedLabel
-} from 'amis-editor-core';
-import {createAnimationStyle, formateId, type SchemaCollection} from 'amis';
+} from 'prismui-editor-core';
+import {
+  createAnimationStyle,
+  formateId,
+  type SchemaCollection
+} from 'prismui-framework';
 import kebabCase from 'lodash/kebabCase';
-import {styleManager} from 'amis-core';
-import {MixedInput} from 'amis-ui';
+import {styleManager} from 'prismui-core';
+import {MixedInput} from 'prismui-ui';
 
 const animationOptions = {
   enter: [
@@ -1166,7 +1170,7 @@ setSchemaTpl(
       state = ['default', 'hover', 'active']
     } = option;
 
-    const classId = classname.replace(/\-/g, '_');
+    const classId = classname.replace(/-/g, '_');
 
     const styleStateFunc = (visibleOn: string, state: string) => {
       return [

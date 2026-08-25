@@ -11,7 +11,7 @@ import {
   findTree,
   isExpression,
   isObject
-} from 'amis-core';
+} from 'prismui-core';
 
 import {FormulaEditor} from './Editor';
 import ResultBox from '../ResultBox';

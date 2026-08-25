@@ -1,9 +1,9 @@
 /**
  * @file 属性表
  */
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
 export class PropertyPlugin extends BasePlugin {
   static id = 'PropertyPlugin';

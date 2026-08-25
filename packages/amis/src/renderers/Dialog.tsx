@@ -9,22 +9,22 @@ import {
   setThemeClassName,
   ValidateError,
   RendererEvent
-} from 'amis-core';
-import {Renderer, RendererProps} from 'amis-core';
-import {SchemaNode, Schema, ActionObject} from 'amis-core';
-import {filter} from 'amis-core';
-import {Modal, SpinnerExtraProps} from 'amis-ui';
+} from 'prismui-core';
+import {Renderer, RendererProps} from 'prismui-core';
+import {SchemaNode, Schema, ActionObject} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {Modal, SpinnerExtraProps} from 'prismui-ui';
 import {
   guid,
   isVisible,
   autobind,
   createObject,
   isObjectShallowModified
-} from 'amis-core';
+} from 'prismui-core';
 import {reaction} from 'mobx';
-import {Icon} from 'amis-ui';
-import {ModalStore, IModalStore} from 'amis-core';
-import {Spinner} from 'amis-ui';
+import {Icon} from 'prismui-ui';
+import {ModalStore, IModalStore} from 'prismui-core';
+import {Spinner} from 'prismui-ui';
 import {
   IServiceStore,
   AMISDialogSchemaBase,
@@ -32,7 +32,7 @@ import {
   AMISSchemaCollection,
   CustomStyle,
   AMISButtonSchema
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema, AMISClassName, SchemaName, SchemaTpl} from '../Schema';
 import {ActionSchema} from './Action';
 import {isAlive} from 'mobx-state-tree';

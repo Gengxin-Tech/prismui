@@ -6,7 +6,7 @@ import {
   getSchemaTpl,
   tipedLabel,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 export class Card2Plugin extends BasePlugin {
   static id = 'Card2Plugin';

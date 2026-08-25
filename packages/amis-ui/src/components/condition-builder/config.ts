@@ -4,7 +4,7 @@ import {
   ConditionBuilderFields,
   ConditionBuilderType
 } from './types';
-import type {AMISOperatorType} from 'amis-core';
+import type {AMISOperatorType} from 'prismui-core';
 
 export interface BaseFieldConfig {
   operations: Array<AMISOperatorType>;

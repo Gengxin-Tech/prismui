@@ -6,11 +6,11 @@
 import React from 'react';
 import pick from 'lodash/pick';
 import mapValues from 'lodash/mapValues';
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 
-import {isObject} from 'amis-editor-core';
+import {isObject} from 'prismui-editor-core';
 
-import type {FormControlProps} from 'amis-core';
+import type {FormControlProps} from 'prismui-core';
 import type {PlainObject} from './types';
 
 export interface DisplayProps extends FormControlProps {

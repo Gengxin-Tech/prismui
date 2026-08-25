@@ -1,15 +1,15 @@
 import {ConditionBuilderConfig} from './config';
 import {ConditionBuilderFields, ConditionBuilderFuncs} from './types';
-import {ThemeProps, themeable, autobind} from 'amis-core';
+import {ThemeProps, themeable, autobind} from 'prismui-core';
 import React from 'react';
 import {Icon} from '../icons';
 import ConditionGroup from './Group';
 import ConditionItem from './Item';
 import FormulaPicker, {FormulaPickerProps} from '../formula/Picker';
 import Button from '../Button';
-import type {AMISConditionGroupValue, AMISConditionValue} from 'amis-core';
+import type {AMISConditionGroupValue, AMISConditionValue} from 'prismui-core';
 import TooltipWrapper from '../TooltipWrapper';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface CBGroupOrItemProps extends ThemeProps {
   builderMode?: 'simple' | 'full';

@@ -1,7 +1,7 @@
 import {
   registerEditorPlugin,
   RendererInfoResolveEventContext
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   BasePlugin,
   BaseEventContext,
@@ -14,16 +14,16 @@ import {
   ContextMenuEventContext,
   ContextMenuItem,
   PluginInterface
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 import find from 'lodash/find';
-import {JSONDelete, JSONPipeIn, JSONUpdate} from 'amis-editor-core';
+import {JSONDelete, JSONPipeIn, JSONUpdate} from 'prismui-editor-core';
 import {NO_SUPPORT_STATIC_FORMITEM_CMPTS} from '../../renderer/event-control/constants';
 import {
   isExpression,
   resolveVariableAndFilter,
   getRendererByName
-} from 'amis-core';
+} from 'prismui-core';
 
 export class ItemPlugin extends BasePlugin {
   static id = 'ItemPlugin';

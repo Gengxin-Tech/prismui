@@ -12,7 +12,7 @@ import {
   ClassNamesFn,
   LocaleProps,
   localeable
-} from 'amis-core';
+} from 'prismui-core';
 import HeadCellDropDown, {
   FilterDropdownProps,
   FilterPayload
@@ -20,7 +20,7 @@ import HeadCellDropDown, {
 import CheckBox from '../Checkbox';
 import Button from '../Button';
 import {Icon} from '../icons';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface Props extends ThemeProps, LocaleProps {
   column: any;

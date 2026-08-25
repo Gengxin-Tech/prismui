@@ -1,7 +1,7 @@
-import {RendererProps} from 'amis-core';
+import {RendererProps} from 'prismui-core';
 import React, {useEffect, useState} from 'react';
-import {InputJSONSchema} from 'amis-ui';
-import {getVariables} from 'amis-editor-core';
+import {InputJSONSchema} from 'prismui-ui';
+import {getVariables} from 'prismui-editor-core';
 
 interface OptionAutoFillProps extends RendererProps {
   value: any;

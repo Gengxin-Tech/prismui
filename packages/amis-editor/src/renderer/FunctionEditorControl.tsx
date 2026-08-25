@@ -3,10 +3,10 @@
  */
 
 import React from 'react';
-import {autobind} from 'amis-editor-core';
-import {FormControlProps} from 'amis-core';
-import {FormItem} from 'amis';
-import {TooltipObject} from 'amis-ui/lib/components/TooltipWrapper';
+import {autobind} from 'prismui-editor-core';
+import {FormControlProps} from 'prismui-core';
+import {FormItem} from 'prismui-framework';
+import {TooltipObject} from 'prismui-ui/lib/components/TooltipWrapper';
 
 interface FuncParam {
   label: string;

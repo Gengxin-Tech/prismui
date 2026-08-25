@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'amis-ui';
+import {Button} from 'prismui-ui';
 
 export default function ButtonExamples() {
   return (

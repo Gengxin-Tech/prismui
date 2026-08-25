@@ -7,9 +7,9 @@ import {
   getVariable,
   CustomStyle,
   setThemeClassName
-} from 'amis-core';
-import {Textarea} from 'amis-ui';
-import type {AMISFormItem, ListenerAction} from 'amis-core';
+} from 'prismui-core';
+import {Textarea} from 'prismui-ui';
+import type {AMISFormItem, ListenerAction} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 import cx from 'classnames';

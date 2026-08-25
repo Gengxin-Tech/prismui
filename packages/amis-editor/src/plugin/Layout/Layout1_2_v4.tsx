@@ -1,4 +1,4 @@
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {FlexPluginBase} from './FlexPluginBase';
 
 export default class Layout1_2_v4 extends FlexPluginBase {

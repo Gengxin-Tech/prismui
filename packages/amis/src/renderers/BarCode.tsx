@@ -2,11 +2,11 @@
  * @file 用来条形码
  */
 import React, {Suspense} from 'react';
-import {Renderer, RendererProps} from 'amis-core';
+import {Renderer, RendererProps} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {getPropValue} from 'amis-core';
-import {AMISSchemaBase} from 'amis-core';
-const BarCode = React.lazy(() => import('amis-ui/lib/components/BarCode'));
+import {getPropValue} from 'prismui-core';
+import {AMISSchemaBase} from 'prismui-core';
+const BarCode = React.lazy(() => import('prismui-ui/lib/components/BarCode'));
 
 /**
  * BarCode 显示渲染器，格式说明。

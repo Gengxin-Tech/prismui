@@ -12,11 +12,11 @@ import React, {
 } from 'react';
 import isObject from 'lodash/isObject';
 import cloneDeep from 'lodash/cloneDeep';
-import {uncontrollable, highlight, labelToString} from 'amis-core';
+import {uncontrollable, highlight, labelToString} from 'prismui-core';
 
 import {useSetState, useUpdateEffect} from '../hooks';
-import {range} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
+import {range} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
 import useTouch from '../hooks/use-touch';
 
 export interface PickerColumnItem {

@@ -1,4 +1,4 @@
-import {Renderer} from 'amis-core';
+import {Renderer} from 'prismui-core';
 import {TableCell} from '../Table';
 import QuickEdit from '../QuickEdit';
 import Copyable from '../Copyable';

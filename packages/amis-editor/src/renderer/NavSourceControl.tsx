@@ -9,14 +9,21 @@ import Sortable from 'sortablejs';
 import set from 'lodash/set';
 import get from 'lodash/get';
 import cloneDeep from 'lodash/cloneDeep';
-import {render as renderAmis} from 'amis-core';
+import {render as renderAmis} from 'prismui-core';
 
-import {FormItem, Button, InputBox, Icon, Modal, toast} from 'amis';
-import {TooltipWrapper} from 'amis-ui';
+import {
+  FormItem,
+  Button,
+  InputBox,
+  Icon,
+  Modal,
+  toast
+} from 'prismui-framework';
+import {TooltipWrapper} from 'prismui-ui';
 
-import {autobind, getI18nEnabled, getSchemaTpl} from 'amis-editor-core';
-import type {FormControlProps} from 'amis-core';
-import type {SchemaApi} from 'amis';
+import {autobind, getI18nEnabled, getSchemaTpl} from 'prismui-editor-core';
+import type {FormControlProps} from 'prismui-core';
+import type {SchemaApi} from 'prismui-framework';
 import {getOwnValue} from '../util';
 
 export type SourceType = 'custom' | 'api' | '';

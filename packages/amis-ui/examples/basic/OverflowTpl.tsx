@@ -1,5 +1,5 @@
 import React from 'react';
-import {OverflowTpl} from 'amis-ui';
+import {OverflowTpl} from 'prismui-ui';
 
 export default function ButtonExamples() {
   return (

@@ -1,11 +1,11 @@
 import React from 'react';
-import {FormItem} from 'amis-core';
+import {FormItem} from 'prismui-core';
 import cx from 'classnames';
-import {filterDate, parseDuration} from 'amis-core';
+import {filterDate, parseDuration} from 'prismui-core';
 import InputDateRange, {AMISDateRangeSchemaBase} from './InputDateRange';
-import {DateRangePicker} from 'amis-ui';
+import {DateRangePicker} from 'prismui-ui';
 import {supportStatic} from './StaticHoc';
-import {isMobile} from 'amis-core';
+import {isMobile} from 'prismui-core';
 /**
  * QuarterRange 季度范围控件
  * 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/form/input-quarter-range

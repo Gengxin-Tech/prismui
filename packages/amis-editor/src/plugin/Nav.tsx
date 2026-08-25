@@ -1,6 +1,6 @@
-import {render} from 'amis';
+import {render} from 'prismui-framework';
 import React from 'react';
-import {TooltipWrapper} from 'amis-ui';
+import {TooltipWrapper} from 'prismui-ui';
 import {
   registerEditorPlugin,
   BasePlugin,
@@ -9,7 +9,7 @@ import {
   RendererPluginEvent,
   RendererPluginAction,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   getEventControlConfig,
   getActionCommonProps,

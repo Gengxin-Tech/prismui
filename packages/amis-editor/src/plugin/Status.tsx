@@ -1,12 +1,12 @@
 import React from 'react';
-import {render} from 'amis';
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin, BaseEventContext} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {Icon, TooltipWrapper} from 'amis-ui';
+import {render} from 'prismui-framework';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin, BaseEventContext} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {Icon, TooltipWrapper} from 'prismui-ui';
 import cloneDeep from 'lodash/cloneDeep';
 import pick from 'lodash/pick';
-import {getI18nEnabled} from 'amis-editor-core';
+import {getI18nEnabled} from 'prismui-editor-core';
 
 export class StatusPlugin extends BasePlugin {
   static id = 'StatusPlugin';

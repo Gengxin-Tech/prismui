@@ -2,10 +2,10 @@
  * 单类名输入框 + 自定义样式源码编辑器
  */
 import React, {useEffect, useRef, useState} from 'react';
-import {Editor, Overlay, PopOver} from 'amis-ui';
-import {FormControlProps, FormItem} from 'amis-core';
+import {Editor, Overlay, PopOver} from 'prismui-ui';
+import {FormControlProps, FormItem} from 'prismui-core';
 // @ts-ignore
-import {parse as cssParse} from 'amis-postcss';
+import {parse as cssParse} from 'prismui-postcss';
 import {PlainObject} from './types';
 import isObject from 'lodash/isObject';
 import debounce from 'lodash/debounce';
@@ -15,7 +15,7 @@ import {Icon} from '../../icons/index';
 const conf: any = {
   ws: '[ \t\n\r\f]*',
   identifier:
-    '-?-?([a-zA-Z]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w\\-]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
+    '-?-?([a-zA-Z]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w-]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
   tokenizer: {
     root: [{include: '@selector'}],
     selector: [{include: '@selectorbody'}],
@@ -51,7 +51,7 @@ const conf: any = {
       {include: '@numbers'},
       {include: '@name'},
       {include: '@strings'},
-      ['([<>=\\+\\-\\*\\/\\^\\|\\~,])', 'delimiter'],
+      ['([<>=\\+-\\*\\/\\^\\|\\~,])', 'delimiter'],
       [',', 'delimiter']
     ],
     warndebug: [
@@ -74,7 +74,7 @@ const conf: any = {
     name: [['@identifier', 'attribute.value']],
     numbers: [
       [
-        '-?(\\d*\\.)?\\d+([eE][\\-+]?\\d+)?',
+        '-?(\\d*\\.)?\\d+([eE][-+]?\\d+)?',
         {token: 'attribute.value.number', next: '@units'}
       ],
       ['#[0-9a-fA-F_]+(?!\\w)', 'attribute.value.hex']

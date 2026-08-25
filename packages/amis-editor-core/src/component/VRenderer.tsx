@@ -3,7 +3,7 @@
  */
 import {isAlive} from 'mobx-state-tree';
 import React from 'react';
-import {getReactElementRef, mergeRefs} from 'amis-core';
+import {getReactElementRef, mergeRefs} from 'prismui-core';
 import {RendererInfo} from '../plugin';
 import {
   EditorNodeContext,

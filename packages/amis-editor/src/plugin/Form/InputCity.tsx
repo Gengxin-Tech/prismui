@@ -8,9 +8,9 @@ import {
   EditorNodeType,
   defaultValue,
   getSchemaTpl
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import cloneDeep from 'lodash/cloneDeep';
-import type {Schema} from 'amis';
+import type {Schema} from 'prismui-framework';
 import {ValidatorTag} from '../../validator';
 import {
   getEventControlConfig,

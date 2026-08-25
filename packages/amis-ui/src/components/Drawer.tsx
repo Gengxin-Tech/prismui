@@ -21,9 +21,9 @@ import {
   getStableClassName,
   getStableClassSelector,
   themeable
-} from 'amis-core';
-import type {ThemeScope} from 'amis-core';
-import {noop, autobind, getScrollbarWidth, setReactRef} from 'amis-core';
+} from 'prismui-core';
+import type {ThemeScope} from 'prismui-core';
+import {noop, autobind, getScrollbarWidth, setReactRef} from 'prismui-core';
 import {getScopedContainerWithFullscreen} from './Modal';
 
 type DrawerPosition = 'top' | 'right' | 'bottom' | 'left';

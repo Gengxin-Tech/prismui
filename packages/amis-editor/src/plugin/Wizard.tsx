@@ -15,7 +15,7 @@ import {
   RegionWrapper as Region,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   getArgsWrapper,
   getEventControlConfig,

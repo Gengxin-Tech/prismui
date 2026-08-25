@@ -1,4 +1,4 @@
-import type {BaseApiObject, AMISOperatorType} from 'amis-core';
+import type {BaseApiObject, AMISOperatorType} from 'prismui-core';
 
 export type FieldTypes =
   | 'text'

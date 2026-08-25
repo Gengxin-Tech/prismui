@@ -1,10 +1,10 @@
-import {Button, isObject} from 'amis';
+import {Button, isObject} from 'prismui-framework';
 import React from 'react';
 import {
   EditorNodeType,
   getI18nEnabled,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -14,9 +14,9 @@ import {
   ContextMenuItem,
   PluginInterface,
   RendererInfoResolveEventContext
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {diff, JSONPipeOut, repeatArray} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {diff, JSONPipeOut, repeatArray} from 'prismui-editor-core';
 import set from 'lodash/set';
 import {
   schemaArrayFormat,

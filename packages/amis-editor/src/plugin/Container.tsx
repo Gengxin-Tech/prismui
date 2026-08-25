@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button} from 'amis';
-import {Icon} from 'amis-editor-core';
+import {Button} from 'prismui-framework';
+import {Icon} from 'prismui-editor-core';
 import {
   ActiveEventContext,
   BaseEventContext,
@@ -12,9 +12,9 @@ import {
   defaultValue,
   getSchemaTpl,
   RendererPluginEvent
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {getEventControlConfig} from '../renderer/event-control';
-import {EditorNodeType} from 'packages/amis-editor-core/lib';
+import {EditorNodeType} from 'prismui-editor-core';
 import {defaultFlexColumnSchema} from './Layout/FlexPluginBase';
 
 export class ContainerPlugin extends LayoutBasePlugin {

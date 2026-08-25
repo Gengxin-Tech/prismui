@@ -1,11 +1,11 @@
 import React from 'react';
-import {registerEditorPlugin, getSchemaTpl} from 'amis-editor-core';
+import {registerEditorPlugin, getSchemaTpl} from 'prismui-editor-core';
 import {
   BasePlugin,
   BasicSubRenderInfo,
   RendererEventContext,
   SubRendererInfo
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 export class UUIDControlPlugin extends BasePlugin {
   static id = 'UUIDControlPlugin';

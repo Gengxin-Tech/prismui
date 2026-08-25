@@ -9,11 +9,11 @@ import pick from 'lodash/pick';
 import omit from 'lodash/omit';
 import React, {useState, useEffect} from 'react';
 
-import {FormItem} from 'amis';
+import {FormItem} from 'prismui-framework';
 
-import type {FormControlProps} from 'amis-core';
+import type {FormControlProps} from 'prismui-core';
 import type {PlainObject} from './types';
-import {getSchemaTpl} from 'amis-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 interface BackgroundProps extends FormControlProps {
   receiver?: string;
   value?: PlainObject;

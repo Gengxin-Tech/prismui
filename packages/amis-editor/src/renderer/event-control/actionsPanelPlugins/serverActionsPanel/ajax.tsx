@@ -1,7 +1,7 @@
 import React from 'react';
 import {registerActionPanel} from '../../actionsPanelManager';
-import {defaultValue, getSchemaTpl, tipedLabel} from 'amis-editor-core';
-import {normalizeApi} from 'amis-core';
+import {defaultValue, getSchemaTpl, tipedLabel} from 'prismui-editor-core';
+import {normalizeApi} from 'prismui-core';
 
 registerActionPanel('ajax', {
   label: '发送请求',

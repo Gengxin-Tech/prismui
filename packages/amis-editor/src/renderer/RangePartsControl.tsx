@@ -4,12 +4,12 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {FormItem, NumberInput} from 'amis';
-import type {FormControlProps} from 'amis-core';
-import {autobind} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+import {FormItem, NumberInput} from 'prismui-framework';
+import type {FormControlProps} from 'prismui-core';
+import {autobind} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
-import type {Option} from 'amis';
+import type {Option} from 'prismui-framework';
 
 export type PartsOptionControlItem = Option & {number: number};
 export type MarksOptionControlItem = Option & {number: number; label: any};

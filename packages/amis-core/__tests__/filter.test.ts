@@ -1,5 +1,5 @@
 import {resolveVariableAndFilter} from '../src/utils/tpl-builtin';
-import {evaluate} from 'amis-formula';
+import {evaluate} from 'prismui-formula';
 
 test(`filter:map`, () => {
   expect(

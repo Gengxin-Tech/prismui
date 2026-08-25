@@ -1,16 +1,16 @@
 import React from 'react';
 import {DOCS_BASE_PATH, isDocsDeployment} from './publicPath';
-import {toast, render, makeTranslator} from 'amis';
-import {normalizeLink} from 'amis-core';
-import {isMobile} from 'amis-core';
-import {attachmentAdpator} from 'amis-core';
-import {alert, confirm} from 'amis-ui';
+import {toast, render, makeTranslator} from 'prismui';
+import {normalizeLink} from 'prismui-core';
+import {isMobile} from 'prismui-core';
+import {attachmentAdpator} from 'prismui-core';
+import {alert, confirm} from 'prismui-ui';
 import axios from 'axios';
 import JSON5 from 'json5';
-import {Editor as CodeEditor} from 'amis-ui';
+import {Editor as CodeEditor} from 'prismui-ui';
 import copy from 'copy-to-clipboard';
 import {matchPath} from 'react-router-dom';
-import {Drawer} from 'amis-ui';
+import {Drawer} from 'prismui-ui';
 
 const DEFAULT_CONTENT = `{
     "$schema": "/schemas/page.json#",

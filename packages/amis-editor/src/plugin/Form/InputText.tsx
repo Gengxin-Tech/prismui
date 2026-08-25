@@ -8,8 +8,8 @@ import {
   defaultValue,
   getSchemaTpl,
   tipedLabel
-} from 'amis-editor-core';
-import type {SchemaType} from 'amis';
+} from 'prismui-editor-core';
+import type {SchemaType} from 'prismui-framework';
 import {ValidatorTag} from '../../validator';
 import {
   getEventControlConfig,

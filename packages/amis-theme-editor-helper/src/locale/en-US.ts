@@ -1,4 +1,4 @@
-import {extendLocale} from 'i18n-runtime';
+import {extendLocale} from 'prismui-i18n-runtime';
 
 extendLocale('en-US', {
   '8f6ea8f1a35f96ba401e4fce9ddeb4b0':

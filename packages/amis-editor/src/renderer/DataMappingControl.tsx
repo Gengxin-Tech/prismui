@@ -1,7 +1,7 @@
-import {Renderer} from 'amis';
-import type {FormControlProps} from 'amis-core';
+import {Renderer} from 'prismui-framework';
+import type {FormControlProps} from 'prismui-core';
 import React from 'react';
-import {autobind, getSchemaTpl} from 'amis-editor-core';
+import {autobind, getSchemaTpl} from 'prismui-editor-core';
 
 export interface DataMappingProps extends FormControlProps {
   schema?: string;

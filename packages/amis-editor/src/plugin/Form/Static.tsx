@@ -1,7 +1,7 @@
 import React from 'react';
 import get from 'lodash/get';
-import {getVariable} from 'amis-core';
-import {Button} from 'amis';
+import {getVariable} from 'prismui-core';
+import {Button} from 'prismui-framework';
 import {
   defaultValue,
   getSchemaTpl,
@@ -9,11 +9,11 @@ import {
   tipedLabel,
   RendererPluginEvent,
   diff
-} from 'amis-editor-core';
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {EditorNodeType} from 'amis-editor-core';
-import {mockValue} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {EditorNodeType} from 'prismui-editor-core';
+import {mockValue} from 'prismui-editor-core';
 
 // 可复制
 setSchemaTpl('copyable', {

@@ -35,8 +35,8 @@ import {
   injectObjectChain,
   AMISSchemaCollection,
   AMISFunction
-} from 'amis-core';
-import {Button, Icon} from 'amis-ui';
+} from 'prismui-core';
+import {Button, Icon} from 'prismui-ui';
 import omit from 'lodash/omit';
 import findIndex from 'lodash/findIndex';
 import {BaseTableSchema, TableSchema} from '../Table';
@@ -44,7 +44,7 @@ import {SchemaApi, AMISClassName} from '../../Schema';
 import find from 'lodash/find';
 import debounce from 'lodash/debounce';
 import moment from 'moment';
-import {sortArray, str2function} from 'amis-core';
+import {sortArray, str2function} from 'prismui-core';
 
 import type {SchemaTokenizeableString} from '../../Schema';
 import isPlainObject from 'lodash/isPlainObject';

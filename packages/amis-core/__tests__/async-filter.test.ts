@@ -1,5 +1,5 @@
 import {resolveVariableAndFilterForAsync} from '../src/utils/tpl-builtin';
-import {evaluateForAsync} from 'amis-formula';
+import {evaluateForAsync} from 'prismui-formula';
 
 test(`filter:map`, async () => {
   expect(

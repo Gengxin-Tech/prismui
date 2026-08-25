@@ -1,6 +1,6 @@
 import React from 'react';
-import {anyChanged, autobind, localeable, LocaleProps} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
+import {anyChanged, autobind, localeable, LocaleProps} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
 import Button from './Button';
 
 export interface MultilineTextProps extends ThemeProps, LocaleProps {

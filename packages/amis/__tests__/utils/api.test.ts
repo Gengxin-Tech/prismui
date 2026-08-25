@@ -1,7 +1,7 @@
 import {render as amisRender} from '../../src';
 import {wait, makeEnv} from '../helper';
 import {render, fireEvent, cleanup, waitFor} from '@testing-library/react';
-import {buildApi, isApiOutdated, isValidApi} from 'amis-core';
+import {buildApi, isApiOutdated, isValidApi} from 'prismui-core';
 
 test('api:buildApi', () => {
   expect(buildApi('/api/xxx')).toMatchObject({

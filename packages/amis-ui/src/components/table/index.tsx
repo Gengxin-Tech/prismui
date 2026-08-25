@@ -23,10 +23,10 @@ import {
   position,
   getStableClassName,
   getStableClassSelector
-} from 'amis-core';
-import {resizeSensor} from 'amis-core';
-import {getStyleNumber} from 'amis-core';
-import {filterTree} from 'amis-core';
+} from 'prismui-core';
+import {resizeSensor} from 'prismui-core';
+import {getStyleNumber} from 'prismui-core';
+import {filterTree} from 'prismui-core';
 
 import Spinner, {SpinnerExtraProps} from '../Spinner';
 import ItemActionsWrapper from './ItemActionsWrapper';
@@ -44,7 +44,7 @@ import {
   getSortData
 } from './util';
 
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface ColumnProps {
   title: string | React.ReactNode | Function;

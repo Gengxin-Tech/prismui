@@ -13,14 +13,14 @@ import {
   LocaleProps,
   findTree,
   noop
-} from 'amis-core';
+} from 'prismui-core';
 import PopOverContainer from '../PopOverContainer';
 import GroupedSelection from '../GroupedSelection';
 import ResultBox from '../ResultBox';
 import {Icon} from '../icons';
 import Expression from './Expression';
 import {ConditionBuilderConfig} from './config';
-import type {TestIdBuilder, AMISExpressionFunc} from 'amis-core';
+import type {TestIdBuilder, AMISExpressionFunc} from 'prismui-core';
 
 export interface ConditionFuncProps extends ThemeProps, LocaleProps {
   value: AMISExpressionFunc;

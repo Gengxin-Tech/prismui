@@ -1,6 +1,13 @@
-import {FormItem, utils, Button, Overlay, PopOver, RendererProps} from 'amis';
+import {
+  FormItem,
+  utils,
+  Button,
+  Overlay,
+  PopOver,
+  RendererProps
+} from 'prismui-framework';
 import React from 'react';
-import type {Schema} from 'amis';
+import type {Schema} from 'prismui-framework';
 
 interface ClassNameControlProps extends RendererProps {
   schema: Schema;
@@ -814,105 +821,105 @@ export class ClassNameControl extends React.Component<
     } else {
       // 单独设置某个方向尺寸时把别的尺寸干掉比如： 设置 m-l-xs 时，把 m-l-md 去掉
       if (
-        /(?:^|\s)(m|p)\-(t|r|b|l)(?:\-(?:xs|sm|md|lg))?(?:$|\s)/.test(
+        /(?:^|\s)(m|p)-(t|r|b|l)(?:-(?:xs|sm|md|lg))?(?:$|\s)/.test(
           option.value
         )
       ) {
         const reg = new RegExp(
-          `(?:^|\\s)${RegExp.$1}\\-${RegExp.$2}(?:\\-(?:xs|sm|md|lg))?(?=(\\s|$))`,
+          `(?:^|\\s)${RegExp.$1}-${RegExp.$2}(?:-(?:xs|sm|md|lg))?(?=(\\s|$))`,
           'ig'
         );
         value = value.replace(reg, '');
       } else if (
-        /(?:^|\s)(m|p)(?:\-(xs|sm|md|lg))?(?:$|\s)/.test(option.value)
+        /(?:^|\s)(m|p)(?:-(xs|sm|md|lg))?(?:$|\s)/.test(option.value)
       ) {
         // 整体设置尺寸的时候，把别的尺寸干掉如： m-xs 去掉 m-md
 
         const reg = new RegExp(
-          `(?:^|\\s)${RegExp.$1}(?:\\-(?:xs|sm|md|lg))?(?=(\\s|$))`,
+          `(?:^|\\s)${RegExp.$1}(?:-(?:xs|sm|md|lg))?(?=(\\s|$))`,
           'ig'
         );
         value = value.replace(reg, '');
       } else if (
-        /(?:^|\s)(m|p)(?:\-(t|r|b|l))?\-none(?:$|\s)/.test(option.value)
+        /(?:^|\s)(m|p)(?:-(t|r|b|l))?-none(?:$|\s)/.test(option.value)
       ) {
         // 置无的时候把原来设置的干掉，比如： m-none  把 m-l-xs m-xs 之类的干掉。
         // m-t-none  的时候把 m-t-xs m-t 去掉
         // m-none 的时候把 m-xs m-l-xs 之类的都删了
         const reg = new RegExp(
           RegExp.$2
-            ? `(?:^|\\s)${RegExp.$1}(?:(?:\\-${RegExp.$2}(?:\\-(?:xs|sm|md|lg)))|\\-none)?(?=(\\s|$))`
+            ? `(?:^|\\s)${RegExp.$1}(?:(?:-${RegExp.$2}(?:-(?:xs|sm|md|lg)))|-none)?(?=(\\s|$))`
             : `(?:^|\\s)${RegExp.$1}(?:[^\\s$]+)?(?=(\\s|$))`,
           'ig'
         );
         value = value.replace(reg, '$1');
-      } else if (/(?:^|\s)w(?:\-\w+)?(?:$|\s)/.test(option.value)) {
+      } else if (/(?:^|\s)w(?:-\w+)?(?:$|\s)/.test(option.value)) {
         // 宽度互斥： w-xs w-md 之类的，只选一个
 
-        value = value.replace(/(?:^|\s)w(?:\-\w+)?(?=(\s|$))/g, '');
+        value = value.replace(/(?:^|\s)w(?:-\w+)?(?=(\s|$))/g, '');
       } else if (option.value === 'b-a') {
         // b-a 的时候把 b-l b-t 之类的干掉
-        value = value.replace(/(?:^|\s)b\-(?:t|r|b|l)(?=(\s|$))/g, '');
-        value = value.replace(/(?:^|\s)no\-border(?=(\s|$))/g, '');
-      } else if (/(?:^|\s)b\-(?:t|r|b|l)?(?:$|\s)/.test(option.value)) {
+        value = value.replace(/(?:^|\s)b-(?:t|r|b|l)(?=(\s|$))/g, '');
+        value = value.replace(/(?:^|\s)no-border(?=(\s|$))/g, '');
+      } else if (/(?:^|\s)b-(?:t|r|b|l)?(?:$|\s)/.test(option.value)) {
         // b-a 的时候把 b-l b-t 之类的干掉
-        value = value.replace(/(?:^|\s)b\-a(?=(\s|$))/g, '');
-        value = value.replace(/(?:^|\s)no\-border(?=(\s|$))/g, '');
-      } else if (/(?:^|\s)b\-\dx(?:$|\s)/.test(option.value)) {
-        value = value.replace(/(?:^|\s)b\-\dx(?=(\s|$))/g, '');
+        value = value.replace(/(?:^|\s)b-a(?=(\s|$))/g, '');
+        value = value.replace(/(?:^|\s)no-border(?=(\s|$))/g, '');
+      } else if (/(?:^|\s)b-\dx(?:$|\s)/.test(option.value)) {
+        value = value.replace(/(?:^|\s)b-\dx(?=(\s|$))/g, '');
       } else if (option.value === 'no-border') {
-        value = value.replace(/(?:^|\s)b\-(?:\dx|\w+)(?=(\s|$))/g, '');
+        value = value.replace(/(?:^|\s)b-(?:\dx|\w+)(?=(\s|$))/g, '');
       } else if (
-        /(?:^|\s)b\-(?:primary|info|warning|danger|success|white|dark|light)(?:$|\s)/.test(
+        /(?:^|\s)b-(?:primary|info|warning|danger|success|white|dark|light)(?:$|\s)/.test(
           option.value
         )
       ) {
         value = value.replace(
-          /(?:^|\s)b\-(?:primary|info|warning|danger|success|white|dark|light)(?=(\s|$))/g,
+          /(?:^|\s)b-(?:primary|info|warning|danger|success|white|dark|light)(?=(\s|$))/g,
           ''
         );
       } else if (option.value === 'r') {
-        value = value.replace(/(?:^|\s)r\-(?:t|r|b|l)(?=(\s|$))/g, '');
-      } else if (/(?:^|\s)r\-(?:t|r|b|l)?(?:$|\s)/.test(option.value)) {
+        value = value.replace(/(?:^|\s)r-(?:t|r|b|l)(?=(\s|$))/g, '');
+      } else if (/(?:^|\s)r-(?:t|r|b|l)?(?:$|\s)/.test(option.value)) {
         value = value.replace(/(?:^|\s)r(?=(\s|$))/g, '');
-      } else if (/(?:^|\s)r\-\dx(?:$|\s)/.test(option.value)) {
-        value = value.replace(/(?:^|\s)r\-\dx(?=(\s|$))/g, '');
+      } else if (/(?:^|\s)r-\dx(?:$|\s)/.test(option.value)) {
+        value = value.replace(/(?:^|\s)r-\dx(?=(\s|$))/g, '');
       } else if (
-        /(?:^|\s)text\-(?:xs|sm|base|md|lg)(?:$|\s)/.test(option.value)
+        /(?:^|\s)text-(?:xs|sm|base|md|lg)(?:$|\s)/.test(option.value)
       ) {
         value = value.replace(
-          /(?:^|\s)text\-(?:xs|sm|base|md|lg)(?=(\s|$))/g,
+          /(?:^|\s)text-(?:xs|sm|base|md|lg)(?=(\s|$))/g,
           ''
         );
       } else if (
-        /(?:^|\s)font\-(?:normal|thin|bold)(?:$|\s)/.test(option.value)
+        /(?:^|\s)font-(?:normal|thin|bold)(?:$|\s)/.test(option.value)
       ) {
         value = value.replace(
-          /(?:^|\s)font\-(?:normal|thin|bold)(?=(\s|$))/g,
+          /(?:^|\s)font-(?:normal|thin|bold)(?=(\s|$))/g,
           ''
         );
       } else if (
-        /(?:^|\s)text\-(?:primary|info|warning|danger|success|white|dark|light)(?:$|\s)/.test(
+        /(?:^|\s)text-(?:primary|info|warning|danger|success|white|dark|light)(?:$|\s)/.test(
           option.value
         )
       ) {
         value = value.replace(
-          /(?:^|\s)text\-(?:primary|info|warning|danger|success|white|dark|light)(?=(\s|$))/g,
+          /(?:^|\s)text-(?:primary|info|warning|danger|success|white|dark|light)(?=(\s|$))/g,
           ''
         );
       } else if (
-        /(?:^|\s)bg\-(?:primary|info|warning|danger|success|white|dark|light)(?:$|\s)/.test(
+        /(?:^|\s)bg-(?:primary|info|warning|danger|success|white|dark|light)(?:$|\s)/.test(
           option.value
         )
       ) {
         value = value.replace(
-          /(?:^|\s)bg\-(?:primary|info|warning|danger|success|white|dark|light)(?=(\s|$))/g,
+          /(?:^|\s)bg-(?:primary|info|warning|danger|success|white|dark|light)(?=(\s|$))/g,
           ''
         );
-        value = value.replace(/(?:^|\s)no\-bg(?=(\s|$))/g, '');
+        value = value.replace(/(?:^|\s)no-bg(?=(\s|$))/g, '');
       } else if (option.value === 'no-bg') {
         value = value.replace(
-          /(?:^|\s)bg\-(?:primary|info|warning|danger|success|white|dark|light)(?=(\s|$))/g,
+          /(?:^|\s)bg-(?:primary|info|warning|danger|success|white|dark|light)(?=(\s|$))/g,
           ''
         );
       }

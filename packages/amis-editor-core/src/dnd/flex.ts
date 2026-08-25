@@ -1,4 +1,4 @@
-import {isMobile} from 'amis-core';
+import {isMobile} from 'prismui-core';
 /**
  * 支持上下左右拖拽模式
  */
@@ -63,7 +63,7 @@ export class FlexDNDMode implements DNDModeInterface {
         this.dndContainer.insertBefore(ghost, child);
         let innerHTML = dragEl.outerHTML
           .replace('ae-is-draging', '')
-          .replace(/\bdata\-editor\-id=(?:'.+?'|".+?")/g, '');
+          .replace(/\bdata-editor-id=(?:'.+?'|".+?")/g, '');
         ghost.innerHTML = innerHTML;
       } else {
         renderThumbToGhost(

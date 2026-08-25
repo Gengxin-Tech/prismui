@@ -14,12 +14,12 @@ import {
   createObject,
   Payload,
   autobind
-} from 'amis-core';
-import {Signature} from 'amis-ui';
+} from 'prismui-core';
+import {Signature} from 'prismui-ui';
 import pick from 'lodash/pick';
 import {FormBaseControlSchema, SchemaApi} from '../../Schema';
 import {base64ToBlob} from 'file64';
-import {AMISFormItem} from 'amis-core';
+import {AMISFormItem} from 'prismui-core';
 /**
  * InputSignature 签名输入组件，支持手写签名、撤销、清空及确认操作，可自定义宽高、线条颜色和背景色，适用于表单签名需求。
  */

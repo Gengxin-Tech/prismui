@@ -1,6 +1,6 @@
-import {setSchemaTpl, getSchemaTpl, defaultValue} from 'amis-editor-core';
+import {setSchemaTpl, getSchemaTpl, defaultValue} from 'prismui-editor-core';
 import isObject from 'lodash/isObject';
-import {tipedLabel} from 'amis-editor-core';
+import {tipedLabel} from 'prismui-editor-core';
 
 setSchemaTpl('horizontal-align', {
   type: 'button-group-select',
@@ -234,7 +234,7 @@ setSchemaTpl('subFormHorizontal', {
       leftRate:
         value && typeof value.left === 'number'
           ? value.left
-          : value && /\bcol\-(?:xs|sm|md|lg)\-(\d+)\b/.test(value.left)
+          : value && /\bcol-(?:xs|sm|md|lg)-(\d+)\b/.test(value.left)
           ? parseInt(RegExp.$1, 10)
           : 2,
       leftFixed: (value && value.leftFixed) || ''

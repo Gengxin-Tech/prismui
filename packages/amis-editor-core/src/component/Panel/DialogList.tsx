@@ -1,4 +1,4 @@
-import {ClassNamesFn} from 'amis-core';
+import {ClassNamesFn} from 'prismui-core';
 import {observer} from 'mobx-react';
 import React from 'react';
 import {EditorStoreType} from '../../store/editor';
@@ -8,7 +8,13 @@ import {
   reGenerateID,
   translateSchema
 } from '../../util';
-import {Button, Icon, ListMenu, PopOverContainer, confirm} from 'amis';
+import {
+  Button,
+  Icon,
+  ListMenu,
+  PopOverContainer,
+  confirm
+} from 'prismui-framework';
 import {EditorManager} from '../../manager';
 import cloneDeep from 'lodash/cloneDeep';
 

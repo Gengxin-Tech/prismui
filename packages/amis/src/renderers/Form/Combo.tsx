@@ -16,10 +16,10 @@ import {
   getVariable,
   IFormItemStore,
   deleteVariable
-} from 'amis-core';
-import {ActionObject, Api} from 'amis-core';
-import {ComboStore, IComboStore} from 'amis-core';
-import {Tabs as CTabs, Tab, Button} from 'amis-ui';
+} from 'prismui-core';
+import {ActionObject, Api} from 'prismui-core';
+import {ComboStore, IComboStore} from 'prismui-core';
+import {Tabs as CTabs, Tab, Button} from 'prismui-ui';
 
 import {
   guid,
@@ -29,21 +29,21 @@ import {
   extendObject,
   autobind,
   isObjectShallowModified
-} from 'amis-core';
+} from 'prismui-core';
 import Sortable from 'sortablejs';
 import {
   evalExpression,
   filter,
   isPureVariable,
   resolveVariableAndFilter
-} from 'amis-core';
+} from 'prismui-core';
 import find from 'lodash/find';
-import {Select} from 'amis-ui';
-import {dataMapping, resolveVariable} from 'amis-core';
-import {isEffectiveApi, str2AsyncFunction} from 'amis-core';
-import {Alert2} from 'amis-ui';
+import {Select} from 'prismui-ui';
+import {dataMapping, resolveVariable} from 'prismui-core';
+import {isEffectiveApi, str2AsyncFunction} from 'prismui-core';
+import {Alert2} from 'prismui-ui';
 import memoize from 'lodash/memoize';
-import {Icon} from 'amis-ui';
+import {Icon} from 'prismui-ui';
 import {
   isAlive,
   clone as cloneModel,
@@ -56,7 +56,7 @@ import {
   SchemaObject,
   SchemaTpl
 } from '../../Schema';
-import {ListenerAction} from 'amis-core';
+import {ListenerAction} from 'prismui-core';
 import type {SchemaTokenizeableString} from '../../Schema';
 import isPlainObject from 'lodash/isPlainObject';
 import isEqual from 'lodash/isEqual';
@@ -67,7 +67,7 @@ import type {
   AMISSchema,
   AMISTemplate,
   TestIdBuilder
-} from 'amis-core';
+} from 'prismui-core';
 
 export type AMISComboCondition = {
   test: string;

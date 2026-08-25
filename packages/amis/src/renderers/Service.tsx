@@ -1,18 +1,18 @@
 import React from 'react';
 import extend from 'lodash/extend';
 import cloneDeep from 'lodash/cloneDeep';
-import {Renderer, RendererProps, filterTarget} from 'amis-core';
-import {ServiceStore, IServiceStore} from 'amis-core';
-import {Api, RendererData, ActionObject} from 'amis-core';
-import {filter, evalExpression} from 'amis-core';
-import {ScopedContext, IScopedContext} from 'amis-core';
+import {Renderer, RendererProps, filterTarget} from 'prismui-core';
+import {ServiceStore, IServiceStore} from 'prismui-core';
+import {Api, RendererData, ActionObject} from 'prismui-core';
+import {filter, evalExpression} from 'prismui-core';
+import {ScopedContext, IScopedContext} from 'prismui-core';
 import {
   buildApi,
   isApiOutdated,
   isEffectiveApi,
   str2AsyncFunction
-} from 'amis-core';
-import {Spinner, SpinnerExtraProps, Alert2 as Alert} from 'amis-ui';
+} from 'prismui-core';
+import {Spinner, SpinnerExtraProps, Alert2 as Alert} from 'prismui-ui';
 import {
   autobind,
   isObject,
@@ -23,7 +23,7 @@ import {
   createObject,
   extendObject,
   TestIdBuilder
-} from 'amis-core';
+} from 'prismui-core';
 import {
   BaseSchema,
   SchemaApi,
@@ -31,14 +31,14 @@ import {
   SchemaMessage,
   SchemaName
 } from '../Schema';
-import {IIRendererStore} from 'amis-core';
+import {IIRendererStore} from 'prismui-core';
 
 import type {
   AMISSchemaCollection,
   AMISExpression,
   ListenerAction
-} from 'amis-core';
-import type {ScopedComponentType} from 'amis-core';
+} from 'prismui-core';
+import type {ScopedComponentType} from 'prismui-core';
 import isPlainObject from 'lodash/isPlainObject';
 import {isAlive} from 'mobx-state-tree';
 

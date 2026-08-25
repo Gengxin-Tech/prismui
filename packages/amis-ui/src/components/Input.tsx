@@ -4,7 +4,7 @@
  * 功能很有必要。
  */
 import React from 'react';
-import {TestIdBuilder, autobind} from 'amis-core';
+import {TestIdBuilder, autobind} from 'prismui-core';
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {

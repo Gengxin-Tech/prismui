@@ -1,10 +1,10 @@
 import React from 'react';
-import {AMISFormItem, filter, Renderer, RendererProps} from 'amis-core';
-import {isVisible, getWidthRate, makeHorizontalDeeper} from 'amis-core';
-import {FormBaseControl, FormItemWrap} from 'amis-core';
+import {AMISFormItem, filter, Renderer, RendererProps} from 'prismui-core';
+import {isVisible, getWidthRate, makeHorizontalDeeper} from 'prismui-core';
+import {FormBaseControl, FormItemWrap} from 'prismui-core';
 
 import {FormBaseControlSchema, AMISClassName, SchemaObject} from '../../Schema';
-import {FormHorizontal} from 'amis-core';
+import {FormHorizontal} from 'prismui-core';
 import {reaction} from 'mobx';
 
 export type AMISGroupSubItem = SchemaObject & {

@@ -3,9 +3,9 @@ import {
   getSchemaTpl,
   tipedLabel,
   BaseEventContext
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import React from 'react';
-import {buildApi, Html} from 'amis';
+import {buildApi, Html} from 'prismui-framework';
 import get from 'lodash/get';
 
 setSchemaTpl('source', (patch: any = {}) => {

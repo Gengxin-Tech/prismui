@@ -4,15 +4,15 @@ import {
   resolveEventData,
   evalExpression,
   getVariable
-} from 'amis-core';
+} from 'prismui-core';
 import React from 'react';
-import {Spinner, SpinnerExtraProps} from 'amis-ui';
+import {Spinner, SpinnerExtraProps} from 'prismui-ui';
 import {BaseTransferRenderer, AMISTransferSchemaBase} from './Transfer';
-import {TransferPicker} from 'amis-ui';
-import {autobind, createObject} from 'amis-core';
-import {ActionObject, toNumber} from 'amis-core';
+import {TransferPicker} from 'prismui-ui';
+import {autobind, createObject} from 'prismui-core';
+import {ActionObject, toNumber} from 'prismui-core';
 import {supportStatic} from './StaticHoc';
-import {isMobile} from 'amis-core';
+import {isMobile} from 'prismui-core';
 import pick from 'lodash/pick';
 
 /**

@@ -1,16 +1,16 @@
-import {Button} from 'amis-ui';
+import {Button} from 'prismui-ui';
 import React from 'react';
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
   BasicPanelItem,
   BasicToolbarItem,
   BuildPanelEventContext
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {diff} from 'amis-editor-core';
-import type {SchemaCollection} from 'amis';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {diff} from 'prismui-editor-core';
+import type {SchemaCollection} from 'prismui-framework';
 
 export class ActionPlugin extends BasePlugin {
   static id = 'ActionPlugin';

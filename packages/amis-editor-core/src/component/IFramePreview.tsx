@@ -10,7 +10,7 @@ import {
   findTree,
   render,
   resizeSensor
-} from 'amis';
+} from 'prismui-framework';
 import {isAlive} from 'mobx-state-tree';
 import {
   applyEditorThemeScope,

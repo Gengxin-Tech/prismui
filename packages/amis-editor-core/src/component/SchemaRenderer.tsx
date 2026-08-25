@@ -1,5 +1,5 @@
 import React from 'react';
-import {SchemaRenderer as CoreSchemaRenderer} from 'amis-core';
+import {SchemaRenderer as CoreSchemaRenderer} from 'prismui-core';
 
 // 编辑态时用这个来代替默认的组件渲染
 export const SchemaRenderer = React.forwardRef((props: any, ref: any) => {

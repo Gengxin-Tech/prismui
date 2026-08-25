@@ -2,8 +2,8 @@
  * 动作配置面板
  */
 
-import {RendererProps, Schema} from 'amis-core';
-import {RendererPluginAction} from 'amis-editor-core';
+import {RendererProps, Schema} from 'prismui-core';
+import {RendererPluginAction} from 'prismui-editor-core';
 import React from 'react';
 import cx from 'classnames';
 import isFunction from 'lodash/isFunction';

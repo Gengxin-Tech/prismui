@@ -1,16 +1,16 @@
 import React from 'react';
-import {RendererProps, Renderer} from 'amis-core';
+import {RendererProps, Renderer} from 'prismui-core';
 import QuickEdit from '../QuickEdit';
 import Copyable from '../Copyable';
 import PopOverable from '../PopOver';
 import {observer} from 'mobx-react';
 import omit from 'lodash/omit';
-import {filter} from 'amis-core';
-import {Badge} from 'amis-ui';
-import {ColorScale} from 'amis-core';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+import {filter} from 'prismui-core';
+import {Badge} from 'prismui-ui';
+import {ColorScale} from 'prismui-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface TableCellProps extends RendererProps {
   wrapperComponent?: React.ElementType;

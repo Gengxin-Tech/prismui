@@ -2,10 +2,10 @@ import React from 'react';
 import Modal from './Modal';
 import Button from './Button';
 import Drawer from './Drawer';
-import {localeable, LocaleProps, themeable, ThemeProps} from 'amis-core';
+import {localeable, LocaleProps, themeable, ThemeProps} from 'prismui-core';
 import Spinner from './Spinner';
 import PopUp from './PopUp';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface ConfirmBoxProps extends LocaleProps, ThemeProps {
   show?: boolean;

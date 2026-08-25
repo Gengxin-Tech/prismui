@@ -7,11 +7,11 @@ import {
   AMISSchemaBase,
   Renderer,
   RendererProps
-} from 'amis-core';
-import {Avatar} from 'amis-ui';
-import {BadgeObject, withBadge} from 'amis-ui';
+} from 'prismui-core';
+import {Avatar} from 'prismui-ui';
+import {BadgeObject, withBadge} from 'prismui-ui';
 import {BaseSchema, AMISClassName} from '../Schema';
-import {isPureVariable, resolveVariableAndFilter, autobind} from 'amis-core';
+import {isPureVariable, resolveVariableAndFilter, autobind} from 'prismui-core';
 
 /**
  * 头像组件，用于展示用户头像或图标。

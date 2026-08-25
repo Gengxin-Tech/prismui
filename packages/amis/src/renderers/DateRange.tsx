@@ -4,10 +4,10 @@ import {
   Renderer,
   RendererProps,
   normalizeDate
-} from 'amis-core';
+} from 'prismui-core';
 import moment from 'moment';
 import {BaseSchema} from '../Schema';
-import {getPropValue} from 'amis-core';
+import {getPropValue} from 'prismui-core';
 
 /**
  * DateRange 展示渲染器。

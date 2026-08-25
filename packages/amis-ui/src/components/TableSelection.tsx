@@ -1,11 +1,11 @@
 import {BaseSelection, BaseSelectionProps} from './Selection';
-import {noop, offset, themeable} from 'amis-core';
+import {noop, offset, themeable} from 'prismui-core';
 import React from 'react';
-import {uncontrollable} from 'amis-core';
+import {uncontrollable} from 'prismui-core';
 import Checkbox from './Checkbox';
 import {Option} from './Select';
-import {resolveVariable} from 'amis-core';
-import {localeable} from 'amis-core';
+import {resolveVariable} from 'prismui-core';
+import {localeable} from 'prismui-core';
 import VirtualList, {AutoSizer, RenderedRows} from './virtual-list';
 import isEqual from 'lodash/isEqual';
 import forEach from 'lodash/forEach';

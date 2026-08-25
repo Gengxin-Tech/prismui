@@ -10,7 +10,7 @@ import {
   getSchemaTpl,
   registerEditorPlugin,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {formItemControl} from '../../component/BaseControl';
 import {getActionCommonProps} from '../../renderer/event-control/helper';
 

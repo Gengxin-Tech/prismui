@@ -10,7 +10,7 @@ import React, {
   useRef,
   useState
 } from 'react';
-import {themeable, ThemeProps} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
 import InputComponent from './Input';
 import isEqualWith from 'lodash/isEqualWith';
 
@@ -94,7 +94,9 @@ export function isUndefined(obj: any): obj is undefined {
 }
 
 export function usePrevious<T>(value: PropsWithoutRef<T> | ComponentState) {
-  const ref = useRef<PropsWithoutRef<T> | ComponentState | undefined>(undefined);
+  const ref = useRef<PropsWithoutRef<T> | ComponentState | undefined>(
+    undefined
+  );
   useEffect(() => {
     ref.current = value;
   });

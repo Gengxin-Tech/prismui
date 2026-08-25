@@ -11,8 +11,8 @@ import {
   setThemeClassName,
   AMISSchemaCollection,
   AMISSchemaBase
-} from 'amis-core';
-import {DndContainer as DndWrapper} from 'amis-ui';
+} from 'prismui-core';
+import {DndContainer as DndWrapper} from 'prismui-ui';
 import {BaseSchema, AMISClassName} from '../Schema';
 
 /** 容器拖拽配置 */

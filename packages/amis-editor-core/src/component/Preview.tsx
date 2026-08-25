@@ -6,12 +6,12 @@ import {
   Icon,
   resizeSensor,
   Spinner
-} from 'amis';
+} from 'prismui-framework';
 import React, {Component} from 'react';
 import cx from 'classnames';
 import {autobind, guid, noop, reactionWithOldValue} from '../util';
-import {clearStoresCache, RenderOptions} from 'amis-core';
-import type {Schema} from 'amis';
+import {clearStoresCache, RenderOptions} from 'prismui-core';
+import type {Schema} from 'prismui-framework';
 import {EditorStoreType} from '../store/editor';
 import {observer} from 'mobx-react';
 import {EditorManager} from '../manager';
@@ -19,10 +19,10 @@ import HighlightBox from './HighlightBox';
 import RegionHighlightBox from './RegionHLBox';
 import {ErrorRenderer} from './base/ErrorRenderer';
 import {isAlive} from 'mobx-state-tree';
-import {findTree} from 'amis-core';
+import {findTree} from 'prismui-core';
 import BackTop from './base/BackTop';
 import {reaction} from 'mobx';
-import type {RendererConfig} from 'amis-core';
+import type {RendererConfig} from 'prismui-core';
 import IFramePreview from './IFramePreview';
 import {SchemaRenderer} from './SchemaRenderer';
 import {getEditorThemeScopeProps, resolveEditorThemeName} from '../themeScope';

@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import {EditorStoreType} from '../store/editor';
 import {observer} from 'mobx-react';
-import {Icon} from 'amis';
+import {Icon} from 'prismui-framework';
 import {PluginEvent, ResizeMoveEventContext} from '../plugin';
 import {EditorManager} from '../manager';
 import {isAlive} from 'mobx-state-tree';

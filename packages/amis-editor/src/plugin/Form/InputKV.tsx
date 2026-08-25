@@ -10,7 +10,7 @@ import {
   getI18nEnabled,
   BaseEventContext,
   BasePlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {getActionCommonProps} from '../../renderer/event-control/helper';
 export class KVControlPlugin extends BasePlugin {
   static id = 'KVControlPlugin';

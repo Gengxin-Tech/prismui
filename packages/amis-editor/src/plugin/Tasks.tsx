@@ -2,9 +2,9 @@ import {
   BaseEventContext,
   getI18nEnabled,
   registerEditorPlugin
-} from 'amis-editor-core';
-import {BasePlugin} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {BasePlugin} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 
 export class TasksPlugin extends BasePlugin {
   static id = 'TasksPlugin';

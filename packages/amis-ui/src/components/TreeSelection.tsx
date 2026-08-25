@@ -1,12 +1,12 @@
 import {BaseSelection, BaseSelectionProps} from './Selection';
-import {themeable} from 'amis-core';
+import {themeable} from 'prismui-core';
 import React from 'react';
-import {uncontrollable} from 'amis-core';
+import {uncontrollable} from 'prismui-core';
 import Checkbox from './Checkbox';
 import {Option} from './Select';
-import {autobind, eachTree, everyTree} from 'amis-core';
+import {autobind, eachTree, everyTree} from 'prismui-core';
 import Spinner, {SpinnerExtraProps} from './Spinner';
-import {localeable} from 'amis-core';
+import {localeable} from 'prismui-core';
 import {Icon} from './icons';
 
 export interface TreeSelectionProps

@@ -6,13 +6,13 @@
 import {useEffect, useRef} from 'react';
 import omit from 'lodash/omit';
 import React, {useState, useCallback} from 'react';
-import {Button, Modal, themeable, ThemeProps, utils} from 'amis';
-import {getSchemaTpl, JSONPipeIn, EditorManager} from 'amis-editor-core';
+import {Button, Modal, themeable, ThemeProps, utils} from 'prismui-framework';
+import {getSchemaTpl, JSONPipeIn, EditorManager} from 'prismui-editor-core';
 import {DSFeatureType, DSFeatureEnum, ModelDSBuilderKey} from '../../builder';
 
-import type {RendererProps, BaseApiObject} from 'amis';
+import type {RendererProps, BaseApiObject} from 'prismui-framework';
 import type {CRUDColumnControlState} from './CRUDColumnControl';
-import type {ColumnSchema} from 'amis/lib/renderers/Table2';
+import type {ColumnSchema} from 'prismui-framework/lib/renderers/Table2';
 import type {DSBuilderInterface} from '../../builder';
 
 type InitData = Exclude<CRUDColumnControlState['addModalData'], undefined>;

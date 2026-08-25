@@ -5,7 +5,7 @@ import {
   themeable,
   ThemeProps,
   TranslateFn
-} from 'amis-core';
+} from 'prismui-core';
 import React from 'react';
 import {
   Control,

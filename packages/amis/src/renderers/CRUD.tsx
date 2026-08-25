@@ -23,15 +23,15 @@ import {
   AMISButton,
   AMISButtonSchema,
   AMISTemplate
-} from 'amis-core';
+} from 'prismui-core';
 import {
   SchemaNode,
   Schema,
   ActionObject,
   PlainObject,
   AMISExpression
-} from 'amis-core';
-import {CRUDStore, ICRUDStore, getMatchedEventTargets} from 'amis-core';
+} from 'prismui-core';
+import {CRUDStore, ICRUDStore, getMatchedEventTargets} from 'prismui-core';
 import {
   createObject,
   extendObject,
@@ -45,19 +45,19 @@ import {
   isIntegerInRange,
   spliceTree,
   BaseSchemaWithoutType
-} from 'amis-core';
-import {ScopedContext, IScopedContext} from 'amis-core';
-import {Button, SpinnerExtraProps, TooltipWrapper} from 'amis-ui';
-import {Select} from 'amis-ui';
-import {getExprProperties, isObject} from 'amis-core';
+} from 'prismui-core';
+import {ScopedContext, IScopedContext} from 'prismui-core';
+import {Button, SpinnerExtraProps, TooltipWrapper} from 'prismui-ui';
+import {Select} from 'prismui-ui';
+import {getExprProperties, isObject} from 'prismui-core';
 import pick from 'lodash/pick';
-import {evalExpression, filter} from 'amis-core';
-import {isEffectiveApi, isApiOutdated, str2function} from 'amis-core';
+import {evalExpression, filter} from 'prismui-core';
+import {isEffectiveApi, isApiOutdated, str2function} from 'prismui-core';
 import omit from 'lodash/omit';
 import find from 'lodash/find';
 import findIndex from 'lodash/findIndex';
-import {Html} from 'amis-ui';
-import {Icon, confirm} from 'amis-ui';
+import {Html} from 'prismui-ui';
+import {Icon, confirm} from 'prismui-ui';
 import {
   BaseSchema,
   SchemaApi,
@@ -82,14 +82,14 @@ import {
   parsePrimitiveQueryString,
   isMobile,
   AMISSchemaBase
-} from 'amis-core';
+} from 'prismui-core';
 
 import type {AMISPaginationSchema, PaginationProps} from './Pagination';
 import {isAlive} from 'mobx-state-tree';
 import isPlainObject from 'lodash/isPlainObject';
 import memoize from 'lodash/memoize';
-import {Spinner} from 'amis-ui';
-import {AutoFoldedList} from 'amis-ui';
+import {Spinner} from 'prismui-ui';
+import {AutoFoldedList} from 'prismui-ui';
 import {getQuickEditApi, type AMISQuickEditObject} from './QuickEdit';
 
 interface AMISLoadMoreConfig {
@@ -2704,8 +2704,12 @@ export default class CRUD<T extends CRUDProps> extends React.Component<T, any> {
   }
 
   renderFilterToggler() {
-    const {store, classnames: cx, translate: __, filterTogglable} =
-      this.propsSnapshot;
+    const {
+      store,
+      classnames: cx,
+      translate: __,
+      filterTogglable
+    } = this.propsSnapshot;
 
     if (!store.filterTogglable) {
       return null;
@@ -2744,8 +2748,12 @@ export default class CRUD<T extends CRUDProps> extends React.Component<T, any> {
   }
 
   renderExportCSV(toolbar: Schema) {
-    const {store, classPrefix: ns, translate: __, loadDataOnce} =
-      this.propsSnapshot;
+    const {
+      store,
+      classPrefix: ns,
+      translate: __,
+      loadDataOnce
+    } = this.propsSnapshot;
     const api = (toolbar as Schema).api;
     const filename = toolbar.filename;
 
@@ -2779,8 +2787,13 @@ export default class CRUD<T extends CRUDProps> extends React.Component<T, any> {
       return null;
     }
 
-    const {render, store, mobileUI, translate: __, testIdBuilder} =
-      this.propsSnapshot;
+    const {
+      render,
+      store,
+      mobileUI,
+      translate: __,
+      testIdBuilder
+    } = this.propsSnapshot;
     const type = (toolbar as Schema).type || toolbar;
 
     if (type === 'bulkActions' || type === 'bulk-actions') {

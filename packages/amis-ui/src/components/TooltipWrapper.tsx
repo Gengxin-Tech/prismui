@@ -11,11 +11,11 @@ import {
   getReactElementRef,
   mergeRefs,
   uncontrollable
-} from 'amis-core';
+} from 'prismui-core';
 import Tooltip from './Tooltip';
-import {ClassNamesFn, themeable} from 'amis-core';
-import {Overlay} from 'amis-core';
-import {isObject} from 'amis-core';
+import {ClassNamesFn, themeable} from 'prismui-core';
+import {Overlay} from 'prismui-core';
+import {isObject} from 'prismui-core';
 
 export type Trigger = 'hover' | 'click' | 'focus';
 

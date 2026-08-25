@@ -7,17 +7,17 @@ import groupBy from 'lodash/groupBy';
 import remove from 'lodash/remove';
 import omit from 'lodash/omit';
 import cx from 'classnames';
-import {ConditionBuilderFields, FormItem, flattenTree} from 'amis';
+import {ConditionBuilderFields, FormItem, flattenTree} from 'prismui-framework';
 
 import {
   JSONPipeOut,
   autobind,
   getConditionVariables,
   isObjectShallowModified
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import ValidationItem, {ValidatorData} from './ValidationItem';
 
-import type {FormControlProps} from 'amis-core';
+import type {FormControlProps} from 'prismui-core';
 import {
   getValidator,
   getValidatorsByTag,

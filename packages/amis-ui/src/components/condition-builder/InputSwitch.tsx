@@ -2,8 +2,8 @@ import React from 'react';
 import PopOverContainer from '../PopOverContainer';
 import {Icon} from '../icons';
 import GroupedSelection from '../GroupedSelection';
-import {themeable, ThemeProps} from 'amis-core';
-import type {TestIdBuilder} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface InputSwitchProps extends ThemeProps {
   options: Array<any>;

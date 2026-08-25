@@ -1,7 +1,7 @@
 import {registerEditorPlugin} from '../manager';
 import {BaseEventContext, BasePlugin, BasicToolbarItem} from '../plugin';
 import React from 'react';
-import {JsonView} from 'amis-core';
+import {JsonView} from 'prismui-core';
 
 /**
  * 添加调试功能

@@ -1,4 +1,4 @@
-import type echarts from 'echarts';
+import type {EChartsOption} from 'echarts';
 import {BaseDrawingRender} from './BaseDrawingRender';
 import {Rect} from '../Rect';
 
@@ -7,7 +7,7 @@ export class EChartsRender extends BaseDrawingRender {
     super(container, displayRect, gid, 'excel-chart');
   }
 
-  render(option: echarts.EChartOption) {
+  render(option: EChartsOption) {
     import('echarts').then(echarts => {
       // @ts-ignore 奇怪为啥不对
       const chart = echarts.init(this.drawingContainer);

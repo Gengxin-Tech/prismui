@@ -2,7 +2,7 @@ import {observer} from 'mobx-react';
 import React from 'react';
 import {EditorManager} from '../../manager';
 import {EditorStoreType} from '../../store/editor';
-import {Drawer} from 'amis';
+import {Drawer} from 'prismui-framework';
 import {autobind} from '../../util';
 import {EditorNodeType} from '../../store/node';
 

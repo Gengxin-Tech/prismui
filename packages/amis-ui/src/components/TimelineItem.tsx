@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-import {themeable, ThemeProps, localeable, LocaleProps} from 'amis-core';
+import {themeable, ThemeProps, localeable, LocaleProps} from 'prismui-core';
 import {Icon} from './icons';
 import type {IconCheckedSchema} from './index';
 

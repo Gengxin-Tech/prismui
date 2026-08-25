@@ -1,14 +1,18 @@
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import React from 'react';
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BasePlugin,
   ContextMenuEventContext,
   ContextMenuItem,
   RegionConfig
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {JSONPipeIn, JSONUpdate, makeHorizontalDeeper} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {
+  JSONPipeIn,
+  JSONUpdate,
+  makeHorizontalDeeper
+} from 'prismui-editor-core';
 import {generateId} from '../../util';
 
 export class GroupControlPlugin extends BasePlugin {
@@ -126,8 +130,7 @@ export class GroupControlPlugin extends BasePlugin {
                 leftRate:
                   value && typeof value.left === 'number'
                     ? value.left
-                    : value &&
-                      /\bcol\-(?:xs|sm|md|lg)\-(\d+)\b/.test(value.left)
+                    : value && /\bcol-(?:xs|sm|md|lg)-(\d+)\b/.test(value.left)
                     ? parseInt(RegExp.$1, 10)
                     : 2,
                 leftFixed: (value && value.leftFixed) || ''
@@ -159,7 +162,7 @@ export class GroupControlPlugin extends BasePlugin {
                     return 'custom';
                   } else if (
                     data.columnClassName &&
-                    /\bcol\-(?:xs|sm|md|lg)\-(\d+)\b/.test(
+                    /\bcol-(?:xs|sm|md|lg)-(\d+)\b/.test(
                       data.columnClassName as string
                     )
                   ) {
@@ -190,7 +193,7 @@ export class GroupControlPlugin extends BasePlugin {
                 type: 'input-range',
                 name: 'columnRatio',
                 visibleOn:
-                  'typeof this.columnRatio === "number" || this.columnClassName && /\\bcol\\-(?:xs|sm|md|lg)\\-(\\d+)\\b/.test(this.columnClassName)',
+                  'typeof this.columnRatio === "number" || this.columnClassName && /\\bcol-(?:xs|sm|md|lg)-(\\d+)\\b/.test(this.columnClassName)',
                 pipeIn: (value: any, data: any) => {
                   if (typeof value === 'number') {
                     return value;
@@ -198,7 +201,7 @@ export class GroupControlPlugin extends BasePlugin {
 
                   if (
                     !data.columnClassName ||
-                    !/\bcol\-(?:xs|sm|md|lg)\-(\d+)\b/.test(
+                    !/\bcol-(?:xs|sm|md|lg)-(\d+)\b/.test(
                       data.columnClassName as string
                     )
                   ) {

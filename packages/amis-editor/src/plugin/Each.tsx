@@ -1,8 +1,8 @@
-import {isObject} from 'amis';
+import {isObject} from 'prismui-framework';
 import React from 'react';
-import {EditorNodeType, registerEditorPlugin} from 'amis-editor-core';
-import {BaseEventContext, BasePlugin} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+import {EditorNodeType, registerEditorPlugin} from 'prismui-editor-core';
+import {BaseEventContext, BasePlugin} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 import {escapeFormula, generateId} from '../util';
 import merge from 'lodash/merge';
 import set from 'lodash/set';

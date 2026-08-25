@@ -1,7 +1,7 @@
 /**
  * 默认的拖拽模式实现。
  */
-import {animation} from 'amis';
+import {animation} from 'prismui-framework';
 import findIndex from 'lodash/findIndex';
 import {EditorDNDManager} from './index';
 import {renderThumbToGhost} from '../component/factory';

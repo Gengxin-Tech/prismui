@@ -7,7 +7,7 @@ import {
   BaseEventContext,
   registerEditorPlugin,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   getEventControlConfig,
   getActionCommonProps

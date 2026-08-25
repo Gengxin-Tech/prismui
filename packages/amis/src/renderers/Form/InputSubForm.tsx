@@ -5,19 +5,19 @@ import {
   FormBaseControl,
   getStableClassName,
   getStableClassSelector
-} from 'amis-core';
+} from 'prismui-core';
 import cx from 'classnames';
 import omit from 'lodash/omit';
 import pick from 'lodash/pick';
-import {createObject, guid} from 'amis-core';
-import {Icon} from 'amis-ui';
+import {createObject, guid} from 'prismui-core';
+import {Icon} from 'prismui-ui';
 import {FormBaseControlSchema, AMISClassName} from '../../Schema';
 import Sortable from 'sortablejs';
-import {isMobile} from 'amis-core';
-import {PopUp} from 'amis-ui';
-import {autobind} from 'amis-core';
+import {isMobile} from 'prismui-core';
+import {PopUp} from 'prismui-ui';
+import {autobind} from 'prismui-core';
 
-import type {AMISFormBase, AMISFormItem, TestIdBuilder} from 'amis-core';
+import type {AMISFormBase, AMISFormItem, TestIdBuilder} from 'prismui-core';
 /**
  * SubForm 子表单
  * 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/form/subform

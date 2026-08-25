@@ -418,7 +418,7 @@ export function lexer(input: string, options: LexerOptions = {}) {
       // 靠外面反馈吧
       if (options?.isFilter) {
         const restInput = input.substring(token.start.index + 1).trim();
-        const m = /^[A-Za-z0-9_$@][A-Za-z0-9_\-$@]*/.exec(restInput);
+        const m = /^[A-Za-z0-9_$@][A-Za-z0-9_$@-]*/.exec(restInput);
         if (!m || !options.isFilter(m[0])) {
           return token;
         }
@@ -729,7 +729,7 @@ export function lexer(input: string, options: LexerOptions = {}) {
     // 仅仅支持 xxx.xxx 或者 xxx[ exression ] 这类语法
     // 所以纯变量模式支持纯数字作为变量名
     const reg = options?.variableMode
-      ? /^[\u4e00-\u9fa5A-Za-z0-9_$@][\u4e00-\u9fa5A-Za-z0-9_\-$@]*/
+      ? /^[\u4e00-\u9fa5A-Za-z0-9_$@][\u4e00-\u9fa5A-Za-z0-9_$@-]*/
       : /^(?:[\u4e00-\u9fa5A-Za-z_$@]([\u4e00-\u9fa5A-Za-z0-9_$@]|\\(?:\.|\[|\]|\(|\)|\{|\}|\s|=|!|>|<|\||&|\+|-|\*|\/|\^|~|%|&|\?|:|;|,))*|\d+(?![eE][+-]?\d)[\u4e00-\u9fa5A-Za-z_$@](?:[\u4e00-\u9fa5A-Za-z0-9_$@]|\\(?:\.|\[|\]|\(|\)|\{|\}|\s|=|!|>|<|\||&|\+|-|\*|\/|\^|~|%|&|\?|:|;|,))*)/;
 
     const match = reg.exec(

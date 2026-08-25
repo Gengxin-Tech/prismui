@@ -4,10 +4,10 @@
 
 import React from 'react';
 import isEqual from 'lodash/isEqual';
-import {toast} from 'amis';
-import {TableViewSchema, TrObject} from 'amis';
-import {EditorManager} from 'amis-editor-core';
-import {autobind, JSONGetById, EditorStoreType} from 'amis-editor-core';
+import {toast} from 'prismui-framework';
+import {TableViewSchema, TrObject} from 'prismui-framework';
+import {EditorManager} from 'prismui-editor-core';
+import {autobind, JSONGetById, EditorStoreType} from 'prismui-editor-core';
 
 interface TableViewEditorProps {
   schema: TableViewSchema;

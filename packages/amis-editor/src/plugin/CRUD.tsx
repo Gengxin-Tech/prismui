@@ -1,4 +1,4 @@
-import {toast, normalizeApiResponseData} from 'amis';
+import {toast, normalizeApiResponseData} from 'prismui-framework';
 import cloneDeep from 'lodash/cloneDeep';
 import React from 'react';
 import {
@@ -11,7 +11,7 @@ import {
   jsonToJsonSchema,
   registerEditorPlugin,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -27,15 +27,15 @@ import {
   defaultValue,
   getSchemaTpl,
   JSONPipeIn
-} from 'amis-editor-core';
-import {setVariable, someTree, normalizeApi} from 'amis-core';
-import type {AMISCRUDCommonSchema} from 'amis';
+} from 'prismui-editor-core';
+import {setVariable, someTree, normalizeApi} from 'prismui-core';
+import type {AMISCRUDCommonSchema} from 'prismui-framework';
 import {getEnv} from 'mobx-state-tree';
 import type {
   EditorNodeType,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import isPlainObject from 'lodash/isPlainObject';
 import findLastIndex from 'lodash/findLastIndex';
 

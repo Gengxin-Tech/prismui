@@ -6,10 +6,15 @@
 import React from 'react';
 import Modal from './Modal';
 import Button from './Button';
-import {ClassNamesFn, renderReactNode, themeable, ThemeProps} from 'amis-core';
-import {LocaleProps, localeable} from 'amis-core';
+import {
+  ClassNamesFn,
+  renderReactNode,
+  themeable,
+  ThemeProps
+} from 'prismui-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import Html from './Html';
-import type {PlainObject} from 'amis-core';
+import type {PlainObject} from 'prismui-core';
 export interface AlertProps extends ThemeProps, LocaleProps {
   container?: any;
   confirmText?: string;

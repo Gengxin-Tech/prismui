@@ -1,9 +1,9 @@
 import React from 'react';
-import {ThemeProps, themeable, localeable, LocaleProps} from 'amis-core';
+import {ThemeProps, themeable, localeable, LocaleProps} from 'prismui-core';
 import {SpinnerExtraProps} from '../Spinner';
 import DropDownSelection from '../DropDownSelection';
 import ChainedDropdownSelection from '../ChainedDropdownSelection';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface ConditionFieldProps
   extends ThemeProps,

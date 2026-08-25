@@ -4,11 +4,11 @@
  */
 
 import React, {useEffect, useRef, useState} from 'react';
-import {Icon, Overlay, PopOver, TooltipWrapper} from 'amis-ui';
+import {Icon, Overlay, PopOver, TooltipWrapper} from 'prismui-ui';
 import cloneDeep from 'lodash/cloneDeep';
 import debounce from 'lodash/debounce';
-import {FormItem, resolveVariableAndFilter, highlight} from 'amis-core';
-import type {FormControlProps} from 'amis-core';
+import {FormItem, resolveVariableAndFilter, highlight} from 'prismui-core';
+import type {FormControlProps} from 'prismui-core';
 import cx from 'classnames';
 import {getDefaultValue} from '../util';
 

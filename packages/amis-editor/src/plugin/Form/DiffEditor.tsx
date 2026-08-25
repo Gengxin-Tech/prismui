@@ -1,15 +1,15 @@
-import {EditorAvailableLanguages as availableLanguages} from 'amis';
+import {EditorAvailableLanguages as availableLanguages} from 'prismui-framework';
 import {
   defaultValue,
   getSchemaTpl,
   undefinedPipeOut,
   registerEditorPlugin,
   BasePlugin
-} from 'amis-editor-core';
-import type {BaseEventContext} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import type {BaseEventContext} from 'prismui-editor-core';
 import {ValidatorTag} from '../../validator';
 import {getEventControlConfig} from '../../renderer/event-control/helper';
-import {RendererPluginEvent, RendererPluginAction} from 'amis-editor-core';
+import {RendererPluginEvent, RendererPluginAction} from 'prismui-editor-core';
 import {getActionCommonProps} from '../../renderer/event-control/helper';
 
 export class DiffEditorControlPlugin extends BasePlugin {

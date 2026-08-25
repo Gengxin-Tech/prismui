@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button, Switch} from 'amis-ui';
-import {Editor as VisualEditor} from 'amis-editor';
+import {Button, Switch} from 'prismui-ui';
+import {Editor as VisualEditor} from 'prismui-editor';
 
 const storageKey = 'prismui_editor_schema';
 const previewStorageKey = 'prismui_editor_preview';

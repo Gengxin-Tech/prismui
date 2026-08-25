@@ -1,5 +1,5 @@
 import React from 'react';
-import {getI18nEnabled, registerEditorPlugin} from 'amis-editor-core';
+import {getI18nEnabled, registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -9,14 +9,14 @@ import {
   RegionConfig,
   RendererInfo,
   VRendererConfig
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {mapReactElement} from 'amis-editor-core';
-import {VRenderer} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {mapReactElement} from 'prismui-editor-core';
+import {VRenderer} from 'prismui-editor-core';
 import findIndex from 'lodash/findIndex';
-import {RegionWrapper as Region} from 'amis-editor-core';
-import {Tab} from 'amis';
-import {tipedLabel} from 'amis-editor-core';
+import {RegionWrapper as Region} from 'prismui-editor-core';
+import {Tab} from 'prismui-framework';
+import {tipedLabel} from 'prismui-editor-core';
 import {
   buildLinkActionDesc,
   getArgsWrapper,

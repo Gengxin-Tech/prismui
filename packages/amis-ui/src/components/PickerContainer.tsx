@@ -6,11 +6,11 @@ import {
   ThemeProps,
   localeable,
   LocaleProps
-} from 'amis-core';
+} from 'prismui-core';
 import Modal from './Modal';
 import Button from './Button';
 import ConfirmBox, {ConfirmBoxProps} from './ConfirmBox';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface PickerContainerProps
   extends ThemeProps,

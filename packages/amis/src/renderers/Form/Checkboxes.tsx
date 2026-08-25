@@ -11,18 +11,18 @@ import {
   CustomStyle,
   setThemeClassName,
   formateCheckThemeCss
-} from 'amis-core';
+} from 'prismui-core';
 import type {
   ActionObject,
   Api,
   OptionsControlProps,
   Option,
   AMISFormItemWithOptions
-} from 'amis-core';
-import {Checkbox, Icon, Spinner, TooltipWrapper} from 'amis-ui';
+} from 'prismui-core';
+import {Checkbox, Icon, Spinner, TooltipWrapper} from 'prismui-ui';
 import {FormOptionsSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 import debounce from 'lodash/debounce';
 
 /**

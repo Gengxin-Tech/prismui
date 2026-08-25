@@ -10,11 +10,11 @@ import {
   filter,
   getVariable,
   AMISFormItemWithOptions
-} from 'amis-core';
-import {Option, TestIdBuilder} from 'amis-core';
-import {ActionObject, isObject} from 'amis-core';
-import type {BadgeObject} from 'amis-ui';
-import {getLevelFromClassName, autobind, isEmpty} from 'amis-core';
+} from 'prismui-core';
+import {Option, TestIdBuilder} from 'prismui-core';
+import {ActionObject, isObject} from 'prismui-core';
+import type {BadgeObject} from 'prismui-ui';
+import {getLevelFromClassName, autobind, isEmpty} from 'prismui-core';
 import {AMISButtonGroupSchemaBase} from '../ButtonGroup';
 import {supportStatic} from './StaticHoc';
 

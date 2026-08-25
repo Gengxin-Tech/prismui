@@ -1,6 +1,6 @@
 import React from 'react';
 import {cleanup, render, waitFor} from '@testing-library/react';
-import {theme} from 'amis-core';
+import {theme} from 'prismui-core';
 import Spinner from '../src/components/Spinner';
 
 describe('Spinner ThemeScope portal', () => {

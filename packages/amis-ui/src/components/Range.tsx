@@ -10,14 +10,14 @@ import isString from 'lodash/isString';
 import difference from 'lodash/difference';
 import React from 'react';
 import TooltipWrapper from './TooltipWrapper';
-import {uncontrollable} from 'amis-core';
+import {uncontrollable} from 'prismui-core';
 
-import {Overlay} from 'amis-core';
-import type {ThemeProps} from 'amis-core';
-import {themeable} from 'amis-core';
-import {autobind, camel} from 'amis-core';
-import {stripNumber} from 'amis-core';
-import {safeAdd, safeSub} from 'amis-core';
+import {Overlay} from 'prismui-core';
+import type {ThemeProps} from 'prismui-core';
+import {themeable} from 'prismui-core';
+import {autobind, camel} from 'prismui-core';
+import {stripNumber} from 'prismui-core';
+import {safeAdd, safeSub} from 'prismui-core';
 import {Icon} from './icons';
 
 type MarksType = {

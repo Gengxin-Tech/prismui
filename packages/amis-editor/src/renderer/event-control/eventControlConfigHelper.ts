@@ -5,7 +5,7 @@ import {
   PluginActions,
   RendererPluginAction,
   SubRendererPluginAction
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {
   filterTree,
   findTree,
@@ -13,7 +13,7 @@ import {
   PlainObject,
   Schema,
   getRendererByName
-} from 'amis-core';
+} from 'prismui-core';
 import {ActionConfig, ComponentInfo} from './types';
 import {ActionData} from '.';
 import {NO_SUPPORT_STATIC_FORMITEM_CMPTS} from './constants';

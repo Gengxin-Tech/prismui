@@ -4,11 +4,11 @@
 
 import React from 'react';
 import TooltipWrapper, {Trigger} from './TooltipWrapper';
-import {ClassNamesFn, themeable, ThemeProps} from 'amis-core';
-import {RootClose} from 'amis-core';
-import {removeHTMLTag} from 'amis-core';
+import {ClassNamesFn, themeable, ThemeProps} from 'prismui-core';
+import {RootClose} from 'prismui-core';
+import {removeHTMLTag} from 'prismui-core';
 import {Icon} from './icons';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export type ItemPlace = 'start' | 'middle' | 'end';
 export type TooltipPositionType = 'top' | 'bottom' | 'left' | 'right';

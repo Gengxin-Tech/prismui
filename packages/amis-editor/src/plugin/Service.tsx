@@ -1,7 +1,7 @@
 import React from 'react';
 import DeepDiff from 'deep-diff';
 import pick from 'lodash/pick';
-import {render as amisRender} from 'amis';
+import {render as amisRender} from 'prismui-framework';
 import flattenDeep from 'lodash/flattenDeep';
 import {
   EditorNodeType,
@@ -13,7 +13,7 @@ import {
   RegionConfig,
   getSchemaTpl,
   tipedLabel
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {DSBuilderManager} from '../builder/DSBuilderManager';
 import {DSFeatureEnum, ModelDSBuilderKey, ApiDSBuilderKey} from '../builder';
 import {
@@ -22,12 +22,12 @@ import {
   buildLinkActionDesc
 } from '../renderer/event-control/helper';
 
-import type {Schema} from 'amis-core';
+import type {Schema} from 'prismui-core';
 import type {
   EditorManager,
   RendererPluginAction,
   RendererPluginEvent
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 
 export class ServicePlugin extends BasePlugin {
   static id = 'ServicePlugin';

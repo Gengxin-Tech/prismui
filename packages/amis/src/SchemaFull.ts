@@ -1,5 +1,5 @@
 import {AMISPageSchema} from './renderers/Page';
-import {AMISButtonSchema, AMISFormSchema} from 'amis-core';
+import {AMISButtonSchema, AMISFormSchema} from 'prismui-core';
 import {AMISAlertSchema} from './renderers/Alert';
 import {AMISFlexSchema} from './renderers/Flex';
 import {AMISTplSchema} from './renderers/Tpl';
@@ -148,7 +148,7 @@ import {AMISDrawerSchema} from './renderers/Drawer';
 
 export type RootSchema = AMISPageSchema;
 
-declare module 'amis-core' {
+declare module 'prismui-core' {
   interface AMISSchemaRegistry {
     // ==================== 基础组件 ====================
     /** 表单容器组件，用于收集和提交用户输入数据 */
@@ -612,4 +612,4 @@ export type RootRenderer = AMISPageSchema;
 //   definitions?: AMISDefinitions;
 //   type?: AMISSchemaType;
 // };
-export type {AMISSchemaType} from 'amis-core';
+export type {AMISSchemaType} from 'prismui-core';

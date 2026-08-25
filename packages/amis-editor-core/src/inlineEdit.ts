@@ -3,7 +3,7 @@
  * 提供了纯文本和富文本两种编辑模式
  * 支持通过鼠标点击位置设置光标
  */
-import {guid} from 'amis-core';
+import {guid} from 'prismui-core';
 import {InlineEditableElement} from './plugin';
 import {EditorNodeType} from './store/node';
 import keycode from 'keycode';
@@ -115,7 +115,7 @@ async function startRichTextEdit({
   onConfirm,
   onCancel
 }: InlineEditContext) {
-  const {FroalaEditor} = await import('amis-ui/lib/components/RichText');
+  const {FroalaEditor} = await import('prismui-ui/lib/components/RichText');
   const id = `u_${guid()}`;
   elem.setAttribute('data-froala-id', id);
 

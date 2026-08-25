@@ -15,11 +15,11 @@ import {
   isObject,
   resolveEventData,
   TestIdBuilder
-} from 'amis-core';
+} from 'prismui-core';
 import {FormBaseControlSchema, SchemaTokenizeableString} from '../../Schema';
 import type {CellRichTextValue, CellValue} from 'exceljs';
-import {Icon, TooltipWrapper} from 'amis-ui';
-import {AMISFormItem} from 'amis-core';
+import {Icon, TooltipWrapper} from 'prismui-ui';
+import {AMISFormItem} from 'prismui-core';
 
 /**
  * Excel 文件状态

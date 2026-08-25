@@ -1,7 +1,7 @@
-import {FormControlProps, FormItem} from 'amis-core';
+import {FormControlProps, FormItem} from 'prismui-core';
 import React from 'react';
 import cx from 'classnames';
-import {JSONUpdate} from 'amis-editor-core';
+import {JSONUpdate} from 'prismui-editor-core';
 
 const baseColSize = ['1/4', '1/3', '1/2', '2/3', '3/4', '1'];
 

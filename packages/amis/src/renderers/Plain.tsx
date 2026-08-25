@@ -1,10 +1,10 @@
 import React from 'react';
-import {autobind, createObject, Renderer, RendererProps} from 'amis-core';
-import {filter} from 'amis-core';
+import {autobind, createObject, Renderer, RendererProps} from 'prismui-core';
+import {filter} from 'prismui-core';
 import cx from 'classnames';
 import {BaseSchema, SchemaTpl} from '../Schema';
-import {getPropValue} from 'amis-core';
-import {AMISSchemaBase} from 'amis-core';
+import {getPropValue} from 'prismui-core';
+import {AMISSchemaBase} from 'prismui-core';
 
 /**
  * Plain 纯文本渲染器

@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import {ThemeProps} from 'amis-core';
+import {ThemeProps} from 'prismui-core';
 
 import {SummaryProps} from './index';
 import {updateFixedRow, hasFixedColumn} from './util';

@@ -1,9 +1,9 @@
-import {registerEditorPlugin, tipedLabel} from 'amis-editor-core';
-import {BasePlugin} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
-import {JSONPipeOut} from 'amis-editor-core';
-import {mockValue} from 'amis-editor-core';
-import {RendererPluginEvent, BaseEventContext} from 'amis-editor-core';
+import {registerEditorPlugin, tipedLabel} from 'prismui-editor-core';
+import {BasePlugin} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
+import {JSONPipeOut} from 'prismui-editor-core';
+import {mockValue} from 'prismui-editor-core';
+import {RendererPluginEvent, BaseEventContext} from 'prismui-editor-core';
 import {getEventControlConfig} from '../renderer/event-control/helper';
 export class VideoPlugin extends BasePlugin {
   static id = 'VideoPlugin';

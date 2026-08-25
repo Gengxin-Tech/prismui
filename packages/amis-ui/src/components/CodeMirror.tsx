@@ -1,8 +1,8 @@
 import React from 'react';
 // import 'codemirror/lib/codemirror.css';
 import type CodeMirror from 'codemirror';
-import {autobind, changedEffect} from 'amis-core';
-import {resizeSensor} from 'amis-core';
+import {autobind, changedEffect} from 'prismui-core';
+import {resizeSensor} from 'prismui-core';
 
 export interface CodeMirrorEditorProps {
   className?: string;

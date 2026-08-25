@@ -5,10 +5,10 @@
 
 import React from 'react';
 
-import {ThemeProps, ClassNamesFn} from 'amis-core';
+import {ThemeProps, ClassNamesFn} from 'prismui-core';
 
 import {ColumnProps} from './index';
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 const zIndex = 1;
 

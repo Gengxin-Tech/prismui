@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button, resolveVariable} from 'amis';
-import type {AMISSchema, DataScope, SchemaObject} from 'amis';
+import {Button, resolveVariable} from 'prismui-framework';
+import type {AMISSchema, DataScope, SchemaObject} from 'prismui-framework';
 import {
   getI18nEnabled,
   RendererPluginAction,
@@ -22,9 +22,9 @@ import {
   defaultValue,
   getSchemaTpl,
   tipedLabel
-} from 'amis-editor-core';
-import type {EditorManager} from 'amis-editor-core';
-import {setVariable, someTree} from 'amis-core';
+} from 'prismui-editor-core';
+import type {EditorManager} from 'prismui-editor-core';
+import {setVariable, someTree} from 'prismui-core';
 import {reaction} from 'mobx';
 import {DSBuilderManager} from '../builder/DSBuilderManager';
 import {

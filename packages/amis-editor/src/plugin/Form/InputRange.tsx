@@ -1,19 +1,19 @@
-import {isObject} from 'amis';
-import type {IFormStore, IFormItemStore} from 'amis-core';
+import {isObject} from 'prismui-framework';
+import type {IFormStore, IFormItemStore} from 'prismui-core';
 import {
   BasePlugin,
   defaultValue,
   getSchemaTpl,
   tipedLabel,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import type {
   EditorNodeType,
   RendererPluginAction,
   RendererPluginEvent,
   BaseEventContext,
   EditorManager
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {ValidatorTag} from '../../validator';
 import {
   getEventControlConfig,

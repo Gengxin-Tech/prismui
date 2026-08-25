@@ -1,4 +1,4 @@
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -6,15 +6,15 @@ import {
   PluginInterface,
   RendererInfoResolveEventContext,
   tipedLabel
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 import {BUTTON_DEFAULT_ACTION} from '../component/BaseControl';
 import {getEventControlConfig} from '../renderer/event-control/helper';
-import {RendererPluginAction, RendererPluginEvent} from 'amis-editor-core';
-import type {SchemaObject} from 'amis';
+import {RendererPluginAction, RendererPluginEvent} from 'prismui-editor-core';
+import type {SchemaObject} from 'prismui-framework';
 import {getOldActionSchema} from '../renderer/event-control/helper';
 import {buttonStateFunc} from '../renderer/style-control/helper';
-import {InlineEditableElement} from 'amis-editor-core';
+import {InlineEditableElement} from 'prismui-editor-core';
 
 export class ButtonPlugin extends BasePlugin {
   static id = 'ButtonPlugin';

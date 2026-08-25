@@ -1,4 +1,4 @@
-import {extendsFilters, FilterContext, filters} from 'amis-formula';
+import {extendsFilters, FilterContext, filters} from 'prismui-formula';
 import moment from 'moment';
 import {makeSorter} from './makeSorter';
 import transform from 'lodash/transform';
@@ -276,7 +276,7 @@ extendsFilters({
               obj[key] += item[key];
             } else if (
               typeof item[key] === 'string' &&
-              /^(?:\-|\.)\d/.test(item[key]) &&
+              /^(?:-|\.)\d/.test(item[key]) &&
               typeof obj[key] === 'number'
             ) {
               obj[key] += parseFloat(item[key]) || 0;

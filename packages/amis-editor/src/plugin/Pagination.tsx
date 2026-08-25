@@ -7,7 +7,7 @@ import {
   getSchemaTpl,
   RendererPluginEvent,
   registerEditorPlugin
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import sortBy from 'lodash/sortBy';
 import {getEventControlConfig} from '../renderer/event-control/helper';
 

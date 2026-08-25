@@ -3,9 +3,9 @@
  */
 
 import React from 'react';
-import {themeable, ThemeProps} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
 import {Icon, getIcon} from './icons';
-import {autobind, noop} from 'amis-core';
+import {autobind, noop} from 'prismui-core';
 
 export interface TagProps extends ThemeProps {
   style: React.CSSProperties;

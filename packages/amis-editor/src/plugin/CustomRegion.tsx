@@ -3,15 +3,15 @@
  */
 
 import React from 'react';
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BasePlugin,
   BasicRendererInfo,
   RendererInfoResolveEventContext,
   PluginInterface,
   RegionConfig
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 import isArray from 'lodash/isArray';
 import {generateId} from '../util';
 

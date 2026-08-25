@@ -1,4 +1,4 @@
-import {getStableClassName, getStableClassSelector} from 'amis-core';
+import {getStableClassName, getStableClassSelector} from 'prismui-core';
 
 declare const Sortable: new (
   node: Element,

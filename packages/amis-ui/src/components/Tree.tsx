@@ -32,12 +32,12 @@ import {
   resizeSensor,
   calculateHeight,
   getStableClassSelector
-} from 'amis-core';
+} from 'prismui-core';
 import {Option, Options, value2array} from './Select';
-import {themeable, ThemeProps, highlight} from 'amis-core';
+import {themeable, ThemeProps, highlight} from 'prismui-core';
 import {Icon} from './icons';
 import Checkbox from './Checkbox';
-import {LocaleProps, localeable} from 'amis-core';
+import {LocaleProps, localeable} from 'prismui-core';
 import Spinner, {SpinnerExtraProps} from './Spinner';
 import {ItemRenderStates} from './Selection';
 import VirtualList from './virtual-list';

@@ -1,10 +1,10 @@
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   LayoutBasePlugin,
   RegionConfig,
   BaseEventContext
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 
 export class WrapperPlugin extends LayoutBasePlugin {
   static id = 'WrapperPlugin';

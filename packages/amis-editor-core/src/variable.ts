@@ -14,8 +14,8 @@ import {
   findTree,
   eachTree,
   DATASCHEMA_TYPE_MAP
-} from 'amis-core';
-import type {Option} from 'amis-core';
+} from 'prismui-core';
+import type {Option} from 'prismui-core';
 
 export interface VariableGroup {
   /** 变量命名空间 */

@@ -12,7 +12,7 @@ import {
   LocaleProps,
   localeable,
   resizeSensor
-} from 'amis-core';
+} from 'prismui-core';
 import SmoothSignature from 'smooth-signature';
 import Button from './Button';
 import {Icon} from '../index';

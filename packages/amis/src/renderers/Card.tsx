@@ -1,11 +1,11 @@
 import React from 'react';
 import omit from 'lodash/omit';
 import extend from 'lodash/extend';
-import {Renderer, RendererProps} from 'amis-core';
-import {SchemaNode, Schema, ActionObject, PlainObject} from 'amis-core';
-import {filter, evalExpression} from 'amis-core';
-import {Checkbox} from 'amis-ui';
-import {padArr, isVisible, isDisabled, noop, hashCode} from 'amis-core';
+import {Renderer, RendererProps} from 'prismui-core';
+import {SchemaNode, Schema, ActionObject, PlainObject} from 'prismui-core';
+import {filter, evalExpression} from 'prismui-core';
+import {Checkbox} from 'prismui-ui';
+import {padArr, isVisible, isDisabled, noop, hashCode} from 'prismui-core';
 import {
   resolveVariable,
   resolveVariableAndFilter,
@@ -13,7 +13,7 @@ import {
   AMISSchemaCollection,
   AMISSchemaBase,
   AMISSchema
-} from 'amis-core';
+} from 'prismui-core';
 import QuickEdit, {SchemaQuickEdit} from './QuickEdit';
 import PopOver, {SchemaPopOver} from './PopOver';
 import {TableCell} from './Table';
@@ -27,15 +27,15 @@ import {
   SchemaUrlPath
 } from '../Schema';
 import {ActionSchema} from './Action';
-import {Card} from 'amis-ui';
-import {Icon} from 'amis-ui';
+import {Card} from 'prismui-ui';
+import {Icon} from 'prismui-ui';
 import type {
   AMISButtonSchema,
   AMISExpression,
   AMISFormItem,
   AMISTemplate,
   IItem
-} from 'amis-core';
+} from 'prismui-core';
 
 export type AMISCardFieldBase = {
   /**

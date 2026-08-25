@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import {ClassNamesFn, themeable} from 'amis-core';
+import {ClassNamesFn, themeable} from 'prismui-core';
 
 import JsBarcode from 'jsbarcode';
 

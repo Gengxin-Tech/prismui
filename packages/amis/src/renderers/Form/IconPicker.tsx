@@ -3,11 +3,11 @@ import cx from 'classnames';
 import {matchSorter} from 'match-sorter';
 import keycode from 'keycode';
 import Downshift, {StateChangeOptions} from 'downshift';
-import {AMISFormItem, autobind} from 'amis-core';
+import {AMISFormItem, autobind} from 'prismui-core';
 import {ICONS} from './IconPickerIcons';
-import {FormItem, FormControlProps, FormBaseControl} from 'amis-core';
-import {Option} from 'amis-core';
-import {Icon} from 'amis-ui';
+import {FormItem, FormControlProps, FormBaseControl} from 'prismui-core';
+import {Option} from 'prismui-core';
+import {Icon} from 'prismui-ui';
 import {FormBaseControlSchema} from '../../Schema';
 
 /**

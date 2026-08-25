@@ -7,11 +7,11 @@ import {
   Renderer,
   RendererProps,
   resolveVariableAndFilter
-} from 'amis-core';
-import {filter} from 'amis-core';
-import {Icon} from 'amis-ui';
+} from 'prismui-core';
+import {filter} from 'prismui-core';
+import {Icon} from 'prismui-ui';
 import {BaseSchema} from '../Schema';
-import {getPropValue} from 'amis-core';
+import {getPropValue} from 'prismui-core';
 
 export interface StatusSource {
   /**

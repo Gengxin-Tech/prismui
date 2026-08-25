@@ -5,13 +5,10 @@ import {
   RendererProps,
   JsonView,
   JsonViewInteractionProps
-} from 'amis-core';
-import {autobind, getPropValue, noop} from 'amis-core';
+} from 'prismui-core';
+import {autobind, getPropValue, noop} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {
-  resolveVariableAndFilter,
-  isPureVariable
-} from 'amis-core';
+import {resolveVariableAndFilter, isPureVariable} from 'prismui-core';
 export {JsonView};
 /**
  * JSON 数据查看/编辑控件。用于展示或编辑 JSON 数据，支持复制、折叠、键排序等。

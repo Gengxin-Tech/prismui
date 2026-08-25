@@ -1,6 +1,6 @@
 import React from 'react';
-import {Layout, AsideNav, Spinner, NotFound} from 'amis-ui';
-import {eachTree, TreeArray, TreeItem} from 'amis-core';
+import {Layout, AsideNav, Spinner, NotFound} from 'prismui-ui';
+import {eachTree, TreeArray, TreeItem} from 'prismui-core';
 import {
   HashRouter as Router,
   Route,

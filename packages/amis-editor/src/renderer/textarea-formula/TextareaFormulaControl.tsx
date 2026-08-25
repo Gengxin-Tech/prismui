@@ -4,18 +4,18 @@
 
 import React, {MouseEvent} from 'react';
 import cx from 'classnames';
-import {Icon, FormItem, TooltipWrapper, Spinner} from 'amis';
-import {autobind, FormControlProps, render as renderAmis} from 'amis-core';
-import {CodeMirrorEditor, FormulaEditor} from 'amis-ui';
+import {Icon, FormItem, TooltipWrapper, Spinner} from 'prismui-framework';
+import {autobind, FormControlProps, render as renderAmis} from 'prismui-core';
+import {CodeMirrorEditor, FormulaEditor} from 'prismui-ui';
 import {FormulaPlugin, editorFactory} from './plugin';
-import {Button, Overlay, PopOver, VariableList} from 'amis-ui';
-import {RootClose, isMobile} from 'amis-core';
+import {Button, Overlay, PopOver, VariableList} from 'prismui-ui';
+import {RootClose, isMobile} from 'prismui-core';
 import FormulaPicker, {CustomFormulaPickerProps} from './FormulaPicker';
 import {reaction} from 'mobx';
 import {renderFormulaValue} from '../FormulaControl';
-import {getVariables, getQuickVariables} from 'amis-editor-core';
+import {getVariables, getQuickVariables} from 'prismui-editor-core';
 
-import type {VariableItem, CodeMirror} from 'amis-ui';
+import type {VariableItem, CodeMirror} from 'prismui-ui';
 
 export interface AdditionalMenuClickOpts {
   /**

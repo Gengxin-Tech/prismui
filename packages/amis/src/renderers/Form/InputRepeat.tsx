@@ -7,8 +7,8 @@
 
 import React from 'react';
 import cx from 'classnames';
-import {AMISFormItem, isMobile} from 'amis-core';
-import {FormItem, FormControlProps, FormBaseControl} from 'amis-core';
+import {AMISFormItem, isMobile} from 'prismui-core';
+import {FormItem, FormControlProps, FormBaseControl} from 'prismui-core';
 
 /**
  * Repeat
@@ -34,9 +34,9 @@ const LANG: {
   monthly: '月',
   yearly: '年'
 };
-import {Select} from 'amis-ui';
-import {Range as InputRange} from 'amis-ui';
-import {Option} from 'amis-core';
+import {Select} from 'prismui-ui';
+import {Range as InputRange} from 'prismui-ui';
+import {Option} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
 
 export interface RepeatProps extends FormControlProps {

@@ -8,17 +8,21 @@ import {
   normalizeDate,
   getVariable,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 import cx from 'classnames';
-import {filterDate, isPureVariable, resolveVariableAndFilter} from 'amis-core';
+import {
+  filterDate,
+  isPureVariable,
+  resolveVariableAndFilter
+} from 'prismui-core';
 import moment from 'moment';
-import {DatePicker} from 'amis-ui';
+import {DatePicker} from 'prismui-ui';
 import {FormBaseControlSchema, SchemaObject} from '../../Schema';
-import {createObject, anyChanged, isMobile, autobind} from 'amis-core';
-import {ActionObject} from 'amis-core';
+import {createObject, anyChanged, isMobile, autobind} from 'prismui-core';
+import {ActionObject} from 'prismui-core';
 import {supportStatic} from './StaticHoc';
 
-import type {ShortCuts} from 'amis-ui/lib/components/DatePicker';
+import type {ShortCuts} from 'prismui-ui/lib/components/DatePicker';
 
 export interface AMISInputDateSchemaBase extends AMISFormItem {
   /**

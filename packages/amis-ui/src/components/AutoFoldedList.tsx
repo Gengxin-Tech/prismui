@@ -8,8 +8,8 @@
  */
 
 import React, {useEffect, useRef, useState} from 'react';
-import {themeable, ThemeProps} from 'amis-core';
-import {resizeSensor} from 'amis-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import {resizeSensor} from 'prismui-core';
 import TooltipWrapper, {type TooltipObject} from './TooltipWrapper';
 
 export interface AutoFoldedListProps extends ThemeProps {

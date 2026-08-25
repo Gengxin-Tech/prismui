@@ -1,7 +1,7 @@
 import React from 'react';
-import {AMISSchemaBase, ClassName, Renderer, RendererProps} from 'amis-core';
-import {autobind, getPropValue, BaseSchemaWithoutType} from 'amis-core';
-import {isPureVariable, resolveVariableAndFilter} from 'amis-core';
+import {AMISSchemaBase, ClassName, Renderer, RendererProps} from 'prismui-core';
+import {autobind, getPropValue, BaseSchemaWithoutType} from 'prismui-core';
+import {isPureVariable, resolveVariableAndFilter} from 'prismui-core';
 import {
   BaseSchema,
   SchemaTokenizeableString,
@@ -9,10 +9,10 @@ import {
   SchemaUrlPath
 } from '../Schema';
 import {ActionSchema} from './Action';
-import {GridNav, GridNavDirection, GridNavItem} from 'amis-ui';
-import {BadgeObject} from 'amis-ui';
-import {handleAction} from 'amis-core';
-import {validations} from 'amis-core';
+import {GridNav, GridNavDirection, GridNavItem} from 'prismui-ui';
+import {BadgeObject} from 'prismui-ui';
+import {handleAction} from 'prismui-core';
+import {validations} from 'prismui-core';
 
 export interface ListItemSchema extends AMISSchemaBase {
   /**

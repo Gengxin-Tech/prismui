@@ -5,8 +5,8 @@
  */
 
 import React from 'react';
-import {TestIdBuilder, mapTree} from 'amis-core';
-import {ClassNamesFn, themeable} from 'amis-core';
+import {TestIdBuilder, mapTree} from 'prismui-core';
+import {ClassNamesFn, themeable} from 'prismui-core';
 
 export type LinkItem = LinkItemProps;
 interface LinkItemProps {

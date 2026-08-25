@@ -13,9 +13,9 @@ import {
   ClassNamesFn,
   Overlay,
   PopOver
-} from 'amis-core';
+} from 'prismui-core';
 
-import type {TestIdBuilder} from 'amis-core';
+import type {TestIdBuilder} from 'prismui-core';
 
 export interface FilterPayload {
   closeDropdown?: boolean;

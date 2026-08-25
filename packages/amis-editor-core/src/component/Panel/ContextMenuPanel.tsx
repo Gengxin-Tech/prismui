@@ -1,6 +1,6 @@
 import {observer} from 'mobx-react';
 import React from 'react';
-import {Icon} from 'amis';
+import {Icon} from 'prismui-framework';
 import {EditorStoreType} from '../../store/editor';
 
 export interface ContextMenuPanelProps {

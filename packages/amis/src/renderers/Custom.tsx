@@ -7,9 +7,9 @@ import {
   RendererProps,
   renderReactNode,
   unmountReactNode
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {FormControlProps} from 'amis-core';
+import {FormControlProps} from 'prismui-core';
 import isEqual from 'lodash/isEqual';
 
 /**

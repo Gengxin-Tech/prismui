@@ -1,6 +1,6 @@
 import {register as registerBulitin, getFilters} from './tpl-builtin';
 import {register as registerLodash} from './tpl-lodash';
-import {parse, evaluate} from 'amis-formula';
+import {parse, evaluate} from 'prismui-formula';
 import {resolveCondition, resolveConditionAsync} from './resolveCondition';
 import {memoParse} from './tokenize';
 

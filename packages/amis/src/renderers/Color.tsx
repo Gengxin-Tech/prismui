@@ -2,9 +2,9 @@
  * @file 用来展示颜色块。
  */
 import React from 'react';
-import {AMISSchemaBase, Renderer, RendererProps} from 'amis-core';
+import {AMISSchemaBase, Renderer, RendererProps} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {getPropValue} from 'amis-core';
+import {getPropValue} from 'prismui-core';
 
 /**
  * Color 显示渲染器，格式说明。

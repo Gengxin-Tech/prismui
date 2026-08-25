@@ -8,9 +8,9 @@ import {
   filter,
   AMISFormItemWithOptions,
   AMISSchemaCollection
-} from 'amis-core';
-import {ActionObject, Schema} from 'amis-core';
-import {createObject, isEmpty} from 'amis-core';
+} from 'prismui-core';
+import {ActionObject, Schema} from 'prismui-core';
+import {createObject, isEmpty} from 'prismui-core';
 import {FormOptionsSchema, AMISClassName} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 

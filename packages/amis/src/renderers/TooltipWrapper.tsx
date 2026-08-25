@@ -6,16 +6,16 @@ import {
   setThemeClassName,
   AMISSchemaBase,
   AMISSchemaCollection
-} from 'amis-core';
+} from 'prismui-core';
 import {BaseSchema} from '../Schema';
-import {filter} from 'amis-core';
-import {escapeHtml} from 'amis-core';
-import {buildStyle} from 'amis-core';
-import {TooltipWrapper as TooltipWrapperComp} from 'amis-ui';
+import {filter} from 'prismui-core';
+import {escapeHtml} from 'prismui-core';
+import {buildStyle} from 'prismui-core';
+import {TooltipWrapper as TooltipWrapperComp} from 'prismui-ui';
 import type {
   TooltipObject,
   Trigger
-} from 'amis-ui/lib/components/TooltipWrapper';
+} from 'prismui-ui/lib/components/TooltipWrapper';
 
 /**
  * 工具提示包装器，为子元素提供悬浮提示。支持触发方式与位置。

@@ -1,13 +1,13 @@
 import React from 'react';
 import pick from 'lodash/pick';
-import {FormItem, FormControlProps, AMISFormItem} from 'amis-core';
-import {JSONSchemaEditor} from 'amis-ui';
-import {autobind, isObject} from 'amis-core';
+import {FormItem, FormControlProps, AMISFormItem} from 'prismui-core';
+import {JSONSchemaEditor} from 'prismui-ui';
+import {autobind, isObject} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
 
-import {schemaEditorItemPlaceholder} from 'amis-ui/lib/components/schema-editor/Common';
-import type {SchemaEditorItemPlaceholder} from 'amis-ui';
-import {isMobile} from 'amis-core';
+import {schemaEditorItemPlaceholder} from 'prismui-ui/lib/components/schema-editor/Common';
+import type {SchemaEditorItemPlaceholder} from 'prismui-ui';
+import {isMobile} from 'prismui-core';
 
 /**
  * JSON Schema Editor

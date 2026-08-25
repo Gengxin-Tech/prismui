@@ -1,6 +1,6 @@
-import {RendererPluginAction, registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
+import {RendererPluginAction, registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
 import React from 'react';
 import {buildLinkActionDesc} from '../renderer/event-control';
 

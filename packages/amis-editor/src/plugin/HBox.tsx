@@ -1,6 +1,6 @@
-import {Button} from 'amis';
+import {Button} from 'prismui-framework';
 import React from 'react';
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BaseEventContext,
   BasePlugin,
@@ -10,14 +10,14 @@ import {
   RendererJSONSchemaResolveEventContext,
   VRendererConfig,
   ResizeMoveEventContext
-} from 'amis-editor-core';
-import {defaultValue, getSchemaTpl} from 'amis-editor-core';
-import {EditorNodeType} from 'amis-editor-core';
-import {Schema} from 'amis';
-import {VRenderer} from 'amis-editor-core';
-import {RegionWrapper as Region} from 'amis-editor-core';
-import {JSONChangeInArray, JSONPipeIn, repeatArray} from 'amis-editor-core';
-import {Icon} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {defaultValue, getSchemaTpl} from 'prismui-editor-core';
+import {EditorNodeType} from 'prismui-editor-core';
+import {Schema} from 'prismui-framework';
+import {VRenderer} from 'prismui-editor-core';
+import {RegionWrapper as Region} from 'prismui-editor-core';
+import {JSONChangeInArray, JSONPipeIn, repeatArray} from 'prismui-editor-core';
+import {Icon} from 'prismui-editor-core';
 
 export class HBoxPlugin extends BasePlugin {
   static id = 'HBoxPlugin';

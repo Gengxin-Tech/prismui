@@ -16,7 +16,7 @@ import {
   findTree,
   noop,
   getVariable
-} from 'amis-core';
+} from 'prismui-core';
 import {Icon} from '../icons';
 
 import Expression from './Expression';
@@ -34,7 +34,7 @@ import type {
   AMISExpressionField,
   AMISExpressionComplex,
   TestIdBuilder
-} from 'amis-core';
+} from 'prismui-core';
 
 const option2value = (item: any) => item.value;
 

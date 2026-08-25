@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import {getTheme, render} from 'amis';
-import {LazyComponent} from 'amis-core';
-import {Overlay} from 'amis-core';
-import {PopOver} from 'amis-core';
-import {__uri, loadScript} from 'amis-core';
+import {getTheme, render} from 'prismui';
+import {LazyComponent} from 'prismui-core';
+import {Overlay} from 'prismui-core';
+import {PopOver} from 'prismui-core';
+import {__uri, loadScript} from 'prismui-core';
 import classnames from 'classnames';
 import {Link} from 'react-router-dom';
 import Play from './Play';

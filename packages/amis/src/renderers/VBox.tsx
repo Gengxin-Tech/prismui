@@ -1,6 +1,11 @@
 import React from 'react';
-import {AMISSchema, AMISSchemaBase, Renderer, RendererProps} from 'amis-core';
-import {Api, SchemaNode, Schema, ActionObject} from 'amis-core';
+import {
+  AMISSchema,
+  AMISSchemaBase,
+  Renderer,
+  RendererProps
+} from 'prismui-core';
+import {Api, SchemaNode, Schema, ActionObject} from 'prismui-core';
 import cx from 'classnames';
 import {BaseSchema, SchemaObject} from '../Schema';
 

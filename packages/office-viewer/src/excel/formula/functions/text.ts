@@ -186,7 +186,7 @@ regFunc('NUMBERVALUE', (...arg: EvalResult[]) => {
     .replace(groupSeparator, '')
     .replace(decimalSeparator, '.')
     // remove chars that not related to number
-    .replace(/[^\-0-9.%()]/g, '')
+    .replace(/[^-0-9.%()]/g, '')
     .match(/([(-]*)([0-9]*[.]*[0-9]+)([)]?)([%]*)/);
   if (!res) throw FormulaError.VALUE;
   // ["-123456.78%%", "(-", "123456.78", ")", "%%"]

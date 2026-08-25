@@ -8,7 +8,7 @@ import {
   tipedLabel,
   BasePlugin,
   BaseEventContext
-} from 'amis-editor-core';
+} from 'prismui-editor-core';
 import {ValidatorTag} from '../../validator';
 import {
   getEventControlConfig,

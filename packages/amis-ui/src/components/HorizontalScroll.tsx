@@ -1,4 +1,4 @@
-import {autobind, resizeSensor, TestIdBuilder, ThemeProps} from 'amis-core';
+import {autobind, resizeSensor, TestIdBuilder, ThemeProps} from 'prismui-core';
 import React, {ReactNode} from 'react';
 import debounce from 'lodash/debounce';
 

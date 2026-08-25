@@ -5,11 +5,16 @@ import {
   RendererProps,
   numberFormatter,
   stripNumber
-} from 'amis-core';
+} from 'prismui-core';
 import moment from 'moment';
 import {BaseSchema} from '../Schema';
 import isNumber from 'lodash/isNumber';
-import {getPropValue, Option, PlainObject, normalizeOptions} from 'amis-core';
+import {
+  getPropValue,
+  Option,
+  PlainObject,
+  normalizeOptions
+} from 'prismui-core';
 
 import getMiniDecimal, {
   DecimalClass,

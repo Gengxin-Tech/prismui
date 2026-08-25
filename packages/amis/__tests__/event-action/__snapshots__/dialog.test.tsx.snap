@@ -611,3 +611,5 @@ exports[`2. EventAction:dialog 7`] = `
   </div>
 </div>
 `;
+
+exports[`5. EventAction:dialog formitem without form 1`] = `<div />`;

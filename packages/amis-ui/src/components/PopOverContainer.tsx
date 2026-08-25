@@ -5,7 +5,7 @@ import {
   Overlay,
   resolveDOMElement,
   toNumber
-} from 'amis-core';
+} from 'prismui-core';
 import PopUp from './PopUp';
 import isNumber from 'lodash/isNumber';
 
@@ -132,10 +132,10 @@ export class PopOverContainer extends React.Component<
     }
     // 带单位的相对值
     // 如: -100px 代表 100% - 100px。+10vw 代表 100% + 10vw
-    if (/^(\+|\-)\d+(px|%|rem|em|vw)$/.test(overlayWidth)) {
+    if (/^(\+|-)\d+(px|%|rem|em|vw)$/.test(overlayWidth)) {
       // 不能使用 calc(100% $1 $2)，需要考虑到 popOverContainer
       return overlayWidth.replace(
-        /^(\+|\-)(.*)/,
+        /^(\+|-)(.*)/,
         `calc(${targetWidth}px $1 $2)`
       );
     }

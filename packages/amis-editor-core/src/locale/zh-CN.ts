@@ -1,4 +1,4 @@
-import {extendLocale} from 'i18n-runtime';
+import {extendLocale} from 'prismui-i18n-runtime';
 
 extendLocale('zh-CN', {
   '54ea89b497ec3bb319c68844dfa3687f': '接口',

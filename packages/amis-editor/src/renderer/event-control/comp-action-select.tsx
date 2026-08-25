@@ -2,8 +2,8 @@
  * 组件专有动作选择器
  */
 
-import {Option, Select} from 'amis';
-import {RendererProps, getRendererByName} from 'amis-core';
+import {Option, Select} from 'prismui-framework';
+import {RendererProps, getRendererByName} from 'prismui-core';
 import React from 'react';
 import {getActionsByRendererName} from './helper';
 

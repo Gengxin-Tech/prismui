@@ -1,8 +1,8 @@
 import React from 'react';
-import {Button} from 'amis';
-import {getSchemaTpl} from 'amis-editor-core';
-import {registerEditorPlugin} from 'amis-editor-core';
-import {BasePlugin, RegionConfig, BaseEventContext} from 'amis-editor-core';
+import {Button} from 'prismui-framework';
+import {getSchemaTpl} from 'prismui-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
+import {BasePlugin, RegionConfig, BaseEventContext} from 'prismui-editor-core';
 import {formItemControl} from '../../component/BaseControl';
 import {generateId} from '../../util';
 

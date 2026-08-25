@@ -1,5 +1,5 @@
 import React from 'react';
-import {Editor} from 'amis-ui';
+import {Editor} from 'prismui-ui';
 import {
   isObjectShallowModified,
   guid,
@@ -7,7 +7,7 @@ import {
   filterSchemaForConfig
 } from '../../util';
 import cx from 'classnames';
-import {prompt, toast} from 'amis';
+import {prompt, toast} from 'prismui-framework';
 import debounce from 'lodash/debounce';
 import isArray from 'lodash/isArray';
 import findIndex from 'lodash/findIndex';
@@ -34,7 +34,9 @@ async function buildSchema(
       schemas.push({
         uri: schemaUrl,
         // @ts-ignore
-        schema: await import('amis/schema.json').then(item => item.default)
+        schema: await import('prismui-framework/schema.json').then(
+          item => item.default
+        )
       });
   }
 

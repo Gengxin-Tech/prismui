@@ -472,6 +472,8 @@ exports[`Renderer:number with borderMode 2`] = `
 </div>
 `;
 
+exports[`Renderer:number with min & max 1`] = `<div />`;
+
 exports[`Renderer:number with precision and default value 1`] = `
 <div>
   <div

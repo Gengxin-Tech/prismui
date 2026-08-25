@@ -14,10 +14,10 @@ import {
   resolveVariableAndFilter,
   noop,
   autobind
-} from 'amis-core';
-import {Checkbox, Icon, SearchBox} from 'amis-ui';
+} from 'prismui-core';
+import {Checkbox, Icon, SearchBox} from 'prismui-ui';
 
-import type {RendererProps, Option} from 'amis-core';
+import type {RendererProps, Option} from 'prismui-core';
 import {matchSorter} from 'match-sorter';
 
 export interface QuickFilterConfig {

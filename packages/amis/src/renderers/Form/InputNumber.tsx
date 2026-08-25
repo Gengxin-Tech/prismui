@@ -11,9 +11,9 @@ import {
   TestIdBuilder,
   getVariable,
   AMISFormItem
-} from 'amis-core';
+} from 'prismui-core';
 import cx from 'classnames';
-import {NumberInput, Select} from 'amis-ui';
+import {NumberInput, Select} from 'prismui-ui';
 import {
   filter,
   autobind,
@@ -25,7 +25,7 @@ import {
   Option,
   PlainObject,
   ActionObject
-} from 'amis-core';
+} from 'prismui-core';
 import {FormBaseControlSchema} from '../../Schema';
 import {supportStatic} from './StaticHoc';
 

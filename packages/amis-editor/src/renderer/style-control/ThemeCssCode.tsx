@@ -2,10 +2,10 @@
  * 类名输入框 + 自定义样式源码编辑器
  */
 import React, {useEffect, useRef, useState} from 'react';
-import {Editor, Overlay, PopOver} from 'amis-ui';
-import {FormControlProps, FormItem} from 'amis-core';
+import {Editor, Overlay, PopOver} from 'prismui-ui';
+import {FormControlProps, FormItem} from 'prismui-core';
 // @ts-ignore
-import {parse as cssParse} from 'amis-postcss';
+import {parse as cssParse} from 'prismui-postcss';
 import {PlainObject} from './types';
 import isObject from 'lodash/isObject';
 import debounce from 'lodash/debounce';

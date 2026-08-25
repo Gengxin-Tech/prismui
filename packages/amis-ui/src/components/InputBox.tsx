@@ -1,7 +1,7 @@
 import React from 'react';
-import {setReactRef, TestIdBuilder, ThemeProps, themeable} from 'amis-core';
+import {setReactRef, TestIdBuilder, ThemeProps, themeable} from 'prismui-core';
 import Input from './Input';
-import {autobind, ucFirst} from 'amis-core';
+import {autobind, ucFirst} from 'prismui-core';
 import {Icon} from './icons';
 
 export interface InputBoxProps

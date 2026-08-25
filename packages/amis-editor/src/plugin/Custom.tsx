@@ -2,14 +2,14 @@
  * @file 自定义代码
  */
 
-import {registerEditorPlugin} from 'amis-editor-core';
+import {registerEditorPlugin} from 'prismui-editor-core';
 import {
   BasePlugin,
   BasicSubRenderInfo,
   RendererEventContext,
   SubRendererInfo
-} from 'amis-editor-core';
-import {getSchemaTpl} from 'amis-editor-core';
+} from 'prismui-editor-core';
+import {getSchemaTpl} from 'prismui-editor-core';
 
 export class CustomPlugin extends BasePlugin {
   static id = 'CustomPlugin';

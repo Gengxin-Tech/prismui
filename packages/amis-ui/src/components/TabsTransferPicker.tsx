@@ -1,11 +1,11 @@
-import {localeable} from 'amis-core';
-import {themeable, ThemeProps} from 'amis-core';
-import {uncontrollable} from 'amis-core';
+import {localeable} from 'prismui-core';
+import {themeable, ThemeProps} from 'prismui-core';
+import {uncontrollable} from 'prismui-core';
 import React from 'react';
 import ResultBox from './ResultBox';
 import {Icon} from './icons';
 import PickerContainer from './PickerContainer';
-import {autobind, mapTree} from 'amis-core';
+import {autobind, mapTree} from 'prismui-core';
 import TabsTransfer, {TabsTransferProps} from './TabsTransfer';
 
 export interface TabsTransferPickerProps
