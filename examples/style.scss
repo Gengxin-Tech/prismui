@@ -212,7 +212,7 @@ body {
         padding: 0;
 
         .logo {
-          background: url('./static/prismui-logo.svg') left/contain no-repeat;
+          background: url('./static/prismui-logo.svg') left center / contain no-repeat;
           height: 40px;
           width: 130px;
           margin-top: 12px;
@@ -229,7 +229,7 @@ body {
         }
 
         .logo {
-          color: #f7f8fa;
+          background-image: url('./static/prismui-logo-dark.svg');
         }
       }
     }
