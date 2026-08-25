@@ -114,7 +114,7 @@ export default {
 
         {
           label: '外部链接',
-          link: 'http://baidu.gitee.io/amis'
+          link: 'https://prismui.io/docs'
         },
 
         {

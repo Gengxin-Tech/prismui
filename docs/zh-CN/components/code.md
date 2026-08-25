@@ -31,7 +31,7 @@ order: 38
   "body": {
     "type": "code",
     "language": "javascript",
-    "value": "(function () {\n  let amis = amisRequire('amis/embed');\n  let amisJSON = {\n    type: 'page',\n    title: '表单页面',\n    body: {\n      type: 'form',\n      mode: 'horizontal',\n      api: '/saveForm',\n      body: [\n        {\n          label: 'Name',\n          type: 'input-text',\n          name: 'name'\n        },\n        {\n          label: 'Email',\n          type: 'input-email',\n          name: 'email'\n        }\n      ]\n    }\n  };\n  let amisScoped = amis.embed('#root', amisJSON);\n})();"
+    "value": "(function () {\n  let prismui = prismuiRequire('prismui/embed');\n  let prismuiJSON = {\n    type: 'page',\n    title: '表单页面',\n    body: {\n      type: 'form',\n      mode: 'horizontal',\n      api: '/saveForm',\n      body: [\n        {\n          label: 'Name',\n          type: 'input-text',\n          name: 'name'\n        },\n        {\n          label: 'Email',\n          type: 'input-email',\n          name: 'email'\n        }\n      ]\n    }\n  };\n  let prismuiScoped = prismui.embed('#root', prismuiJSON);\n})();"
   }
 }
 ```
@@ -47,7 +47,7 @@ language 支持从上下文获取数据
   "body": {
     "type": "code",
     "language": "${lang}",
-    "value": "function amis() {\n  console.log('amis');\n}"
+    "value": "function prismuiExample() {\n  console.log('PrismUI');\n}"
   }
 }
 ```
@@ -81,7 +81,7 @@ language 支持从上下文获取数据
   "type": "code",
   "language": "javascript",
   "tagSize": 4,
-  "value": "function amis() {\n\tconsole.log('amis');\n}"
+  "value": "function prismuiExample() {\n\tconsole.log('PrismUI');\n}"
 }
 
 ```
@@ -98,7 +98,7 @@ language 支持从上下文获取数据
   "language": "typescript",
   "tagSize": 4,
   "wordWrap": false,
-  "value": "function amis() {\n\tconsole.log('amis')\tconsole.log('amis')\tconsole.log('amis')\tconsole.log('amis')\tconsole.log('amis')\tconsole.log('amis');\n}"
+  "value": "function prismuiExample() {\n\tconsole.log('PrismUI')\tconsole.log('PrismUI')\tconsole.log('PrismUI')\tconsole.log('PrismUI')\tconsole.log('PrismUI')\tconsole.log('PrismUI');\n}"
 }
 ```
 
@@ -113,7 +113,7 @@ language 支持从上下文获取数据
     "language": "javascript",
     "className": "b-a",
     "maxHeight": 200,
-    "value": "(function () {\n  let amis = amisRequire('amis/embed');\n  let amisJSON = {\n    type: 'page',\n    title: '表单页面',\n    body: {\n      type: 'form',\n      mode: 'horizontal',\n      api: '/saveForm',\n      body: [\n        {\n          label: 'Name',\n          type: 'input-text',\n          name: 'name'\n        },\n        {\n          label: 'Email',\n          type: 'input-email',\n          name: 'email'\n        }\n      ]\n    }\n  };\n  let amisScoped = amis.embed('#root', amisJSON);\n})();"
+    "value": "(function () {\n  let prismui = prismuiRequire('prismui/embed');\n  let prismuiJSON = {\n    type: 'page',\n    title: '表单页面',\n    body: {\n      type: 'form',\n      mode: 'horizontal',\n      api: '/saveForm',\n      body: [\n        {\n          label: 'Name',\n          type: 'input-text',\n          name: 'name'\n        },\n        {\n          label: 'Email',\n          type: 'input-email',\n          name: 'email'\n        }\n      ]\n    }\n  };\n  let prismuiScoped = prismui.embed('#root', prismuiJSON);\n})();"
   }
 }
 ```

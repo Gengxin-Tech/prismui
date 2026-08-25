@@ -140,7 +140,7 @@ table view 的设置项有三层，可以分别对表格级别、行级别、单
 | valign     | `string`                                  | `middle`       | 单元格内的垂直对齐，可以是 `top`、`middle`、`bottom`、`baseline` |
 | colspan    | `number`                                  |                | 单元格水平跨几行                                                 |
 | rowspan    | `number`                                  |                | 单元格垂直跨几列                                                 |
-| body       | [SchemaNode](../../docs/types/schemanode) |                | 其它 amis 设置                                                   |
+| body       | [SchemaNode](../../docs/types/schemanode) |                | 其它 PrismUI 设置                                                   |
 
 #### 单元格样式示例
 

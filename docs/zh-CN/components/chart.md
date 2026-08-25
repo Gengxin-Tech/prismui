@@ -208,7 +208,7 @@ api 返回支持两种格式，一种是直接返回完整 echarts 配置，数�
 
 ## 配置图表点击行为
 
-可以通过配置`"clickAction": {}`，来指定图表节点的点击行为，支持 amis 的 [行为](./action)。
+可以通过配置`"clickAction": {}`，来指定图表节点的点击行为，支持 PrismUI 的 [行为](./action)。
 
 然后在配置的行为中可以通过 [数据链](../../docs/concepts/datascope-and-datachain) 获取到 [echarts 鼠标事件](https://echarts.apache.org/zh/api.html#events.%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6.click) 的值，例如下面例子中可以通过`${value|json}`获取到点击节点的`传入的数据值`
 
@@ -453,7 +453,7 @@ ECharts 中有些配置项可以写函数，比如 formatter 和 sort，但在 J
 
 ## 使用地图
 
-从 amis 1.1.0 版本开始，ECharts 版本升级到 5.0.0，为了规避政策风险，在这个版本删除了之前的地图 geojson，如果需要这个功能需要手动引入。
+从 PrismUI 1.1.0 版本开始，ECharts 版本升级到 5.0.0，为了规避政策风险，在这个版本删除了之前的地图 geojson，如果需要这个功能需要手动引入。
 
 方法是去 `https://github.com/apache/echarts/tree/master/test/data/map/js` 下载 `china.js` 和 `world.js`。
 

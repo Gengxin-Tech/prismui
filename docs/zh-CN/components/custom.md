@@ -145,7 +145,7 @@ custom 组件中使用 vue2 语法，请先引入vue.js（umd 或 global 模块�
 
 ### props
 
-前面可以看到所有函数最后都有一个 props 参数，在这个参数里能拿到 amis 内部属性和方法，比如弹框
+前面可以看到所有函数最后都有一个 props 参数，在这个参数里能拿到 PrismUI 内部属性和方法，比如弹框
 
 ```javascript
 onMount: (dom, data, onChange, props) => {

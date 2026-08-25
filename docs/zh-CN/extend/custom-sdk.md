@@ -68,7 +68,7 @@ title: 自定义组件 - SDK
 PrismUI 组件都是基于 React 的，所以需要使用一个简单的 React 组件来注册，可以是函数组件也可以是类组件，下面以函数组件为例，将[快速开始](../start/getting-started)中的代码替换成如下示例：
 
 ```javascript
-let amis = amisRequire('amis/embed');
+let prismui = prismuiRequire('prismui/embed');
 let amisLib = amisRequire('amis');
 let React = amisRequire('react');
 
@@ -91,7 +91,7 @@ amisLib.Renderer({
   test: /(^|\/)my-custom/
 })(CustomComponent);
 
-let amisScoped = amis.embed('#root', {
+let prismuiScoped = prismui.embed('#root', {
   type: 'page',
   title: '表单页面',
   body: {

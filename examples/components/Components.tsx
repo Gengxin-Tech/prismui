@@ -1222,7 +1222,7 @@ export const components = [
         )
       },
       {
-        label: 'amis 渲染器',
+        label: 'PrismUI 渲染器',
         path: '/zh-CN/components/amis',
         component: React.lazy(() =>
           import('../../docs/zh-CN/components/amis.md').then(wrapDoc)

@@ -17,7 +17,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -112,7 +112,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -128,7 +128,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -145,7 +145,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -162,7 +162,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -314,7 +314,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             },
@@ -332,7 +332,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -430,7 +430,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -446,7 +446,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -463,7 +463,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }
@@ -480,7 +480,7 @@ export default {
                 title: '标题',
                 subTitle: '副标题',
                 description: '这是一段描述',
-                avatarText: 'AMIS'
+                avatarText: 'PUI'
               },
               body: '这里是内容'
             }

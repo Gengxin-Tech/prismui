@@ -44,4 +44,5 @@
   });
 
   (window as any).amisRequire = (window as any).amis.require;
+  (window as any).prismuiRequire = (window as any).amis.require;
 })();

@@ -71,7 +71,7 @@ order: 47
 
 可以设置 options 属性来自定义编辑器的展现，详细配置项请参考[官方文档](https://www.tiny.cloud/docs/tinymce/6/basic-setup/)。
 
-> amis 2.1.0 版本升级到了 tinymce 6，导致 plugins 的写法有变化
+> PrismUI 2.1.0 版本升级到了 tinymce 6，导致 plugins 的写法有变化
 
 注意在下面的编辑器里修改 JSON 配置后不会实时生效。
 
@@ -98,7 +98,7 @@ order: 47
 
 ## 关于 tinymce 粘贴 word 的问题
 
-因为 amis 中使用的是开源版本 tinymce，没有商业版本功能，导致比如从 Word 中粘贴表格会看不到边框，解决方法是自己
+因为 PrismUI 中使用的是开源版本 tinymce，没有商业版本功能，导致比如从 Word 中粘贴表格会看不到边框，解决方法是自己
 
 ```json
 {
@@ -163,7 +163,7 @@ table tr {
 
 ## 扩充 tinymce 插件
 
-需要在调用 amis 的时候，通过 `env.loadTinymcePlugin` 来加载自定义插件，可以查考： [examples/components/SchemaRender.jsx](https://github.com/Gengxin-Tech/prismui/blob/master/examples/components/SchemaRender.jsx) 文件中的示例。
+需要在调用 PrismUI 的时候，通过 `env.loadTinymcePlugin` 来加载自定义插件，可以查考： [examples/components/SchemaRender.jsx](https://github.com/Gengxin-Tech/prismui/blob/master/examples/components/SchemaRender.jsx) 文件中的示例。
 
 ```schema
 {

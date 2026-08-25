@@ -4,7 +4,7 @@ title: CSS 变量
 
 目前示例中包含了一个[主题编辑器](../../examples/theme)，可以在线实时预览效果。
 
-amis 的主题变量主路径使用 `--prismui-*` 命名。旧变量仍可能作为兼容 alias 存在，但新主题和新业务覆写应优先使用 `--prismui-*`。
+PrismUI 的主题变量主路径使用 `--prismui-*` 命名。旧变量仍可能作为兼容 alias 存在，但新主题和新业务覆写应优先使用 `--prismui-*`。
 
 ## Token 分层
 

@@ -59,7 +59,7 @@ order: 51
 
 ## 如何和 iframe 通信
 
-#### amis 向 iframe 通信
+#### PrismUI 向 iframe 通信
 
 在 iframe 页面中添加`message`事件监听器，在 iframe 初始化、更新或者接收到其他组件发送数据的时候，会通过 `postMessage` 发送当前数据域数据，iframe 页面的事件监听器中可以通过`e.data`进行获取：
 
@@ -88,14 +88,14 @@ window.addEventListener('message', e => {
 
 > 如果是 webpack 开发环境，注意过滤掉`webpackOk`类型消息
 
-#### iframe 页面向 amis 通信
+#### iframe 页面向 PrismUI 通信
 
-可以通过以下两种方式实现 iframe 页面向 amis 通信：
+可以通过以下两种方式实现 iframe 页面向 PrismUI 通信：
 
 - 方式一：通过 events 属性，基于[Action](./action)实现，有一定的局限性。
 - 方式二：通过 onEvent 属性，基于[事件动作](../../docs/concepts/event-action)实现，更灵活。
 
-> 注意：如果同时配置了 events 和 onEvent，amis 都会执行，且 onEvent 配置的动作行为会先于 events 执行。
+> 注意：如果同时配置了 events 和 onEvent，PrismUI 都会执行，且 onEvent 配置的动作行为会先于 events 执行。
 
 步骤如下：
 
@@ -115,10 +115,10 @@ window.parent.postMessage(
 
 `message`格式：
 
-- `type`: 标识要触发的 amis 行为，请使用 `amis:xxx` 的格式，这里我们设置为配置好的`detail`事件
-- `data`: 传给 amis 的数据，amis 会将该数据与当前数据域进行合并进行使用
+- `type`: 标识要触发的 PrismUI 行为，请使用 `amis:xxx` 的格式，这里我们设置为配置好的`detail`事件
+- `data`: 传给 PrismUI 的数据，PrismUI 会将该数据与当前数据域进行合并进行使用
 
-2. 在 amis 的 iframe 组件中指明需要监听的消息名称，以及需要执行的动作。
+2. 在 PrismUI 的 iframe 组件中指明需要监听的消息名称，以及需要执行的动作。
 
 ```json
 // 方式一：即在 amis 的 iframe 配置项中配置 events 对象
@@ -167,10 +167,10 @@ window.parent.postMessage(
 
 ## 设置高度自适应
 
-默认 amis 中只支持给 iframe 配置固定高度，我们可以通过上面说到的通信机制实现高度自适应。
+默认 PrismUI 中只支持给 iframe 配置固定高度，我们可以通过上面说到的通信机制实现高度自适应。
 
 1. 首先在 iframe 页面中获取到页面高度
-2. 通过`amis:resize`事件，将高度信息发送给 amis
+2. 通过`amis:resize`事件，将高度信息发送给 PrismUI
 
 ```js
 window.parent.postMessage(

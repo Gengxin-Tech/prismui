@@ -28,7 +28,7 @@ order: 30
 }
 ```
 
-注意其中的 `ak` 参数只能在 amis 官网示例中使用，请前往[百度地图开放平台](http://lbsyun.baidu.com/)申请自己的 `ak`。
+注意其中的 `ak` 参数只能在 PrismUI 官网示例中使用，请前往[百度地图开放平台](http://lbsyun.baidu.com/)申请自己的 `ak`。
 
 ## 静态展示
 

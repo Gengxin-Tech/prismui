@@ -3,7 +3,7 @@ export default {
   data: {
     globalData: {
       website: 'http://www.baidu.com',
-      email: 'amis!@baidu.com'
+      email: 'prismui@example.com'
     }
   },
   body: [
@@ -109,7 +109,7 @@ export default {
                     title: '登录',
                     id: 'dialog_004',
                     data: {
-                      username: 'amis'
+                      username: 'PrismUI'
                     },
                     body: {
                       type: 'form',

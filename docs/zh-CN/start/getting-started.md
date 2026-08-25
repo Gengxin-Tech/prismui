@@ -55,9 +55,9 @@ SDK 版本适合对前端或 React 不了解的开发者，它不依赖 npm 及 
     <script src="sdk.js"></script>
     <script type="text/javascript">
       (function () {
-        let amis = amisRequire('amis/embed');
+        let prismui = prismuiRequire('prismui/embed');
         // 通过替换下面这个配置来生成不同页面
-        let amisJSON = {
+        let prismuiJSON = {
           type: 'page',
           title: '表单页面',
           body: {
@@ -78,7 +78,7 @@ SDK 版本适合对前端或 React 不了解的开发者，它不依赖 npm 及 
             ]
           }
         };
-        let amisScoped = amis.embed('#root', amisJSON);
+        let prismuiScoped = prismui.embed('#root', prismuiJSON);
       })();
     </script>
   </body>
@@ -90,7 +90,7 @@ SDK 版本适合对前端或 React 不了解的开发者，它不依赖 npm 及 
 jssdk 版本默认使用 `sdk.css`（cxd 主题）。如果要使用其它主题，需要先加载对应主题 CSS，再在 js 渲染第四个参数里传入 `theme`。`theme` 决定 `[data-prismui-theme]` 的主题作用域，组件 DOM 主类名仍是稳定的 `.prismui-*`。
 
 ```js
-amis.embed(
+prismui.embed(
   '#root',
   {
     // PrismUI schema
@@ -114,20 +114,20 @@ amis.embed(
 > 3.1.0 开始可以传入 context 数据，无论哪层都可以使用到这个里面的数据。适合用来传递一些平台数据。
 
 ```js
-let amis = amisRequire('amis/embed');
-let amisJSON = {
+let prismui = prismuiRequire('prismui/embed');
+let prismuiJSON = {
   type: 'page',
   body: {
     type: 'tpl',
     tpl: '${myData}'
   }
 };
-let amisScoped = amis.embed('#root', amisJSON, {
+let prismuiScoped = prismui.embed('#root', prismuiJSON, {
   data: {
     myData: 'PrismUI'
   },
   context: {
-    amisUser: {
+    prismuiUser: {
       id: 1,
       name: 'test user'
     }
@@ -137,12 +137,12 @@ let amisScoped = amis.embed('#root', amisJSON, {
 
 ### 控制 PrismUI 的行为
 
-`amis.embed` 函数还支持以下配置项来控制 PrismUI 的行为，比如在 fetcher 的时候加入自己的处理逻辑，这些函数参数的说明在后面 React 中也有介绍。
+`prismui.embed` 函数还支持以下配置项来控制 PrismUI 的行为，比如在 fetcher 的时候加入自己的处理逻辑，这些函数参数的说明在后面 React 中也有介绍。
 
 ```js
-let amisScoped = amis.embed(
+let prismuiScoped = prismui.embed(
   '#root',
-  amisJSON,
+  prismuiJSON,
   {
     // 这里是初始 props，一般不用传。
     // locale: 'en-US' // props 中可以设置语言，默认是中文
@@ -204,7 +204,7 @@ let amisScoped = amis.embed(
 );
 ```
 
-同时返回的 `amisScoped` 对象可以获取到 PrismUI 渲染的内部信息，它有如下方法：
+同时返回的 `prismuiScoped` 对象可以获取到 PrismUI 渲染的内部信息，它有如下方法：
 
 `getComponentByName(name)` 用于获取渲染出来的组件，比如下面的示例
 
@@ -227,13 +227,13 @@ let amisScoped = amis.embed(
 }
 ```
 
-可以通过 `amisScoped.getComponentByName('page1.form1').getValues()` 来获取到所有表单的值，需要注意 page 和 form 都需要有 name 属性。
+可以通过 `prismuiScoped.getComponentByName('page1.form1').getValues()` 来获取到所有表单的值，需要注意 page 和 form 都需要有 name 属性。
 
-还可以通过 `amisScoped.getComponentByName('page1.form1').setValues({'name1': 'othername'})` 来修改表单中的值。
+还可以通过 `prismuiScoped.getComponentByName('page1.form1').setValues({'name1': 'othername'})` 来修改表单中的值。
 
 ### 调用 PrismUI 动作
 
-可以通过 `amisScoped.doAction(actions, ctx)` 来调用 PrismUI 中的通用动作和目标组件的动作。了解事件动作机制可以查看[事件动作](../../docs/concepts/event-action)。参数说明如下：
+可以通过 `prismuiScoped.doAction(actions, ctx)` 来调用 PrismUI 中的通用动作和目标组件的动作。了解事件动作机制可以查看[事件动作](../../docs/concepts/event-action)。参数说明如下：
 
 - `actions`：动作列表，支持执行单个或多个动作
 - `ctx`：上下文，它可以为动作配置补充上下文数据，例如下面`toast`动作中`msg`配置中的`${myName}`就来自于补充上下文`ctx`
@@ -241,12 +241,12 @@ let amisScoped = amis.embed(
 下面的例子中依次执行了`toast提示`、`ajax请求`、`dialog弹窗`、`给目标组件赋值`动作。
 
 ```js
-amisScoped.doAction(
+prismuiScoped.doAction(
   [
     {
       actionType: 'toast',
       args: {
-        msg: '${amisUser.name}, ${myName}'
+        msg: '${prismuiUser.name}, ${myName}'
       }
     },
     {
@@ -286,10 +286,10 @@ amisScoped.doAction(
 
 ### 更新属性
 
-可以通过 amisScoped 对象的 updateProps 方法来更新下发到 PrismUI 的属性。
+可以通过 prismuiScoped 对象的 updateProps 方法来更新下发到 PrismUI 的属性。
 
 ```ts
-amisScoped.updateProps(
+prismuiScoped.updateProps(
   {
     // 新的属性对象
   } /*, () => {} 更新回调 */
@@ -298,10 +298,10 @@ amisScoped.updateProps(
 
 ### 更新配置
 
-可以通过 amisScoped 对象的 udpateSchema 方法来更新更新内容配置。
+可以通过 prismuiScoped 对象的 udpateSchema 方法来更新更新内容配置。
 
 ```js
-let amisJSON = {
+let prismuiJSON = {
   type: 'page',
   body: [
     'inital string',
@@ -313,14 +313,14 @@ let amisJSON = {
     }
   ]
 };
-let amisScoped = amis.embed('#root', amisJSON);
+let prismuiScoped = prismui.embed('#root', prismuiJSON);
 
 function handleChange() {
   const schema = {
-    ...amisJSON,
+    ...prismuiJSON,
     body: ['changed']
   };
-  amisScoped.updateSchema(schema);
+  prismuiScoped.updateSchema(schema);
 }
 ```
 
@@ -330,7 +330,7 @@ function handleChange() {
 
 ### Hash 路由
 
-默认 JSSDK 不是 hash 路由，如果你想改成 hash 路由模式，请查看此处代码实现。只需要修改 `env.isCurrentUrl`、`env.jumpTo` 和 `env.updateLocation` 这几个方法，并在路由切换的时候，通过 amisScoped 对象的 `updateProps` 方法，更新 `location` 属性即可。
+默认 JSSDK 不是 hash 路由，如果你想改成 hash 路由模式，请查看此处代码实现。只需要修改 `env.isCurrentUrl`、`env.jumpTo` 和 `env.updateLocation` 这几个方法，并在路由切换的时候，通过 prismuiScoped 对象的 `updateProps` 方法，更新 `location` 属性即可。
 
 参考：https://github.com/Gengxin-Tech/prismui/blob/master/examples/app/index.jsx
 
@@ -339,16 +339,16 @@ function handleChange() {
 如果是单页应用，在离开当前页面的时候通常需要销毁实例，可以通过 unmount 方法来完成。
 
 ```ts
-amisScoped.unmount();
+prismuiScoped.unmount();
 ```
 
 ## vue
 
-可以基于 SDK 版本封装成 component 供 Vue 使用；历史 amis 示例仍可作为封装思路参考：https://github.com/aisuda/vue2-amis-demo
+可以基于 SDK 版本封装成 component 供 Vue 使用；历史上游 Vue 示例仍可作为封装思路参考：https://github.com/aisuda/vue2-amis-demo
 
 ## react
 
-React 初始项目可以按本文示例自行搭建；历史 amis starter 仍可作为 webpack 结构参考：<https://github.com/aisuda/amis-react-starter>。
+React 初始项目可以按本文示例自行搭建；历史上游 starter 仍可作为 webpack 结构参考：<https://github.com/aisuda/amis-react-starter>。
 
 如果在已有项目中，React 版本需要是 `>=18.0.0`，mobx 需要 `^4.5.0`。
 
@@ -496,7 +496,7 @@ import {ToastComponent, AlertComponent, alert, confirm, toast} from 'prismui-ui'
 
 class MyComponent extends React.Component<any, any> {
   render() {
-    let amisScoped;
+    let prismuiScoped;
     let theme = 'cxd';
     let locale = 'zh-CN';
 
@@ -521,7 +521,7 @@ class MyComponent extends React.Component<any, any> {
           {
             // props...
             // locale: 'en-US' // 请参考「多语言」的文档
-            // scopeRef: (ref: any) => (amisScoped = ref)  // 功能和前面 SDK 的 amisScoped 一样
+            // scopeRef: (ref: any) => (prismuiScoped = ref)  // 功能和前面 SDK 的 prismuiScoped 一样
           },
           {
             // 下面三个接口必须实现
@@ -800,7 +800,7 @@ Form 表单验证失败时在 notify 消息提示中是否隐藏详细信息，�
 可以用来实现变量替换及多语言功能，比如下面的例子
 
 ```javascript
-let amisScoped = amis.embed(
+let prismuiScoped = prismui.embed(
   '#root',
   {
     type: 'page',
@@ -835,7 +835,7 @@ type, name, mode, target, reload
 通过字符串数组或者函数来过滤字段，比如：
 
 ```javascript
-let amisScoped = amis.embed(
+let prismuiScoped = prismui.embed(
   '#root',
   {
     type: 'page',

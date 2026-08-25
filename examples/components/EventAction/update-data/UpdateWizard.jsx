@@ -3,7 +3,7 @@ export default {
   data: {
     globalData: {
       website: 'http://www.baidu.com',
-      email: 'amis!@baidu.com'
+      email: 'prismui@example.com'
     }
   },
   body: [

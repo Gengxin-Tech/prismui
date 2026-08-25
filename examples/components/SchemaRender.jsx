@@ -379,9 +379,9 @@ export default function (schema, schemaProps, showCode, envOverrides) {
             ...(isPlainObject(schemaProps) ? schemaProps : {}),
             context: {
               // 上下文信息，无论那层可以获取到这个
-              amisUser: {
+              prismuiUser: {
                 id: 1,
-                name: 'AMIS User'
+                name: 'PrismUI User'
               }
             },
             location,

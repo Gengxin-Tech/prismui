@@ -11,7 +11,7 @@ PrismUI 只负责采集，对行为的存储和分析都需要外部实现。
 在 PrismUI 渲染时的第三个参数 env 可以传递 tracker 函数，下面以 SDK 作为示例，具体实现可以根据实际需求修改，比如可以收集一段时间后再批量提交等。
 
 ```js
-amis.embed(
+prismui.embed(
   '#root',
   {
     // PrismUI schema
@@ -316,7 +316,7 @@ Action 组件会多些数据
 {
   "eventType": "email",
   "eventData": {
-    "to": "amis@baidu.com",
+    "to": "prismui@example.com",
     "cc": "baidu@baidu.com",
     "subject": "这是邮件主题",
     "body": "这是邮件正文",

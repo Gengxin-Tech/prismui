@@ -51,6 +51,10 @@ async function main() {
     'embedded sdk.js should expose amisRequire'
   );
   assert(
+    embeddedSdkJs.includes('window.prismuiRequire = require'),
+    'embedded sdk.js should expose prismuiRequire'
+  );
+  assert(
     !embeddedSdkJs.includes('process.env.NODE_ENV'),
     'embedded sdk.js should inline process.env.NODE_ENV for browsers'
   );
@@ -332,16 +336,20 @@ async function assertRuntimeEntry(embeddedSdkJs, output) {
     typeof window.amisRequire === 'function',
     'embedded sdk.js should initialize window.amisRequire at runtime'
   );
+  assert(
+    typeof window.prismuiRequire === 'function',
+    'embedded sdk.js should initialize window.prismuiRequire at runtime'
+  );
   sdkEntryAliases.forEach(alias => {
-    const entryModule = window.amisRequire(alias);
+    const entryModule = window.prismuiRequire(alias);
 
     assert(
       entryModule && typeof entryModule.embed === 'function',
-      `amisRequire(${JSON.stringify(alias)}) should expose embed()`
+      `prismuiRequire(${JSON.stringify(alias)}) should expose embed()`
     );
   });
 
-  const entryModule = window.amisRequire(sdkEntryAliases[0]);
+  const entryModule = window.prismuiRequire('prismui/embed');
   entryModule.embed(
     '#root',
     {

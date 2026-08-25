@@ -84,7 +84,7 @@ export function App() {
 <div id="root"></div>
 <script src="/sdk/sdk.js"></script>
 <script>
-  const runtime = amisRequire('amis/embed');
+  const runtime = prismuiRequire('prismui/embed');
   runtime.embed('#root', schema, {data: {}}, env);
 </script>
 ```

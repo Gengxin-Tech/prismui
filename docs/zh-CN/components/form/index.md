@@ -8,7 +8,7 @@ icon:
 order: 24
 ---
 
-表单是 amis 中核心组件之一，主要作用是提交或者展示表单数据。
+表单是 PrismUI 中核心组件之一，主要作用是提交或者展示表单数据。
 
 ## 基本用法
 
@@ -1561,7 +1561,7 @@ Form 支持轮询初始化接口，步骤如下：
         "type": "input-text",
         "name": "email",
         "label": "邮箱",
-        "value": "amis@baidu.com",
+        "value": "prismui@example.com",
         "validateOnChange": true,
         "required": true,
         "validations": {
@@ -1634,7 +1634,7 @@ Form 支持轮询初始化接口，步骤如下：
         "type": "input-text",
         "name": "email",
         "label": "邮箱",
-        "value": "amis@baidu.com",
+        "value": "prismui@example.com",
         "required": true,
         "validations": {
           "isEmail": true
@@ -1733,7 +1733,7 @@ Form 支持轮询初始化接口，步骤如下：
         "type": "input-text",
         "name": "email",
         "label": "邮箱",
-        "value": "amis@baidu.com"
+        "value": "prismui@example.com"
       }
     ],
     "onEvent": {
@@ -1779,7 +1779,7 @@ Form 支持轮询初始化接口，步骤如下：
         "type": "input-text",
         "name": "email",
         "label": "邮箱",
-        "value": "amis@baidu.com"
+        "value": "prismui@example.com"
       }
     ],
     "onEvent": {
@@ -1825,7 +1825,7 @@ Form 支持轮询初始化接口，步骤如下：
         "type": "input-text",
         "name": "email",
         "label": "邮箱",
-        "value": "amis@baidu.com"
+        "value": "prismui@example.com"
       }
     ],
     "onEvent": {
@@ -2003,8 +2003,8 @@ initApi 请求完成后触发，包括初始化过程和后续的重新刷新都
   },
   // 提交验证的表单数据
   "payload": {
-    "name": "amis",
-    "email": "amis@baidu"
+    "name": "PrismUI",
+    "email": "prismui@example.com"
   }
 }
 ```
@@ -2082,8 +2082,8 @@ initApi 请求完成后触发，包括初始化过程和后续的重新刷新都
   },
   // 提交的表单数据
   "payload": {
-    "name": "amis",
-    "email": "amis@baidu.com"
+    "name": "PrismUI",
+    "email": "prismui@example.com"
   },
   // 提交请求返回的响应结果数据
   "responseData": {
@@ -2184,8 +2184,8 @@ initApi 请求完成后触发，包括初始化过程和后续的重新刷新都
     "type": "form",
     "id": "form_setvalue",
     "data": {
-      "name": "amis",
-      "email": "amis@baidu.com"
+      "name": "PrismUI",
+      "email": "prismui@example.com"
     },
     "body": [
       {
@@ -2234,8 +2234,8 @@ initApi 请求完成后触发，包括初始化过程和后续的重新刷新都
     "type": "form",
     "id": "form_setvalue",
     "data": {
-      "name": "amis",
-      "email": "amis@baidu.com"
+      "name": "PrismUI",
+      "email": "prismui@example.com"
     },
     "body": [
       {

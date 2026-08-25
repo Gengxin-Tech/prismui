@@ -1,14 +1,14 @@
 ---
-title: AMIS 渲染器
+title: PrismUI 渲染器
 description:
 type: 0
 group: ⚙ 组件
-menuName: AMIS 渲染器
+menuName: PrismUI 渲染器
 icon:
 order: 28
 ---
 
-用于渲染数据中的 amis 配置
+用于渲染数据中的 PrismUI 配置。兼容类型名仍为 `amis`，用于承接历史 UI Schema。
 
 ## 基本使用
 
@@ -19,7 +19,7 @@ order: 28
   "type": "amis",
   "schema": {
     "type": "tpl",
-    "tpl": "amis render"
+    "tpl": "PrismUI render"
   }
 }
 ```
@@ -32,14 +32,14 @@ order: 28
 {
     "type": "form",
     "api": "/api/mock2/form/saveForm",
-    "title": "实时测试 amis 渲染效果",
+    "title": "实时测试 PrismUI 渲染效果",
     "body": [
         {
             "type": "group",
             "body": [
                 {
                     "type": "editor",
-                    "name": "amis",
+                    "name": "prismuiSchema",
                     "language": "json",
                     "value": {
                       "label": "弹框",
@@ -53,7 +53,7 @@ order: 28
                 },
                 {
                     "type": "amis",
-                    "name": "amis"
+                    "name": "prismuiSchema"
                 }
             ]
         }
@@ -70,7 +70,7 @@ order: 28
 {
   "type": "amis",
   "props": {
-    "tpl": "amis render"
+    "tpl": "PrismUI render"
   },
   "value": {
     "type": "tpl"
@@ -82,6 +82,6 @@ order: 28
 
 | 属性名 | 类型     | 默认值   | 说明               |
 | ------ | -------- | -------- | ------------------ |
-| type   | `string` | `"amis"` | 指定为 amis 渲染器 |
+| type   | `string` | `"amis"` | 兼容类型名，对应 PrismUI 渲染器 |
 | name   | `string` |          | 绑定上下文变量名   |
 | props  | `object` |          | 向下传递的 props   |

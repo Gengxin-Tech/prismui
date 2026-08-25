@@ -129,7 +129,7 @@ order: 60
 1. label 固定、content 不同
 2. label 和 content 都不确定
 
-第一种情况只需要在 content 里使用变量即可，因为可以用任意 amis 节点。
+第一种情况只需要在 content 里使用变量即可，因为可以用任意 PrismUI 节点。
 
 ```schema
 {

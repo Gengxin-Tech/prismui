@@ -149,11 +149,11 @@ order: 52
     "data": {
         "imageList": [
             {
-                "name": "amis",
+                "name": "PrismUI",
                 "image_url": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80"
             },
             {
-                "name": "amis",
+                "name": "PrismUI",
                 "image_url": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692942/d8e4992057f9.jpeg@s_0,w_216,l_1,f_jpg,q_80"
             },
             {
@@ -194,11 +194,11 @@ order: 52
     "data": {
         "imageList": [
             {
-                "name": "amis",
+                "name": "PrismUI",
                 "image_url": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80"
             },
             {
-                "name": "amis",
+                "name": "PrismUI",
                 "image_url": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692942/d8e4992057f9.jpeg@s_0,w_216,l_1,f_jpg,q_80"
             },
             {

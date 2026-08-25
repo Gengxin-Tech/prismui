@@ -403,7 +403,7 @@ type Value = ValueGroup;
 - `placeholder` 占位符
 - `operators` 默认为空，需配置自定义判断条件，支持字符串或 key-value 格式
 - `defaultOp` 默认操作符
-- `value` 字段配置右边值需要渲染的组件，支持 amis 输入类组件或自定义输入类组件
+- `value` 字段配置右边值需要渲染的组件，支持 PrismUI 输入类组件或自定义输入类组件
 - `defaultValue` 右边值的默认值
 
 ```schema: scope="body"

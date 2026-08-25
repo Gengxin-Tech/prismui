@@ -8,7 +8,7 @@ icon:
 order: 19
 ---
 
-SchemaNode 是指每一个 amis 配置节点的类型，支持`模板`、`Schema（配置）`以及`SchemaArray（配置数组）`三种类型
+SchemaNode 是指每一个 PrismUI 配置节点的类型，支持`模板`、`Schema（配置）`以及`SchemaArray（配置数组）`三种类型
 
 ## 模板
 
@@ -49,7 +49,7 @@ SchemaNode 是指每一个 amis 配置节点的类型，支持`模板`、`Schema
 
 而通过查看 [Page 组件属性表](../../components/page) 可知，`body`属性类型是`SchemaNode`，即可以在`body`中，嵌套配置其他组件。我们在这里，用`type`和`tpl` JSON 对象，配置了 `Tpl` 组件，渲染了一段模板字符串。
 
-> amis 可以通过该方法，在`Schema`中嵌套配置其他`SchemaNode`，从而搭建非常复杂的页面应用。
+> PrismUI 可以通过该方法，在`Schema`中嵌套配置其他`SchemaNode`，从而搭建非常复杂的页面应用。
 
 ### 配置显隐
 
@@ -125,7 +125,7 @@ SchemaNode 是指每一个 amis 配置节点的类型，支持`模板`、`Schema
 {
   "type": "page",
   "data": {
-      "name": "amis"
+      "name": "PrismUI"
       "age": 1
   },
   "body": [

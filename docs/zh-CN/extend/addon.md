@@ -156,8 +156,8 @@ amisLib.addRule(
 如果不想增加一个新的 name，在 JS SDK 或 React 还有更高级的处理方法，可以增加一个 name 同样为 id 的 switch，实现 PipeIn/PipeOut 函数来进行自动识别，下面是个示例：
 
 ```javascript
-let amis = amisRequire('amis/embed');
-let amisScoped = amis.embed('#root', {
+let prismui = prismuiRequire('prismui/embed');
+let prismuiScoped = prismui.embed('#root', {
   type: 'page',
   title: '表单页面',
   // 可以通过去掉下面的注释来测试

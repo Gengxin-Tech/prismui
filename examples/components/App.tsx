@@ -218,7 +218,7 @@ export class App extends React.PureComponent<{
       return (
         <div id="headerBar" className="box-shadow bg-dark">
           <div className={`${componentClassPrefix}Layout-brand`}>
-            amis 可视化编辑器
+            PrismUI 可视化编辑器
           </div>
         </div>
       );
@@ -255,7 +255,7 @@ export class App extends React.PureComponent<{
               className={`${componentClassPrefix}Layout-brand text-ellipsis`}
             >
               <i className="fa fa-paw" />
-              <span className="hidden-folded m-l-sm">AMIS 示例</span>
+              <span className="hidden-folded m-l-sm">PrismUI 示例</span>
             </div>
           )}
         </div>
