@@ -771,7 +771,7 @@ render 有三个参数，后面会详细说明这三个参数内的属性
 (schema: any, path: string) => Promise<Function>;
 ```
 
-可以通过它懒加载自定义组件，比如： https://github.com/Gengxin-Tech/prismui/blob/master/packages/amis-core/__tests__/factory.test.tsx#L64-L91。
+可以通过它懒加载自定义组件，比如： https://github.com/Gengxin-Tech/prismui/blob/master/packages/prismui-core/__tests__/factory.test.tsx#L64-L91。
 
 #### affixOffsetTop: number
 

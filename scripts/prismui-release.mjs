@@ -23,23 +23,23 @@ const DEFAULT_ENVIRONMENT = 'npm-publish';
 
 const publishPackages = [
   {
-    dir: 'packages/amis-formula',
+    dir: 'packages/prismui-formula',
     expectedName: 'prismui-formula'
   },
   {
-    dir: 'packages/amis-core',
+    dir: 'packages/prismui-core',
     expectedName: 'prismui-core'
   },
   {
-    dir: 'packages/amis-ui',
+    dir: 'packages/prismui-ui',
     expectedName: 'prismui-ui'
   },
   {
-    dir: 'packages/office-viewer',
+    dir: 'packages/prismui-office-viewer',
     expectedName: 'prismui-office-viewer'
   },
   {
-    dir: 'packages/amis',
+    dir: 'packages/prismui-framework',
     expectedName: 'prismui-framework'
   },
   {
@@ -51,19 +51,19 @@ const publishPackages = [
     expectedName: 'prismui-postcss'
   },
   {
-    dir: 'packages/amis-theme-editor-helper',
+    dir: 'packages/prismui-theme-editor-helper',
     expectedName: 'prismui-theme-editor-helper'
   },
   {
-    dir: 'packages/amis-editor-core',
+    dir: 'packages/prismui-editor-core',
     expectedName: 'prismui-editor-core'
   },
   {
-    dir: 'packages/amis-editor',
+    dir: 'packages/prismui-editor',
     expectedName: 'prismui-editor'
   },
   {
-    dir: 'packages/vite-plugin-amisr',
+    dir: 'packages/vite-plugin-prismui',
     expectedName: 'vite-plugin-prismui'
   }
 ];
@@ -496,14 +496,14 @@ function scrubDeclarationDir(dir) {
 
 function scrubDeclarationSource(source) {
   const declarationPathReplacements = [
-    ['packages/amis-theme-editor-helper/lib', 'prismui-theme-editor-helper/lib'],
-    ['packages/amis-editor-core/lib', 'prismui-editor-core'],
-    ['packages/amis-editor/lib', 'prismui-editor/lib'],
-    ['packages/amis-formula/lib', 'prismui-formula/lib'],
-    ['packages/amis-core/lib', 'prismui-core/lib'],
-    ['packages/amis-ui/lib', 'prismui-ui/lib'],
-    ['packages/office-viewer/lib', 'prismui-office-viewer/lib'],
-    ['packages/amis/lib', 'prismui-framework/lib']
+    ['packages/prismui-theme-editor-helper/lib', 'prismui-theme-editor-helper/lib'],
+    ['packages/prismui-editor-core/lib', 'prismui-editor-core'],
+    ['packages/prismui-editor/lib', 'prismui-editor/lib'],
+    ['packages/prismui-formula/lib', 'prismui-formula/lib'],
+    ['packages/prismui-core/lib', 'prismui-core/lib'],
+    ['packages/prismui-ui/lib', 'prismui-ui/lib'],
+    ['packages/prismui-office-viewer/lib', 'prismui-office-viewer/lib'],
+    ['packages/prismui-framework/lib', 'prismui-framework/lib']
   ];
 
   return declarationPathReplacements.reduce(

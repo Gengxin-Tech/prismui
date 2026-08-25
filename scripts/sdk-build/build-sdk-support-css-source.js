@@ -12,7 +12,7 @@ async function buildSdkHelperCssFromSource(options) {
 
   const root = options.repoRoot || repoRoot;
   const helperFile =
-    options.helperFile || path.join(root, 'packages/amis-ui/scss/helper.scss');
+    options.helperFile || path.join(root, 'packages/prismui-ui/scss/helper.scss');
   const helperCss = sass.compile(helperFile, {
     style: 'expanded',
     logger: {

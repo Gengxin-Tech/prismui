@@ -68,7 +68,7 @@ function getModuleIdCandidates(id) {
   const candidates = new Set([normalized]);
 
   addSuffixCandidate(candidates, normalized, '/node_modules/');
-  addSuffixCandidate(candidates, normalized, '/packages/amis/');
+  addSuffixCandidate(candidates, normalized, '/packages/prismui-framework/');
   addSuffixCandidate(candidates, normalized, '/packages/');
   addExamplesCandidate(candidates, normalized);
   addCompiledPackageCandidates(candidates);

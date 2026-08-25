@@ -175,11 +175,11 @@ function assertRuntimeImportShape(output) {
   );
   const videoChunk = findChunkWithModule(
     output,
-    '/packages/amis/lib/renderers/Video.js'
+    '/packages/prismui-framework/lib/renderers/Video.js'
   );
   const pdfViewerChunk = findChunkWithModule(
     output,
-    '/packages/amis-ui/lib/components/PdfViewer.js'
+    '/packages/prismui-ui/lib/components/PdfViewer.js'
   );
   const monacoLoaderChunk = output.find(
     item =>

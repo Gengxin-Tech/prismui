@@ -39,12 +39,12 @@ jobs:
       - name: build prismui-office-viewer
         run: |
           npm run build --workspace prismui\-office\-viewer
-      - name: build prismui
+      - name: build prismui-framework
         run: |
-          npm run build --workspace prismui
+          npm run build --workspace prismui\-framework
       - name: check schema.json
         run: |
-          cp ./packages/amis/schema.json .
+          cp ./packages/prismui-framework/schema.json .
       - name: build prismui-theme-editor-helper
         run: |
           npm run build --workspace prismui\-theme\-editor\-helper

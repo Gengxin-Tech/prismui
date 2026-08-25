@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "./",
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "../../types",
+      "./node_modules/@types",
+      "../../node_modules/@types"
+    ]
+  },
+  "include": ["src/**/*", "../prismui-ui/src/custom.d.ts"],
+  "references": [
+    {"path": "../prismui-core"},
+    {"path": "../prismui-ui"},
+    {"path": "../prismui-office-viewer"}
+  ]
+}

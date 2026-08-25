@@ -1,9 +1,9 @@
 @use 'sass:color';
-@import 'node_modules/amis-ui/scss/mixins';
-@import 'node_modules/amis-ui/scss/functions';
-@import 'node_modules/amis-ui/scss/variables';
-$Editor-static-path: '../packages/amis-editor-core/static';
-@import '../packages/amis-editor-core/scss/editor';
+@import 'node_modules/prismui-ui/scss/mixins';
+@import 'node_modules/prismui-ui/scss/functions';
+@import 'node_modules/prismui-ui/scss/variables';
+$Editor-static-path: '../packages/prismui-editor-core/static';
+@import '../packages/prismui-editor-core/scss/editor';
 
 body {
   background-color: #fff !important;

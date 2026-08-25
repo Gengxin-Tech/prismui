@@ -33,9 +33,9 @@ flowchart TD
 
 | 名词               | 含义                                                                                       | 典型来源                                             |
 | ------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| `Editor`           | 可视化编辑器主组件，承载编辑器外壳、预览区和左右面板                                       | `packages/amis-editor-core/src/component/Editor.tsx` |
-| `EditorStore`      | 编辑器状态树，保存 schema、当前选中节点、面板、物料、拖拽状态、弹窗状态等                  | `packages/amis-editor-core/src/store/editor.ts`      |
-| `EditorManager`    | 非 UI 控制层，连接 store、插件、PrismUI renderer、DND 和事件系统                           | `packages/amis-editor-core/src/manager.ts`           |
+| `Editor`           | 可视化编辑器主组件，承载编辑器外壳、预览区和左右面板                                       | `packages/prismui-editor-core/src/component/Editor.tsx` |
+| `EditorStore`      | 编辑器状态树，保存 schema、当前选中节点、面板、物料、拖拽状态、弹窗状态等                  | `packages/prismui-editor-core/src/store/editor.ts`      |
+| `EditorManager`    | 非 UI 控制层，连接 store、插件、PrismUI renderer、DND 和事件系统                           | `packages/prismui-editor-core/src/manager.ts`           |
 | 插件               | 编辑器能力单元，可以提供渲染器识别、配置面板、组件物料、工具栏、右键菜单、事件动作等       | `BasePlugin` 或自定义 `PluginInterface`              |
 | 渲染器插件         | 绑定了 `rendererName` 的插件，用于让某种 PrismUI renderer 可点选、可配置、可拖入           | `rendererName = 'input-text'`                        |
 | 全局插件           | 不绑定具体 renderer 的插件，用于新增全局面板、菜单、工具或监听事件                         | 左侧业务资源面板、审计插件                           |
@@ -366,12 +366,12 @@ flowchart LR
 
 | 关注点                                                              | 入口文件                                                                                                                        |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| 编辑器主壳                                                          | `packages/amis-editor-core/src/component/Editor.tsx`                                                                            |
-| 预览区和 rendererResolver                                           | `packages/amis-editor-core/src/component/Preview.tsx`                                                                           |
-| 管理器、插件加载、事件派发、物料和面板收集                          | `packages/amis-editor-core/src/manager.ts`                                                                                      |
-| 插件接口、`BasePlugin`、`RendererInfo`、`PanelItem`、`RegionConfig` | `packages/amis-editor-core/src/plugin.ts`                                                                                       |
-| 编辑态 wrapper 创建、区域 hack、配置面板渲染                        | `packages/amis-editor-core/src/component/factory.tsx`                                                                           |
-| 普通节点 DOM 标记                                                   | `packages/amis-editor-core/src/component/NodeWrapper.tsx`                                                                       |
-| 容器区域 DOM 标记                                                   | `packages/amis-editor-core/src/component/RegionWrapper.tsx`                                                                     |
-| 左右面板外壳                                                        | `packages/amis-editor-core/src/component/Panel/LeftPanels.tsx`、`packages/amis-editor-core/src/component/Panel/RightPanels.tsx` |
-| 内置组件插件                                                        | `packages/amis-editor/src/plugin/`                                                                                              |
+| 编辑器主壳                                                          | `packages/prismui-editor-core/src/component/Editor.tsx`                                                                            |
+| 预览区和 rendererResolver                                           | `packages/prismui-editor-core/src/component/Preview.tsx`                                                                           |
+| 管理器、插件加载、事件派发、物料和面板收集                          | `packages/prismui-editor-core/src/manager.ts`                                                                                      |
+| 插件接口、`BasePlugin`、`RendererInfo`、`PanelItem`、`RegionConfig` | `packages/prismui-editor-core/src/plugin.ts`                                                                                       |
+| 编辑态 wrapper 创建、区域 hack、配置面板渲染                        | `packages/prismui-editor-core/src/component/factory.tsx`                                                                           |
+| 普通节点 DOM 标记                                                   | `packages/prismui-editor-core/src/component/NodeWrapper.tsx`                                                                       |
+| 容器区域 DOM 标记                                                   | `packages/prismui-editor-core/src/component/RegionWrapper.tsx`                                                                     |
+| 左右面板外壳                                                        | `packages/prismui-editor-core/src/component/Panel/LeftPanels.tsx`、`packages/prismui-editor-core/src/component/Panel/RightPanels.tsx` |
+| 内置组件插件                                                        | `packages/prismui-editor/src/plugin/`                                                                                              |

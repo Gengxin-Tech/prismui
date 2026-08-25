@@ -3,64 +3,64 @@
   "compilerOptions": {
     "paths": {
       "prismui-core": [
-        "./packages/amis-core/src/index.tsx"
+        "./packages/prismui-core/src/index.tsx"
       ],
       "prismui-core/lib/*": [
-        "./packages/amis-core/src/*"
+        "./packages/prismui-core/src/*"
       ],
       "prismui-formula": [
-        "./packages/amis-formula/src/index.ts"
+        "./packages/prismui-formula/src/index.ts"
       ],
       "prismui-formula/lib/*": [
-        "./packages/amis-formula/src/*"
+        "./packages/prismui-formula/src/*"
       ],
       "prismui-ui": [
-        "./packages/amis-ui/src/index.tsx"
+        "./packages/prismui-ui/src/index.tsx"
       ],
       "prismui-ui/lib/*": [
-        "./packages/amis-ui/src/*"
+        "./packages/prismui-ui/src/*"
       ],
       "prismui": [
-        "./packages/amis/src/index.tsx"
+        "./packages/prismui-framework/src/index.tsx"
       ],
       "prismui/lib/*": [
-        "./packages/amis/src/*"
+        "./packages/prismui-framework/src/*"
       ],
       "prismui-framework": [
-        "./packages/amis/src/index.tsx"
+        "./packages/prismui-framework/src/index.tsx"
       ],
       "prismui-framework/lib/*": [
-        "./packages/amis/src/*"
+        "./packages/prismui-framework/src/*"
       ],
       "prismui-i18n-runtime": [
-        "./packages/prismui-i18n-runtime/es/index.js"
+        "./packages/prismui-i18n-runtime/lib/index.d.ts"
       ],
       "prismui-office-viewer": [
-        "./packages/office-viewer/src/index.ts"
+        "./packages/prismui-office-viewer/src/index.ts"
       ],
       "prismui-office-viewer/lib/*": [
-        "./packages/office-viewer/src/*"
+        "./packages/prismui-office-viewer/src/*"
       ],
       "prismui-editor-core": [
-        "./packages/amis-editor-core/src/index.ts"
+        "./packages/prismui-editor-core/src/index.ts"
       ],
       "prismui-editor-core/lib/*": [
-        "./packages/amis-editor-core/src/*"
+        "./packages/prismui-editor-core/src/*"
       ],
-      "packages/amis-editor-core/lib": [
-        "./packages/amis-editor-core/src/index.ts"
+      "packages/prismui-editor-core/lib": [
+        "./packages/prismui-editor-core/src/index.ts"
       ],
       "prismui-editor": [
-        "./packages/amis-editor/src/index.tsx"
+        "./packages/prismui-editor/src/index.tsx"
       ],
       "prismui-editor/lib/*": [
-        "./packages/amis-editor/src/*"
+        "./packages/prismui-editor/src/*"
       ],
       "prismui-theme-editor-helper": [
-        "./packages/amis-theme-editor-helper/src/index.ts"
+        "./packages/prismui-theme-editor-helper/src/index.ts"
       ],
       "prismui-theme-editor-helper/lib/*": [
-        "./packages/amis-theme-editor-helper/src/*"
+        "./packages/prismui-theme-editor-helper/src/*"
       ]
     }
   },

@@ -83,7 +83,7 @@ function writeIconfontAssets(root, outDir) {
 }
 
 function writeLocaleAssets(root, outDir) {
-  const localeFile = path.join(root, 'packages/amis-ui/src/locale/de-DE.ts');
+  const localeFile = path.join(root, 'packages/prismui-ui/src/locale/de-DE.ts');
   writeFile(
     path.join(outDir, 'locale/de-DE.js'),
     generateSdkLocale(fs.readFileSync(localeFile, 'utf8')) + '\n'

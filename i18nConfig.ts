@@ -1,6 +1,6 @@
 export default {
   entry: {
-    dir: './packages/amis-editor-core/src'
+    dir: './packages/prismui-editor-core/src'
   },
   file: {
     test: /.*(ts|tsx|js|jsx)$/
@@ -8,10 +8,10 @@ export default {
   ignore: {
     list: [
       'packages/**/locale/*',
-      'packages/amis/*',
-      'packages/amis-ui/*',
-      'packages/amis-core/*',
-      'packages/amis-formula/*',
+      'packages/prismui-framework/*',
+      'packages/prismui-ui/*',
+      'packages/prismui-core/*',
+      'packages/prismui-formula/*',
       'packages/**/examples/*'
     ]
   },
@@ -25,15 +25,15 @@ export default {
     {
       name: 'en-US',
       path: [
-        './packages/amis-editor-core/src/locale',
-        './packages/amis-editor/src/locale'
+        './packages/prismui-editor-core/src/locale',
+        './packages/prismui-editor/src/locale'
       ]
     },
     {
       name: 'zh-CN',
       path: [
-        './packages/amis-editor-core/src/locale',
-        './packages/amis-editor/src/locale'
+        './packages/prismui-editor-core/src/locale',
+        './packages/prismui-editor/src/locale'
       ]
     }
   ]

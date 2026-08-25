@@ -410,7 +410,7 @@ export default function (doc) {
 
           return this.pathJoin(
             basePath,
-            `/packages/amis-ui/scss/helper`,
+            `/packages/prismui-ui/scss/helper`,
             relativePath.replace(fileName, `/_${fileName}.scss`)
           );
         } else {

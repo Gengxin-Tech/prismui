@@ -41,17 +41,17 @@ flowchart TD
 | -------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------- |
 | schema               | 描述页面或组件的 JSON 配置，通常包含 `type` 和其他属性                                  | `docs/zh-CN/concepts/schema.md`               |
 | schema 节点          | schema 树上的一个节点，可以是对象、数组、字符串、数字或 React element                   | `SchemaNode`                                  |
-| renderer / 渲染器    | 接收 schema props 并输出 React UI 的组件实现                                            | `packages/amis/src/renderers/`                |
-| `RendererConfig`     | 渲染器注册信息，包含 `type`、`test`、`name`、`component`、`storeType`、`alias` 等       | `packages/amis-core/src/factory.tsx`          |
-| `RendererProps`      | 下发给真实 renderer 的运行时 props，包含 `render`、`env`、`data`、`$path`、`$schema` 等 | `packages/amis-core/src/factory.tsx`          |
-| `@Renderer()`        | 注册渲染器的装饰器，内部调用 `registerRenderer()`                                       | `packages/amis-core/src/factory.tsx`          |
-| `registerRenderer()` | 把 renderer 加入全局 registry，建立 type 到 renderer 的映射                             | `packages/amis-core/src/factory.tsx`          |
-| `resolveRenderer()`  | 根据 schema 的 `type` 或路径查找命中的 `RendererConfig`                                 | `packages/amis-core/src/factory.tsx`          |
-| `SchemaRenderer`     | 通用 schema 节点渲染器，负责把 schema 节点适配成真实 renderer props                     | `packages/amis-core/src/SchemaRenderer.tsx`   |
-| `Root`               | 根渲染容器，提供主题、语言、root store、定义解析和根级 wrapper                          | `packages/amis-core/src/Root.tsx`             |
-| `RootRenderer`       | 根页面运行时，维护页面数据、弹窗、抽屉、动作、错误和 loading                            | `packages/amis-core/src/RootRenderer.tsx`     |
-| `RendererStore`      | 一次渲染会话的 root store，按 `options.session` 缓存                                    | `packages/amis-core/src/store/`               |
-| `env`                | 运行时环境能力，如 fetcher、notify、jumpTo、rendererResolver、loadRenderer              | `packages/amis-core/src/env.tsx`              |
+| renderer / 渲染器    | 接收 schema props 并输出 React UI 的组件实现                                            | `packages/prismui-framework/src/renderers/`                |
+| `RendererConfig`     | 渲染器注册信息，包含 `type`、`test`、`name`、`component`、`storeType`、`alias` 等       | `packages/prismui-core/src/factory.tsx`          |
+| `RendererProps`      | 下发给真实 renderer 的运行时 props，包含 `render`、`env`、`data`、`$path`、`$schema` 等 | `packages/prismui-core/src/factory.tsx`          |
+| `@Renderer()`        | 注册渲染器的装饰器，内部调用 `registerRenderer()`                                       | `packages/prismui-core/src/factory.tsx`          |
+| `registerRenderer()` | 把 renderer 加入全局 registry，建立 type 到 renderer 的映射                             | `packages/prismui-core/src/factory.tsx`          |
+| `resolveRenderer()`  | 根据 schema 的 `type` 或路径查找命中的 `RendererConfig`                                 | `packages/prismui-core/src/factory.tsx`          |
+| `SchemaRenderer`     | 通用 schema 节点渲染器，负责把 schema 节点适配成真实 renderer props                     | `packages/prismui-core/src/SchemaRenderer.tsx`   |
+| `Root`               | 根渲染容器，提供主题、语言、root store、定义解析和根级 wrapper                          | `packages/prismui-core/src/Root.tsx`             |
+| `RootRenderer`       | 根页面运行时，维护页面数据、弹窗、抽屉、动作、错误和 loading                            | `packages/prismui-core/src/RootRenderer.tsx`     |
+| `RendererStore`      | 一次渲染会话的 root store，按 `options.session` 缓存                                    | `packages/prismui-core/src/store/`               |
+| `env`                | 运行时环境能力，如 fetcher、notify、jumpTo、rendererResolver、loadRenderer              | `packages/prismui-core/src/env.tsx`              |
 | region               | 子 schema 的逻辑区域名，如 `body`、`toolbar`、`actions`、`columns`                      | renderer 调用 `render(region, schema)` 时传入 |
 | `$path`              | 当前节点在渲染树中的路径，用于 renderer 匹配、调试和递归定位                            | `renderChild()` 生成                          |
 
@@ -359,11 +359,11 @@ flowchart TD
 
 | 关注点                                                 | 入口文件                                    |
 | ------------------------------------------------------ | ------------------------------------------- |
-| `render()` API、`AMISSchema`、session/env 创建         | `packages/amis-core/src/index.tsx`          |
-| 根上下文、主题、语言、root wrapper                     | `packages/amis-core/src/Root.tsx`           |
-| 页面级数据、动作、弹窗、抽屉、loading、错误            | `packages/amis-core/src/RootRenderer.tsx`   |
-| schema 节点适配、renderer 解析、递归 render 下发       | `packages/amis-core/src/SchemaRenderer.tsx` |
-| renderer 注册、匹配、异步加载、schema filter、默认 env | `packages/amis-core/src/factory.tsx`        |
-| Scoped 目标组件通信                                    | `packages/amis-core/src/Scoped.tsx`         |
-| RendererStore / RootStore / 组件 store                 | `packages/amis-core/src/store/`             |
-| 内置 renderer 实现                                     | `packages/amis/src/renderers/`              |
+| `render()` API、`AMISSchema`、session/env 创建         | `packages/prismui-core/src/index.tsx`          |
+| 根上下文、主题、语言、root wrapper                     | `packages/prismui-core/src/Root.tsx`           |
+| 页面级数据、动作、弹窗、抽屉、loading、错误            | `packages/prismui-core/src/RootRenderer.tsx`   |
+| schema 节点适配、renderer 解析、递归 render 下发       | `packages/prismui-core/src/SchemaRenderer.tsx` |
+| renderer 注册、匹配、异步加载、schema filter、默认 env | `packages/prismui-core/src/factory.tsx`        |
+| Scoped 目标组件通信                                    | `packages/prismui-core/src/Scoped.tsx`         |
+| RendererStore / RootStore / 组件 store                 | `packages/prismui-core/src/store/`             |
+| 内置 renderer 实现                                     | `packages/prismui-framework/src/renderers/`              |

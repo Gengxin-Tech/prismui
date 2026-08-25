@@ -58,7 +58,7 @@
         }
         link.setAttribute(
           'href',
-          new URL(`./packages/amis-ui/scss/themes/${key}.scss`, import.meta.url)
+          new URL(`./packages/prismui-ui/scss/themes/${key}.scss`, import.meta.url)
             .href
         );
         document.head.appendChild(link);
@@ -69,11 +69,11 @@
       helper.setAttribute('rel', 'stylesheet');
       helper.setAttribute(
         'href',
-        new URL(`./packages/amis-ui/scss/helper.scss`, import.meta.url).href
+        new URL(`./packages/prismui-ui/scss/helper.scss`, import.meta.url).href
       );
       document.head.appendChild(helper);
     </script>
-    <!-- <link rel="stylesheet" href="./packages/amis-ui/scss/helper.scss" /> -->
+    <!-- <link rel="stylesheet" href="./packages/prismui-ui/scss/helper.scss" /> -->
   </head>
 
   <body>

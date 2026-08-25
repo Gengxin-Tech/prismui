@@ -93,19 +93,19 @@ export function App() {
 ## Repository Layout
 
 ```text
-packages/amis                   UI Schema renderer, SDK, and main package (published as prismui-framework)
-packages/amis-core              data scope, events, renderer registry, and runtime core (published as prismui-core)
-packages/amis-ui                base UI components and theme styles (published as prismui-ui)
-packages/amis-formula           expression and formula support (published as prismui-formula)
-packages/office-viewer          Office document viewer (published as prismui-office-viewer)
-packages/amis-editor            visual editor (published as prismui-editor)
-packages/amis-editor-core       editor model and plugin system (published as prismui-editor-core)
-packages/amis-theme-editor-helper theme editor helper package (published as prismui-theme-editor-helper)
-packages/prismui-i18n-runtime   PrismUI i18n runtime
-packages/prismui-postcss        PrismUI editor style processing runtime
-packages/vite-plugin-amisr      Vite plugin that turns PrismUI JSON schema into React components (published as vite-plugin-prismui)
-examples                        docs site and local examples
-scripts/sdk-build               SDK build, contract checks, and migration tooling
+packages/prismui-framework             UI Schema renderer, SDK, and main package (published as prismui-framework)
+packages/prismui-core                  data scope, events, renderer registry, and runtime core (published as prismui-core)
+packages/prismui-ui                    base UI components and theme styles (published as prismui-ui)
+packages/prismui-formula               expression and formula support (published as prismui-formula)
+packages/prismui-office-viewer         Office document viewer (published as prismui-office-viewer)
+packages/prismui-editor                visual editor (published as prismui-editor)
+packages/prismui-editor-core           editor model and plugin system (published as prismui-editor-core)
+packages/prismui-theme-editor-helper   theme editor helper package (published as prismui-theme-editor-helper)
+packages/prismui-i18n-runtime          PrismUI i18n runtime
+packages/prismui-postcss               PrismUI editor style processing runtime
+packages/vite-plugin-prismui           Vite plugin that turns PrismUI JSON schema into React components (published as vite-plugin-prismui)
+examples                               docs site and local examples
+scripts/sdk-build                      SDK build, contract checks, and migration tooling
 ```
 
 ## Local Development
@@ -121,7 +121,7 @@ Then open:
 
 ```text
 http://127.0.0.1:8888/examples/pages/simple
-http://127.0.0.1:8888/packages/amis-editor/
+http://127.0.0.1:8888/packages/prismui-editor/
 ```
 
 Common checks:
@@ -138,7 +138,7 @@ Focused examples:
 
 ```bash
 npm test --workspace prismui-framework -- -t <spec-name>
-./node_modules/.bin/jest packages/amis/__tests__/renderers/Form/buttonToolBar.test.tsx
+./node_modules/.bin/jest packages/prismui-framework/__tests__/renderers/Form/buttonToolBar.test.tsx
 npm run update-snapshot --workspace prismui-framework -- -t <spec-name>
 ```
 

@@ -5,28 +5,28 @@
       "name": "monorepo"
     },
     {
-      "path": "./packages/amis-formula"
+      "path": "./packages/prismui-formula"
     },
     {
-      "path": "./packages/amis-core"
+      "path": "./packages/prismui-core"
     },
     {
-      "path": "./packages/amis-ui"
+      "path": "./packages/prismui-ui"
     },
     {
-      "path": "./packages/amis"
+      "path": "./packages/prismui-framework"
     },
     {
-      "path": "./packages/office-viewer"
+      "path": "./packages/prismui-office-viewer"
     },
     {
-      "path": "./packages/amis-editor-core"
+      "path": "./packages/prismui-editor-core"
     },
     {
-      "path": "./packages/amis-editor"
+      "path": "./packages/prismui-editor"
     },
     {
-      "path": "./packages/amis-theme-editor-helper"
+      "path": "./packages/prismui-theme-editor-helper"
     }
   ],
   "settings": {

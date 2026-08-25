@@ -87,8 +87,8 @@ function isSdkUriModule(id) {
 function isSdkFilterUrlModule(id) {
   return (
     isSdkUriModule(id) ||
-    id.endsWith('/packages/amis-ui/lib/components/Editor.js') ||
-    id.endsWith('/packages/amis-ui/src/components/Editor.tsx')
+    id.endsWith('/packages/prismui-ui/lib/components/Editor.js') ||
+    id.endsWith('/packages/prismui-ui/src/components/Editor.tsx')
   );
 }
 

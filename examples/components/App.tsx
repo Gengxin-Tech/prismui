@@ -314,7 +314,7 @@ export class App extends React.PureComponent<{
             </NavLink>
             {process.env.NODE_ENV === 'development' ? (
               <>
-                <a href={`/packages/amis-ui/#/basic/button`}>UI控件</a>
+                <a href={`/packages/prismui-ui/#/basic/button`}>UI控件</a>
               </>
             ) : null}
             {/* <a href="https://suda.bce.baidu.com" target="_blank">

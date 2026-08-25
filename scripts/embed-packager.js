@@ -8,7 +8,7 @@ var collectSdkPlaceholderAssets = require('./sdk-build/collect-sdk-placeholder-a
 var prepareSdkJs = require('./sdk-build/prepare-sdk-js').prepareSdkJs;
 var caches = {};
 var createResource = fis.require('postpackager-loader/lib/resource.js');
-const package = require('../packages/amis/package.json');
+const package = require('../packages/prismui-framework/package.json');
 
 module.exports = function (ret, pack, settings, opt) {
   var root = fis.project.getProjectPath();

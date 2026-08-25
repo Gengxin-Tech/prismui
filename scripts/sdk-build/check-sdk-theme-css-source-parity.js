@@ -7,12 +7,12 @@ const {buildSdkThemeCssFromSource} = require('./build-sdk-theme-css-source');
 const {reduceSdkCssCalc} = require('./reduce-sdk-css-calc');
 
 const repoRoot = path.resolve(__dirname, '../..');
-const sdkDir = path.join(repoRoot, 'packages/amis/sdk');
+const sdkDir = path.join(repoRoot, 'packages/prismui-framework/sdk');
 const maxDiffs = 20;
 
 if (!fs.existsSync(sdkDir)) {
   throw new Error(
-    'Missing packages/amis/sdk. Run `npm run build --workspace prismui` first.'
+    'Missing packages/prismui-framework/sdk. Run `npm run build --workspace prismui-framework` first.'
   );
 }
 

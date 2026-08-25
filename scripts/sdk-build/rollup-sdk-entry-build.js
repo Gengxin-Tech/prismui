@@ -6,7 +6,7 @@ const json = require('@rollup/plugin-json');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const replace = require('@rollup/plugin-replace');
 const swc = require('@swc/core');
-const {version} = require('../../packages/amis/package.json');
+const {version} = require('../../packages/prismui-framework/package.json');
 const {prepareSdkJs} = require('./prepare-sdk-js');
 const {createSdkManualChunks} = require('./rollup-sdk-manual-chunks');
 const {sdkFisDirectivePlugin} = require('./rollup-fis-directives');
@@ -164,32 +164,32 @@ function createSdkLoaderSource() {
 }
 
 function assertFreshWorkspaceLibs() {
-  const coreFactory = path.join(repoRoot, 'packages/amis-core/lib/factory.js');
+  const coreFactory = path.join(repoRoot, 'packages/prismui-core/lib/factory.js');
   const uiMenu = path.join(
     repoRoot,
-    'packages/amis-ui/lib/components/menu/index.js'
+    'packages/prismui-ui/lib/components/menu/index.js'
   );
 
   assert(
     fs.existsSync(coreFactory),
-    'Rollup SDK entry requires packages/amis-core/lib. Run `npm run build --workspace packages/amis-core` first.'
+    'Rollup SDK entry requires packages/prismui-core/lib. Run `npm run build --workspace packages/prismui-core` first.'
   );
 
   const source = fs.readFileSync(coreFactory, 'utf8');
   assert(
     source.includes('config.getComponent'),
-    'Rollup SDK entry requires fresh packages/amis-core/lib with async renderer support. Run `npm run build --workspace packages/amis-core` first.'
+    'Rollup SDK entry requires fresh packages/prismui-core/lib with async renderer support. Run `npm run build --workspace packages/prismui-core` first.'
   );
 
   assert(
     fs.existsSync(uiMenu),
-    'Rollup SDK entry requires packages/amis-ui/lib. Run `npm run build --workspace packages/amis-ui` first.'
+    'Rollup SDK entry requires packages/prismui-ui/lib. Run `npm run build --workspace packages/prismui-ui` first.'
   );
 
   const uiMenuSource = fs.readFileSync(uiMenu, 'utf8');
   assert(
     uiMenuSource.includes("require('@rc-component/menu')"),
-    'Rollup SDK entry requires fresh packages/amis-ui/lib after the @rc-component/menu migration. Run `npm run build --workspace packages/amis-ui` first.'
+    'Rollup SDK entry requires fresh packages/prismui-ui/lib after the @rc-component/menu migration. Run `npm run build --workspace packages/prismui-ui` first.'
   );
 }
 
@@ -385,7 +385,7 @@ function transformFisAsyncCommonjsRequire() {
 }
 
 function isFisAsyncCommonjsModule(id) {
-  return id.split(path.sep).join('/').endsWith('/packages/amis/lib/minimal.js');
+  return id.split(path.sep).join('/').endsWith('/packages/prismui-framework/lib/minimal.js');
 }
 
 function rewriteFisAsyncCommonjsRequire(code) {
@@ -461,11 +461,12 @@ function resolveSdkOptimizedImports() {
 
 function resolveWorkspaceLibImports() {
   const packages = new Map([
-    ['prismui', 'packages/amis/lib'],
-    ['prismui-core', 'packages/amis-core/lib'],
-    ['prismui-formula', 'packages/amis-formula/lib'],
-    ['prismui-ui', 'packages/amis-ui/lib'],
-    ['prismui-office-viewer', 'packages/office-viewer/lib']
+    ['prismui-framework', 'packages/prismui-framework/lib'],
+    ['prismui', 'packages/prismui-framework/lib'],
+    ['prismui-core', 'packages/prismui-core/lib'],
+    ['prismui-formula', 'packages/prismui-formula/lib'],
+    ['prismui-ui', 'packages/prismui-ui/lib'],
+    ['prismui-office-viewer', 'packages/prismui-office-viewer/lib']
   ]);
 
   return {

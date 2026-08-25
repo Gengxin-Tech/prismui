@@ -26,10 +26,10 @@ const repoRoot = path.resolve(__dirname, '../..');
 const args = process.argv.slice(2);
 const mode = readOption('--mode') || 'contract-mirror';
 const defaultOutDir =
-  mode === 'rollup-sdk' ? 'packages/amis/sdk' : 'packages/amis/sdk-next';
+  mode === 'rollup-sdk' ? 'packages/prismui-framework/sdk' : 'packages/prismui-framework/sdk-next';
 const sourceSdkDir = path.resolve(
   repoRoot,
-  readOption('--source-sdk-dir') || 'packages/amis/sdk'
+  readOption('--source-sdk-dir') || 'packages/prismui-framework/sdk'
 );
 const outDir = path.resolve(repoRoot, readOption('--out-dir') || defaultOutDir);
 const rollupEntryOutDir =
@@ -101,7 +101,7 @@ function readOption(name) {
 function assertDirectory(dir, label) {
   if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) {
     throw new Error(
-      `Missing ${label}: ${relative(dir)}. Run \`npm run build --workspace prismui\` first.`
+      `Missing ${label}: ${relative(dir)}. Run \`npm run build --workspace prismui-framework\` first.`
     );
   }
 }

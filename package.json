@@ -1,17 +1,17 @@
 {
   "name": "prismui-monorepo",
   "workspaces": [
-    "packages/amis-formula",
-    "packages/amis-core",
-    "packages/amis-ui",
-    "packages/office-viewer",
-    "packages/amis",
+    "packages/prismui-formula",
+    "packages/prismui-core",
+    "packages/prismui-ui",
+    "packages/prismui-office-viewer",
+    "packages/prismui-framework",
     "packages/prismui-i18n-runtime",
     "packages/prismui-postcss",
-    "packages/amis-theme-editor-helper",
-    "packages/amis-editor-core",
-    "packages/amis-editor",
-    "packages/vite-plugin-amisr"
+    "packages/prismui-theme-editor-helper",
+    "packages/prismui-editor-core",
+    "packages/prismui-editor",
+    "packages/vite-plugin-prismui"
   ],
   "scripts": {
     "fis3-serve": "fis3 server start --www ./public --port 8888 --no-daemon --no-browse",
@@ -25,9 +25,9 @@
     "build-sdk-next": "node scripts/sdk-build/build-sdk-next.js",
     "build-sdk-next-rollup-entry": "node scripts/sdk-build/build-sdk-next.js --mode rollup-entry",
     "build-sdk-rollup": "node scripts/sdk-build/build-sdk-next.js --mode rollup-sdk",
-    "build-sdk-fis3": "cd packages/amis && ../../node_modules/.bin/fis3 release publish-sdk -c -f ../../fis-conf.js",
+    "build-sdk-fis3": "cd packages/prismui-framework && ../../node_modules/.bin/fis3 release publish-sdk -c -f ../../fis-conf.js",
     "check-sdk-contract": "node scripts/sdk-build/check-sdk-contract.js",
-    "check-sdk-next-contract": "node scripts/sdk-build/check-sdk-contract.js --sdk-dir packages/amis/sdk-next",
+    "check-sdk-next-contract": "node scripts/sdk-build/check-sdk-contract.js --sdk-dir packages/prismui-framework/sdk-next",
     "check-sdk-placeholder-assets": "node scripts/sdk-build/check-sdk-placeholder-assets.js",
     "check-sdk-rollup-directives": "node scripts/sdk-build/check-sdk-rollup-directives.js",
     "check-sdk-rollup-entry": "node scripts/sdk-build/check-rollup-sdk-entry.js",
@@ -169,17 +169,19 @@
       "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js",
       "\\.svg\\.js$": "<rootDir>/__mocks__/svgJsMock.js",
-      "^prismui-ui$": "<rootDir>/packages/amis-ui/src/index.tsx",
-      "^prismui-ui/lib/(.*)$": "<rootDir>/packages/amis-ui/src/$1",
-      "^prismui-core$": "<rootDir>/packages/amis-core/src/index.tsx",
-      "^prismui-formula$": "<rootDir>/packages/amis-formula/src/index.ts",
-      "^prismui-office-viewer$": "<rootDir>/packages/office-viewer/src/index.ts",
+      "^prismui-ui$": "<rootDir>/packages/prismui-ui/src/index.tsx",
+      "^prismui-ui/lib/(.*)$": "<rootDir>/packages/prismui-ui/src/$1",
+      "^prismui-core$": "<rootDir>/packages/prismui-core/src/index.tsx",
+      "^prismui-formula$": "<rootDir>/packages/prismui-formula/src/index.ts",
+      "^prismui-office-viewer$": "<rootDir>/packages/prismui-office-viewer/src/index.ts",
       "^prismui-i18n-runtime$": "<rootDir>/packages/prismui-i18n-runtime/es/index.js",
-      "^prismui$": "<rootDir>/packages/amis/src/index.tsx"
+      "^prismui-framework$": "<rootDir>/packages/prismui-framework/src/index.tsx",
+      "^prismui-framework/lib/(.*)$": "<rootDir>/packages/prismui-framework/src/$1",
+      "^prismui$": "<rootDir>/packages/prismui-framework/src/index.tsx"
     },
     "setupFilesAfterEnv": [
-      "<rootDir>/packages/amis-core/__tests__/jest.setup.js",
-      "<rootDir>/packages/amis/__tests__/jest.setup.js"
+      "<rootDir>/packages/prismui-core/__tests__/jest.setup.js",
+      "<rootDir>/packages/prismui-framework/__tests__/jest.setup.js"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
