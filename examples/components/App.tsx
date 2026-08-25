@@ -11,7 +11,7 @@ import {
   Select,
   SearchBox,
   InputBox
-} from 'prismui';
+} from 'prismui-framework';
 import {eachTree, getTheme} from 'prismui-core';
 import 'prismui-ui/lib/locale/en-US';
 import {withRouter} from 'react-router-dom';

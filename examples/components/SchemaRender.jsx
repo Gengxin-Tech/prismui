@@ -1,6 +1,12 @@
 import React from 'react';
 import {DOCS_BASE_PATH, isDocsDeployment} from './publicPath';
-import {render, toast, makeTranslator, LazyComponent, Drawer} from 'prismui';
+import {
+  render,
+  toast,
+  makeTranslator,
+  LazyComponent,
+  Drawer
+} from 'prismui-framework';
 import axios from 'axios';
 import Portal from 'react-overlays/Portal';
 import {normalizeLink} from 'prismui-core';
