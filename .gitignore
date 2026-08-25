@@ -43,3 +43,7 @@ revision.json
 publish.sh
 .gstack/
 /.firecrawl/
+
+# Local release/research artifacts only; do not commit these to the repo.
+/docs/release-evidence/
+/docs/research/
