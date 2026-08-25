@@ -1,6 +1,6 @@
 {
   "name": "prismui-editor",
-  "version": "7.0.0-beta.6",
+  "version": "7.0.0",
   "description": "PrismUI visual editor",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -42,14 +42,14 @@
   ],
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.6.0",
-    "prismui-postcss": "7.0.0-beta.6",
-    "prismui-i18n-runtime": "7.0.0-beta.6",
+    "prismui-postcss": "7.0.0",
+    "prismui-i18n-runtime": "7.0.0",
     "lodash": "^4.17.15",
     "mobx": "^6.16.1",
     "mobx-react": "^9.2.2",
     "mobx-state-tree": "^7.3.2",
-    "prismui-editor-core": "7.0.0-beta.6",
-    "prismui-theme-editor-helper": "7.0.0-beta.6"
+    "prismui-editor-core": "7.0.0",
+    "prismui-theme-editor-helper": "7.0.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
@@ -101,14 +101,14 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "prismui-i18n-runtime": "7.0.0-beta.6",
+    "prismui-i18n-runtime": "7.0.0",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
-    "prismui-framework": "7.0.0-beta.6",
-    "prismui-core": "7.0.0-beta.6",
-    "prismui-ui": "7.0.0-beta.6",
-    "prismui-formula": "7.0.0-beta.6",
-    "prismui-theme-editor-helper": "7.0.0-beta.6"
+    "prismui-framework": "7.0.0",
+    "prismui-core": "7.0.0",
+    "prismui-ui": "7.0.0",
+    "prismui-formula": "7.0.0",
+    "prismui-theme-editor-helper": "7.0.0"
   },
   "repository": {
     "type": "git",

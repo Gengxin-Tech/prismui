@@ -1,6 +1,6 @@
 {
   "name": "prismui-i18n-runtime",
-  "version": "7.0.0-beta.6",
+  "version": "7.0.0",
   "description": "PrismUI i18n runtime helpers",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -26,6 +26,6 @@
   "author": "qhy",
   "license": "ISC",
   "dependencies": {
-    "prismui-core": "7.0.0-beta.6"
+    "prismui-core": "7.0.0"
   }
 }
