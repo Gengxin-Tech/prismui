@@ -71,7 +71,13 @@ jobs:
 
       - name: Build packages
         if: github.event_name != 'workflow_dispatch' || inputs.build
-        run: npm run build --workspaces
+        shell: bash
+        run: |
+          args=()
+          if [ -n "${PRISMUI_RELEASE_VERSION:-}" ]; then
+            args+=(--version "$PRISMUI_RELEASE_VERSION")
+          fi
+          npm run release:prismui:build -- "${args[@]}"
 
       - name: Verify PrismUI publish plan
         shell: bash

@@ -71,6 +71,22 @@ const publishPackages = [
   }
 ];
 
+const buildPackageNames = [
+  'prismui-formula',
+  'prismui-core',
+  // prismui-ui imports prismui-office-viewer/dist/office in its Sass bundle.
+  'prismui-office-viewer',
+  'prismui-ui',
+  // prismui-framework copies generated prismui-ui theme CSS during build.sh.
+  'prismui-framework',
+  'prismui-i18n-runtime',
+  'prismui-postcss',
+  'prismui-theme-editor-helper',
+  'prismui-editor-core',
+  'prismui-editor',
+  'vite-plugin-prismui'
+];
+
 const legacyPackageNames = new Set([
   'amis',
   'amis-core',
@@ -111,6 +127,12 @@ function main() {
   try {
     if (command === 'verify') {
       verifyPublishPlan(options, npmEnv);
+      return;
+    }
+
+    if (command === 'build') {
+      const plan = verifyPublishPlan({...options, skipRegistry: true}, npmEnv);
+      build(plan, npmEnv);
       return;
     }
 
@@ -483,6 +505,23 @@ function packDryRun(plan, options, npmEnv) {
   }
 }
 
+function build(plan, npmEnv) {
+  const packagesByName = new Map(plan.map(pkg => [pkg.expectedName, pkg]));
+
+  for (const packageName of buildPackageNames) {
+    const pkg = packagesByName.get(packageName);
+    if (!pkg) {
+      fail(`Build order references unmanaged package: ${packageName}`);
+    }
+
+    runNpm(
+      ['run', 'build', '--workspace', pkg.manifest.name],
+      npmEnv,
+      `build ${pkg.manifest.name}`
+    );
+  }
+}
+
 function publish(plan, options, npmEnv) {
   if (process.env.CI !== 'true' && !options.allowLocal) {
     fail(
@@ -643,6 +682,7 @@ function printHelp() {
 
 Commands:
   verify          Validate PrismUI package names, metadata, dependencies, and registry availability.
+  build           Build every PrismUI package in dependency order.
   pack            Run npm pack --dry-run --json for every PrismUI package.
   publish         Publish every PrismUI package in dependency order.
   trust-commands  Print npm trust github commands for every PrismUI package.
