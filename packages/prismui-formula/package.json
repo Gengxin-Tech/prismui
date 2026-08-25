@@ -1,6 +1,6 @@
 {
   "name": "prismui-formula",
-  "version": "7.0.0-beta.1",
+  "version": "7.0.0-beta.6",
   "description": "PrismUI expression and formula engine",
   "main": "lib/index.js",
   "module": "esm/index.js",
