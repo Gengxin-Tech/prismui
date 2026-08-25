@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const {JSDOM} = require('jsdom');
-const {version} = require('../../packages/amis/package.json');
+const {version} = require('../../packages/prismui-framework/package.json');
 const {
   createSdkArtifactContract,
   parseResourceMap
@@ -13,9 +13,9 @@ const repoRoot = path.resolve(__dirname, '../..');
 const args = process.argv.slice(2);
 const sdkDir = path.resolve(
   repoRoot,
-  readOption('--sdk-dir') || 'packages/amis/sdk'
+  readOption('--sdk-dir') || 'packages/prismui-framework/sdk'
 );
-const baselineSdkDir = path.join(repoRoot, 'packages/amis/sdk');
+const baselineSdkDir = path.join(repoRoot, 'packages/prismui-framework/sdk');
 const sdkContract = createSdkArtifactContract(sdkDir);
 
 const errors = [];
@@ -26,7 +26,7 @@ const expectedFiles = sdkContract.expectedFiles;
 
 if (!fs.existsSync(sdkDir)) {
   fail(
-    `SDK directory does not exist: ${sdkDir}. Run \`npm run build --workspace prismui\` first.`
+    `SDK directory does not exist: ${sdkDir}. Run \`npm run build --workspace prismui-framework\` first.`
   );
   reportAndExit();
 }

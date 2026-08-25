@@ -1,22 +1,22 @@
 [
   {
-    "name": "packages/amis",
-    "iconPath": "packages/amis-ui/src/components/icons.tsx",
-    "iconDir": "packages/amis-ui/src/icons"
+    "name": "packages/prismui-framework",
+    "iconPath": "packages/prismui-ui/src/components/icons.tsx",
+    "iconDir": "packages/prismui-ui/src/icons"
   },
   {
-    "name": "packages/amis-ui",
-    "iconPath": "packages/amis-ui/src/components/icons.tsx",
-    "iconDir": "packages/amis-ui/src/icons"
+    "name": "packages/prismui-ui",
+    "iconPath": "packages/prismui-ui/src/components/icons.tsx",
+    "iconDir": "packages/prismui-ui/src/icons"
   },
   {
-    "name": "packages/amis-editor",
-    "iconPath": "packages/amis-editor/src/icons/index.tsx",
-    "iconDir": "packages/amis-editor/src/icons"
+    "name": "packages/prismui-editor",
+    "iconPath": "packages/prismui-editor/src/icons/index.tsx",
+    "iconDir": "packages/prismui-editor/src/icons"
   },
   {
-    "name": "packages/amis-editor-core",
-    "iconPath": "packages/amis-editor-core/src/icons/index.tsx",
-    "iconDir": "packages/amis-editor-core/src/icons"
+    "name": "packages/prismui-editor-core",
+    "iconPath": "packages/prismui-editor-core/src/icons/index.tsx",
+    "iconDir": "packages/prismui-editor-core/src/icons"
   }
 ]

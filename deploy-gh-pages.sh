@@ -76,18 +76,18 @@ NODE
 mkdir -p "$GH_PAGES_DOCS_DIR/docs"
 cp -R "$GH_PAGES_DOCS_DIR/zh-CN/docs/." "$GH_PAGES_DOCS_DIR/docs/"
 
-cp "$ROOT_DIR/packages/amis/schema.json" "$GH_PAGES_DOCS_DIR"
+cp "$ROOT_DIR/packages/prismui-framework/schema.json" "$GH_PAGES_DOCS_DIR"
 
 cp -R "$ROOT_DIR/mock" "$GH_PAGES_DOCS_DIR/"
 
-tar -zcf "$GH_PAGES_DOCS_DIR/sdk.tar.gz" packages/amis/sdk
+tar -zcf "$GH_PAGES_DOCS_DIR/sdk.tar.gz" packages/prismui-framework/sdk
 
 # 首页发布 SDK 入口及 resource map 引用的根级 chunks，不复制 thirds 等可选目录。
 mkdir -p "$GH_PAGES_SDK_DIR"
-cp "$ROOT_DIR"/packages/amis/sdk/*.js "$GH_PAGES_SDK_DIR/"
-cp "$ROOT_DIR/packages/amis/sdk/sdk.css" "$GH_PAGES_SDK_DIR/"
-cp "$ROOT_DIR/packages/amis/sdk/helper.css" "$GH_PAGES_SDK_DIR/"
-cp "$ROOT_DIR"/packages/amis/sdk/iconfont.* "$GH_PAGES_SDK_DIR/"
+cp "$ROOT_DIR"/packages/prismui-framework/sdk/*.js "$GH_PAGES_SDK_DIR/"
+cp "$ROOT_DIR/packages/prismui-framework/sdk/sdk.css" "$GH_PAGES_SDK_DIR/"
+cp "$ROOT_DIR/packages/prismui-framework/sdk/helper.css" "$GH_PAGES_SDK_DIR/"
+cp "$ROOT_DIR"/packages/prismui-framework/sdk/iconfont.* "$GH_PAGES_SDK_DIR/"
 
 # 首页源文件维护在 gh-pages worktree 内，最终与文档应用在同一个 Pages 目录中汇合。
 cp -R "$HOMEPAGE_SOURCE_DIR/." "$GH_PAGES_DIR/"

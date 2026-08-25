@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const scssDir = path.join(__dirname, '..', 'packages', 'amis-ui', 'scss');
+const scssDir = path.join(__dirname, '..', 'packages', 'prismui-ui', 'scss');
 
 const cxdVariables = fs.readFileSync(
   path.join(scssDir, 'themes', '_cxd-variables.scss'),

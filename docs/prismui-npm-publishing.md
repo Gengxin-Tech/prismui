@@ -14,17 +14,17 @@ The release script publishes these packages in order:
 
 | Directory | Expected npm package |
 | --- | --- |
-| `packages/amis-formula` | `prismui-formula` |
-| `packages/amis-core` | `prismui-core` |
-| `packages/amis-ui` | `prismui-ui` |
-| `packages/office-viewer` | `prismui-office-viewer` |
-| `packages/amis` | `prismui-framework` |
+| `packages/prismui-formula` | `prismui-formula` |
+| `packages/prismui-core` | `prismui-core` |
+| `packages/prismui-ui` | `prismui-ui` |
+| `packages/prismui-office-viewer` | `prismui-office-viewer` |
+| `packages/prismui-framework` | `prismui-framework` |
 | `packages/prismui-i18n-runtime` | `prismui-i18n-runtime` |
 | `packages/prismui-postcss` | `prismui-postcss` |
-| `packages/amis-theme-editor-helper` | `prismui-theme-editor-helper` |
-| `packages/amis-editor-core` | `prismui-editor-core` |
-| `packages/amis-editor` | `prismui-editor` |
-| `packages/vite-plugin-amisr` | `vite-plugin-prismui` |
+| `packages/prismui-theme-editor-helper` | `prismui-theme-editor-helper` |
+| `packages/prismui-editor-core` | `prismui-editor-core` |
+| `packages/prismui-editor` | `prismui-editor` |
+| `packages/vite-plugin-prismui` | `vite-plugin-prismui` |
 
 ## Maintainer-only setup
 

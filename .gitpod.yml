@@ -16,8 +16,8 @@ tasks:
   - name: SDK
     command: |
       npm i
-      npm run build --workspace amis --workspace amis-ui
-      npx -y serve packages/amis/
+      npm run build --workspace prismui-framework --workspace prismui-ui
+      npx -y serve packages/prismui-framework/
   - name: Amis
     command: |
       gp await-port 3000

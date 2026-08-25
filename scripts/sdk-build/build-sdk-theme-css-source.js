@@ -15,7 +15,7 @@ function buildSdkThemeCssFromSource(options) {
   const placeholderFile =
     options.placeholderFile || path.join(root, 'examples/sdk-placeholder.html');
   const version =
-    options.version || require('../../packages/amis/package.json').version;
+    options.version || require('../../packages/prismui-framework/package.json').version;
   const placeholderHtml = fs.readFileSync(placeholderFile, 'utf8');
   const sdkAssets = collectSdkPlaceholderAssets(placeholderHtml, {
     version,
@@ -53,7 +53,7 @@ function resolveSdkPlaceholderPath(root, placeholderFile, url) {
   if (url.startsWith('prismui-ui/')) {
     return path.join(
       root,
-      'packages/amis-ui',
+      'packages/prismui-ui',
       url.slice('prismui-ui/'.length)
     );
   }

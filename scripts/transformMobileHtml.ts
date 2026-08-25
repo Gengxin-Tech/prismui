@@ -1,6 +1,14 @@
 import MagicString from 'magic-string';
 import type {Plugin} from 'vite';
 
+const legacyPackageDirMap: Record<string, string> = {
+  amis: 'prismui-framework',
+  'amis-core': 'prismui-core',
+  'amis-formula': 'prismui-formula',
+  'amis-ui': 'prismui-ui',
+  'office-viewer': 'prismui-office-viewer'
+};
+
 /**
  * 因为这个 mobile.html 也作用于 fis3 编译，不能直接修改源码
  * 所以靠这个插件来改成让 vite 支持
@@ -20,16 +28,23 @@ export default function transformMobileHtml(options: {} = {}): Plugin {
       ) {
         html = html.replace(/href=('|")(.*?)\1/g, (_, quote, value) => {
           if (/^amis\/lib\/themes\/(.*)\.css$/.test(value)) {
-            return `href=${quote}../../packages/amis-ui/scss/themes/${RegExp.$1}.scss${quote}`;
+            return `href=${quote}../../packages/prismui-ui/scss/themes/${RegExp.$1}.scss${quote}`;
           } else if (/^amis\/lib\/helper\.css$/.test(value)) {
-            return `href=${quote}../../packages/amis-ui/scss/helper.scss${quote}`;
-          } else if (
-            /^(?:amis|amis-core|amis-formula|amis-ui|office-viewer)/.test(
-              value
-            )
-          ) {
-            return `href=${quote}../../packages/${value}${quote}`;
-          } else if (value[0] !== '.' && value[0] !== '/') {
+            return `href=${quote}../../packages/prismui-ui/scss/helper.scss${quote}`;
+          } else {
+            const legacyPackageName = Object.keys(legacyPackageDirMap).find(
+              name => value === name || value.startsWith(`${name}/`)
+            );
+
+            if (legacyPackageName) {
+              return `href=${quote}../../packages/${value.replace(
+                legacyPackageName,
+                legacyPackageDirMap[legacyPackageName]
+              )}${quote}`;
+            }
+          }
+
+          if (value[0] !== '.' && value[0] !== '/') {
             return `href=${quote}../../node_modules/${value}${quote}`;
           }
 

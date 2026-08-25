@@ -3,7 +3,7 @@
  */
 const path = require('path');
 const fs = require('fs');
-const package = require('./packages/amis/package.json');
+const package = require('./packages/prismui-framework/package.json');
 const parserMarkdown = require('./scripts/md-parser');
 const convertSCSSIE11 = require('./scripts/scss-ie11');
 const parserCodeMarkdown = require('./scripts/code-md-parser');
@@ -102,8 +102,8 @@ fis.set('project.files', [
   '/examples/static/audio/*.mp3',
   '/examples/static/video/*.mp4',
   '/examples/static/font/*.ttf',
-  '/packages/amis-editor-core/static/*.png',
-  '/packages/amis-editor-core/static/*.svg',
+  '/packages/prismui-editor-core/static/*.png',
+  '/packages/prismui-editor-core/static/*.svg',
   'mock/**'
 ]);
 
@@ -198,7 +198,7 @@ fis.match('monaco-editor/min/**.js', {
   ignoreDependencies: true
 });
 
-fis.match('{/docs,/packages/amis-ui/scss/helper}/**.md', {
+fis.match('{/docs,/packages/prismui-ui/scss/helper}/**.md', {
   rExt: 'js',
   ignoreDependencies: true,
   parser: [
@@ -326,12 +326,16 @@ if (fis.project.currentMedia() === 'dev') {
       let pkg = '';
 
       if (/^amis\/lib\/themes\/(.*)\.css$/.test(uri)) {
-        newName = `/packages/amis-ui/scss/themes/${RegExp.$1}.scss`;
+        newName = `/packages/prismui-ui/scss/themes/${RegExp.$1}.scss`;
       } else if (/^amis\/lib\/(.*)\.css$/.test(uri)) {
-        newName = `/packages/amis-ui/scss/${RegExp.$1}.scss`;
+        newName = `/packages/prismui-ui/scss/${RegExp.$1}.scss`;
       } else if (
-        uri === 'amis-formula/lib/doc' ||
-        uri === 'amis-formula/lib/doc.md'
+        [
+          'amis-formula/lib/doc',
+          'amis-formula/lib/doc.md',
+          'prismui-formula/lib/doc',
+          'prismui-formula/lib/doc.md'
+        ].includes(uri)
       ) {
         // 啥也不干
       } else if ((pkg = projects.find(pkg => uri.indexOf(pkg) === 0))) {
@@ -357,7 +361,7 @@ if (fis.project.currentMedia() === 'dev') {
       }
     });
   fis.on('compile:end', function (file) {
-    if (file.subpath === '/packages/amis-core/src/index.tsx') {
+    if (file.subpath === '/packages/prismui-core/src/index.tsx') {
       file.setContent(
         file
           .getContent()
@@ -427,7 +431,7 @@ fis.media('dev').match('/node_modules/**.js', {
   packTo: '/pkg/npm.js'
 });
 
-fis.match('{monaco-editor,mermaid,amis,amis-core}/**', {
+fis.match('{monaco-editor,mermaid,prismui-framework,prismui-core}/**', {
   packTo: null
 });
 
@@ -436,12 +440,12 @@ if (fis.project.currentMedia() === 'publish-sdk') {
 
   fis.on('compile:end', function (file) {
     if (
-      file.subpath === '/packages/amis/src/index.tsx' ||
+      file.subpath === '/packages/prismui-framework/src/index.tsx' ||
       file.subpath === '/examples/mod.js' ||
       file.subpath === '/examples/loader.ts'
     ) {
       file.setContent(file.getContent().replace(/@version/g, package.version));
-    } else if (file.subpath === '/packages/amis-core/src/index.tsx') {
+    } else if (file.subpath === '/packages/prismui-core/src/index.tsx') {
       file.setContent(
         file
           .getContent()
@@ -534,10 +538,10 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!xlsx/**',
         '!docsearch.js/**',
         '!monaco-editor/**.css',
-        '!amis-ui/lib/components/RichText.js',
-        '!amis-ui/lib/components/Tinymce.js',
-        '!amis-ui/lib/components/ColorPicker.js',
-        '!amis-ui/lib/components/PdfViewer.js',
+        '!prismui-ui/lib/components/RichText.js',
+        '!prismui-ui/lib/components/Tinymce.js',
+        '!prismui-ui/lib/components/ColorPicker.js',
+        '!prismui-ui/lib/components/PdfViewer.js',
         '!react-pdf/**',
         '!pdfjs-dist/**',
         '!react-color/**',
@@ -548,10 +552,10 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!react-json-view/**',
         '!react-cropper/**',
         '!jsbarcode/**',
-        '!amis-ui/lib/components/BarCode.js',
-        '!amis-ui/lib/renderers/Form/CityDB.js',
-        '!amis-ui/lib/components/Markdown.js',
-        '!amis-core/lib/utils/markdown.js',
+        '!prismui-ui/lib/components/BarCode.js',
+        '!prismui-ui/lib/renderers/Form/CityDB.js',
+        '!prismui-ui/lib/components/Markdown.js',
+        '!prismui-core/lib/utils/markdown.js',
         '!highlight.js/**',
         '!entities/**',
         '!linkify-it/**',
@@ -560,17 +564,17 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!markdown-it/**',
         '!markdown-it-html5-media/**',
         '!punycode/**',
-        '!office-viewer/**',
+        '!prismui-office-viewer/**',
         '!numfmt/**',
-        '!amis-formula/lib/doc.js'
+        '!prismui-formula/lib/doc.js'
       ],
 
       'rich-text.js': [
-        'amis-ui/lib/components/RichText.js',
+        'prismui-ui/lib/components/RichText.js',
         'froala-editor/**'
       ],
 
-      'tinymce.js': ['amis-ui/lib/components/Tinymce.js', 'tinymce/**'],
+      'tinymce.js': ['prismui-ui/lib/components/Tinymce.js', 'tinymce/**'],
 
       'codemirror.js': ['codemirror/**'],
       'papaparse.js': ['papaparse/**'],
@@ -580,7 +584,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
       'xlsx.js': ['xlsx/**'],
 
       'markdown.js': [
-        'amis-ui/lib/components/Markdown.js',
+        'prismui-ui/lib/components/Markdown.js',
         'highlight.js/**',
         'entities/**',
         'linkify-it/**',
@@ -592,14 +596,14 @@ if (fis.project.currentMedia() === 'publish-sdk') {
       ],
 
       'color-picker.js': [
-        'amis-ui/lib/components/ColorPicker.js',
+        'prismui-ui/lib/components/ColorPicker.js',
         'react-color/**',
         'material-colors/**',
         'reactcss/**',
         'tinycolor2/**'
       ],
 
-      'pdf-viewer.js': ['amis-ui/lib/components/PdfViewer.js', 'react-pdf/**'],
+      'pdf-viewer.js': ['prismui-ui/lib/components/PdfViewer.js', 'react-pdf/**'],
 
       'cropperjs.js': ['cropperjs/**', 'react-cropper/**'],
 
@@ -612,9 +616,9 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         'echarts-wordcloud/**'
       ],
 
-      'office-viewer.js': ['office-viewer/**', 'numfmt/**'],
+      'office-viewer.js': ['prismui-office-viewer/**', 'numfmt/**'],
       'json-view.js': 'react-json-view/**',
-      'fomula-doc.js': 'amis-formula/lib/doc.js',
+      'fomula-doc.js': 'prismui-formula/lib/doc.js',
 
       'rest.js': [
         '*.js',
@@ -625,7 +629,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!froala-editor/**',
         '!react-pdf/**',
         '!pdfjs-dist/**',
-        '!amis-ui/lib/components/RichText.js',
+        '!prismui-ui/lib/components/RichText.js',
         '!zrender/**',
         '!echarts/**',
         '!echarts-wordcloud/**',
@@ -640,7 +644,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!uc.micro/**',
         '!markdown-it/**',
         '!markdown-it-html5-media/**',
-        '!office-viewer/**',
+        '!prismui-office-viewer/**',
         '!numfmt/**'
       ]
     }),
@@ -669,7 +673,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
       // 替换 worker 地址的路径，让 sdk 加载同目录下的文件。
       // 如果 sdk 和 worker 不是部署在一个地方，请通过指定 MonacoEnvironment.getWorkerUrl
       if (
-        file.subpath === '/node_modules/amis-ui/lib/components/Editor.js' ||
+        file.subpath === '/node_modules/prismui-ui/lib/components/Editor.js' ||
         file.subpath === '/examples/loadMonacoEditor.ts' ||
         file.subpath === '/examples/loadPdfjsWorker.ts'
       ) {
@@ -728,8 +732,8 @@ if (fis.project.currentMedia() === 'publish-sdk') {
     'examples/app/index.html',
     '/examples/static/*.docx',
     '/examples/static/*.xlsx',
-    '/packages/amis-editor-core/static/*.png',
-    '/packages/amis-editor-core/static/*.svg'
+    '/packages/prismui-editor-core/static/*.png',
+    '/packages/prismui-editor-core/static/*.svg'
     // '/examples/map.json'
   ]);
 
@@ -740,7 +744,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
     rExt: '.css'
   });
 
-  ghPages.match('{/docs,/packages/amis-ui/scss/helper}/**.md', {
+  ghPages.match('{/docs,/packages/prismui-ui/scss/helper}/**.md', {
     rExt: 'js',
     isMod: true,
     useHash: true,
@@ -874,22 +878,22 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!markdown-it/**',
         '!markdown-it-html5-media/**',
         '!punycode/**',
-        '!amis-formula/**',
+        '!prismui-formula/**',
         '!numfmt/**',
-        '!office-viewer/**',
-        '!amis-core/**',
-        '!amis-ui/**',
-        '!amis/**',
+        '!prismui-office-viewer/**',
+        '!prismui-core/**',
+        '!prismui-ui/**',
+        '!prismui-framework/**',
         '!react-pdf/**',
         '!pdfjs-dist/**'
       ],
 
       'pkg/rich-text.js': [
-        'amis-ui/lib/components/RichText.js',
+        'prismui-ui/lib/components/RichText.js',
         'froala-editor/**'
       ],
 
-      'pkg/tinymce.js': ['amis-ui/lib/components/Tinymce.tsx', 'tinymce/**'],
+      'pkg/tinymce.js': ['prismui-ui/lib/components/Tinymce.tsx', 'tinymce/**'],
 
       'pkg/codemirror.js': ['codemirror/**'],
 
@@ -899,11 +903,11 @@ if (fis.project.currentMedia() === 'publish-sdk') {
 
       'pkg/xlsx.js': ['xlsx/**'],
 
-      'pkg/barcode.js': ['amis-ui/lib/components/BarCode.tsx', 'jsbarcode/**'],
+      'pkg/barcode.js': ['prismui-ui/lib/components/BarCode.tsx', 'jsbarcode/**'],
 
       'pkg/markdown.js': [
-        'amis-ui/lib/components/Markdown.tsx',
-        'amis-core/lib/utils/markdown.ts',
+        'prismui-ui/lib/components/Markdown.tsx',
+        'prismui-core/lib/utils/markdown.ts',
         'highlight.js/**',
         'entities/**',
         'linkify-it/**',
@@ -915,12 +919,12 @@ if (fis.project.currentMedia() === 'publish-sdk') {
       ],
 
       'pkg/pdf-viewer.js': [
-        'amis-ui/lib/components/PdfViewer.js',
+        'prismui-ui/lib/components/PdfViewer.js',
         'react-pdf/**'
       ],
 
       'pkg/color-picker.js': [
-        'amis-ui/lib/components/ColorPicker.tsx',
+        'prismui-ui/lib/components/ColorPicker.tsx',
         'react-color/**',
         'material-colors/**',
         'reactcss/**',
@@ -949,7 +953,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!/examples/components/EChartsEditor/Common.tsx'
       ],
 
-      'pkg/office-viewer.js': ['office-viewer/**', 'numfmt/**'],
+      'pkg/office-viewer.js': ['prismui-office-viewer/**', 'numfmt/**'],
 
       'pkg/rest.js': [
         '**.{js,jsx,ts,tsx}',
@@ -959,14 +963,14 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!hls.js/**',
         '!froala-editor/**',
 
-        '!amis-ui/lib/components/RichText.tsx',
+        '!prismui-ui/lib/components/RichText.tsx',
         '!zrender/**',
         '!echarts/**',
         '!echarts-wordcloud/**',
         '!papaparse/**',
         '!exceljs/**',
         '!xlsx/**',
-        '!amis-core/lib/utils/markdown.ts',
+        '!prismui-core/lib/utils/markdown.ts',
         '!highlight.js/**',
         '!argparse/**',
         '!entities/**',
@@ -978,7 +982,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!numfmt/**'
       ],
 
-      'pkg/npm.css': ['node_modules/*/**.css', '!monaco-editor/**', '!amis/**'],
+      'pkg/npm.css': ['node_modules/*/**.css', '!monaco-editor/**', '!prismui-framework/**'],
 
       // css 打包
       'pkg/style.css': [
@@ -989,7 +993,7 @@ if (fis.project.currentMedia() === 'publish-sdk') {
         '!/examples/style.scss',
         '!monaco-editor/**',
         '!scss/helper.scss',
-        '!amis/**',
+        '!prismui-framework/**',
         '/examples/style.scss' // 让它在最下面
       ]
     }),

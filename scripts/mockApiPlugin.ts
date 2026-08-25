@@ -72,7 +72,7 @@ export default function mockApiPlugin(options: {} = {}): Plugin {
         initExpress(req, res, next, () => {
           const filepath = path.resolve(
             __dirname,
-            '../packages/amis/schema.json'
+            '../packages/prismui-framework/schema.json'
           );
 
           if (!fs.existsSync(filepath)) {
@@ -80,7 +80,7 @@ export default function mockApiPlugin(options: {} = {}): Plugin {
               $schema: 'http://json-schema.org/draft-07/schema#',
               type: 'object',
               description:
-                'amis/schema.json 还没有构建，请执行 `npm run build-schemas --workspace prismui` 后看效果'
+                'amis/schema.json 还没有构建，请执行 `npm run build-schemas --workspace prismui-framework` 后看效果'
             });
             return;
           }

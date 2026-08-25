@@ -49,11 +49,11 @@ import isPlainObject from 'lodash/isPlainObject';
  * todo 别名 String 对 jsdoc 内容咋没有生成 description？
  */
 async function main() {
-  const dir = path.join(__dirname, '../packages/amis/src');
-  const outDir = path.join(__dirname, '../packages/amis/');
+  const dir = path.join(__dirname, '../packages/prismui-framework/src');
+  const outDir = path.join(__dirname, '../packages/prismui-framework/');
   const tsConfig = path.join(
     __dirname,
-    '../packages/amis/tsconfig-for-declaration.json'
+    '../packages/prismui-framework/tsconfig-for-declaration.json'
   );
 
   const config = {

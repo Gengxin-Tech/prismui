@@ -151,53 +151,68 @@ export default defineConfig({
       },
       {
         find: 'prismui-formula/lib',
-        replacement: path.resolve(__dirname, './packages/amis-formula/src')
+        replacement: path.resolve(__dirname, './packages/prismui-formula/src')
       },
       {
         find: 'prismui-formula',
-        replacement: path.resolve(__dirname, './packages/amis-formula/src')
+        replacement: path.resolve(__dirname, './packages/prismui-formula/src')
       },
       {
         find: 'prismui-ui/lib',
-        replacement: path.resolve(__dirname, './packages/amis-ui/src')
+        replacement: path.resolve(__dirname, './packages/prismui-ui/src')
       },
       {
         find: 'prismui-ui',
-        replacement: path.resolve(__dirname, './packages/amis-ui/src')
+        replacement: path.resolve(__dirname, './packages/prismui-ui/src')
       },
       {
         find: 'prismui-core',
-        replacement: path.resolve(__dirname, './packages/amis-core/src')
+        replacement: path.resolve(__dirname, './packages/prismui-core/src')
+      },
+      {
+        find: 'prismui-framework/lib',
+        replacement: path.resolve(__dirname, './packages/prismui-framework/src')
+      },
+      {
+        find: 'prismui-framework/schema.json',
+        replacement: path.resolve(
+          __dirname,
+          './packages/prismui-framework/schema.json'
+        )
+      },
+      {
+        find: 'prismui-framework',
+        replacement: path.resolve(__dirname, './packages/prismui-framework/src')
       },
       {
         find: 'prismui/lib',
-        replacement: path.resolve(__dirname, './packages/amis/src')
+        replacement: path.resolve(__dirname, './packages/prismui-framework/src')
       },
       {
         find: 'prismui/schema.json',
-        replacement: path.resolve(__dirname, './packages/amis/schema.json')
+        replacement: path.resolve(__dirname, './packages/prismui-framework/schema.json')
       },
       {
         find: 'prismui',
-        replacement: path.resolve(__dirname, './packages/amis/src')
+        replacement: path.resolve(__dirname, './packages/prismui-framework/src')
       },
       {
         find: 'prismui-editor',
-        replacement: path.resolve(__dirname, './packages/amis-editor/src')
+        replacement: path.resolve(__dirname, './packages/prismui-editor/src')
       },
       {
         find: 'prismui-editor-core',
-        replacement: path.resolve(__dirname, './packages/amis-editor-core/src')
+        replacement: path.resolve(__dirname, './packages/prismui-editor-core/src')
       },
       {
         find: 'prismui-office-viewer',
-        replacement: path.resolve(__dirname, './packages/office-viewer/src')
+        replacement: path.resolve(__dirname, './packages/prismui-office-viewer/src')
       },
       {
         find: 'prismui-theme-editor-helper',
         replacement: path.resolve(
           __dirname,
-          './packages/amis-theme-editor-helper/src'
+          './packages/prismui-theme-editor-helper/src'
         )
       }
     ]

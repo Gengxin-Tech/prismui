@@ -24,7 +24,7 @@ const skippedAssets = [];
 const unresolvedAssets = [];
 
 const sdkAssets = collectSdkPlaceholderAssets(placeholderHtml, {
-  version: require('../../packages/amis/package.json').version,
+  version: require('../../packages/prismui-framework/package.json').version,
   resolveFile: url => {
     requestedAssets.push(url);
 

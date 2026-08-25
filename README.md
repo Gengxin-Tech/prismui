@@ -92,19 +92,19 @@ export function App() {
 ## 仓库结构
 
 ```text
-packages/amis                   UI Schema 渲染器、SDK 和主包（发布为 prismui-framework）
-packages/amis-core              数据域、事件、渲染器注册和运行时核心（发布为 prismui-core）
-packages/amis-ui                基础 UI 组件与主题样式（发布为 prismui-ui）
-packages/amis-formula           表达式和公式能力（发布为 prismui-formula）
-packages/office-viewer          Office 文档预览能力（发布为 prismui-office-viewer）
-packages/amis-editor            可视化编辑器（发布为 prismui-editor）
-packages/amis-editor-core       编辑器核心模型和插件能力（发布为 prismui-editor-core）
-packages/amis-theme-editor-helper 主题编辑辅助能力（发布为 prismui-theme-editor-helper）
-packages/prismui-i18n-runtime   PrismUI 多语言运行时
-packages/prismui-postcss        PrismUI 编辑器样式处理运行时
-packages/vite-plugin-amisr      PrismUI JSON schema 转 React 组件的 Vite 插件（发布为 vite-plugin-prismui）
-examples                        文档站和本地示例
-scripts/sdk-build               SDK 构建、契约检查和迁移工具
+packages/prismui-framework             UI Schema 渲染器、SDK 和主包（发布为 prismui-framework）
+packages/prismui-core                  数据域、事件、渲染器注册和运行时核心（发布为 prismui-core）
+packages/prismui-ui                    基础 UI 组件与主题样式（发布为 prismui-ui）
+packages/prismui-formula               表达式和公式能力（发布为 prismui-formula）
+packages/prismui-office-viewer         Office 文档预览能力（发布为 prismui-office-viewer）
+packages/prismui-editor                可视化编辑器（发布为 prismui-editor）
+packages/prismui-editor-core           编辑器核心模型和插件能力（发布为 prismui-editor-core）
+packages/prismui-theme-editor-helper   主题编辑辅助能力（发布为 prismui-theme-editor-helper）
+packages/prismui-i18n-runtime          PrismUI 多语言运行时
+packages/prismui-postcss               PrismUI 编辑器样式处理运行时
+packages/vite-plugin-prismui           PrismUI JSON schema 转 React 组件的 Vite 插件（发布为 vite-plugin-prismui）
+examples                               文档站和本地示例
+scripts/sdk-build                      SDK 构建、契约检查和迁移工具
 ```
 
 ## 本地开发
@@ -120,7 +120,7 @@ npm start
 
 ```text
 http://127.0.0.1:8888/examples/pages/simple
-http://127.0.0.1:8888/packages/amis-editor/
+http://127.0.0.1:8888/packages/prismui-editor/
 ```
 
 常用检查命令：
@@ -137,7 +137,7 @@ npm run check-sdk-contract
 
 ```bash
 npm test --workspace prismui-framework -- -t <spec-name>
-./node_modules/.bin/jest packages/amis/__tests__/renderers/Form/buttonToolBar.test.tsx
+./node_modules/.bin/jest packages/prismui-framework/__tests__/renderers/Form/buttonToolBar.test.tsx
 npm run update-snapshot --workspace prismui-framework -- -t <spec-name>
 ```
 

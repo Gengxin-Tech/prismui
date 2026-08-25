@@ -39,7 +39,7 @@ npm start
 
 ```text
 http://127.0.0.1:8888/examples/pages/simple
-http://127.0.0.1:8888/packages/amis-editor/
+http://127.0.0.1:8888/packages/prismui-editor/
 ```
 
 ## 提交前检查
@@ -64,9 +64,9 @@ npm run check-sdk-theme-css
 单测示例：
 
 ```bash
-npm test --workspace amis -- -t <spec-name>
-./node_modules/.bin/jest packages/amis/__tests__/renderers/Form/buttonToolBar.test.tsx
-npm run update-snapshot --workspace amis -- -t <spec-name>
+npm test --workspace prismui-framework -- -t <spec-name>
+./node_modules/.bin/jest packages/prismui-framework/__tests__/renderers/Form/buttonToolBar.test.tsx
+npm run update-snapshot --workspace prismui-framework -- -t <spec-name>
 ```
 
 ## PR 要求

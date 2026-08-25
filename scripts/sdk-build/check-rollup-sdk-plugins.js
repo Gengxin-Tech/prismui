@@ -27,17 +27,17 @@ async function main() {
   assertManualChunk(manualChunks, 'node_modules/tinymce/tinymce.js', 'tinymce');
   assertManualChunk(
     manualChunks,
-    'packages/amis-ui/lib/components/Markdown.js',
+    'packages/prismui-ui/lib/components/Markdown.js',
     'markdown'
   );
   assertManualChunk(
     manualChunks,
-    'packages/amis-ui/src/components/Markdown.tsx',
+    'packages/prismui-ui/src/components/Markdown.tsx',
     'markdown'
   );
   assertManualChunk(
     manualChunks,
-    'packages/amis/src/components/BarCode.tsx',
+    'packages/prismui-framework/src/components/BarCode.tsx',
     'barcode'
   );
   assertManualChunk(
@@ -69,7 +69,7 @@ async function main() {
         'prismui-ui/lib/components/Markdown.js': {
           id: path.join(
             repoRoot,
-            'packages/amis-ui/lib/components/Markdown.js'
+            'packages/prismui-ui/lib/components/Markdown.js'
           ),
           code: `export const Markdown = 'markdown';`
         },

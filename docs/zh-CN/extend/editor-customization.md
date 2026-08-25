@@ -747,11 +747,11 @@ export class ChartCardPlugin extends BasePlugin {
 
 ## 相关源码
 
-- `packages/amis-editor-core/src/component/Editor.tsx`：`Editor` 属性、左右面板替换入口、生命周期。
-- `packages/amis-editor-core/src/manager.ts`：插件注册、实例化、面板收集、物料收集。
-- `packages/amis-editor-core/src/plugin.ts`：插件接口、`BasePlugin` 默认逻辑、`PanelItem` 类型。
-- `packages/amis-editor-core/src/component/Panel/LeftPanels.tsx`：左侧面板渲染。
-- `packages/amis-editor-core/src/component/Panel/RightPanels.tsx`：右侧面板渲染。
-- `packages/amis-editor-core/src/plugin/AvailableRenderers.tsx`：内置“组件”左侧面板示例。
-- `packages/amis-editor-core/src/plugin/Outline.tsx`：内置“大纲”左侧面板示例。
-- `packages/amis-editor-core/src/plugin/Code.tsx`：内置“代码”左侧面板示例。
+- `packages/prismui-editor-core/src/component/Editor.tsx`：`Editor` 属性、左右面板替换入口、生命周期。
+- `packages/prismui-editor-core/src/manager.ts`：插件注册、实例化、面板收集、物料收集。
+- `packages/prismui-editor-core/src/plugin.ts`：插件接口、`BasePlugin` 默认逻辑、`PanelItem` 类型。
+- `packages/prismui-editor-core/src/component/Panel/LeftPanels.tsx`：左侧面板渲染。
+- `packages/prismui-editor-core/src/component/Panel/RightPanels.tsx`：右侧面板渲染。
+- `packages/prismui-editor-core/src/plugin/AvailableRenderers.tsx`：内置“组件”左侧面板示例。
+- `packages/prismui-editor-core/src/plugin/Outline.tsx`：内置“大纲”左侧面板示例。
+- `packages/prismui-editor-core/src/plugin/Code.tsx`：内置“代码”左侧面板示例。
