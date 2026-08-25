@@ -23,7 +23,7 @@ on:
         default: true
   push:
     tags:
-      - 'prismui-v*'
+      - 'v*'
 
 permissions:
   contents: read
@@ -44,15 +44,27 @@ jobs:
       PRISMUI_RELEASE_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'publish' }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
 
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - name: Resolve release tag
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          ref_name="${GITHUB_REF_NAME}"
+          if [[ ! "$ref_name" =~ ^v([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
+            echo "::error::npm release tags must use v<major>.<minor>.<patch>, for example v7.0.0."
+            exit 1
+          fi
+          echo "PRISMUI_RELEASE_VERSION=${BASH_REMATCH[1]}" >> "$GITHUB_ENV"
 
       - name: Install root dependencies
         run: npm install --legacy-peer-deps
@@ -62,12 +74,30 @@ jobs:
         run: npm run build --workspaces
 
       - name: Verify PrismUI publish plan
-        run: npm run release:prismui:verify -- --tag "$PRISMUI_NPM_TAG"
+        shell: bash
+        run: |
+          args=(--tag "$PRISMUI_NPM_TAG")
+          if [ -n "${PRISMUI_RELEASE_VERSION:-}" ]; then
+            args+=(--version "$PRISMUI_RELEASE_VERSION")
+          fi
+          npm run release:prismui:verify -- "${args[@]}"
 
       - name: Pack dry run
         if: env.PRISMUI_RELEASE_MODE == 'dry-run'
-        run: npm run release:prismui:pack -- --tag "$PRISMUI_NPM_TAG"
+        shell: bash
+        run: |
+          args=(--tag "$PRISMUI_NPM_TAG")
+          if [ -n "${PRISMUI_RELEASE_VERSION:-}" ]; then
+            args+=(--version "$PRISMUI_RELEASE_VERSION")
+          fi
+          npm run release:prismui:pack -- "${args[@]}"
 
       - name: Publish packages
         if: env.PRISMUI_RELEASE_MODE == 'publish'
-        run: npm run release:prismui:publish -- --tag "$PRISMUI_NPM_TAG" --provenance
+        shell: bash
+        run: |
+          args=(--tag "$PRISMUI_NPM_TAG" --provenance)
+          if [ -n "${PRISMUI_RELEASE_VERSION:-}" ]; then
+            args+=(--version "$PRISMUI_RELEASE_VERSION")
+          fi
+          npm run release:prismui:publish -- "${args[@]}"

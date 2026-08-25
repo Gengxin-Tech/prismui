@@ -13,7 +13,10 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 
-const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const repoRoot = path.resolve(
+  path.dirname(fileURLToPath(import.meta.url)),
+  '..'
+);
 
 const DEFAULT_REGISTRY = 'https://registry.npmjs.org/';
 const DEFAULT_DIST_TAG = 'prismui-next';
@@ -140,6 +143,7 @@ function parseArgs(argv) {
   const [command = 'verify', ...args] = argv;
   const options = {
     tag: DEFAULT_DIST_TAG,
+    version: '',
     registry: DEFAULT_REGISTRY,
     repository: DEFAULT_REPOSITORY,
     workflowFile: DEFAULT_WORKFLOW_FILE,
@@ -170,6 +174,8 @@ function parseArgs(argv) {
       options.otp = readValue();
     } else if (arg === '--tag') {
       options.tag = readValue();
+    } else if (arg === '--version') {
+      options.version = readValue();
     } else if (arg === '--registry') {
       options.registry = normalizeRegistry(readValue());
     } else if (arg === '--repo' || arg === '--repository') {
@@ -216,11 +222,18 @@ function createNpmEnv(registry) {
   const tempDir = mkdtempSync(path.join(tmpdir(), 'prismui-npm-'));
   const userConfigPath = path.join(tempDir, '.npmrc');
   const registryUrl = new URL(registry);
-  const authPath = registryUrl.pathname === '/' ? '/' : ensureTrailingSlash(registryUrl.pathname);
+  const authPath =
+    registryUrl.pathname === '/'
+      ? '/'
+      : ensureTrailingSlash(registryUrl.pathname);
 
   writeFileSync(
     userConfigPath,
-    [`registry=${registry}`, `//${registryUrl.host}${authPath}:_authToken=${token}`, ''].join('\n'),
+    [
+      `registry=${registry}`,
+      `//${registryUrl.host}${authPath}:_authToken=${token}`,
+      ''
+    ].join('\n'),
     {mode: 0o600}
   );
 
@@ -244,7 +257,11 @@ function verifyPublishPlan(options, npmEnv) {
 
   if (errors.length > 0) {
     printPlan(plan);
-    fail(`PrismUI publish plan is not ready:\n${errors.map(error => `- ${error}`).join('\n')}`);
+    fail(
+      `PrismUI publish plan is not ready:\n${errors
+        .map(error => `- ${error}`)
+        .join('\n')}`
+    );
   }
 
   if (!options.skipRegistry) {
@@ -282,15 +299,29 @@ function validatePlan(plan, options) {
 
     if (pkg.manifest.name !== pkg.expectedName) {
       errors.push(
-        `${relativePath(pkg.manifestPath)} name is "${pkg.manifest.name}", expected "${pkg.expectedName}"`
+        `${relativePath(pkg.manifestPath)} name is "${
+          pkg.manifest.name
+        }", expected "${pkg.expectedName}"`
       );
     }
 
     if (!pkg.manifest.version) {
       errors.push(`${pkg.expectedName} is missing a version`);
-    } else if (isBurnedPackageVersion(pkg.manifest.name, pkg.manifest.version)) {
+    } else if (options.version && pkg.manifest.version !== options.version) {
+      errors.push(
+        `${pkg.expectedName} version is "${pkg.manifest.version}", expected release version "${options.version}"`
+      );
+    } else if (
+      isBurnedPackageVersion(pkg.manifest.name, pkg.manifest.version)
+    ) {
       errors.push(
         `${pkg.manifest.name}@${pkg.manifest.version} was previously unpublished on npm and cannot be reused`
+      );
+    }
+
+    if (options.tag === 'latest' && pkg.manifest.version?.includes('-')) {
+      errors.push(
+        `${pkg.expectedName}@${pkg.manifest.version} is a prerelease and cannot be published with latest`
       );
     }
 
@@ -303,21 +334,36 @@ function validatePlan(plan, options) {
     }
 
     const repositoryUrl = getRepositoryUrl(pkg.manifest);
-    if (!repositoryUrl || !repositoryUrlMatches(repositoryUrl, options.repository)) {
+    if (
+      !repositoryUrl ||
+      !repositoryUrlMatches(repositoryUrl, options.repository)
+    ) {
       errors.push(
         `${pkg.expectedName} repository.url must point to ${options.repository} for trusted publishing`
       );
     }
 
-    for (const section of ['dependencies', 'devDependencies', 'peerDependencies', 'optionalDependencies']) {
+    for (const section of [
+      'dependencies',
+      'devDependencies',
+      'peerDependencies',
+      'optionalDependencies'
+    ]) {
       const dependencies = pkg.manifest[section] || {};
       for (const dependencyName of Object.keys(dependencies)) {
         if (legacyPackageNames.has(dependencyName)) {
-          errors.push(`${pkg.expectedName} ${section} still references legacy package "${dependencyName}"`);
+          errors.push(
+            `${pkg.expectedName} ${section} still references legacy package "${dependencyName}"`
+          );
         }
 
-        if (isPrismUIPackageName(dependencyName) && !expectedNames.has(dependencyName)) {
-          errors.push(`${pkg.expectedName} ${section} references unmanaged package "${dependencyName}"`);
+        if (
+          isPrismUIPackageName(dependencyName) &&
+          !expectedNames.has(dependencyName)
+        ) {
+          errors.push(
+            `${pkg.expectedName} ${section} references unmanaged package "${dependencyName}"`
+          );
         }
       }
     }
@@ -331,7 +377,12 @@ function isBurnedPackageVersion(name, version) {
 }
 
 function isPrismUIPackageName(name) {
-  return name === 'prismui' || name === 'prismui-framework' || name.startsWith('prismui-') || name === 'vite-plugin-prismui';
+  return (
+    name === 'prismui' ||
+    name === 'prismui-framework' ||
+    name.startsWith('prismui-') ||
+    name === 'vite-plugin-prismui'
+  );
 }
 
 function getRepositoryUrl(manifest) {
@@ -380,33 +431,52 @@ function checkRegistryAvailability(plan, options, npmEnv) {
         continue;
       }
 
-      errors.push(`${pkg.manifest.name}@${pkg.manifest.version} already exists on ${options.registry}`);
+      errors.push(
+        `${pkg.manifest.name}@${pkg.manifest.version} already exists on ${options.registry}`
+      );
       continue;
     }
 
     const stderr = result.stderr || '';
     const stdout = result.stdout || '';
-    if (result.status !== 0 && !/E404|404 Not Found|not found/i.test(`${stderr}\n${stdout}`)) {
+    if (
+      result.status !== 0 &&
+      !/E404|404 Not Found|not found/i.test(`${stderr}\n${stdout}`)
+    ) {
       errors.push(
-        `Could not confirm registry availability for ${pkg.manifest.name}@${pkg.manifest.version}: ${stderr.trim()}`
+        `Could not confirm registry availability for ${pkg.manifest.name}@${
+          pkg.manifest.version
+        }: ${stderr.trim()}`
       );
     }
   }
 
   if (errors.length > 0) {
-    fail(`Registry preflight failed:\n${errors.map(error => `- ${error}`).join('\n')}`);
+    fail(
+      `Registry preflight failed:\n${errors
+        .map(error => `- ${error}`)
+        .join('\n')}`
+    );
   }
 }
 
 function packDryRun(plan, options, npmEnv) {
   for (const pkg of plan) {
     if (pkg.skipPublish) {
-      console.log(`\n> skip pack dry-run ${pkg.manifest.name}@${pkg.manifest.version}; already exists on ${options.registry}`);
+      console.log(
+        `\n> skip pack dry-run ${pkg.manifest.name}@${pkg.manifest.version}; already exists on ${options.registry}`
+      );
       continue;
     }
 
     runNpm(
-      ['pack', pkg.packageDir, '--dry-run', '--json', `--registry=${options.registry}`],
+      [
+        'pack',
+        pkg.packageDir,
+        '--dry-run',
+        '--json',
+        `--registry=${options.registry}`
+      ],
       npmEnv,
       `pack dry-run ${pkg.manifest.name}`
     );
@@ -415,12 +485,16 @@ function packDryRun(plan, options, npmEnv) {
 
 function publish(plan, options, npmEnv) {
   if (process.env.CI !== 'true' && !options.allowLocal) {
-    fail('Refusing to publish outside CI without --allow-local. Use this guard intentionally for bootstrap only.');
+    fail(
+      'Refusing to publish outside CI without --allow-local. Use this guard intentionally for bootstrap only.'
+    );
   }
 
   for (const pkg of plan) {
     if (pkg.skipPublish) {
-      console.log(`\n> skip publish ${pkg.manifest.name}@${pkg.manifest.version}; already exists on ${options.registry}`);
+      console.log(
+        `\n> skip publish ${pkg.manifest.name}@${pkg.manifest.version}; already exists on ${options.registry}`
+      );
       continue;
     }
 
@@ -462,7 +536,9 @@ function scrubDeclarationFiles(plan) {
   }
 
   if (changedFiles > 0) {
-    console.log(`Scrubbed legacy internal paths from ${changedFiles} declaration file(s).`);
+    console.log(
+      `Scrubbed legacy internal paths from ${changedFiles} declaration file(s).`
+    );
   }
 }
 
@@ -496,7 +572,10 @@ function scrubDeclarationDir(dir) {
 
 function scrubDeclarationSource(source) {
   const declarationPathReplacements = [
-    ['packages/prismui-theme-editor-helper/lib', 'prismui-theme-editor-helper/lib'],
+    [
+      'packages/prismui-theme-editor-helper/lib',
+      'prismui-theme-editor-helper/lib'
+    ],
     ['packages/prismui-editor-core/lib', 'prismui-editor-core'],
     ['packages/prismui-editor/lib', 'prismui-editor/lib'],
     ['packages/prismui-formula/lib', 'prismui-formula/lib'],
@@ -513,8 +592,8 @@ function scrubDeclarationSource(source) {
 }
 
 function printTrustCommands(options) {
-  console.log('# npm CLI 11.15.0+ is required for npm trust.');
-  console.log('npm install -g npm@^11.15.0');
+  console.log('# npm CLI 11.5.1+ is required for npm trust.');
+  console.log('npm install -g npm@^11.5.1');
   console.log('npm login');
   console.log('npm whoami');
   console.log('');
@@ -547,9 +626,15 @@ function printPlan(plan) {
   console.log('PrismUI publish package order:');
   for (const pkg of plan) {
     const actualName = pkg.manifest ? pkg.manifest.name : '<missing>';
-    const version = pkg.manifest ? pkg.manifest.version || '<missing>' : '<missing>';
+    const version = pkg.manifest
+      ? pkg.manifest.version || '<missing>'
+      : '<missing>';
     const status = pkg.skipPublish ? ' (already exists; skipped)' : '';
-    console.log(`- ${relativePath(pkg.dir)}: ${actualName}@${version} -> ${pkg.expectedName}${status}`);
+    console.log(
+      `- ${relativePath(pkg.dir)}: ${actualName}@${version} -> ${
+        pkg.expectedName
+      }${status}`
+    );
   }
 }
 
@@ -564,6 +649,7 @@ Commands:
 
 Options:
   --tag <tag>             npm dist-tag, default: ${DEFAULT_DIST_TAG}
+  --version <version>     Require every package manifest to match this version.
   --registry <url>        npm registry, default: ${DEFAULT_REGISTRY}
   --repo <owner/repo>     GitHub repository, default: ${DEFAULT_REPOSITORY}
   --file <workflow.yml>   GitHub workflow filename, default: ${DEFAULT_WORKFLOW_FILE}
@@ -580,7 +666,11 @@ Options:
 
 function runNpm(args, npmEnv, label) {
   console.log(`\n> npm ${args.map(redactNpmArg).join(' ')}`);
-  const result = spawnSync('npm', args, {cwd: repoRoot, env: npmEnv.env, stdio: 'inherit'});
+  const result = spawnSync('npm', args, {
+    cwd: repoRoot,
+    env: npmEnv.env,
+    stdio: 'inherit'
+  });
 
   if (result.status !== 0) {
     fail(`${label} failed with exit code ${result.status}`);
