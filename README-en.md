@@ -1,6 +1,6 @@
 # PrismUI
 
-[中文](./README.md) | [Docs](https://prismui.io/docs/zh-CN/docs/index) | [Getting Started](https://prismui.io/docs/zh-CN/docs/start/getting-started)
+[中文](./README.md) | [Docs](https://prismui.io/docs/zh-CN/docs/index) | [Getting Started](https://prismui.io/docs/zh-CN/docs/start/getting-started) | [Agent Skills](https://github.com/Gengxin-Tech/prismui-skills)
 
 PrismUI is an independently maintained fork of [baidu/amis](https://github.com/baidu/amis), focused on UI Schema driven front-end development for enterprise applications. The project continues to evolve the UI Schema runtime, React renderer, component system, JS SDK, and visual editor.
 
@@ -88,7 +88,6 @@ export function App() {
   runtime.embed('#root', schema, {data: {}}, env);
 </script>
 ```
-
 
 ## Repository Layout
 

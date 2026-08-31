@@ -12,6 +12,8 @@ order: 8
 
 PrismUI 是一个低代码前端框架，它使用 JSON 配置来生成页面，可以减少页面开发工作量，极大提升效率。
 
+PrismUI 在 amis 基础上独立维护，并对 npm 包、主题系统、运行时命名空间和工程化接入进行了持续演进。开始使用前，可以先阅读 [PrismUI 项目说明](./start/prismui-overview)，了解主要变化、兼容边界和后续发展方向；已有 amis 项目请参考[从 amis 迁移到 PrismUI](./start/migration-from-amis)。
+
 ## 为什么要做 PrismUI？
 
 在经历了十几年的发展后，前端开发变得越来越复杂，门槛也越来越高，要使用当下流行的 UI 组件库，你必须懂 `npm`、`webpack`、`react/vue`，必须熟悉 `ES6` 语法，最好还了解状态管理，比如 `Redux`，如果没接触过函数式编程，光入门都很费劲，而入门之后会发现它还有巨大的 [生态](https://github.com/markerikson/redux-ecosystem-links)，相关的库有 **2347** 个，很多功能相似，挑选成本高。

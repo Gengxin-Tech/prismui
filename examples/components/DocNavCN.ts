@@ -20,6 +20,14 @@ export default [
       },
 
       {
+        label: 'PrismUI 项目说明',
+        path: '/zh-CN/docs/start/prismui-overview',
+        component: React.lazy(() =>
+          import('../../docs/zh-CN/start/prismui-overview.md').then(wrapDoc)
+        )
+      },
+
+      {
         label: '快速开始',
         path: '/zh-CN/docs/start/getting-started',
         component: React.lazy(() =>

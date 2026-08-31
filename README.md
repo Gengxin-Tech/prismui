@@ -1,6 +1,6 @@
 # PrismUI
 
-[English](./README-en.md) | [在线文档](https://prismui.io/docs/zh-CN/docs/index) | [快速开始](https://prismui.io/docs/zh-CN/docs/start/getting-started)
+[English](./README-en.md) | [在线文档](https://prismui.io/docs/zh-CN/docs/index) | [快速开始](https://prismui.io/docs/zh-CN/docs/start/getting-started) | [Agent Skills](https://github.com/Gengxin-Tech/prismui-skills)
 
 PrismUI 是基于 [baidu/amis](https://github.com/baidu/amis) 的独立维护 fork，面向企业应用的 UI Schema 驱动前端框架。项目继续围绕 UI Schema、React 渲染器、组件体系、JS SDK 和可视化编辑能力演进。
 
@@ -86,7 +86,6 @@ export function App() {
   runtime.embed('#root', schema, {data: {}}, env);
 </script>
 ```
-
 
 ## 仓库结构
 
