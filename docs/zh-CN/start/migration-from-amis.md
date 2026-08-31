@@ -201,7 +201,7 @@ prismui.embed('#root', schema, props, {
 
 注意两组大小写：源码中的 `unRegisterRenderer` 和 `unRegisterEditorPlugin` 是现有导出，不能擅自改成 `unregisterRenderer`；`RendererEditor`、`BasicEditor` 仍是旧版兼容 API，新插件优先继承 `BasePlugin` 并调用 `registerEditorPlugin`。
 
-以下名称属于历史兼容字段，不要为了改品牌而重命名：`type: "amis"`、编辑器的 `amisEnv`、编辑器文档配置中的 `amisDocHost` 以及运行时对象中的 `amisScope`。它们的含义是兼容协议或 schema 类型，不是 npm 入口。
+以下名称属于历史兼容字段，不要为了包名迁移而重命名：`type: "amis"`、编辑器的 `amisEnv`、编辑器文档配置中的 `amisDocHost` 以及运行时对象中的 `amisScope`。它们的含义是兼容协议或 schema 类型，不是 npm 入口。
 
 ## 样式定制迁移
 

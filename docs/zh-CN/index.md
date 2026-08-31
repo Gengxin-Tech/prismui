@@ -16,20 +16,20 @@ PrismUI 在 amis 长期实践的基础上独立维护，保留 UI Schema、数�
 
 ## 从 amis 到 PrismUI
 
-PrismUI 优先保持现有 UI Schema 和运行时 API 的兼容，同时逐步完成品牌、包名和样式契约的演进。迁移项目时需要重点检查：
+PrismUI 优先保持现有 UI Schema 和运行时 API 的兼容，同时逐步完成包名和样式契约的演进。迁移项目时需要重点检查：
 
 - **npm 包**：新项目使用 `prismui-framework`、`prismui-core`、`prismui-ui` 等 `prismui-*` 包名，依赖、深路径 import、构建 alias 和 externals 需要同步调整；
-- **DOM 类名**：组件类名使用 `.prismui-*`，业务 CSS 中覆盖 `.cxd-*` 或 `.amis-*` 的选择器需要迁移；主题文件名中的 `cxd` 仍可能保留，它表示主题名称，不表示组件类名前缀；
+- **DOM 类名**：组件类名使用 `.prismui-*`，业务 CSS 中覆盖 `.cxd-*` 选择器需要迁移；主题文件名中的 `cxd` 仍可能保留，它表示主题名称，不表示组件类名前缀；
 - **CSS 变量与主题**：公共 token 使用 `--prismui-*`，自定义样式、portal 和 overlay 需要放在 `[data-prismui-theme='主题名']` 作用域内；
 - **SDK 与工程化**：React、JS SDK、编辑器和 Vite 插件使用 PrismUI 对应的入口和资源名称，插件注册生命周期大多保持不变，但包名和样式入口需要切换。
 
-`type: "amis"`、`amisEnv` 等历史协议字段在部分场景仍有兼容意义，不应机械替换。完整的包名映射、样式迁移和主题切换步骤请阅读[从 amis 迁移到 PrismUI](./start/migration-from-amis)；重大变化和兼容边界也可以参阅[PrismUI 项目说明](./start/prismui-overview)。
+`type: "amis"`、`amisEnv` 等历史协议字段在部分场景仍有兼容意义，不应机械替换。完整的包名映射、样式迁移和主题切换步骤请阅读[从 amis 迁移到 PrismUI](./start/migration-from-amis)。
 
 ## 为什么要做 PrismUI？
 
 中后台页面通常同时包含数据获取、筛选、校验、批量操作、分页和权限等交互。若全部使用组件和 JavaScript 手工实现，不仅代码量大，还要长期维护 UI 和交互细节。
 
-PrismUI 用声明式 UI Schema 描述页面结构、数据和行为，让实现方式与底层前端框架解耦。这种方式尤其适合 AI 时代：Schema 用更少的上下文表达完整页面，AI 可以把上下文和推理集中在业务需求、数据关系和规则上，而不是重复生成 UI 结构与交互细节。
+PrismUI 用声明式 UI Schema 描述页面结构、数据和行为，让实现方式与底层前端框架解耦。这种声明式的界面构建方式尤其适合 AI 时代：它可以节省上下文，让 AI 专注于业务需求、数据关系和规则，而不是 UI 和交互细节。
 
 例如，下面的配置可以实现一个带筛选、批量操作、列管理、分页和导出的数据页面：
 
